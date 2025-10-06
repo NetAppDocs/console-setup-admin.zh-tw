@@ -1,0 +1,153 @@
+---
+sidebar: sidebar 
+permalink: concept-accounts-aws.html 
+keywords: cloud provider accounts, aws, aws accounts, keys, multiple accounts, permission, aws permissions, policy, policies, credentials, marketplace, subscription, replace subscription, subscription, amazon, bluexp, agent 
+summary: 了解NetApp控制台如何使用 AWS 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您在控制台中管理一個或多個 AWS 帳戶的憑證。例如，您可能想了解何時在控制台新增額外的 AWS 憑證。 
+---
+= 了解NetApp控制台中的 AWS 憑證和權限
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+了解NetApp控制台如何使用 AWS 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您在NetApp控制台中管理一個或多個 AWS 帳戶的憑證。例如，您可能想了解何時新增額外的 AWS 憑證。
+
+
+
+== 初始 AWS 憑證
+
+從控制台部署控制台代理程式時，您需要提供 IAM 角色的 ARN 或 IAM 使用者的存取金鑰。身份驗證方法必須具有在 AWS 中部署控制台的權限。所需的權限列在連結中：task-install-connector-aws-the Console.html#console-permissions-aws[AWS 的代理部署策略]。
+
+當控制台在 AWS 中啟動控制台代理執行個體時，它會為該執行個體建立一個 IAM 角色和一個執行個體設定檔。它還附加了一項策略，為控制台代理提供管理該 AWS 帳戶內的資源和流程的權限。link:reference-permissions-aws.html["查看控制台如何使用權限"] 。
+
+image:diagram_permissions_initial_aws.png["顯示在 AWS 帳戶中部署控制台代理程式的控制台的概念圖。  IAM 原則被指派給 IAM 角色，該角色附加到控制台實例。"]
+
+如果您新增的Cloud Volumes ONTAP系統，控制台將預設選擇以下 AWS 憑證：
+
+image:screenshot_accounts_select_aws.gif["顯示「詳細資料和憑證」頁面中的「切換帳戶」選項的螢幕截圖。"]
+
+使用初始 AWS 憑證部署所有Cloud Volumes ONTAP系統，或者您可以新增其他憑證。
+
+
+
+== 額外的 AWS 憑證
+
+在下列情況下，您可能會為控制台新增其他 AWS 憑證：
+
+* 將現有的控制台代理與其他 AWS 帳戶一起使用
+* 在特定 AWS 帳戶中建立新代理
+* 建立和管理 FSx for ONTAP檔案系統
+
+
+請參閱以下部分以了解更多詳細資訊。
+
+
+
+=== 新增 AWS 憑證以將控制台代理程式與另一個 AWS 帳戶一起使用
+
+如果您想要將控制台與其他 AWS 帳戶一起使用，則可以為 IAM 使用者提供 AWS 金鑰或受信任帳戶中角色的 ARN。下圖顯示了兩個附加帳戶，一個透過受信任帳戶中的 IAM 角色提供權限，另一個透過 IAM 使用者的 AWS 金鑰提供權限：
+
+image:diagram_permissions_multiple_aws.png["顯示兩個附加帳號的概念圖。每個都有一個 IAM 策略，一個附加到 IAM 用戶，另一個附加到 IAM 角色。"]
+
+然後，您可以透過指定 IAM 角色的 Amazon 資源名稱 (ARN) 或 IAM 使用者的 AWS 金鑰將帳戶憑證新增至控制台。
+
+例如，您可以在建立新的Cloud Volumes ONTAP系統時在憑證之間切換：
+
+image:screenshot_accounts_switch_aws.png["螢幕截圖顯示在「詳細資料和憑證」頁面中選擇「切換帳戶」後在雲端提供者帳戶之間進行選擇。"]
+
+link:task-adding-aws-accounts.html#add-credentials-agent-aws["了解如何將 AWS 憑證新增至現有代理程式。"]
+
+
+
+=== 新增 AWS 憑證以建立控制台代理
+
+在控制台新增的 AWS 憑證可提供建立控制台代理程式所需的權限。
+
+link:task-adding-aws-accounts.html#add-credentials-agent-aws["了解如何將 AWS 憑證新增至控制台以建立控制台代理"]
+
+
+
+=== 為 FSx for ONTAP新增 AWS 憑證
+
+將 AWS 憑證新增至控制台以提供建立和管理 FSx for ONTAP系統所需的權限。
+
+https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["了解如何將 AWS 憑證新增至Amazon FSx for ONTAP控制台"^]
+
+
+
+== 憑證和市場訂閱
+
+您新增至控制台代理的憑證必須與 AWS Marketplace 訂閱相關聯，以便您可以按小時費率 (PAYGO) 和其他NetApp資料服務或透過年度合約支付Cloud Volumes ONTAP費用。link:task-adding-aws-accounts.html#subscribe["了解如何關聯 AWS 訂閱"] 。
+
+請注意以下有關 AWS 憑證和市場訂閱的事項：
+
+* 您只能將一個 AWS Marketplace 訂閱與一組 AWS 憑證關聯
+* 您可以使用新的訂閱替換現有的市場訂閱
+
+
+
+
+== 常問問題
+
+以下問題與憑證和訂閱有關。
+
+
+
+=== 如何安全地輪換我的 AWS 憑證？
+
+如上文所述，控制台可讓您透過幾種方式提供 AWS 憑證：與控制台代理執行個體關聯的 IAM 角色、在受信任的帳戶中承擔 IAM 角色或提供 AWS 存取金鑰。
+
+對於前兩個選項，控制台使用 AWS 安全性令牌服務來取得不斷輪換的臨時憑證。這個過程是最佳實踐——它是自動的並且是安全的。
+
+如果您向控制台提供 AWS 存取金鑰，則應透過定期在控制台中更新金鑰來輪替金鑰。這是一個完全手動的過程。
+
+
+
+=== 我可以更改Cloud Volumes ONTAP系統的 AWS Marketplace 訂閱嗎？
+
+是的，你可以。當您變更與一組憑證關聯的 AWS Marketplace 訂閱時，所有現有和新的Cloud Volumes ONTAP系統都會根據新訂閱收費。
+
+link:task-adding-aws-accounts.html#subscribe["了解如何關聯 AWS 訂閱"] 。
+
+
+
+=== 我可以新增多個 AWS 憑證，每個憑證都有不同的市場訂閱嗎？
+
+屬於相同 AWS 帳戶的所有 AWS 憑證都將與相同 AWS Marketplace 訂閱相關聯。
+
+如果您擁有屬於不同 AWS 帳戶的多個 AWS 憑證，則這些憑證可以與相同 AWS Marketplace 訂閱或不同的訂閱相關聯。
+
+
+
+=== 我可以將現有的Cloud Volumes ONTAP系統移至不同的 AWS 帳號嗎？
+
+不可以，無法將與您的Cloud Volumes ONTAP系統關聯的 AWS 資源移至其他 AWS 帳戶。
+
+
+
+=== 憑證如何用於市場部署和本地部署？
+
+以上部分描述了控制台代理的建議部署方法，即從控制台部署。您也可以從 AWS Marketplace 在 AWS 部署代理，並且可以在自己的 Linux 主機上手動安裝控制台代理軟體。
+
+如果您使用市場，則權限以相同的方式提供。您只需手動建立和設定 IAM 角色，然後為任何其他帳戶提供權限。
+
+對於本機部署，您無法為控制台設定 IAM 角色，但可以使用 AWS 存取金鑰提供權限。
+
+若要了解如何設定權限，請參閱以下頁面：
+
+* 標準模式
++
+** link:task-install-connector-aws-marketplace.html#step-2-set-up-aws-permissions["設定 AWS Marketplace 部署的權限"]
+** link:task-install-connector-on-prem.html#agent-permission-aws-azure["設定本地部署的權限"]
+
+
+* 限制模式
++
+** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["設定限制模式的權限"]
+
+
+

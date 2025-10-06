@@ -1,0 +1,23 @@
+= 連接器 3.9.50
+:allow-uri-read: 
+
+
+
+
+=== 連接器 3.9.50
+
+BlueXP Connector 的此版本包含一些小的安全性改進和錯誤修復。
+
+* 現在，作業系統上啟用了 SELinux 的連接器支援對Cloud Volumes ONTAP系統的管理。
++
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/using_selinux/getting-started-with-selinux_using-selinux["了解有關 SELinux 的更多信息"^]
+
+
+
+目前，3.9.50 版本適用於標準模式和限制模式。
+
+
+
+=== NetApp Keystone測試版現已在BlueXP中推出
+
+NetApp Keystone即將由BlueXP推出，目前處於測試階段。您可以從BlueXP左側導覽列存取NetApp Keystone測試版的註冊頁面。

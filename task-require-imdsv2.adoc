@@ -1,0 +1,97 @@
+---
+sidebar: sidebar 
+permalink: task-require-imdsv2.html 
+keywords: managing connectors, uninstall connector, switch connectors, switch between connectors, local interface, local connector, local cloud manager, local ui, go to local ui 
+summary: NetApp控制台透過控制台代理程式和Cloud Volumes ONTAP支援 IMDSv2。大多數情況下，IMDSv2 會在新的 EC2 執行個體上自動設定。 IMDSv1 於 2024 年 3 月前啟用。如果您的安全性原則需要，您可能需要在 EC2 執行個體上手動設定 IMDSv2。 
+---
+= 要求在 Amazon EC2 執行個體上使用 IMDSv2
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp控制台透過控制台代理程式和Cloud Volumes ONTAP （包括 HA 部署的中介）支援 Amazon EC2 執行個體元資料服務版本 2 (IMDSv2)。大多數情況下，IMDSv2 會在新的 EC2 執行個體上自動設定。 IMDSv1 於 2024 年 3 月前啟用。如果您的安全性原則需要，您可能需要在 EC2 執行個體上手動設定 IMDSv2。
+
+.開始之前
+* 控制台代理版本必須為 3.9.38 或更高版本。
+* Cloud Volumes ONTAP必須執行下列版本之一：
++
+** 9.12.1 P2（或任何後續補丁）
+** 9.13.0 P4（或任何後續補丁）
+** 9.13.1 或此版本之後的任何版本
+
+
+* 此變更要求您重新啟動Cloud Volumes ONTAP實例。
+* 這些步驟需要使用 AWS CLI，因為您必須將回應跳數限制變更為 3。
+
+
+.關於此任務
+IMDSv2 提供了增強的針對漏洞的保護。 https://aws.amazon.com/blogs/security/defense-in-depth-open-firewalls-reverse-proxies-ssrf-vulnerabilities-ec2-instance-metadata-service/["從 AWS 安全部落格了解有關 IMDSv2 的更多信息"^]
+
+執行個體元資料服務 (IMDS) 在 EC2 執行個體上啟用如下：
+
+* 對於從控制台或使用 https://docs.netapp.com/us-en/bluexp-automation/automate/overview.html["Terraform 腳本"^]，IMDSv2 在 EC2 執行個體上預設啟用。
+* 如果您在 AWS 中啟動新的 EC2 實例，然後手動安裝控制台代理軟體，則 IMDSv2 也會預設為啟用。
+* 如果您從 AWS Marketplace 啟動控制台代理，則預設啟用 IMDSv1。您可以在 EC2 執行個體上手動設定 IMDSv2。
+* 對於現有的控制台代理，仍然支援 IMDSv1，但如果您願意，可以在 EC2 執行個體上手動設定 IMDSv2。
+* 對於Cloud Volumes ONTAP，IMDSv1 在新實例和現有實例上預設為啟用。如果願意，您可以在 EC2 執行個體上手動設定 IMDSv2。
+
+
+.步驟
+. 要求在控制台代理實例上使用 IMDSv2：
++
+.. 連接到控制台代理的 Linux VM。
++
+當您在 AWS 中建立控制台代理執行個體時，您提供了 AWS 存取金鑰和金鑰。您可以使用此金鑰對透過 SSH 連線到執行個體。  EC2 Linux 執行個體的使用者名稱是 ubuntu（對於 2023 年 5 月之前建立的控制台代理，使用者名稱是 ec2-user）。
+
++
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html["AWS 文件：連接到您的 Linux 實例"^]
+
+.. 安裝 AWS CLI。
++
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html["AWS 文件：安裝或更新至最新版本的 AWS CLI"^]
+
+.. 使用 `aws ec2 modify-instance-metadata-options`命令要求使用 IMDSv2 並將 PUT 回應跳數限制更改為 3。
++
+*例子*
+
++
+[source, awscli]
+----
+aws ec2 modify-instance-metadata-options \
+    --instance-id <instance-id> \
+    --http-put-response-hop-limit 3 \
+    --http-tokens required \
+    --http-endpoint enabled
+----
+
+
++
+
+NOTE: 這 `http-tokens`參數將 IMDSv2 設定為必要。什麼時候 `http-tokens`是必需的，您還必須設置 `http-endpoint`啟用。
+
+. 要求在Cloud Volumes ONTAP實例上使用 IMDSv2：
++
+.. 前往 https://console.aws.amazon.com/ec2/["Amazon EC2 主機"^]
+.. 從導覽窗格中，選擇*實例*。
+.. 選擇一個Cloud Volumes ONTAP實例。
+.. 選擇*操作>實例設定>修改實例元資料選項*。
+.. 在「修改實例元資料選項」對話方塊中，選擇以下內容：
++
+*** 對於*實例元資料服務*，選擇*啟用*。
+*** 對於 *IMDSv2*，選擇 *必要*。
+*** 選擇*儲存*。
+
+
+.. 對其他Cloud Volumes ONTAP實例（包括 HA 中介）重複這些步驟。
+.. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-state.html["停止並啟動Cloud Volumes ONTAP實例"^]
+
+
+
+
+.結果
+控制台代理實例和Cloud Volumes ONTAP實例現在已配置為使用 IMDSv2。

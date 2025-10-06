@@ -1,0 +1,138 @@
+= 
+:allow-uri-read: 
+
+
+. 確保您在 Azure 中擁有建立 Active Directory 應用程式並將該應用程式指派給角色的權限。
++
+有關詳細信息，請參閱 https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions/["Microsoft Azure 文件：所需權限"^]
+
+. 從 Azure 入口網站開啟 *Microsoft Entra ID* 服務。
++
+image:screenshot_azure_ad.png["顯示 Microsoft Azure 中的 Active Directory 服務。"]
+
+. 在選單中，選擇*應用程式註冊*。
+. 選擇*新註冊*。
+. 指定有關應用程式的詳細資訊：
++
+** *名稱*：輸入應用程式的名稱。
+** *帳戶類型*：選擇帳戶類型（任何類型都可以與NetApp控制台一起使用）。
+** *重定向 URI*：您可以將此欄位留空。
+
+
+. 選擇*註冊*。
++
+您已建立 AD 應用程式和服務主體。
+
+
+
+. 建立自訂角色：
++
+請注意，您可以使用 Azure 入口網站、Azure PowerShell、Azure CLI 或 REST API 建立 Azure 自訂角色。以下步驟展示如何使用 Azure CLI 建立角色。如果您希望使用其他方法，請參閱 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文件"^]
+
++
+.. 複製link:reference-permissions-azure.html["控制台代理程式的自訂角色權限"]並將它們保存在 JSON 檔案中。
+.. 透過將 Azure 訂閱 ID 新增至可分配範圍來修改 JSON 檔案。
++
+您應該為使用者將從中建立Cloud Volumes ONTAP系統的每個 Azure 訂閱新增 ID。
+
++
+*例子*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+.. 使用 JSON 檔案在 Azure 中建立自訂角色。
++
+以下步驟說明如何使用 Azure Cloud Shell 中的 Bash 建立角色。
+
++
+*** 開始 https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure 雲端外殼"^]並選擇 Bash 環境。
+*** 上傳 JSON 檔案。
++
+image:screenshot_azure_shell_upload.png["Azure Cloud Shell 的螢幕截圖，您可以在其中選擇上傳檔案的選項。"]
+
+*** 使用 Azure CLI 建立自訂角色：
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
++
+現在您應該有一個名為「控制台操作員」的自訂角色，可以將其指派給控制台代理虛擬機器。
+
+
+
+
+
+. 將應用程式指派給角色：
++
+.. 從 Azure 入口網站開啟 *Subscriptions* 服務。
+.. 選擇訂閱。
+.. 選擇“存取控制 (IAM)”>“新增”>“新增角色分配”。
+.. 在*角色*標籤中，選擇*控制台操作員*角色並選擇*下一步*。
+.. 在「*成員*」標籤中，完成以下步驟：
++
+*** 保持選取「*使用者、群組或服務主體*」。
+*** 選擇*選擇成員*。
++
+image:screenshot-azure-service-principal-role.png["在應用程式新增角色時顯示「成員」頁面的 Azure 入口網站螢幕截圖。"]
+
+*** 搜尋應用程式的名稱。
++
+以下是一個例子：
+
++
+image:screenshot_azure_service_principal_role.png["Azure 入口網站的螢幕截圖，顯示了 Azure 入口網站中的「新增角色指派」表單。"]
+
+*** 選擇應用程式並選擇*選擇*。
+*** 選擇“下一步”。
+
+
+.. 選擇*審閱+分配*。
++
+服務主體現在具有部署控制台代理程式所需的 Azure 權限。
+
++
+如果您想要從多個 Azure 訂閱部署Cloud Volumes ONTAP ，則必須將服務主體綁定到每個訂閱。在NetApp控制台中，您可以選擇部署Cloud Volumes ONTAP時要使用的訂閱。
+
+
+
+
+
+. 在*Microsoft Entra ID*服務中，選擇*App Registrations*並選擇應用程式。
+. 選擇*API 權限 > 新增權限*。
+. 在「Microsoft API」下，選擇「Azure 服務管理」。
++
+image:screenshot_azure_service_mgmt_apis.gif["Azure 入口網站的螢幕截圖，顯示了 Azure 服務管理 API 權限。"]
+
+. 選擇*以組織使用者身分存取 Azure 服務管理*，然後選擇*新增權限*。
++
+image:screenshot_azure_service_mgmt_apis_add.gif["Azure 入口網站的螢幕截圖，顯示新增 Azure 服務管理 API。"]
+
+
+
+. 在*Microsoft Entra ID*服務中，選擇*App Registrations*並選擇應用程式。
+. 複製*應用程式（客戶端）ID*和*目錄（租用戶）ID*。
++
+image:screenshot_azure_app_ids.gif["螢幕截圖顯示了 Microsoft Entra IDy 中應用程式的應用程式（客戶端）ID 和目錄（租用戶）ID。"]
+
++
+將 Azure 帳戶新增至控制台時，您需要提供應用程式（用戶端）ID 和應用程式的目錄（租用戶）ID。控制台使用 ID 以程式設計方式登入。
+
+
+
+. 開啟*Microsoft Entra ID*服務。
+. 選擇*應用程式註冊*並選擇您的應用程式。
+. 選擇*憑證和機密>新客戶端機密*。
+. 提供秘密的描述和持續時間。
+. 選擇“*新增*”。
+. 複製客戶端機密的值。
++
+image:screenshot_azure_client_secret.gif["Azure 入口網站的螢幕截圖，顯示了 Microsoft Entra 服務主體的用戶端機密。"]
+
+

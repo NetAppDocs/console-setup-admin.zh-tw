@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: task-iam-audit-actions-timeline.html 
+keywords: iam, audit, monitor, audit iam actions, monitor iam actions 
+summary: 從稽核頁面監控或稽核NetApp控制台身分和存取管理操作。 
+---
+= 監控或稽核 IAM 活動
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您需要監控或稽核與身分和存取相關的已完成的操作，您可以從稽核頁面查看詳細資訊。例如，您可能想要驗證誰向組織新增了成員或專案是否已成功刪除。
+
+.步驟
+. 選擇“管理”>“審計”。
+. 在*審計*頁面上，使用篩選器縮小結果範圍。選擇*服務*，然後選擇*租賃*。
+. 使用任何其他篩選器來更改表中顯示的操作。
++
+例如，您可以使用*使用者*篩選器來顯示與特定使用者帳戶相關的操作。
+
+

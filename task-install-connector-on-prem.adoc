@@ -1,0 +1,881 @@
+---
+sidebar: sidebar 
+permalink: task-install-connector-on-prem.html 
+keywords: install connector, on prem connector installation, on prem connector, install connector on prem, manual install 
+summary: 在本機安裝控制台代理，然後登入並設定它以與您的控制台組織配合使用。 
+---
+= 在本機手動安裝控制台代理
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在本機安裝控制台代理，然後登入並設定它以與您的控制台組織配合使用。
+
+
+NOTE: 如果您是 VMWare 用戶，您可以使用 OVA 在您的 VCenter 中安裝控制台代理程式。link:task-install-agent-on-prem-ova.html["了解有關在 VCenter 中安裝代理程式的更多資訊。"]
+
+在安裝之前，您需要確保您的主機（VM 或 Linux 主機）符合要求，並確保控制台代理可以存取網際網路以及目標網路。如果您打算使用NetApp資料服務或Cloud Volumes ONTAP），則需要在雲端提供者中建立憑證以新增至控制台，以便控制台代理可以代表您在雲端執行操作。
+
+
+
+== 準備安裝控制台代理
+
+在安裝控制台代理之前，您應該確保您擁有一台符合安裝要求的主機。您還需要與網路管理員合作，以確保控制台代理程式具有所需端點的出站存取權限以及與目標網路的連線。
+
+
+
+=== 查看控制台代理主機需求
+
+在符合作業系統、RAM 和連接埠要求的 x86 主機上執行控制台代理。在安裝控制台代理之前，請確保您的主機符合這些要求。
+
+
+NOTE: 控制台代理保留 19000 到 19200 的 UID 和 GID 範圍。這個範圍是固定的，不能修改。如果主機上的任何第三方軟體使用此範圍內的 UID 或 GID，則代理安裝將會失敗。  NetApp建議使用沒有第三方軟體的主機以避免衝突。
+
+專用主機:: 與其他應用程式共用的主機不支援控制台代理。該主機必須是專用主機。主機可以是滿足以下大小要求的任何架構：
++
+--
+* CPU：8 核心或 8 個 vCPU
+* 記憶體：32 GB
+* 磁碟空間：建議主機預留165GB空間，分割區需求如下：
++
+** `/opt`：必須有 120 GiB 可用空間
++
+代理使用 `/opt`安裝 `/opt/application/netapp`目錄及其內容。
+
+** `/var`：必須有 40 GiB 可用空間
++
+控制台代理需要此空間 `/var`因為 Docker 或 Podman 的設計目的是在此目錄中建立容器。具體來說，他們將在 `/var/lib/containers/storage`目錄。外部安裝或符號連結不適用於此空間。
+
+
+
+
+
+--
+虛擬機器管理程序:: 需要經過認證可運行支援的作業系統的裸機或託管虛擬機器管理程式。
+[[podman-versions]]作業系統和容器要求:: 在標準模式或受限模式下使用控制台時，控制台代理程式支援下列作業系統。安裝代理之前需要一個容器編排工具。
++
+--
+[cols="2a,2a,2a,2a,2a"]
+|===
+| 作業系統 | 支援的作業系統版本 | 支援的代理版本 | 所需的容器工具 | SELinux 
+
+
+ a| 
+紅帽企業 Linux
+ a| 
+9.1 至 9.4
+
+8.6 至 8.10
+
+* 僅限英文版本。
+* 主機必須在 Red Hat 訂閱管理中註冊。如果未註冊，主機將無法在代理安裝期間存取儲存庫來更新所需的第三方軟體。
+
+ a| 
+3.9.50 或更高版本，控制台處於標準模式或受限模式
+ a| 
+Podman 版本 4.6.1 或 4.9.4
+
+<<podman-configuration,查看 Podman 設定要求>> 。
+ a| 
+在強制模式或寬容模式下受支持
+
+* 作業系統上啟用了 SELinux 的代理程式不支援對Cloud Volumes ONTAP系統的管理。
+
+
+
+
+ a| 
+Ubuntu
+ a| 
+24.04 LTS
+ a| 
+3.9.45 或更高版本， NetApp控制台處於標準模式或受限模式
+ a| 
+Docker Engine 23.06 至 28.0.0。
+ a| 
+不支援
+
+
+
+ a| 
+22.04 LTS
+ a| 
+3.9.50 或更高版本
+ a| 
+Docker Engine 23.0.6 至 28.0.0。
+ a| 
+不支援
+
+|===
+--
+
+
+
+
+=== 為控制台代理設定網路訪問
+
+設定網路存取以確保控制台代理可以管理資源。它需要連接到目標網路並存取特定端點的出站互聯網。
+
+連接到目標網絡:: 控制台代理程式需要與您計劃建立和管理系統的位置建立網路連線。例如，您計劃在本機環境中建立Cloud Volumes ONTAP系統或儲存系統的網路。
+
+
+出站互聯網訪問:: 部署控制台代理程式的網路位置必須具有出站網路連線才能聯絡特定端點。
+
+
+使用基於 Web 的NetApp控制台時從電腦聯繫的端點::
++
+--
+從 Web 瀏覽器存取控制台的電腦必須能夠聯絡多個端點。您需要使用控制台來設定控制台代理並進行控制台的日常使用。
+
+link:reference-networking-saas-console.html["為NetApp控制台準備網絡"] 。
+
+--
+
+
+從控制台代理聯繫的端點:: 控制台代理需要外部網路存取來聯繫以下端點，以管理公有雲環境中的資源和流程以進行日常操作。
++
+--
+下面列出的端點都是 CNAME 條目。
+
+--
+
+
+
+NOTE: 安裝在您場所的控制台代理無法管理 Google Cloud 中的資源。如果您想管理 Google Cloud 資源，則需要在 Google Cloud 中安裝代理程式。
+
+[role="tabbed-block"]
+====
+.AWS
+--
+當控制台代理程式安裝在本機時，它需要對以下 AWS 端點進行網路訪問，以便管理部署在 AWS 中的NetApp系統（例如Cloud Volumes ONTAP）。
+
+從控制台代理聯繫的端點:: 控制台代理需要外部網路存取來聯繫以下端點，以管理公有雲環境中的資源和流程以進行日常操作。
++
+--
+下面列出的端點都是 CNAME 條目。
+
+[cols="2a,1a"]
+|===
+| 端點 | 目的 
+
+
+ a| 
+AWS 服務（amazonaws.com）：
+
+* 雲形成
+* 彈性運算雲（EC2）
+* 身分和存取管理 (IAM)
+* 金鑰管理服務（KMS）
+* 安全性令牌服務 (STS)
+* 簡單儲存服務（S3）
+
+ a| 
+管理 AWS 資源。端點取決於您的 AWS 區域。 https://docs.aws.amazon.com/general/latest/gr/rande.html["有關詳細信息，請參閱 AWS 文檔"^]
+
+
+
+ a| 
+\ https://mysupport.netapp.com
+ a| 
+取得許可資訊並向NetApp支援發送AutoSupport訊息。
+
+
+
+ a| 
+\ https://signin.b2c.netapp.com
+ a| 
+更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp控制台。
+
+
+
+ a| 
+\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+ a| 
+在NetApp控制台中提供功能和服務。
+
+
+
+ a| 
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+ a| 
+取得控制台代理升級的影像。
+
+* 當您部署新代理程式時，驗證檢查會測試與目前端點的連線。如果你使用link:link:reference-networking-saas-console-previous.html["先前的端點"]，驗證檢查失敗。為了避免此失敗，請跳過驗證檢查。
++
+儘管先前的端點仍然受支持，但NetApp建議盡快將防火牆規則更新至目前端點。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新終端節點列表"] 。
+
+* 當您更新到防火牆中的目前端點時，您現有的代理程式將繼續運作。
+
+
+|===
+--
+
+
+--
+.Azure
+--
+當控制台代理程式安裝在本機時，它需要對以下 Azure 端點進行網路訪問，以便管理部署在 Azure 中的NetApp系統（例如Cloud Volumes ONTAP）。
+
+[cols="2a,1a"]
+|===
+| 端點 | 目的 
+
+
+ a| 
+\ https://management.azure.com \ https://login.microsoftonline.com \ https://blob.core.windows.net \ https://core.windows.net
+ a| 
+管理 Azure 公用區域中的資源。
+
+
+
+ a| 
+\ https://management.chinacloudapi.cn \ https://login.chinacloudapi.cn \ https://blob.core.chinacloudapi.cn \ https://core.chinacloudapi.cn
+ a| 
+管理 Azure 中國區域的資源。
+
+
+
+ a| 
+\ https://mysupport.netapp.com
+ a| 
+取得許可資訊並向NetApp支援發送AutoSupport訊息。
+
+
+
+ a| 
+\ https://signin.b2c.netapp.com
+ a| 
+更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp控制台。
+
+
+
+ a| 
+\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+ a| 
+在NetApp控制台中提供功能和服務。
+
+
+
+ a| 
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+ a| 
+取得控制台代理升級的影像。
+
+* 當您部署新代理程式時，驗證檢查會測試與目前端點的連線。如果你使用link:link:reference-networking-saas-console-previous.html["先前的端點"]，驗證檢查失敗。為了避免此失敗，請跳過驗證檢查。
++
+儘管先前的端點仍然受支持，但NetApp建議盡快將防火牆規則更新至目前端點。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新終端節點列表"] 。
+
+* 當您更新到防火牆中的目前端點時，您現有的代理程式將繼續運作。
+
+
+|===
+--
+====
+代理伺服器:: NetApp支援顯式和透明代理配置。如果您使用透明代理，則只需要提供代理伺服器的憑證。如果您使用明確代理，您還需要 IP 位址和憑證。
++
+--
+* IP 位址
+* 證書
+* HTTPS 憑證
+
+
+--
+
+
+連接埠:: 除非您啟動它或將其用作代理將AutoSupport訊息從Cloud Volumes ONTAP發送到NetApp支持，否則控制台代理不會有傳入流量。
++
+--
+* HTTP（80）和 HTTPS（443）提供對本機 UI 的訪問，您會在極少數情況下使用它們。
+* 僅當需要連接到主機進行故障排除時才需要 SSH（22）。
+* 如果您在沒有外部網路連線的子網路中部署Cloud Volumes ONTAP系統，則需要透過連接埠 3128 建立入站連線。
++
+如果Cloud Volumes ONTAP系統沒有出站網路連線來傳送AutoSupport訊息，控制台會自動設定這些系統以使用控制台代理附帶的代理伺服器。唯一的要求是確保控制台代理的安全群組允許透過連接埠 3128 進行入站連線。部署控制台代理程式後，您需要開啟此連接埠。
+
+
+
+--
+
+
+啟用 NTP:: 如果您打算使用NetApp資料分類掃描公司資料來源，則應在控制台代理程式和NetApp資料分類系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
+
+
+
+
+=== 為 AWS 或 Azure 建立控制台代理雲端權限
+
+如果您想透過本機控制台代理程式使用 AWS 或 Azure 中的NetApp資料服務，則需要在雲端提供者中設定權限，然後在安裝控制台代理程式後將憑證新增至控制台代理程式。
+
+
+TIP: 您必須在 Google Cloud 中安裝控制台代理程式來管理駐留在那裡的任何資源。
+
+[role="tabbed-block"]
+====
+.AWS
+--
+當控制台代理程式安裝在本機時，您需要透過為具有所需權限的 IAM 使用者新增存取金鑰來為控制台提供 AWS 權限。
+
+如果控制台代理程式安裝在本機，則必須使用此驗證方法。您不能使用 IAM 角色。
+
+.步驟
+. 登入 AWS 主控台並導覽至 IAM 服務。
+. 建立策略：
++
+.. 選擇“策略”>“建立策略”。
+.. 選擇 *JSON* 並複製並貼上內容link:reference-permissions-aws.html["控制台代理的 IAM 策略"]。
+.. 完成剩餘步驟以建立策略。
++
+根據您計劃使用的NetApp資料服務，您可能需要建立第二個策略。
+
++
+對於標準區域，權限分佈在兩個策略中。由於 AWS 中託管策略的最大字元大小限制，因此需要兩個策略。link:reference-permissions-aws.html["了解有關控制台代理的 IAM 策略的更多信息"] 。
+
+
+
+. 將策略附加到 IAM 使用者。
++
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html["AWS 文件：建立 IAM 角色"^]
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWS 文件：新增和刪除 IAM 政策"^]
+
+
+. 確保使用者擁有存取金鑰，您可以在安裝控制台代理後將其新增至NetApp控制台。
+
+
+.結果
+您現在應該擁有具有所需權限的 IAM 使用者的存取金鑰。安裝控制台代理程式後，從控制台將這些憑證與控制台代理程式關聯。
+
+--
+.Azure
+--
+當控制台代理程式安裝在本機時，您需要透過在 Microsoft Entra ID 中設定服務主體並取得控制台代理程式所需的 Azure 憑證來為控制台代理程式提供 Azure 權限。
+
+.建立用於基於角色的存取控制的 Microsoft Entra 應用程式
+. 確保您在 Azure 中擁有建立 Active Directory 應用程式並將該應用程式指派給角色的權限。
++
+有關詳細信息，請參閱 https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions/["Microsoft Azure 文件：所需權限"^]
+
+. 從 Azure 入口網站開啟 *Microsoft Entra ID* 服務。
++
+image:screenshot_azure_ad.png["顯示 Microsoft Azure 中的 Active Directory 服務。"]
+
+. 在選單中，選擇*應用程式註冊*。
+. 選擇*新註冊*。
+. 指定有關應用程式的詳細資訊：
++
+** *名稱*：輸入應用程式的名稱。
+** *帳戶類型*：選擇帳戶類型（任何類型都可以與NetApp控制台一起使用）。
+** *重定向 URI*：您可以將此欄位留空。
+
+
+. 選擇*註冊*。
++
+您已建立 AD 應用程式和服務主體。
+
+
+
+.將應用程式指派給角色
+. 建立自訂角色：
++
+請注意，您可以使用 Azure 入口網站、Azure PowerShell、Azure CLI 或 REST API 建立 Azure 自訂角色。以下步驟展示如何使用 Azure CLI 建立角色。如果您希望使用其他方法，請參閱 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文件"^]
+
++
+.. 複製link:reference-permissions-azure.html["控制台代理程式的自訂角色權限"]並將它們保存在 JSON 檔案中。
+.. 透過將 Azure 訂閱 ID 新增至可分配範圍來修改 JSON 檔案。
++
+您應該為使用者將從中建立Cloud Volumes ONTAP系統的每個 Azure 訂閱新增 ID。
+
++
+*例子*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+.. 使用 JSON 檔案在 Azure 中建立自訂角色。
++
+以下步驟說明如何使用 Azure Cloud Shell 中的 Bash 建立角色。
+
++
+*** 開始 https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure 雲端外殼"^]並選擇 Bash 環境。
+*** 上傳 JSON 檔案。
++
+image:screenshot_azure_shell_upload.png["Azure Cloud Shell 的螢幕截圖，您可以在其中選擇上傳檔案的選項。"]
+
+*** 使用 Azure CLI 建立自訂角色：
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
++
+現在您應該有一個名為「控制台操作員」的自訂角色，可以將其指派給控制台代理虛擬機器。
+
+
+
+
+
+. 將應用程式指派給角色：
++
+.. 從 Azure 入口網站開啟 *Subscriptions* 服務。
+.. 選擇訂閱。
+.. 選擇“存取控制 (IAM)”>“新增”>“新增角色分配”。
+.. 在*角色*標籤中，選擇*控制台操作員*角色並選擇*下一步*。
+.. 在「*成員*」標籤中，完成以下步驟：
++
+*** 保持選取「*使用者、群組或服務主體*」。
+*** 選擇*選擇成員*。
++
+image:screenshot-azure-service-principal-role.png["在應用程式新增角色時顯示「成員」頁面的 Azure 入口網站螢幕截圖。"]
+
+*** 搜尋應用程式的名稱。
++
+以下是一個例子：
+
++
+image:screenshot_azure_service_principal_role.png["Azure 入口網站的螢幕截圖，顯示了 Azure 入口網站中的「新增角色指派」表單。"]
+
+*** 選擇應用程式並選擇*選擇*。
+*** 選擇“下一步”。
+
+
+.. 選擇*審閱+分配*。
++
+服務主體現在具有部署控制台代理程式所需的 Azure 權限。
+
++
+如果您想要從多個 Azure 訂閱部署Cloud Volumes ONTAP ，則必須將服務主體綁定到每個訂閱。在NetApp控制台中，您可以選擇部署Cloud Volumes ONTAP時要使用的訂閱。
+
+
+
+
+
+.新增 Windows Azure 服務管理 API 權限
+. 在*Microsoft Entra ID*服務中，選擇*App Registrations*並選擇應用程式。
+. 選擇*API 權限 > 新增權限*。
+. 在「Microsoft API」下，選擇「Azure 服務管理」。
++
+image:screenshot_azure_service_mgmt_apis.gif["Azure 入口網站的螢幕截圖，顯示了 Azure 服務管理 API 權限。"]
+
+. 選擇*以組織使用者身分存取 Azure 服務管理*，然後選擇*新增權限*。
++
+image:screenshot_azure_service_mgmt_apis_add.gif["Azure 入口網站的螢幕截圖，顯示新增 Azure 服務管理 API。"]
+
+
+
+.取得應用程式的應用程式ID和目錄ID
+. 在*Microsoft Entra ID*服務中，選擇*App Registrations*並選擇應用程式。
+. 複製*應用程式（客戶端）ID*和*目錄（租用戶）ID*。
++
+image:screenshot_azure_app_ids.gif["螢幕截圖顯示了 Microsoft Entra IDy 中應用程式的應用程式（客戶端）ID 和目錄（租用戶）ID。"]
+
++
+將 Azure 帳戶新增至控制台時，您需要提供應用程式（用戶端）ID 和應用程式的目錄（租用戶）ID。控制台使用 ID 以程式設計方式登入。
+
+
+
+.建立客戶端機密
+. 開啟*Microsoft Entra ID*服務。
+. 選擇*應用程式註冊*並選擇您的應用程式。
+. 選擇*憑證和機密>新客戶端機密*。
+. 提供秘密的描述和持續時間。
+. 選擇“*新增*”。
+. 複製客戶端機密的值。
++
+image:screenshot_azure_client_secret.gif["Azure 入口網站的螢幕截圖，顯示了 Microsoft Entra 服務主體的用戶端機密。"]
+
+
+
+--
+====
+
+
+== 手動安裝控制台代理
+
+當您手動安裝控制台代理時，您需要準備您的機​​器環境以使其滿足要求。您需要一台 Linux 機器，並且需要安裝 Podman 或 Docker，這取決於您的 Linux 作業系統。
+
+
+
+=== 安裝 Podman 或 Docker Engine
+
+根據您的作業系統，安裝代理程式之前需要 Podman 或 Docker Engine。
+
+* Red Hat Enterprise Linux 8 和 9 需要 Podman。
++
+<<podman-versions,查看支援的 Podman 版本>> 。
+
+* Ubuntu 需要 Docker 引擎。
++
+<<podman-versions,查看支援的 Docker Engine 版本>> 。
+
+
+
+.步驟
+[role="tabbed-block"]
+====
+.Podman
+--
+請依照以下步驟安裝和設定 Podman：
+
+* 啟用並啟動 podman.socket 服務
+* 安裝python3
+* 安裝 podman-compose 軟體套件版本 1.0.6
+* 將 podman-compose 加入到 PATH 環境變量
+* 如果使用 Red Hat Enterprise Linux 8，請驗證您的 Podman 版本使用的是 Aardvark DNS 而不是 CNI
+
+
+
+NOTE: 安裝代理程式後調整 aardvark-dns 連接埠（預設值：53），以避免 DNS 連接埠衝突。按照說明配置連接埠。
+
+.步驟
+. 如果主機上安裝了 podman-docker 套件，請將其刪除。
++
+[source, cli]
+----
+dnf remove podman-docker
+rm /var/run/docker.sock
+----
+. 安裝 Podman。
++
+您可以從官方 Red Hat Enterprise Linux 儲存庫取得 Podman。
+
++
+對於 Red Hat Enterprise Linux 9：
+
++
+[source, cli]
+----
+sudo dnf install podman-2:<version>
+----
++
+其中 <version> 是您正在安裝的 Podman 支援的版本。<<podman-versions,查看支援的 Podman 版本>> 。
+
++
+對於 Red Hat Enterprise Linux 8：
+
++
+[source, cli]
+----
+sudo dnf install podman-3:<version>
+----
++
+其中 <version> 是您正在安裝的 Podman 支援的版本。<<podman-versions,查看支援的 Podman 版本>> 。
+
+. 啟用並啟動 podman.socket 服務。
++
+[source, cli]
+----
+sudo systemctl enable --now podman.socket
+----
+. 安裝 python3。
++
+[source, cli]
+----
+sudo dnf install python3
+----
+. 如果您的系統上還沒有 EPEL 儲存庫包，請安裝它。
+. 如果使用 Red Hat Enterprise：
++
+此步驟是必要的，因為 podman-compose 可從 Extra Packages for Enterprise Linux (EPEL) 儲存庫中取得。
+
++
+對於 Red Hat Enterprise Linux 9：
+
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+----
++
+對於 Red Hat Enterprise Linux 8：
+
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+----
+. 安裝 podman-compose 套件 1.0.6。
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.0.6
+----
++
+
+NOTE: 使用 `dnf install`指令滿足將 podman-compose 新增至 PATH 環境變數的要求。安裝指令將 podman-compose 新增至 /usr/bin，它已經包含在 `secure_path`主機上的選項。
+
+. 如果使用 Red Hat Enterprise Linux 8，請驗證您的 Podman 版本是否使用具有 Aardvark DNS 的 NetAvark 而不是 CNI。
++
+.. 透過執行以下命令檢查您的 networkBackend 是否設定為 CNI：
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+.. 如果 networkBackend 設定為 `CNI`，你需要將其更改為 `netavark`。
+.. 安裝 `netavark`和 `aardvark-dns`使用以下命令：
++
+[source, cli]
+----
+dnf install aardvark-dns netavark
+----
+.. 打開 `/etc/containers/containers.conf`檔案並修改 network_backend 選項以使用“netavark”而不是“cni”。
+
+
++
+如果 `/etc/containers/containers.conf`不存在，請將配置變更為 `/usr/share/containers/containers.conf`。
+
+. 重新啟動 podman。
++
+[source, cli]
+----
+systemctl restart podman
+----
+. 使用以下命令確認 networkBackend 現在已更改為“netavark”：
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+
+
+--
+.Docker 引擎
+--
+依照 Docker 的文件安裝 Docker Engine。
+
+.步驟
+. https://docs.docker.com/engine/install/["查看 Docker 的安裝說明"^]
++
+請依照步驟安裝支援的 Docker Engine 版本。請勿安裝最新版本，因為控制台不支援它。
+
+. 驗證 Docker 是否已啟用並正在運行。
++
+[source, cli]
+----
+sudo systemctl enable docker && sudo systemctl start docker
+----
+
+
+--
+====
+
+
+=== 手動安裝控制台代理
+
+在本機現有 Linux 主機上下載並安裝控制台代理軟體。
+
+.開始之前
+您應該具有以下內容：
+
+* 安裝控制台代理程式的 root 權限。
+* 如果控制台代理需要代理才能存取互聯網，則提供有關代理伺服器的詳細資訊。
++
+您可以選擇在安裝後設定代理伺服器，但這樣做需要重新啟動控制台代理。
+
+* 如果代理伺服器使用 HTTPS 或代理是攔截代理，則需要 CA 簽署的憑證。
+
+
+
+NOTE: 手動安裝控制台代理程式時，無法為透明代理伺服器設定憑證。如果需要為透明代理伺服器設定證書，則必須在安裝後使用維護控制台。詳細了解link:reference-connector-maint-console.html["代理維護控制台"]。
+
+.關於此任務
+NetApp支援網站上提供的安裝程式可能是早期版本。安裝後，如果有新版本可用，控制台代理會自動更新。
+
+.步驟
+. 如果主機上設定了 _http_proxy_ 或 _https_proxy_ 系統變量，請將其刪除：
++
+[source, cli]
+----
+unset http_proxy
+unset https_proxy
+----
++
+如果不刪除這些系統變量，安裝將會失敗。
+
+. 從下載控制台代理軟體 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp支援站點"^]，然後將其複製到Linux主機上。
++
+您應該下載適用於您的網路或雲端中的「線上」代理安裝程式。
+
+. 分配運行腳本的權限。
++
+[source, cli]
+----
+chmod +x NetApp_Console_Agent_Cloud_<version>
+----
++
+其中 <version> 是您下載的控制台代理的版本。
+
+. 如果在政府雲端環境中安裝，請停用設定檢查。link:task-troubleshoot-connector.html#disable-config-check["了解如何停用手動安裝的設定檢查。"]
+. 運行安裝腳本。
++
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+----
++
+如果您的網路需要代理來存取互聯網，則需要新增代理資訊。您可以新增透明或顯式代理程式。 --proxy 和 --cacert 參數是可選的，系統不會提示您新增它們。如果您有代理伺服器，則需要輸入所示的參數。
+
++
+以下是使用 CA 簽章憑證設定明確代理伺服器的範例：
+
++
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+----
++
+`--proxy`使用下列格式之一將控制台代理程式配置為使用 HTTP 或 HTTPS 代理伺服器：
+
++
+** \http://位址:埠
+** \http://用戶名:密碼@地址:端口
+** \http://網域%92用戶名:密碼@位址:端口
+** \https://位址:埠
+** \https://使用者名稱:密碼@位址:端口
+** \https://網域%92用戶名:密碼@地址:端口
++
+請注意以下事項：
+
++
+*** 使用者可以是本機使用者或網域使用者。
+*** 對於網域用戶，您必須使用 \ 的 ASCII 代碼，如上所示。
+*** 控制台代理不支援包含 @ 字元的使用者名稱或密碼。
+*** 如果密碼包含以下任何特殊字符，則必須在該特殊字符前面加上反斜杠來轉義該特殊字符：& 或 !
++
+例如：
+
++
+\http://bxpproxyuser:netapp1\!@網址:3128
+
+
+
+
+
+
+
+`--cacert`指定用於控制台代理程式和代理伺服器之間的 HTTPS 存取的 CA 簽章憑證。  HTTPS代理伺服器、攔截代理伺服器、透明代理伺服器都需要此參數。
+
++ 下面是設定透明代理伺服器的範例。配置透明代理時，不需要定義代理伺服器。您只需將 CA 簽署的憑證新增至控制台代理主機：
+
++
+
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_v4.0.0 --cacert /tmp/cacert/certificate.cer
+----
+. 如果您使用 Podman，則需要調整 aardvark-dns 連接埠。
++
+.. 透過 SSH 連接到控制台代理虛擬機器。
+.. 開啟 podman _/usr/share/containers/containers.conf_ 檔案並修改 Aardvark DNS 服務的選定連接埠。例如，將其更改為54。
++
+[source, cli]
+----
+vi /usr/share/containers/containers.conf
+...
+# Port to use for dns forwarding daemon with netavark in rootful bridge
+# mode and dns enabled.
+# Using an alternate port might be useful if other DNS services should
+# run on the machine.
+#
+dns_bind_port = 54
+...
+Esc:wq
+----
+.. 重新啟動控制台代理虛擬機器。
+
+
+
+
+.下一步是什麼？
+您需要在NetApp控制台中註冊控制台代理程式。
+
+
+
+== 使用NetApp控制台註冊控制台代理
+
+登入控制台並將控制台代理與您的組織關聯。登入方式取決於您使用控制台的模式。如果您在標準模式下使用控制台，則可以透過 SaaS 網站登入。如果您在受限模式下使用控制台，則可以從控制台代理主機本機登入。
+
+.步驟
+. 開啟 Web 瀏覽器並輸入控制台代理主機 URL：
++
+控制台主機 URL 可以是本機主機、私人 IP 位址或公用 IP 位址，取決於主機的配置。例如，如果控制台代理程式位於沒有公用 IP 位址的公有雲中，則必須輸入與控制台代理主機有連接的主機的私人 IP 位址。
+
+. 註冊或登入。
+. 登入後，設定控制台：
++
+.. 指定與控制台代理程式關聯的控制台組織。
+.. 輸入系統的名稱。
+.. 在*您是否在安全環境中運作？ *下保持限制模式為停用。
++
+當控制台代理安裝在本機時，不支援限制模式。
+
+.. 選擇*讓我們開始吧*。
+
+
+
+
+
+
+== 向NetApp控制台提供雲端提供者憑證
+
+安裝並設定控制台代理程式後，新增您的雲端憑證，以便控制台代理程式具有在 AWS 或 Azure 中執行操作所需的權限。
+
+[role="tabbed-block"]
+====
+.AWS
+--
+.開始之前
+如果您剛剛建立了這些 AWS 憑證，它們可能需要幾分鐘才能生效。等待幾分鐘，然後將憑證新增至控制台。
+
+.步驟
+. 選擇“*管理 > 憑證*”。
+. 選擇*組織憑證*。
+. 選擇“*新增憑證*”並按照精靈中的步驟操作。
++
+.. *憑證位置*：選擇*Amazon Web Services > 代理程式。
+.. *定義憑證*：輸入 AWS 存取金鑰和金鑰。
+.. *市場訂閱*：透過立即訂閱或選擇現有訂閱將市場訂閱與這些憑證關聯。
+.. *審核*：確認有關新憑證的詳細資訊並選擇*新增*。
+
+
+
+
+您現在可以前往 https://console.netapp.com["NetApp控制台"^]開始使用控制台代理。
+
+--
+.Azure
+--
+.開始之前
+如果您剛剛建立了這些 Azure 憑證，它們可能需要幾分鐘才能使用。等待幾分鐘，然後再新增控制台代理的憑證。
+
+.步驟
+. 選擇“*管理 > 憑證*”。
+. 選擇“*新增憑證*”並按照精靈中的步驟操作。
++
+.. *憑證位置*：選擇*Microsoft Azure > 代理程式*。
+.. *定義憑證*：輸入有關授予所需權限的 Microsoft Entra 服務主體的資訊：
++
+*** 應用程式（客戶端）ID
+*** 目錄（租戶）ID
+*** 客戶端機密
+
+
+.. *市場訂閱*：透過立即訂閱或選擇現有訂閱將市場訂閱與這些憑證關聯。
+.. *審核*：確認有關新憑證的詳細資訊並選擇*新增*。
+
+
+
+
+.結果
+控制台代理現在具有代表您在 Azure 中執行操作所需的權限。您現在可以前往 https://console.netapp.com["NetApp控制台"^]開始使用控制台代理。
+
+--
+====

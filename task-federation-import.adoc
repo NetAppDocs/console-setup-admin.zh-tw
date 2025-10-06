@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: task-federation-import.html 
+keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity, 
+summary: 如果您之前已透過NetApp Cloud Central（ NetApp控制台的外部應用程式）設定聯合，則聯合頁面會提示您將現有的聯合連接匯入控制台，以便您可以在新介面中對其進行管理。然後，您可以利用最新的增強功能，而無需重新建立聯合連接。 
+---
+= 將您的聯合匯入NetApp控制台
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您之前已透過NetApp Cloud Central（ NetApp控制台的外部應用程式）設定聯合，則聯合頁面會提示您將現有的聯合連接匯入控制台，以便您可以在新介面中對其進行管理。然後，您可以利用最新的增強功能，而無需重新建立聯合連接。
+
+
+NOTE: 匯入現有聯盟後，您可以從「聯盟」頁面管理該聯盟。link:task-federation-manage.html["了解有關管理聯盟的更多資訊。"]
+
+.所需角色
+組織管理員或聯盟管理員。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
+
+.步驟
+. 選擇*管理>身分和存取*。
+. 選擇“*Federation*”選項卡。
+. 選擇*導入聯合*。
+

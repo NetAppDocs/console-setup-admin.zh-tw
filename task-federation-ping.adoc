@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: task-federation-ping.html 
+keywords: PingFederate, BlueXP, federation, single sign-on, SSO, identity provider, IdP, service provider-initiated SSO, X.509 certificate, Audience/Entity ID, Reply URL, organization admin 
+summary: '與您的 PingFederate IdP 提供者聯合，為NetApp控制台啟用單一登入 (SSO)。這允許用戶使用他們的公司憑證登入。' 
+---
+= 使用 PingFederate 聯合NetApp控制台
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+與您的 PingFederate IdP 提供者聯合，為NetApp控制台啟用單一登入 (SSO)。這允許用戶使用他們的公司憑證登入。
+
+.必備角色
+需要聯盟管理員角色來創建和管理聯盟。聯盟檢視者可以查看聯盟頁面。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
+
+
+NOTE: 您可以與您的企業 IdP 或NetApp支援網站聯合。  NetApp建議選擇其中一個，但不要同時選擇兩者。
+
+NetApp僅支援服務供應商發起的（SP發起的） SSO。您需要先配置身分提供者以信任NetApp作為服務提供者。然後，您可以在控制台中建立使用身分提供者配置的連線。
+
+您可以使用 PingFederate 設定聯合連接，以啟用控制台的單一登入 (SSO)。這個過程涉及配置您的 PingFederate 伺服器以信任控制台作為服務提供者，然後在控制台中建立連線。
+
+.開始之前
+* 需要具有管理權限的 IdP 帳號。與您的 IdP 管理員協調以完成這些步驟。
+* 確定要用於聯合的域。您可以使用您的電子郵件網域或您擁有的其他網域。如果您想要使用電子郵件網域以外的網域，則必須先在控制台中驗證該網域。您可以按照以下步驟操作link:task-federation-verify-domain.html["在NetApp控制台中驗證您的網域"]話題。
+
+
+.步驟
+. 選擇*管理>身分和存取*。
+. 選擇“*Federation*”以查看“*Federations*”頁面。
+. 選擇*配置新聯合*。
+. 輸入您的網域詳細資料：
++
+.. 選擇您是否要使用已驗證的網域或您的電子郵件網域。電子郵件網域是與您登入的帳戶關聯的網域。
+.. 輸入您正在設定的聯盟的名稱。
+.. 如果您選擇已驗證的網域，請從清單中選擇該網域。
+
+
+. 選擇“下一步”。
+. 對於您的連線方法，選擇*提供者*，然後選擇*PingFederate*。
+. 選擇“下一步”。
+. 設定您的 PingFederate 伺服器以信任NetApp為服務提供者。您需要在 PingFederate 伺服器上執行此步驟。
++
+.. 配置 PingFederate 以信任NetApp控制台時，請使用下列值：
++
+*** 對於 *回覆 URL* 或 *斷言消費者服務 (ACS) URL*，使用 `https://netapp-cloud-account.auth0.com/login/callback`
+*** 對於*登出 URL*，使用 `https://netapp-cloud-account.auth0.com/logout`
+*** 對於*受眾/實體 ID*，使用 `urn:auth0:netapp-cloud-account:<fed-domain-name-saml>`其中 <fed-domain-name-pingfederate> 是聯合的網域名稱。例如，如果您的網域是 `example.com`，受眾/實體 ID 將是 `urn:auth0:netappcloud-account:fed-example-com-pingfederate`。
+
+
+.. 複製 PingFederate 伺服器 URL。在控制台中建立連線時，您將需要此 URL。
+.. 從您的 PingFederate 伺服器下載 X.509 憑證。它需要採用 Base64 編碼的 PEM 格式（.pem、.crt、.cer）。
+
+
+. 返回控制台，然後選擇「下一步」來建立連線。
+. 使用 PingFederate 建立連接
++
+.. 輸入您在上一個步驟中複製的 PingFederate 伺服器 URL。
+.. 上傳 X.509 簽署憑證。證書必須採用 PEM、CER 或 CRT 格式。
+
+
+. 選擇*建立連線*。系統在幾秒鐘內建立連線。
+. 選擇“下一步”。
+. 選擇*測試連線*來測試您的連線。您將被引導至 IdP 伺服器的登入頁面。使用您的 IdP 憑證登入以完成測試並返回控制台以啟用連線。
+. 選擇“下一步”。
+. 在「啟用聯合」頁面上，查看聯合詳細信息，然後選擇「啟用聯合」。
+. 選擇“*完成*”以完成該過程。
+
+
+啟用聯合後，使用者可以使用其公司憑證登入NetApp控制台。

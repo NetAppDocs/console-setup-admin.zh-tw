@@ -1,0 +1,32 @@
+= 
+:allow-uri-read: 
+
+
+. 登入 AWS 主控台並導覽至 IAM 服務。
+. 建立策略：
++
+.. 選擇“策略”>“建立策略”。
+.. 選擇 *JSON* 並複製並貼上內容link:reference-permissions-aws.html["控制台代理的 IAM 策略"]。
+.. 完成剩餘步驟以建立策略。
+
+
+
+
+. 建立 IAM 角色：
++
+.. 選擇*角色 > 建立角色*。
+.. 選擇 *AWS 服務 > EC2*。
+.. 透過附加剛剛建立的策略來新增權限。
+.. 完成剩餘步驟以建立角色。
+
+
+
+
+. 將策略附加到 IAM 使用者。
++
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html["AWS 文件：建立 IAM 角色"^]
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWS 文件：新增和刪除 IAM 政策"^]
+
+
+. 確保使用者擁有存取金鑰，您可以在安裝控制台代理後將其新增至NetApp控制台。
+

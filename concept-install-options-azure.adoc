@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: concept-install-options-azure.html 
+keywords: install connector azure, azure install connector, connector azure, azure connector, installation options, azure marketplace, manual install 
+summary: 有幾種不同的方法可以在 Azure 中建立控制台代理程式。直接從NetApp控制台是最常見的方式。 
+---
+= Azure 中的控制台代理安裝選項
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+有幾種不同的方法可以在 Azure 中建立控制台代理程式。直接從NetApp控制台是最常見的方式。
+
+有以下安裝選項可用：
+
+* link:task-install-connector-azure-bluexp.html["直接從NetApp控制台建立控制台代理"]（這是標準選項）
++
+此操作將在您選擇的 VNet 中啟動運行 Linux 和控制台代理軟體的 VM。
+
+* link:task-install-connector-azure-marketplace.html["從 Azure 市集建立控制台代理"]
++
+此操作也會啟動執行 Linux 和控制台代理軟體的 VM，但部署直接從 Azure 市場啟動，而不是從控制台啟動。
+
+* link:task-install-connector-azure-manual.html["在您自己的Linux主機上下載並手動安裝軟體"]
+
+
+您選擇的安裝選項會影響您如何準備安裝。這包括如何為控制台代理程式提供在 Azure 中驗證和管理資源所需的權限。

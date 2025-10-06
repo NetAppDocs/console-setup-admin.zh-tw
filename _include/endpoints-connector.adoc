@@ -1,0 +1,82 @@
+= 
+:allow-uri-read: 
+
+
+從控制台代理聯繫的端點:: 控制台代理需要外部網路存取來聯繫以下端點，以管理公有雲環境中的資源和流程以進行日常操作。
++
+--
+下面列出的端點都是 CNAME 條目。
+
+--
+
+
+| AWS 服務 (amazonaws.com):
+
+* 雲形成
+* 彈性運算雲（EC2）
+* 身分和存取管理 (IAM)
+* 金鑰管理服務（KMS）
+* 安全性令牌服務 (STS)
+* 簡單儲存服務（S3）
+
+
+| 管理 AWS 資源。端點取決於您的 AWS 區域。 https://docs.aws.amazon.com/general/latest/gr/rande.html["有關詳細信息，請參閱 AWS 文檔"^]
+
+| \ https://management.azure.com \ https://login.microsoftonline.com \ https://blob.core.windows.net \ https://core.windows.net
+
+| 管理 Azure 公用區域中的資源。
+
+| \ https://management.azure.microsoft.scloud \ https://login.microsoftonline.microsoft.scloud \ https://blob.core.microsoft.scloud \ https://core.microsoft.scloud
+
+| 管理 Azure IL6 區域內的資源。
+
+| \ https://management.usgovcloudapi.net \ https://login.microsoftonline.us \ https://blob.core.usgovcloudapi.net \ https://core.usgovcloudapi.net
+
+| 管理 Azure 政府區域中的資源。
+
+| \ https://management.chinacloudapi.cn \ https://login.chinacloudapi.cn \ https://blob.core.chinacloudapi.cn \ https://core.chinacloudapi.cn
+
+| 管理 Azure 中國區域的資源。
+
+| \ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta https://www.googleapis.com/storage/v1 https://storage.googleapis.com/storage/v1 https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/projects
+
+| 管理 Google Cloud 中的資源。
+
+| \ https://mysupport.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息。  | \ https://signin.b2c.netapp.com | 更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp主機。
+
+| \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com https://cdn.auth0.com
+
+a| \ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io a| 取得控制台代理升級的圖像。
+
+* 當您部署新代理程式時，驗證檢查會測試與目前端點的連線。如果你使用link:link:reference-networking-saas-console-previous.html["先前的端點"]，驗證檢查失敗。為了避免此失敗，請跳過驗證檢查。
++
+儘管先前的端點仍然受支持，但NetApp建議盡快將防火牆規則更新至目前端點。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新終端節點列表"] 。
+
+* 當您更新到防火牆中的目前端點時，您現有的代理程式將繼續運作。
+
+
+^1^ NetApp建議在防火牆中允許選項 1 端點，因為它們更安全，而不允許選項 2 端點。請注意有關這些端點的以下事項：
+
++ * 從控制台代理 3.9.47 版本開始，系統支援選項 1 中列出的端點。控制台代理的先前版本不支援向後相容。 * 控制台代理程式首先聯絡選項 2 中的端點。如果這些端點不可訪問，它會自動聯繫選項 1 中的端點。 * 如果您將控制台代理程式與NetApp Backup and Recovery 或 Ransomware Resilience 一起使用，則系統不支援選項 1 端點。允許選項 2 端點並不允許選項 1。
+
+| 如果控制台代理位於 AWS 政府區域：\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
+
+| 當控制台代理安裝在 AWS 政府區域時取得控制台代理升級的映像。
+
+| 如果控制台代理位於 Azure 政府區域：\https://*.blob.core.windows.net \ https://occmclientinfragov.azurecr.us
+
+| 當控制台代理程式安裝在 Azure 政府區域時取得控制台代理程式升級的映像。
+
+a| 如果控制台代理位於商業區域或主權區域，您可以在兩組端點之間進行選擇：
+
+* 選項 1（推薦）^1^
++
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+
+* 選項 2
++
+\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
+
+
+
+| 當控制台代理安裝在商業區域或主權區域時，取得控制台代理程式升級的影像。

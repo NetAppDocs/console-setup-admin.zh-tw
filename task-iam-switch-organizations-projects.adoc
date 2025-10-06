@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: task-iam-switch-organizations-projects.html 
+keywords: switch organizations, switch projects, projects, organizations, change, switch, change organizations, change projects, iam, identity and access management, switch connectors 
+summary: 您可能屬於多個控制台組織，或有權存取組織內的多個專案或代理程式。需要時，您可以輕鬆地在組織、專案和控制台代理之間切換，以存取與該組織、專案或代理相關的資源。 
+---
+= 在控制台組織、專案和代理之間切換
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可能屬於多個控制台組織，或有權存取組織內的多個專案或代理程式。需要時，您可以輕鬆地在組織、專案和控制台代理之間切換，以存取與該組織、專案或代理相關的資源。
+
+
+TIP: 如果其他組織邀請您加入或您自己創建一個組織，那麼您可能屬於多個組織。您可以使用 API 建立其他組織。 https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/post-organizations.html["了解如何建立新組織"^]
+
+
+
+== 在組織之間切換
+
+如果您是多個組織的成員，您可以隨時在它們之間切換。
+
+.步驟
+. 在控制台的頂部標題中，選擇*組織*。
++
+image:screenshot-iam-switch-organizations.png["頂部橫幅的螢幕截圖，您可以在其中選擇組織下拉式選單，然後選擇另一個組織。"]
+
+. 如果您有任何合作組織，請選擇「*合作夥伴關係*」標籤以查看可用的合作夥伴組織。
+
+
++ 如果您沒有任何合作夥伴組織，則不會顯示「合作夥伴關係」標籤。
+
+. 選擇另一個組織，然後選擇*切換*。
+
+
++ 如果您有任何合作組織，請選擇「合作夥伴關係」標籤以查看可用的合作夥伴組織。
+
+
+
+== 在專案之間切換
+
+如果您的組織包含多個項目並且您有權存取這些項目，則您可以隨時在它們之間切換。
+
+
+NOTE: 在查看任何*身份和訪問*頁面時，您無法切換到另一個項目。
+
+.步驟
+. 在控制台的頂部標題中，選擇*項目*。
+. 瀏覽您組織中的資料夾和項目，選擇您想要的項目，然後選擇*切換*。
++
+image:screenshot-iam-switch-projects-select.png["範圍選單的螢幕截圖，您可以在其中選擇一個新項目。"]
+
+
+
+
+
+== 在控制台代理之間切換
+
+如果您有多個控制台代理，您可以在它們之間切換以查看與特定代理相關的系統。
+
+.步驟
+. 在控制台的頂部標題中，選擇代理圖示。
+. 選擇另一個代理，然後選擇*切換*。
+
+
+.相關資訊
+link:task-iam-associate-connectors.html["將代理程式與資料夾和項目關聯"] 。
+
+
+
+== 相關資訊
+
+* link:concept-identity-and-access-management.html["了解NetApp控制台中的身分和存取權限"]
+* link:task-iam-get-started.html["開始使用身分和存取權限"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解身分和存取 API"^]
+

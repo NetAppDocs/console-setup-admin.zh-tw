@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: task-ontap-access-connector.html 
+keywords: administer, credentials, ONTAP, connector, Cloud Volumes ONTAP, on-premises, roles, permissions, console agent, agent 
+summary: 管理員可以設定NetApp控制台以提示使用者輸入其ONTAP憑證。 
+---
+= 強制實施ONTAP Advanced View（ONTAP系統管理員）的ONTAP權限
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+預設情況下，控制台代理程式憑證允許使用者存取進階視圖（ONTAP系統管理員）。您可以提示使用者輸入他們的ONTAP憑證。這可確保使用者在Cloud Volumes ONTAP和ONTAP本地叢集中使用ONTAP叢集時套用其ONTAP權限。
+
+
+NOTE: 您必須具有組織管理員角色才能編輯控制台代理設定。
+
+.步驟
+. 選擇“*管理 > 代理*”。
+. 在*概覽*頁面上，選擇控制台代理程式的操作選單，然後選擇*編輯代理*。
++
+控制台代理程式必須處於活動狀態才能對其進行編輯。
+
+. 展開*強制憑證*選項。
+. 選取核取方塊以啟用*強制憑證*選項，然後選擇*儲存*。
+. 驗證「*強制憑證*」選項是否已啟用。
++
+image:screenshot-force-credentials-on.png["螢幕截圖顯示強制憑證已啟用"]
+
+

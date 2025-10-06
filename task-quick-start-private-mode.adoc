@@ -1,0 +1,131 @@
+---
+sidebar: sidebar 
+permalink: task-quick-start-private-mode.html 
+keywords: private mode quick start, quick start, aws top secret cloud, aws secret cloud, secret cloud, top secret cloud, bluexp legacy, bluexp 
+summary: 私有模式通常用於沒有網路連線的本機環境和安全雲端區域，其中包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。  NetApp控制台尚未支援私有模式。  NetApp繼續透過BlueXP舊介面支援這些環境。連結：<doc link to PDF> 
+---
+= 入門工作流程（BlueXP私人模式）
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+BlueXP私有模式（傳統BlueXP介面）通常用於沒有網路連線的本機環境和安全雲端區域，其中包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。  NetApp繼續透過傳統的BlueXP介面支援這些環境。
+
+link:media/BlueXP-Private-Mode-legacy-interface.pdf["BlueXP私人模式的 PDF 文檔"^]
+
+
+
+== 私有模式支援的功能和資料服務
+
+下表可以幫助您快速識別哪些BlueXP服務和功能支援私人模式。
+
+請注意，某些服務可能會受到限制。
+
+[cols="19,27,27"]
+|===
+| 產品領域 | BlueXP服務或功能 | 私人模式 
+
+
+.10+| *工作環境* 表格的這一部分列出了對BlueXP畫布的工作環境管理的支援。它沒有指出BlueXP backup and recovery所支援的備份目的地。 | 適用於ONTAP 的Amazon FSx | 不 
+
+
+| 亞馬遜 S3 | 不 
+
+
+| Azure Blob | 不 
+
+
+| Azure NetApp Files | 不 
+
+
+| Cloud Volumes ONTAP | 是的 
+
+
+| Google Cloud NetApp Volumes | 不 
+
+
+| Google 雲端儲存 | 不 
+
+
+| 本地ONTAP集群 | 是的 
+
+
+| E系列 | 不 
+
+
+| StorageGRID | 不 
+
+
+.15+| *服務* | 警報 | 不 
+
+
+| 備份和復原 | 是的https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["查看ONTAP磁碟區資料支援的備份目標列表"^] 
+
+
+| 分類 | 是的 
+
+
+| 複製和同步 | 不 
+
+
+| 數位顧問 | 不 
+
+
+| 數位錢包 | 是的 
+
+
+| 災難復原 | 不 
+
+
+| 經濟效益 | 不 
+
+
+| 勒索軟體防護 | 不 
+
+
+| 複製 | 是的 
+
+
+| 軟體更新 | 不 
+
+
+| 永續性 | 不 
+
+
+| 分層 | 不 
+
+
+| 卷緩存 | 不 
+
+
+| 工作負載工廠 | 不 
+
+
+.8+| *特徵* | 身分和存取管理 | 是的 
+
+
+| 證書 | 是的 
+
+
+| 聯邦 | 不 
+
+
+| 多因素身份驗證 | 不 
+
+
+| NSS 帳戶 | 不 
+
+
+| 通知 | 不 
+
+
+| 搜尋 | 不 
+
+
+| 時間軸 | 是的 
+|===

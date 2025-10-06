@@ -1,0 +1,150 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-predefined-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, classification viewer, snapcenter admin, role, iam role, admin, iam, identity and access management, access roles, rbac, bluexp 
+summary: NetApp控制台身分和存取管理包含可指派給組織成員的預先定義角色。 
+---
+= 了解NetApp控制台存取角色
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp控制台中的身分和存取管理 (IAM) 提供了預先定義的角色，您可以將這些角色指派給組織中不同資源層級的成員。在指派這些角色之前，您應該了解每個角色包含的權限。角色分為以下類別：平台、應用程式和資料服務。
+
+
+
+== 平台角色
+
+平台角色授予NetApp控制台管理權限，包括角色分配和使用者管理。控制台具有多種平台角色。
+
+[cols="1,2"]
+|===
+| 平台角色 | 職責 
+
+
+| link:reference-iam-platform-roles.html#organization-admin-roles["組織管理員"] | 允許使用者不受限制地存取組織內的所有項目和資料夾，為任何項目或資料夾添加成員，以及執行任何任務和使用任何沒有明確關聯角色的資料服務。具有此角色的使用者可以透過建立資料夾和專案、分配角色、新增使用者以及管理系統（如果他們擁有適當的憑證）來管理您的組織。這是唯一可以建立控制台代理的存取角色。 
+
+
+| link:reference-iam-platform-roles.html#organization-admin-roles["資料夾或專案管理員"] | 允許使用者不受限制地存取已指派的項目和資料夾。可以將成員新增到他們管理的資料夾或專案中，以及執行任何任務並在他們被指派的資料夾或專案內的資源上使用任何資料服務或應用程式。資料夾或專案管理員無法建立控制台代理。 
+
+
+| link:reference-iam-platform-roles.html#federation-roles["聯盟管理員"] | 允許使用者使用控制台建立和管理聯合，從而實現單一登入 (SSO)。 
+
+
+| link:reference-iam-platform-roles.html#federation-roles["聯邦檢視器"] | 允許使用者使用控制台查看現有的聯合。無法建立或管理聯盟。 
+
+
+| link:reference-iam-platform-roles.html#partnership-roles["合作夥伴管理員"] | 允許使用者創建和管理合作關係。 
+
+
+| link:reference-iam-platform-roles.html#partnership-roles["合作夥伴檢視器"] | 允許用戶查看現有的合作關係。無法創建或管理合作關係。 
+
+
+| link:reference-iam-platform-roles.html#super-admin-roles["超管理員"] | 為使用者提供管理員角色的子集。此角色專為可能不需要在多個使用者之間分配控制台職責的小型組織而設計。 
+
+
+| link:reference-iam-platform-roles.html#super-admin-roles["超觀眾"] | 為使用者提供子集查看者角色。此角色專為可能不需要在多個使用者之間分配控制台職責的小型組織而設計。 
+|===
+
+
+== 應用程式角色
+
+以下是應用程式類別中的角色清單。每個角色在其指定範圍內授予特定的權限。沒有所需應用程式或平台角色的使用者無法存取相應的應用程式。
+
+[cols="1,2"]
+|===
+| 應用程式角色 | 職責 
+
+
+| link:reference-iam-gcnv-roles.html["Google Cloud NetApp Volumes管理員"] | 具有Google Cloud NetApp Volumes角色的使用者可以發現和管理Google Cloud NetApp Volumes。 
+
+
+| link:reference-iam-keystone-roles.html["Keystone管理員"] | 具有Keystone管理員角色的使用者可以建立服務請求。允許使用者監控和查看他們正在存取的Keystone租戶內的使用情況、資源和管理詳細資訊。 
+
+
+| link:reference-iam-keystone-roles.html["Keystone檢視器"] | 具有Keystone檢視者角色的使用者不能建立服務請求。允許使用者監控和查看他們正在存取的Keystone租戶內的消費、資產和管理資訊。 
+
+
+| ONTAP調解器設定角色 | 具有ONTAP調解器設定角色的服務帳戶可以建立服務請求。服務帳戶中需要此角色來配置link:https://docs.netapp.com/us-en/ontap/mediator/mediator-overview-concept.html["ONTAP雲端調解器"^]。 
+
+
+| link:reference-iam-analyst-roles.html["營運支援分析師"] | 提供對警報和監控工具的存取以及輸入和管理支援案例的能力。 
+
+
+| link:reference-iam-storage-roles.html["儲存管理員"] | 管理儲存健康和治理功能，發現儲存資源，以及修改和刪除現有系統。 
+
+
+| link:reference-iam-storage-roles.html["儲存檢視器"] | 查看儲存健康和治理功能，以及查看先前發現的儲存資源。無法發現、修改或刪除現有的儲存系統。 
+
+
+| link:reference-iam-storage-roles.html["系統健康專家"] | 管理儲存和健康和治理功能，儲存管理員的所有權限，但不能修改或刪除現有系統。 
+|===
+
+
+== 數據服務角色
+
+以下是資料服務類別中的角色清單。每個角色在其指定範圍內授予特定的權限。沒有所需資料服務角色或平台角色的使用者將無法存取資料服務。
+
+[cols="10,24"]
+|===
+| 數據服務角色 | 職責 
+
+
+| link:reference-iam-backup-rec-roles.html["備份和恢復超級管理員"] | 在NetApp Backup and Recovery 中執行任何操作。 
+
+
+| link:reference-iam-backup-rec-roles.html["備份和復原管理員"] | 執行本機快照備份、複製到二級儲存以及備份到物件儲存。 
+
+
+| link:reference-iam-backup-rec-roles.html["備份和還原復原管理員"] | 恢復備份和復原中的工作負載。 
+
+
+| link:reference-iam-backup-rec-roles.html["備份和還原克隆管理員"] | 在備份和復原中克隆應用程式和資料。 
+
+
+| link:reference-iam-backup-rec-roles.html["備份和還原檢視器"] | 查看備份和復原資訊。 
+
+
+| link:reference-iam-disaster-rec-roles.html["災難復原管理員"] | 在NetApp災難復原服務​​中執行任何操作。 
+
+
+| link:reference-iam-disaster-rec-roles.html["災難復原故障轉移管理員"] | 執行故障轉移和遷移。 
+
+
+| link:reference-iam-disaster-rec-roles.html["災難復原應用程式管理員"] | 建立複製計劃、變更複製計劃並啟動測試故障轉移。 
+
+
+| link:reference-iam-disaster-rec-roles.html["災難復原檢視器"] | 僅查看資訊。 
+
+
+| 分類檢視器 | 允許使用者查看NetApp資料分類掃描結果。具有此角色的使用者可以查看合規性資訊並產生他們有權存取的資源的報告。這些使用者無法啟用或停用磁碟區、儲存桶或資料庫模式的掃描。分類沒有查看者角色。 
+
+
+| link:reference-iam-ransomware-roles.html["勒索軟體抵禦能力管理員"] | 管理NetApp Ransomware Resilience 的「保護」、「警報」、「復原」、「設定」和「報告」標籤上的操作。 
+
+
+| link:reference-iam-ransomware-roles.html["勒索軟體復原力檢視器"] | 在 Ransomware Resilience 中查看工作負載資料、查看警報資料、下載復原資料和下載報告。 
+
+
+| link:reference-iam-ransomware-roles.html["勒索軟體復原力用戶行為管理員"] | 在勒索軟體復原中設定、管理和查看可疑使用者行為偵測、警報和監控。 
+
+
+| link:reference-iam-ransomware-roles.html["勒索軟體恢復用戶行為檢視器"] | 查看勒索軟體復原中的可疑使用者行為警報和見解。 
+
+
+| SnapCenter管理員 | 提供使用NetApp Backup and Recovery 從本機ONTAP叢集備份應用程式快照的功能。具有此角色的成員可以完成以下操作：* 從“備份和恢復”>“應用程式”完成任何操作* 管理他們具有權限的項目和資料夾中的所有系統* 使用所有NetApp控制台服務SnapCenter沒有查看者角色。 
+|===
+
+
+== 相關連結
+
+* link:concept-identity-and-access-management.html["了解NetApp控制台身分和存取管理"]
+* link:task-iam-get-started.html["開始使用NetApp Console IAM"]
+* link:task-iam-manage-members-permissions.html["管理NetApp控制台成員及其權限"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解NetApp Console IAM 的 API"^]
+

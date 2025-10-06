@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: task-sign-up-saas.html 
+keywords: sign up, signing up, sign in, signing in, login with netapp, log in with netapp, create account, account, log in with nss, nss, nss login 
+summary: 可以透過基於 Web 的控制台存取NetApp控制台。要開始使用控制台，您的第一步是註冊或使用您的NetApp支援網站憑證登錄，或建立NetApp控制台登入。 
+---
+= 註冊或登入NetApp控制台
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+可以透過基於 Web 的控制台存取NetApp控制台。要開始使用控制台，您的第一步是註冊或使用您的NetApp支援網站憑證登錄，或建立NetApp控制台登入。
+
+.關於此任務
+首次造訪控制台時，您可以使用下列選項之一註冊或登入：
+
+NetApp控制台登入:: 您可以透過建立登入名稱來註冊。此驗證方法要求您指定您的電子郵件地址和密碼。驗證電子郵件地址後，您可以登入並建立組織（如果您還不屬於任何組織）。
+NetApp支援站點 (NSS) 憑證:: 如果您已有NetApp支援網站憑證，則無需註冊控制台。您使用 NSS 憑證登錄，然後控制台會提示您建立一個組織（如果您尚未屬於任何組織）。
++
+--
+您將收到一次性密碼 (OTP) 到註冊的電子郵件地址。每次登入嘗試都會產生一個新的 OTP。
+
+--
+聯合連接:: 如果您的公司已經擁有NetApp控制台實例，則您的控制台管理員可能已經設定了單一登錄，以使用來自您的公司目錄（聯合身分）的憑證登入。
++
+--
+link:concept-federation.html["了解如何將身分聯合與NetApp控制台結合使用"] 。
+
+--
+
+
+.步驟
+. 開啟 Web 瀏覽器並前往 https://console.netapp.com["NetApp控制台"^]
+. 如果您有NetApp支援網站帳號或已設定身分聯合，請在「登入」頁面直接輸入與您的帳號關聯的電子郵件地址。
++
+在這兩種情況下，您都會在初始登入時註冊控制台。
+
+. 如果您想透過建立控制台登入來註冊，請選擇*註冊*。
++
+.. 在*註冊*頁面上，輸入所需資訊並選擇*下一步*。
++
+請注意，註冊表中只允許輸入英文字元。
+
+.. 檢查您的收件箱，尋找來自NetApp的電子郵件，其中包含驗證您的電子郵件地址的說明。
++
+您必須先執行此步驟才能登入控制台。
+
+
+
+. 登入後，請查看最終使用者許可協議並接受條款。
++
+如果您的使用者帳戶尚不屬於控制台組織，系統將提示您建立一個。
+
+. 在*歡迎*頁面上，輸入您的控制台組織的名稱。
++
+控制台定義組織是控制台身分和存取管理 (IAM) 中的頂級元素。link:concept-identity-and-access-management.html["了解 IAM"] 。
+
++
+如果您的企業已經有一個組織並且您想加入該組織，請關閉控制台並要求組織管理員將您與該組織關聯。新增後，您可以登入並造訪控制台組織。link:task-iam-manage-members-permissions#add-members["了解如何為現有組織新增成員"] 。
+
+. 選擇*讓我們開始吧*。
+

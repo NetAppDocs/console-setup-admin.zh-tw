@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: concept-org-partnerships.html 
+keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
+summary: 透過在NetApp控制台中建立組織之間的合作夥伴關係，組織合作夥伴可以跨組織邊界安全地管理NetApp資源，從而簡化協作並增強安全性。 
+---
+= NetApp控制台中的合作夥伴關係
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+透過在組織之間建立合作夥伴關係， NetApp控制台可讓合作夥伴跨組織邊界安全地管理NetApp資源，從而簡化協作並增強安全性。
+
+.必備角色
+合作夥伴管理員link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
+
+合作夥伴關係允許使用控制台中的角色驅動關係跨組織安全地管理NetApp資源。發起組織授予對其資源的存取權限，而接受組織提供被授予存取權限的使用者或服務帳戶。合作夥伴關係是透過自助服務工作流程建立的，使發起組織能夠完全控制共享的資源、分配的角色以及根據需要加入、管理或撤銷合作夥伴存取權限的能力。
+
+客戶可以授權 MSP 或經銷商來管理NetApp環境，而無需複雜的設定。客戶可以控制合作夥伴可以存取哪些叢集以及他們擁有哪些角色，並且可以隨時撤銷存取權限以維護安全性和合規性。
+
+作為合作夥伴，您可以獲得跨客戶環境的集中可見性和控制力。您可以輕鬆切換到客戶的組織來管理資源、運行數據服務並在定義的邊界內監控健康狀況，從而減少自訂工具並確保與每個客戶的政策保持一致。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"]為一個或多個使用者指派合作夥伴管理員角色
+為發起組織和接收組織中的一個或多個使用者指派合作夥伴管理員角色來建立和管理合作夥伴關係。您可以將合作夥伴檢視器角色指派給只需要查看合作夥伴關係而不需要管理的使用者。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"]與發起組織共用您的組織 ID
+[role="quick-margin-para"]
+要發起合作關係，發起者必須知道目標組織的組織 ID。只有相應的組織可以存取此組織 ID。透過電子郵件或其他方式直接與NetApp控制台以外的發起組織共用。
+
+發起組織是授予其資源存取權限的組織。
+
+image:diagram-partnership-org-id.png["顯示初始組織的圖表"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]在NetApp控制台內建立合作關係
+[role="quick-margin-para"]
+發起合作關係的組織透過從NetApp控制台發送合作關係請求來發起合作關係。
+
+image:diagram-partnership-accept.png["顯示夥伴關係接受度的圖表"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"]批准合作
+[role="quick-margin-para"]
+接收組織必須接受該請求。
+
+接收組織是被授予資源存取權限的組織。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"]將用戶分配到合作關係
+[role="quick-margin-para"]
+接收組織將您組織中的特定使用者或服務帳戶指派給合作夥伴關係。發起組織為這些使用者指派角色。
+
+image:diagram-partnership-add-user.png["顯示使用者指派的圖表"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六"]授予指定使用者對資源的存取權限
+[role="quick-margin-para"]
+如果您是發起組織，您可以向指派給合作關係的使用者授予特定資源的存取權限。您可以隨時撤銷存取權限。
+
+您可以透過為組織內的特定項目或資料夾分配角色來實現此目的。
+
+image:diagram-partnership-resources.png["顯示資源共享的圖表"]

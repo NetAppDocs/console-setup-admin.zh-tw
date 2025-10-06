@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: task-logging-in.html 
+keywords: logging in, log in, sign in, signing in, cloud central, netapp cloud central, user account, federated, federation, federated login, federation login, login with netapp, log in with netapp, sign up, create account 
+summary: 如何登入NetApp控制台取決於您使用的部署模式。 
+---
+= 登入NetApp控制台
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如何登入NetApp控制台取決於您使用的部署模式。
+
+24 小時後或關閉瀏覽器後，您將自動退出。
+
+link:concept-modes.html["了解控制台部署模式"] 。
+
+[role="tabbed-block"]
+====
+.標準模式
+--
+註冊NetApp控制台後，您可以從基於 Web 的控制台登錄，開始管理您的資料和儲存基礎架構。
+
+.關於此任務
+您可以使用以下選項之一登入NetApp控制台：
+
+* 您現有的NetApp支援網站 (NSS) 憑證
+* 使用您的電子郵件地址和密碼的NetApp控制台帳戶
+* 聯合連接
++
+您可以使用單一登錄，使用公司目錄（聯合身分）中的憑證登入。link:concept-federation.html["了解如何設定身份聯合"] 。
+
+
+
+.步驟
+. 開啟 Web 瀏覽器並前往 https://console.netapp.com["NetApp控制台"]
+. 在*登入*頁面上，輸入與您的登入關聯的電子郵件地址。
+. 根據與您的登入相關的身份驗證方法，系統將提示您輸入您的憑證：
++
+** NetApp雲端憑證：輸入您的密碼
+** 聯合使用者：輸入您的聯合身分憑證
+** NetApp支援網站帳戶：輸入您的NetApp支援網站憑證
+
+
+
+
+.結果
+您現在已登入並可以開始使用它來管理您的混合多雲基礎架構。
+
+--
+.限制模式
+--
+在受限模式下使用控制台時，您需要從代理程式上本機執行的使用者介面登入控制台。
+
+.關於此任務
+在受限模式下，控制台支援使用下列選項之一登入：
+
+* 使用您的電子郵件地址和密碼登入NetApp控制台
+* 聯合連接
++
+您可以使用單一登錄，使用公司目錄（聯合身分）中的憑證登入。link:concept-federation.html["了解如何使用身分認同聯合"] 。
+
+
+
+.步驟
+. 開啟 Web 瀏覽器並輸入安裝代理程式的 IP 位址。
+. 輸入您的使用者名稱和密碼登入。
+
+
+--
+====

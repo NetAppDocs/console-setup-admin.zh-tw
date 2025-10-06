@@ -1,0 +1,274 @@
+---
+sidebar: sidebar 
+permalink: reference-permissions-gcp.html 
+keywords: permissions, gcp, gcp permissions, bluexp 
+summary: 控制台代理程式需要權限才能在您的雲端提供者中執行操作。這些權限包含在NetApp提供的策略中。您應該了解代理程式使用這些權限做什麼。 
+---
+= 控制台代理的 Google Cloud 權限
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp控制台需要權限才能在 Google Cloud 中執行操作。這些權限包含在NetApp提供的自訂角色中。您應該了解代理程式使用這些權限做什麼。
+
+
+
+== 服務帳號權限
+
+下面顯示的自訂角色提供了控制台代理程式管理 Google Cloud 網路內的資源和流程所需的權限。
+
+您需要將此自訂角色套用到附加到控制台代理程式 VM 的服務帳戶。
+
+* link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["設定標準模式的 Google Cloud 權限"]
+* link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["設定限制模式的權限"]
+
+
+您還需要確保角色是最新的，因為後續版本中會新增新的權限。如果需要新的權限，它們將在發行說明中列出。
+
+[source, yaml]
+----
+title: NetApp Console agent
+description: Permissions for the service account associated with the Console agent instance.
+stage: GA
+includedPermissions:
+- iam.serviceAccounts.actAs
+- compute.regionBackendServices.create
+- compute.regionBackendServices.get
+- compute.regionBackendServices.list
+- compute.networks.updatePolicy
+- compute.backendServices.create
+- compute.addresses.list
+- compute.disks.create
+- compute.disks.createSnapshot
+- compute.disks.delete
+- compute.disks.get
+- compute.disks.list
+- compute.disks.setLabels
+- compute.disks.use
+- compute.firewalls.create
+- compute.firewalls.delete
+- compute.firewalls.get
+- compute.firewalls.list
+- compute.globalOperations.get
+- compute.images.get
+- compute.images.getFromFamily
+- compute.images.list
+- compute.images.useReadOnly
+- compute.instances.addAccessConfig
+- compute.instances.attachDisk
+- compute.instances.create
+- compute.instances.delete
+- compute.instances.detachDisk
+- compute.instances.get
+- compute.instances.getSerialPortOutput
+- compute.instances.list
+- compute.instances.setDeletionProtection
+- compute.instances.setLabels
+- compute.instances.setMachineType
+- compute.instances.setMetadata
+- compute.instances.setTags
+- compute.instances.start
+- compute.instances.stop
+- compute.instances.updateDisplayDevice
+- compute.instanceGroups.get
+- compute.addresses.get
+- compute.instances.updateNetworkInterface
+- compute.machineTypes.get
+- compute.networks.get
+- compute.networks.list
+- compute.projects.get
+- compute.regions.get
+- compute.regions.list
+- compute.snapshots.create
+- compute.snapshots.delete
+- compute.snapshots.get
+- compute.snapshots.list
+- compute.snapshots.setLabels
+- compute.subnetworks.get
+- compute.subnetworks.list
+- compute.subnetworks.use
+- compute.subnetworks.useExternalIp
+- compute.zoneOperations.get
+- compute.zones.get
+- compute.zones.list
+- compute.instances.setServiceAccount
+- deploymentmanager.compositeTypes.get
+- deploymentmanager.compositeTypes.list
+- deploymentmanager.deployments.create
+- deploymentmanager.deployments.delete
+- deploymentmanager.deployments.get
+- deploymentmanager.deployments.list
+- deploymentmanager.manifests.get
+- deploymentmanager.manifests.list
+- deploymentmanager.operations.get
+- deploymentmanager.operations.list
+- deploymentmanager.resources.get
+- deploymentmanager.resources.list
+- deploymentmanager.typeProviders.get
+- deploymentmanager.typeProviders.list
+- deploymentmanager.types.get
+- deploymentmanager.types.list
+- logging.logEntries.list
+- logging.privateLogEntries.list
+- resourcemanager.projects.get
+- storage.buckets.create
+- storage.buckets.delete
+- storage.buckets.get
+- storage.buckets.list
+- cloudkms.cryptoKeyVersions.useToEncrypt
+- cloudkms.cryptoKeys.get
+- cloudkms.cryptoKeys.list
+- cloudkms.keyRings.list
+- storage.buckets.update
+- iam.serviceAccounts.getIamPolicy
+- iam.serviceAccounts.list
+- storage.objects.get
+- storage.objects.list
+- monitoring.timeSeries.list
+- storage.buckets.getIamPolicy
+- cloudkms.cryptoKeys.getIamPolicy
+- cloudkms.cryptoKeys.setIamPolicy
+- cloudkms.keyRings.get
+- cloudkms.keyRings.getIamPolicy
+- cloudkms.keyRings.setIamPolicy
+----
+
+
+== Google Cloud 權限的使用方式
+
+[cols="50,50"]
+|===
+| 行動 | 目的 
+
+
+| - compute.disks.create - compute.disks.createSnapshot - compute.disks.delete - compute.disks.get - compute.disks.list - compute.disks.setLabels - compute.disks.use | 為Cloud Volumes ONTAP建立和管理磁碟。 
+
+
+| - compute.firewalls.創建 - compute.firewalls.刪除 - compute.firewalls.獲取 - compute.firewalls.列表 | 為Cloud Volumes ONTAP建立防火牆規則。 
+
+
+| - 計算.全域操作.獲取 | 獲取操作狀態。 
+
+
+| - compute.images.get - compute.images.getFromFamily - compute.images.list - compute.images.useReadOnly | 取得虛擬機器實例的影像。 
+
+
+| - 計算.實例.附加磁碟 - 計算.實例.分離磁碟 | 將磁碟附加到Cloud Volumes ONTAP中分離磁碟。 
+
+
+| - 計算實例建立 - 計算實例刪除 | 建立和刪除Cloud Volumes ONTAP VM 實例。 
+
+
+| - 計算.實例.取得 | 列出虛擬機器實例。 
+
+
+| - compute.instances.getSerialPortOutput | 取得控制台日誌。 
+
+
+| - 計算.實例.列表 | 檢索區域中的實例清單。 
+
+
+| - compute.instances.setDeletionProtection | 對實例設定刪除保護。 
+
+
+| - 計算.實例.設定標籤 | 新增標籤。 
+
+
+| - compute.instances.setMachineType - compute.instances.setMinCpuPlatform | 變更Cloud Volumes ONTAP的機器類型。 
+
+
+| - 計算.實例.設定元數據 | 新增元資料。 
+
+
+| - 計算.實例.設定標籤 | 為防火牆規則新增標籤。 
+
+
+| - compute.instances.啟動 - compute.instances.停止 - compute.instances.updateDisplayDevice | 啟動和停止Cloud Volumes ONTAP。 
+
+
+| - compute.machineTypes.get | 取得核心數量來檢查配額。 
+
+
+| - 計算.項目.獲取 | 支援多項目。 
+
+
+| - compute.snapshots.create - compute.snapshots.delete - compute.snapshots.get - compute.snapshots.list - compute.snapshots.setLabels | 建立和管理持久性磁碟快照。 
+
+
+| - 計算.網路.取得 - 計算.網路.列表 - 計算.區域.取得 - 計算.區域.列表 - 計算.子網路.取得 - 計算.子網路.列表 - 計算.區域操作.取得 - 計算.區域.取得 - 計算.區域.列表 | 取得建立新的Cloud Volumes ONTAP虛擬機器實例所需的網路資訊。 
+
+
+| - deploymentmanager.compositeTypes.get - deploymentmanager.compositeTypes.list - deploymentmanager.deployments.create - deploymentmanager.deployments.delete - deploymentmanager.deployments。 deploymentmanager.operations.get - deploymentmanager.operations.list - deploymentmanager.resources.get - deploymentmanager.operations.list - deploymentmanager.resources.get - deploymentmanager.resources.list - deploymentmanager.typeProviders.get - deploymentmanager.typeProviders.list - deploymentmantypeProviders.get - deploymentmanager.typeProviders.list - deploymentmanager. | 使用 Google Cloud Deployment Manager 部署Cloud Volumes ONTAP虛擬機器實例。 
+
+
+| - logging.logEntries.列表 - logging.privateLogEntries.列表 | 取得堆疊日誌驅動器。 
+
+
+| -資源管理器.專案.獲取 | 支援多項目。 
+
+
+| - storage.buckets.create - storage.buckets.delete - storage.buckets.get - storage.buckets.list - storage.buckets.update | 建立和管理用於資料分層的 Google Cloud Storage 儲存桶。 
+
+
+| - cloudkms.cryptoKeyVersions.useToEncrypt - cloudkms.cryptoKeys.get - cloudkms.cryptoKeys.list - cloudkms.keyRings.list | 將來自 Cloud Key Management Service 的客戶管理加密金鑰與Cloud Volumes ONTAP結合使用。 
+
+
+| - compute.instances.setServiceAccount - iam.serviceAccounts.actAs - iam.serviceAccounts.getIamPolicy - iam.serviceAccounts.list - storage.objects.get - storage.objects.list | 在Cloud Volumes ONTAP實例上設定服務帳戶。此服務帳戶提供將資料分層至 Google Cloud Storage 儲存桶的權限。 
+
+
+| - 計算.位址.列表 | 在部署 HA 對時檢索區域中的位址。 
+
+
+| - compute.backendServices.創建 - compute.regionBackendServices.創建 - compute.regionBackendServices.獲取 - compute.regionBackendServices.列表 | 配置後端服務以在 HA 對中分配流量。 
+
+
+| - 計算.網.更新策略 | 在 HA 對的 VPC 和子網路上套用防火牆規則。 
+
+
+| - compute.subnetworks.use - compute.subnetworks.useExternalIp - compute.instances.addAccessConfig | 啟用NetApp資料分類。 
+
+
+| - compute.instanceGroups.get - compute.addresses.get - compute.instances.updateNetworkInterface | 在Cloud Volumes ONTAP HA 對上建立和管理儲存虛擬機器。 
+
+
+| - 監控.時間序列.清單 - 儲存.桶.取得IamPolicy | 發現有關 Google Cloud Storage 儲存桶的資訊。 
+
+
+| - cloudkms.cryptoKeys.get - cloudkms.cryptoKeys.getIamPolicy - cloudkms.cryptoKeys.list - cloudkms.cryptoKeys.setIamPolicy - cloudkms.keyRings.get - cloudkms.key E cloudkms.keyRings.setIamPolicy | 在NetApp備份和復原啟動精靈中選擇您自己的客戶管理金鑰，而不是使用預設的 Google 管理加密金鑰。 
+|===
+
+
+== 更改日誌
+
+當新增和刪除權限時，我們會在下面的部分中註明。
+
+
+
+=== 2023年2月06日
+
+此策略中新增了以下權限：
+
+* 計算.實例.更新網路介面
+
+
+Cloud Volumes ONTAP需要此權限。
+
+
+
+=== 2023年1月27日
+
+已將以下權限新增至策略：
+
+* cloudkms.cryptoKeys.getIamPolicy
+* cloudkms.cryptoKeys.setIamPolicy
+* cloudkms.keyRings.get
+* cloudkms.keyRings.getIamPolicy
+* cloudkms.keyRings.setIamPolicy
+
+
+NetApp備份和復原需要這些權限。

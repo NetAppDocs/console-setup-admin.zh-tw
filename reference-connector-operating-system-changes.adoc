@@ -1,0 +1,168 @@
+---
+sidebar: sidebar 
+permalink: reference-connector-operating-system-changes.html 
+keywords: connector, operating systems, connector operating systems, os support, supported operating systems, rhel 8, rhel 9, red hat, docker, podman, agent 
+summary: NetApp有時會在特定的 Linux 作業系統上新增和刪除對控制台代理的支持，以了解此支援如何影響您現有的控制台代理。 
+---
+= 支援的 Linux 作業系統的變更
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp有時會在特定的 Linux 作業系統上新增和刪除對控制台代理的支持，以了解此支援如何影響您現有的控制台代理。
+
+
+
+== 支援的作業系統
+
+NetApp支援具有以下 Linux 作業系統的代理程式。
+
+[role="tabbed-block"]
+====
+.標準模式
+--
+手動安裝::
++
+--
+* Ubuntu 24.04 LTS
+* Ubuntu 22.04 LTS
+* 紅帽企業 Linux
++
+** 8.6 至 8.10
+** 9.1 至 9.4
+
+
+
+
+--
+從NetApp控制台部署:: Ubuntu 22.04 LTS
+從 AWS Marketplace 部署:: Ubuntu 22.04 LTS
+從 Azure 市場部署:: Ubuntu 22.04 LTS
+
+
+--
+.限制模式
+--
+手動安裝::
++
+--
+* Ubuntu 24.04 LTS
+* Ubuntu 22.04 LTS
+* 紅帽企業 Linux
++
+** 8.6 至 8.10
+** 9.1 至 9.4
+
+
+
+
+--
+從 AWS Marketplace 部署:: Ubuntu 22.04 LTS
+從 Azure 市場部署:: Ubuntu 22.04 LTS
+
+
+--
+.私人模式
+--
+手動安裝::
++
+--
+* Ubuntu 22.04 LTS
+* 紅帽企業 Linux
++
+** 8.6 至 8.10
+** 9.1 至 9.4
+
+
+
+
+--
+
+
+--
+====
+
+
+== 支援 RHEL 8 和 9
+
+請注意以下有關 RHEL 8 和 9 的支持：
+
+限制:: 如果您在本機的 RHEL 8 或 9 主機上安裝代理，則支援NetApp資料分類。如果 RHEL 8 或 9 主機位於 AWS、Azure 或 Google Cloud 中，則不受支援。
+容器編排工具:: 在 RHEL 8 或 9 主機上安裝控制台代理程式時，必須使用 Podman 工具作為容器編排工具。  RHEL 8 和 9 不支援 Docker Engine。
+部署模式:: 在標準模式和受限模式下使用控制台時支援 RHEL 8 和 9。
+支援的控制台代理版本:: NetApp從以下版本的控制台代理開始支援 RHEL 8 和 9：
++
+--
+* 3.9.40 在標準模式或限制模式下使用控制台時
+
+
+--
+僅限新的手動安裝:: 在您的本機或雲端中執行的主機上手動安裝代理程式時，RHEL 8 和 9 支援_新_代理安裝。
+RHEL 升級:: 如果您在 RHEL 7 主機上執行現有代理， NetApp不支援將 RHEL 7 作業系統升級到 RHEL 8 或 9。<<rhel-7-agent,了解有關 RHEL 7 或 CentOS 7 上現有控制台代理的更多信息>> 。
+
+
+
+
+== 終止對 RHEL 7 和 CentOS 7 的支持
+
+2024 年 6 月 30 日，RHEL 7 達到維護終止 (EOM)，而 CentOS 7 達到生命週期終止 (EOL)。  NetApp將於 2024 年 6 月 30 日停止對這些 Linux 發行版上的代理商的支援。
+
+https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/rhel-7-end-of-maintenance["Red Hat：關於 Red Hat Enterprise Linux 7 維護終止你需要知道的事"^]
+
+
+
+=== RHEL 7 或 CentOS 7 上的現有控制台代理
+
+如果您現有的代理程式在 RHEL 7 或 CentOS 7 上執行， NetApp不支援將作業系統升級或轉換為 RHEL 8 或 9。您需要在受支援的作業系統上建立一個新的代理程式。
+
+. 設定 RHEL 8 或 9 主機。
+. 安裝 Podman。
+. 安裝一個_新_代理。
+. 配置代理以發現先前代理所管理的系統。
+
+
+
+
+== 相關資訊
+
+
+
+=== 如何開始使用 RHEL 8 和 9
+
+有關主機要求、Podman 要求以及安裝 Podman 和 Cagent 的步驟的詳細信息，請參閱以下頁面：
+
+[role="tabbed-block"]
+====
+.標準模式
+--
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["在本機安裝並設定控制台代理"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-aws-manual.html["在 AWS 中手動安裝控制台代理"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-azure-manual.html["在 Azure 中手動安裝控制台代理"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-google-manual.html["在 Google Cloud 中手動安裝控制台代理"]
+
+
+--
+.限制模式
+--
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-prepare-restricted-mode.html["準備在受限模式下部署"]
+
+--
+====
+
+
+=== 如何重新發現你的系統
+
+部署新的控制台代理程式後，請參閱以下頁面以重新發現您的系統。
+
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-adding-systems.html["新增現有的Cloud Volumes ONTAP系統"^]
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["發現本地ONTAP集群"^]
+* https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html["建立或發現 FSx for ONTAP系統"^]
+* https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-create-working-env.html["建立Azure NetApp Files系統"^]
+* https://docs.netapp.com/us-en/bluexp-e-series/task-discover-e-series.html["探索 E 系列系統"^]
+* https://docs.netapp.com/us-en/bluexp-storagegrid/task-discover-storagegrid.html["了解StorageGRID系統"^]
+

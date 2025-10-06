@@ -1,0 +1,151 @@
+= 
+:allow-uri-read: 
+
+
+.開始之前
+您應該具有以下內容：
+
+* 安裝控制台代理程式的 root 權限。
+* 如果控制台代理需要代理才能存取互聯網，則提供有關代理伺服器的詳細資訊。
++
+您可以選擇在安裝後設定代理伺服器，但這樣做需要重新啟動控制台代理。
+
+* 如果代理伺服器使用 HTTPS 或代理是攔截代理，則需要 CA 簽署的憑證。
+
+
+
+NOTE: 手動安裝控制台代理程式時，無法為透明代理伺服器設定憑證。如果需要為透明代理伺服器設定證書，則必須在安裝後使用維護控制台。詳細了解link:reference-connector-maint-console.html["代理維護控制台"]。
+
+.關於此任務
+NetApp支援網站上提供的安裝程式可能是早期版本。安裝後，如果有新版本可用，控制台代理會自動更新。
+
+.步驟
+. 如果主機上設定了 _http_proxy_ 或 _https_proxy_ 系統變量，請將其刪除：
++
+[source, cli]
+----
+unset http_proxy
+unset https_proxy
+----
++
+如果不刪除這些系統變量，安裝將會失敗。
+
+. 從下載控制台代理軟體 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp支援站點"^]，然後將其複製到Linux主機上。
++
+您應該下載適用於您的網路或雲端中的「線上」代理安裝程式。
+
+. 分配運行腳本的權限。
++
+[source, cli]
+----
+chmod +x NetApp_Console_Agent_Cloud_<version>
+----
++
+其中 <version> 是您下載的控制台代理的版本。
+
+. 如果在政府雲端環境中安裝，請停用設定檢查。link:task-troubleshoot-connector.html#disable-config-check["了解如何停用手動安裝的設定檢查。"]
+. 運行安裝腳本。
++
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+----
++
+如果您的網路需要代理來存取互聯網，則需要新增代理資訊。您可以新增透明或顯式代理程式。 --proxy 和 --cacert 參數是可選的，系統不會提示您新增它們。如果您有代理伺服器，則需要輸入所示的參數。
+
++
+以下是使用 CA 簽章憑證設定明確代理伺服器的範例：
+
++
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+----
++
+`--proxy`使用下列格式之一將控制台代理程式配置為使用 HTTP 或 HTTPS 代理伺服器：
+
++
+** \http://位址:埠
+** \http://用戶名:密碼@地址:端口
+** \http://網域%92用戶名:密碼@位址:端口
+** \https://位址:埠
+** \https://使用者名稱:密碼@位址:端口
+** \https://網域%92用戶名:密碼@地址:端口
++
+請注意以下事項：
+
++
+*** 使用者可以是本機使用者或網域使用者。
+*** 對於網域用戶，您必須使用 \ 的 ASCII 代碼，如上所示。
+*** 控制台代理不支援包含 @ 字元的使用者名稱或密碼。
+*** 如果密碼包含以下任何特殊字符，則必須在該特殊字符前面加上反斜杠來轉義該特殊字符：& 或 !
++
+例如：
+
++
+\http://bxpproxyuser:netapp1\!@網址:3128
+
+
+
+
+
+
+
+`--cacert`指定用於控制台代理程式和代理伺服器之間的 HTTPS 存取的 CA 簽章憑證。  HTTPS代理伺服器、攔截代理伺服器、透明代理伺服器都需要此參數。
+
++ 下面是設定透明代理伺服器的範例。配置透明代理時，不需要定義代理伺服器。您只需將 CA 簽署的憑證新增至控制台代理主機：
+
++
+
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_v4.0.0 --cacert /tmp/cacert/certificate.cer
+----
+. 如果您使用 Podman，則需要調整 aardvark-dns 連接埠。
++
+.. 透過 SSH 連接到控制台代理虛擬機器。
+.. 開啟 podman _/usr/share/containers/containers.conf_ 檔案並修改 Aardvark DNS 服務的選定連接埠。例如，將其更改為54。
++
+[source, cli]
+----
+vi /usr/share/containers/containers.conf
+...
+# Port to use for dns forwarding daemon with netavark in rootful bridge
+# mode and dns enabled.
+# Using an alternate port might be useful if other DNS services should
+# run on the machine.
+#
+dns_bind_port = 54
+...
+Esc:wq
+----
+.. 重新啟動控制台代理虛擬機器。
+
+
+
+
+. 等待安裝完成。
++
+安裝結束時，如果您指定了代理伺服器，控制台代理服務 (occm) 將重新啟動兩次。
+
+
+
+
+NOTE: 如果安裝失敗，您可以查看安裝報告和日誌來協助您解決問題。link:task-troubleshoot-connector.html#troubleshoot-installation["了解如何解決安裝問題。"]
+
+. 從連接到控制台代理虛擬機器的主機開啟 Web 瀏覽器並輸入以下 URL：
++
+https://_ipaddress_[]
+
+. 登入後，設定控制台代理：
++
+.. 指定與控制台代理程式關聯的組織。
+.. 輸入系統的名稱。
+.. 在*您是否在安全環境中運作？ *下保持限制模式為停用。
++
+您應該保持限制模式處於停用狀態，因為這些步驟描述如何在標準模式下使用控制台。只有當您擁有安全的環境並希望中斷此帳戶與後端服務的連線時，才應啟用受限模式。如果真是這樣的話，link:task-quick-start-restricted-mode.html["依照步驟在受限模式下開始使用NetApp控制台"] 。
+
+.. 選擇*讓我們開始吧*。
+
+
+

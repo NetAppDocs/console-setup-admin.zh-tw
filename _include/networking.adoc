@@ -1,0 +1,74 @@
+= 
+:allow-uri-read: 
+
+
+專用主機:: 與其他應用程式共用的主機不支援該代理程式。該主機必須是專用主機。
+
+
+VPC 和子網:: 建立控制台代理程式時，您需要指定它所在的 VPC 和子網路。
+
+
+VNet 與子網路:: 建立控制台代理程式時，您需要指定它所在的 VNet 和子網路。
+
+
+連接到目標網絡:: 控制台代理程式需要與您計劃建立和管理系統的位置建立網路連線。例如，您計劃在本機環境中建立Cloud Volumes ONTAP系統或儲存系統的網路。
+
+
+出站互聯網訪問:: 部署控制台代理程式的網路位置必須具有出站網路連線才能聯絡特定端點。
+
+
+從NetApp控制台聯繫的端點:: 當您使用透過 SaaS 層提供的基於 Web 的NetApp控制台時，它會聯絡多個端點來完成資料管理任務。這包括從控制台聯繫以部署控制台代理的端點。
++
+--
+link:reference-networking-saas-console.html["查看從NetApp控制台聯繫的端點列表"] 。
+
+--
+
+
+Azure 區域:: 如果您使用Cloud Volumes ONTAP，則控制台代理程式應部署在與其管理的Cloud Volumes ONTAP系統相同的 Azure 區域中，或部署在 https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure 區域對"^]適用於Cloud Volumes ONTAP系統。此要求可確保在Cloud Volumes ONTAP及其關聯的儲存帳戶之間使用 Azure Private Link 連線。
++
+--
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["了解Cloud Volumes ONTAP如何使用 Azure Private Link"^]
+
+--
+
+
+連接埠:: 除非您啟動它或將其用作代理將AutoSupport訊息從Cloud Volumes ONTAP發送到NetApp支持，否則控制台代理不會有傳入流量。
++
+--
+* HTTP（80）和 HTTPS（443）提供對本機 UI 的訪問，您會在極少數情況下使用它們。
+* 僅當需要連接到主機進行故障排除時才需要 SSH（22）。
+* 如果您在沒有外部網路連線的子網路中部署Cloud Volumes ONTAP系統，則需要透過連接埠 3128 建立入站連線。
++
+如果Cloud Volumes ONTAP系統沒有出站網路連線來傳送AutoSupport訊息，控制台會自動設定這些系統以使用控制台代理附帶的代理伺服器。唯一的要求是確保控制台代理的安全群組允許透過連接埠 3128 進行入站連線。部署控制台代理程式後，您需要開啟此連接埠。
+
+
+
+--
+
+
+代理伺服器:: NetApp支援顯式和透明代理配置。如果您使用透明代理，則只需要提供代理伺服器的憑證。如果您使用明確代理，您還需要 IP 位址和憑證。
++
+--
+* IP 位址
+* 證書
+* HTTPS 憑證
+
+
+--
+
+
+Azure 中的公用 IP 位址:: 如果要在 Azure 中將公用 IP 位址與控制台代理程式 VM 一起使用，則該 IP 位址必須使用基本 SKU 以確保控制台使用此公用 IP 位址。
++
+--
+image:screenshot-azure-sku.png["Azure 中建立新 IP 位址的螢幕截圖，可讓您在 SKU 欄位下選擇「基本」。"]
+
+如果您使用標準 SKU IP 位址，則控制台將使用控制台代理程式的_私有_ IP 位址，而不是公用 IP。如果您用於存取控制台的機器無法存取該私人 IP 位址，則控制台中的操作將會失敗。
+
+https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku["Azure 文件：公用 IP SKU"^]
+
+--
+
+
+啟用 NTP:: 如果您打算使用NetApp資料分類掃描公司資料來源，則應在控制台代理程式和NetApp資料分類系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
+

@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: task-partnerships-work.html 
+keywords: partner organizations, create partnership, MSPs, service provider access 
+summary: 一旦您在合作夥伴組織中被賦予角色，您就可以切換到該組織並執行您有權執行的操作。 
+---
+= 在合作組織工作
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+一旦您在合作夥伴組織中被賦予角色，您就可以切換到該組織並執行您有權執行的操作。
+
+使用組織選單在您的組織和您有權存取的任何合作夥伴組織之間切換。link:task-iam-switch-organizations-projects.html["了解有關切換組織和專案的更多資訊。"]
+
+您將能夠看到合作夥伴組織中與您共享的資源，並根據分配給您的角色執行操作。與您的合作夥伴管理員合作，確保您擁有需要存取的資源的適當角色。

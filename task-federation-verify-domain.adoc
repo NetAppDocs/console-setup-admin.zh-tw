@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: task-federation-verify-domain.html 
+keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
+summary: 您只能使用已驗證的網域進行聯合。如果您想與不同於您的電子郵件網域的網域聯合，您必須先驗證您擁有該網域。您只能使用已驗證的網域進行聯合。 
+---
+= 驗證聯合連線的電子郵件網域
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您想要與不同於您的電子郵件網域的網域聯合，您必須先驗證您擁有該網域。您只能使用已驗證的網域進行聯合。
+
+.必備角色
+需要聯盟管理員角色來創建和管理聯盟。聯盟檢視者可以查看聯盟頁面。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
+
+驗證您的網域名稱涉及向您的網域的 DNS 設定新增 TXT 記錄。此記錄用於證明您擁有該網域並允許NetApp控制台信任該網域進行聯合。您可能需要與您的 IT 或網路管理員協調來完成此步驟。
+
+.步驟
+. 選擇*管理>身分和存取*。
+. 選擇“*Federation*”以查看“*Federations*”頁面。
+. 選擇*配置新聯合*。
+. 選擇*驗證網域所有權*。
+. 輸入您要驗證的網域並選擇*繼續*。
+. 複製提供的 TXT 記錄。
+. 轉到您網域的 DNS 設定並配置作為您網域的 TXT 記錄提供的 TXT 值。如果需要，請與您的 IT 或網路管理員合作。
+. 新增TXT記錄後，返回控制台並選擇*驗證*。
+

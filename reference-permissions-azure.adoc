@@ -1,0 +1,810 @@
+---
+sidebar: sidebar 
+permalink: reference-permissions-azure.html 
+keywords: permissions, azure, azure permissions, bluexp 
+summary: 當NetApp控制台在 Azure 中啟動控制台代理程式時，它會將自訂角色附加到 VM，該 VM 為代理程式提供管理該 Azure 訂閱中的資源和流程的權限。代理程式使用權限對多個 Azure 服務進行 API 呼叫。 
+---
+= 控制台代理程式的 Azure 權限
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+當NetApp控制台在 Azure 中啟動控制台代理程式時，它會將自訂角色附加到 VM，該 VM 為代理程式提供管理該 Azure 訂閱中的資源和流程的權限。代理程式使用權限對多個 Azure 服務進行 API 呼叫。
+
+是否需要為代理程式建立此自訂角色取決於您如何部署它。
+
+.從NetApp控制台部署
+當您使用控制台在 Azure 中部署代理虛擬機器時，它會啟用 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["系統分配的託管標識"^]在虛擬機器上，建立自訂角色，並將其指派給虛擬機器。此角色為控制台提供管理該 Azure 訂閱內的資源和流程所需的權限。當代理升級時，角色的權限保持最新。您不需要為代理程式建立此角色或管理更新。
+
+.手動部署或從 Azure 市場部署
+當您從 Azure 市場部署代理程式或在 Linux 主機上手動安裝代理程式時，您需要自行設定自訂角色並在任何變更時維護其權限。
+
+您需要確保角色是最新的，因為後續版本中會新增新的權限。如果需要新的權限，它們將在發行說明中列出。
+
+* 若要查看使用這些策略的逐步說明，請參閱以下頁面：
++
+** link:task-install-connector-azure-marketplace.html#step-3-set-up-permissions["設定 Azure 市場部署的權限"]
+** link:task-install-connector-on-prem.html#agent-permission-aws-azure["設定本地部署的權限"]
+** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["設定限制模式的權限"]
+
+
+
+
+[source, json]
+----
+{
+    "Name": "Console Operator",
+    "Actions": [
+                    "Microsoft.Compute/disks/delete",
+                    "Microsoft.Compute/disks/read",
+                    "Microsoft.Compute/disks/write",
+                    "Microsoft.Compute/locations/operations/read",
+                    "Microsoft.Compute/locations/vmSizes/read",
+                    "Microsoft.Resources/subscriptions/locations/read",
+                    "Microsoft.Compute/operations/read",
+                    "Microsoft.Compute/virtualMachines/instanceView/read",
+                    "Microsoft.Compute/virtualMachines/powerOff/action",
+                    "Microsoft.Compute/virtualMachines/read",
+                    "Microsoft.Compute/virtualMachines/restart/action",
+                    "Microsoft.Compute/virtualMachines/deallocate/action",
+                    "Microsoft.Compute/virtualMachines/start/action",
+                    "Microsoft.Compute/virtualMachines/vmSizes/read",
+                    "Microsoft.Compute/virtualMachines/write",
+                    "Microsoft.Compute/images/read",
+                    "Microsoft.Network/locations/operationResults/read",
+                    "Microsoft.Network/locations/operations/read",
+                    "Microsoft.Network/networkInterfaces/read",
+                    "Microsoft.Network/networkInterfaces/write",
+                    "Microsoft.Network/networkInterfaces/join/action",
+                    "Microsoft.Network/networkSecurityGroups/read",
+                    "Microsoft.Network/networkSecurityGroups/write",
+                    "Microsoft.Network/networkSecurityGroups/join/action",
+                    "Microsoft.Network/virtualNetworks/read",
+                    "Microsoft.Network/virtualNetworks/checkIpAddressAvailability/read",
+                    "Microsoft.Network/virtualNetworks/subnets/read",
+                    "Microsoft.Network/virtualNetworks/subnets/write",
+                    "Microsoft.Network/virtualNetworks/subnets/virtualMachines/read",
+                    "Microsoft.Network/virtualNetworks/virtualMachines/read",
+                    "Microsoft.Network/virtualNetworks/subnets/join/action",
+                    "Microsoft.Resources/deployments/operations/read",
+                    "Microsoft.Resources/deployments/read",
+                    "Microsoft.Resources/deployments/write",
+                    "Microsoft.Resources/resources/read",
+                    "Microsoft.Resources/subscriptions/operationresults/read",
+                    "Microsoft.Resources/subscriptions/resourceGroups/delete",
+                    "Microsoft.Resources/subscriptions/resourceGroups/read",
+                    "Microsoft.Resources/subscriptions/resourcegroups/resources/read",
+                    "Microsoft.Resources/subscriptions/resourceGroups/write",
+                    "Microsoft.Storage/checknameavailability/read",
+                    "Microsoft.Storage/operations/read",
+                    "Microsoft.Storage/storageAccounts/listkeys/action",
+                    "Microsoft.Storage/storageAccounts/read",
+                    "Microsoft.Storage/storageAccounts/delete",
+                    "Microsoft.Storage/storageAccounts/write",
+                    "Microsoft.Storage/storageAccounts/blobServices/containers/read",
+                    "Microsoft.Storage/storageAccounts/listAccountSas/action",
+                    "Microsoft.Storage/usages/read",
+                    "Microsoft.Compute/snapshots/write",
+                    "Microsoft.Compute/snapshots/read",
+                    "Microsoft.Compute/availabilitySets/write",
+                    "Microsoft.Compute/availabilitySets/read",
+                    "Microsoft.Compute/disks/beginGetAccess/action",
+                    "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/read",
+                    "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/write",
+                    "Microsoft.Network/loadBalancers/read",
+                    "Microsoft.Network/loadBalancers/write",
+                    "Microsoft.Network/loadBalancers/delete",
+                    "Microsoft.Network/loadBalancers/backendAddressPools/read",
+                    "Microsoft.Network/loadBalancers/backendAddressPools/join/action",
+                    "Microsoft.Network/loadBalancers/loadBalancingRules/read",
+                    "Microsoft.Network/loadBalancers/probes/read",
+                    "Microsoft.Network/loadBalancers/probes/join/action",
+                    "Microsoft.Authorization/locks/*",
+                    "Microsoft.Network/routeTables/join/action",
+                    "Microsoft.NetApp/netAppAccounts/read",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/read",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/write",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/read",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/delete",
+                    "Microsoft.Network/privateEndpoints/write",
+                    "Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action",
+                    "Microsoft.Storage/storageAccounts/privateEndpointConnections/read",
+                    "Microsoft.Storage/storageAccounts/managementPolicies/read",
+                    "Microsoft.Storage/storageAccounts/managementPolicies/write",
+                    "Microsoft.Network/privateEndpoints/read",
+                    "Microsoft.Network/privateDnsZones/write",
+                    "Microsoft.Network/privateDnsZones/virtualNetworkLinks/write",
+                    "Microsoft.Network/virtualNetworks/join/action",
+                    "Microsoft.Network/privateDnsZones/A/write",
+                    "Microsoft.Network/privateDnsZones/read",
+                    "Microsoft.Network/privateDnsZones/virtualNetworkLinks/read",
+                    "Microsoft.Resources/deployments/operationStatuses/read",
+                    "Microsoft.Insights/Metrics/Read",
+                    "Microsoft.Compute/virtualMachines/extensions/write",
+                    "Microsoft.Compute/virtualMachines/extensions/delete",
+                    "Microsoft.Compute/virtualMachines/extensions/read",
+                    "Microsoft.Compute/virtualMachines/delete",
+                    "Microsoft.Network/networkInterfaces/delete",
+                    "Microsoft.Network/networkSecurityGroups/delete",
+                    "Microsoft.Resources/deployments/delete",
+                    "Microsoft.Compute/diskEncryptionSets/read",
+                    "Microsoft.Compute/snapshots/delete",
+                    "Microsoft.Network/privateEndpoints/delete",
+                    "Microsoft.Compute/availabilitySets/delete",
+                    "Microsoft.KeyVault/vaults/read",
+                    "Microsoft.KeyVault/vaults/accessPolicies/write",
+                    "Microsoft.Compute/diskEncryptionSets/write",
+                    "Microsoft.KeyVault/vaults/deploy/action",
+                    "Microsoft.Compute/diskEncryptionSets/delete",
+                    "Microsoft.Resources/tags/read",
+                    "Microsoft.Resources/tags/write",
+                    "Microsoft.Resources/tags/delete",
+                    "Microsoft.Network/applicationSecurityGroups/write",
+                    "Microsoft.Network/applicationSecurityGroups/read",
+                    "Microsoft.Network/applicationSecurityGroups/joinIpConfiguration/action",
+                    "Microsoft.Network/networkSecurityGroups/securityRules/write",
+                    "Microsoft.Network/applicationSecurityGroups/delete",
+                    "Microsoft.Network/networkSecurityGroups/securityRules/delete",
+                    "Microsoft.Synapse/workspaces/write",
+                    "Microsoft.Synapse/workspaces/read",
+                    "Microsoft.Synapse/workspaces/delete",
+                    "Microsoft.Synapse/register/action",
+                    "Microsoft.Synapse/checkNameAvailability/action",
+                    "Microsoft.Synapse/workspaces/operationStatuses/read",
+                    "Microsoft.Synapse/workspaces/firewallRules/read",
+                    "Microsoft.Synapse/workspaces/replaceAllIpFirewallRules/action",
+                    "Microsoft.Synapse/workspaces/operationResults/read",
+                    "Microsoft.Synapse/workspaces/privateEndpointConnectionsApproval/action",
+                    "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action",
+                    "Microsoft.Compute/images/write",
+                    "Microsoft.Network/loadBalancers/frontendIPConfigurations/read",
+                    "Microsoft.Compute/virtualMachineScaleSets/write",
+                    "Microsoft.Compute/virtualMachineScaleSets/read",
+                    "Microsoft.Compute/virtualMachineScaleSets/delete"
+    ],
+    "NotActions": [],
+    "AssignableScopes": [],
+    "Description": "Console Permissions",
+    "IsCustom": "true"
+}
+----
+
+
+== 如何使用 Azure 權限
+
+以下部分介紹如何對每個NetApp儲存系統和資料服務使用權限。如果您的公司政策規定僅在需要時提供權限，則此資訊會很有幫助。
+
+
+
+=== Azure NetApp Files
+
+當您使用NetApp資料分類掃描Azure NetApp Files資料時，代理程式會發出以下 API 請求：
+
+* NetApp。 NetApp /netAppAccounts/read
+* NetApp。 NetApp /netAppAccounts/capacityPools/read
+* NetApp/netAppAccounts/capacityPools/volumes/write
+* NetApp/netAppAccounts/capacityPools/volumes/read
+* NetApp/netAppAccounts/capacityPools/volumes/delete
+
+
+
+
+=== NetApp備份與復原
+
+控制台代理程式對NetApp備份和復原發出以下 API 請求：
+
+* Microsoft.Storage/storageAccounts/listkeys/action
+* Microsoft.Storage/storageAccounts/讀取
+* Microsoft.Storage/storageAccounts/write
+* Microsoft.Storage/storageAccounts/blobServices/containers/read
+* Microsoft.Storage/storageAccounts/listAccountSas/action
+* Microsoft.KeyVault/保管庫/讀取
+* Microsoft.KeyVault/保管庫/存取策略/寫入
+* Microsoft.Network/網路介面/讀取
+* Microsoft.Resources/訂閱/位置/讀取
+* Microsoft.Network/virtualNetworks/讀取
+* Microsoft.Network/virtualNetworks/子網路/讀取
+* Microsoft.Resources/訂閱/資源群組/讀取
+* Microsoft.Resources/訂閱/資源群組/資源/讀取
+* Microsoft.Resources/訂閱/資源群組/寫入
+* Microsoft.授權/鎖定/*
+* Microsoft.Network/privateEndpoints/寫入
+* Microsoft.Network/privateEndpoints/讀取
+* Microsoft.Network/privateDnsZones/virtualNetworkLinks/寫入
+* Microsoft.Network/virtualNetworks/join/action
+* Microsoft.Network/privateDnsZones/A/寫入
+* Microsoft.Network/privateDnsZones/讀取
+* Microsoft.Network/privateDnsZones/virtualNetworkLinks/讀取
+* Microsoft.Network/networkInterfaces/刪除
+* Microsoft.Network/networkSecurityGroups/刪除
+* Microsoft.Resources/部署/刪除
+* Microsoft.ManagedIdentity/userAssignedIdentities/分配/操作
+
+
+當您使用搜尋和復原功能時，代理程式會發出以下 API 請求：
+
+* Microsoft.Synapse/工作區/寫入
+* Microsoft.Synapse/工作區/讀取
+* Microsoft.Synapse/工作區/刪除
+* Microsoft.Synapse/註冊/操作
+* Microsoft.Synapse/checkNameAvailability/操作
+* Microsoft.Synapse/工作區/operationStatuses/讀取
+* Microsoft.Synapse/工作區/防火牆規則/讀取
+* Microsoft.Synapse/工作區/replaceAllIpFirewallRules/操作
+* Microsoft.Synapse/工作區/操作結果/讀取
+* Microsoft.Synapse/工作區/privateEndpointConnectionsApproval/操作
+
+
+
+
+=== NetApp資料分類
+
+當您使用資料分類時，代理程式會發出以下 API 請求。
+
+[cols="3*"]
+|===
+| 行動 | 用於設定嗎？ | 用於日常營運？ 
+
+
+| Microsoft.Compute/位置/操作/讀取 | 是的 | 是的 
+
+
+| Microsoft.Compute/位置/vmSizes/讀取 | 是的 | 是的 
+
+
+| Microsoft.Compute/操作/讀取 | 是的 | 是的 
+
+
+| Microsoft.Compute/virtualMachines/instanceView/讀取 | 是的 | 是的 
+
+
+| Microsoft.Compute/virtualMachines/powerOff/action | 是的 | 不 
+
+
+| Microsoft.Compute/虛擬機器/讀取 | 是的 | 是的 
+
+
+| Microsoft.Compute/virtualMachines/重新啟動/操作 | 是的 | 不 
+
+
+| Microsoft.Compute/virtualMachines/啟動/操作 | 是的 | 不 
+
+
+| Microsoft.Compute/virtualMachines/vmSizes/讀取 | 不 | 是的 
+
+
+| Microsoft.Compute/虛擬機器/寫入 | 是的 | 不 
+
+
+| Microsoft.Compute/圖片/讀取 | 是的 | 是的 
+
+
+| Microsoft.Compute/磁碟/刪除 | 是的 | 不 
+
+
+| Microsoft.Compute/磁碟/讀取 | 是的 | 是的 
+
+
+| Microsoft.Compute/磁碟/寫入 | 是的 | 不 
+
+
+| Microsoft.Storage/checknameavailability/讀取 | 是的 | 是的 
+
+
+| Microsoft.Storage/操作/讀取 | 是的 | 是的 
+
+
+| Microsoft.Storage/storageAccounts/listkeys/action | 是的 | 不 
+
+
+| Microsoft.Storage/storageAccounts/讀取 | 是的 | 是的 
+
+
+| Microsoft.Storage/storageAccounts/write | 是的 | 不 
+
+
+| Microsoft.Storage/storageAccounts/blobServices/containers/read | 是的 | 是的 
+
+
+| Microsoft.Network/網路介面/讀取 | 是的 | 是的 
+
+
+| Microsoft.Network/networkInterfaces/寫入 | 是的 | 不 
+
+
+| Microsoft.Network/networkInterfaces/join/action | 是的 | 不 
+
+
+| Microsoft.Network/networkSecurityGroups/讀取 | 是的 | 是的 
+
+
+| Microsoft.Network/networkSecurityGroups/寫入 | 是的 | 不 
+
+
+| Microsoft.Resources/訂閱/位置/讀取 | 是的 | 是的 
+
+
+| Microsoft.Network/locations/operationResults/read | 是的 | 是的 
+
+
+| Microsoft.Network/位置/操作/讀取 | 是的 | 是的 
+
+
+| Microsoft.Network/virtualNetworks/讀取 | 是的 | 是的 
+
+
+| Microsoft.Network/virtualNetworks/checkIpAddressAvailability/讀取 | 是的 | 是的 
+
+
+| Microsoft.Network/virtualNetworks/子網路/讀取 | 是的 | 是的 
+
+
+| Microsoft.Network/virtualNetworks/子網路/virtualMachines/讀取 | 是的 | 是的 
+
+
+| Microsoft.Network/virtualNetworks/virtualMachines/讀取 | 是的 | 是的 
+
+
+| Microsoft.Network/virtualNetworks/子網路/加入/操作 | 是的 | 不 
+
+
+| Microsoft.Network/virtualNetworks/子網路/寫入 | 是的 | 不 
+
+
+| Microsoft.Network/routeTables/join/action | 是的 | 不 
+
+
+| Microsoft.Resources/部署/操作/讀取 | 是的 | 是的 
+
+
+| Microsoft.Resources/部署/讀取 | 是的 | 是的 
+
+
+| Microsoft.Resources/部署/寫入 | 是的 | 不 
+
+
+| Microsoft.Resources/資源/讀取 | 是的 | 是的 
+
+
+| Microsoft.Resources/subscriptions/operationresults/read | 是的 | 是的 
+
+
+| Microsoft.Resources/subscriptions/resourceGroups/delete | 是的 | 不 
+
+
+| Microsoft.Resources/訂閱/資源群組/讀取 | 是的 | 是的 
+
+
+| Microsoft.Resources/訂閱/資源群組/資源/讀取 | 是的 | 是的 
+
+
+| Microsoft.Resources/訂閱/資源群組/寫入 | 是的 | 不 
+|===
+
+
+=== Cloud Volumes ONTAP
+
+該代理程式發出以下 API 請求以在 Azure 中部署和管理Cloud Volumes ONTAP 。
+
+[cols="5*"]
+|===
+| 目的 | 行動 | 用於部署？ | 用於日常營運？ | 用於刪除？ 
+
+
+.14+| 建立和管理虛擬機 | Microsoft.Compute/位置/操作/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Compute/位置/vmSizes/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Resources/訂閱/位置/讀取 | 是的 | 不 | 不 
+
+
+| Microsoft.Compute/操作/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Compute/virtualMachines/instanceView/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Compute/virtualMachines/powerOff/action | 是的 | 是的 | 不 
+
+
+| Microsoft.Compute/虛擬機器/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Compute/virtualMachines/重新啟動/操作 | 是的 | 是的 | 不 
+
+
+| Microsoft.Compute/virtualMachines/啟動/操作 | 是的 | 是的 | 不 
+
+
+| Microsoft.Compute/virtualMachines/解除指派/操作 | 不 | 是的 | 是的 
+
+
+| Microsoft.Compute/virtualMachines/vmSizes/讀取 | 不 | 是的 | 不 
+
+
+| Microsoft.Compute/虛擬機器/寫入 | 是的 | 是的 | 不 
+
+
+| Microsoft.Compute/virtualMachines/刪除 | 是的 | 是的 | 是的 
+
+
+| Microsoft.Resources/部署/刪除 | 是的 | 不 | 不 
+
+
+.2+| 啟用從 VHD 部署 | Microsoft.Compute/圖片/讀取 | 是的 | 不 | 不 
+
+
+| Microsoft.Compute/圖片/寫入 | 是的 | 不 | 不 
+
+
+.4+| 在目標子網路中建立和管理網路介面 | Microsoft.Network/網路介面/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/networkInterfaces/寫入 | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/networkInterfaces/join/action | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/networkInterfaces/刪除 | 是的 | 是的 | 不 
+
+
+.4+| 建立和管理網路安全群組 | Microsoft.Network/networkSecurityGroups/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/networkSecurityGroups/寫入 | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/networkSecurityGroups/加入/操作 | 是的 | 不 | 不 
+
+
+| Microsoft.Network/networkSecurityGroups/刪除 | 不 | 是的 | 是的 
+
+
+.8+| 取得有關區域、目標 VNet 和子網的網路信息，並將 VM 新增至 VNet | Microsoft.Network/locations/operationResults/read | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/位置/操作/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/virtualNetworks/讀取 | 是的 | 不 | 不 
+
+
+| Microsoft.Network/virtualNetworks/checkIpAddressAvailability/讀取 | 是的 | 不 | 不 
+
+
+| Microsoft.Network/virtualNetworks/子網路/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/virtualNetworks/子網路/virtualMachines/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/virtualNetworks/virtualMachines/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/virtualNetworks/子網路/加入/操作 | 是的 | 是的 | 不 
+
+
+.9+| 建立和管理資源組 | Microsoft.Resources/部署/操作/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Resources/部署/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Resources/部署/寫入 | 是的 | 是的 | 不 
+
+
+| Microsoft.Resources/資源/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Resources/subscriptions/operationresults/read | 是的 | 是的 | 不 
+
+
+| Microsoft.Resources/subscriptions/resourceGroups/delete | 是的 | 是的 | 是的 
+
+
+| Microsoft.Resources/訂閱/資源群組/讀取 | 不 | 是的 | 不 
+
+
+| Microsoft.Resources/訂閱/資源群組/資源/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Resources/訂閱/資源群組/寫入 | 是的 | 是的 | 不 
+
+
+.10+| 管理 Azure 儲存帳戶和磁碟 | Microsoft.Compute/磁碟/讀取 | 是的 | 是的 | 是的 
+
+
+| Microsoft.Compute/磁碟/寫入 | 是的 | 是的 | 不 
+
+
+| Microsoft.Compute/磁碟/刪除 | 是的 | 是的 | 是的 
+
+
+| Microsoft.Storage/checknameavailability/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Storage/操作/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Storage/storageAccounts/listkeys/action | 是的 | 是的 | 不 
+
+
+| Microsoft.Storage/storageAccounts/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Storage/storageAccounts/刪除 | 不 | 是的 | 是的 
+
+
+| Microsoft.Storage/storageAccounts/write | 是的 | 是的 | 不 
+
+
+| Microsoft.Storage/使用/讀取 | 不 | 是的 | 不 
+
+
+.3+| 啟用 Blob 儲存備份和儲存帳戶加密 | Microsoft.Storage/storageAccounts/blobServices/containers/read | 是的 | 是的 | 不 
+
+
+| Microsoft.KeyVault/保管庫/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.KeyVault/保管庫/存取策略/寫入 | 是的 | 是的 | 不 
+
+
+.2+| 啟用 VNet 服務終點以進行資料分層 | Microsoft.Network/virtualNetworks/子網路/寫入 | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/routeTables/join/action | 是的 | 是的 | 不 
+
+
+.4+| 建立和管理 Azure 託管快照 | Microsoft.Compute/快照/寫入 | 是的 | 是的 | 不 
+
+
+| Microsoft.Compute/快照/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Compute/快照/刪除 | 不 | 是的 | 是的 
+
+
+| Microsoft.Compute/磁碟/beginGetAccess/操作 | 不 | 是的 | 不 
+
+
+.2+| 建立和管理可用性集 | Microsoft.Compute/可用性集/寫入 | 是的 | 不 | 不 
+
+
+| Microsoft.Compute/可用性集/讀取 | 是的 | 不 | 不 
+
+
+.2+| 啟用來自市場的程式化部署 | Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/read | 是的 | 不 | 不 
+
+
+| Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/write | 是的 | 是的 | 不 
+
+
+.9+| 管理 HA 對的負載平衡器 | Microsoft.Network/loadBalancers/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/loadBalancers/寫入 | 是的 | 不 | 不 
+
+
+| Microsoft.Network/loadBalancers/刪除 | 不 | 是的 | 是的 
+
+
+| Microsoft.Network/loadBalancers/backendAddressPools/讀取 | 是的 | 不 | 不 
+
+
+| Microsoft.Network/loadBalancers/backendAddressPools/join/action | 是的 | 不 | 不 
+
+
+| Microsoft.Network/loadBalancers/frontendIPConfigurations/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/loadBalancers/loadBalancingRules/讀取 | 是的 | 不 | 不 
+
+
+| Microsoft.Network/loadBalancers/探測/讀取 | 是的 | 不 | 不 
+
+
+| Microsoft.Network/loadBalancers/探測/加入/操作 | 是的 | 不 | 不 
+
+
+| 啟用 Azure 磁碟上的鎖定管理 | Microsoft.授權/鎖定/* | 是的 | 是的 | 不 
+
+
+.10+| 當子網路外部沒有連線時，為 HA 對啟用專用端點 | Microsoft.Network/privateEndpoints/寫入 | 是的 | 是的 | 不 
+
+
+| Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action | 是的 | 不 | 不 
+
+
+| Microsoft.Storage/storageAccounts/privateEndpointConnections/讀取 | 是的 | 是的 | 是的 
+
+
+| Microsoft.Network/privateEndpoints/讀取 | 是的 | 是的 | 是的 
+
+
+| Microsoft.Network/privateDnsZones/寫入 | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/privateDnsZones/virtualNetworkLinks/寫入 | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/virtualNetworks/join/action | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/privateDnsZones/A/寫入 | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/privateDnsZones/讀取 | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/privateDnsZones/virtualNetworkLinks/讀取 | 是的 | 是的 | 不 
+
+
+| 對於某些虛擬機器部署是必需的，具體取決於底層實體硬體 | Microsoft.Resources/deployments/operationStatuses/read | 是的 | 是的 | 不 
+
+
+.2+| 在部署失敗或刪除的情況下從資源組中刪除資源 | Microsoft.Network/privateEndpoints/刪除 | 是的 | 是的 | 不 
+
+
+| Microsoft.Compute/可用性集/刪除 | 是的 | 是的 | 不 
+
+
+.4+| 使用 API 時啟用客戶管理的加密金鑰 | Microsoft.Compute/diskEncryptionSets/讀取 | 是的 | 是的 | 是的 
+
+
+| Microsoft.Compute/diskEncryptionSets/寫入 | 是的 | 是的 | 不 
+
+
+| Microsoft.KeyVault/保管庫/部署/操作 | 是的 | 不 | 不 
+
+
+| Microsoft.Compute/diskEncryptionSets/刪除 | 是的 | 是的 | 是的 
+
+
+.6+| 為 HA 對配置應用程式安全性群組，以隔離 HA 互連和叢集網路 NIC | Microsoft.Network/applicationSecurityGroups/寫入 | 不 | 是的 | 不 
+
+
+| Microsoft.Network/applicationSecurityGroups/讀取 | 不 | 是的 | 不 
+
+
+| Microsoft.Network/applicationSecurityGroups/joinIpConfiguration/action | 不 | 是的 | 不 
+
+
+| Microsoft.Network/networkSecurityGroups/securityRules/寫入 | 是的 | 是的 | 不 
+
+
+| Microsoft.Network/applicationSecurityGroups/刪除 | 不 | 是的 | 是的 
+
+
+| Microsoft.Network/networkSecurityGroups/securityRules/刪除 | 不 | 是的 | 是的 
+
+
+.3+| 讀取、寫入和刪除與Cloud Volumes ONTAP資源關聯的標籤 | Microsoft.Resources/標籤/閱讀 | 不 | 是的 | 不 
+
+
+| Microsoft.Resources/標籤/寫入 | 是的 | 是的 | 不 
+
+
+| Microsoft.Resources/標籤/刪除 | 是的 | 不 | 不 
+
+
+| 在建立期間加密儲存帳戶 | Microsoft.ManagedIdentity/userAssignedIdentities/分配/操作 | 是的 | 是的 | 不 
+
+
+.3+| 在彈性編排模式下使用虛擬機器規模集合來為Cloud Volumes ONTAP指定特定區域 | Microsoft.Compute/virtualMachineScaleSets/寫入 | 是的 | 不 | 不 
+
+
+| Microsoft.Compute/virtualMachineScaleSets/讀取 | 是的 | 不 | 不 
+
+
+| Microsoft.Compute/virtualMachineScaleSets/刪除 | 不 | 不 | 是的 
+|===
+
+
+=== 分層
+
+當您設定NetApp Cloud Tiering 時，代理會發出以下 API 請求。
+
+* Microsoft.Storage/storageAccounts/listkeys/action
+* Microsoft.Resources/訂閱/資源群組/讀取
+* Microsoft.Resources/訂閱/位置/讀取
+
+
+控制台代理程式針對日常操作發出以下 API 請求。
+
+* Microsoft.Storage/storageAccounts/blobServices/containers/read
+* Microsoft.Storage/storageAccounts/managementPolicies/讀取
+* Microsoft.Storage/storageAccounts/managementPolicies/write
+* Microsoft.Storage/storageAccounts/讀取
+
+
+
+
+== 更改日誌
+
+當新增和刪除權限時，我們會在下面的部分中註明。
+
+
+
+=== 2024年9月9日
+
+由於控制台不再支援發現和管理 Kubernetes 集群，因此從 JSON 策略中刪除了以下權限：
+
+* Microsoft.ContainerService/managedClusters/listClusterUserCredential/作業
+* Microsoft.ContainerService/managedClusters/讀取
+
+
+
+
+=== 2024年8月22日
+
+以下權限已新增至 JSON 策略中，因為它們是Cloud Volumes ONTAP支援虛擬機器規模集所必需的：
+
+* Microsoft.Compute/virtualMachineScaleSets/寫入
+* Microsoft.Compute/virtualMachineScaleSets/讀取
+* Microsoft.Compute/virtualMachineScaleSets/刪除
+
+
+
+
+=== 2023年12月5日
+
+將磁碟區資料備份到 Azure Blob 儲存體時， NetApp Backup and Recovery 不再需要以下權限：
+
+* Microsoft.Compute/虛擬機器/讀取
+* Microsoft.Compute/virtualMachines/啟動/操作
+* Microsoft.Compute/virtualMachines/解除指派/操作
+* Microsoft.Compute/virtualMachines/擴充/刪除
+* Microsoft.Compute/virtualMachines/刪除
+
+
+其他控制台儲存服務需要這些權限，因此如果您使用其他儲存服務，它們仍將保留在代理程式的自訂角色中。
+
+
+
+=== 2023年5月12日
+
+以下權限已新增至 JSON 策略，因為它們是Cloud Volumes ONTAP管理所必需的：
+
+* Microsoft.Compute/圖片/寫入
+* Microsoft.Network/loadBalancers/frontendIPConfigurations/讀取
+
+
+以下權限已從 JSON 策略中刪除，因為不再需要它們：
+
+* Microsoft.Storage/storageAccounts/blobServices/containers/write
+* Microsoft.Network/publicIPAddresses/刪除
+
+
+
+
+=== 2023年3月23日
+
+資料分類不再需要「Microsoft.Storage/storageAccounts/delete」權限。
+
+Cloud Volumes ONTAP仍需要此權限。
+
+
+
+=== 2023年1月5日
+
+以下權限已新增至 JSON 策略：
+
+* Microsoft.Storage/storageAccounts/listAccountSas/action
+* Microsoft.Synapse/工作區/privateEndpointConnectionsApproval/操作
++
+NetApp備份和復原需要這些權限。
+
+* Microsoft.Network/loadBalancers/backendAddressPools/join/action
++
+Cloud Volumes ONTAP部署需要此權限。
+
+

@@ -1,0 +1,152 @@
+---
+sidebar: sidebar 
+permalink: task-maintain-connectors.html 
+keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, agent ip address, agent uri, connector, connector health 
+summary: 維護代理主機上的作業系統是您的責任。例如，您應該按照公司的作業系統分發標準程序，對控制台代理主機上的作業系統套用安全性更新。 
+---
+= 維護控制台代理虛擬機器和作業系統
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+維護控制台代理主機上的作業系統是您（客戶）的責任。例如，您（客戶）應依照貴公司的作業系統分發標準程序對代理主機上的作業系統套用安全性更新。
+
+
+TIP: 如果您有現成的代理，您應該注意link:reference-connector-operating-system-changes.html["支援的 Linux 作業系統的變更"]。
+
+
+
+== 作業系統補丁和代理
+
+無需停止代理主機服務即可套用作業系統安全性修補程式。
+
+
+
+== VM 或實例類型
+
+如果您從控制台建立控制台代理，它會使用預設配置在您的雲端提供者中部署 VM 執行個體。建立代理程式後，請勿切換到具有較少 CPU 或 RAM 的較小 VM 執行個體。
+
+下表列出了 CPU 和 RAM 需求：
+
+中央處理器:: 8 個核心或 8 個 vCPU
+記憶體:: 32GB
+
+
+link:reference-connector-default-config.html["了解代理的預設配置"] 。
+
+
+
+== 監控代理
+
+當代理虛擬機器不健康時，控制台會通知您，包括磁碟空間、RAM 和 CPU 問題。在控制台內的通知中心監控這些通知或設定電子郵件通知。磁碟空間、記憶體或 CPU 使用率偶爾增加是正常現象，但如果經常發生，則應採取措施解決。
+
+例如，當代理資源（CPU、RAM 或磁碟空間）連續 30 分鐘超過其總容量的 90% 時，控制台會通知您。之後，如果資源使用率低於該閾值，則通知中心將顯示通知已解決（綠色）。
+
+
+NOTE: 如果您對修改代理 VM 有任何疑問，請聯絡NetApp支援。
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#notification-center["了解更多。"^]
+
+[cols="47,47"]
+|===
+| 通知 | 需要採取行動 
+
+
+| 磁碟空間過高 | link:https://kb.netapp.com/Cloud/BlueXP/Cloud_Manager/How_to_resolve_disk_space_issues_on_BlueXP_connector_VM["查看NetApp知識庫文章"^] 。 
+
+
+| CPU 使用率過高 | 根據安裝位置，增加雲端提供者或本機代理程式 VM 的 CPU 大小。或者，建立額外的代理並將工作負載指派給多個代理程式。  RAM 利用率可能會因您的環境、 ONTAP工作負載、 Cloud Volumes ONTAP系統的數量以及您正在使用的資料服務而異。 
+
+
+| RAM 使用率過高 | 根據安裝位置，增加雲端提供者或本地代理虛擬機器的 RAM。或者，建立額外的代理並將工作負載指派給多個代理程式。  RAM 利用率可能會因您的環境、 ONTAP工作負載、 Cloud Volumes ONTAP系統的數量以及您正在使用的資料服務而異。 
+|===
+
+
+== 停止和啟動代理虛擬機
+
+如果需要，請使用雲端提供者的控制台或標準內部部署程式停止並啟動代理虛擬機器。
+
+link:concept-connectors.html#connectors-must-be-operational-at-all-times["請注意，控制台代理必須始終處於運行狀態"] 。
+
+
+
+== 連接 Linux VM
+
+如果您需要連線到代理程式運行的 Linux VM，請使用雲端提供者提供的連線選項。
+
+AWS:: 在 AWS 中建立代理執行個體時，請提供 AWS 存取金鑰和金鑰。您可以使用此金鑰對透過 SSH 連線到執行個體。對 EC2 Linux 執行個體使用使用者名稱「ubuntu」。對於 2023 年 5 月之前建立的代理，請使用使用者名稱「ec2-user」。
++
+--
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html["AWS 文件：連接到您的 Linux 實例"^]
+
+--
+Azure:: 在 Azure 中建立代理程式 VM 時，您可以指定使用者名稱並選擇使用密碼或 SSH 公鑰進行驗證。使用您選擇的身份驗證方法連線到虛擬機器。
++
+--
+https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys#ssh-into-your-vm["Azure 文件：透過 SSH 進入您的 VM"^]
+
+--
+Google雲:: 在 Google Cloud 中建立代理程式時，您無法指定身份驗證方法。但是，您可以使用 Google Cloud Console 或 Google Cloud CLI (gcloud) 連線到 Linux VM 執行個體。
++
+--
+https://cloud.google.com/compute/docs/instances/connecting-to-instance["Google Cloud Docs：連接 Linux 虛擬機"^]
+
+--
+
+
+
+
+== 更改代理的 IP 位址
+
+如果需要，您可以變更雲端提供者指派的代理執行個體的內部和公用 IP 位址。
+
+.步驟
+. 依照雲端提供者的說明變更代理執行個體的本機 IP 位址或公用 IP 位址（或兩者）。
+. 重新啟動代理實例以向控制台註冊新的公用 IP 位址。
+. 如果您變更了私有 IP 位址，請更新Cloud Volumes ONTAP設定檔的備份位置，以便將備份傳送至代理程式上的新私人 IP 位址。
++
+更新每個Cloud Volumes ONTAP系統的備份位置。
+
++
+.. 從Cloud Volumes ONTAP CLI，將權限等級設定為進階：
++
+[source, cli]
+----
+set -privilege advanced
+----
+.. 執行以下命令以顯示目前備份目標：
++
+[source, cli]
+----
+system configuration backup settings show
+----
+.. 執行以下命令來更新備份目標的 IP 位址：
++
+[source, cli]
+----
+system configuration backup settings modify -destination <target-location>
+----
+
+
+
+
+
+
+== 編輯代理的 URI
+
+您可以新增和刪除代理程式的統一資源標識符 (URI)。
+
+.步驟
+. 選擇“*管理 > 代理*”。
+. 在*概覽*頁面上，選擇控制台代理程式的操作選單，然後選擇*編輯代理*。
++
+控制台代理程式必須處於活動狀態才能對其進行編輯。
+
+. 展開*代理 URI* 欄以查看代理 URI。
+. 新增和刪除 URI，然後選擇*應用*。
+

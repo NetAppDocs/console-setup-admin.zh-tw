@@ -1,0 +1,389 @@
+---
+sidebar: sidebar 
+permalink: task-adding-azure-accounts.html 
+keywords: permissions, microsoft, azure, permissions, custom role, role, json, active directory, ad, service principal, key, tenant id, application key, application id, operator role, managed identity, iam, operator, role, virtual machine, create custom role, create azure custom role, azure custom role 
+summary: 新增和管理 Azure 憑證，以便NetApp控制台具有在 Azure 訂閱中部署和管理雲端資源所需的權限。如果您管理多個 Azure 市場訂閱，則可以從「憑證」頁面將每個訂閱指派給不同的 Azure 憑證。 
+---
+= 管理NetApp控制台的 Azure 憑證和市集訂閱
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+新增和管理 Azure 憑證，以便NetApp控制台具有在 Azure 訂閱中部署和管理雲端資源所需的權限。如果您管理多個 Azure 市場訂閱，則可以從「憑證」頁面將每個訂閱指派給不同的 Azure 憑證。
+
+
+
+== 概況
+
+有兩種方法可以在控制台中新增額外的 Azure 訂閱和憑證。
+
+. 將其他 Azure 訂閱與 Azure 託管識別碼關聯。
+. 若要使用不同的 Azure 憑證部署Cloud Volumes ONTAP ，請使用服務主體授予 Azure 權限並將其憑證新增至控制台。
+
+
+
+
+== 將其他 Azure 訂閱與託管識別關聯Associate additional Azure subscriptions with a managed identity
+
+控制台可讓您選擇要部署Cloud Volumes ONTAP 的Azure 憑證和 Azure 訂閱。除非關聯 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["託管識別"^]透過這些訂閱。
+
+.關於此任務
+託管身分link:concept-accounts-azure.html["初始 Azure 帳戶"]當您從控制台部署控制台代理程式時。部署控制台代理程式時，控制台會將控制台操作員角色指派給控制台代理虛擬機器。
+
+.步驟
+. 登入 Azure 入口網站。
+. 開啟*訂閱*服務，然後選擇要部署Cloud Volumes ONTAP 的訂閱。
+. 選擇*存取控制 (IAM)*。
++
+.. 選擇 *新增* > *新增角色分配*，然後新增權限：
++
+*** 選擇*控制台操作員*角色。
++
+
+NOTE: 控制台操作員是控制台代理程式策略中提供的預設名稱。如果您為角色選擇了不同的名稱，請選擇該名稱。
+
+*** 分配對*虛擬機器*的存取權限。
+*** 選擇建立控制台代理虛擬機器的訂閱。
+*** 選擇一個控制台代理虛擬機器。
+*** 選擇*儲存*。
+
+
+
+
+. 重複這些步驟以獲得更多訂閱。
+
+
+.結果
+建立新系統時，您現在可以從多個 Azure 訂閱中選擇託管識別設定檔。
+
+image:screenshot_accounts_switch_azure_subscription.gif["螢幕截圖顯示了選擇 Microsoft Azure 提供者帳戶時可以選擇多個 Azure 訂閱。"]
+
+
+
+== 在NetApp控制台中新增其他 Azure 憑證
+
+從控制台部署控制台代理程式時，控制台會在具有所需權限的虛擬機器上啟用系統指派的託管識別碼。當您為Cloud Volumes ONTAP建立新系統時，控制台會預設選擇這些 Azure 憑證。
+
+
+TIP: 如果您在現有系統上手動安裝了控制台代理軟體，則不會新增初始憑證集。link:concept-accounts-azure.html["了解 Azure 憑證和權限"] 。
+
+如果您想要使用不同的 Azure 憑證部署Cloud Volumes ONTAP ，則必須透過在 Microsoft Entra ID 中為每個 Azure 帳戶建立和設定服務主體來授予所需的權限。然後，您可以將新憑證新增至控制台。
+
+
+
+=== 使用服務主體授予 Azure 權限
+
+控制台需要權限才能在 Azure 中執行操作。您可以透過在 Microsoft Entra ID 中建立和設定服務主體並取得控制台所需的 Azure 憑證來授予 Azure 帳戶所需的權限。
+
+.關於此任務
+下圖描述了控制台如何取得在 Azure 中執行操作的權限。服務主體物件與一個或多個 Azure 訂閱綁定，代表 Microsoft Entra ID 中的控制台，並指派給允許所需權限的自訂角色。
+
+image:diagram_azure_authentication.png["概念圖顯示控制台在進行 API 呼叫之前從 Microsoft Entra ID 取得身分驗證和授權。在 Active Directory 中，控制台角色定義權限。它與一個或多個 Azure 訂閱以及代表 Cloud Manger 應用程式的服務主體物件相關聯。"]
+
+.步驟
+. <<建立 Microsoft Entra 應用程式>> 。
+. <<將應用程式指派給角色>> 。
+. <<新增 Windows Azure 服務管理 API 權限>> 。
+. <<取得應用程式ID和目錄ID>> 。
+. <<建立客戶端機密>> 。
+
+
+
+
+==== 建立 Microsoft Entra 應用程式
+
+建立控制台可用於基於角色的存取控制的 Microsoft Entra 應用程式和服務主體。
+
+.步驟
+. 確保您在 Azure 中擁有建立 Active Directory 應用程式並將該應用程式指派給角色的權限。
++
+有關詳細信息，請參閱 https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions/["Microsoft Azure 文件：所需權限"^]
+
+. 從 Azure 入口網站開啟 *Microsoft Entra ID* 服務。
++
+image:screenshot_azure_ad.png["顯示 Microsoft Azure 中的 Active Directory 服務。"]
+
+. 在選單中，選擇*應用程式註冊*。
+. 選擇*新註冊*。
+. 指定有關應用程式的詳細資訊：
++
+** *名稱*：輸入應用程式的名稱。
+** *帳戶類型*：選擇帳戶類型（任何類型都可以與NetApp控制台一起使用）。
+** *重定向 URI*：您可以將此欄位留空。
+
+
+. 選擇*註冊*。
++
+您已建立 AD 應用程式和服務主體。
+
+
+
+
+
+==== 將應用程式指派給角色
+
+您必須將服務主體綁定至一個或多個 Azure 訂閱，並為其指派自訂「控制台操作員」角色，以便控制台在 Azure 中擁有權限。
+
+.步驟
+. 建立自訂角色：
++
+請注意，您可以使用 Azure 入口網站、Azure PowerShell、Azure CLI 或 REST API 建立 Azure 自訂角色。以下步驟展示如何使用 Azure CLI 建立角色。如果您希望使用其他方法，請參閱 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文件"^]
+
++
+.. 複製link:reference-permissions-azure.html["控制台代理程式的自訂角色權限"]並將它們保存在 JSON 檔案中。
+.. 透過將 Azure 訂閱 ID 新增至可分配範圍來修改 JSON 檔案。
++
+您應該為使用者將從中建立Cloud Volumes ONTAP系統的每個 Azure 訂閱新增 ID。
+
++
+*例子*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+.. 使用 JSON 檔案在 Azure 中建立自訂角色。
++
+以下步驟說明如何使用 Azure Cloud Shell 中的 Bash 建立角色。
+
++
+*** 開始 https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure 雲端外殼"^]並選擇 Bash 環境。
+*** 上傳 JSON 檔案。
++
+image:screenshot_azure_shell_upload.png["Azure Cloud Shell 的螢幕截圖，您可以在其中選擇上傳檔案的選項。"]
+
+*** 使用 Azure CLI 建立自訂角色：
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
++
+現在您應該有一個名為「控制台操作員」的自訂角色，可以將其指派給控制台代理虛擬機器。
+
+
+
+
+
+. 將應用程式指派給角色：
++
+.. 從 Azure 入口網站開啟 *Subscriptions* 服務。
+.. 選擇訂閱。
+.. 選擇“存取控制 (IAM)”>“新增”>“新增角色分配”。
+.. 在*角色*標籤中，選擇*控制台操作員*角色並選擇*下一步*。
+.. 在「*成員*」標籤中，完成以下步驟：
++
+*** 保持選取「*使用者、群組或服務主體*」。
+*** 選擇*選擇成員*。
++
+image:screenshot-azure-service-principal-role.png["在應用程式新增角色時顯示「成員」頁面的 Azure 入口網站螢幕截圖。"]
+
+*** 搜尋應用程式的名稱。
++
+以下是一個例子：
+
++
+image:screenshot_azure_service_principal_role.png["Azure 入口網站的螢幕截圖，顯示了 Azure 入口網站中的「新增角色指派」表單。"]
+
+*** 選擇應用程式並選擇*選擇*。
+*** 選擇“下一步”。
+
+
+.. 選擇*審閱+分配*。
++
+服務主體現在具有部署控制台代理程式所需的 Azure 權限。
+
++
+如果您想要從多個 Azure 訂閱部署Cloud Volumes ONTAP ，則必須將服務主體綁定到每個訂閱。在NetApp控制台中，您可以選擇部署Cloud Volumes ONTAP時要使用的訂閱。
+
+
+
+
+
+
+
+==== 新增 Windows Azure 服務管理 API 權限
+
+您必須為服務主體指派「Windows Azure 服務管理 API」權限。
+
+.步驟
+. 在*Microsoft Entra ID*服務中，選擇*App Registrations*並選擇應用程式。
+. 選擇*API 權限 > 新增權限*。
+. 在「Microsoft API」下，選擇「Azure 服務管理」。
++
+image:screenshot_azure_service_mgmt_apis.gif["Azure 入口網站的螢幕截圖，顯示了 Azure 服務管理 API 權限。"]
+
+. 選擇*以組織使用者身分存取 Azure 服務管理*，然後選擇*新增權限*。
++
+image:screenshot_azure_service_mgmt_apis_add.gif["Azure 入口網站的螢幕截圖，顯示新增 Azure 服務管理 API。"]
+
+
+
+
+
+==== 取得應用程式ID和目錄ID
+
+將 Azure 帳戶新增至控制台時，您需要提供應用程式（用戶端）ID 和應用程式的目錄（租用戶）ID。控制台使用 ID 以程式設計方式登入。
+
+.步驟
+. 在*Microsoft Entra ID*服務中，選擇*App Registrations*並選擇應用程式。
+. 複製*應用程式（客戶端）ID*和*目錄（租用戶）ID*。
++
+image:screenshot_azure_app_ids.gif["螢幕截圖顯示了 Microsoft Entra IDy 中應用程式的應用程式（客戶端）ID 和目錄（租用戶）ID。"]
+
++
+將 Azure 帳戶新增至控制台時，您需要提供應用程式（用戶端）ID 和應用程式的目錄（租用戶）ID。控制台使用 ID 以程式設計方式登入。
+
+
+
+
+
+==== 建立客戶端機密
+
+建立客戶端金鑰並將其值提供給控制台以使用 Microsoft Entra ID 進行身份驗證。
+
+.步驟
+. 開啟*Microsoft Entra ID*服務。
+. 選擇*應用程式註冊*並選擇您的應用程式。
+. 選擇*憑證和機密>新客戶端機密*。
+. 提供秘密的描述和持續時間。
+. 選擇“*新增*”。
+. 複製客戶端機密的值。
++
+image:screenshot_azure_client_secret.gif["Azure 入口網站的螢幕截圖，顯示了 Microsoft Entra 服務主體的用戶端機密。"]
+
+
+
+.結果
+您的服務主體現已設置，您應該已經複製了應用程式（客戶端）ID、目錄（租用戶）ID 和用戶端機密的值。新增 Azure 帳戶時，您需要在控制台中輸入此資訊。
+
+
+
+=== 將憑證新增至控制台
+
+為 Azure 帳戶提供所需權限後，您可以將該帳戶的憑證新增至控制台。完成此步驟後，您可以使用不同的 Azure 憑證啟動Cloud Volumes ONTAP 。
+
+.開始之前
+如果您剛剛在雲端提供者中建立了這些憑證，則可能需要幾分鐘才能使用它們。等待幾分鐘，然後將憑證新增至控制台。
+
+.開始之前
+您需要先建立控制台代理，然後才能變更控制台設定。link:concept-connectors.html#connector-installation["了解如何建立控制台代理"] 。
+
+.步驟
+. 選擇“*管理 > 憑證*”。
+. 選擇“*新增憑證*”並按照精靈中的步驟操作。
++
+.. *憑證位置*：選擇*Microsoft Azure > 代理程式*。
+.. *定義憑證*：輸入有關授予所需權限的 Microsoft Entra 服務主體的資訊：
++
+*** 應用程式（客戶端）ID
+*** 目錄（租戶）ID
+*** 客戶端機密
+
+
+.. *市場訂閱*：透過立即訂閱或選擇現有訂閱將市場訂閱與這些憑證關聯。
+.. *審核*：確認有關新憑證的詳細資訊並選擇*新增*。
+
+
+
+
+.結果
+您可以從「詳細資料和憑證」頁面切換到另一組憑證 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["將系統新增至控制台時"^]
+
+image:screenshot_accounts_switch_azure.gif["螢幕截圖顯示在「詳細資料和憑證」頁面中選擇「編輯憑證」後在憑證之間進行選擇。"]
+
+
+
+== 管理現有憑證
+
+透過關聯 Marketplace 訂閱、編輯憑證和刪除憑證來管理已新增至控制台的 Azure 憑證。
+
+
+
+=== 將 Azure 市場訂閱關聯到憑證
+
+將 Azure 憑證新增至控制台後，您可以將 Azure 市集訂閱與這些憑證關聯。您可以使用訂閱來建立按使用量付費的Cloud Volumes ONTAP系統並存取NetApp資料服務。
+
+將憑證新增至控制台後，可以在兩種情況下關聯 Azure 市集訂閱：
+
+* 當您最初將憑證新增至控制台時，您沒有關聯訂閱。
+* 您想要變更與 Azure 憑證關聯的 Azure 市集訂閱。
++
+取代目前的市場訂閱會針對現有和新的Cloud Volumes ONTAP系統進行更新。
+
+
+
+.步驟
+. 選擇“*管理>*憑證*”。
+. 選擇*組織憑證*。
+. 選擇與控制台代理程式關聯的一組憑證的操作選單，然後選擇*配置訂閱*。
++
+您必須選擇與控制台代理程式關聯的憑證。您無法將市場訂閱與與NetApp控制台關聯的憑證關聯。
+
+. 若要將憑證與現有訂閱關聯，請從下拉清單中選擇訂閱並選擇*配置*。
+. 若要將憑證與新訂閱關聯，請選擇「新增訂閱」>「繼續」*，然後按照 Azure 市場中的步驟操作：
++
+.. 如果出現提示，請登入您的 Azure 帳戶。
+.. 選擇*訂閱*。
+.. 填寫表格並選擇*訂閱*。
+.. 訂閱程序完成後，選擇*立即配置帳戶*。
++
+您將被重定向到NetApp控制台。
+
+.. 從「*訂閱分配*」頁面：
++
+*** 選擇您想要與此訂閱關聯的控制台組織或帳戶。
+*** 在「*取代現有訂閱*」欄位中，選擇是否要用這個新訂閱自動取代一個組織或帳戶的現有訂閱。
++
+控制台將用這個新訂閱替換組織或帳戶中所有憑證的現有訂閱。如果一組憑證從未與訂閱關聯，那麼這個新訂閱將不會與這些憑證關聯。
+
++
+對於所有其他組織或帳戶，您需要重複這些步驟來手動關聯訂閱。
+
+*** 選擇*儲存*。
++
+以下影片展示了從 Azure 市場訂閱的步驟：
+
++
+.從 Azure 市場訂閱NetApp智慧服務
+video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
+
+
+
+
+
+
+
+
+=== 編輯憑證
+
+在控制台中編輯您的 Azure 憑證。例如，如果為服務主體應用程式建立了新的金鑰，您可以更新客戶端金鑰。
+
+.步驟
+. 選擇“*管理 > 憑證*”。
+. 選擇*組織憑證*。
+. 選擇一組憑證的操作選單，然後選擇*編輯憑證*。
+. 進行所需的更改，然後選擇*應用*。
+
+
+
+
+=== 刪除憑證
+
+如果您不再需要一組憑證，您可以刪除它們。您只能刪除與系統無關的憑證。
+
+.步驟
+. 選擇“*管理 > 憑證*”。
+. 選擇*組織憑證*。
+. 在*組織憑證*頁面上，選擇一組憑證的操作選單，然後選擇*刪除憑證*。
+. 選擇*刪除*進行確認。
+

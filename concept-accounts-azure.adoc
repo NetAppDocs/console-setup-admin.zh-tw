@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: concept-accounts-azure.html 
+keywords: cloud provider accounts, azure, azure accounts, service principal, multiple accounts, permissions, policy, policies, subscriptions, credentials, marketplace subscription, replace subscription, subscription, bluexp 
+summary: 了解NetApp控制台如何使用 Azure 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您管理一個或多個 Azure 訂閱的憑證。例如，您可能想了解何時在控制台新增其他 Azure 憑證。 
+---
+= 了解NetApp控制台中的 Azure 憑證和權限
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+了解NetApp控制台如何使用 Azure 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您管理一個或多個 Azure 訂閱的憑證。例如，您可能想了解何時在控制台新增其他 Azure 憑證。
+
+
+
+== 初始 Azure 憑證
+
+從控制台部署控制台代理程式時，您需要使用具有部署控制台代理虛擬機器權限的 Azure 帳戶或服務主體。所需權限列於link:task-install-connector-azure-bluexp.html#connector-custom-role["Azure 的代理程式部署策略"]。
+
+當控制台在 Azure 中部署控制台代理虛擬機器時，它會啟用 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["系統分配的託管標識"^]在虛擬機器上，建立自訂角色，並將其指派給虛擬機器。此角色為控制台提供管理該 Azure 訂閱內的資源和流程所需的權限。link:reference-permissions-azure.html["查看控制台如何使用權限"] 。
+
+image:diagram_permissions_initial_azure.png["概念圖顯示了控制台在 Azure 帳戶和訂閱中部署控制台代理程式。啟用系統指派的託管標識，並為控制台代理虛擬機器指派自訂角色。"]
+
+如果您為Cloud Volumes ONTAP建立新系統，控制台將預設選擇以下 Azure 憑證：
+
+image:screenshot_accounts_select_azure.gif["顯示「詳細資料和憑證」頁面中的「切換帳戶」選項的螢幕截圖。"]
+
+您可以使用初始 Azure 憑證部署所有Cloud Volumes ONTAP系統，也可以新增其他憑證。
+
+
+
+== 託管識別碼的其他 Azure 訂閱
+
+指派給控制台代理程式 VM 的系統指派託管識別碼與您啟動控制台代理程式的訂閱相關聯。如果您想要選擇不同的 Azure 訂閱，則需要link:task-adding-azure-accounts.html#associate-additional-azure-subscriptions-with-a-managed-identity["將託管識別碼與這些訂閱關聯"]。
+
+
+
+== 其他 Azure 憑證
+
+如果要在控制台中使用不同的 Azure 憑證，則必須透過以下方式授予所需的權限link:task-adding-azure-accounts.html["在 Microsoft Entra ID 中建立和設定服務主體"]對於每個 Azure 帳戶。下圖顯示了另外兩個帳戶，每個帳戶都設定了服務主體和提供權限的自訂角色：
+
+image:diagram_permissions_multiple_azure.png["概念圖顯示了初始 Azure 帳戶，該帳戶透過自訂角色和託管標識接收權限，以及另外兩個透過自訂角色和服務主體接收權限的帳戶。"]
+
+那你會link:task-adding-azure-accounts.html#add-credentials-azure["將帳戶憑證新增至控制台"]透過提供有關 AD 服務主體的詳細資訊。
+
+例如，您可以在建立新的Cloud Volumes ONTAP系統時在憑證之間切換：
+
+image:screenshot_accounts_switch_azure.gif["螢幕截圖顯示在「詳細資料和憑證」頁面中選擇「切換帳戶」後在雲端提供者帳戶之間進行選擇。"]
+
+
+
+== 憑證和市場訂閱
+
+您新增至控制台代理程式的憑證必須與 Azure Marketplace 訂閱相關聯，以便您可以按小時費率（PAYGO）或NetApp資料服務或透過年度合約支付Cloud Volumes ONTAP費用。
+
+link:task-adding-azure-accounts.html#subscribe["了解如何關聯 Azure 訂閱"] 。
+
+請注意有關 Azure 憑證和市集訂閱的以下事項：
+
+* 只能將一個 Azure 市集訂閱與一組 Azure 憑證關聯
+* 您可以使用新的訂閱替換現有的市場訂閱
+
+
+
+
+== 常問問題
+
+以下問題與憑證和訂閱有關。
+
+
+
+=== 我可以更改Cloud Volumes ONTAP系統的 Azure Marketplace 訂閱嗎？
+
+是的，你可以。當您變更與一組 Azure 憑證關聯的 Azure 市場訂閱時，所有現有和新的Cloud Volumes ONTAP系統都會根據新訂閱收費。
+
+link:task-adding-azure-accounts.html#subscribe["了解如何關聯 Azure 訂閱"] 。
+
+
+
+=== 我可以新增多個 Azure 憑證，每個憑證都有不同的市場訂閱嗎？
+
+屬於相同 Azure 訂閱的所有 Azure 憑證都將與相同 Azure 市場訂閱相關聯。
+
+如果您有屬於不同 Azure 訂閱的多個 Azure 憑證，則這些憑證可以與同一個 Azure 市場訂閱或不同的市集訂閱相關聯。
+
+
+
+=== 我可以將現有的Cloud Volumes ONTAP系統移至不同的 Azure 訂閱嗎？
+
+不可以，無法將與您的Cloud Volumes ONTAP系統關聯的 Azure 資源移至其他 Azure 訂閱。
+
+
+
+=== 憑證如何用於市場部署和本地部署？
+
+以上部分描述了控制台代理的建議部署方法，即從控制台部署。您也可以從 Azure 市場在 Azure 中部署控制台代理，並且可以在自己的 Linux 主機上安裝控制台代理軟體。
+
+如果您使用 Marketplace，您可以透過向控制台代理 VM 和系統指派的託管身分指派自訂角色來提供權限，或者您可以使用 Microsoft Entra 服務主體。
+
+對於本機部署，您無法為控制台代理程式設定託管標識，但可以使用服務主體提供權限。
+
+若要了解如何設定權限，請參閱以下頁面：
+
+* 標準模式
++
+** link:task-install-connector-azure-marketplace.html#step-3-set-up-permissions["設定 Azure 市場部署的權限"]
+** link:task-install-connector-on-prem.html#agent-permission-aws-azure["設定本地部署的權限"]
+
+
+* 限制模式
++
+** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["設定限制模式的權限"]
+
+
+

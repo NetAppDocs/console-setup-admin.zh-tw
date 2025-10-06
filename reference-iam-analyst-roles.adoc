@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-analyst-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
+summary: NetApp控制台身分和存取管理提供支援分析師角色來協助監控和支援案例。 
+---
+= NetApp控制台的營運支援分析師存取角色
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以為使用者指派以下角色，以便他們存取警報和監控。具有此角色的使用者還可以開啟支援案例。
+
+
+
+== 營運支援分析師
+
+[cols="1,2"]
+|===
+| 任務 | 可以執行 
+
+
+| 從「設定」>「憑證」管理自己的使用者憑證 | 是的 
+
+
+| 查看發現的資源 | 是的 
+
+
+| 透過控制台註冊支援並提交案例 | 是的 
+
+
+| 是的 | 查看審核頁面和通知 
+
+
+| 是的 | 查看、下載和設定警報 
+|===

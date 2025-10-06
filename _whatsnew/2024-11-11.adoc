@@ -1,0 +1,19 @@
+= 連接器 3.9.46
+:allow-uri-read: 
+
+
+
+
+=== 連接器 3.9.46
+
+BlueXP Connector 的此版本包含一些小的安全性改進和錯誤修復。
+
+目前，3.9.46 版本適用於標準模式和限制模式。
+
+
+
+=== IAM 項目的 ID
+
+現在您可以從BlueXP身分和存取管理中查看項目的 ID。您可能需要在進行 API 呼叫時使用該 ID。
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-rename-organization.html#project-id["了解如何取得項目 ID"] 。

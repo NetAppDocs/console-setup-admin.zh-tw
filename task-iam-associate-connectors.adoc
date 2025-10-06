@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: task-iam-associate-connectors.html 
+keywords: agent, associate agent, folder, project, associate folder with connector, associate project with connector, associate connector with project, associate connector with resource, connector, associate connector, 
+summary: 如果您組織的成員需要在另一個專案中使用控制台代理，則需要將該控制台代理與對應的專案關聯。 
+---
+= 將控制台代理程式與其他資料夾和項目關聯
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+當「組織管理員」建立控制台代理時，此控制台代理會自動與組織內目前選取的項目相關聯。儘管具有「組織管理員」角色的人可以從組織中的任何地方存取該控制台代理。除非您將該控制台代理與其他項目關聯，否則您組織中的其他成員只能從建立該控制台代理程式的專案存取該控制台代理程式。
+
+.開始之前
+回顧控制台代理關聯的工作原理。link:concept-identity-and-access-management.html#associate-agents["了解如何將控制台代理與身分和存取結合使用"] 。
+
+.關於此任務
+資料夾或專案管理員可以在代理頁面上查看所有控制台代理，但只能將控制台代理與他們有權限的資料夾和項目關聯。link:reference-iam-predefined-roles.html["詳細了解資料夾或專案管理員可以完成的操作"] 。
+
+.步驟
+. 選擇*管理>身分和存取*>*代理*。
+. 從表中，找到要關聯的控制台代理程式。
++
+使用表格上方的搜尋功能尋找特定的控制台代理程式或依資源層次結構篩選表格。
+
+. 若要查看連結到控制台代理的資料夾和項目，請選擇image:icon-action.png["三個點圖示"]然後選擇*查看詳細資訊*。
++
+此頁面顯示與控制台代理程式關聯的資料夾和項目的詳細資訊。
+
+. 選擇*關聯到資料夾或項目*。
+. 選擇一個資料夾或項目，然後選擇*接受*。
+. 若要將控制台代理程式與其他資料夾或項目關聯，請選擇*新增資料夾或項目*，然後選擇該資料夾或項目。
+. 選擇*關聯代理*。
+
+
+.完成後
+將控制台代理程式的資源與「資源」頁面中的相同資料夾和項目關聯。
+
+link:task-iam-manage-resources.html#associate-resource["了解如何將資源與資料夾和項目關聯"] 。
+
+.相關資訊
+* link:concept-connectors.html["了解NetApp控制台代理"]
+* link:concept-identity-and-access-management.html["了解NetApp控制台身分和存取管理"]
+* link:task-iam-get-started.html["開始使用身分和存取權限"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解身分和存取管理的 API"^]
+

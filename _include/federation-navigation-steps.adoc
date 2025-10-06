@@ -1,0 +1,9 @@
+= 
+:allow-uri-read: 
+
+
+.步驟
+. 選擇*管理>身分和存取*。
+. 選擇“*Federation*”以查看“*Federations*”頁面。
+. 選擇*配置新聯合*。
+

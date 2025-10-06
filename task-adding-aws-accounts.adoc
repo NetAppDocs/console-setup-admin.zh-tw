@@ -1,0 +1,402 @@
+---
+sidebar: sidebar 
+permalink: task-adding-aws-accounts.html 
+keywords: permissions, aws, policy, iam, iam role, role, granting, policy, iam policy, iam user, access keys, arn, cloud provider accounts, aws, cloud provider profile, json, iam, credentials, adding credentials, add credentials, bluexp 
+summary: 新增和管理 AWS 憑證，以便NetApp控制台具有在您的 AWS 帳戶中部署和管理雲端資源所需的權限。如果您管理多個 AWS 訂閱，則可以從「憑證」頁面將每個訂閱指派給不同的 AWS 憑證。 
+---
+= 管理NetApp控制台的 AWS 憑證和市場訂閱
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+新增和管理 AWS 憑證，以便您從NetApp控制台部署和管理 AWS 帳戶中的雲端資源。如果您管理多個 AWS Marketplace 訂閱，則可以從「憑證」頁面將每個訂閱指派給不同的 AWS 憑證。
+
+
+
+== 概況
+
+您可以將 AWS 憑證新增至現有的控制台代理或直接新增至控制台：
+
+* 為現有代理程式新增額外的 AWS 憑證
++
+將 AWS 憑證新增至控制台代理程式以管理雲端資源。<<add-aws-credentials-agent-creation,了解如何將 AWS 憑證新增至控制台代理>> 。
+
+* 將 AWS 憑證新增至控制台以建立控制台代理
++
+在控制台新增的 AWS 憑證可提供建立控制台代理程式所需的權限。<<add-aws-credentials-agent-creation,了解如何將 AWS 憑證新增至NetApp控制台>> 。
+
+* 將 AWS 憑證新增至 FSx for ONTAP控制台
++
+將新的 AWS 憑證新增至控制台以建立和管理 FSx for ONTAP。 https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["了解如何設定 FSx for ONTAP 的權限"^]
+
+
+
+
+
+== 如何輪換憑證
+
+NetApp控制台可讓您透過幾種方式提供 AWS 憑證：與代理程式實例關聯的 IAM 角色、在受信任的帳戶中承擔 IAM 角色或提供 AWS 存取金鑰。link:concept-accounts-aws.html["了解有關 AWS 憑證和權限的更多信息"] 。
+
+對於前兩個選項，控制台使用 AWS 安全性令牌服務來取得不斷輪換的臨時憑證。這個過程是最佳實踐，因為它是自動的並且是安全的。
+
+透過在控制台中更新來手動輪換 AWS 存取金鑰。
+
+
+
+== 向控制台代理程式新增附加憑證
+
+為控制台代理程式新增額外的 AWS 憑證，以便它具有管理公有雲環境中的資源和流程所需的權限。您可以提供另一個帳戶中的 IAM 角色的 ARN，也可以提供 AWS 存取金鑰。
+
+如果您剛開始使用控制台，link:concept-accounts-aws.html["了解NetApp控制台如何使用 AWS 憑證和權限"] 。
+
+
+
+=== 授予權限
+
+在將 AWS 憑證新增至控制台代理之前授予權限。這些權限允許控制台代理程式管理該 AWS 帳戶內的資源和流程。您可以使用受信任帳戶或 AWS 金鑰中角色的 ARN 來提供權限。
+
+
+NOTE: 如果您從控制台部署了控制台代理，它會自動為您部署控制台代理的帳戶新增 AWS 憑證。這確保了管理資源所需的必要權限。link:concept-accounts-aws.html["了解 AWS 憑證和權限"] 。
+
+*選擇*
+
+* <<透過承擔另一個帳戶中的 IAM 角色來授予權限>>
+* <<透過提供 AWS 金鑰授予權限>>
+
+
+
+
+==== 透過承擔另一個帳戶中的 IAM 角色來授予權限
+
+您可以使用 IAM 角色在部署控制台代理執行個體的來源 AWS 帳號與其他 AWS 帳號之間建立信任關係。然後，您將向控制台提供來自受信任帳戶的 IAM 角色的 ARN。
+
+如果控制台代理程式安裝在本機，則無法使用此驗證方法。您必須使用 AWS 金鑰。
+
+.步驟
+. 前往您想要為控制台代理提供權限的目標帳戶中的 IAM 控制台。
+. 在存取管理下，選擇*角色>建立角色*並依照步驟建立角色。
++
+請務必執行以下操作：
+
++
+** 在 *受信任實體類型* 下，選擇 *AWS 帳戶*。
+** 選擇“其他 AWS 帳戶”，並輸入控制台代理執行個體所在帳戶的 ID。
+** 透過複製並貼上以下內容來創建所需的策略link:reference-permissions-aws.html["控制台代理的 IAM 策略"]。
+
+
+. 複製 IAM 角色的角色 ARN，以便稍後將其貼上到控制台中。
+
+
+.結果
+該帳戶具有所需的權限。<<add-the-credentials,現在您可以將憑證新增至控制台代理>> 。
+
+
+
+==== 透過提供 AWS 金鑰授予權限
+
+如果您想要為 IAM 使用者提供具有 AWS 金鑰的控制台，則需要向該使用者授予所需的權限。控制台 IAM 政策定義了控制台允許使用的 AWS 操作和資源。
+
+如果本機安裝了控制台代理，則必須使用此驗證方法。您不能使用 IAM 角色。
+
+.步驟
+. 從 IAM 控制台，透過複製並貼上以下內容來建立策略link:reference-permissions-aws.html["控制台代理的 IAM 策略"]。
++
+https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["AWS 文件：建立 IAM 原則"^]
+
+. 將策略附加到 IAM 角色或 IAM 使用者。
++
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html["AWS 文件：建立 IAM 角色"^]
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWS 文件：新增和刪除 IAM 政策"^]
+
+
+
+
+.結果
+該帳戶具有所需的權限。<<add-the-credentials,現在您可以將憑證新增至控制台代理>> 。
+
+
+
+=== 新增憑證
+
+為 AWS 帳戶提供所需權限後，您可以將該帳戶的憑證新增至現有代理程式。這使您可以使用相同的代理程式在該帳戶中啟動Cloud Volumes ONTAP系統。
+
+ New credentials in your cloud provider may take a few minutes to become available. Then, add the credentials.
+.步驟
+. 使用頂部導覽列選擇要新增憑證的控制台代理程式。
+. 在左側導覽列中，選擇“管理”>“憑證”。
+. 在*組織憑證*頁面上，選擇*新增憑證*並按照精靈中的步驟進行操作。
++
+.. *憑證位置*：選擇*Amazon Web Services > 代理*。
+.. *定義憑證*：提供受信任的 IAM 角色的 ARN（Amazon 資源名稱），或輸入 AWS 存取金鑰和金鑰。
+.. *市場訂閱*：透過立即訂閱或選擇現有訂閱將市場訂閱與這些憑證關聯。
++
+若要以小時費率（PAYGO）或年度合約支付服務費用，您必須將 AWS 憑證與您的 AWS Marketplace 訂閱關聯起來。
+
+.. *審核*：確認有關新憑證的詳細資訊並選擇*新增*。
+
+
+
+
+.結果
+現在，在將系統新增至控制台時，您可以從「詳細資料和憑證」頁面切換到另一組憑證
+
+image:screenshot_accounts_switch_aws.png["螢幕截圖顯示在「詳細資料和憑證」頁面中選擇「切換帳戶」後在雲端提供者帳戶之間進行選擇。"]
+
+
+
+== 將憑證新增至控制台以建立控制台代理
+
+透過提供 IAM 角色的 ARN 來新增 AWS 憑證，該角色授予建立控制台代理程式所需的權限。您可以在建立新代理時選擇這些憑證。
+
+
+
+=== 設定 IAM 角色
+
+設定一個 IAM 角色，使NetApp控制台軟體即服務 (SaaS) 層能夠承擔該角色。
+
+.步驟
+. 前往目標帳戶中的 IAM 控制台。
+. 在存取管理下，選擇*角色>建立角色*並依照步驟建立角色。
++
+請務必執行以下操作：
+
++
+** 在 *受信任實體類型* 下，選擇 *AWS 帳戶*。
+** 選擇「另一個 AWS 帳戶」並輸入NetApp Console SaaS 的 ID：9520133144444
+** 具體來說，對於Amazon FSx for NetApp ONTAP ，編輯 *信任關係* 策略以包含「AWS」：「arn:aws:iam::952013314444:root」。
++
+例如，該策略應如下所示：
+
++
+[source, JSON]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::952013314444:root",
+        "Service": "ec2.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+----
++
+參考link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html["AWS 身分和存取管理 (IAM) 文檔"^]有關 IAM 中跨帳戶資源存取的詳細資訊。
+
+** 建立一個包含建立控制台代理程式所需權限的策略。
++
+*** https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["查看 FSx for ONTAP所需的權限"^]
+*** link:task-install-connector-aws-bluexp.html#aws-permissions-agent["查看代理部署策略"]
+
+
+
+
+. 複製 IAM 角色的角色 ARN，以便您可以在下一步中將其貼上到控制台中。
+
+
+.結果
+IAM 角色現在具有所需的權限。<<add-the-credentials-2,現在您可以將其新增至控制台>> 。
+
+
+
+=== 新增憑證
+
+為 IAM 角色提供所需的權限後，將角色 ARN 新增至控制台。
+
+.開始之前
+如果您剛剛建立了 IAM 角色，則可能需要幾分鐘才能使用它們。等待幾分鐘，然後將憑證新增至控制台。
+
+.步驟
+. 選擇“*管理 > 憑證*”。
++
+image:screenshot-settings-icon-organization.png["顯示控制台右上角的「設定」圖示的螢幕截圖。"]
+
+. 在*組織憑證*或*帳戶憑證*頁面上，選擇*新增憑證*並依照精靈中的步驟進行操作。
++
+.. *憑證位置*：選擇*Amazon Web Services > NetApp Console*。
+.. *定義憑證*：提供 IAM 角色的 ARN（Amazon 資源名稱）。
+.. *審核*：確認有關新憑證的詳細資訊並選擇*新增*。
+
+
+
+
+
+
+== 在Amazon FSx for ONTAP控制台新增憑證
+
+有關詳細信息，請參閱 https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Amazon FSx for ONTAP 的控制台文檔"^]
+
+
+
+== 配置 AWS 訂閱
+
+新增 AWS 憑證後，您可以使用這些憑證設定 AWS Marketplace 訂閱。透過訂閱，您可以按小時費率（PAYGO）或使用年度合約支付Cloud Volumes ONTAP費用，並支付其他資料服務費用。
+
+在新增憑證後，您可以在兩種情況下設定 AWS Marketplace 訂閱：
+
+* 最初新增憑證時您沒有配置訂閱。
+* 您想要變更已配置為 AWS 憑證的 AWS Marketplace 訂閱。
++
+用新的訂閱取代目前的市場訂閱會更改任何現有Cloud Volumes ONTAP系統和所有新系統的市場訂閱。
+
+
+
+.開始之前
+您需要先建立控制台代理，然後才能設定訂閱。link:concept-connectors.html#connector-installation["了解如何建立控制台代理"] 。
+
+以下影片展示了從 AWS Marketplace 訂閱NetApp智慧服務的步驟：
+
+.從 AWS Marketplace 訂閱NetApp智慧服務
+video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
+.步驟
+. 選擇“*管理>*憑證*”。
+. 選擇*組織憑證*。
+. 選擇與控制台代理程式關聯的一組憑證的操作選單，然後選擇*配置訂閱*。
++
+您必須選擇與控制台代理程式關聯的憑證。您無法將市場訂閱與與NetApp控制台關聯的憑證關聯。
+
++
+image:screenshot_aws_configure_subscription.png["一組現有憑證的操作選單的螢幕截圖。"]
+
+. 若要將憑證與現有訂閱關聯，請從下拉清單中選擇訂閱並選擇*配置*。
+. 若要將憑證與新訂閱關聯，請選擇「新增訂閱」>「繼續」*，然後依照 AWS Marketplace 中的步驟：
++
+.. 選擇“查看購買選項”。
+.. 選擇*訂閱*。
+.. 選擇*設定您的帳戶*。
++
+您將被重定向到NetApp控制台。
+
+.. 從「*訂閱分配*」頁面：
++
+*** 選擇您想要與此訂閱關聯的控制台組織或帳戶。
+*** 在「*取代現有訂閱*」欄位中，選擇是否要用這個新訂閱自動取代一個組織或帳戶的現有訂閱。
++
+控制台將用這個新訂閱替換組織或帳戶中所有憑證的現有訂閱。如果一組憑證從未與訂閱關聯，那麼這個新訂閱將不會與這些憑證關聯。
+
++
+對於所有其他組織或帳戶，您需要重複這些步驟來手動關聯訂閱。
+
+*** 選擇*儲存*。
+
+
+
+
+
+
+
+
+== 將現有訂閱與您的組織或帳戶關聯
+
+當您從 AWS Marketplace 訂閱時，流程的最後一步是將訂閱與您的組織關聯。如果您沒有完成此步驟，那麼您就無法在您的組織或帳戶中使用該訂閱。
+
+* link:concept-modes.html["了解控制台部署模式"]
+* link:concept-identity-and-access-management.html["了解控制台身分和存取管理"]
+
+
+如果您從 AWS Marketplace 訂閱了NetApp智慧資料服務，但錯過了將訂閱與您的帳戶關聯的步驟，請按照以下步驟操作。
+
+.步驟
+. 確認您沒有將您的訂閱與您的控制台組織或帳戶關聯。
++
+.. 從導覽選單中，選擇*管理>許可證和訂閱*。
+.. 選擇*訂閱*。
+.. 確認您的訂閱沒有出現。
++
+您只會看到與您目前正在查看的組織或帳戶相關的訂閱。如果您沒有看到您的訂閱，請繼續執行以下步驟。
+
+
+
+. 登入 AWS 主控台並導覽至 *AWS Marketplace 訂閱*。
+. 尋找訂閱。
++
+image:screenshot-aws-marketplace-bluexp-subscription.png["AWS Marketplace 的螢幕截圖，顯示NetApp訂閱。"]
+
+. 選擇*設定產品*。
++
+訂閱優惠頁面應在新的瀏覽器標籤或視窗中載入。
+
+. 選擇*設定您的帳戶*。
++
+image:screenshot-aws-marketplace-set-up-account.png["AWS Marketplace 的螢幕截圖，其中顯示了NetApp訂閱和頁面右上角的「設定您的帳戶」選項。"]
+
++
+netapp.com 上的 *Subscription Assignment* 頁面應在新瀏覽器標籤或視窗中載入。
+
++
+請注意，系統可能會提示您先登入控制台。
+
+. 從「*訂閱分配*」頁面：
++
+** 選擇您想要與此訂閱關聯的控制台組織或帳戶。
+** 在「*取代現有訂閱*」欄位中，選擇是否要用這個新訂閱自動取代一個組織或帳戶的現有訂閱。
++
+控制台將用這個新訂閱替換組織或帳戶中所有憑證的現有訂閱。如果一組憑證從未與訂閱關聯，那麼這個新訂閱將不會與這些憑證關聯。
+
++
+對於所有其他組織或帳戶，您需要重複這些步驟來手動關聯訂閱。
+
++
+image:screenshot-subscription-assignment.png["訂閱分配頁面的螢幕截圖，可讓您選擇與此訂閱關聯的組織。"]
+
+
+
+. 確認訂閱與您的組織或帳戶相關聯。
++
+.. 從導覽選單中，選擇*管理>許可證和訂閱*。
+.. 選擇*訂閱*。
+.. 驗證您的訂閱是否出現。
+
+
+. 確認訂閱與您的 AWS 憑證相關聯。
++
+.. 在控制台的右上角，選擇“設定”圖標，然後選擇“*憑證*”。
+.. 在「組織憑證」頁面上，驗證訂閱是否與您的 AWS 憑證關聯。
++
+這是一個例子。
+
++
+image:screenshot-credentials-with-subscription.png["控制台帳戶憑證頁面的螢幕截圖，其中顯示了 AWS 憑證，其中包括一個訂閱字段，用於標識與憑證關聯的訂閱的名稱。"]
+
+
+
+
+
+
+
+== 編輯憑證
+
+透過變更帳戶類型（AWS 金鑰或承擔角色）、編輯名稱或更新憑證本身（金鑰或角色 ARN）來編輯您的 AWS 憑證。
+
+
+NOTE: 您無法編輯與控制台代理實例或Amazon FSx for ONTAP實例關聯的實例設定檔的憑證。您只能重新命名 FSx for ONTAP實例的憑證。
+
+.步驟
+. 選擇“*管理 > 憑證*”。
+. 在*組織憑證*或*帳戶憑證*頁面上，選擇一組憑證的操作選單，然後選擇*編輯憑證*。
+. 進行所需的更改，然後選擇*應用*。
+
+
+
+
+== 刪除憑證
+
+如果您不再需要一組憑證，您可以刪除它們。您只能刪除與系統無關的憑證。
+
+
+TIP: 您無法刪除與控制台代理實例關聯的實例設定檔的憑證。
+
+.步驟
+. 選擇“*管理 > 憑證*”。
+. 在*組織憑證*或*帳戶憑證*頁面上，選擇一組憑證的操作選單，然後選擇*刪除憑證*。
+. 選擇*刪除*進行確認。
+

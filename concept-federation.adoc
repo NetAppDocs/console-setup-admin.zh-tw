@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: concept-federation.html 
+keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
+summary: 身份聯合支援透過NetApp控制台進行單一登錄，以便使用者可以使用來自您公司身分的憑證登入。首先，查看設定過程。 
+---
+= 使用NetApp控制台的身份聯合實作單一登入
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+單一登入（聯合）允許使用者使用其公司憑證登入NetApp控制台，從而簡化了登入流程並增強了安全性。您可以使用身分識別提供者 (IdP) 或NetApp支援網站啟用單一登入 (SSO)。
+
+.所需角色
+組織管理員、聯盟管理員、聯盟檢視器。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
+
+
+
+== 與NetApp支援站點的身份聯合
+
+與NetApp支援網站聯合允許使用者使用相同的憑證登入控制台、 Active IQ Digital Advisor和其他相關應用程式。
+
+
+NOTE: 如果您與NetApp支援網站聯合，則您不能與您的企業身分管理提供者聯合。選擇最適合您組織的一種。
+
+.步驟
+. 下載並完成 https://kb.netapp.com/@api/deki/files/98382/NetApp-B2C-Federation-Request-Form-April-2022.docx?revision=1["NetApp聯合申請表"^]。
+. 將表格提交至表格中指定的電子郵件地址。
++
+NetApp支援團隊將審核並處理您的請求。
+
+
+
+
+
+== 與您的身分提供者建立聯合連接
+
+您可以與身分識別提供者建立聯合連接，以啟用控制台的單一登入 (SSO)。這個過程涉及配置您的身分提供者以信任NetApp作為服務提供者，然後在控制台中建立連線。
+
+
+NOTE: 如果您之前使用NetApp Cloud Central（控制台的外部應用程式）配置了聯合，則需要使用聯合頁面匯入聯合以在控制台內進行管理。link:task-federation-import.html["了解如何導入您的聯盟。"]
+
+
+
+=== 支援的身份提供者
+
+NetApp支援以下聯合協定和身分提供者：
+
+.協定
+* 安全性斷言標記語言 (SAML) 身分提供者
+* Active Directory 聯合驗證服務 (AD FS)
+
+
+.身分提供者
+* 微軟Entra ID
+* Ping聯邦
+
+
+
+
+=== 與NetApp控制台聯合工作流程
+
+NetApp僅支援服務供應商發起的（SP發起的） SSO。您需要先配置身分提供者以信任NetApp作為服務提供者。然後，您可以在控制台中建立使用身分提供者配置的連線。
+
+您可以與您的電子郵件網域或您擁有的其他網域聯合。若要與不同於您的電子郵件網域的網域聯合，請先驗證您擁有該網域。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"]驗證您的網域名稱（如果不使用您的電子郵件網域）
+[role="quick-margin-para"]
+若要與不同於您的電子郵件網域的網域聯合，請驗證您擁有該網域。您無需任何額外步驟即可聯合您的電子郵件網域。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"]配置您的 IdP 以信任NetApp作為服務提供者
+[role="quick-margin-para"]
+透過建立新應用程式並提供 ACS URL、實體 ID 或其他憑證資訊等詳細信息，將您的身分提供者配置為信任NetApp 。服務提供者資訊因身分提供者而異，因此請參閱特定身分提供者的文件以了解詳細資訊。您需要與您的 IdP 管理員合作來完成此步驟。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]在控制台中建立聯合連接
+[role="quick-margin-para"]
+提供來自身分提供者的 SAML 元資料 URL 或檔案以建立連線。此資訊用於建立控制台和您的身分提供者之間的信任關係。您提供的資訊取決於您使用的 IdP。例如，如果您使用 Microsoft Entra ID，則需要提供用戶端 ID、金鑰和網域。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["三"]在控制台中測試您的聯盟
+[role="quick-margin-para"]
+在啟用聯合連線之前對其進行測試。使用控制台中聯合頁面上的測試選項來驗證您的測試使用者是否可以成功進行身份驗證。如果測試成功，則可以啟用連線。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["三"]在控制台中啟用您的連接
+[role="quick-margin-para"]
+啟用連線後，使用者可以使用其公司憑證登入控制台。
+
+查看對應協議或 IdP 的主題以開始：
+
+* link:task-federation-adfs.html["與 AD FS 設定聯合連接"]
+* link:task-federation-entra-id.html["與 Microsoft Entra ID 建立聯合連接"]
+* link:task-federation-ping.html["使用 PingFederate 設定聯合連接"]
+* link:task-federation-saml.html["與 SAML 身分提供者建立聯合連接"]
+

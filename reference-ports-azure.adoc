@@ -1,0 +1,86 @@
+---
+sidebar: sidebar 
+permalink: reference-ports-azure.html 
+keywords: ports, security group, http, https, inbound, outbound 
+summary: 代理程式的 Azure 安全性群組需要入站和出站規則。當您從控制台建立控制台代理時， NetApp控制台會自動建立此安全性群組。對於其他安裝選項，您需要手動設定此安全性群組。 
+---
+= Azure 中的控制台代理程式安全性群組規則
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+代理程式的 Azure 安全性群組需要入站和出站規則。當您從控制台建立控制台代理時， NetApp控制台會自動建立此安全性群組。對於其他安裝選項，您需要手動設定此安全性群組。
+
+
+
+== 入站規則
+
+[cols="3*"]
+|===
+| 協定 | 港口 | 目的 
+
+
+| SSH | 22 | 提供對代理主機的 SSH 訪問 
+
+
+| HTTP | 80  a| 
+* 提供從客戶端 Web 瀏覽器到本機使用者介面的 HTTP 訪問
+* 在Cloud Volumes ONTAP升級過程中使用
+
+
+
+
+| HTTPS | 443 | 提供從客戶端 Web 瀏覽器到本機使用者介面的 HTTPS 訪問，以及來自NetApp資料分類實例的連接 
+
+
+| TCP | 3128 | 為Cloud Volumes ONTAP提供網路存取權限，以便將AutoSupport訊息傳送給NetApp支援。部署後您必須手動開啟此連接埠。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-verify-autosupport.html["了解如何將代理用作AutoSupport訊息的代理"^] 
+|===
+
+
+== 出站規則
+
+代理程式的預定義安全群組開啟所有出站流量。如果可以接受，請遵循基本的出站規則。如果您需要更嚴格的規則，請使用進階出站規則。
+
+
+
+=== 基本出站規則
+
+代理程式的預定義安全性群組包括以下出站規則。
+
+[cols="3*"]
+|===
+| 協定 | 港口 | 目的 
+
+
+| 所有 TCP | 全部 | 所有出站流量 
+
+
+| 所有 UDP | 全部 | 所有出站流量 
+|===
+
+
+=== 高級出站規則
+
+如果您需要對出站流量製定嚴格的規則，則可以使用以下資訊僅開啟代理出站通訊所需的連接埠。
+
+
+NOTE: 來源IP位址是代理主機。
+
+[cols="5*"]
+|===
+| 服務 | 協定 | 港口 | 目的地 | 目的 
+
+
+| API 呼叫和AutoSupport | HTTPS | 443 | 出站互聯網和ONTAP叢集管理 LIF | 對 Azure、 ONTAP、 NetApp資料分類的 API 調用，以及向NetApp發送AutoSupport訊息 
+
+
+| API 呼叫 | TCP | 8080 | 資料分類 | 部署期間探測資料分類實例 
+
+
+| DNS | UDP | 53 | DNS | 用於控制台的 DNS 解析 
+|===

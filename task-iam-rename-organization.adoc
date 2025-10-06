@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: task-iam-rename-organization.html 
+keywords: rename organization, change organization name, name change, rename, change name, iam, ID, integration, project, organization, API, identity and access management 
+summary: 如果需要，您可以變更NetApp控制台組織的名稱。 
+---
+= 組織和專案 ID
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您的NetApp控制台組織有一個名稱和一個 ID。您可以為您的組織選擇一個名稱以幫助識別它。您可能還需要檢索某些整合的組織 ID。
+
+
+
+== 重新命名您的組織
+
+您可以重新命名您的組織。如果您支持的不僅僅是組織，這將很有幫助。
+
+.步驟
+. 選擇*管理>身分和存取*。
+. 選擇*組織*。
+. 從「組織」頁面，導覽至表格的第一行，選擇image:icon-action.png["三個並排的點組成的圖標"]然後選擇*編輯組織*。
++
+image:screenshot-iam-edit-organization.png["概覽頁面的螢幕截圖，其中顯示了操作圖示和編輯組織選項。"]
+
+. 輸入新的組織名稱並選擇*套用*。
+
+
+
+
+== 取得組織 ID
+
+組織 ID 用於與控制台的某些整合。
+
+您可以從組織頁面查看組織 ID，並根據需要將其複製到剪貼簿。
+
+.步驟
+. 選擇*管理>身分和存取*>*組織*。
+. 在*組織*頁面上，在摘要欄中尋找您的組織 ID 並將其複製到剪貼簿。您可以保存它以供以後使用，或直接將其複製到需要使用它的地方。
+
+
+
+
+== 取得專案ID
+
+如果您使用 API，則需要取得項目的 ID。例如，在建立Cloud Volumes ONTAP系統時。
+
+.步驟
+. 從“組織”頁面，導航到表中的項目並選擇image:icon-action.png["三個並排的點組成的圖標"]
++
+顯示項目 ID。
+
+. 若要複製 ID，請選擇複製按鈕。
++
+image:screenshot-iam-project-id.png["選擇項目的操作選單後，顯示項目 ID 的資料夾和項目表的螢幕截圖。"]
+
+
+
+.相關資訊
+* link:concept-identity-and-access-management.html["了解身分和存取管理"]
+* link:task-iam-get-started.html["開始使用身分和存取權限"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解身分和存取 API"^]
+

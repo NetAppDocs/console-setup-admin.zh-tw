@@ -1,0 +1,13 @@
+= 
+:allow-uri-read: 
+
+
+您也可以直接從下列目錄中的控制台代理主機存取 JSON 格式的驗證報表和設定日誌：
+
+[source, cli]
+----
+/tmp/netapp-console-agents/logs
+
+/tmp/netapp-console-agents/results.json
+
+----

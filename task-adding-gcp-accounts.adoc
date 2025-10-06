@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: task-adding-gcp-accounts.html 
+keywords: permissions, gcp, marketplace, gcp subscription, subscription, gcp marketplace, subscribe, data tiering, tiering, setup, requirements, account for data tiering, account for tiering, interoperable, interoperability, interoperable storage access keys, access keys, bluexp 
+summary: 您可以透過關聯市場訂閱並對訂閱程序進行故障排除來管理與控制台代理 VM 執行個體關聯的 Google Cloud 憑證。這兩項任務確保您可以使用市場訂閱來支付數據服務。 
+---
+= 管理NetApp控制台的 Google Cloud 憑證和訂閱
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以透過關聯市場訂閱並對訂閱程序進行故障排除來管理與控制台代理 VM 執行個體關聯的 Google Cloud 憑證。這兩項任務確保您可以使用市場訂閱來支付數據服務。
+
+
+
+== 將 Marketplace 訂閱與 Google Cloud 憑證關聯
+
+在 Google Cloud 中部署控制台代理程式時，控制台會建立一組與控制台代理虛擬機器實例關聯的預設憑證。您可以隨時變更與這些憑證關聯的 Google Cloud Marketplace 訂閱。透過訂閱，您可以建立按使用量付費的Cloud Volumes ONTAP系統，並使用其他資料服務。
+
+用新的訂閱取代目前的市場訂閱會更改任何現有Cloud Volumes ONTAP系統和所有新系統的市場訂閱。
+
+.步驟
+. 選擇“*管理>*憑證*”。
+. 選擇*組織憑證*。
+. 選擇與控制台代理程式關聯的一組憑證的操作選單，然後選擇*配置訂閱*。  +需要新的螢幕截圖（TS）image:screenshot_gcp_add_subscription.png["一組現有憑證的操作選單的螢幕截圖。"]
+. 若要使用選定的憑證設定現有訂閱，請從下拉清單中選擇一個 Google Cloud 專案和訂閱，然後選擇*設定*。
++
+image:screenshot_gcp_associate.gif["為 Google Cloud 憑證所選的 Google Cloud 專案和訂閱的螢幕截圖。"]
+
+. 如果您還沒有訂閱，請選擇*新增訂閱>繼續*並按照 Google Cloud Marketplace 中的步驟操作。
++
+
+NOTE: 在完成以下步驟之前，請確保您在 Google Cloud 帳戶中同時擁有 Billing Admin 權限以及NetApp Console 登入權限。
+
++
+.. 在您被重定向到 https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud Marketplace 上的NetApp智慧服務頁面"^]，確保在頂部導航選單中選擇了正確的項目。
++
+image:screenshot_gcp_cvo_marketplace.png["Google Cloud 中Cloud Volumes ONTAP市場頁面的螢幕截圖。"]
+
+.. 選擇*訂閱*。
+.. 選擇適當的結算帳戶並同意條款和條件。
+.. 選擇*訂閱*。
++
+此步驟將您的轉移請求傳送給NetApp。
+
+.. 在彈出的對話方塊中，選擇*向NetApp, Inc. 註冊*。
++
+必須完成此步驟才能將 Google Cloud 訂閱與您的控制台組織或帳戶關聯。直到您從此頁面重定向並登入控制台後，連結訂閱的過程才完成。
+
++
+image:screenshot_gcp_marketplace_register.png["註冊彈出視窗的螢幕截圖。"]
+
+.. 完成「*訂閱分配*」頁面上的步驟：
++
+
+NOTE: 如果您組織中的某人已經從您的結算帳戶訂閱了市場，那麼您將被重新導向到 https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["NetApp控制台中的Cloud Volumes ONTAP頁面"^]反而。如果這是意外情況，請聯絡您的NetApp銷售團隊。  Google 為每個 Google 結算帳戶僅啟用一項訂閱。
+
++
+*** 選擇您想要與此訂閱關聯的控制台組織或帳戶。
+*** 在「*取代現有訂閱*」欄位中，選擇是否要用這個新訂閱自動取代一個組織或帳戶的現有訂閱。
++
+控制台將用這個新訂閱替換組織或帳戶中所有憑證的現有訂閱。如果一組憑證從未與訂閱關聯，那麼這個新訂閱將不會與這些憑證關聯。
+
++
+對於所有其他組織或帳戶，您需要重複這些步驟來手動關聯訂閱。
+
+*** 選擇*儲存*。
++
+以下影片展示了從 Google Cloud Marketplace 訂閱的步驟：
+
++
+.從 Google Cloud Marketplace 訂閱
+video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
+
+
+.. 此過程完成後，導覽回控制台中的「憑證」頁面並選擇此新訂閱。
++
+image:screenshot_gcp_associate.gif["訂閱分配頁面的螢幕截圖。"]
+
+
+
+
+
+
+
+== 解決 Marketplace 訂閱流程問題
+
+有時，透過 Google Cloud Marketplace 訂閱NetApp資料服務可能會因為權限不正確或意外未遵循重定向到控制台而變得碎片化。如果發生這種情況，請按照以下步驟完成訂閱程序。
+
+.步驟
+. 導航至 https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud Marketplace 上的NetApp頁面"^]檢查訂單狀態。如果頁面顯示*在提供者管理*，請向下捲動並選擇*管理訂單*。
++
+image:screenshot_gcp_manage_orders.png["市場頁面貼文訂閱的螢幕截圖。"]
+
++
+** 如果訂單顯示綠色複選標記且這是意外情況，則該組織中使用相同計費帳戶的其他人可能已經訂閱。如果這是意外情況或您需要此訂閱的詳細信息，請聯絡您的NetApp銷售團隊。
++
+image:screenshot_gcp_green_marketplace.png["已接受權利的螢幕截圖。"]
+
+** 如果訂單顯示時鐘和*待定*狀態，請返回市場頁面並選擇*在提供者管理*以完成如上所述的流程。
++
+image:screenshot_gcp_pending_marketplace.png["待定市場權利的螢幕截圖。"]
+
+
+
+

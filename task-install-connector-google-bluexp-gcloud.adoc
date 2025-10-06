@@ -1,0 +1,426 @@
+---
+sidebar: sidebar 
+permalink: task-install-connector-google-bluexp-gcloud.html 
+keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector 
+summary: 若要從NetApp Consoel 或使用 Google Cloud 在 Google Cloud 中建立控制台代理，您需要設定網路、準備 Google Cloud 權限、啟用 Google Cloud API，然後建立控制台代理。 
+---
+= 透過NetApp控制台在 Google Cloud 中建立控制台代理
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以從控制台在 Google Cloud 中建立控制台代理程式。您需要設定網路、準備 Google Cloud 權限、啟用 Google Cloud API，然後建立控制台代理。
+
+.開始之前
+* 你應該有一個link:concept-connectors.html["了解控制台代理"]。
+* 你應該回顧一下link:reference-limitations.html["控制台代理限制"]。
+
+
+
+
+== 步驟 1：設定網絡
+
+設定網路以確保控制台代理可以管理資源，並連接到目標網路和出站網路存取。
+
+VPC 和子網:: 建立控制台代理程式時，您需要指定它所在的 VPC 和子網路。
+
+
+連接到目標網絡:: 控制台代理程式需要與您計劃建立和管理系統的位置建立網路連線。例如，您計劃在本機環境中建立Cloud Volumes ONTAP系統或儲存系統的網路。
+
+
+出站互聯網訪問:: 部署控制台代理程式的網路位置必須具有出站網路連線才能聯絡特定端點。
+
+
+從控制台代理聯繫的端點:: 控制台代理需要外部網路存取來聯繫以下端點，以管理公有雲環境中的資源和流程以進行日常操作。
++
+--
+下面列出的端點都是 CNAME 條目。
+
+[cols="2a,1a"]
+|===
+| 端點 | 目的 
+
+
+ a| 
+\ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta https://www.googleapis.com/storage/v1 https://storage.googleapis.com/storage/v1 https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/projects
+ a| 
+管理 Google Cloud 中的資源。
+
+
+
+ a| 
+\ https://mysupport.netapp.com
+ a| 
+取得許可資訊並向NetApp支援發送AutoSupport訊息。
+
+
+
+ a| 
+\ https://signin.b2c.netapp.com
+ a| 
+更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp控制台。
+
+
+
+ a| 
+\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+ a| 
+在NetApp控制台中提供功能和服務。
+
+
+
+ a| 
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+ a| 
+取得控制台代理升級的影像。
+
+* 當您部署新代理程式時，驗證檢查會測試與目前端點的連線。如果你使用link:link:reference-networking-saas-console-previous.html["先前的端點"]，驗證檢查失敗。為了避免此失敗，請跳過驗證檢查。
++
+儘管先前的端點仍然受支持，但NetApp建議盡快將防火牆規則更新至目前端點。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新終端節點列表"] 。
+
+* 當您更新到防火牆中的目前端點時，您現有的代理程式將繼續運作。
+
+
+|===
+--
+
+
+從NetApp控制台聯繫的端點:: 當您使用透過 SaaS 層提供的基於 Web 的NetApp控制台時，它會聯絡多個端點來完成資料管理任務。這包括從控制台聯繫以部署控制台代理的端點。
++
+--
+link:reference-networking-saas-console.html["查看從NetApp控制台聯繫的端點列表"] 。
+
+--
+
+
+代理伺服器:: NetApp支援顯式和透明代理配置。如果您使用透明代理，則只需要提供代理伺服器的憑證。如果您使用明確代理，您還需要 IP 位址和憑證。
++
+--
+* IP 位址
+* 證書
+* HTTPS 憑證
+
+
+--
+
+
+連接埠:: 除非您啟動它或將其用作代理將AutoSupport訊息從Cloud Volumes ONTAP發送到NetApp支持，否則控制台代理不會有傳入流量。
++
+--
+* HTTP（80）和 HTTPS（443）提供對本機 UI 的訪問，您會在極少數情況下使用它們。
+* 僅當需要連接到主機進行故障排除時才需要 SSH（22）。
+* 如果您在沒有外部網路連線的子網路中部署Cloud Volumes ONTAP系統，則需要透過連接埠 3128 建立入站連線。
++
+如果Cloud Volumes ONTAP系統沒有出站網路連線來傳送AutoSupport訊息，控制台會自動設定這些系統以使用控制台代理附帶的代理伺服器。唯一的要求是確保控制台代理的安全群組允許透過連接埠 3128 進行入站連線。部署控制台代理程式後，您需要開啟此連接埠。
+
+
+
+--
+
+
+啟用 NTP:: 如果您打算使用NetApp資料分類掃描公司資料來源，則應在控制台代理程式和NetApp資料分類系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
++
+--
+建立控制台代理程式後實現此網路需求。
+
+--
+
+
+
+
+== 步驟 2：設定權限以建立控制台代理
+
+在從控制台部署控制台代理程式之前，您需要為部署控制台代理程式 VM 的 Google 平台使用者設定權限。
+
+.步驟
+. 在 Google 平台中建立自訂角色：
++
+.. 建立包含以下權限的 YAML 檔案：
++
+[source, yaml]
+----
+title: Console agent deployment policy
+description: Permissions for the user who deploys the Console agent
+stage: GA
+includedPermissions:
+- compute.disks.create
+- compute.disks.get
+- compute.disks.list
+- compute.disks.setLabels
+- compute.disks.use
+- compute.firewalls.create
+- compute.firewalls.delete
+- compute.firewalls.get
+- compute.firewalls.list
+- compute.globalOperations.get
+- compute.images.get
+- compute.images.getFromFamily
+- compute.images.list
+- compute.images.useReadOnly
+- compute.instances.attachDisk
+- compute.instances.create
+- compute.instances.get
+- compute.instances.list
+- compute.instances.setDeletionProtection
+- compute.instances.setLabels
+- compute.instances.setMachineType
+- compute.instances.setMetadata
+- compute.instances.setTags
+- compute.instances.start
+- compute.instances.updateDisplayDevice
+- compute.machineTypes.get
+- compute.networks.get
+- compute.networks.list
+- compute.networks.updatePolicy
+- compute.projects.get
+- compute.regions.get
+- compute.regions.list
+- compute.subnetworks.get
+- compute.subnetworks.list
+- compute.zoneOperations.get
+- compute.zones.get
+- compute.zones.list
+- deploymentmanager.compositeTypes.get
+- deploymentmanager.compositeTypes.list
+- deploymentmanager.deployments.create
+- deploymentmanager.deployments.delete
+- deploymentmanager.deployments.get
+- deploymentmanager.deployments.list
+- deploymentmanager.manifests.get
+- deploymentmanager.manifests.list
+- deploymentmanager.operations.get
+- deploymentmanager.operations.list
+- deploymentmanager.resources.get
+- deploymentmanager.resources.list
+- deploymentmanager.typeProviders.get
+- deploymentmanager.typeProviders.list
+- deploymentmanager.types.get
+- deploymentmanager.types.list
+- resourcemanager.projects.get
+- compute.instances.setServiceAccount
+- iam.serviceAccounts.list
+----
+.. 從 Google Cloud 啟動雲殼。
+.. 上傳包含所需權限的 YAML 檔案。
+.. 使用建立自訂角色 `gcloud iam roles create`命令。
++
+以下範例在專案層級建立一個名為「connectorDeployment」的角色：
+
++
+gcloud iam 角色建立 connectorDeployment --project=myproject --file=connector-deployment.yaml
+
++
+https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud 文件：建立和管理自訂角色"^]
+
+
+
+. 將此自訂角色指派給將從控制台或使用 gcloud 部署控制台代理程式的使用者。
++
+https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role["Google Cloud 文件：授予單一角色"^]
+
+
+
+
+
+== 步驟 3：設定控制台代理操作的權限
+
+需要一個 Google Cloud 服務帳號來向控制台代理提供控制台管理 Google Cloud 中的資源所需的權限。建立控制台代理程式時，您需要將此服務帳戶與控制台代理 VM 關聯。
+
+在後續版本中新增權限時，您有責任更新自訂角色。如果需要新的權限，它們將在發行說明中列出。
+
+.步驟
+. 在 Google Cloud 中建立自訂角色：
++
+.. 建立一個包含以下內容的 YAML 文件link:reference-permissions-gcp.html["控制台代理程式的服務帳戶權限"]。
+.. 從 Google Cloud 啟動雲殼。
+.. 上傳包含所需權限的 YAML 檔案。
+.. 使用建立自訂角色 `gcloud iam roles create`命令。
++
+以下範例在專案層級建立一個名為「connector」的角色：
+
++
+`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+
++
+https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud 文件：建立和管理自訂角色"^]
+
+
+
+. 在 Google Cloud 中建立服務帳號並將角色指派給該服務帳號：
++
+.. 從 IAM 和管理服務中，選擇 *服務帳戶 > 建立服務帳戶*。
+.. 輸入服務帳戶詳細資料並選擇*建立並繼續*。
+.. 選擇您剛剛建立的角色。
+.. 完成剩餘步驟以建立角色。
++
+https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud 文件：建立服務帳號"^]
+
+
+
+. 如果您打算在與控制台代理程式所在專案不同的專案中部署Cloud Volumes ONTAP系統，則需要為控制台代理程式的服務帳戶提供這些項目的存取權限。
++
+例如，假設控制台代理程式位於專案 1 中，而您想要在專案 2 中建立Cloud Volumes ONTAP系統。您需要授予項目 2 中的服務帳戶存取權限。
+
++
+.. 從 IAM 和管理服務中，選擇您想要建立Cloud Volumes ONTAP系統的 Google Cloud 專案。
+.. 在 *IAM* 頁面上，選擇 *授予存取權限* 並提供所需的詳細資訊。
++
+*** 輸入控制台代理服務帳戶的電子郵件。
+*** 選擇控制台代理程式的自訂角色。
+*** 選擇*儲存*。
+
+
+
+
++
+有關詳細信息，請參閱 https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role["Google Cloud 文件"^]
+
+
+
+
+
+== 步驟 4：設定共享 VPC 權限
+
+如果您使用共用 VPC 將資源部署到服務項目中，則需要準備好您的權限。
+
+此表僅供參考，當 IAM 配置完成時，您的環境應該反映權限表。
+
+.查看共用 VPC 權限
+[%collapsible]
+====
+[cols="10,10,10,18,18,34"]
+|===
+| 身分 | 創造者 | 主辦地點 | 服務項目權限 | 宿主專案權限 | 目的 
+
+
+| Google 帳戶部署代理 | 風俗 | 服務項目  a| 
+link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["代理部署策略"]
+ a| 
+計算.網路用戶
+| 在服務項目中部署代理 
+
+
+| 代理服務帳戶 | 風俗 | 服務項目  a| 
+link:reference-permissions-gcp.html["代理服務帳號策略"]
+| 計算.網路使用者部署管理員.編輯器 | 部署和維護服務項目中的Cloud Volumes ONTAP和服務 
+
+
+| Cloud Volumes ONTAP服務帳戶 | 風俗 | 服務項目 | storage.admin 成員： NetApp Console 服務帳號為 serviceAccount.user | 不適用 | （選購）適用於NetApp Cloud Tiering 和NetApp Backup and Recovery 
+
+
+| Google API 服務代理 | Google雲 | 服務項目  a| 
+（預設）編輯器
+ a| 
+計算.網路用戶
+| 代表部署與 Google Cloud API 互動。允許控制台使用共用網路。 
+
+
+| Google Compute Engine 預設服務帳戶 | Google雲 | 服務項目  a| 
+（預設）編輯器
+ a| 
+計算.網路用戶
+| 代表部署部署 Google Cloud 執行個體和運算基礎架構。允許控制台使用共用網路。 
+|===
+筆記：
+
+. 如果您沒有將防火牆規則傳遞給部署並選擇讓控制台為您建立規則，則僅主機專案才需要 deploymentmanager.editor。如果未指定規則， NetApp控制台將在主機專案中建立包含 VPC0 防火牆規則的部署。
+. 只有當您未將防火牆規則傳遞給部署並選擇讓控制台為您建立它們時，才需要firewall.create 和firewall.delete。這些權限位於控制台帳戶 .yaml 檔案中。如果您使用共用 VPC 部署 HA 對，這些權限將用於為 VPC1、2 和 3 建立防火牆規則。對於所有其他部署，這些權限也將用於為 VPC0 建立規則。
+. 對於 Cloud Tiering，分層服務帳戶必須在服務帳戶上具有 serviceAccount.user 角色，而不僅僅是在專案層級。目前，如果您在專案層級指派 serviceAccount.user，則使用 getIAMPolicy 查詢服務帳號時不會顯示權限。
+
+
+====
+
+
+== 步驟 5：啟用 Google Cloud API
+
+在部署控制台代理程式和Cloud Volumes ONTAP之前，您必須啟用多個 Google Cloud API。
+
+.步
+. 在您的專案中啟用以下 Google Cloud API：
++
+** 雲端部署管理器 V2 API
+** 雲端日誌 API
+** 雲端資源管理器 API
+** 計算引擎 API
+** 身分識別和存取管理 (IAM) API
+** 雲端金鑰管理服務 (KMS) API
++
+（僅當您打算將NetApp Backup and Recovery 與客戶管理加密金鑰 (CMEK) 結合使用時才需要）
+
+
+
+
+
+https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud 文件：啟用 API"^]
+
+
+
+== 步驟 6：建立控制台代理
+
+直接從控制台建立控制台代理。
+
+.關於此任務
+建立控制台代理程式會使用預設配置在 Google Cloud 中部署虛擬機器執行個體。建立控制台代理程式後，請勿切換到具有較少 CPU 或較少 RAM 的較小 VM 執行個體。link:reference-connector-default-config.html["了解控制台代理的預設配置"] 。
+
+.開始之前
+您應該具有以下內容：
+
+* 建立控制台代理程式所需的 Google Cloud 權限以及控制台代理虛擬機器的服務帳號。
+* 滿足組網需求的VPC及子網路。
+* 如果控制台代理需要代理才能存取互聯網，則提供有關代理伺服器的詳細資訊。
+
+
+.步驟
+. 選擇“*管理 > 代理*”。
+. 在“概覽”頁面上，選擇“部署代理”>“Google Cloud”
+. 在*部署代理*頁面上，查看您需要的詳細資訊。您有兩個選擇：
++
+.. 選擇“*繼續*”以使用產品內指南準備部署。產品內指南中的每個步驟都包含文件此頁面上的資訊。
+.. 如果您已按照此頁面上的步驟做好準備，請選擇「*跳至部署*」。
+
+
+. 依照精靈中的步驟建立控制台代理：
++
+** 如果出現提示，請登入您的 Google 帳戶，該帳戶應該具有建立虛擬機器實例所需的權限。
++
+該表單由 Google 擁有並託管。您的憑證未提供給NetApp。
+
+** *詳細資訊*：輸入虛擬機器實例的名稱，指定標籤，選擇項目，然後選擇具有所需權限的服務帳戶（有關詳細信息，請參閱上面的部分）。
+** *位置*：指定實例的區域、區域、VPC 和子網路。
+** *網路*：選擇是否啟用公用 IP 位址並選擇性地指定代理程式配置。
+** *網路標籤*：如果使用透明代理，則向控制台代理實例新增網路標籤。網路標籤必須以小寫字母開頭，並且可以包含小寫字母、數字和連字號。標籤必須以小寫字母或數字結尾。例如，您可以使用標籤“console-agent-proxy”。
+** *防火牆策略*：選擇是否建立新的防火牆策略，或是否選擇允許所需入站和出站規則的現有防火牆策略。
++
+link:reference-ports-gcp.html["Google Cloud 中的防火牆規則"]
+
+
+
+. 檢查您的選擇以驗證您的設定是否正確。
++
+.. 預設情況下，*驗證代理程式設定*複選框處於選取狀態，以便控制台在您部署時驗證網路連線要求。如果控制台無法部署代理，它會提供一份報告來幫助您排除故障。如果部署成功，則不會提供報告。
+
+
++
+[]
+====
+如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端點"]用於代理升級，驗證失敗並出現錯誤。為了避免這種情況，請取消選取核取方塊以跳過驗證檢查。
+
+====
+. 選擇“*新增*”。
++
+實例大約需要 10 分鐘才能準備就緒；請停留在頁面上直到程序完成。
+
+
+
+.結果
+過程完成後，控制台代理即可使用。
+
+
+NOTE: 如果部署失敗，您可以從控制台下載報告和日誌來幫助您解決問題。link:task-troubleshoot-connector.html#troubleshoot-installation["了解如何解決安裝問題。"]
+
+如果您在建立控制台代理程式的相同 Google Cloud 帳戶中擁有 Google Cloud Storage 儲存桶，您將看到 Google Cloud Storage 系統自動出現在 *Systems* 頁面上。 https://docs.netapp.com/us-en/bluexp-google-cloud-storage/index.html["了解如何透過控制台管理 Google 雲端存儲"]

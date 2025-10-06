@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: task-partnerships-resource-access.html 
+keywords: role-based access, partnership access, partner resources, resource access, grant acces, provide partner access, partnership organization 
+summary: 您可以透過為合作夥伴使用者指派組織內資料夾和專案的特定角色來授予他們存取權限。 
+---
+= 為合作夥伴用戶提供資源訪問
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以透過為合作夥伴使用者指派組織內資料夾和專案的特定角色來授予他們存取權限。
+
+.必備角色
+合夥管理人。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
+
+合作夥伴組織必須先將成員加入合作關係中，然後您才能為他們指派組織中資源的角色。link:task-partnerships-assign-users.html["了解如何在合作關係中加入成員。"]
+
+
+
+== 了解合作夥伴使用者的角色
+
+您可以按照管理自己的角色的方式來管理合作夥伴組織成員的角色。然而，並非所有角色都適合合作夥伴使用者。特別是，您不能授予合作夥伴使用者允許軟體更新的角色。更新ONTAP軟體通常需要直接網路存取。
+
+您可以為合作夥伴使用者指派以下角色：
+
+* link:reference-iam-platform-roles.html#organization-admin-roles["組織管理員"]
+* link:reference-iam-platform-roles.html#organization-admin-roles["資料夾或專案管理員"]
+* link:reference-iam-platform-roles.html#federation-roles["聯盟管理員"]
+* link:reference-iam-platform-roles.html#federation-roles["聯邦檢視器"]
+* link:reference-iam-backup-rec-roles.html["備份和還原管理員"]
+* link:reference-iam-backup-rec-roles.html["備份檢視器"]
+* link:reference-iam-backup-rec-roles.html["復原管理員"]
+* link:reference-iam-backup-rec-roles.html["複製管理員"]
+* link:reference-iam-disaster-rec-roles.html["災難復原管理員"]
+* link:reference-iam-disaster-rec-roles.html["災難復原故障轉移管理員"]
+* link:reference-iam-disaster-rec-roles.html["災難復原應用程式管理員"]
+* link:reference-iam-disaster-rec-roles.html["災難復原檢視器"]
+* link:reference-iam-storage-roles.html["營運支援分析師"]
+* link:reference-iam-predefined-roles.html["分類檢視器"]
+
+
+link:reference-iam-predefined-roles.html["了解有關預定義角色的更多信息"]
+
+
+
+== 為合作夥伴使用者新增角色
+
+您可以透過向成員新增角色來提供對組織資源的存取權。指派角色時，您指定一個資源和一個角色。您可以為一個使用者指派多個角色。
+
+例如，如果您有兩個項目，並且希望同一個使用者同時擁有這兩個項目的備份和還原管理員角色，則您需要為每個項目的使用者提供該角色。同樣，如果您想為同一個專案的使用者提供兩個不同的角色，則需要分別分配每個角色。
+
+.步驟
+. 選擇*管理>身分和存取*。
+. 選擇*合作關係*。
+. 選擇*合作關係已啟動*選項卡。
+. 選擇操作選單image:icon-action.png["帶有三個垂直點的圖標"]在您想要查看的已建立的合作關係旁邊，選擇「查看詳細資訊」。
++
+*成員*清單顯示合作夥伴組織已新增至合作夥伴關係的成員。
+
+. 選擇操作選單image:icon-action.png["帶有三個垂直點的圖標"]在您想要指派角色的成員旁邊，選擇「新增角色」。
+. 若要新增角色，請完成對話方塊中的步驟：
++
+** *選擇組織、資料夾或專案*：選擇成員應具有權限的資源層次結構層級。
++
+如果您選擇組織或資料夾，則該成員將擁有該組織或資料夾內所有內容的權限。
+
+** *選擇類別*：選擇角色類別。link:reference-iam-predefined-roles.html["了解訪問角色"^] 。
+** 選擇*角色*：選擇一個角色，該角色為成員提供與您選擇的組織、資料夾或專案相關的資源的權限。
+** *新增角色*：如果您想提供組織內其他資料夾或項目的存取權限，請選擇*新增角色*，指定另一個資料夾或項目或角色類別，然後選擇一個角色類別和對應的角色。
+
+
+. 選擇*新增角色*。
+
+
+
+
+== 更改或刪除合作夥伴使用者的角色
+
+您可以變更或刪除指派給合作夥伴組織成員的角色。
+
+.步驟
+. 選擇*管理>身分和存取*。
+. 選擇*合作關係*。
+. 選擇*合作關係已啟動*選項卡。
+. 選擇操作選單image:icon-action.png["帶有三個垂直點的圖標"]在您想要查看的已建立的合作關係旁邊，選擇「查看詳細資訊」。
++
+*成員*清單顯示合作夥伴組織已新增至合作夥伴關係的成員。
+
+. 從「成員」頁面，導覽至表中的成員，選擇image:icon-action.png["三個並排的點組成的圖標"]然後選擇*查看詳細資訊*。
+. 在表格中，展開要變更成員指派角色的組織、資料夾或專案的對應行，然後在「*角色*」欄位中選擇「*檢視*」以查看指派給該成員的角色。
+. 您可以變更成員的現有角色或刪除角色。
++
+.. 若要變更成員的角色，請選擇要變更的角色旁邊的「*變更*」。您只能將角色變更為同一角色類別內的角色。例如，您可以從一個資料服務角色變更為另一個資料服務角色。確認更改。
+.. 若要取消指派成員的角色，請選擇image:icon-delete.png["類似垃圾桶的圖標"]取消為該成員指派對應的角色。系統會要求您確認刪除。
+
+
+

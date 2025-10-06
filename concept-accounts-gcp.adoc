@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: concept-accounts-gcp.html 
+keywords: cloud provider accounts, gcp, gcp accounts, google cloud platform, google accounts, google cloud platform accounts, permissions, project, google cloud project, credential, bluexp 
+summary: 了解NetApp控制台如何使用 Google Cloud 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您管理一個或多個 Google Cloud 專案的憑證。例如，您可能想要了解與控制台代理 VM 關聯的服務帳戶。 
+---
+= 了解 Google Cloud 專案和權限
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+了解NetApp控制台如何使用 Google Cloud 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您管理一個或多個 Google Cloud 專案的憑證。例如，您可能想要了解與控制台代理 VM 關聯的服務帳戶。
+
+
+
+== NetApp控制台的專案和權限
+
+您必須先部署控制台代理，然後才能使用控制台管理 Google Cloud 專案中的資源。代理程式不能在您的場所或不同的雲端提供者中運作。
+
+直接從控制台部署控制台代理程式之前，必須具備兩組權限：
+
+. 您需要使用具有從控制台啟動控制台代理 VM 執行個體權限的 Google 帳戶部署控制台代理程式。
+. 部署控制台代理程式時，系統會提示您選擇 https://cloud.google.com/iam/docs/service-accounts["服務帳戶"^]用於虛擬機器實例。控制台從服務帳戶取得權限來建立和管理Cloud Volumes ONTAP系統、使用NetApp備份和還原管理備份等。透過將自訂角色附加到服務帳戶來提供權限。
+
+
+下圖描述了上面第 1 項和第 2 項中所述的權限要求：
+
+image:diagram_permissions_gcp.png["概念圖描繪了 Google 和服務帳戶部署Cloud Volumes ONTAP 的權限要求。"]
+
+若要了解如何設定權限，請參閱以下頁面：
+
+* link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["設定標準模式的 Google Cloud 權限"]
+* link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["設定限制模式的權限"]
+
+
+
+
+== 憑證和市場訂閱
+
+當您在 Google Cloud 中部署控制台代理程式時，控制台會為控制台代理程式所在專案中的 Google Cloud 服務帳號建立一組預設憑證。這些憑證必須與 Google Cloud Marketplace 訂閱相關聯，以便您可以支付Cloud Volumes ONTAP和NetApp資料服務的費用。
+
+link:task-adding-gcp-accounts.html["了解如何關聯 Google Cloud Marketplace 訂閱"] 。
+
+請注意以下有關 Google Cloud 憑證和市場訂閱的事項：
+
+* 一個控制台代理只能關聯一組 Google Cloud 憑證
+* 您只能將一個 Google Cloud Marketplace 訂閱與憑證關聯
+* 您可以使用新的訂閱替換現有的市場訂閱
+
+
+
+
+== Cloud Volumes ONTAP項目
+
+Cloud Volumes ONTAP可以與控制台代理程式位於同一專案中，也可以位於不同的專案中。要在不同的專案中部署Cloud Volumes ONTAP ，您需要先將控制台代理服務帳戶和角色新增至該專案。
+
+* link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["了解如何設定服務帳戶"]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html["了解如何在 Google Cloud 中部署Cloud Volumes ONTAP並選擇項目"^]
+

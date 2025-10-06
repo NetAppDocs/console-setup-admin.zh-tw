@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: reference-networking-saas-console.html 
+keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
+summary: NetApp Console、 NetApp Console 代理程式和NetApp資料服務需要出站網路存取以及聯絡必要端點的能力。 
+---
+= 準備NetApp控制台的網路訪問
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console、 NetApp Console 代理程式和NetApp資料服務需要出站網路存取以及聯絡必要端點的能力。
+
+您需要為以下操作設定網路存取：
+
+* 以軟體即服務 (SaaS) 形式存取NetApp控制台的計算機
+* 部署在本機或雲端中安裝的控制台代理程式的網路位置。
+* 某些NetApp資料服務的附加端點，包括Cloud Volumes ONTAP。
+
+
+
+NOTE: NetApp減少了控制台和控制台代理程式所需的網路端點，增強了安全性並簡化了部署。重要的是，4.0.0 版本之前的所有部署都將繼續全面支援。雖然先前的端點仍然可供現有代理程式使用，但NetApp強烈建議在確認代理程式升級成功後將防火牆規則更新到目前端點。link:reference-networking-saas-console-previous.html["了解如何更新您的端點清單。"]
+
+
+
+== NetApp控制台聯繫的端點
+
+存取NetApp控制台的每台電腦都必須連接到下面列出的端點。
+
+系統在兩種情況下聯繫這些端點：
+
+* 從電腦存取 https://console.netapp.com["NetApp控制台"^]作為軟體即服務（SaaS）。
+* 從直接存取控制台代理主機的計算機，可以登入並進行設置，也可以從代理主機存取控制台。
+
+
+[cols="2*"]
+|===
+| 端點 | 目的 
+
+
+| \ https://mysupport.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息。 
+
+
+| \ https://signin.b2c.netapp.com | 更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp控制台。 
+
+
+| \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com | 在NetApp控制台中提供功能和服務。 
+
+
+ a| 
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+ a| 
+取得控制台代理升級的影像。
+
+* 當您部署新代理程式時，驗證檢查會測試與目前端點的連線。如果你使用link:link:reference-networking-saas-console-previous.html["先前的端點"]，驗證檢查失敗。為了避免此失敗，請跳過驗證檢查。
++
+儘管先前的端點仍然受支持，但NetApp建議盡快將防火牆規則更新至目前端點。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新終端節點列表"] 。
+
+* 當您更新到防火牆中的目前端點時，您現有的代理程式將繼續運作。
+
+
+|===
+
+
+== 為控制台代理準備網絡
+
+您可以在本機或雲端安裝控制台代理，它會聯絡端點以完成控制台發起的操作。
+
+控制台代理必須能夠存取與NetApp控制台相同的端點，以及根據安裝代理程式的位置而定的其他端點。
+
+在安裝控制台代理之前設定網路端點存取。
+
+* link:task-install-connector-aws-bluexp.html#networking-aws-agent["為控制台代理程式設定 AWS 網路訪問"]
+* link:task-install-connector-azure-bluexp.html#networking-azure-agent["為控制台代理程式設定 Azure 網路訪問"]
+* link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent["為控制台代理設定 Google Cloud 網路訪問"]
+* link:task-install-connector-on-prem.html#network-access-agent["為控制台代理程式設定本地網路訪問"]
+
+
+
+
+== 為Cloud Volumes ONTAP準備網絡
+
+一些NetApp資料服務以及Cloud Volumes ONTAP要求代理程式具有額外的出站網路存取權限。
+
+
+
+=== Cloud Volumes ONTAP的端點
+
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["AWS 中的Cloud Volumes ONTAP端點"]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html["Azure 中的Cloud Volumes ONTAP端點"]
+* link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Google Cloud 中Cloud Volumes ONTAP的端點"]
+
+
+https://docs.netapp.com/us-en/data-services-family/["請參閱對應的NetApp資料服務文件。"^]

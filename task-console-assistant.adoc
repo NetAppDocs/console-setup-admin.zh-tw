@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: task-console-assistant.html 
+keywords: bluexp,netapp console,console assistant,assistant,setup assistant,get started,quick start,first time user,first time setup,setup wizard 
+summary: '如果您是首次使用NetApp控制台，控制台助手將引導您完成初始設定程序。此助手可協助您新增NetApp支援網站 (NSS) 帳戶、新增控制台代理程式、新增叢集以及新增授權或訂閱，以便更輕鬆地開始管理資料。' 
+---
+= 開始使用NetApp控制台助手
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您是首次使用NetApp控制台並具有組織管理員角色的用戶，則可以使用控制台助手來指導您完成初始設定程序。此助手可協助您新增NetApp支援網站 (NSS) 帳戶、新增控制台代理程式、新增叢集以及新增授權或訂閱，以便更輕鬆地開始管理資料。
+
+
+
+== 存取控制台助手所需的角色
+
+控制台助理僅對具有組織管理員角色的使用者可用。
+
+
+
+== 控制台助手什麼時候出現？
+
+在完成強制性設定任務之前，控制台助理可在NetApp控制台主頁上使用。
+
+使用助手完成這些任務，其中一些是必需的：
+
+* 新增NetApp支援網站 (NSS) 帳戶。
+* 透過部署控制台代理程式（強制步驟）連接到您的儲存資產。
+* 透過新增或發現叢集來管理您的系統（強制步驟）。
+* 新增市場訂閱或 PAYGO 授權。
+* 開放資料服務連結。
+
+
+
+
+== 啟用控制台助手
+
+預設情況下， NetApp控制台會在主頁上為首次具有組織管理員角色的使用者顯示控制台助理。
+
+
+TIP: 只有當您或其他人完成必填項後，您才可以自行解散助手。完成必填項後，您組織中的所有使用者都會關閉助手，並且不會再次出現。
+
+
+
+== 使用控制台助手開始
+
+控制台助手將指導您完成以下任務來設定NetApp控制台環境：
+
+* 新增NetApp支援網站 (NSS) 帳戶。
+* 透過在本機或雲端部署控制台代理程式來連接到您的儲存資產。您可以手動部署它，也可以透過下載 OVA 來部署它。此步驟是必需的。
+* 透過新增或發現集群來管理您的系統。此步驟是必需的。
+* 新增市場訂閱或 PAYGO 授權。
+* 了解有關NetApp資料服務的更多資訊。
+

@@ -1,0 +1,13 @@
+= 
+:allow-uri-read: 
+
+
+將服務帳戶與控制台代理 VM 關聯。
+
+.步驟
+. 前往 Google Cloud 入口網站並將服務帳戶指派給控制台代理程式 VM 執行個體。
++
+https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Google Cloud 文件：變更執行個體的服務帳戶和存取範圍"^]
+
+. 如果您想管理其他專案中的資源，請透過將具有控制台代理角色的服務帳戶新增至該專案來授予存取權限。您需要對每個項目重複此步驟。
+

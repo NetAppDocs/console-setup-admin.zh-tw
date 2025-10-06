@@ -1,0 +1,33 @@
+= 連接器 3.9.48
+:allow-uri-read: 
+
+
+
+
+=== 連接器 3.9.48
+
+BlueXP Connector 的此版本包含一些小的安全性改進和錯誤修復。
+
+目前，3.9.48 版本適用於標準模式和限制模式。
+
+
+
+=== BlueXP身分與存取管理
+
+* 資源頁面現在顯示未發現的資源。未發現的資源是BlueXP知道但您尚未為其建立工作環境的儲存資源。例如，數位顧問中顯示的尚未具有工作環境的資源在資源頁面上顯示為未發現的資源。
+* Amazon FSx for NetApp ONTAP資源不會顯示在 IAM 資源頁面上，因為您無法將它們與 IAM 角色關聯。您可以在各自的畫布上或從工作負載中查看這些資源。
+
+
+
+
+=== 為其他BlueXP服務建立支援案例
+
+註冊BlueXP以獲得支援後，您可以直接從BlueXP基於 Web 的控制台建立支援案例。建立案例時，您需要選擇與該問題相關的服務。
+
+從這個版本開始，您現在可以建立支援案例並將其與其他BlueXP服務關聯：
+
+* BlueXP disaster recovery
+* BlueXP ransomware protection
+
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-get-help.html["了解有關創建支援案例的更多信息"] 。

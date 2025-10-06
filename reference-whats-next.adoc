@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: reference-whats-next.html 
+keywords: standard mode, what you can do 
+summary: 現在您已登入並以標準模式設定NetApp控制台，使用者可以建立和發現儲存系統並使用NetApp資料服務。 
+---
+= 接下來可以做什麼（標準模式）
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+現在您已登入並以標準模式設定NetApp控制台，使用者可以建立和發現儲存系統並使用NetApp資料服務。
+
+
+TIP: 如果您在 AWS、Microsoft Azure 或 Google Cloud 中安裝了控制台代理，則控制台會自動發現安裝代理的位置中的 Amazon S3 儲存桶、Azure Blob 儲存體或 Google Cloud Storage 儲存桶的資訊。這些系統會自動加入到*系統*頁面。
+
+如需協助，請訪問 https://docs.netapp.com/us-en/bluexp-family/["NetApp控制台文件主頁"^]查看NetApp控制台文件。
+
+.相關資訊
+link:concept-modes.html["NetApp控制台部署模式"]

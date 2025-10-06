@@ -1,0 +1,39 @@
+= 私人模式發布（3.9.46）
+:allow-uri-read: 
+
+
+
+
+=== 私人模式發布（3.9.46）
+
+新的私人模式版本現已可從 https://mysupport.netapp.com/site/downloads["NetApp支援站點"^]
+
+3.9.46 版本包括以下BlueXP元件和服務的更新。
+
+[cols="3*"]
+|===
+| 組件或服務 | 此版本中包含的版本 | 自上次私人模式發布以來的變化 
+
+
+| 連接器 | 3.9.46 | 輕微的安全性改進和錯誤修復 
+
+
+| 備份和復原 | 2024年11月22日 | 前往 https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recovery頁面中的新功能"^]並參考 2024 年 11 月版本中包含的更改 
+
+
+| 分類 | 2024 年 11 月 4 日（版本 1.37） | 前往 https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classification頁面中的新功能"^]並參考 1.32 至 1.37 版本中包含的更改 
+
+
+| Cloud Volumes ONTAP管理 | 2024年11月11日 | 前往 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP管理頁面的新增功能"^]並參考 2024 年 10 月和 2024 年 11 月版本中包含的更改 
+
+
+| 本地ONTAP叢集管理 | 2024年11月26日 | 前往 https://docs.netapp.com/us-en/bluexp-ontap-onprem/whats-new.html["本機ONTAP叢集管理頁面的新增功能"^]並參考 2024 年 11 月版本中包含的更改 
+|===
+雖然BlueXP digital wallet和BlueXP replication也包含在私人模式中，但與先前的私人模式版本相比沒有任何變化。
+
+有關私人模式的更多詳細信息，包括如何升級，請參閱以下內容：
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["了解私人模式"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["了解如何在私人模式下開始使用BlueXP"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["了解如何在使用私有模式時升級連接器"]
+

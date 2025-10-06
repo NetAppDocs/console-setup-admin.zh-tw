@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: task-quick-start-standard-mode.html 
+keywords: quick start, standard mode quick start 
+summary: 透過為控制台準備網路、註冊並建立帳戶以及（可選）建立控制台代理，以標準模式開始使用NetApp控制台。 
+---
+= 入門工作流程（標準模式）
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+透過為控制台準備網路、註冊並建立帳戶以及（可選）建立控制台代理，以標準模式開始使用NetApp控制台。
+
+在標準模式下，您可以存取由NetApp作為軟體即服務 (SaaS) 產品託管的基於 Web 的控制台。在開始之前，請確保您了解link:concept-modes.html["部署模式"]和link:concept-connectors.html["控制台代理"]。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] link:reference-networking-saas-console.html["準備使用NetApp控制台的網絡"]
+[role="quick-margin-para"]
+存取NetApp控制台的電腦應該與特定端點建立連線。如果您的網路限制出站訪問，您應該確保允許這些端點。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] link:task-sign-up-saas.html["註冊並建立組織"]
+[role="quick-margin-para"]
+前往 https://console.netapp.com["NetApp控制台"^]並註冊。您將可以選擇建立一個組織，但如果您的公司已經有現有組織，則應跳過該步驟。
+
+[role="quick-margin-para"]
+此時，您已登入並可開始管理儲存體和使用Digital Advisor、 Amazon FSx for ONTAP、 Azure NetApp Files等服務。link:concept-connectors.html["了解沒有控制台代理您可以做什麼"] 。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]建立控制台代理
+[role="quick-margin-para"]
+進階儲存管理功能和某些NetApp資料服務要求您安裝控制台代理程式。控制台代理程式使控制台能夠管理混合雲環境中的資源和流程。
+
+[role="quick-margin-para"]
+您可以在雲端或本機網路中建立控制台代理程式。
+
+[role="quick-margin-list"]
+* link:concept-connectors.html["詳細了解何時需要控制台代理以及它們如何運作"]
+* link:concept-install-options-aws.html["了解如何在 AWS 中建立控制台代理"]
+* link:concept-install-options-azure.html["了解如何在 Azure 中建立控制台代理"]
+* link:concept-install-options-google.html["了解如何在 Google Cloud 中建立控制台代理"]
+* link:task-install-connector-on-prem.html["了解如何在本機建立控制台代理"]
+
+
+[role="quick-margin-para"]
+若要使用NetApp智慧數據服務管理 Google Cloud 中的儲存和數據，請確保控制台代理程式在 Google Cloud 中運作。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"] link:task-subscribe-standard-mode.html["訂閱NetApp智慧服務（可選）"]
+[role="quick-margin-para"]
+透過您的雲端供應商註冊NetApp智慧服務，按小時付費（PAYGO）或透過年度合約付費。  NetApp智慧服務包括NetApp備份與復原、 Cloud Volumes ONTAP、 NetApp雲端分層、 NetApp勒索軟體復原和NetApp災難復原。  NetApp資料分類包含在您的訂閱中，無需額外付費。

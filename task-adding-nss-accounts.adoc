@@ -1,0 +1,160 @@
+---
+sidebar: sidebar 
+permalink: task-adding-nss-accounts.html 
+keywords: adding, creating, netapp support site account, nss, update account, update nss account, update nss credentials, delete nss account, remove nss account, change working environment, working environment nss, digital wallet, license, change system, system nss, licenses and subscriptions 
+summary: 將NetApp支援網站帳號與您的NetApp控制台組織關聯，以啟用Cloud Volumes ONTAP 的關鍵工作流程。這些 NSS 憑證與整個組織相關。 
+---
+= 管理與NetApp控制台關聯的 NSS 憑證
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+將NetApp支援網站帳號與您的控制台組織關聯，以啟用儲存管理的關鍵工作流程。這些 NSS 憑證與整個組織相關。
+
+控制台也支援每個使用者帳戶關聯一個 NSS 帳戶。link:task-manage-user-credentials.html["了解如何管理使用者級憑證"] 。
+
+
+
+== 概況
+
+需要將NetApp支援網站憑證與您的特定控制台帳戶序號關聯才能啟用下列任務：
+
+* 自帶授權 (BYOL) 時部署Cloud Volumes ONTAP
++
+需要提供您的 NSS 帳戶，以便控制台可以上傳您的許可證金鑰並啟用您購買的期限的訂閱。這包括期限續訂的自動更新。
+
+* 註冊即用即付Cloud Volumes ONTAP系統
++
+需要提供您的 NSS 帳戶才能啟動對您的系統的支援並獲得NetApp技術支援資源的存取權限。
+
+* 將Cloud Volumes ONTAP軟體升級至最新版本
+
+
+這些憑證與您的特定控制台帳戶序號相關聯。使用者可以從*支援 > NSS 管理*存取這些憑證。
+
+
+
+== 新增 NSS 帳戶
+
+您可以從控制台中的支援資訊板新增和管理用於控制台的NetApp支援網站帳戶。
+
+當您新增了 NSS 帳戶後，控制台會使用此資訊進行許可證下載、軟體升級驗證和未來支援註冊等。
+
+您可以將多個 NSS 帳戶與您的組織關聯；但是，您無法在同一個組織內擁有客戶帳戶和合作夥伴帳戶。
+
+
+NOTE: NetApp使用 Microsoft Entra ID 作為特定於支援和授權的身份驗證服務的身份提供者。
+
+.步驟
+. 在*管理 > 支援*中。
+. 選擇*NSS 管理*。
+. 選擇*新增 NSS 帳戶*。
+. 選擇“*繼續*”以重定向到 Microsoft 登入頁面。
+. 在登入頁面，提供您的NetApp支援網站註冊的電子郵件地址和密碼。
++
+成功登入後， NetApp將儲存 NSS 使用者名稱。
+
++
+這是系統產生的映射到您的電子郵件的 ID。在*NSS 管理*頁面上，您可以顯示來自image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-nss-menu.png["三個水平點的圖標"]菜單。
+
++
+** 如果您需要刷新登入憑證令牌，還有一個*更新憑證*選項image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-nss-menu.png["三個水平點的圖標"]菜單。
++
+使用此選項會提示您再次登入。請注意，這些帳戶的令牌將在 90 天後過期。我們將發布通知來提醒您此事。
+
+
+
+
+
+.下一步是什麼？
+使用者現在可以在建立新的Cloud Volumes ONTAP系統和註冊現有Cloud Volumes ONTAP系統時選擇帳戶。
+
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-aws.html["在 AWS 中啟動Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["在 Azure 中啟動Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html["在 Google Cloud 啟動Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-registering.html["註冊現收現付系統"^]
+
+
+
+
+== 更新 NSS 憑證
+
+出於安全原因，您必須每 90 天更新一次您的 NSS 憑證。如果您的 NSS 憑證已過期，您將在控制台通知中心收到通知。link:task-monitor-cm-operations.html#notification-center["了解通知中心"^] 。
+
+過期的憑證可能會影響以下情況，但不限於：
+
+* 許可證更新，這意味著您將無法利用新購買的容量。
+* 能夠提交和追蹤支援案例。
+
+
+此外，如果您想變更與您的組織關聯的 NSS 帳戶，您可以更新與您的組織關聯的 NSS 憑證。例如，如果與您的 NSS 帳戶關聯的人員已離開您的公司。
+
+.步驟
+. 在*管理 > 支援*中。
+. 選擇*NSS 管理*。
+. 對於要更新的 NSS 帳戶，選擇image:icon-action.png["三個並排的點組成的圖標"]然後選擇*更新憑證*。
+. 當出現提示時，選擇「*繼續*」以重新導向至 Microsoft 登入頁面。
++
+NetApp使用 Microsoft Entra ID 作為與支援和授權相關的身份驗證服務的身份提供者。
+
+. 在登入頁面，提供您的NetApp支援網站註冊的電子郵件地址和密碼。
+
+
+
+
+== 將系統附加到不同的 NSS 帳戶
+
+如果您的組織有多個NetApp支援網站帳戶，您可以變更與Cloud Volumes ONTAP系統關聯的帳戶。
+
+您必須先將帳戶與控制台關聯。
+
+.步驟
+. 在*管理 > 支援*中。
+. 選擇*NSS 管理*。
+. 完成以下步驟來變更 NSS 帳戶：
++
+.. 展開系統目前關聯的NetApp支援網站帳戶的行。
+.. 對於要變更關聯的系統，選擇image:icon-action.png["三個並排的點組成的圖標"]
+.. 選擇*變更為不同的 NSS 帳戶*。
++
+image:screenshot-nss-change-account.png["此螢幕截圖顯示了與NetApp支援網站帳戶關聯的系統的操作選單。"]
+
+.. 選擇帳戶，然後選擇*儲存*。
+
+
+
+
+
+
+== 顯示 NSS 帳號的電子郵件地址
+
+為了安全起見，預設不會顯示與 NSS 帳戶關聯的電子郵件地址。您可以查看 NSS 帳戶的電子郵件地址和關聯的使用者名稱。
+
+
+TIP: 當您前往 NSS 管理頁面時，控制台會為表中的每個帳戶產生一個令牌。此令牌包含有關關聯電子郵件地址的資訊。當您離開頁面時，令牌將被刪除。資訊永遠不會被緩存，這有助於保護您的隱私。
+
+.步驟
+. 在*管理 > 支援*中。
+. 選擇*NSS 管理*。
+. 對於要更新的 NSS 帳戶，選擇image:icon-action.png["三個並排的點組成的圖標"]然後選擇*顯示電子郵件地址*。您可以使用複製按鈕複製電子郵件地址。
+
+
+
+
+== 刪除 NSS 帳戶
+
+刪除不再想與控制台一起使用的所有 NSS 帳戶。
+
+您無法刪除目前與Cloud Volumes ONTAP系統關聯的帳戶。你首先需要<<attach-system-nss-account,將這些系統附加到不同的 NSS 帳戶>>。
+
+.步驟
+. 在*管理 > 支援*中。
+. 選擇*NSS 管理*。
+. 對於要刪除的 NSS 帳戶，選擇image:icon-action.png["三個並排的點組成的圖標"]然後選擇*刪除*。
+. 選擇*刪除*進行確認。
+

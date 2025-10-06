@@ -1,0 +1,49 @@
+= 連接器 3.9.53
+:allow-uri-read: 
+
+
+
+
+=== 連接器 3.9.53
+
+BlueXP Connector 的此版本包括安全性改進和錯誤修復。
+
+3.9.53 版本適用於標準模式和限制模式。
+
+
+
+=== 磁碟空間使用情況警報
+
+通知中心現在包含連接器上磁碟空間使用情況的警報。link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-maintain-connectors.html#monitor-disk-space["了解更多。"^]
+
+
+
+=== 審計改進
+
+時間軸現在包括用戶的登入和登出事件。您可以看到登入活動的時間，這有助於稽核和安全監控。具有組織管理員角色的 API 使用者可以透過新增以下資訊來查看登入使用者的電子郵件地址 `includeUserData=true``參數如下： `/audit/<account_id>?includeUserData=true` 。
+
+
+
+=== BlueXP中提供Keystone訂閱管理
+
+您可以從BlueXP管理您的NetApp Keystone訂閱。
+
+link:https://docs.netapp.com/us-en/keystone-staas/index.html["了解BlueXP中的Keystone訂閱管理。"^]
+
+
+
+=== BlueXP身分和存取管理（IAM）
+
+
+
+==== 多重身份驗證 (MFA)
+
+非聯合用戶可以為其BlueXP帳戶啟用 MFA 以提高安全性。管理員可以管理 MFA 設置，包括根據需要為使用者重置或停用 MFA。這僅在標準模式下支援。
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-user-settings.html#task-user-mfa["了解如何為自己設定多重身份驗證。"^] link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#manage-mfa["了解如何為使用者管理多重身份驗證。"^]
+
+
+
+=== 工作負載
+
+現在您可以從BlueXP中的憑證頁面查看和刪除Amazon FSx for NetApp ONTAP憑證。
