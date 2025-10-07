@@ -113,6 +113,13 @@ AWS 服務（amazonaws.com）：
 
 
  a| 
+\ https://support.netapp.com
+ a| 
+取得許可資訊並向NetApp支援發送AutoSupport訊息。
+
+
+
+ a| 
 \ https://signin.b2c.netapp.com
  a| 
 更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp控制台。
@@ -168,6 +175,13 @@ AWS 服務（amazonaws.com）：
 
  a| 
 \ https://mysupport.netapp.com
+ a| 
+取得許可資訊並向NetApp支援發送AutoSupport訊息。
+
+
+
+ a| 
+\ https://support.netapp.com
  a| 
 取得許可資訊並向NetApp支援發送AutoSupport訊息。
 
