@@ -968,7 +968,6 @@
   <block id="db971a19c27a52f19f1811c52c55dc2d" category="section-title">營運支援的新訪問角色</block>
   <block id="9a69bf13bbd4a86f23945e6b153f3913" category="paragraph">BlueXP現在支援營運支援分析師角色。此角色授予使用者監控儲存警報、查看BlueXP稽核時間軸以及輸入和追蹤NetApp支援案例的權限。</block>
   <block id="bc2fe31b1e2682a9a79513d792e9c721" category="doc">BlueXP現在是NetApp控制台</block>
-  <block id="995c8f79a8e07fbd8d519e45d03d6004" category="paragraph">NetApp控制台建立在增強和重組的BlueXP基礎之上，可在企業級內部和雲端環境中集中管理NetApp儲存和NetApp資料服務，提供即時洞察、更快的工作流程和簡化的管理，並且高度安全且合規。</block>
   <block id="0b0a6d9ce7462fc9a218e93ccbee32e7" category="section-title">導航選單和頁面</block>
   <block id="7ceea4a6639fef28fae4477857f229e5" category="paragraph">NetApp將大多數選單選項移至左側導覽窗格，並重新組織選單以便在NetApp控制台中更輕鬆地導覽。</block>
   <block id="4fa56c3d158c844dc75b2826ee4c98d0" category="section-title">畫布被系統頁面取代</block>
@@ -976,8 +975,6 @@
   <block id="ddd56b1479dbec10cfb6fc0a3a8afe57" category="inline-image-macro">系統頁面的螢幕截圖。</block>
   <block id="028a5defa734a1e5527100ece8ea2e66" category="paragraph"><block ref="028a5defa734a1e5527100ece8ea2e66" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e6ee78fd171283b1b449978ae0c73e06" category="section-title">擴充儲存選單</block>
-  <block id="52f2049d6a6b3b78ceb9820e5ce16a9d" category="paragraph">*儲存*選單還包括*警報*以查看ONTAP系統警報和*生命週期規劃*（以前稱為*經濟效率*）以識別未使用或未充分利用的資源。</block>
-  <block id="b75b41949ffca5829d6a1887ecf0ebd4" category="paragraph">NetApp也將Keystone移至 *儲存* 選單，您可以在其中管理您的NetApp Keystone訂閱並查看您的使用情況。</block>
   <block id="0bc00d5c9372c38aa1f6078843c22005" category="inline-image-macro">儲存選單的螢幕截圖。</block>
   <block id="0e279d1eb32921bbbc940faea63f4db6" category="section-title">管理選單</block>
   <block id="08386d27df9de73a030b8e5da1f8112b" category="paragraph">使用集中式*管理*選單來管理NetApp控制台、支援案例、許可證和訂閱（以前稱為數位錢包）。</block>
@@ -5534,4 +5531,7 @@
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">控制台網路存取（舊版）</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識和支持</block>
   <block id="f445c6d565697b0932cf841aca945e2a" category="paragraph"><block ref="f445c6d565697b0932cf841aca945e2a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="56ed5396ea479b4ed31e75f97a4377c7" category="paragraph">NetApp控制台建立在增強和重組的BlueXP基礎之上，可在企業級內部和雲端環境中集中管理NetApp儲存和NetApp資料服務，提供即時洞察、更快的工作流程以及高度安全且合規的簡化管理。</block>
+  <block id="e4374974e911590511a1add55932606e" category="paragraph">*儲存*選單包括*警報*以查看ONTAP系統警報和*生命週期規劃*（以前稱為*經濟效率*）以識別未使用或未充分利用的資源。</block>
+  <block id="b3289075ae80ce2a2ae0b68cf8c95606" category="paragraph">NetApp已將Keystone移至 *儲存* 選單，您可以在其中管理您的NetApp Keystone訂閱並查看您的使用情況。</block>
 </blocks>
