@@ -1920,19 +1920,10 @@
   <block id="450e38c4634dc91a873ffc3d80e6a3ec" category="cell">查看、下載和設定警報</block>
   <block id="3e2fc11404dc494712475e235eb76917" category="summary">您可以為使用者指派以下角色，以便他們存取控制台內的NetApp Backup and Recovery。備份和復原角色可讓您靈活地為使用者指派特定於他們需要在組織內完成的任務的角色。如何分配角色取決於您自己的業務和儲存管理實踐。</block>
   <block id="d8242f460ba07545cc4fc280abc24dfd" category="doc">NetApp控制台中的NetApp備份與復原角色</block>
-  <block id="2bf6117e2ee54f56ca7ce858b10dc2b9" category="paragraph">備份和還原使用以下角色：</block>
-  <block id="a6d8fe8356ac0ec5fbc02236d080b7c3" category="list-text">*備份和還原超級管理員*：執行任何操作。</block>
-  <block id="217ea8f7217af07c52b9a7d742c8eb10" category="list-text">*備份和還原管理*：執行本機快照備份、複製到二級儲存以及備份到物件儲存。</block>
-  <block id="68d9781aa8e3d293b7460f941a4d2427" category="list-text">*備份和還原復原管理員*：還原工作負載。</block>
-  <block id="e6f627381e5e874305379fa56ce10602" category="list-text">*備份和還原克隆管理員*：克隆應用程式和資料。</block>
-  <block id="7054eb47523dbb7ef0e251ad39736868" category="list-text">*備份和還原檢視器*：查看備份和還原資訊。</block>
   <block id="05d21d5a33096194ae80a609c95e316b" category="paragraph">下表列出了每個角色可以執行的操作。</block>
   <block id="4420e7353184ac575b539cdce1b991db" category="cell">特徵和動作</block>
-  <block id="450fdc0a439b3bd7fea7fb59d6181bf1" category="cell">備份和恢復超級管理員</block>
-  <block id="c2112b64567956e9064b970d35ad6be4" category="cell">備份管理員</block>
   <block id="29ff866c1c97d8c216bf004c4f447a77" category="cell">復原管理員</block>
   <block id="0ebca6a2628eb3838eff9087ecfc2909" category="cell">複製管理員</block>
-  <block id="fb15c53f22336982a182b84aeb2f42eb" category="cell">檢視器</block>
   <block id="c4281079caf3fb466c3b52cff7303e52" category="cell">新增、編輯或刪除主機</block>
   <block id="9d06472988c53bfc768bc7b6a788b697" category="cell">安裝插件</block>
   <block id="af964a69034eafc184793164ce7342fd" category="cell">新增憑證（主機、實例、vCenter）</block>
@@ -1963,8 +1954,6 @@
   <block id="3b83af25a71030e8f59b11202c70c1a4" category="cell">配置日誌目錄</block>
   <block id="cb691e71dd5ce44d41cbabd83672681c" category="cell">關聯或刪除實例憑證</block>
   <block id="ae165b1dbb47749bb695e728656b4e2e" category="cell">*桶*：</block>
-  <block id="7c8ee75a52c1bec82da08af591456f1f" category="cell">查看儲存桶</block>
-  <block id="7683aea870a1ae46a22cb6adfd895665" category="cell">建立、編輯或刪除儲存桶</block>
   <block id="38b9e3522d3a7fe6b61f60b3419f6cd2" category="summary">您可以為使用者指派以下角色，以便他們存取控制台內的NetApp災難復原。災難復原角色可讓您靈活地為使用者指派特定於他們需要在組織內完成的任務的角色。如何分配角色取決於您自己的業務和儲存管理實踐。</block>
   <block id="26c3a94bfb05fb2052bc1a9cc30a1cf4" category="doc">NetApp控制台中的NetApp災難復原角色</block>
   <block id="881a358307b4d99de00f95aa58fb5a43" category="paragraph">災難復原使用以下角色：</block>
@@ -5535,4 +5524,48 @@
   <block id="b3289075ae80ce2a2ae0b68cf8c95606" category="paragraph">NetApp已將Keystone移至 *儲存* 選單，您可以在其中管理您的NetApp Keystone訂閱並查看您的使用情況。</block>
   <block id="e54f451349319459dd1f9900aebfc23e" category="paragraph">| \ https://mysupport.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息。| \ https://support.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息。| \ https://signin.b2c.netapp.com | 更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp主機。</block>
   <block id="8963387394e2ee3e2a5a9ba160566a58" category="cell">\ https://support.netapp.com</block>
+  <block id="451228b79a76a54f6c3a4a5d5af0ec52" category="paragraph">該服務使用特定於NetApp Backup and Recovery 的以下角色。</block>
+  <block id="8522e2f14782589c21835c86cf65bebb" category="list-text">*備份和還原超級管理員*：在NetApp備份和復原中執行任何操作。</block>
+  <block id="532354fdc6bd2980f132e1d07fa7aa5f" category="list-text">*備份和還原備份管理員*：在NetApp備份和還原中執行備份到本機快照、複製到二級儲存以及備份到物件儲存作業。</block>
+  <block id="c0a57abfd326897381a3ffd211e0034d" category="list-text">*備份和還原復原管理員*：使用NetApp備份和還原復原工作負載。</block>
+  <block id="24e1202dabefe42a93a17e758a826775" category="list-text">*備份和還原克隆管理*：使用NetApp備份和還原複製應用程式和資料。</block>
+  <block id="6e4948d9a0a66aef737906595c7e8fbc" category="list-text">*備份和還原檢視器*：查看NetApp備份和還原中的信息，但不執行任何操作。</block>
+  <block id="bf786b3a3016622928354c48b7225397" category="inline-link">控制台設定和管理文檔</block>
+  <block id="94190d0421ea1693bd95963ed8c1d2c4" category="paragraph">有關所有NetApp控制台訪問角色的詳細信息，請參閱<block ref="4b225699c724cb72a1654871509070eb" category="inline-link-rx"></block>。</block>
+  <block id="eb6687834d18ce256e1ea40605b27891" category="section-title">用於常見操作的角色</block>
+  <block id="2586127e46d382f00f4e8b5c171b6bbe" category="paragraph">下表列出了每個NetApp備份和復原角色可以針對所有工作負載執行的操作。</block>
+  <block id="69fc5d74b4cae1d8411c6e1ef7fef337" category="cell">備份和還原備份管理員</block>
+  <block id="d83d0c54783ef948cc85a1a9d70fff8d" category="cell">查看儲存桶</block>
+  <block id="eba0ec490b5e802d37e2d60acf6b56f0" category="cell">建立、編輯或刪除儲存桶</block>
+  <block id="18979d93e93cf64a9fa47fc23204a541" category="section-title">用於特定於工作負載的操作的角色</block>
+  <block id="32b5042db5e222af3225271ac6ac4fe8" category="paragraph">下表列出了每個NetApp備份和復原角色可以針對特定工作負載執行的動作。</block>
+  <block id="49396edcdc3d3d7e4bec42adc037a5ef" category="section-title">Kubernetes 工作負載</block>
+  <block id="67a379e59db13aede20ab1c1e58aecb1" category="paragraph">表格顯示了每個NetApp備份和復原角色可以針對特定於 Kubernetes 工作負載的作業執行的操作。</block>
+  <block id="30ecfda5fd2ae815c55d44b805282893" category="cell">查看叢集、命名空間、儲存類別和 API 資源</block>
+  <block id="43cea4fc6153b6f6be274aa7a58165f6" category="cell">新增的 Kubernetes 集群</block>
+  <block id="c7ff7e2dc0038a703b1d65cba9471e66" category="cell">更新叢集配置</block>
+  <block id="0c2bcbbb2f7543049b38e6c7cf0d3632" category="cell">從管理中刪除集群</block>
+  <block id="3abbb617c1b9641e06a22a49bf4d6afe" category="cell">查看應用程式</block>
+  <block id="013a41b4b08c37dcea17e4fa48d255f5" category="cell">建立和定義新的應用程式</block>
+  <block id="90bf343c3b8602cca1dd5d4e496770be" category="cell">更新應用程式配置</block>
+  <block id="9d45b84288e31f73a0250b34d7436ab1" category="cell">從管理中刪除應用程式</block>
+  <block id="80fd001fca7a1e03b48f09198234b180" category="cell">查看受保護的資源和備份狀態</block>
+  <block id="3140b52cbc33f1fa198b21990d606b85" category="cell">建立備份並使用策略保護應用程式</block>
+  <block id="2daccc0f5ea3aea52b03033934a88e4c" category="cell">取消保護應用程式並刪除備份</block>
+  <block id="1e13e123ade8f8dd5aca982f66065814" category="cell">查看恢復點和資源檢視器結果</block>
+  <block id="f4b1a090912137cc4b84e23244744002" category="cell">從復原點還原應用程式</block>
+  <block id="015a5696342f2c49d35e3d76276d8453" category="cell">查看 Kubernetes 備份策略</block>
+  <block id="cd8df251bf029cee276df2228924ec6b" category="cell">建立 Kubernetes 備份策略</block>
+  <block id="5f295d6efeffef266deb291f5b629b24" category="cell">更新備份策略</block>
+  <block id="9ce50604972e3de67c501b4616256878" category="cell">刪除備份策略</block>
+  <block id="06c1eacf9e674add6b6b569a9430fe0f" category="cell">查看執行鉤子和鉤子來源</block>
+  <block id="4f5e12a49954715db6c9052454048e23" category="cell">建立執行鉤子和鉤子來源</block>
+  <block id="e3539bf0fa952b4314159ea521fa2006" category="cell">更新執行鉤子和鉤子來源</block>
+  <block id="aed1daad2d2c2448ce77cb7b4c411815" category="cell">刪除執行鉤子和鉤子來源</block>
+  <block id="ba447c8899720e860548bc226805ea39" category="cell">查看執行鉤子模板</block>
+  <block id="b80b8d6b54aef557dce562267154abad" category="cell">建立執行鉤子模板</block>
+  <block id="63b66bb7113f652709a0d1553dbb839f" category="cell">更新執行鉤子模板</block>
+  <block id="1dcb606a3a707c345cb54b5c3113d621" category="cell">刪除執行鉤子模板</block>
+  <block id="386bacb41d61c7b8e46cd3e9198743cd" category="cell">查看工作負載摘要和分析儀表板</block>
+  <block id="8bbffbb59e50612d870c42d2db4880dc" category="cell">查看StorageGRID儲存桶和儲存目標</block>
 </blocks>
