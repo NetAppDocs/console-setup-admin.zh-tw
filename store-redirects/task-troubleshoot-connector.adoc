@@ -1,6 +1,6 @@
 ---
 permalink: task-troubleshoot-connector.html 
-redirect: task-troubleshoot-agent.html 
+redirect: console-setup-admin/task-troubleshoot-agent.html 
 ---
 = 
 :allow-uri-read: 
