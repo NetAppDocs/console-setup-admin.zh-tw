@@ -32,7 +32,7 @@ sidebar:
         url: "/concept-modes.html"
     - title: 開始使用NetApp助手
       entries:
-      - title: 使用NetApp助手
+      - title: 使用NetApp控制台助手
         url: "/task-console-assistant.html"
     - title: 開始使用標準模式
       entries:
@@ -207,7 +207,7 @@ sidebar:
       - title: 使用多個控制台代理
         url: "/task-manage-multiple-connectors.html"
       - title: 控制台代理故障排除
-        url: "/task-troubleshoot-connector.html"
+        url: "/task-troubleshoot-agent.html"
       - title: 解除安裝並刪除控制台代理
         url: "/task-uninstall-connector.html"
       - title: 預設配置

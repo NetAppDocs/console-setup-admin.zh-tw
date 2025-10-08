@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-troubleshoot-connector.html 
+permalink: task-troubleshoot-agent.html 
 keywords: troubleshoot, system id, system ID, autosupport, asup, troubleshoot connector, download failure, cloud volumes ontap download failure, agent 
 summary: 要解決控制台代理程式的問題，您可以與NetApp支援人員合作，他們可能會詢問您的系統 ID、代理程式版本或最新的AutoSupport訊息。您也可以查看NetApp知識庫來自行解決問題。 
 ---

@@ -90,6 +90,13 @@ VNet 與子網路:: 建立控制台代理程式時，您需要指定它所在的
 
 
  a| 
+\https:\\support.netapp.com
+ a| 
+取得許可資訊並向NetApp支援發送AutoSupport訊息以及接收Cloud Volumes ONTAP的軟體更新。
+
+
+
+ a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
 在NetApp控制台中提供功能和服務。
@@ -145,7 +152,7 @@ link:reference-networking-saas-console.html["查看從NetApp控制台聯繫的�
 --
 
 
-啟用 NTP:: 如果您打算使用NetApp資料分類掃描公司資料來源，則應在控制台代理程式和NetApp資料分類系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
+啟用 NTP:: 如果您打算使用NetApp資料分類掃描公司資料來源，則應在控制台代理程式和NetApp資料分類系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
 +
 --
 您需要在建立控制台代理程式後實現此網路要求。
@@ -514,6 +521,6 @@ link:reference-ports-azure.html["查看 Azure 的安全性群組規則"] 。
 過程完成後，即可從控制台使用控制台代理。
 
 
-NOTE: 如果部署失敗，您可以從控制台下載報告和日誌來幫助您解決問題。link:task-troubleshoot-connector.html#troubleshoot-installation["了解如何解決安裝問題。"]
+NOTE: 如果部署失敗，您可以從控制台下載報告和日誌來幫助您解決問題。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解決安裝問題。"]
 
 如果您在建立控制台代理程式的相同 Azure 訂閱中擁有 Azure Blob 存儲，您將看到 Azure Blob 儲存系統自動出現在「系統」頁面上。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["了解如何透過NetApp控制台管理 Azure Blob 存儲"^]

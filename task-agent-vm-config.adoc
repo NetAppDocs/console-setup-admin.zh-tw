@@ -148,7 +148,7 @@ summary: 部署控制台代理程式後，您可以對現有的 VCenter 或 ESXi
 . 選擇*啟動 Web 控制台*。
 . 使用建立 VM 實例時指定的使用者名稱和密碼登入 VM 實例。使用者名稱是 `maint`密碼是您在建立 VM 實例時指定的密碼。
 . 進入 `3`查看支援和診斷選單。
-. 進入 `1`存取診斷工具並按照螢幕上的指示進行操作。 + 例如，您可以驗證所有代理服務是否正在執行。link:task-troubleshoot-connector.html#check-agent-status["檢查控制台代理狀態"^] 。
+. 進入 `1`存取診斷工具並按照螢幕上的指示進行操作。+ 例如，您可以驗證所有代理服務是否正在執行。link:task-troubleshoot-agent.html#check-agent-status["檢查控制台代理狀態"^] 。
 
 
 

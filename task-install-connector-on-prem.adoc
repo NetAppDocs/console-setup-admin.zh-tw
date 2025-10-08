@@ -201,6 +201,13 @@ AWS 服務（amazonaws.com）：
 
 
  a| 
+\https:\\support.netapp.com
+ a| 
+取得許可資訊並向NetApp支援發送AutoSupport訊息以及接收Cloud Volumes ONTAP的軟體更新。
+
+
+
+ a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
 在NetApp控制台中提供功能和服務。
@@ -269,6 +276,13 @@ AWS 服務（amazonaws.com）：
 
 
  a| 
+\https:\\support.netapp.com
+ a| 
+取得許可資訊並向NetApp支援發送AutoSupport訊息以及接收Cloud Volumes ONTAP的軟體更新。
+
+
+
+ a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
 在NetApp控制台中提供功能和服務。
@@ -315,7 +329,7 @@ AWS 服務（amazonaws.com）：
 --
 
 
-啟用 NTP:: 如果您打算使用NetApp資料分類掃描公司資料來源，則應在控制台代理程式和NetApp資料分類系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
+啟用 NTP:: 如果您打算使用NetApp資料分類掃描公司資料來源，則應在控制台代理程式和NetApp資料分類系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
 
 
 
@@ -727,7 +741,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 +
 其中 <version> 是您下載的控制台代理的版本。
 
-. 如果在政府雲端環境中安裝，請停用設定檢查。link:task-troubleshoot-connector.html#disable-config-check["了解如何停用手動安裝的設定檢查。"]
+. 如果在政府雲端環境中安裝，請停用設定檢查。link:task-troubleshoot-agent.html#disable-config-check["了解如何停用手動安裝的設定檢查。"]
 . 運行安裝腳本。
 +
 [source, cli]
