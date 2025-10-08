@@ -16,7 +16,7 @@ summary: 透過準備環境和部署控制台代理，開始以受限模式使�
 [role="lead"]
 透過準備環境和部署控制台代理，開始以受限模式使用NetApp控制台。
 
-受限模式通常由州和地方政府以及受監管的公司使用，包括在 AWS GovCloud 和 Azure Government 區域中的部署。在開始之前，請確保您了解link:concept-connectors.html["控制台代理"]和link:concept-modes.html["部署模式"]。
+受限模式通常由州和地方政府以及受監管的公司使用，包括在 AWS GovCloud 和 Azure Government 區域中的部署。在開始之前，請確保您了解link:concept-agents.html["控制台代理"]和link:concept-modes.html["部署模式"]。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] link:task-prepare-restricted-mode.html["準備部署"]
 [role="quick-margin-list"]

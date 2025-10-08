@@ -24,7 +24,7 @@ NetApp控制台需要權限才能在 Google Cloud 中執行操作。這些權限
 
 您需要將此自訂角色套用到附加到控制台代理程式 VM 的服務帳戶。
 
-* link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["設定標準模式的 Google Cloud 權限"]
+* link:task-install-agent-google-console-gcloud.html#agent-permissions-google["設定標準模式的 Google Cloud 權限"]
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["設定限制模式的權限"]
 
 

@@ -276,7 +276,7 @@ image:screenshot_azure_client_secret.gif["Azure 入口網站的螢幕截圖，�
 如果您剛剛在雲端提供者中建立了這些憑證，則可能需要幾分鐘才能使用它們。等待幾分鐘，然後將憑證新增至控制台。
 
 .開始之前
-您需要先建立控制台代理，然後才能變更控制台設定。link:concept-connectors.html#connector-installation["了解如何建立控制台代理"] 。
+您需要先建立控制台代理，然後才能變更控制台設定。link:concept-agents.html#agent-installation["了解如何建立控制台代理"] 。
 
 .步驟
 . 選擇“*管理 > 憑證*”。
@@ -323,7 +323,7 @@ image:screenshot_accounts_switch_azure.gif["螢幕截圖顯示在「詳細資料
 
 
 .步驟
-. 選擇“*管理>*憑證*”。
+. 選擇“*管理 > 憑證*”。
 . 選擇*組織憑證*。
 . 選擇與控制台代理程式關聯的一組憑證的操作選單，然後選擇*配置訂閱*。
 +

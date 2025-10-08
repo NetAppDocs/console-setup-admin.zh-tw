@@ -20,7 +20,7 @@ summary: 了解NetApp控制台如何使用 AWS 憑證代表您執行操作以及
 
 == 初始 AWS 憑證
 
-從控制台部署控制台代理程式時，您需要提供 IAM 角色的 ARN 或 IAM 使用者的存取金鑰。身份驗證方法必須具有在 AWS 中部署控制台的權限。所需的權限列在連結中：task-install-connector-aws-the Console.html#console-permissions-aws[AWS 的代理部署策略]。
+從控制台部署控制台代理程式時，您需要提供 IAM 角色的 ARN 或 IAM 使用者的存取金鑰。身份驗證方法必須具有在 AWS 中部署控制台的權限。所需的權限列在連結中：task-install-agent-aws-the Console.html#console-permissions-aws[AWS 的代理部署策略]。
 
 當控制台在 AWS 中啟動控制台代理執行個體時，它會為該執行個體建立一個 IAM 角色和一個執行個體設定檔。它還附加了一項策略，為控制台代理提供管理該 AWS 帳戶內的資源和流程的權限。link:reference-permissions-aws.html["查看控制台如何使用權限"] 。
 
@@ -141,8 +141,8 @@ link:task-adding-aws-accounts.html#subscribe["了解如何關聯 AWS 訂閱"] �
 
 * 標準模式
 +
-** link:task-install-connector-aws-marketplace.html#step-2-set-up-aws-permissions["設定 AWS Marketplace 部署的權限"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["設定本地部署的權限"]
+** link:task-install-agent-aws-marketplace.html#step-2-set-up-aws-permissions["設定 AWS Marketplace 部署的權限"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["設定本地部署的權限"]
 
 
 * 限制模式

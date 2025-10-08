@@ -97,9 +97,9 @@ image:diagram-standard-mode.png["概念圖顯示了提供基於 Web 的控制台
 出站溝通:: 需要從控制台代理到控制台 SaaS 層、到雲端提供者的公開可用資源以及到日常操作的其他基本元件的連接。
 +
 --
-* link:task-install-connector-aws-bluexp.html#networking-aws-agent["代理在 AWS 中聯繫的終端節點"]
-* link:task-install-connector-azure-bluexp.html#networking-azure-agent["代理程式在 Azure 中聯繫的終點"]
-* link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent["代理在 Google Cloud 中聯繫的端點"]
+* link:task-install-agent-aws-console.html#networking-aws-agent["代理在 AWS 中聯繫的終端節點"]
+* link:task-install-agent-azure-console.html#networking-azure-agent["代理程式在 Azure 中聯繫的終點"]
+* link:task-install-agent-google-console-gcloud.html#networking-gcp-agent["代理在 Google Cloud 中聯繫的端點"]
 
 
 --

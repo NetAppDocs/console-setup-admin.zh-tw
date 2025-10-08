@@ -31,7 +31,7 @@ NetApp控制台需要控制台代理程式和各服務的 AWS 權限。
 | 目標 | 描述 | 關聯 
 
 
-| 從控制台部署控制台代理 | 從控制台建立控制台代理程式的使用者需要特定權限才能在 AWS 中部署執行個體。 | link:task-install-connector-aws-bluexp.html#aws-permissions-agent["設定 AWS 權限"] 
+| 從控制台部署控制台代理 | 從控制台建立控制台代理程式的使用者需要特定權限才能在 AWS 中部署執行個體。 | link:task-install-agent-aws-console.html#aws-permissions-agent["設定 AWS 權限"] 
 
 
 | 為控制台代理提供權限 | 當控制台部署控制台代理程式時，它會將一個原則附加到實例，該實例提供管理 AWS 帳戶中的資源和流程所需的權限。如果您從 AWS Marketplace 部署控制台代理、手動安裝控制台代理，或者link:task-adding-aws-accounts.html#add-credentials-agent-aws["為控制台代理程式新增更多 AWS 憑證"]。您還需要確保策略是最新的，因為後續版本中會新增新的權限。 | link:reference-permissions-aws.html["控制台代理的 AWS 權限"] 
@@ -112,7 +112,7 @@ NetApp控制台需要控制台代理程式和各服務的 AWS 權限。
 | 目標 | 描述 | 關聯 
 
 
-| 從控制台部署控制台代理 | 從控制台部署控制台代理程式時，您需要使用具有在 Azure 中部署控制台代理程式 VM 的權限的 Azure 帳戶或服務主體。 | link:task-install-connector-azure-bluexp.html#connector-custom-role["設定 Azure 權限"] 
+| 從控制台部署控制台代理 | 從控制台部署控制台代理程式時，您需要使用具有在 Azure 中部署控制台代理程式 VM 的權限的 Azure 帳戶或服務主體。 | link:task-install-agent-azure-console.html#agent-custom-role["設定 Azure 權限"] 
 
 
 | 為控制台代理提供權限  a| 
@@ -174,10 +174,10 @@ link:reference-permissions-azure.html["控制台代理程式的 Azure 權限"]
 | 目標 | 描述 | 關聯 
 
 
-| 從控制台部署控制台代理 | 從控制台部署控制台代理程式的 Google Cloud 使用者需要特定權限才能在 Google Cloud 中部署控制台代理程式。 | link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google["設定權限以建立控制台代理"] 
+| 從控制台部署控制台代理 | 從控制台部署控制台代理程式的 Google Cloud 使用者需要特定權限才能在 Google Cloud 中部署控制台代理程式。 | link:task-install-agent-google-console-gcloud.html#console-permissions-google["設定權限以建立控制台代理"] 
 
 
-| 為控制台代理提供權限 | 控制台代理 VM 實例的服務帳戶必須具有日常操作的特定權限。您需要在部署期間將服務帳戶與控制台代理程式關聯。您還需要確保策略是最新的，因為後續版本中會新增新的權限。 | link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google["設定控制台代理的權限"] 
+| 為控制台代理提供權限 | 控制台代理 VM 實例的服務帳戶必須具有日常操作的特定權限。您需要在部署期間將服務帳戶與控制台代理程式關聯。您還需要確保策略是最新的，因為後續版本中會新增新的權限。 | link:task-install-agent-google-console-gcloud.html#console-permissions-google["設定控制台代理的權限"] 
 |===
 
 

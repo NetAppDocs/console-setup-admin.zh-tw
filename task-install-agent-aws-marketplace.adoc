@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-aws-marketplace.html 
+permalink: task-install-agent-aws-marketplace.html 
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, aws marketplace, manual install, create connector 
 summary: 若要從 AWS Marketplace 建立控制台代理，您需要設定網路、準備 AWS 權限、檢視執行個體要求，然後建立控制台代理。 
 ---
@@ -17,7 +17,7 @@ summary: 若要從 AWS Marketplace 建立控制台代理，您需要設定網路
 您可以直接從 AWS Marketplace 在 AWS 中建立控制台代理程式。若要從 AWS Marketplace 建立控制台代理，您需要設定網路、準備 AWS 權限、檢視執行個體要求，然後建立控制台代理。
 
 .開始之前
-* 你應該有一個link:concept-connectors.html["了解控制台代理"]。
+* 你應該有一個link:concept-agents.html["了解控制台代理"]。
 * 你應該回顧一下link:reference-limitations.html["控制台代理限制"]。
 
 
@@ -194,7 +194,7 @@ AWS EC2 執行個體類型:: 滿足上述 CPU 和 RAM 要求的執行個體類�
 直接從 AWS Marketplace 建立控制台代理。
 
 .關於此任務
-從 AWS Marketplace 建立控制台代理程式會使用預設配置在 AWS 中部署 EC2 執行個體。link:reference-connector-default-config.html["了解控制台代理的預設配置"] 。
+從 AWS Marketplace 建立控制台代理程式會使用預設配置在 AWS 中部署 EC2 執行個體。link:reference-agent-default-config.html["了解控制台代理的預設配置"] 。
 
 .開始之前
 您應該具有以下內容：

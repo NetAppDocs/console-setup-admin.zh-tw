@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-uninstall-connector.html 
+permalink: task-uninstall-agent.html 
 keywords: uninstall, remove connector, uninstall connector, uninstall agent, remove agent 
 summary: 卸載控制台代理程式以解決問題或將其從主機中永久刪除。您需要使用的步驟取決於您使用的部署模式。從環境中刪除控制台代理程式後，您可以將其從控制台中刪除。 
 ---

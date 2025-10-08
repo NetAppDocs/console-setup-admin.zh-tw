@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-iam-associate-connectors.html 
+permalink: task-iam-associate-agents.html 
 keywords: agent, associate agent, folder, project, associate folder with connector, associate project with connector, associate connector with project, associate connector with resource, connector, associate connector, 
 summary: 如果您組織的成員需要在另一個專案中使用控制台代理，則需要將該控制台代理與對應的專案關聯。 
 ---
@@ -44,7 +44,7 @@ summary: 如果您組織的成員需要在另一個專案中使用控制台代�
 link:task-iam-manage-resources.html#associate-resource["了解如何將資源與資料夾和項目關聯"] 。
 
 .相關資訊
-* link:concept-connectors.html["了解NetApp控制台代理"]
+* link:concept-agents.html["了解NetApp控制台代理"]
 * link:concept-identity-and-access-management.html["了解NetApp控制台身分和存取管理"]
 * link:task-iam-get-started.html["開始使用身分和存取權限"]
 * https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解身分和存取管理的 API"^]

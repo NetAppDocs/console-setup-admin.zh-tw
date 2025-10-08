@@ -67,7 +67,7 @@ NOTE: 注意：資源頁面不包括Amazon FSx for NetApp ONTAP資源，因為�
 .完成後
 如果您使用控制台代理程式發現資源，請將控制台代理程式與專案關聯以授予存取權限。否則，沒有「組織管理員」角色的成員將無法存取控制台代理程式及其相關資源。
 
-link:task-iam-associate-connectors.html["了解如何將控制台代理與資料夾或項目關聯"] 。
+link:task-iam-associate-agents.html["了解如何將控制台代理與資料夾或項目關聯"] 。
 
 
 

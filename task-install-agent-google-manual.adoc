@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-aws-manual.html 
-keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, aws marketplace, manual install, create connector 
-summary: 您可以在 AWS 中執行的 Linux 主機上手動安裝控制台代理程式。要在您自己的 Linux 主機上手動安裝控制台代理，您需要查看主機要求、設定網路、準備 AWS 權限、安裝控制台代理，然後提供您準備好的權限。 
+permalink: task-install-agent-google-manual.html 
+keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, manual install, create connector, gcp installation, gcp connector 
+summary: 要在您自己的 Linux 主機上手動安裝控制台代理，您需要查看主機要求、設定網路、準備 Google Cloud 權限、啟用 Google Cloud API、安裝控制台，然後提供您準備好的權限。 
 ---
-= 在 AWS 中手動安裝控制台代理
+= 在 Google Cloud 中手動安裝控制台代理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,10 @@ summary: 您可以在 AWS 中執行的 Linux 主機上手動安裝控制台代�
 
 
 [role="lead"]
-您可以在 AWS 中執行的 Linux 主機上手動安裝控制台代理程式。要在您自己的 Linux 主機上手動安裝控制台代理，您需要查看主機要求、設定網路、準備 AWS 權限、安裝控制台代理，然後提供您準備好的權限。
+要在您自己的 Linux 主機上手動安裝控制台代理，您需要查看主機要求、設定網路、準備 Google Cloud 權限、啟用 Google Cloud API、安裝控制台，然後提供您準備好的權限。
 
 .開始之前
-* 你應該有一個link:concept-connectors.html["了解控制台代理"]。
+* 你應該有一個link:concept-agents.html["了解控制台代理"]。
 * 你應該回顧一下link:reference-limitations.html["控制台代理限制"]。
 
 
@@ -107,14 +107,10 @@ Docker Engine 23.0.6 至 28.0.0。
 
 |===
 --
-AWS EC2 執行個體類型:: 滿足上述 CPU 和 RAM 要求的執行個體類型。我們推薦 t3.2xlarge。
-密鑰對:: 建立控制台代理程式時，您需要選擇一個 EC2 金鑰對來與執行個體一起使用。
-使用 IMDSv2 時的 PUT 響應跳數限制:: 如果在 EC2 執行個體上啟用了 IMDSv2（這是新 EC2 執行個體的預設設定），則必須將執行個體上的 PUT 回應跳數限制變更為 3。如果您不變更 EC2 執行個體的限制，則在嘗試設定代理程式時會收到 UI 初始化錯誤。
+Google Cloud 機器類型:: 滿足上述 CPU 和 RAM 要求的執行個體類型。我們推薦 n2-standard-8。
 +
 --
-* link:task-require-imdsv2.html["要求在 Amazon EC2 執行個體上使用 IMDSv2"]
-* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-existing-instances.html#modify-PUT-response-hop-limit["AWS 文件：變更 PUT 回應跳數限制"^]
-
+Google Cloud 虛擬機器實例上的控制台代理程式支援下列作業系統： https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["受防護的虛擬機器功能"^]
 
 --
 /opt 中的磁碟空間:: 必須有 100 GiB 可用空間
@@ -300,7 +296,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 
 == 步驟 3：設定網絡
 
-確保您打算安裝控制台代理的網路位置支援以下要求。滿足這些要求使控制台代理程式能夠管理混合雲環境中的資源和流程。
+設定您的網絡，以便控制台代理可以管理混合雲環境中的資源和流程。例如，您需要確保可以連接到目標網路並且可以進行外部網路存取。
 
 連接到目標網絡:: 控制台代理程式需要與您計劃建立和管理系統的位置建立網路連線。例如，您計劃在本機環境中建立Cloud Volumes ONTAP系統或儲存系統的網路。
 
@@ -329,17 +325,9 @@ link:reference-networking-saas-console.html["為NetApp控制台準備網絡"] �
 
 
  a| 
-AWS 服務（amazonaws.com）：
-
-* 雲形成
-* 彈性運算雲（EC2）
-* 身分和存取管理 (IAM)
-* 金鑰管理服務（KMS）
-* 安全性令牌服務 (STS)
-* 簡單儲存服務（S3）
-
+\ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta https://www.googleapis.com/storage/v1 https://storage.googleapis.com/storage/v1 https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/projects
  a| 
-管理 AWS 資源。端點取決於您的 AWS 區域。 https://docs.aws.amazon.com/general/latest/gr/rande.html["有關詳細信息，請參閱 AWS 文檔"^]
+管理 Google Cloud 中的資源。
 
 
 
@@ -424,80 +412,140 @@ AWS 服務（amazonaws.com）：
 
 
 
-== 步驟 4：設定控制台的 AWS 權限
+== 步驟 4：設定控制台代理的權限
 
-您需要使用下列選項之一向NetApp控制台提供 AWS 權限：
+需要一個 Google Cloud 服務帳號來向控制台代理提供控制台管理 Google Cloud 中的資源所需的權限。建立控制台代理程式時，您需要將此服務帳戶與控制台代理 VM 關聯。
 
-* 選項 1：建立 IAM 原則並將政策附加到可與 EC2 執行個體關聯的 IAM 角色。
-* 選項 2：向控制台提供具有所需權限的 IAM 使用者的 AWS 存取金鑰。
+在後續版本中新增權限時，您有責任更新自訂角色。如果需要新的權限，它們將在發行說明中列出。
 
-
-依照步驟準備控制台的權限。
-
-[role="tabbed-block"]
-====
-.IAM 角色
---
 .步驟
-. 登入 AWS 主控台並導覽至 IAM 服務。
-. 建立策略：
+. 在 Google Cloud 中建立自訂角色：
 +
-.. 選擇“策略”>“建立策略”。
-.. 選擇 *JSON* 並複製並貼上內容link:reference-permissions-aws.html["控制台代理的 IAM 策略"]。
-.. 完成剩餘步驟以建立策略。
+.. 建立一個包含以下內容的 YAML 文件link:reference-permissions-gcp.html["控制台代理程式的服務帳戶權限"]。
+.. 從 Google Cloud 啟動雲殼。
+.. 上傳包含所需權限的 YAML 檔案。
+.. 使用建立自訂角色 `gcloud iam roles create`命令。
 +
-根據您計劃使用的NetApp資料服務，您可能需要建立第二個策略。對於標準區域，權限分佈在兩個策略中。由於 AWS 中託管策略的最大字元大小限制，因此需要兩個策略。link:reference-permissions-aws.html["了解有關控制台代理的 IAM 策略的更多信息"] 。
+以下範例在專案層級建立一個名為「connector」的角色：
+
++
+`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+
++
+https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud 文件：建立和管理自訂角色"^]
 
 
 
-. 建立 IAM 角色：
+. 在 Google Cloud 中建立服務帳號並將角色指派給該服務帳號：
 +
-.. 選擇*角色 > 建立角色*。
-.. 選擇 *AWS 服務 > EC2*。
-.. 透過附加剛剛建立的策略來新增權限。
+.. 從 IAM 和管理服務中，選擇 *服務帳戶 > 建立服務帳戶*。
+.. 輸入服務帳戶詳細資料並選擇*建立並繼續*。
+.. 選擇您剛剛建立的角色。
 .. 完成剩餘步驟以建立角色。
-
-
-
-
-.結果
-安裝控制台代理程式後，您現在擁有一個可以與 EC2 執行個體關聯的 IAM 角色。
-
---
-.AWS 存取金鑰
---
-.步驟
-. 登入 AWS 主控台並導覽至 IAM 服務。
-. 建立策略：
 +
-.. 選擇“策略”>“建立策略”。
-.. 選擇 *JSON* 並複製並貼上內容link:reference-permissions-aws.html["控制台代理的 IAM 策略"]。
-.. 完成剩餘步驟以建立策略。
+https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud 文件：建立服務帳號"^]
+
+
+
+. 如果您打算在與控制台代理程式所在專案不同的專案中部署Cloud Volumes ONTAP系統，則需要為控制台代理程式的服務帳戶提供這些項目的存取權限。
 +
-根據您計劃使用的NetApp資料服務，您可能需要建立第二個策略。
+例如，假設控制台代理程式位於專案 1 中，而您想要在專案 2 中建立Cloud Volumes ONTAP系統。您需要授予項目 2 中的服務帳戶存取權限。
 
 +
-對於標準區域，權限分佈在兩個策略中。由於 AWS 中託管策略的最大字元大小限制，因此需要兩個策略。link:reference-permissions-aws.html["了解有關控制台代理的 IAM 策略的更多信息"] 。
-
-
-
-. 將策略附加到 IAM 使用者。
+.. 從 IAM 和管理服務中，選擇您想要建立Cloud Volumes ONTAP系統的 Google Cloud 專案。
+.. 在 *IAM* 頁面上，選擇 *授予存取權限* 並提供所需的詳細資訊。
 +
-** https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html["AWS 文件：建立 IAM 角色"^]
-** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWS 文件：新增和刪除 IAM 政策"^]
+*** 輸入控制台代理服務帳戶的電子郵件。
+*** 選擇控制台代理程式的自訂角色。
+*** 選擇*儲存*。
 
 
-. 確保使用者擁有存取金鑰，您可以在安裝控制台代理後將其新增至NetApp控制台。
 
 
-.結果
-現在，您擁有一個具有所需權限的 IAM 使用者和一個可以提供給控制台的存取金鑰。
++
+有關詳細信息，請參閱 https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role["Google Cloud 文件"^]
 
---
+
+
+
+
+== 步驟 5：設定共享 VPC 權限
+
+如果您使用共用 VPC 將資源部署到服務項目中，則需要準備好您的權限。
+
+此表僅供參考，當 IAM 配置完成時，您的環境應該反映權限表。
+
+.查看共用 VPC 權限
+[%collapsible]
+====
+[cols="10,10,10,18,18,34"]
+|===
+| 身分 | 創造者 | 主辦地點 | 服務項目權限 | 宿主專案權限 | 目的 
+
+
+| Google 帳戶部署代理 | 風俗 | 服務項目  a| 
+link:task-install-agent-google-console-gcloud.html#agent-permissions-google["代理部署策略"]
+ a| 
+計算.網路用戶
+| 在服務項目中部署代理 
+
+
+| 代理服務帳戶 | 風俗 | 服務項目  a| 
+link:reference-permissions-gcp.html["代理服務帳號策略"]
+| 計算.網路使用者部署管理員.編輯器 | 部署和維護服務項目中的Cloud Volumes ONTAP和服務 
+
+
+| Cloud Volumes ONTAP服務帳戶 | 風俗 | 服務項目 | storage.admin 成員： NetApp Console 服務帳號為 serviceAccount.user | 不適用 | （選購）適用於NetApp Cloud Tiering 和NetApp Backup and Recovery 
+
+
+| Google API 服務代理 | Google雲 | 服務項目  a| 
+（預設）編輯器
+ a| 
+計算.網路用戶
+| 代表部署與 Google Cloud API 互動。允許控制台使用共用網路。 
+
+
+| Google Compute Engine 預設服務帳戶 | Google雲 | 服務項目  a| 
+（預設）編輯器
+ a| 
+計算.網路用戶
+| 代表部署部署 Google Cloud 執行個體和運算基礎架構。允許控制台使用共用網路。 
+|===
+筆記：
+
+. 如果您沒有將防火牆規則傳遞給部署並選擇讓控制台為您建立規則，則僅主機專案才需要 deploymentmanager.editor。如果未指定規則， NetApp控制台將在主機專案中建立包含 VPC0 防火牆規則的部署。
+. 只有當您未將防火牆規則傳遞給部署並選擇讓控制台為您建立它們時，才需要firewall.create 和firewall.delete。這些權限位於控制台帳戶 .yaml 檔案中。如果您使用共用 VPC 部署 HA 對，這些權限將用於為 VPC1、2 和 3 建立防火牆規則。對於所有其他部署，這些權限也將用於為 VPC0 建立規則。
+. 對於 Cloud Tiering，分層服務帳戶必須在服務帳戶上具有 serviceAccount.user 角色，而不僅僅是在專案層級。目前，如果您在專案層級指派 serviceAccount.user，則使用 getIAMPolicy 查詢服務帳號時不會顯示權限。
+
+
 ====
 
 
-== 步驟 5：安裝控制台代理
+== 第 6 步：啟用 Google Cloud API
+
+在 Google Cloud 中部署Cloud Volumes ONTAP系統之前，必須啟用多個 Google Cloud API。
+
+.步
+. 在您的專案中啟用以下 Google Cloud API：
++
+** 雲端部署管理器 V2 API
+** 雲端日誌 API
+** 雲端資源管理器 API
+** 計算引擎 API
+** 身分識別和存取管理 (IAM) API
+** 雲端金鑰管理服務 (KMS) API
++
+（僅當您打算將NetApp Backup and Recovery 與客戶管理加密金鑰 (CMEK) 結合使用時才需要）
+
+
+
+
+
+https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud 文件：啟用 API"^]
+
+
+
+== 步驟 7：安裝控制台代理
 
 前提條件完成後，您可以在自己的 Linux 主機上手動安裝軟體。
 
@@ -513,7 +561,7 @@ AWS 服務（amazonaws.com）：
 
 
 
-NOTE: 手動安裝控制台代理程式時，無法為透明代理伺服器設定憑證。如果需要為透明代理伺服器設定證書，則必須在安裝後使用維護控制台。詳細了解link:reference-connector-maint-console.html["代理維護控制台"]。
+NOTE: 手動安裝控制台代理程式時，無法為透明代理伺服器設定憑證。如果需要為透明代理伺服器設定證書，則必須在安裝後使用維護控制台。詳細了解link:reference-agent-maint-console.html["代理維護控制台"]。
 
 .關於此任務
 NetApp支援網站上提供的安裝程式可能是早期版本。安裝後，如果有新版本可用，控制台代理會自動更新。
@@ -645,52 +693,24 @@ https://_ipaddress_[]
 .. 選擇*讓我們開始吧*。
 
 
-
-
-如果您在建立控制台代理程式的相同 AWS 帳戶中擁有 Amazon S3 儲存桶，您將看到 Amazon S3 儲存系統自動出現在 *系統* 頁面上。 https://docs.netapp.com/us-en/bluexp-s3-storage/index.html["了解如何透過NetApp ConsoleP 管理 S3 儲存桶"^]
-
-
-
-== 步驟 6：提供對NetApp控制台的權限
-
-現在您已經安裝了控制台代理，您需要為控制台提供您先前設定的 AWS 權限。提供權限可讓控制台代理程式能夠管理 AWS 中的資料和儲存基礎架構。
-
-[role="tabbed-block"]
-====
-.IAM 角色
---
-將您先前建立的 IAM 角色附加到控制台代理 EC2 執行個體。
-
-.步驟
-. 前往 Amazon EC2 主控台。
-. 選擇*實例*。
-. 選擇控制台代理實例。
-. 選擇*操作>安全性>修改 IAM 角色*。
-. 選擇 IAM 角色並選擇 *更新 IAM 角色*。
-
-
-前往 https://console.netapp.com["NetApp控制台"^]開始使用控制台代理。
-
---
-.AWS 存取金鑰
---
-向控制台提供具有所需權限的 IAM 使用者的 AWS 存取金鑰。
-
-.步驟
-. 確保目前在控制台中選擇了正確的控制台代理。
-. 選擇“*管理 > 憑證*”。
-. 選擇*組織憑證*。
-. 選擇“*新增憑證*”並按照精靈中的步驟操作。
 +
-.. *憑證位置*：選擇*Amazon Web Services > 代理程式。
-.. *定義憑證*：輸入 AWS 存取金鑰和金鑰。
-.. *市場訂閱*：透過立即訂閱或選擇現有訂閱將市場訂閱與這些憑證關聯。
-.. *審核*：確認有關新憑證的詳細資訊並選擇*新增*。
+
+NOTE: 如果安裝失敗，您可以查看日誌和報告來幫助您排除故障。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解決安裝問題。"]
 
 
 
+如果您在建立控制台代理程式的相同 Google Cloud 帳戶中擁有 Google Cloud Storage 儲存桶，您將看到 Google Cloud Storage 系統自動出現在 *Systems* 頁面上。 https://docs.netapp.com/us-en/bluexp-google-cloud-storage/index.html["了解如何透過NetApp控制台管理 Google Cloud Storage"^]
 
-前往 https://console.netapp.com["NetApp控制台"^]開始使用控制台代理。
 
---
-====
+
+== 步驟 8：向控制台代理提供權限
+
+您需要向控制台代理提供您先前設定的 Google Cloud 權限。提供權限可使控制台代理程式管理 Google Cloud 中的資料和儲存基礎架構。
+
+.步驟
+. 前往 Google Cloud 入口網站並將服務帳戶指派給控制台代理程式 VM 執行個體。
++
+https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Google Cloud 文件：變更執行個體的服務帳戶和存取範圍"^]
+
+. 如果您想管理其他 Google Cloud 專案中的資源，請透過將具有控制台代理角色的服務帳號新增至該專案來授予存取權限。您需要對每個項目重複此步驟。
+

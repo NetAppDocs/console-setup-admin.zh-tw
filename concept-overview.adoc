@@ -143,7 +143,7 @@ NetApp控制台是一個基於 Web 的控制台，透過 SaaS 層、資源和存
 
 一些附加功能和資料服務需要控制台代理。它使您能夠管理本地和雲端環境中的資源和流程。您需要它來管理一些系統（例如， Cloud Volumes ONTAP）並使用一些NetApp資料服務。
 
-link:concept-connectors.html["了解有關控制台代理的更多信息"] 。
+link:concept-agents.html["了解有關控制台代理的更多信息"] 。
 
 
 

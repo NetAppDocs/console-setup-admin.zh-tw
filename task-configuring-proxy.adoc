@@ -112,7 +112,7 @@ IMPORTANT: 一旦配置了代理，您就無法變更代理類型。如果需要
 
 === 修改控制台代理的透明代理
 
-您可以使用 `proxy update`命令或使用 `proxy remove`命令。有關詳細信息，請參閱link:reference-connector-maint-console.html["代理維護控制台"]。
+您可以使用 `proxy update`命令或使用 `proxy remove`命令。有關詳細信息，請參閱link:reference-agent-maint-console.html["代理維護控制台"]。
 
 
 IMPORTANT: 一旦配置了代理，您就無法變更代理類型。如果需要變更代理類型，請刪除控制台代理並新增具有新代理類型的新代理程式。

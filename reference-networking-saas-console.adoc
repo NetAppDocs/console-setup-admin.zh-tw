@@ -81,10 +81,10 @@ NOTE: NetApp減少了控制台和控制台代理程式所需的網路端點，�
 
 在安裝控制台代理之前設定網路端點存取。
 
-* link:task-install-connector-aws-bluexp.html#networking-aws-agent["為控制台代理程式設定 AWS 網路訪問"]
-* link:task-install-connector-azure-bluexp.html#networking-azure-agent["為控制台代理程式設定 Azure 網路訪問"]
-* link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent["為控制台代理設定 Google Cloud 網路訪問"]
-* link:task-install-connector-on-prem.html#network-access-agent["為控制台代理程式設定本地網路訪問"]
+* link:task-install-agent-aws-console.html#networking-aws-agent["為控制台代理程式設定 AWS 網路訪問"]
+* link:task-install-agent-azure-console.html#networking-azure-agent["為控制台代理程式設定 Azure 網路訪問"]
+* link:task-install-agent-google-console-gcloud.html#networking-gcp-agent["為控制台代理設定 Google Cloud 網路訪問"]
+* link:task-install-agent-on-prem.html#network-access-agent["為控制台代理程式設定本地網路訪問"]
 
 
 

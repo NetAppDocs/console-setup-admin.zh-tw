@@ -83,7 +83,7 @@ summary: 要解決控制台代理程式的問題，您可以與NetApp支援人�
 ====
 有關訪問控制台代理診斷的詳細信息，請參閱以下主題：
 
-* link:task-maintain-connectors.html#connect-linux-host["檢查控制台代理程式狀態（適用於 Linux 主機部署）"]
+* link:task-maintain-agents.html#connect-linux-host["檢查控制台代理程式狀態（適用於 Linux 主機部署）"]
 * link:task-agent-vm-config.html#connect-vcenter-host["檢查控制台代理程式狀態（針對 VCenter 部署）"]
 
 

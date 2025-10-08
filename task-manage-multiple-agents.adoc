@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-manage-multiple-connectors.html 
+permalink: task-manage-multiple-agents.html 
 keywords: switch connectors, multiple connectors, disaster recovery, dr, two connectors 
 summary: 如果您使用多個控制台代理，則可以直接從控制台在這些代理之間切換。您也可以使用多個控制台代理來管理單一系統。 
 ---

@@ -15,7 +15,7 @@
 
 
 | Google 帳戶部署代理 | 風俗 | 服務項目  a| 
-link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["代理部署策略"]
+link:task-install-agent-google-console-gcloud.html#agent-permissions-google["代理部署策略"]
  a| 
 計算.網路用戶
 | 在服務項目中部署代理 

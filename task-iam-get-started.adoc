@@ -56,7 +56,7 @@ link:task-iam-manage-members-permissions.html["了解如何管理成員及其權
 
 [role="quick-margin-list"]
 * link:task-iam-manage-resources.html["了解如何管理組織的資源層次結構"] 。
-* link:task-iam-associate-connectors.html["了解如何將控制台代理與資料夾或項目關聯"] 。
+* link:task-iam-associate-agents.html["了解如何將控制台代理與資料夾或項目關聯"] 。
 
 
 .相關資訊

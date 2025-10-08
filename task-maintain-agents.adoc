@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-maintain-connectors.html 
+permalink: task-maintain-agents.html 
 keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, agent ip address, agent uri, connector, connector health 
 summary: 維護代理主機上的作業系統是您的責任。例如，您應該按照公司的作業系統分發標準程序，對控制台代理主機上的作業系統套用安全性更新。 
 ---
@@ -17,7 +17,7 @@ summary: 維護代理主機上的作業系統是您的責任。例如，您應�
 維護控制台代理主機上的作業系統是您（客戶）的責任。例如，您（客戶）應依照貴公司的作業系統分發標準程序對代理主機上的作業系統套用安全性更新。
 
 
-TIP: 如果您有現成的代理，您應該注意link:reference-connector-operating-system-changes.html["支援的 Linux 作業系統的變更"]。
+TIP: 如果您有現成的代理，您應該注意link:reference-agent-operating-system-changes.html["支援的 Linux 作業系統的變更"]。
 
 
 
@@ -37,7 +37,7 @@ TIP: 如果您有現成的代理，您應該注意link:reference-connector-opera
 記憶體:: 32GB
 
 
-link:reference-connector-default-config.html["了解代理的預設配置"] 。
+link:reference-agent-default-config.html["了解代理的預設配置"] 。
 
 
 
@@ -71,7 +71,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations
 
 如果需要，請使用雲端提供者的控制台或標準內部部署程式停止並啟動代理虛擬機器。
 
-link:concept-connectors.html#connectors-must-be-operational-at-all-times["請注意，控制台代理必須始終處於運行狀態"] 。
+link:concept-agents.html#agents-must-be-operational-at-all-times["請注意，控制台代理必須始終處於運行狀態"] 。
 
 
 

@@ -69,7 +69,7 @@ image:screenshot-iam-switch-projects-select.png["範圍選單的螢幕截圖，�
 
 
 .相關資訊
-link:task-iam-associate-connectors.html["將代理程式與資料夾和項目關聯"] 。
+link:task-iam-associate-agents.html["將代理程式與資料夾和項目關聯"] 。
 
 
 

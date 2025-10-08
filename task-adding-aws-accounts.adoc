@@ -195,7 +195,7 @@ image:screenshot_accounts_switch_aws.png["螢幕截圖顯示在「詳細資料�
 ** 建立一個包含建立控制台代理程式所需權限的策略。
 +
 *** https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["查看 FSx for ONTAP所需的權限"^]
-*** link:task-install-connector-aws-bluexp.html#aws-permissions-agent["查看代理部署策略"]
+*** link:task-install-agent-aws-console.html#aws-permissions-agent["查看代理部署策略"]
 
 
 
@@ -251,14 +251,14 @@ image:screenshot-settings-icon-organization.png["顯示控制台右上角的「�
 
 
 .開始之前
-您需要先建立控制台代理，然後才能設定訂閱。link:concept-connectors.html#connector-installation["了解如何建立控制台代理"] 。
+您需要先建立控制台代理，然後才能設定訂閱。link:concept-agents.html#agent-installation["了解如何建立控制台代理"] 。
 
 以下影片展示了從 AWS Marketplace 訂閱NetApp智慧服務的步驟：
 
 .從 AWS Marketplace 訂閱NetApp智慧服務
 video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .步驟
-. 選擇“*管理>*憑證*”。
+. 選擇“*管理 > 憑證*”。
 . 選擇*組織憑證*。
 . 選擇與控制台代理程式關聯的一組憑證的操作選單，然後選擇*配置訂閱*。
 +
