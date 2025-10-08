@@ -30,7 +30,7 @@ sidebar:
         url: "/concept-connectors.html"
       - title: 部署模式
         url: "/concept-modes.html"
-    - title: 開始使用NetApp助手
+    - title: 開始使用NetApp控制台助手
       entries:
       - title: 使用NetApp控制台助手
         url: "/task-console-assistant.html"

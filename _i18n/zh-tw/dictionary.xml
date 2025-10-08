@@ -5430,7 +5430,6 @@
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">什麼是新的</block>
   <block id="482723983a4f2af954e36ff41e567451" category="sidebar">已知限制</block>
   <block id="e4c53684ddd66ee4898db459d57514e8" category="sidebar">學習基礎知識</block>
-  <block id="bcb004c01b250a259c11d3d9406d9f6f" category="sidebar">開始使用NetApp助手</block>
   <block id="65ce4dce26160be29539699c6623e379" category="sidebar">入門工作流程</block>
   <block id="1434a6bb482886cf18491c3161371a87" category="sidebar">註冊NetApp控制台</block>
   <block id="f3aee30a3a487c746572616e3f53dc9d" category="sidebar">建立控制台代理</block>
@@ -5569,4 +5568,5 @@
   <block id="61ee3fc74079e98a59bc55949818a0a9" category="admonition">如果安裝失敗，您可以查看日誌和報告來幫助您排除故障。<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
   <block id="d06ce875f1b2887cbc5d87b38e0d0d44" category="list-text">您需要停用安裝期間驗證出站連線的設定檢查。如果未停用此檢查，手動安裝將失敗。<block ref="90428b1442632a8a73b6f9660fa083c4" category="inline-link-macro-rx"></block></block>
   <block id="3bc0e23bd46bad08da1876b2cc4430a7" category="sidebar">使用NetApp控制台助手</block>
+  <block id="14a5258ed6e53fde9968f99c48b5072e" category="sidebar">開始使用NetApp控制台助手</block>
 </blocks>
