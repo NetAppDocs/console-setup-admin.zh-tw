@@ -288,10 +288,10 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 | 連接器 | 3.9.54, 3.9.53 | 前往 https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-50["BlueXP頁面中的新功能"^]並參考版本 3.9.54 和 3.9.53 所包含的變更。 
 
 
-| 備份和復原 | 2025年7月28日 | 前往 https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recovery頁面中的新功能"^]並參考 2025 年 7 月版本中包含的變更。 
+| 備份和復原 | 2025年7月28日 | 前往 https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recovery頁面中的新功能"^]並參考 2025 年 7 月版本中包含的變更。 
 
 
-| 分類 | 2025 年 7 月 14 日（版本 1.45） | 前往 https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classification頁面中的新功能"^]。 
+| 分類 | 2025 年 7 月 14 日（版本 1.45） | 前往 https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classification頁面中的新功能"^]。 
 |===
 有關私人模式的更多詳細信息，包括如何升級，請參閱以下內容：
 
@@ -463,10 +463,10 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-user-settings.html#ta
 | 連接器 | 3.9.52, 3.9.51 | 前往 https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-50["BlueXP連接器頁面中的新功能"]並參考版本 3.9.52 和 3.9.50 所包含的變更。 
 
 
-| 備份和復原 | 2025年5月12日 | 前往 https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recovery頁面中的新功能"^]並參考 2025 年 5 月版本中包含的變更。 
+| 備份和復原 | 2025年5月12日 | 前往 https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recovery頁面中的新功能"^]並參考 2025 年 5 月版本中包含的變更。 
 
 
-| 分類 | 2025 年 5 月 12 日（版本 1.43） | 前往 https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classification頁面中的新功能"^]並參考 1.38 至 1.371.41 版本中包含的變更。 
+| 分類 | 2025 年 5 月 12 日（版本 1.43） | 前往 https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classification頁面中的新功能"^]並參考 1.38 至 1.371.41 版本中包含的變更。 
 |===
 有關私人模式的更多詳細信息，包括如何升級，請參閱以下內容：
 
@@ -602,10 +602,10 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 | 連接器 | 3.9.50, 3.9.49 | 前往 https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-50["BlueXP連接器頁面中的新功能"]並參考版本 3.9.50 和 3.9.49 所包含的變更。 
 
 
-| 備份和復原 | 2025年3月17日 | 前往 https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recovery頁面中的新功能"^]並參考 2024 年 3 月版本中包含的變更。 
+| 備份和復原 | 2025年3月17日 | 前往 https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recovery頁面中的新功能"^]並參考 2024 年 3 月版本中包含的變更。 
 
 
-| 分類 | 2025 年 3 月 10 日（版本 1.41） | 前往 https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classification頁面中的新功能"^]並參考 1.38 至 1.371.41 版本中包含的變更。 
+| 分類 | 2025 年 3 月 10 日（版本 1.41） | 前往 https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classification頁面中的新功能"^]並參考 1.38 至 1.371.41 版本中包含的變更。 
 |===
 有關私人模式的更多詳細信息，包括如何升級，請參閱以下內容：
 
@@ -693,10 +693,10 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.htm
 | 連接器 | 3.9.48 | 前往 https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-48["BlueXP連接器頁面中的新功能"]並參考 3.9.48 版本所包含的變更。 
 
 
-| 備份和復原 | 2025年2月21日 | 前往 https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recovery頁面中的新功能"^]並參考 2025 年 2 月版本中包含的變更。 
+| 備份和復原 | 2025年2月21日 | 前往 https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recovery頁面中的新功能"^]並參考 2025 年 2 月版本中包含的變更。 
 
 
-| 分類 | 2025 年 1 月 22 日（版本 1.39） | 前往 https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classification頁面中的新功能"^]並參考 1.39 版本中包含的變更。 
+| 分類 | 2025 年 1 月 22 日（版本 1.39） | 前往 https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classification頁面中的新功能"^]並參考 1.39 版本中包含的變更。 
 |===
 
 
@@ -769,7 +769,7 @@ BlueXP IAM 提供更精細的資源和權限管理：
 
 
 .BlueXP IAM 的 API
-此變更為BlueXP IAM 引入了一個新的 API，但它與先前的租賃 API 向後相容。 https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解BlueXP IAM 的 API"^]
+此變更為BlueXP IAM 引入了一個新的 API，但它與先前的租賃 API 向後相容。 https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解BlueXP IAM 的 API"^]
 
 .支援的部署模式
 在標準和限制模式下使用BlueXP時支援BlueXP IAM。如果您在私人模式下使用BlueXP ，那麼您將繼續使用BlueXP _account_ 來管理工作區、使用者和資源。
@@ -790,10 +790,10 @@ BlueXP IAM 提供更精細的資源和權限管理：
 | 連接器 | 3.9.48 | 前往 https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-48["BlueXP連接器頁面中的新功能"]並參考 3.9.48 版本所包含的變更。 
 
 
-| 備份和復原 | 2025年2月21日 | 前往 https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recovery頁面中的新功能"^]並參考 2025 年 2 月版本中包含的變更。 
+| 備份和復原 | 2025年2月21日 | 前往 https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recovery頁面中的新功能"^]並參考 2025 年 2 月版本中包含的變更。 
 
 
-| 分類 | 2025 年 1 月 22 日（版本 1.39） | 前往 https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classification頁面中的新功能"^]並參考 1.39 版本中包含的變更。 
+| 分類 | 2025 年 1 月 22 日（版本 1.39） | 前往 https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classification頁面中的新功能"^]並參考 1.39 版本中包含的變更。 
 |===
 
 
@@ -913,16 +913,16 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-get-help.html["了解有�
 | 連接器 | 3.9.46 | 輕微的安全性改進和錯誤修復 
 
 
-| 備份和復原 | 2024年11月22日 | 前往 https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recovery頁面中的新功能"^]並參考 2024 年 11 月版本中包含的更改 
+| 備份和復原 | 2024年11月22日 | 前往 https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recovery頁面中的新功能"^]並參考 2024 年 11 月版本中包含的更改 
 
 
-| 分類 | 2024 年 11 月 4 日（版本 1.37） | 前往 https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classification頁面中的新功能"^]並參考 1.32 至 1.37 版本中包含的更改 
+| 分類 | 2024 年 11 月 4 日（版本 1.37） | 前往 https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classification頁面中的新功能"^]並參考 1.32 至 1.37 版本中包含的更改 
 
 
-| Cloud Volumes ONTAP管理 | 2024年11月11日 | 前往 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP管理頁面的新增功能"^]並參考 2024 年 10 月和 2024 年 11 月版本中包含的更改 
+| Cloud Volumes ONTAP管理 | 2024年11月11日 | 前往 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP管理頁面的新增功能"^]並參考 2024 年 10 月和 2024 年 11 月版本中包含的更改 
 
 
-| 本地ONTAP叢集管理 | 2024年11月26日 | 前往 https://docs.netapp.com/us-en/bluexp-ontap-onprem/whats-new.html["本機ONTAP叢集管理頁面的新增功能"^]並參考 2024 年 11 月版本中包含的更改 
+| 本地ONTAP叢集管理 | 2024年11月26日 | 前往 https://docs.netapp.com/us-en/storage-management-ontap-onprem/whats-new.html["本機ONTAP叢集管理頁面的新增功能"^]並參考 2024 年 11 月版本中包含的更改 
 |===
 雖然BlueXP digital wallet和BlueXP replication也包含在私人模式中，但與先前的私人模式版本相比沒有任何變化。
 
@@ -1010,7 +1010,7 @@ BlueXP IAM 提供更精細的資源和權限管理：
 
 
 .BlueXP IAM 的 API
-此變更為BlueXP IAM 引入了一個新的 API，但它與先前的租賃 API 向後相容。 https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解BlueXP IAM 的 API"^]
+此變更為BlueXP IAM 引入了一個新的 API，但它與先前的租賃 API 向後相容。 https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解BlueXP IAM 的 API"^]
 
 .支援的部署模式
 在標準模式下使用BlueXP時支援BlueXP IAM。如果您在受限模式或私人模式下使用BlueXP ，那麼您將繼續使用BlueXP _帳戶_來管理工作區、使用者和資源。
@@ -1092,9 +1092,9 @@ https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/using_s
 
 * https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#9-september-2024["2024 年 9 月發布的 Connector 中的新增功能"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#8-august-2024["2024 年 8 月發布的 Connector 中的新增功能"]
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recovery的新功能"^]
-* https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classification的新功能"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["BlueXP中的Cloud Volumes ONTAP管理有哪些新功能"^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recovery的新功能"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classification的新功能"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["BlueXP中的Cloud Volumes ONTAP管理有哪些新功能"^]
 
 
 有關私人模式的更多詳細信息，包括如何升級，請參閱以下內容：
@@ -1293,9 +1293,9 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 * https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["了解私人模式"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["了解如何在私人模式下開始使用BlueXP"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["了解如何在使用私有模式時升級連接器"]
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["了解BlueXP backup and recovery的新功能"^]
-* https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["了解BlueXP classification的新功能"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["了解BlueXP中Cloud Volumes ONTAP管理的新功能"^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["了解BlueXP backup and recovery的新功能"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["了解BlueXP classification的新功能"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["了解BlueXP中Cloud Volumes ONTAP管理的新功能"^]
 
 
 
@@ -1394,9 +1394,9 @@ BlueXP Connector 的此版本包含一些小的安全性改進和錯誤修復。
 * https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["了解私人模式"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["了解如何在私人模式下開始使用BlueXP"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["了解如何在使用私有模式時升級連接器"]
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["了解BlueXP backup and recovery的新功能"^]
-* https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["了解BlueXP classification的新功能"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["了解BlueXP中Cloud Volumes ONTAP管理的新功能"^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["了解BlueXP backup and recovery的新功能"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["了解BlueXP classification的新功能"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["了解BlueXP中Cloud Volumes ONTAP管理的新功能"^]
 
 
 
@@ -1433,5 +1433,5 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 在 3.9.38 版本中，我們更新了 AWS 的連接器策略以包含「ec2:DescribeAvailabilityZones」權限。現在需要此權限來支援具有Cloud Volumes ONTAP 的AWS 本地區域。
 
 * https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html["查看連接器的 AWS 權限"] 。
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["了解有關 AWS 本地區域支援的更多信息"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["了解有關 AWS 本地區域支援的更多信息"^]
 

@@ -185,8 +185,8 @@ image:screenshot_gcp_associate.gif["訂閱分配頁面的螢幕截圖。"]
 --
 ====
 .相關資訊
-* https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-capacity-licenses.html["管理Cloud Volumes ONTAP 的BYOL 基於容量的許可證"^]
-* https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["管理資料服務的 BYOL 許可證"^]
+* https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-capacity-licenses.html["管理Cloud Volumes ONTAP 的BYOL 基於容量的許可證"^]
+* https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["管理資料服務的 BYOL 許可證"^]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html["管理 AWS 憑證和訂閱"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html["管理 Azure 憑證和訂閱"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-gcp-accounts.html["管理 Google Cloud 憑證和訂閱"]

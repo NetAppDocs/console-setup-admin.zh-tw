@@ -60,10 +60,10 @@ NOTE: NetApp使用 Microsoft Entra ID 作為特定於支援和授權的身份驗
 成功登入後， NetApp將儲存 NSS 使用者名稱。
 
 +
-這是系統產生的映射到您的電子郵件的 ID。在*NSS 管理*頁面上，您可以顯示來自image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-nss-menu.png["三個水平點的圖標"]菜單。
+這是系統產生的映射到您的電子郵件的 ID。在*NSS 管理*頁面上，您可以顯示來自image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["三個水平點的圖標"]菜單。
 
 +
-** 如果您需要刷新登入憑證令牌，還有一個*更新憑證*選項image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-nss-menu.png["三個水平點的圖標"]菜單。
+** 如果您需要刷新登入憑證令牌，還有一個*更新憑證*選項image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["三個水平點的圖標"]菜單。
 +
 使用此選項會提示您再次登入。請注意，這些帳戶的令牌將在 90 天後過期。我們將發布通知來提醒您此事。
 
@@ -74,10 +74,10 @@ NOTE: NetApp使用 Microsoft Entra ID 作為特定於支援和授權的身份驗
 .下一步是什麼？
 使用者現在可以在建立新的Cloud Volumes ONTAP系統和註冊現有Cloud Volumes ONTAP系統時選擇帳戶。
 
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-aws.html["在 AWS 中啟動Cloud Volumes ONTAP"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["在 Azure 中啟動Cloud Volumes ONTAP"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html["在 Google Cloud 啟動Cloud Volumes ONTAP"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-registering.html["註冊現收現付系統"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-otc-aws.html["在 AWS 中啟動Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-otc-azure.html["在 Azure 中啟動Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-gcp.html["在 Google Cloud 啟動Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-registering.html["註冊現收現付系統"^]
 
 
 

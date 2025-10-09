@@ -82,7 +82,7 @@ summary: 您可以監視控制台正在執行的操作的狀態，以查看是�
 
 通知中心使您能夠查看已啟動的操作的狀態並為某些類型的系統活動設定警報通知。同時，警報可讓您查看ONTAP儲存環境中與容量、可用性、效能、保護和安全性相關的問題或潛在風險。
 
-https://docs.netapp.com/us-en/bluexp-alerts/index.html["了解有關NetApp控制台警報的更多信息"^]
+https://docs.netapp.com/us-en/console-alerts/index.html["了解有關NetApp控制台警報的更多信息"^]
 
 
 

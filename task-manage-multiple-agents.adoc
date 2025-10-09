@@ -56,6 +56,6 @@ image:screenshot-connector-switch.png["螢幕截圖顯示了標題列中的代�
 為了避免爭用問題，只有主控制台代理程式應設定為*自動模式*。
 
 +
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-settings.html["了解有關容量管理模式的更多信息"^]
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-capacity-settings.html["了解有關容量管理模式的更多信息"^]
 
 

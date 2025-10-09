@@ -137,9 +137,9 @@ TIP: 快取可最佳化效能，但可能會導致此窗格上的資料與實際
 
 查看有關ONTAP中發生的某些事件的警報。它們是 EMS 和基於指標的警報的組合。
 
-有關ONTAP警報的詳細信息，請參閱 https://docs.netapp.com/us-en/bluexp-alerts/index.html["關於ONTAP警報"^]。
+有關ONTAP警報的詳細信息，請參閱 https://docs.netapp.com/us-en/console-alerts/index.html["關於ONTAP警報"^]。
 
-有關您可能會看到的警報列表，請參閱 https://docs.netapp.com/us-en/bluexp-alerts/alerts-use-dashboard.html["查看ONTAP儲存中的潛在風險"^]。
+有關您可能會看到的警報列表，請參閱 https://docs.netapp.com/us-en/console-alerts/alerts-use-dashboard.html["查看ONTAP儲存中的潛在風險"^]。
 
 .步驟
 . 從NetApp控制台選單中，查看ONTAP警報窗格。
@@ -200,9 +200,9 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransom
 . 從NetApp控制台選單中，檢視「勒索軟體復原力」窗格。
 . 在「勒索軟體復原」窗格中執行下列操作之一：
 +
-** 選擇「檢視」前往NetApp勒索軟體復原力儀表板。有關詳細信息，請參閱 https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html["使用NetApp勒索軟體復原力儀表板監控工作負載健康狀況"^]。
-** 請參閱NetApp勒索軟體復原力儀表板中的「建議操作」。有關詳細信息，請參閱 https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html["查看NetApp勒索軟體復原力儀表板上的防護建議"^]。
-** 選擇警報連結以查看NetApp勒索軟體恢復警報頁面中的警報。有關詳細信息，請參閱 https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-alert.html["使用NetApp勒索軟體復原功能處理偵測到的勒索軟體警報"^]。
+** 選擇「檢視」前往NetApp勒索軟體復原力儀表板。有關詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["使用NetApp勒索軟體復原力儀表板監控工作負載健康狀況"^]。
+** 請參閱NetApp勒索軟體復原力儀表板中的「建議操作」。有關詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["查看NetApp勒索軟體復原力儀表板上的防護建議"^]。
+** 選擇警報連結以查看NetApp勒索軟體恢復警報頁面中的警報。有關詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html["使用NetApp勒索軟體復原功能處理偵測到的勒索軟體警報"^]。
 
 
 
@@ -220,5 +220,5 @@ TIP: 快取可最佳化效能，但可能會導致此窗格上的資料與實際
 
 .步驟
 . 從NetApp控制台選單中，檢視「備份與復原」窗格。
-. 選擇“*檢視*”前往NetApp備份和還原儀表板。有關詳細信息，請參閱 https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html["NetApp備份和還原文檔"^]。
+. 選擇“*檢視*”前往NetApp備份和還原儀表板。有關詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["NetApp備份和還原文檔"^]。
 

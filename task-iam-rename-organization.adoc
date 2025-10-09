@@ -65,5 +65,5 @@ image:screenshot-iam-project-id.png["選擇項目的操作選單後，顯示項�
 .相關資訊
 * link:concept-identity-and-access-management.html["了解身分和存取管理"]
 * link:task-iam-get-started.html["開始使用身分和存取權限"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解身分和存取 API"^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解身分和存取 API"^]
 

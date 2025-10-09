@@ -437,4 +437,4 @@ link:reference-ports-gcp.html["Google Cloud 中的防火牆規則"]
 
 NOTE: 如果部署失敗，您可以從控制台下載報告和日誌來幫助您解決問題。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解決安裝問題。"]
 
-如果您在建立控制台代理程式的相同 Google Cloud 帳戶中擁有 Google Cloud Storage 儲存桶，您將看到 Google Cloud Storage 系統自動出現在 *Systems* 頁面上。 https://docs.netapp.com/us-en/bluexp-google-cloud-storage/index.html["了解如何透過控制台管理 Google 雲端存儲"]
+如果您在建立控制台代理程式的相同 Google Cloud 帳戶中擁有 Google Cloud Storage 儲存桶，您將看到 Google Cloud Storage 系統自動出現在 *Systems* 頁面上。 https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["了解如何透過控制台管理 Google 雲端存儲"]

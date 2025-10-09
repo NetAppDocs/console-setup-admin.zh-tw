@@ -75,7 +75,7 @@ link:task-adding-aws-accounts.html#add-credentials-agent-aws["了解如何將 AW
 
 將 AWS 憑證新增至控制台以提供建立和管理 FSx for ONTAP系統所需的權限。
 
-https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["了解如何將 AWS 憑證新增至Amazon FSx for ONTAP控制台"^]
+https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["了解如何將 AWS 憑證新增至Amazon FSx for ONTAP控制台"^]
 
 
 

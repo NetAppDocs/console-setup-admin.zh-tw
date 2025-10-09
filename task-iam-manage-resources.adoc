@@ -110,5 +110,5 @@ NOTE: 若要從整個組織中刪除已發現的資源，請從「*系統*」頁
 
 * link:concept-identity-and-access-management.html["了解NetApp控制台中的身分和存取權限"]
 * link:task-iam-get-started.html["開始在NetApp控制台中使用身分和存取權限"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解身分和存取 API"^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解身分和存取 API"^]
 

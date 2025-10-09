@@ -18,8 +18,8 @@
 | 連接器 | 3.9.48 | 前往 https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-48["BlueXP連接器頁面中的新功能"]並參考 3.9.48 版本所包含的變更。 
 
 
-| 備份和復原 | 2025年2月21日 | 前往 https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recovery頁面中的新功能"^]並參考 2025 年 2 月版本中包含的變更。 
+| 備份和復原 | 2025年2月21日 | 前往 https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recovery頁面中的新功能"^]並參考 2025 年 2 月版本中包含的變更。 
 
 
-| 分類 | 2025 年 1 月 22 日（版本 1.39） | 前往 https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classification頁面中的新功能"^]並參考 1.39 版本中包含的變更。 
+| 分類 | 2025 年 1 月 22 日（版本 1.39） | 前往 https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classification頁面中的新功能"^]並參考 1.39 版本中包含的變更。 
 |===

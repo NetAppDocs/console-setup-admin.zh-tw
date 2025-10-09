@@ -99,7 +99,7 @@ NOTE: NetApp減少了控制台和控制台代理程式所需的網路端點，�
 
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["AWS 中的Cloud Volumes ONTAP端點"]
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html["Azure 中的Cloud Volumes ONTAP端點"]
-* link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Google Cloud 中Cloud Volumes ONTAP的端點"]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Google Cloud 中Cloud Volumes ONTAP的端點"]
 
 
 https://docs.netapp.com/us-en/data-services-family/["請參閱對應的NetApp資料服務文件。"^]

@@ -131,7 +131,7 @@ IMPORTANT: 一旦配置了代理，您就無法變更代理類型。如果需要
 
 如果您停用帶有Cloud Volumes ONTAP 的Azure Private Links 並使用服務端點，請啟用直接 API 流量。否則，流量將無法正確路由。
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["了解有關將 Azure Private Link 或服務端點與Cloud Volumes ONTAP結合使用的更多信息"^]
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enabling-private-link.html["了解有關將 Azure Private Link 或服務端點與Cloud Volumes ONTAP結合使用的更多信息"^]
 
 .步驟
 . 選擇“*管理 > 代理*”。

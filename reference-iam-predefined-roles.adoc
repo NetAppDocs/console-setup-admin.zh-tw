@@ -146,5 +146,5 @@ NetApp控制台中的身分和存取管理 (IAM) 提供了預先定義的角色�
 * link:concept-identity-and-access-management.html["了解NetApp控制台身分和存取管理"]
 * link:task-iam-get-started.html["開始使用NetApp Console IAM"]
 * link:task-iam-manage-members-permissions.html["管理NetApp控制台成員及其權限"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解NetApp Console IAM 的 API"^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解NetApp Console IAM 的 API"^]
 

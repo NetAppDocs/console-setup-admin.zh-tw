@@ -239,5 +239,5 @@ image:diagram-iam-example-hierarchy-advanced.png["概念圖顯示一個組織有
 * link:task-iam-rename-organization.html["重新命名您的NetApp控制台組織"]
 * link:task-iam-audit-actions-timeline.html["監控或稽核 IAM 活動"]
 * link:reference-iam-predefined-roles.html["NetApp控制台存取角色"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解NetApp Console IAM 的 API"^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解NetApp Console IAM 的 API"^]
 

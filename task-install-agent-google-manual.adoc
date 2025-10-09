@@ -699,7 +699,7 @@ NOTE: 如果安裝失敗，您可以查看日誌和報告來幫助您排除故�
 
 
 
-如果您在建立控制台代理程式的相同 Google Cloud 帳戶中擁有 Google Cloud Storage 儲存桶，您將看到 Google Cloud Storage 系統自動出現在 *Systems* 頁面上。 https://docs.netapp.com/us-en/bluexp-google-cloud-storage/index.html["了解如何透過NetApp控制台管理 Google Cloud Storage"^]
+如果您在建立控制台代理程式的相同 Google Cloud 帳戶中擁有 Google Cloud Storage 儲存桶，您將看到 Google Cloud Storage 系統自動出現在 *Systems* 頁面上。 https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["了解如何透過NetApp控制台管理 Google Cloud Storage"^]
 
 
 

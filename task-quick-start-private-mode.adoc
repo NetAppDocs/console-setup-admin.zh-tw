@@ -64,7 +64,7 @@ link:media/BlueXP-Private-Mode-legacy-interface.pdf["BlueXP私人模式的 PDF �
 .15+| *服務* | 警報 | 不 
 
 
-| 備份和復原 | 是的https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["查看ONTAP磁碟區資料支援的備份目標列表"^] 
+| 備份和復原 | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["查看ONTAP磁碟區資料支援的備份目標列表"^] 
 
 
 | 分類 | 是的 

@@ -45,7 +45,7 @@ BlueXP IAM 提供更精細的資源和權限管理：
 
 
 .BlueXP IAM 的 API
-此變更為BlueXP IAM 引入了一個新的 API，但它與先前的租賃 API 向後相容。 https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["了解BlueXP IAM 的 API"^]
+此變更為BlueXP IAM 引入了一個新的 API，但它與先前的租賃 API 向後相容。 https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解BlueXP IAM 的 API"^]
 
 .支援的部署模式
 在標準模式下使用BlueXP時支援BlueXP IAM。如果您在受限模式或私人模式下使用BlueXP ，那麼您將繼續使用BlueXP _帳戶_來管理工作區、使用者和資源。

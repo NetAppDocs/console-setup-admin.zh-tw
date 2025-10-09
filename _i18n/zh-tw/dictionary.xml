@@ -414,7 +414,6 @@
   <block id="573514d5de621ecfe56c91e7c665d73d" category="inline-link">Azure 區域對</block>
   <block id="4f674d86145ba6d0663c64dbe936c131" category="list-text">如果您使用Cloud Volumes ONTAP，則控制台代理程式應部署在與其管理的Cloud Volumes ONTAP系統相同的 Azure 區域中，或部署在<block ref="71e0e9a7366955554f0600c5ea8cfc7f" category="inline-link-rx"></block>適用於Cloud Volumes ONTAP系統。此要求可確保在Cloud Volumes ONTAP及其關聯的儲存帳戶之間使用 Azure Private Link 連線。</block>
   <block id="6882deeb4b60915fc6b7a36d03f329e3" category="inline-link">了解Cloud Volumes ONTAP如何使用 Azure Private Link</block>
-  <block id="f09d4eba567a9e2b031517b472055a69" category="paragraph"><block ref="f09d4eba567a9e2b031517b472055a69" category="inline-link-rx"></block></block>
   <block id="407c4e9fac86b98147da49acd4fa0d01" category="list-text">連接埠</block>
   <block id="b4f722225ecf2639c63ce584e23ca7ca" category="list-text">除非您啟動它或將其用作代理將AutoSupport訊息從Cloud Volumes ONTAP發送到NetApp支持，否則控制台代理不會有傳入流量。</block>
   <block id="b68600c18c6dd9598d4518bc4a3f2c90" category="list-text">HTTP（80）和 HTTPS（443）提供對本機 UI 的訪問，您會在極少數情況下使用它們。</block>
@@ -672,11 +671,8 @@
   <block id="c531086859410bbf7d79b1d007644e8c" category="inline-link">2024 年 8 月發布的 Connector 中的新增功能</block>
   <block id="3447cde4c00b98b6428bff77da46fd8c" category="list-text"><block ref="3447cde4c00b98b6428bff77da46fd8c" category="inline-link-rx"></block></block>
   <block id="116a2755907d33cc76c6cdc442c467b0" category="inline-link">BlueXP backup and recovery的新功能</block>
-  <block id="4e02af58c02d9f0704b79eb4e000eb20" category="list-text"><block ref="4e02af58c02d9f0704b79eb4e000eb20" category="inline-link-rx"></block></block>
   <block id="cdcec1bb4c8f6524979a702b1691d4f7" category="inline-link">BlueXP classification的新功能</block>
-  <block id="9212eddb7e41302606e7873d754ab3aa" category="list-text"><block ref="9212eddb7e41302606e7873d754ab3aa" category="inline-link-rx"></block></block>
   <block id="00dc7f0b165829f9f81bfaf12a8db2e4" category="inline-link">BlueXP中的Cloud Volumes ONTAP管理有哪些新功能</block>
-  <block id="941cdb6d27c83c929d4abe28f2321665" category="list-text"><block ref="941cdb6d27c83c929d4abe28f2321665" category="inline-link-rx"></block></block>
   <block id="6aa6935f7c0067aba2624a4ad2862e39" category="paragraph">有關私人模式的更多詳細信息，包括如何升級，請參閱以下內容：</block>
   <block id="a52b83d1b32a42f8a6aff3771048ba3c" category="inline-link">了解私人模式</block>
   <block id="cdeb608610a882c24cefcb7daa878a1d" category="list-text"><block ref="cdeb608610a882c24cefcb7daa878a1d" category="inline-link-rx"></block></block>
@@ -708,7 +704,6 @@
   <block id="dfc4954338c7ff2d3998dbe991b1e115" category="list-text">如果您有多個BlueXP帳戶，那麼您現在就有多個BlueXP組織。</block>
   <block id="733cd47965367380792385cdc0bf4492" category="paragraph-title">BlueXP IAM 的 API</block>
   <block id="2047b2bd03a68b861064ed837a1828ad" category="inline-link">了解BlueXP IAM 的 API</block>
-  <block id="ed819704d51143ca1736581a234a1365" category="paragraph">此變更為BlueXP IAM 引入了一個新的 API，但它與先前的租賃 API 向後相容。<block ref="100827e03f9a10b65527b59fa5323ff6" category="inline-link-rx"></block></block>
   <block id="8e3876adf8f21b1509ebcb0486d5bc9c" category="paragraph-title">支援的部署模式</block>
   <block id="a737f6ac26156f3770a49e30a21f7d73" category="paragraph">在標準模式下使用BlueXP時支援BlueXP IAM。如果您在受限模式或私人模式下使用BlueXP ，那麼您將繼續使用BlueXP _帳戶_來管理工作區、使用者和資源。</block>
   <block id="3163b3d4dc92f42d04ad4c79906dcdc3" category="list-title">下一步</block>
@@ -750,16 +745,12 @@
   <block id="2e6f33758bf126679d5a0225c22673d3" category="cell">輕微的安全性改進和錯誤修復</block>
   <block id="008c6d012aabba0e44e2b94f8259635c" category="cell">2024年11月22日</block>
   <block id="57d300ca1fdd6058fd2a0882b05ba831" category="inline-link">BlueXP backup and recovery頁面中的新功能</block>
-  <block id="cc73bd495467f0768e5ab6fbca8c9fc3" category="cell">前往<block ref="d08346bd70ea49c38d1ac500c69dd11c" category="inline-link-rx"></block>並參考 2024 年 11 月版本中包含的更改</block>
   <block id="d9865720c88f775c3c7aa2407f42807e" category="cell">2024 年 11 月 4 日（版本 1.37）</block>
   <block id="79d6fb7fcd1197d45638c77f96548314" category="inline-link">BlueXP classification頁面中的新功能</block>
-  <block id="3634786b3e46e41488029a1f5adcfb51" category="cell">前往<block ref="bb3538c6013ff73961739d7c28fee95d" category="inline-link-rx"></block>並參考 1.32 至 1.37 版本中包含的更改</block>
   <block id="ecbeaffbfe15c72e3bf702b0d0bf9694" category="cell">2024年11月11日</block>
   <block id="5cee96e11788b0260fca227a2882f413" category="inline-link">Cloud Volumes ONTAP管理頁面的新增功能</block>
-  <block id="2b06273c345679e8396f450bec75502c" category="cell">前往<block ref="90e3b44730452fe495e75ab6e2b7eb58" category="inline-link-rx"></block>並參考 2024 年 10 月和 2024 年 11 月版本中包含的更改</block>
   <block id="d415b73567ff8e090cdf21c20afeaa64" category="cell">2024年11月26日</block>
   <block id="4f2f9aa2e4b010fbcd8cded5bf523370" category="inline-link">本機ONTAP叢集管理頁面的新增功能</block>
-  <block id="bad4efa38c7fe2023ac7a25606d5f186" category="cell">前往<block ref="bb047968fd3a98ed3e45ad4e39500b8b" category="inline-link-rx"></block>並參考 2024 年 11 月版本中包含的更改</block>
   <block id="93c9916354f3f5fa45f4019fd081f12a" category="paragraph">雖然BlueXP digital wallet和BlueXP replication也包含在私人模式中，但與先前的私人模式版本相比沒有任何變化。</block>
   <block id="7e0cee63c771cb3be42ccae3ca1f4360" category="doc">連接器 3.9.47</block>
   <block id="ea3677612bfa26ac44a6df6f71a061c7" category="paragraph">此版本的BlueXP連接器包括錯誤修復和連接器安裝期間聯繫的端點的變更。</block>
@@ -809,9 +800,7 @@
   <block id="03f247630aa241e4b15df35baf8f5fd1" category="inline-link">BlueXP連接器頁面中的新功能</block>
   <block id="6a8544d6477cbe97e8f2b597011b60cc" category="cell">前往<block ref="682cda11c1c81d1c1e6c42597faddff3" category="inline-link-rx"></block>並參考 3.9.48 版本所包含的變更。</block>
   <block id="09d7c2dac047caa965175fead07159aa" category="cell">2025年2月21日</block>
-  <block id="ea4e82ea5af0ff62421ac55574c06dca" category="cell">前往<block ref="d08346bd70ea49c38d1ac500c69dd11c" category="inline-link-rx"></block>並參考 2025 年 2 月版本中包含的變更。</block>
   <block id="84d4352e42fd4f7ef347eca44f4f0a88" category="cell">2025 年 1 月 22 日（版本 1.39）</block>
-  <block id="b865a42d40947323c5392132a0cf5ae7" category="cell">前往<block ref="bb3538c6013ff73961739d7c28fee95d" category="inline-link-rx"></block>並參考 1.39 版本中包含的變更。</block>
   <block id="66a5f69d070814deb69bf917dd07a6af" category="doc">連接器 3.9.49 更新</block>
   <block id="00d64ff7da906ec5530c4e990fb334cb" category="section-title">BlueXP使用連接器時ONTAP系統管理器訪問</block>
   <block id="b539e86fbaa7eae465366a0142624ec2" category="paragraph">BlueXP管理員（具有組織管理員角色的使用者）可以設定BlueXP以提示使用者輸入其ONTAP憑證以存取ONTAP系統管理員。啟用此設定後，使用者每次都需要輸入其ONTAP憑證，因為它們不會儲存在BlueXP中。</block>
@@ -835,9 +824,7 @@
   <block id="5820ebbb1da4e36bc0eb0db564450b99" category="cell">3.9.50, 3.9.49</block>
   <block id="f16867c24816cbe638e99bd00c5d371b" category="cell">前往<block ref="291fbb881b3918f162f476bad9d0c478" category="inline-link-rx"></block>並參考版本 3.9.50 和 3.9.49 所包含的變更。</block>
   <block id="499d067ffbbd553e23809aa38aa67bfa" category="cell">2025年3月17日</block>
-  <block id="0e231d3391a335865e696150143618bc" category="cell">前往<block ref="d08346bd70ea49c38d1ac500c69dd11c" category="inline-link-rx"></block>並參考 2024 年 3 月版本中包含的變更。</block>
   <block id="10c518409c3dfbdd5e9839d2076ed5da" category="cell">2025 年 3 月 10 日（版本 1.41）</block>
-  <block id="49e0c1b5be27dbeb84e3a7ca1d634276" category="cell">前往<block ref="bb3538c6013ff73961739d7c28fee95d" category="inline-link-rx"></block>並參考 1.38 至 1.371.41 版本中包含的變更。</block>
   <block id="1fa6d342759ba5c5a8f23c210cac048c" category="doc">連接器 3.9.51</block>
   <block id="44cd288eedf76c78c5b3b26935538537" category="paragraph">目前，3.9.51 版本適用於標準模式和限制模式。</block>
   <block id="7dd4f26252edc5554ac1671370b55f2e" category="section-title">連接器下載的安全端點現在支援備份和復原以及勒索軟體保護</block>
@@ -883,7 +870,6 @@
   <block id="918d08b069e4e8b9bd825945d099eff0" category="cell">3.9.52, 3.9.51</block>
   <block id="d29240cb60727e796e55d4bf8ac33966" category="cell">前往<block ref="291fbb881b3918f162f476bad9d0c478" category="inline-link-rx"></block>並參考版本 3.9.52 和 3.9.50 所包含的變更。</block>
   <block id="e48502083eb8949c8f65b2ccddd5adec" category="cell">2025年5月12日</block>
-  <block id="fb6bee0c273267d6fdde07008552b62f" category="cell">前往<block ref="d08346bd70ea49c38d1ac500c69dd11c" category="inline-link-rx"></block>並參考 2025 年 5 月版本中包含的變更。</block>
   <block id="3e18ba454ff1bfb5aee5e5d425b20ea3" category="cell">2025 年 5 月 12 日（版本 1.43）</block>
   <block id="e9bf07011be1831466ac0bf1bbfe1140" category="doc">連接器 3.9.53</block>
   <block id="734a861d3d201b7a4e47067ddb5a7339" category="paragraph">BlueXP Connector 的此版本包括安全性改進和錯誤修復。</block>
@@ -948,9 +934,7 @@
   <block id="4e7c2b7c3f7b00a4db742817336d985b" category="inline-link">BlueXP頁面中的新功能</block>
   <block id="fb973b0a3719c8d26b960aed72e4fe3f" category="cell">前往<block ref="f2bb5a2291ad18ff55b18a4b4553234a" category="inline-link-rx"></block>並參考版本 3.9.54 和 3.9.53 所包含的變更。</block>
   <block id="67c66b3b8df7b2dee0354dd9f9fcec17" category="cell">2025年7月28日</block>
-  <block id="72d49cd6d8e65ef0285be68616ea0f51" category="cell">前往<block ref="d08346bd70ea49c38d1ac500c69dd11c" category="inline-link-rx"></block>並參考 2025 年 7 月版本中包含的變更。</block>
   <block id="9285fd96738351d44da30f801dea109b" category="cell">2025 年 7 月 14 日（版本 1.45）</block>
-  <block id="b3b08e322117d7e66cdd302866bc6d85" category="cell">前往<block ref="bb3538c6013ff73961739d7c28fee95d" category="inline-link-rx"></block>。</block>
   <block id="b21ef378da4454971a6488eacb2b5c87" category="doc">連接器 3.9.55</block>
   <block id="7c5236578de836eb6dde25bc3e995d02" category="paragraph">BlueXP Connector 的此版本包括安全性改進和錯誤修復。</block>
   <block id="95d98fc23d5487afb84beeeea8decb64" category="paragraph">3.9.55 版本適用於標準模式和限制模式。</block>
@@ -1154,7 +1138,6 @@
   <block id="ed552ed06cb5ce7bb73441c3ee146d12" category="section-title">為 FSx for ONTAP新增 AWS 憑證</block>
   <block id="74506e0d491b0b53f73a29d781f9b64f" category="paragraph">將 AWS 憑證新增至控制台以提供建立和管理 FSx for ONTAP系統所需的權限。</block>
   <block id="d3945d39633f2fd0a86e070328ffa632" category="inline-link">了解如何將 AWS 憑證新增至Amazon FSx for ONTAP控制台</block>
-  <block id="b949ac31d4295634756154aece2b2b66" category="paragraph"><block ref="b949ac31d4295634756154aece2b2b66" category="inline-link-rx"></block></block>
   <block id="3bf21bdc87a8f6ebde5b75e8cb0d5138" category="section-title">憑證和市場訂閱</block>
   <block id="f1b38e057f0b3e3f883f386f412fd0a9" category="inline-link-macro">了解如何關聯 AWS 訂閱</block>
   <block id="1a20071f82239d99732f8888027d653e" category="paragraph">您新增至控制台代理的憑證必須與 AWS Marketplace 訂閱相關聯，以便您可以按小時費率 (PAYGO) 和其他NetApp資料服務或透過年度合約支付Cloud Volumes ONTAP費用。<block ref="ec04a55c38de32bb88fa7b4155061e7c" category="inline-link-macro-rx"></block> 。</block>
@@ -1247,7 +1230,6 @@
   <block id="baf581d10362cd2b4a862b9e83d0cfbb" category="paragraph">Cloud Volumes ONTAP可以與控制台代理程式位於同一專案中，也可以位於不同的專案中。要在不同的專案中部署Cloud Volumes ONTAP ，您需要先將控制台代理服務帳戶和角色新增至該專案。</block>
   <block id="8bee474fd085c11334ab13b9c1a78d9e" category="inline-link-macro">了解如何設定服務帳戶</block>
   <block id="4ec920ccbe2fc417ccd7dcd957eb9653" category="inline-link">了解如何在 Google Cloud 中部署Cloud Volumes ONTAP並選擇項目</block>
-  <block id="486db18d2aa67b603506d28b5425dc88" category="list-text"><block ref="486db18d2aa67b603506d28b5425dc88" category="inline-link-rx"></block></block>
   <block id="1ffac481825810aa6d8bc2bbd6e9f0d5" category="summary">_控制台代理_是在您的雲端網路或本機網路上執行的NetApp軟體。您可以使用控制台代理將NetApp控制台服務連接到您的儲存環境。</block>
   <block id="53101ed6c57b4f1b9f3eb58eb938c2b1" category="doc">了解NetApp控制台代理</block>
   <block id="a2bc646d8356827e60828ee5d135d25a" category="paragraph">_控制台代理_在您的雲端網路或本機網路中運作。您可以使用控制台代理將NetApp控制台服務連接到您的儲存環境。</block>
@@ -1255,7 +1237,6 @@
   <block id="5c3c98f86750c7b0364106f4c4c18721" category="paragraph">如果您不部署控制台代理，則某些控制台功能和服務可用：</block>
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="list-text">Amazon FSx for NetApp ONTAP</block>
   <block id="2e25b2633a61a7b4243d119b40c693e8" category="inline-link">了解哪些操作需要控制台代理或鏈接</block>
-  <block id="3d1d96518767b51e8d2401459f94c232" category="paragraph">某些操作需要控制台代理或NetApp Workloads 連結。<block ref="e97977aba4c80f6a9e86b7bcf8cdc1c1" category="inline-link-rx"></block></block>
   <block id="8d3abfc56116d32646bce9531012ccf6" category="list-text">自動化中心</block>
   <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="list-text">Azure NetApp Files</block>
   <block id="f991c5969c5c46c6f408fd726f910304" category="paragraph">您不需要控制台代理來管理Azure NetApp Files，但需要使用NetApp資料分類來掃描Azure NetApp Files。</block>
@@ -1266,7 +1247,6 @@
   <block id="184e70c253a2ad370c338775e7482497" category="list-text">直接發現本地ONTAP集群</block>
   <block id="f9b71618b1d05cfcd0726a79c3f829f8" category="paragraph">您不需要控制台代理程式即可將本機ONTAP叢集新增至控制台，但需要控制台代理程式來新增其他控制台功能和資料服務。</block>
   <block id="9b049adb8a41cc7a0f049e9ffbda62b5" category="inline-link">了解有關本地ONTAP集群的發現和管理選項的更多信息</block>
-  <block id="6a9bba218e71d2777929e42afb6991ea" category="paragraph"><block ref="6a9bba218e71d2777929e42afb6991ea" category="inline-link-rx"></block></block>
   <block id="01ea8320c69e46ffe573d0801d9eefe1" category="list-text">NetApp工作負載</block>
   <block id="17adde6aed0933a9e39d1cd0883785c4" category="section-title">當需要控制台代理時</block>
   <block id="ea7e44bae4d44c1c658ffe4ef1d40fab" category="paragraph">在標準模式下，控制台需要控制台代理來執行下列操作：</block>
@@ -1292,7 +1272,6 @@
   <block id="2259d207d9b4ddbc18f89752f01f5e84" category="paragraph">您可以在以下位置安裝代理：</block>
   <block id="6beccc67ff905f7da0b29dece26b0485" category="list-text">亞馬遜網路服務</block>
   <block id="1668ca1bd914c1d847f23b491319ac91" category="list-text">微軟 Azure</block>
-  <block id="a9a0542e13f44b5525e432eea3f1fc3b" category="paragraph">在 Azure 中與其管理的Cloud Volumes ONTAP系統位於相同區域的控制台代理。或者，將其部署在<block ref="71e0e9a7366955554f0600c5ea8cfc7f" category="inline-link-rx"></block>。這可確保Cloud Volumes ONTAP及其關聯的儲存帳戶之間使用 Azure Private Link 連線。<block ref="ebdf8919a4d90c512f0e43f5b0739281" category="inline-link-rx"></block></block>
   <block id="d13cabcf02c7a4038fae930fb7b7ff0f" category="paragraph">若要將控制台和資料服務與 Google Cloud 一起使用，請在 Google Cloud 中部署您的代理程式。</block>
   <block id="695e0a47c56539eb9bcf6290d1c797d8" category="list-text">在您的場所</block>
   <block id="6c42d9d3f2de2ec585181e975309fcf0" category="section-title">與雲端提供者的溝通</block>
@@ -1462,7 +1441,6 @@
   <block id="f50849d7a51a2af22661c16f98df65ff" category="inline-link-macro">NetApp控制台存取角色</block>
   <block id="a97fa38afe9727184ada1ed0c4bf8cbf" category="list-text"><block ref="a97fa38afe9727184ada1ed0c4bf8cbf" category="inline-link-macro-rx"></block></block>
   <block id="d0be151a63fab72d6333774c4ad643bb" category="inline-link">了解NetApp Console IAM 的 API</block>
-  <block id="3d564d396e0f601d3aaa0af3f265e2ca" category="list-text"><block ref="3d564d396e0f601d3aaa0af3f265e2ca" category="inline-link-rx"></block></block>
   <block id="00755108fad233add4100be86dce2451" category="summary">有幾種不同的方法可以在 AWS 中建立控制台代理。直接從NetApp控制台是最常見的方式。</block>
   <block id="7ff9f8e2467774df163161a38d2d5040" category="doc">AWS 中的控制台代理安裝選項</block>
   <block id="b5afc81c4f24b143224e304b939a3f6c" category="paragraph">有以下安裝選項可用：</block>
@@ -1581,7 +1559,6 @@
   <block id="f4c6f851b00d5518bf888815de279aba" category="cell">筆記</block>
   <block id="34678ee868eeabce720fc4a0fd60c17a" category="cell">全力支持</block>
   <block id="34c6561859a3a97caa0248fbb4372124" category="inline-link">查看ONTAP資料支援的備份目標列表</block>
-  <block id="d35f01b814a685bf33223632c8c02dc9" category="cell">在政府區域和商業區域受限制模式支持。不支援在具有限制模式的主權區域使用。在受限模式下， NetApp Backup and Recovery 僅支援ONTAP磁碟區資料的備份和復原。<block ref="9a868aa7b1ac276f990ea6d049f53427" category="inline-link-rx"></block>不支援應用程式資料和虛擬機器資料的備份和還原。</block>
   <block id="91d5470ff0de1d64ddb0c8c3bef0b246" category="cell">NetApp資料分類</block>
   <block id="0a44fe605745a017fde35750e5fae36a" category="paragraph">在政府區域內受限制模式支持。不支援商業區域或具有限制模式的主權區域。</block>
   <block id="63d604af1c7a5bfef29d50c6c2c2591f" category="cell">您可以使用下面列出的受限模式支援的許可選項存取許可證和訂閱資訊。</block>
@@ -1615,7 +1592,6 @@
   <block id="3cb695a43961514082b7be25eac12c0b" category="cell">*數據服務*</block>
   <block id="ede10582776ac743c114b051021cf0ca" category="cell">NetApp備份與復原</block>
   <block id="b17e900e063883a32cc6ff0df77599bf" category="inline-link">查看ONTAP磁碟區資料支援的備份目標列表</block>
-  <block id="c1c35b571a8270f43bf6faa6757452f6" category="cell">是的<block ref="7017fcd1de8071674201a0278a852eae" category="inline-link-rx"></block></block>
   <block id="9a0927d2ec4654dfab564a09f0cadbf9" category="cell">NetApp勒索軟體抵禦能力</block>
   <block id="a5db9212acd617412153fca9cdf5d9d7" category="cell">NetApp複製</block>
   <block id="928b1dc588c907971c8b25ff6a14aee2" category="cell">NetApp磁碟區快取</block>
@@ -1866,16 +1842,11 @@
   <block id="fcd7347bb021d8231184894bed7bd347" category="section-title">如何重新發現你的系統</block>
   <block id="cdb83aacf48e960662fcf2d6745e5b60" category="paragraph">部署新的控制台代理程式後，請參閱以下頁面以重新發現您的系統。</block>
   <block id="6c0fb6078ec778ca2319e375a19e994b" category="inline-link">新增現有的Cloud Volumes ONTAP系統</block>
-  <block id="8fdf2adbca771b61e226157cc48ae918" category="list-text"><block ref="8fdf2adbca771b61e226157cc48ae918" category="inline-link-rx"></block></block>
   <block id="c5fbee6586294d81141f8dd158707985" category="inline-link">發現本地ONTAP集群</block>
-  <block id="c6a562375e4b0fa48049f61f2822d10a" category="list-text"><block ref="c6a562375e4b0fa48049f61f2822d10a" category="inline-link-rx"></block></block>
   <block id="504f5f6c5adc93609131b644e3f8c2a9" category="inline-link">建立或發現 FSx for ONTAP系統</block>
-  <block id="c2a442cc7e270f03492b03623a59bddb" category="list-text"><block ref="c2a442cc7e270f03492b03623a59bddb" category="inline-link-rx"></block></block>
   <block id="8111d5a0f80f0b3c708f77dc1b05dc00" category="inline-link">建立Azure NetApp Files系統</block>
   <block id="e4a9dd1c7d750241fad0d52a3bc7903b" category="inline-link">探索 E 系列系統</block>
-  <block id="90a582acc370affa7fa401384859e582" category="list-text"><block ref="90a582acc370affa7fa401384859e582" category="inline-link-rx"></block></block>
   <block id="d85b01f001ee16ebd8eb1917c739d824" category="inline-link">了解StorageGRID系統</block>
-  <block id="49193f8c0c9f916e42ecd0ff6595ef39" category="list-text"><block ref="49193f8c0c9f916e42ecd0ff6595ef39" category="inline-link-rx"></block></block>
   <block id="9957f1fffd0798d003f7701530308820" category="summary">NetApp控制台身分和存取管理提供支援分析師角色來協助監控和支援案例。</block>
   <block id="bd35c1f622cddab38a157ba7ccffd7a0" category="doc">NetApp控制台的營運支援分析師存取角色</block>
   <block id="7e901891254682b3e1fddc06e4e1938a" category="paragraph">您可以為使用者指派以下角色，以便他們存取警報和監控。具有此角色的使用者還可以開啟支援案例。</block>
@@ -2314,7 +2285,6 @@
   <block id="e5774ebea9f84178743febe066010c0e" category="inline-link-macro">Azure 中的Cloud Volumes ONTAP端點</block>
   <block id="d64c0a8c2325cb4b58acab3ef2d51a05" category="list-text"><block ref="d64c0a8c2325cb4b58acab3ef2d51a05" category="inline-link-macro-rx"></block></block>
   <block id="90da399078404708cface539488b8fb2" category="inline-link-macro">Google Cloud 中Cloud Volumes ONTAP的端點</block>
-  <block id="abdbc014cd83c041c48c93a9f6d716d3" category="list-text"><block ref="abdbc014cd83c041c48c93a9f6d716d3" category="inline-link-macro-rx"></block></block>
   <block id="8dfda8cf3bfed1ba46319b9487959873" category="inline-link">請參閱對應的NetApp資料服務文件。</block>
   <block id="9e66adbc40ae0df7bfa345fcbb26e31b" category="paragraph"><block ref="9e66adbc40ae0df7bfa345fcbb26e31b" category="inline-link-rx"></block></block>
   <block id="a329e01ca77506585e48c6c0e5afa977" category="summary">當NetApp控制台在 AWS 中啟動代理實例時，它會將一個原則附加到該實例，該原則會為代理提供管理該 AWS 帳戶內的資源和流程的權限。代理程式使用權限對多個 AWS 服務進行 API 呼叫，包括 EC2、S3、CloudFormation、IAM、金鑰管理服務等。</block>
@@ -2796,28 +2766,22 @@
   <block id="c926e674205f7757d37d0a06a12a2b10" category="cell">使用NetApp備份和還原將本地ONTAP叢集備份到 Amazon S3</block>
   <block id="194ec4e4b51309967d460875197de1ae" category="cell">在ONTAP磁碟區上啟動備份時， NetApp Backup and Recovery 會提示​​您輸入具有特定權限的 IAM 使用者的存取金鑰和密碼。</block>
   <block id="ba37f89d4d4c6ea1b335169793666fbe" category="inline-link">設定備份的 S3 權限</block>
-  <block id="12e11cedace336bc23a4b1c9ab448974" category="cell"><block ref="12e11cedace336bc23a4b1c9ab448974" category="inline-link-rx"></block></block>
   <block id="2bd154f3e1528430624d1980f1fe12c2" category="cell">為Cloud Volumes ONTAP節點提供權限</block>
   <block id="e62c731c4d23f9657ab99c9e7f8b49f5" category="cell">必須將 IAM 角色附加到 AWS 中的每個Cloud Volumes ONTAP節點。對於 HA 調解員也是如此。預設選項是讓控制台為您建立 IAM 角色，但您可以在控制台中建立系統時使用自己的角色。</block>
   <block id="421a1f316880c0380ff3114c3bf34f83" category="inline-link">了解如何自行設定 IAM 角色</block>
-  <block id="1dde058782233339aff261555be71a1e" category="cell"><block ref="1dde058782233339aff261555be71a1e" category="inline-link-rx"></block></block>
   <block id="07914074e8936595a39fa14377c5047c" category="cell">在 AWS 中部署資料代理</block>
   <block id="18a3707b00c2a06ba4d52fc010e2ac0e" category="cell">用於部署資料代理程式的 AWS 使用者帳戶必須具有特定權限。</block>
   <block id="572539efea3b8fc37d4d9f01097ce1b1" category="inline-link">在 AWS 中部署資料代理程式所需的權限</block>
-  <block id="81a564d7b4e8b4dee115ac457361e17e" category="cell"><block ref="81a564d7b4e8b4dee115ac457361e17e" category="inline-link-rx"></block></block>
   <block id="5a4538181503849bbcd06a951c8a8e2d" category="cell">為數據經紀人提供權限</block>
   <block id="11fe2f849cbd1fdcefbacb5d7b98f4fd" category="cell">當NetApp Copy and Sync 部署資料代理程式時，它會為資料代理實例建立一個 IAM 角色。如果您願意，您可以使用自己的 IAM 角色部署資料代理程式。</block>
   <block id="9b99759f27fdd4623c9ea015c92207fd" category="inline-link">使用您自己的 IAM 角色與 AWS 資料代理程式的要求</block>
-  <block id="10f1c56c57fc53ad92122681abc21632" category="cell"><block ref="10f1c56c57fc53ad92122681abc21632" category="inline-link-rx"></block></block>
   <block id="ee62d3f2099b104d52eb4e2fe59eb860" category="cell">為手動安裝的資料代理程式啟用 AWS 訪問</block>
   <block id="18f5ca31365bcff8913658163e306178" category="cell">如果您使用包含 S3 儲存桶的同步關係的資料代理，那麼您應該準備好 Linux 主機以供 AWS 存取。安裝資料代理程式時，您需要為具有程式存取權限和特定權限的 IAM 使用者提供 AWS 金鑰。</block>
   <block id="c9e33dfa8b5904f2c5eeefbab35a3d9b" category="inline-link">啟用對 AWS 的訪問</block>
-  <block id="fcf846fa24de23410cb4903a97ac9f0d" category="cell"><block ref="fcf846fa24de23410cb4903a97ac9f0d" category="inline-link-rx"></block></block>
   <block id="36df1b975561708b246ef1801ea416e5" category="section-title">適用於ONTAP的 FSx</block>
   <block id="71a673e1aed38a0f77d59612fb124b6b" category="cell">建立和管理 FSx for ONTAP</block>
   <block id="bf974d7366700efa3e6de70160241c88" category="cell">若要建立或管理Amazon FSx for NetApp ONTAP系統，您需要透過提供 IAM 角色的 ARN（為控制台提供所需的權限）將 AWS 憑證新增至控制台。</block>
   <block id="8d5c6b0c966cc9b5f51ab3ebb991e7ec" category="inline-link">了解如何為 FSx 設定 AWS 憑證</block>
-  <block id="c52aa019132bc05b5d90dee260d8fb6a" category="cell"><block ref="c52aa019132bc05b5d90dee260d8fb6a" category="inline-link-rx"></block></block>
   <block id="6bc8bd282f003afcaaf88391550efbaf" category="cell">將本機ONTAP叢集分層到 Amazon S3</block>
   <block id="10c690a39fb5b28e51f8b6d7c7fd3552" category="cell">當您啟用NetApp Cloud Tiering 到 AWS 時，精靈會提示您輸入存取金鑰和金鑰。這些憑證會傳遞到ONTAP集群，以便ONTAP可以將資料分層到 S3 儲存桶。</block>
   <block id="827bb82562627531a1105788bd9826e6" category="inline-link">設定 S3 分層權限</block>
@@ -2838,16 +2802,13 @@
   <block id="963c1d6b60ef9ab217e4a2f0f2f4a47f" category="list-text">您想使用“搜尋和恢復”功能</block>
   <block id="0ce14c433ae57608c1aced4d631bc039" category="list-text">您想要使用客戶管理的加密金鑰 (CMEK)</block>
   <block id="8625ed737cea7841c422023f4e27bc1d" category="inline-link">使用備份和還原將Cloud Volumes ONTAP資料備份到 Azure Blob 存儲</block>
-  <block id="518ffd78f998d0a25c5446da8989b6a6" category="list-text"><block ref="518ffd78f998d0a25c5446da8989b6a6" category="inline-link-rx"></block></block>
   <block id="f66493a5c1b72a6a6a675e1d79371789" category="cell">將本機ONTAP叢集備份到 Azure Blob 存儲</block>
   <block id="df8a92294eabcce5e6356671d915d447" category="cell">使用NetApp Backup and Recovery 備份本機 ONTAP 叢集時，您需要新增權限至控制台代理才能使用「搜尋與復原」功能。</block>
   <block id="957901780fae6c72beed34248e8e252d" category="inline-link">使用備份和還原將本機ONTAP資料備份到 Azure Blob 存儲</block>
-  <block id="6d94d8c7b4ec021fb7a5a5704629681e" category="cell"><block ref="6d94d8c7b4ec021fb7a5a5704629681e" category="inline-link-rx"></block></block>
   <block id="2647d0cabcc3f6f95c50e907a499a04c" category="section-title">NetApp複製與同步</block>
   <block id="c3cccd9ce135f450a9619b57dba5e5f1" category="cell">在 Azure 中部署資料代理</block>
   <block id="05f8fb1bf008e214609328fb34b7e532" category="cell">用於部署資料代理程式的 Azure 使用者帳戶必須具有所需的權限。</block>
   <block id="c658fd4f091c10877f154fbf84fbee89" category="inline-link">在 Azure 中部署資料代理程式所需的權限</block>
-  <block id="fe6b9c6ed5d8a08b2dbc8fc0c9f1b1e1" category="cell"><block ref="fe6b9c6ed5d8a08b2dbc8fc0c9f1b1e1" category="inline-link-rx"></block></block>
   <block id="d3846482b7a5f3467b05518965422219" category="section-title">Google Cloud 權限</block>
   <block id="29979c57d65e0d9e92c7917a495cdb0b" category="paragraph">控制台需要控制台代理程式和各個服務的 Google Cloud 權限。</block>
   <block id="e31e5964808968a788e49e50220d6ef1" category="cell">從控制台部署控制台代理程式的 Google Cloud 使用者需要特定權限才能在 Google Cloud 中部署控制台代理程式。</block>
@@ -2856,30 +2817,23 @@
   <block id="1b29b6160eb822ba4beffa87a9ffbc2f" category="inline-link-macro">設定控制台代理的權限</block>
   <block id="b5b529e8dc821910caacb50b880d2487" category="cell">將Cloud Volumes ONTAP備份到 Google Cloud</block>
   <block id="cd84e76d2557bd459057089ba5e1385c" category="inline-link">使用備份和還原將Cloud Volumes ONTAP資料備份到 Google Cloud Storage</block>
-  <block id="3b5162ff96cd00bbd1b1ad424d59bd8f" category="list-text"><block ref="3b5162ff96cd00bbd1b1ad424d59bd8f" category="inline-link-rx"></block></block>
   <block id="dc5b71cece1f13a67fc01472a59d8781" category="inline-link">CMEK 的權限</block>
-  <block id="564104d82a92323d6161aa7da0e8071a" category="list-text"><block ref="564104d82a92323d6161aa7da0e8071a" category="inline-link-rx"></block></block>
   <block id="6e9436752850e460930666efdaf1e025" category="cell">將本地ONTAP叢集備份到 Google Cloud</block>
   <block id="6d4f1161a06d11fa7424e224b2a86d25" category="inline-link">使用備份和還原將本地ONTAP資料備份到 Google Cloud Storage</block>
-  <block id="b9142ed8495860430205961c82c827a0" category="cell"><block ref="b9142ed8495860430205961c82c827a0" category="inline-link-rx"></block></block>
   <block id="326383c715f7d58418eab62449d7e6b5" category="cell">在 Google Cloud 中部署資料代理</block>
   <block id="6f0cd56d775c80607dc578326e3840bd" category="cell">確保部署資料代理程式的 Google Cloud 使用者俱有所需的權限。</block>
   <block id="23c5a36a4e18015e399e97b3a48f2255" category="inline-link">在 Google Cloud 中部署資料代理程式所需的權限</block>
-  <block id="958a0d8cd16ff833279695f251ff3807" category="cell"><block ref="958a0d8cd16ff833279695f251ff3807" category="inline-link-rx"></block></block>
   <block id="835763cb29b6af444564b2a25239e51b" category="cell">為手動安裝的資料代理啟用 Google Cloud 存取權限</block>
   <block id="9bb2d547aba26d64f54ee705473214d6" category="cell">如果您打算使用包含 Google Cloud Storage 儲存桶的同步關係的資料代理，那麼您應該準備 Linux 主機以供 Google Cloud 存取。安裝資料代理程式時，您需要為具有特定權限的服務帳戶提供金鑰。</block>
   <block id="71921838fce69c9d045aeb2ad30c1eb5" category="inline-link">啟用對 Google Cloud 的訪問</block>
-  <block id="9b9b58eacf6390de371391672ac7e8ec" category="cell"><block ref="9b9b58eacf6390de371391672ac7e8ec" category="inline-link-rx"></block></block>
   <block id="23c27147b4e0e766d76ac0f6e872424e" category="section-title">StorageGRID權限</block>
   <block id="f8652e062d0b34a9d24569c70cc3984b" category="paragraph">控制台需要兩項服務的StorageGRID權限。</block>
   <block id="9f60318dba873b8aa280da655451eafb" category="cell">將本機ONTAP叢集備份到StorageGRID</block>
   <block id="9445c71cb630b8ebb44bf8793effe2a2" category="cell">當您準備將StorageGRID作為ONTAP叢集的備份目標時， NetApp Backup and Recovery 會提示​​您輸入具有特定權限的 IAM 使用者的存取金鑰和密碼。</block>
   <block id="08cdeb7ce64fda06111111c8fea66510" category="inline-link">準備StorageGRID作為備份目標</block>
-  <block id="86b4fb0c56ea4924e5069e8f25d3a778" category="cell"><block ref="86b4fb0c56ea4924e5069e8f25d3a778" category="inline-link-rx"></block></block>
   <block id="15160ee45cf43a64b4673fc1b3aa1643" category="cell">將本地ONTAP集群分層到StorageGRID</block>
   <block id="11e2d6813eb0483f8b31076b7e6c7afa" category="cell">當您將NetApp Cloud Tiering 設定到StorageGRID時，您需要向 Cloud Tiering 提供 S3 存取金鑰和金鑰。雲端分層使用密鑰來存取您的儲存桶。</block>
   <block id="7642cdcc7094ebeb3d2e2a2bb2bfa636" category="inline-link">準備分層到StorageGRID</block>
-  <block id="3ef741c544ca847d3024be8a651b7fe2" category="cell"><block ref="3ef741c544ca847d3024be8a651b7fe2" category="inline-link-rx"></block></block>
   <block id="e1edd376b42eb32b04ef863ae044ce62" category="summary">控制台代理程式的 AWS 安全群組需要入站和出站規則。當您從控制台建立控制台代理時， NetApp控制台會自動建立此安全性群組。您需要為所有其他安裝選項設定此安全群組。</block>
   <block id="5a931853aad1f1d690678ccb9b8a0bc7" category="doc">AWS 中的控制台代理程式安全性群組規則</block>
   <block id="aa6e1b8ebab31b906753ceae2a08d78c" category="paragraph">代理程式的 AWS 安全群組需要入站和出站規則。當您從控制台建立控制台代理時， NetApp控制台會自動建立此安全性群組。您需要為所有其他安裝選項設定此安全群組。</block>
@@ -2928,7 +2882,6 @@
   <block id="079f3f3a9e5f3446518d4bebe9e1d5f1" category="doc">Azure 中的控制台代理程式安全性群組規則</block>
   <block id="9fcefa244d66c49cdb3c2e28234c2f42" category="cell">提供從客戶端 Web 瀏覽器到本機使用者介面的 HTTPS 訪問，以及來自NetApp資料分類實例的連接</block>
   <block id="81134f47f2ab0d8ef284a48a6aeee3db" category="inline-link">了解如何將代理用作AutoSupport訊息的代理</block>
-  <block id="ee471c2d4a3ccf607b27ef9575a6015f" category="cell">為Cloud Volumes ONTAP提供網路存取權限，以便將AutoSupport訊息傳送給NetApp支援。部署後您必須手動開啟此連接埠。<block ref="7dcbbd9895502c86c4c9b4df53210c58" category="inline-link-rx"></block></block>
   <block id="b328da3e839d02fc907b65467b5e31ea" category="paragraph">如果您需要對出站流量製定嚴格的規則，則可以使用以下資訊僅開啟代理出站通訊所需的連接埠。</block>
   <block id="97cd847069f6f4b5f1e2bd1c8341ab6c" category="cell">對 Azure、 ONTAP、 NetApp資料分類的 API 調用，以及向NetApp發送AutoSupport訊息</block>
   <block id="74794c3be947278b7172132c8ec473f8" category="summary">代理程式的 Google Cloud 防火牆規則需要入站和出站規則。當您從控制台建立控制台代理時， NetApp控制台會自動建立此安全性群組。對於其他安裝選項，您需要手動設定此安全性群組。</block>
@@ -2945,19 +2898,12 @@
   <block id="d279ef9d3fa427882e45e653bc7b1949" category="doc">接下來可以做什麼（受限模式）</block>
   <block id="9ed3d93e6149b9255047c4f345ace3ed" category="paragraph">如需協助，請參閱以下服務的文件：</block>
   <block id="d75d347ae1d51e933d39fea688b0abf1" category="inline-link">Azure NetApp Files文檔</block>
-  <block id="d65407cebf6d2e36f3f922a3e220c70d" category="list-text"><block ref="d65407cebf6d2e36f3f922a3e220c70d" category="inline-link-rx"></block></block>
   <block id="6187e32203fd05e22e575166349f5b99" category="inline-link">備份和恢復文檔</block>
-  <block id="bca13516ef3cfec79ff01148d8045101" category="list-text"><block ref="bca13516ef3cfec79ff01148d8045101" category="inline-link-rx"></block></block>
   <block id="e97ae785ddbd746339946844f92175e6" category="inline-link">分類文檔</block>
-  <block id="7c28b52095b10154ef9a5a9b2d86d181" category="list-text"><block ref="7c28b52095b10154ef9a5a9b2d86d181" category="inline-link-rx"></block></block>
   <block id="2971acb1ab572cfb61b7c86d49e2b300" category="inline-link">Cloud Volumes ONTAP文檔</block>
-  <block id="e45aa572e4fc463c8b2aa0b4bb010689" category="list-text"><block ref="e45aa572e4fc463c8b2aa0b4bb010689" category="inline-link-rx"></block></block>
   <block id="32bf39c0f4f8e0ff3b8343a1c55eccc0" category="inline-link">數位錢包文檔</block>
-  <block id="950b8d2ee51e322cd0332cda491f261e" category="list-text"><block ref="950b8d2ee51e322cd0332cda491f261e" category="inline-link-rx"></block></block>
   <block id="3014dc2d87cf02248e7abe6b8ac89106" category="inline-link">本地ONTAP集群文檔</block>
-  <block id="3c2636f752222ce604af87906e481f03" category="list-text"><block ref="3c2636f752222ce604af87906e481f03" category="inline-link-rx"></block></block>
   <block id="7596270426e8c5f92be308ff330e0e64" category="inline-link">複製文檔</block>
-  <block id="17ba1853097c1b83e5a82753f8133c2e" category="list-text"><block ref="17ba1853097c1b83e5a82753f8133c2e" category="inline-link-rx"></block></block>
   <block id="2a9ab4f690bade887dade42f4a0f412b" category="inline-link-macro">NetApp控制台部署模式</block>
   <block id="d207a80d28ecc0fdd948737abee4ead7" category="paragraph"><block ref="d207a80d28ecc0fdd948737abee4ead7" category="inline-link-macro-rx"></block></block>
   <block id="b0fff5137090a82065e80b458cc6b247" category="summary">現在您已登入並以標準模式設定NetApp控制台，使用者可以建立和發現儲存系統並使用NetApp資料服務。</block>
@@ -2965,7 +2911,6 @@
   <block id="1631307de579ca654518e4c823f3a805" category="paragraph">現在您已登入並以標準模式設定NetApp控制台，使用者可以建立和發現儲存系統並使用NetApp資料服務。</block>
   <block id="d5ac47786c5ecc4bccfda87432027f10" category="admonition">如果您在 AWS、Microsoft Azure 或 Google Cloud 中安裝了控制台代理，則控制台會自動發現安裝代理的位置中的 Amazon S3 儲存桶、Azure Blob 儲存體或 Google Cloud Storage 儲存桶的資訊。這些系統會自動加入到*系統*頁面。</block>
   <block id="c1c3022dcc260fbaf1dede24f4963496" category="inline-link">NetApp控制台文件主頁</block>
-  <block id="c0879d4e3e96b78a75b570d2d369f118" category="paragraph">如需協助，請訪問<block ref="8483a0398a853c776d6ec0ca8b8f72e9" category="inline-link-rx"></block>查看NetApp控制台文件。</block>
   <block id="02d943e056fd84c122f270e9db3de326" category="summary">新增和管理 AWS 憑證，以便NetApp控制台具有在您的 AWS 帳戶中部署和管理雲端資源所需的權限。如果您管理多個 AWS 訂閱，則可以從「憑證」頁面將每個訂閱指派給不同的 AWS 憑證。</block>
   <block id="51c9eb8f2bdf1ba7a4e0dbc5ca8299bd" category="doc">管理NetApp控制台的 AWS 憑證和市場訂閱</block>
   <block id="d627e8413e37270774742dd64f2f5b41" category="paragraph">新增和管理 AWS 憑證，以便您從NetApp控制台部署和管理 AWS 帳戶中的雲端資源。如果您管理多個 AWS Marketplace 訂閱，則可以從「憑證」頁面將每個訂閱指派給不同的 AWS 憑證。</block>
@@ -2978,7 +2923,6 @@
   <block id="b7a848ec238dd094b177100e78ff06a3" category="paragraph">在控制台新增的 AWS 憑證可提供建立控制台代理程式所需的權限。<block ref="d0e6204fefda37da5b5c61d3ad4082f6" category="inline-xref-macro-rx"></block> 。</block>
   <block id="3da47a3f3c0119e018d02075127a00ff" category="list-text">將 AWS 憑證新增至 FSx for ONTAP控制台</block>
   <block id="f63d604edef29843d35ad367e0d82814" category="inline-link">了解如何設定 FSx for ONTAP 的權限</block>
-  <block id="2a4a88fb166990c65e380a867dc0af52" category="paragraph">將新的 AWS 憑證新增至控制台以建立和管理 FSx for ONTAP。<block ref="07664dcf2b17e9e9636df6c1a5a6f557" category="inline-link-rx"></block></block>
   <block id="d40f2c83e95f6746ea810ba2593deb2d" category="section-title">如何輪換憑證</block>
   <block id="e7273d95e9d37fd9da1a8a44576c6922" category="inline-link-macro">了解有關 AWS 憑證和權限的更多信息</block>
   <block id="c2a5f59127daff8b6605662687767286" category="paragraph">NetApp控制台可讓您透過幾種方式提供 AWS 憑證：與代理程式實例關聯的 IAM 角色、在受信任的帳戶中承擔 IAM 角色或提供 AWS 存取金鑰。<block ref="327ad200be450c94b449dea92a32b142" category="inline-link-macro-rx"></block> 。</block>
@@ -3036,7 +2980,6 @@
   <block id="e8cffeeec612132e8c2cb2355463f31f" category="paragraph">參考<block ref="ac3530460cd18c242c3653db3709495c" category="inline-link-macro-rx"></block>有關 IAM 中跨帳戶資源存取的詳細資訊。</block>
   <block id="7770b43cc8b94c3a2a19f58dd17562a4" category="list-text">建立一個包含建立控制台代理程式所需權限的策略。</block>
   <block id="3d35bba2e5ea6e739fb94736dc402017" category="inline-link">查看 FSx for ONTAP所需的權限</block>
-  <block id="f36b248a3e4e722bcc9292d2e5151abc" category="list-text"><block ref="f36b248a3e4e722bcc9292d2e5151abc" category="inline-link-rx"></block></block>
   <block id="c19d1741d0fa79c8b012a7f8b068bc6c" category="inline-link-macro">查看代理部署策略</block>
   <block id="884fd0826fb740e296bb4324a3742247" category="list-text">複製 IAM 角色的角色 ARN，以便您可以在下一步中將其貼上到控制台中。</block>
   <block id="d04fbc50c09432c35c0eb302581b70e6" category="inline-xref">現在您可以將其新增至控制台</block>
@@ -3050,7 +2993,6 @@
   <block id="8cf335d7d3b1dd5cdac30699d20489c0" category="list-text">*定義憑證*：提供 IAM 角色的 ARN（Amazon 資源名稱）。</block>
   <block id="b07bcd019d5673f40409ccc629aee309" category="section-title">在Amazon FSx for ONTAP控制台新增憑證</block>
   <block id="0967d5014be6ea1485ad3e2ef66038b4" category="inline-link">Amazon FSx for ONTAP 的控制台文檔</block>
-  <block id="61ff856137c8bc1fe2f4fc536706ee0f" category="paragraph">有關詳細信息，請參閱<block ref="7a47913e8a2d8cc2b4688508236ccf64" category="inline-link-rx"></block></block>
   <block id="ff462988ef2bf728297fe5ed85ddc08d" category="section-title">配置 AWS 訂閱</block>
   <block id="06efaa955480ed147875fb9eaea13502" category="paragraph">新增 AWS 憑證後，您可以使用這些憑證設定 AWS Marketplace 訂閱。透過訂閱，您可以按小時費率（PAYGO）或使用年度合約支付Cloud Volumes ONTAP費用，並支付其他資料服務費用。</block>
   <block id="baaf3fcde87b40756b9492e5ed1f488b" category="paragraph">在新增憑證後，您可以在兩種情況下設定 AWS Marketplace 訂閱：</block>
@@ -3214,13 +3156,9 @@
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">下一步是什麼？</block>
   <block id="71e32bbdd672e63bea65d67ecaa9f394" category="paragraph">使用者現在可以在建立新的Cloud Volumes ONTAP系統和註冊現有Cloud Volumes ONTAP系統時選擇帳戶。</block>
   <block id="6602afb860a6cca23c3b75bf601365eb" category="inline-link">在 AWS 中啟動Cloud Volumes ONTAP</block>
-  <block id="6cfeb8c907e4b67e454993b95d8b4c8b" category="list-text"><block ref="6cfeb8c907e4b67e454993b95d8b4c8b" category="inline-link-rx"></block></block>
   <block id="7ca1af679f0ba86814f2ad58a578cb7c" category="inline-link">在 Azure 中啟動Cloud Volumes ONTAP</block>
-  <block id="27a3e4e8b80492209761738784b770d5" category="list-text"><block ref="27a3e4e8b80492209761738784b770d5" category="inline-link-rx"></block></block>
   <block id="254d5c87d5ab437395f866390ea49cd0" category="inline-link">在 Google Cloud 啟動Cloud Volumes ONTAP</block>
-  <block id="f8c7ce78aaf937671ef25c9c931e368e" category="list-text"><block ref="f8c7ce78aaf937671ef25c9c931e368e" category="inline-link-rx"></block></block>
   <block id="a37ea04c3e1568f7c0e8e6abc9104d40" category="inline-link">註冊現收現付系統</block>
-  <block id="b973035f0b680495b14f344d6beef53c" category="list-text"><block ref="b973035f0b680495b14f344d6beef53c" category="inline-link-rx"></block></block>
   <block id="8cb2ff10d15cea1a460cee3b506d5a6c" category="section-title">更新 NSS 憑證</block>
   <block id="256ed78b4e0484125eb0f0e66fdb7156" category="inline-link-macro">了解通知中心</block>
   <block id="7ae67a8f0cad963ada3c4c6ef2408149" category="paragraph">出於安全原因，您必須每 90 天更新一次您的 NSS 憑證。如果您的 NSS 憑證已過期，您將在控制台通知中心收到通知。<block ref="7547de016d191efcd551f32d625b2bc1" category="inline-link-macro-rx"></block> 。</block>
@@ -3351,7 +3289,6 @@
   <block id="2a398a7caf83846d0b6a5ffb7e46e036" category="paragraph">如果您將控制台代理程式設定為使用代理伺服器，則可以在控制台代理程式上啟用直接 API 流量，以便將 API 呼叫直接傳送至雲端提供者服務，而無需透過代理程式。在 AWS、Azure 或 Google Cloud 中執行的代理程式支援此選項。</block>
   <block id="c37870a98a047f7cae1ee48e164d5230" category="paragraph">如果您停用帶有Cloud Volumes ONTAP 的Azure Private Links 並使用服務端點，請啟用直接 API 流量。否則，流量將無法正確路由。</block>
   <block id="ac10c9401f16ed5ff0a029bce2712adc" category="inline-link">了解有關將 Azure Private Link 或服務端點與Cloud Volumes ONTAP結合使用的更多信息</block>
-  <block id="6143580a5ae490efe32d3c566650ad6c" category="paragraph"><block ref="6143580a5ae490efe32d3c566650ad6c" category="inline-link-rx"></block></block>
   <block id="f5d22e387d3dd91dbc45f16de7949a06" category="list-text">選擇*支援直接 API 流量*。</block>
   <block id="c569dd49f93a05d537d61130ed43e6e9" category="list-text">選取核取方塊以啟用該選項，然後選擇*儲存*。</block>
   <block id="63cc3bd9a1d39c996544d35459a3e83f" category="list-text">新增NetApp支援網站 (NSS) 帳戶。</block>
@@ -3426,9 +3363,7 @@
   <block id="7133c14b211d52731ad6f21655c0ec9b" category="paragraph">*支援的資料來源*</block>
   <block id="e386436f15048683d3f17d234b4e411c" category="paragraph">查看有關ONTAP中發生的某些事件的警報。它們是 EMS 和基於指標的警報的組合。</block>
   <block id="2cf989894baae7ae8de6dbe4cf6f407f" category="inline-link">關於ONTAP警報</block>
-  <block id="6132c2608446a171740c9a7b74d30055" category="paragraph">有關ONTAP警報的詳細信息，請參閱<block ref="c1273157df1968b52f265690f65525a0" category="inline-link-rx"></block>。</block>
   <block id="17b76c30a93a18ec82fdbf45ed64d83a" category="inline-link">查看ONTAP儲存中的潛在風險</block>
-  <block id="77940bcbdb92a607c1ad6e3487015d0f" category="paragraph">有關您可能會看到的警報列表，請參閱<block ref="cbcbe8f907f72d472118cc8b75fd1584" category="inline-link-rx"></block>。</block>
   <block id="2e1349d5a47ec79356f49a534ef42916" category="list-text">從NetApp控制台選單中，查看ONTAP警報窗格。</block>
   <block id="d8e39c19a634eb2aa6152d2cd109eac7" category="list-text">或者，透過選擇嚴重性等級來過濾警報，或更改過濾器以根據影響區域顯示警報。</block>
   <block id="96a25385ec9b871387fac4daafaa9c5b" category="list-text">在ONTAP警報窗格中，選擇「檢視」以前往「控制台警報」頁面。</block>
@@ -3454,16 +3389,12 @@
   <block id="c3ecd5a019581be952b7e478466f0cfc" category="list-text">從NetApp控制台選單中，檢視「勒索軟體復原力」窗格。</block>
   <block id="8c3c718749afd86a59b68786f22641b6" category="list-text">在「勒索軟體復原」窗格中執行下列操作之一：</block>
   <block id="7f176789d86d465c8df04184cd91e82b" category="inline-link">使用NetApp勒索軟體復原力儀表板監控工作負載健康狀況</block>
-  <block id="3da74bd796ba53b3317f5c65b2148573" category="list-text">選擇「檢視」前往NetApp勒索軟體復原力儀表板。有關詳細信息，請參閱<block ref="80742ca6f2ca5f5f51cc3c72457456a5" category="inline-link-rx"></block>。</block>
   <block id="7a61996cbb18f958380b50621ee46926" category="inline-link">查看NetApp勒索軟體復原力儀表板上的防護建議</block>
-  <block id="945516a70bbb0c75fab6b7fcc6fc7bb5" category="list-text">請參閱NetApp勒索軟體復原力儀表板中的「建議操作」。有關詳細信息，請參閱<block ref="5f776c69c6938c83acfe6975ee9631b6" category="inline-link-rx"></block>。</block>
   <block id="1238309e873f300d76b90a5b0f3a20bc" category="inline-link">使用NetApp勒索軟體復原功能處理偵測到的勒索軟體警報</block>
-  <block id="895f952b6b7fb8a4d01c8cd15c49e783" category="list-text">選擇警報連結以查看NetApp勒索軟體恢復警報頁面中的警報。有關詳細信息，請參閱<block ref="300fa0ea0e62adad4505e15c5632b2cb" category="inline-link-rx"></block>。</block>
   <block id="cda031fa0adafc5a616e6edff4b9b099" category="section-title">查看備份和復原狀態</block>
   <block id="7815eb7c41b45edadaa885a3723934fb" category="paragraph">查看NetApp Backup and Recovery 的備份和復原的整體狀態。您可以看到受保護和不受保護的資源的數量。您也可以查看備份和復原作業的百分比，以保護您的工作負載。百分比越高，表示資料保護越好。</block>
   <block id="a269cbc677bdaf22ecccde39ad962c9b" category="list-text">從NetApp控制台選單中，檢視「備份與復原」窗格。</block>
   <block id="bef219d35a4468480b0ce759221cdceb" category="inline-link">NetApp備份和還原文檔</block>
-  <block id="3d600fe86481d91b92c11fdf5ca2ca73" category="list-text">選擇“*檢視*”前往NetApp備份和還原儀表板。有關詳細信息，請參閱<block ref="4e03d05dad0487791bcff2588144bf73" category="inline-link-rx"></block>。</block>
   <block id="ef115e8ed0d2118ec4e8fc147ad0a789" category="summary">與您的 Active Directory 聯合驗證服務 (AD FS) 聯合，為NetApp控制台啟用單一登入 (SSO)。這允許用戶使用他們的公司憑證登入。</block>
   <block id="03ce0a75253f028c7b59d2e045c61730" category="doc">將NetApp控制台與 Active Directory 聯合服務 (AD FS) 聯合起來</block>
   <block id="df279c297fab55d5f1c2bb16edd8b9c8" category="paragraph">將您的 Active Directory 聯合驗證服務 (AD FS) 與NetApp控制台聯合起來，以便為NetApp控制台啟用單一登入 (SSO)。這允許用戶使用他們的公司憑證登入控制台。</block>
@@ -3682,7 +3613,6 @@
   <block id="1a5a9a56e04bbba24a4b989d5017d535" category="inline-link-macro">開始使用身分和存取權限</block>
   <block id="411ec776ef98d4c711a192a4fe599e3b" category="list-text"><block ref="411ec776ef98d4c711a192a4fe599e3b" category="inline-link-macro-rx"></block></block>
   <block id="3721423bab8a75aede6f2f51e549eaeb" category="inline-link">了解身分和存取管理的 API</block>
-  <block id="7f547ac0f31a0192ce9403359a906c05" category="list-text"><block ref="7f547ac0f31a0192ce9403359a906c05" category="inline-link-rx"></block></block>
   <block id="b8740c7a3b27cb5802fc3d722766e89d" category="summary">從稽核頁面監控或稽核NetApp控制台身分和存取管理操作。</block>
   <block id="607d8cf2123281784d1ecb675017df5d" category="paragraph">如果您需要監控或稽核與身分和存取相關的已完成的操作，您可以從稽核頁面查看詳細資訊。例如，您可能想要驗證誰向組織新增了成員或專案是否已成功刪除。</block>
   <block id="aa46e79c9c39c9b3aa215604efa5eb2c" category="list-text">選擇“管理”&gt;“審計”。</block>
@@ -3705,12 +3635,6 @@
   <block id="369419be6c2d63174cdf720283757d9b" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>新增或發現資源</block>
   <block id="19bbad65b41440b72846c83f76bc1afc" category="paragraph">在控制台新增或發現資源（系統）。組織成員從專案內部管理系統。</block>
   <block id="8f2877163fc10767d891d30a2383ddd3" category="paragraph">了解如何建立或發現資源：</block>
-  <block id="8ed358b5f97ac929cbf55d77be2ae1c3" category="list-text"><block ref="8ed358b5f97ac929cbf55d77be2ae1c3" category="inline-link-rx"></block></block>
-  <block id="02a8d4819b5139097a91d9e8b93e0042" category="list-text"><block ref="02a8d4819b5139097a91d9e8b93e0042" category="inline-link-rx"></block></block>
-  <block id="99cd6bbb6bd6b4f32aaf030548bc8abb" category="list-text"><block ref="99cd6bbb6bd6b4f32aaf030548bc8abb" category="inline-link-rx"></block></block>
-  <block id="88b75fafcd5fe284804d4e4a240a0a52" category="list-text"><block ref="88b75fafcd5fe284804d4e4a240a0a52" category="inline-link-rx"></block></block>
-  <block id="8a92c7a06d8d0a82ae22fd0df9c480fc" category="list-text"><block ref="8a92c7a06d8d0a82ae22fd0df9c480fc" category="inline-link-rx"></block></block>
-  <block id="6d14225a666e4ce0c6e84d99c57c45f7" category="list-text"><block ref="6d14225a666e4ce0c6e84d99c57c45f7" category="inline-link-rx"></block></block>
   <block id="2a3af81903d30050b417342ded50e5a3" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block>將資源與其他項目關聯</block>
   <block id="0906aaf468f098353aa4f8a2719daf6c" category="paragraph">在控制台中新增或發現系統會自動將資源與目前選定的項目關聯。若要使該資源可用於組織中的另一個項目，請將其與對應的項目關聯。如果使用控制台代理程式來管理資源，請將控制台代理程式與對應的項目關聯。</block>
   <block id="4430cefb38674d70ef9b7fe67aee23c8" category="inline-link-macro">了解如何管理組織的資源層次結構</block>
@@ -3719,7 +3643,6 @@
   <block id="0219628965579f3125a85333ababe4a8" category="inline-link-macro">了解NetApp控制台中的身分和存取管理</block>
   <block id="e2a0d9cb668e6b8456f193f9e7481e9e" category="list-text"><block ref="e2a0d9cb668e6b8456f193f9e7481e9e" category="inline-link-macro-rx"></block></block>
   <block id="d74a08d7ee858b57e9e95937c86453c6" category="inline-link">了解身分和存取 API</block>
-  <block id="7db3a4b09ee10eaf7e2d6fb1a728d9d5" category="list-text"><block ref="7db3a4b09ee10eaf7e2d6fb1a728d9d5" category="inline-link-rx"></block></block>
   <block id="6b2ba5a58459a38337e4a785867d2123" category="summary">在NetApp控制台中，使用身分和存取管理可讓您使用資料夾和專案來表示完整的資源層次結構。</block>
   <block id="c91d4274dbc95093979f44d9158f63c4" category="doc">使用資料夾和專案組織您的NetApp控制台資源</block>
   <block id="6dca94e5f8ef4f7534b19b4528884acb" category="paragraph">在NetApp控制台中，您可以使用專案和資料夾來組織您的NetApp資源。  _專案_代表控制台中的一個工作區，組織成員可以存取該工作區來管理_資源_（例如， Cloud Volumes ONTAP系統）。 _資料夾_將相關項目分組在一起。將資源組織到資料夾和專案後​​，您可以透過向組織成員提供特定資料夾和項目的權限來授予對資源的細粒度存取權限。</block>
@@ -3786,7 +3709,6 @@
   <block id="c3e4c9c85856b5efe1954f26503c635d" category="inline-link-macro">了解NetApp控制台中的身分和存取權限</block>
   <block id="0180bd7ee40eeb082fc40adcb1842ee2" category="list-text"><block ref="0180bd7ee40eeb082fc40adcb1842ee2" category="inline-link-macro-rx"></block></block>
   <block id="0d1eeacefa3d24f7c6debacd39a43d19" category="inline-link">了解身分和存取 API</block>
-  <block id="2c859482c77a4cec7378110226c23d87" category="list-text"><block ref="2c859482c77a4cec7378110226c23d87" category="inline-link-rx"></block></block>
   <block id="0574e6792e501b2d7f486dd56c08812e" category="summary">管理組織的成員以提供組織資源層級結構不同層級的權限。</block>
   <block id="b3977944ab3f32dc0aa6da440a2a0fd6" category="doc">將成員和服務帳戶新增至NetApp控制台</block>
   <block id="d2729cf62f219b942e9e38ba9c0da3f4" category="paragraph">在控制台中，您可以將使用者和服務帳戶新增至您的組織，並在資源層次結構中為他們指派一個或多個角色。角色包含一組權限，使成員（使用者或服務帳戶）能夠在資源層次結構的特定層級執行特定操作。</block>
@@ -3938,7 +3860,6 @@
   <block id="f5c5f2c4e09a3be34c769b9a476a5774" category="summary">您可能屬於多個控制台組織，或有權存取組織內的多個專案或代理程式。需要時，您可以輕鬆地在組織、專案和控制台代理之間切換，以存取與該組織、專案或代理相關的資源。</block>
   <block id="563e9d605dde4e125a815a2688ed1349" category="doc">在控制台組織、專案和代理之間切換</block>
   <block id="99b40e7c0a7b505819ce6f7bdb86dc3a" category="inline-link">了解如何建立新組織</block>
-  <block id="8e759a3574fb4c28c37288edf66ba07d" category="admonition">如果其他組織邀請您加入或您自己創建一個組織，那麼您可能屬於多個組織。您可以使用 API 建立其他組織。<block ref="a875b8dda0804745acf04cfe74e1bbff" category="inline-link-rx"></block></block>
   <block id="f2fd478a05acdd29af1bbc7530937c70" category="section-title">在組織之間切換</block>
   <block id="9f3d2a13f08b19e773a3807a2007b683" category="paragraph">如果您是多個組織的成員，您可以隨時在它們之間切換。</block>
   <block id="ce9cf37aa526c2356de3fbaef3365462" category="list-text">在控制台的頂部標題中，選擇*組織*。</block>
@@ -4158,7 +4079,6 @@
   <block id="a60b1115783600a21eb41ae13935fdc8" category="paragraph">控制台大約需要 10 分鐘才能準備好實例。停留在該頁面上，直到過程完成。</block>
   <block id="39dbd35a18bfa38cac810c0be826b561" category="paragraph">過程完成後，即可從控制台使用控制台代理。</block>
   <block id="510a2d4afe6727bcdbafc74a103f9f16" category="inline-link">了解如何從NetApp控制台管理 S3 儲存桶</block>
-  <block id="af2cca04ee665c389d737de3e58b6615" category="paragraph">如果您在建立控制台代理程式的相同 AWS 帳戶中擁有 Amazon S3 儲存桶，您將看到 Amazon S3 工作環境自動出現在 *系統* 頁面上。<block ref="b005331392e349a72b0688cce0d673cf" category="inline-link-rx"></block></block>
   <block id="3b46ada3c2c8fc9685f33a61ccf996e6" category="summary">您可以在 AWS 中執行的 Linux 主機上手動安裝控制台代理程式。要在您自己的 Linux 主機上手動安裝控制台代理，您需要查看主機要求、設定網路、準備 AWS 權限、安裝控制台代理，然後提供您準備好的權限。</block>
   <block id="5b6c8baef296a0ee0c5ff5b25d3b43fd" category="section-title">步驟 1：查看主機需求</block>
   <block id="6c0ef26774def19ede6fc16398abb877" category="paragraph">控制台代理軟體必須在滿足特定作業系統要求、RAM 要求、連接埠要求等的主機上執行。</block>
@@ -4178,7 +4098,6 @@
   <block id="6f4fb049e4655a1231a4fb0687d8b259" category="section-title">步驟 5：安裝控制台代理</block>
   <block id="f20df450b1161c347a5e7eba9538eeb3" category="paragraph">前提條件完成後，您可以在自己的 Linux 主機上手動安裝軟體。</block>
   <block id="b3175a7a8c2ba73aad02f57026632d9b" category="inline-link">了解如何透過NetApp ConsoleP 管理 S3 儲存桶</block>
-  <block id="22650c36d83f936c83a89d83bbdd28a6" category="paragraph">如果您在建立控制台代理程式的相同 AWS 帳戶中擁有 Amazon S3 儲存桶，您將看到 Amazon S3 儲存系統自動出現在 *系統* 頁面上。<block ref="e6ac614336c858ef10d2ad7ce7ecac70" category="inline-link-rx"></block></block>
   <block id="c38f7847f04d50ab6fcbc66333ed1e25" category="section-title">步驟 6：提供對NetApp控制台的權限</block>
   <block id="abdfcd483825370c001a0b749d453dc4" category="paragraph">現在您已經安裝了控制台代理，您需要為控制台提供您先前設定的 AWS 權限。提供權限可讓控制台代理程式能夠管理 AWS 中的資料和儲存基礎架構。</block>
   <block id="5a52914d8d01c8e84d9a721dbf01a42b" category="paragraph">將您先前建立的 IAM 角色附加到控制台代理 EC2 執行個體。</block>
@@ -4205,7 +4124,6 @@
   <block id="4f5fd09b0fecd121d7890d5fcdd126ea" category="inline-link-macro">依照步驟在受限模式下開始使用NetApp控制台</block>
   <block id="797bbe628ec1fb17e30cf7efe960c970" category="paragraph">保持限制模式處於停用狀態以便在標準模式下使用控制台。只有當您擁有安全的環境並希望中斷此帳戶與控制台後端服務的連線時，才應啟用受限模式。如果真是這樣的話，<block ref="a92127338ae53d774985c3d6a7c5b7c1" category="inline-link-macro-rx"></block> 。</block>
   <block id="f6e97ff0fb0f4979084a2738aea0b268" category="paragraph">開啟 Web 瀏覽器並前往<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block>開始將控制台代理與控制台一起使用。</block>
-  <block id="e9330a8471e0a384983713146e81a0b2" category="paragraph">如果您在建立控制台代理程式的相同 AWS 帳戶中擁有 Amazon S3 儲存桶，您將看到 Amazon S3 工作環境自動出現在 *系統* 頁面上。<block ref="b005331392e349a72b0688cce0d673cf" category="inline-link-rx"></block></block>
   <block id="59b644c031d039c3f70028419f505a76" category="summary">若要從NetApp控制台在 Azure 中建立控制台代理，您需要設定網路、準備 Azure 權限，然後建立控制台代理程式。</block>
   <block id="76909bffdda2d34fdab18521c25be5db" category="doc">從NetApp控制台在 Azure 中建立控制台代理</block>
   <block id="445d78fbb089087ac4454ded9bdb17f9" category="paragraph">確保您打算安裝控制台代理的網路位置支援以下要求。這些要求允許控制台代理管理混合雲資源。</block>
@@ -4349,7 +4267,6 @@
   <block id="0b6aa4ea63b3a77b1b57e9fabb90a9fa" category="paragraph">實例大約需要 10 分鐘才能準備就緒；請停留在頁面上直到程序完成。</block>
   <block id="e8b69837aadc0d9aafe18d0701d1dc76" category="paragraph">過程完成後，控制台代理即可使用。</block>
   <block id="9bfb17e64abc7809724f85bcd87b6901" category="inline-link">了解如何透過控制台管理 Google 雲端存儲</block>
-  <block id="97e179c94ec7a0b7bb6a303340f9220d" category="paragraph">如果您在建立控制台代理程式的相同 Google Cloud 帳戶中擁有 Google Cloud Storage 儲存桶，您將看到 Google Cloud Storage 系統自動出現在 *Systems* 頁面上。<block ref="cffcfd21c67513bbf062d20fe008a798" category="inline-link-rx"></block></block>
   <block id="9b733a9bb65187f7133fa984a287399c" category="summary">要在您自己的 Linux 主機上手動安裝控制台代理，您需要查看主機要求、設定網路、準備 Google Cloud 權限、啟用 Google Cloud API、安裝控制台，然後提供您準備好的權限。</block>
   <block id="a85a6ee65fd9978ceeffbb5fdf9afd81" category="paragraph">設定您的網絡，以便控制台代理可以管理混合雲環境中的資源和流程。例如，您需要確保可以連接到目標網路並且可以進行外部網路存取。</block>
   <block id="d7134f839db72245fe3e0d8d0bfce146" category="section-title">步驟 4：設定控制台代理的權限</block>
@@ -4358,7 +4275,6 @@
   <block id="69f380f2398b7565bd53d007caa73472" category="paragraph">在 Google Cloud 中部署Cloud Volumes ONTAP系統之前，必須啟用多個 Google Cloud API。</block>
   <block id="e8e253336558188ed5f5c2ffa5852d13" category="section-title">步驟 7：安裝控制台代理</block>
   <block id="99564e0e630cf4a642f3e276f6caacab" category="inline-link">了解如何透過NetApp控制台管理 Google Cloud Storage</block>
-  <block id="0551424efb838bbf399f625eea3bce10" category="paragraph">如果您在建立控制台代理程式的相同 Google Cloud 帳戶中擁有 Google Cloud Storage 儲存桶，您將看到 Google Cloud Storage 系統自動出現在 *Systems* 頁面上。<block ref="3a3819f771022709389351e989a1819b" category="inline-link-rx"></block></block>
   <block id="4c4edb2137b0216befa4b8e99dca1cde" category="section-title">步驟 8：向控制台代理提供權限</block>
   <block id="7d8205c63a7b91b92998e4cecc811f54" category="paragraph">您需要向控制台代理提供您先前設定的 Google Cloud 權限。提供權限可使控制台代理程式管理 Google Cloud 中的資料和儲存基礎架構。</block>
   <block id="b851520b404a9e4e66e67b6d193bd247" category="list-text">如果您想管理其他 Google Cloud 專案中的資源，請透過將具有控制台代理角色的服務帳號新增至該專案來授予存取權限。您需要對每個項目重複此步驟。</block>
@@ -4587,7 +4503,6 @@
   <block id="6bf1988b3312f00ea9a8a52aa7a47355" category="list-text">如果您正在管理Cloud Volumes ONTAP系統，請將容量管理模式調整為*手動模式*。</block>
   <block id="0bf2e021b970775f65586d6866bfeb5f" category="paragraph">為了避免爭用問題，只有主控制台代理程式應設定為*自動模式*。</block>
   <block id="f05a0e154340f7c017b3a9bfa5a8bf05" category="inline-link">了解有關容量管理模式的更多信息</block>
-  <block id="ad8014f9c9c3f8ac3d5abbafea6de2bc" category="paragraph"><block ref="ad8014f9c9c3f8ac3d5abbafea6de2bc" category="inline-link-rx"></block></block>
   <block id="1e12fbabb20fb5fd9d147dfb17d80816" category="summary">根據您在控制台中執行的操作，您可能已將ONTAP憑證和NetApp支援網站 (NSS) 憑證與您的使用者登入關聯。關聯這些憑證後，您可以檢視和管理它們。例如，如果您變更這些憑證的密碼，則需要在控制台中更新密碼。</block>
   <block id="d86c06c14b06c848fca4417d1ccfa279" category="doc">管理與您的NetApp控制台登入關聯的憑證</block>
   <block id="823a6e1d7fe661be55dd3af05f972b11" category="section-title">ONTAP憑證</block>
@@ -4651,7 +4566,6 @@
   <block id="04596584483670e92bdc26de25673496" category="section-title">比較通知中心和警報</block>
   <block id="c3cab9822e855d79f3020e9791defee0" category="paragraph">通知中心使您能夠查看已啟動的操作的狀態並為某些類型的系統活動設定警報通知。同時，警報可讓您查看ONTAP儲存環境中與容量、可用性、效能、保護和安全性相關的問題或潛在風險。</block>
   <block id="72fab98081395adf122a35be872b657b" category="inline-link">了解有關NetApp控制台警報的更多信息</block>
-  <block id="b8a0a67eb8b2fab97529ca5597273b49" category="paragraph"><block ref="b8a0a67eb8b2fab97529ca5597273b49" category="inline-link-rx"></block></block>
   <block id="2a4be390687f80c7cdf976afca0fe778" category="section-title">通知類型</block>
   <block id="1107ae2a62a0bbfd6588385ac485d797" category="paragraph">控制台將通知分為以下類別：</block>
   <block id="9e89e978c220a2a733d027866cb12907" category="cell">通知類型</block>
@@ -4846,7 +4760,6 @@
   <block id="7e4b1c5ec6c6adb1fa50f4ca17076845" category="cell">BlueXP服務或功能</block>
   <block id="d0622c7af7b2cc2435986b2d005d8fc3" category="cell">*工作環境* 表格的這一部分列出了對BlueXP畫布的工作環境管理的支援。它沒有指出BlueXP backup and recovery所支援的備份目的地。</block>
   <block id="1376d64de9953f470f0708fc6e330334" category="cell">*服務*</block>
-  <block id="a6c599d9b9bbe744be463c056f9e194a" category="cell">是的<block ref="8cbf8dca81955ce6c3d97cec5394e7fd" category="inline-link-rx"></block></block>
   <block id="e216b7a924341f796bca310d1d812baf" category="cell">複製和同步</block>
   <block id="645a84975202e30700b572b49a5ee29d" category="cell">災難復原</block>
   <block id="7478f8f98c41fc2f5747e6f31892fe6f" category="cell">勒索軟體防護</block>
@@ -4906,7 +4819,6 @@
   <block id="3c27ef222c1ee58d80a2a938ecc7eab9" category="paragraph">IMDSv2 提供了增強的針對漏洞的保護。<block ref="cb4336eb4a08d88f663206e070c9e1af" category="inline-link-rx"></block></block>
   <block id="89f5243637c4f72512944130a95ee3e5" category="paragraph">執行個體元資料服務 (IMDS) 在 EC2 執行個體上啟用如下：</block>
   <block id="baebea4bbd59d6c8efcae96586b2e199" category="inline-link">Terraform 腳本</block>
-  <block id="7c284497cdbf639452993fd5334f733a" category="list-text">對於從控制台或使用<block ref="d5789cbcfe02eb67db017173bcddbe49" category="inline-link-rx"></block>，IMDSv2 在 EC2 執行個體上預設啟用。</block>
   <block id="af82b952ad82136894dad49cc241df74" category="list-text">如果您在 AWS 中啟動新的 EC2 實例，然後手動安裝控制台代理軟體，則 IMDSv2 也會預設為啟用。</block>
   <block id="d99e26630de166b939e706dae9b87bde" category="list-text">如果您從 AWS Marketplace 啟動控制台代理，則預設啟用 IMDSv1。您可以在 EC2 執行個體上手動設定 IMDSv2。</block>
   <block id="100daab2bd4211c0dd742e6acc477e50" category="list-text">對於現有的控制台代理，仍然支援 IMDSv1，但如果您願意，可以在 EC2 執行個體上手動設定 IMDSv2。</block>
@@ -4930,7 +4842,6 @@
   <block id="2c239daef1a43ddd2011dfa4a307c157" category="list-text">對於 *IMDSv2*，選擇 *必要*。</block>
   <block id="5cf803d4e6ce3c1fc67e7320dcd440b1" category="list-text">對其他Cloud Volumes ONTAP實例（包括 HA 中介）重複這些步驟。</block>
   <block id="0694adc8bc882f236f606e1c56eebe94" category="inline-link">停止並啟動Cloud Volumes ONTAP實例</block>
-  <block id="96afcc62a59c68b277c1a37c2254e239" category="list-text"><block ref="96afcc62a59c68b277c1a37c2254e239" category="inline-link-rx"></block></block>
   <block id="60d6844eb545641bb1448829af996932" category="paragraph">控制台代理實例和Cloud Volumes ONTAP實例現在已配置為使用 IMDSv2。</block>
   <block id="90d396015a6c35f04f7379d52f402f98" category="summary">可以透過基於 Web 的控制台存取NetApp控制台。要開始使用控制台，您的第一步是註冊或使用您的NetApp支援網站憑證登錄，或建立NetApp控制台登入。</block>
   <block id="5dbaefa65dffe1f0a37c10d0c33764b1" category="doc">註冊或登入NetApp控制台</block>
@@ -4966,9 +4877,7 @@
   <block id="53408e4899de894c1e6bc5c8f7add2d4" category="paragraph">NetApp資料分類可透過您的訂閱啟用，但使用分類是免費的。</block>
   <block id="6128cb243ff25acf013f1f4b0f183a3e" category="paragraph">您必須已經部署控制台代理程式才能訂閱資料服務。您需要將市場訂閱與連接到控制台代理的雲端憑證關聯起來。</block>
   <block id="53043f0a6d597ccfe179296cc8ded9c0" category="inline-link">管理Cloud Volumes ONTAP 的BYOL 基於容量的許可證</block>
-  <block id="fe58f6b68f2391f47e7f19d45735226a" category="list-text"><block ref="fe58f6b68f2391f47e7f19d45735226a" category="inline-link-rx"></block></block>
   <block id="1687f999e1e3454ce506267f03218c10" category="inline-link">管理資料服務的 BYOL 許可證</block>
-  <block id="cd2760f9273d3676c31d8194326e0fce" category="list-text"><block ref="cd2760f9273d3676c31d8194326e0fce" category="inline-link-rx"></block></block>
   <block id="020152b964db48439eb2014e738701a7" category="inline-link">管理 AWS 憑證和訂閱</block>
   <block id="a862ae66b8b0d7b579012fb26bab83a9" category="list-text"><block ref="a862ae66b8b0d7b579012fb26bab83a9" category="inline-link-rx"></block></block>
   <block id="a2716cc89dc4a40328cabec5063837f8" category="inline-link">管理 Azure 憑證和訂閱</block>
@@ -4980,39 +4889,17 @@
   <block id="42dacd60cd3485508aefb9e0fa6699f9" category="paragraph">市場訂閱可對以下NetApp數據服務收費：</block>
   <block id="6269943bbab503c57445a47b04897eaa" category="summary">在向NetApp技術支援部門提交支援案例之前，您需要將NetApp支援網站帳戶新增至NetApp控制台，然後註冊以取得支援。</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">註冊以獲得支持</block>
-  <block id="ece19bab46695021f109a5e50f08bebe" category="paragraph">需要註冊支援才能獲得針對BlueXP及其儲存解決方案和服務的技術支援。還需要支援註冊才能啟用Cloud Volumes ONTAP系統的關鍵工作流程。</block>
-  <block id="8a3d807608e632d188a288fc5f4aa7eb" category="paragraph">註冊支援並不能使NetApp獲得雲端提供者文件服務的支援。有關雲端提供者文件服務、其基礎設施或使用該服務的任何解決方案的技術支持，請參閱該產品的BlueXP文件中的「取得協助」。</block>
-  <block id="9d06990508d25d367d9158c6558eb9c8" category="list-text"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
-  <block id="2e0c742f4616eb27b5b7646aa790edfe" category="list-text"><block ref="2e0c742f4616eb27b5b7646aa790edfe" category="inline-link-macro-rx"></block></block>
-  <block id="cb4bf32603c89d08cad17e7e7dd302f2" category="list-text"><block ref="cb4bf32603c89d08cad17e7e7dd302f2" category="inline-link-macro-rx"></block></block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">支援註冊概述</block>
   <block id="192054ad7601240a3e8be54cc5cc548e" category="paragraph">啟動支持權利的註冊方式有兩種：</block>
-  <block id="29360bfcdbc91d3f1514c372b4585965" category="list-text">註冊您的BlueXP帳號序號（您的 20 位 960xxxxxxxxxxxx 序號位於BlueXP中的支援資源頁面上）。</block>
-  <block id="23fdcbefa6d9cd877be7ceb7a18bb936" category="paragraph">這是您在BlueXP內任何服務的單一支援訂閱 ID。每個BlueXP帳號級支援訂閱都必須註冊。</block>
   <block id="55ff64467cd508971910145ab5d6b3b8" category="list-text">在您的雲端供應商市場中註冊與訂閱相關的Cloud Volumes ONTAP序號（這些是 20 位元 909201xxxxxxxx 序號）。</block>
-  <block id="67dbdeb11e22ea7def810bade59ce818" category="paragraph">這些序號通常被稱為_PAYGO 序號_，由BlueXP在Cloud Volumes ONTAP部署時產生。</block>
-  <block id="28164bf9e881ddc9e7ff74744bfce180" category="paragraph">註冊兩種類型的序號可以實現開立支援票和自動產生案例等功能。按照如下所述，透過將NetApp支援網站 (NSS) 帳戶新增至BlueXP來完成註冊。</block>
-  <block id="444b74bc81e823cc1c4c704219ad8ed3" category="section-title">註冊BlueXP以獲得NetApp支持</block>
-  <block id="b3bf31f8a918c712f26cdf493a908825" category="paragraph">若要註冊支援並啟動支援權利，您的BlueXP組織（或帳戶）中的使用者必須將NetApp支援網站帳號與其BlueXP登入名稱關聯。如何註冊NetApp支援取決於您是否已經擁有NetApp支援網站 (NSS) 帳號。</block>
   <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">擁有 NSS 帳戶的現有客戶</block>
-  <block id="7e177185e7eddff33dd8f3aeb7551132" category="paragraph">如果您是擁有 NSS 帳戶的NetApp客戶，只需透過BlueXP註冊即可獲得支援。</block>
-  <block id="0307a12e5749f8dd930472ee78f69d2c" category="list-text">在BlueXP控制台的右上角，選擇「設定」圖標，然後選擇「*憑證*」。</block>
-  <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">選擇*新增 NSS 憑證*並依照NetApp支援網站 (NSS) 驗證提示進行操作。</block>
   <block id="cfc5506589d5a4d055e721267d5f0732" category="list-text">若要確認註冊過程是否成功，請選擇「幫助」圖標，然後選擇「*支援*」。</block>
-  <block id="2ba7f9eae7a02f9c3ac0fc07517d1c48" category="paragraph">*資源*頁面應顯示您的BlueXP組織已註冊以獲得支援。</block>
-  <block id="759d32287efdf88cd8ac71dccc0ecf8d" category="inline-image-macro">螢幕截圖顯示了帳戶序號、綠色複選框和文字「已註冊支援」。</block>
-  <block id="4c441b388bebcddf8c08fb782095b864" category="paragraph"><block ref="4c441b388bebcddf8c08fb782095b864" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c05e530d1466e986d570cfe3f92656c3" category="paragraph">請注意，如果其他BlueXP用戶尚未將NetApp支援網站帳戶與其BlueXP登入名稱關聯，他們將看不到相同的支援註冊狀態。但是，這並不意味著您的BlueXP組織沒有註冊支援。只要組織中的一名使用者遵循了這些步驟，那麼您的組織就已註冊。</block>
   <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">現有客戶但沒有 NSS 帳戶</block>
-  <block id="bdd862f49d428a850400bcf2f53cdaf2" category="paragraph">如果您是現有的NetApp客戶，擁有現有授權和序號但沒有 NSS 帳戶，則需要建立 NSS 帳戶並將其與您的BlueXP登入關聯。</block>
   <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">NetApp支援網站使用者註冊表</block>
   <block id="0c4a8b62da9473fbd5401273c4f85ee0" category="list-text">透過完成以下操作建立NetApp支援網站帳戶<block ref="041bcb6d9bdf91f7d6ac92ae3a196e12" category="inline-link-rx"></block></block>
   <block id="d61c9f72493817776f392db42ac446a2" category="list-text">請務必選擇適當的使用者級別，通常為* NetApp客戶/最終使用者*。</block>
-  <block id="5226d4ec1f4f81b740cbbd27635b441f" category="list-text">請務必複製上面用於序號欄位的BlueXP帳戶序號 (960xxxx)。這將加快帳戶處理速度。</block>
-  <block id="0499bba105f8a891a2c671f1ba99dd34" category="list-text">完成以下步驟，將您的新 NSS 帳戶與您的BlueXP登入名稱關聯<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
   <block id="e9b1f53d6cabb3394833a4e102eb6a69" category="section-title">NetApp全新產品</block>
   <block id="c20c107d0d4eef6351660f3590324232" category="paragraph">如果您是NetApp新使用者且沒有 NSS 帳戶，請依照下列步驟操作。</block>
-  <block id="d889e6e7cc4c5509ab5b37f8fc894e46" category="list-text">在BlueXP控制台的右上角，選擇「幫助」圖標，然後選擇「*支援*」。</block>
   <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">幫助選單的螢幕截圖，其中支援是第一個選項</block>
   <block id="e8d4092baef6680c6a35d5228ae31de2" category="paragraph"><block ref="e8d4092baef6680c6a35d5228ae31de2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2974170a8b1b5b4a2ac69aacd4c1c9c3" category="list-text">從支援註冊頁面找到您的帳戶 ID 序號。</block>
@@ -5027,18 +4914,12 @@
   <block id="201080500e946070a2e4873042507c77" category="paragraph">確認向NetApp提交您的請求並建議您建立NetApp支援網站帳戶。</block>
   <block id="a2454703f88e5bf5b433ae850a87151b" category="list-text">請務必複製上面用於序號欄位的帳戶序號（960xxxx）。這將加快處理速度。</block>
   <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">NetApp應該在過程中與您聯繫。這是針對新用戶的一次性入職培訓。</block>
-  <block id="5cdee814e2d9ba3490a8f16d00c65759" category="paragraph">擁有NetApp支援網站帳號後，請依照下列步驟將帳號與您的BlueXP登入關聯<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
   <block id="3e616bae81890a6c8fae17c9b45af152" category="section-title">關聯 NSS 憑證以獲得Cloud Volumes ONTAP支持</block>
-  <block id="0ca08a23718c0a91743dd6c0146ca353" category="paragraph">需要將NetApp支援網站憑證與您的BlueXP組織關聯才能為Cloud Volumes ONTAP啟用以下關鍵工作流程：</block>
   <block id="a0518a10626dc11fd00e2d20265ad240" category="list-text">註冊即用即付Cloud Volumes ONTAP系統以獲得支持</block>
-  <block id="2ebfeabed40c2270d9fa8325080a4b3e" category="paragraph">需要提供您的 NSS 帳戶，以便BlueXP可以上傳您的許可證金鑰並啟用您購買的期限的訂閱。這包括期限續訂的自動更新。</block>
-  <block id="c81c8e01f5d906ae1ab0c5c606f06b05" category="paragraph">將 NSS 憑證與您的BlueXP組織關聯與與BlueXP使用者登入關聯的 NSS 帳戶不同。</block>
-  <block id="8166996cb4a59c147200d89a061bb49c" category="paragraph">這些 NSS 憑證與您的特定BlueXP組織 ID 相關聯。屬於BlueXP組織的使用者可以從 *支援 &gt; NSS 管理* 存取這些憑證。</block>
   <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">如果您有客戶級帳戶，則可以新增一個或多個 NSS 帳戶。</block>
   <block id="e3cd99e4aa330ae6bdfb3754d83ae962" category="list-text">如果您有合作夥伴或經銷商帳戶，則可以新增一個或多個 NSS 帳戶，但不能與客戶級帳戶一起新增。</block>
   <block id="c0e0b7ff0de9558404e9b77ece42948a" category="list-text">選擇*NSS 管理 &gt; 新增 NSS 帳號*。</block>
   <block id="465ec6d5eafa3524c948c99d8bfcd306" category="list-text">在登入頁面，提供您的NetApp支援網站註冊的電子郵件地址和密碼以執行驗證程序。</block>
-  <block id="cbc6cc3bb022583403171b447b2a962c" category="paragraph">這些操作使BlueXP能夠使用您的 NSS 帳戶進行許可證下載、軟體升級驗證和未來支援註冊等操作。</block>
   <block id="ec084bb25ed5b934c09b361069c246b2" category="list-text">NSS 帳戶必須是客戶級帳戶（不是訪客或臨時帳戶）。您可以擁有多個客戶級 NSS 帳戶。</block>
   <block id="27387009488fe78dcc7cb7e3e432792f" category="list-text">如果該帳戶是合作夥伴等級帳戶，則只能有一個 NSS 帳戶。如果您嘗試新增客戶級 NSS 帳戶且合作夥伴級帳戶已存在，您將收到以下錯誤訊息：</block>
   <block id="d926847e4634e19a1aa7358becc0fa27" category="paragraph">“此帳戶不允許使用 NSS 客戶類型，因為已經存在不同類型的 NSS 用戶。”</block>
@@ -5126,7 +5007,6 @@
   <block id="cd8e208bdf0e89ff2e888104b2d9c769" category="paragraph">_maxDownloadSessions_ 的值可以是 1 或任何大於 1 的整數。如果值為1，則下載的影像不會被分割。</block>
   <block id="b7df6ea3746a45b9df9185d6b186ad5c" category="paragraph">請注意，32 是一個範例值。該值取決於您的 NAT 配置和同時會話的數量。</block>
   <block id="4ae719205766e20198cc595136cbf10c" category="inline-link">了解有關 /occm/config API 呼叫的更多信息</block>
-  <block id="a003b98e4140542975c2369f893345c7" category="paragraph"><block ref="a003b98e4140542975c2369f893345c7" category="inline-link-rx"></block></block>
   <block id="784d74ec26e151955a4c9657042f8469" category="section-title">從NetApp知識庫取得協助</block>
   <block id="d22ff119563c0ee5fe8dab4228074cee" category="inline-link">查看NetApp支援團隊所建立的故障排除訊息</block>
   <block id="50442864bbf7126b7b62b75cde676ded" category="paragraph"><block ref="bb2a765d0923866ecd647a5c8b0cc5e9" category="inline-link-rx"></block> 。</block>
@@ -5293,11 +5173,8 @@
   <block id="8009eebf05fd33b87750f8b4048986f7" category="cell">2024年6月10日</block>
   <block id="64cc8195fcb01e582343c910736d1abd" category="paragraph">要了解有關這些BlueXP服務版本中包含的內容的更多信息，請參閱每個BlueXP服務的發行說明。</block>
   <block id="451cc12943297b25b1cf250cc5d0e60a" category="inline-link">了解BlueXP backup and recovery的新功能</block>
-  <block id="d846859679a4eca86e97e1887623b347" category="list-text"><block ref="d846859679a4eca86e97e1887623b347" category="inline-link-rx"></block></block>
   <block id="dd890c1f1f06a084e8274154f3f07ebe" category="inline-link">了解BlueXP classification的新功能</block>
-  <block id="0dcda936d538d36f9e02f54b88ffefca" category="list-text"><block ref="0dcda936d538d36f9e02f54b88ffefca" category="inline-link-rx"></block></block>
   <block id="d06e6f96135d8cd2fa9fea9a4d9de16b" category="inline-link">了解BlueXP中Cloud Volumes ONTAP管理的新功能</block>
-  <block id="29e66847d781138b54aa8aa55b70fb20" category="list-text"><block ref="29e66847d781138b54aa8aa55b70fb20" category="inline-link-rx"></block></block>
   <block id="5bde46ec5f2d435355447c38b00c1d9c" category="section-title">2024年7月15日</block>
   <block id="415b27bc5d78b639dc8c74a6e8f93e19" category="section-title">支援 RHEL 8.10</block>
   <block id="562442342bba071ba7f2e5fa834d4464" category="paragraph">BlueXP現在支援在使用標準模式或受限模式時在 Red Hat Enterprise Linux 8.10 主機上安裝連接器。</block>
@@ -5333,7 +5210,6 @@
   <block id="7595af352964f2b06057ab6310fdff44" category="inline-link">查看連接器的 AWS 權限</block>
   <block id="bad85d32b5f3e46e956809c13b502817" category="list-text"><block ref="7e42187d6259f740c2e1915df5429efc" category="inline-link-rx"></block> 。</block>
   <block id="364a4ff52cd92f16374019cdedf6b91c" category="inline-link">了解有關 AWS 本地區域支援的更多信息</block>
-  <block id="3b1699510f585646e0c8a73fa1b820ae" category="list-text"><block ref="3b1699510f585646e0c8a73fa1b820ae" category="inline-link-rx"></block></block>
   <block id="5483a2359dc6447c026002b1f7426d4e" category="sidebar">開始使用NetApp Console，以便您可以開始在本地和雲端環境中建置、保護和管理資料。設定完成後，您可以使用身分和存取管理 (IAM) 控制對資源的存取、管理控制台代理、雲端提供者帳戶等。</block>
   <block id="55744ccea4ab827ad5f363c0ec39e8bf" category="sidebar">NetApp控制台設定與管理文檔</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">開始</block>
@@ -5569,4 +5445,124 @@
   <block id="bac5c4edb29e43518e1f2b0b721fb1d5" category="list-text"><block ref="bac5c4edb29e43518e1f2b0b721fb1d5" category="inline-link-macro-rx"></block></block>
   <block id="fb418088b41b8e87851b52debc27d47c" category="list-text"><block ref="fb418088b41b8e87851b52debc27d47c" category="inline-link-macro-rx"></block></block>
   <block id="c33d6b870a4603154aa9aca1e2bdc138" category="sidebar">管理代理升級</block>
+  <block id="85a4e9103d633bec1eb4e7fb066e1c00" category="paragraph"><block ref="85a4e9103d633bec1eb4e7fb066e1c00" category="inline-link-rx"></block></block>
+  <block id="bb07c77b5a428bca17ba1c7fbc8126da" category="list-text"><block ref="bb07c77b5a428bca17ba1c7fbc8126da" category="inline-link-rx"></block></block>
+  <block id="105ec69af5b53ed597a81339b788271a" category="list-text"><block ref="105ec69af5b53ed597a81339b788271a" category="inline-link-rx"></block></block>
+  <block id="4361d1419b9f5b36a2241c6d8dc56d46" category="list-text"><block ref="4361d1419b9f5b36a2241c6d8dc56d46" category="inline-link-rx"></block></block>
+  <block id="8e375174b71cf96f463193e1fbf48059" category="paragraph">此變更為BlueXP IAM 引入了一個新的 API，但它與先前的租賃 API 向後相容。<block ref="d0091dc3e9aa695be78368d5c93869cc" category="inline-link-rx"></block></block>
+  <block id="3f4a732fd0d11ce94704e89cc7b5c074" category="cell">前往<block ref="6357afa5f4df051bc1bb94ee8e3de4c5" category="inline-link-rx"></block>並參考 2024 年 11 月版本中包含的更改</block>
+  <block id="6646e97cadd0be8f8809e55b4842a2c4" category="cell">前往<block ref="1f6c2a2bb628adfdf4a77389c4b1bb41" category="inline-link-rx"></block>並參考 1.32 至 1.37 版本中包含的更改</block>
+  <block id="280d53af7ad83ab59f2fd0c70417f64a" category="cell">前往<block ref="6748a72900739c208f232144be1735a8" category="inline-link-rx"></block>並參考 2024 年 10 月和 2024 年 11 月版本中包含的更改</block>
+  <block id="1575a237325a5505ef5de6626c7f2e8b" category="cell">前往<block ref="d0e9cd12c247f05fa0cd9967a53086bf" category="inline-link-rx"></block>並參考 2024 年 11 月版本中包含的更改</block>
+  <block id="373f19a82e5bb72668f90048d786ccd2" category="cell">前往<block ref="6357afa5f4df051bc1bb94ee8e3de4c5" category="inline-link-rx"></block>並參考 2025 年 2 月版本中包含的變更。</block>
+  <block id="54f7b7a152ca64f843b7648c47a75dec" category="cell">前往<block ref="1f6c2a2bb628adfdf4a77389c4b1bb41" category="inline-link-rx"></block>並參考 1.39 版本中包含的變更。</block>
+  <block id="fdd6e42ca79434600b44c732aa9dc2c6" category="cell">前往<block ref="6357afa5f4df051bc1bb94ee8e3de4c5" category="inline-link-rx"></block>並參考 2024 年 3 月版本中包含的變更。</block>
+  <block id="9e018f3504f93a2cfeb1d22432de96d0" category="cell">前往<block ref="1f6c2a2bb628adfdf4a77389c4b1bb41" category="inline-link-rx"></block>並參考 1.38 至 1.371.41 版本中包含的變更。</block>
+  <block id="2f55344a84e63287ea3f67ee0cff06b2" category="cell">前往<block ref="6357afa5f4df051bc1bb94ee8e3de4c5" category="inline-link-rx"></block>並參考 2025 年 5 月版本中包含的變更。</block>
+  <block id="bdf328dcc25654b345bbfab998204210" category="cell">前往<block ref="6357afa5f4df051bc1bb94ee8e3de4c5" category="inline-link-rx"></block>並參考 2025 年 7 月版本中包含的變更。</block>
+  <block id="3f21878baefde2ddae755caf4163a20e" category="cell">前往<block ref="1f6c2a2bb628adfdf4a77389c4b1bb41" category="inline-link-rx"></block>。</block>
+  <block id="a535b5a334dd47af1818cf6df5088728" category="paragraph"><block ref="a535b5a334dd47af1818cf6df5088728" category="inline-link-rx"></block></block>
+  <block id="eae530fcdecfaf8ee890d4814cafd997" category="list-text"><block ref="eae530fcdecfaf8ee890d4814cafd997" category="inline-link-rx"></block></block>
+  <block id="f2a98b63d5b6deacc3ab5c090502f1f2" category="paragraph">某些操作需要控制台代理或NetApp Workloads 連結。<block ref="df41765196184a753d31e48b088e08b6" category="inline-link-rx"></block></block>
+  <block id="557086d692ef9d1cc86a94361985a0fe" category="paragraph"><block ref="557086d692ef9d1cc86a94361985a0fe" category="inline-link-rx"></block></block>
+  <block id="368237704bc4eedc09cc71283d355545" category="paragraph">在 Azure 中與其管理的Cloud Volumes ONTAP系統位於相同區域的控制台代理。或者，將其部署在<block ref="71e0e9a7366955554f0600c5ea8cfc7f" category="inline-link-rx"></block>。這可確保Cloud Volumes ONTAP及其關聯的儲存帳戶之間使用 Azure Private Link 連線。<block ref="5c21278428c52425407c3d731c18f2c0" category="inline-link-rx"></block></block>
+  <block id="d7726716920c51dac9e8d3b944fb1d9c" category="list-text"><block ref="d7726716920c51dac9e8d3b944fb1d9c" category="inline-link-rx"></block></block>
+  <block id="d49ef528aa6be744e9ccc075b5f5ea3f" category="cell">在政府區域和商業區域受限制模式支持。不支援在具有限制模式的主權區域使用。在受限模式下， NetApp Backup and Recovery 僅支援ONTAP磁碟區資料的備份和復原。<block ref="b4c1403d372f1f9b47ce9baa913046c0" category="inline-link-rx"></block>不支援應用程式資料和虛擬機器資料的備份和還原。</block>
+  <block id="91471b82e1f8cf03fbbf6a08da688679" category="cell">是的<block ref="d965d840576f8451a10b0c221310a681" category="inline-link-rx"></block></block>
+  <block id="2015c83409a6e7dfc23533375c5ae10e" category="list-text"><block ref="2015c83409a6e7dfc23533375c5ae10e" category="inline-link-rx"></block></block>
+  <block id="f610a540e2ecafae9447279876425a0e" category="list-text"><block ref="f610a540e2ecafae9447279876425a0e" category="inline-link-rx"></block></block>
+  <block id="f93f1cb0f92d9e89cd92ec94db26274f" category="list-text"><block ref="f93f1cb0f92d9e89cd92ec94db26274f" category="inline-link-rx"></block></block>
+  <block id="8f4f872a5a91b4fda0f95e21e0b83fb1" category="list-text"><block ref="8f4f872a5a91b4fda0f95e21e0b83fb1" category="inline-link-rx"></block></block>
+  <block id="6dd67f54d38094b3a7d65e4eeed06755" category="list-text"><block ref="6dd67f54d38094b3a7d65e4eeed06755" category="inline-link-rx"></block></block>
+  <block id="46a1f2a1262e75b4e5ea88e748ead245" category="list-text"><block ref="46a1f2a1262e75b4e5ea88e748ead245" category="inline-link-macro-rx"></block></block>
+  <block id="97ddb4a8fac1eb0dd686cfabb20ffbbc" category="cell"><block ref="97ddb4a8fac1eb0dd686cfabb20ffbbc" category="inline-link-rx"></block></block>
+  <block id="45c54074547a6e7b96c3122cd38fa458" category="cell"><block ref="45c54074547a6e7b96c3122cd38fa458" category="inline-link-rx"></block></block>
+  <block id="cfddb3eace2cd819afed174de216343e" category="cell"><block ref="cfddb3eace2cd819afed174de216343e" category="inline-link-rx"></block></block>
+  <block id="6bb1058c704be5b41eb4a6ad4f993f39" category="cell"><block ref="6bb1058c704be5b41eb4a6ad4f993f39" category="inline-link-rx"></block></block>
+  <block id="8d069e81976df58a2b36b2f169712b26" category="cell"><block ref="8d069e81976df58a2b36b2f169712b26" category="inline-link-rx"></block></block>
+  <block id="fd5c2279fb88ee0ad3118f3be652a1a6" category="cell"><block ref="fd5c2279fb88ee0ad3118f3be652a1a6" category="inline-link-rx"></block></block>
+  <block id="19aa170b6eb2d116be230ed7b485bbe6" category="list-text"><block ref="19aa170b6eb2d116be230ed7b485bbe6" category="inline-link-rx"></block></block>
+  <block id="651492a6900c9cc9941c3dd88935a740" category="cell"><block ref="651492a6900c9cc9941c3dd88935a740" category="inline-link-rx"></block></block>
+  <block id="cce1379c6af53466f5498d9d4c22382d" category="cell"><block ref="cce1379c6af53466f5498d9d4c22382d" category="inline-link-rx"></block></block>
+  <block id="a675d877e0468a41f1c4afa64e1e3d65" category="list-text"><block ref="a675d877e0468a41f1c4afa64e1e3d65" category="inline-link-rx"></block></block>
+  <block id="ecffe4f9dfa4a8d28e7f6d3d12770b04" category="list-text"><block ref="ecffe4f9dfa4a8d28e7f6d3d12770b04" category="inline-link-rx"></block></block>
+  <block id="f2f2bf79b0bb08ca52641662fab7b2ab" category="cell"><block ref="f2f2bf79b0bb08ca52641662fab7b2ab" category="inline-link-rx"></block></block>
+  <block id="c424eba059c4ff969afd3b060111bd01" category="cell"><block ref="c424eba059c4ff969afd3b060111bd01" category="inline-link-rx"></block></block>
+  <block id="f278fc65074663b9f346e3a2b7b01a1a" category="cell"><block ref="f278fc65074663b9f346e3a2b7b01a1a" category="inline-link-rx"></block></block>
+  <block id="39070bb0533c8b66e81f76909273b884" category="cell"><block ref="39070bb0533c8b66e81f76909273b884" category="inline-link-rx"></block></block>
+  <block id="9c47c1d1e7b053deb400ae7a916dfd70" category="cell"><block ref="9c47c1d1e7b053deb400ae7a916dfd70" category="inline-link-rx"></block></block>
+  <block id="bb34416ca2e8ac39300be2131f49574c" category="cell">為Cloud Volumes ONTAP提供網路存取權限，以便將AutoSupport訊息傳送給NetApp支援。部署後您必須手動開啟此連接埠。<block ref="f127b103d9e31ba65f5f2862c031e344" category="inline-link-rx"></block></block>
+  <block id="babc7ae953e58c8202e366520ae9baf4" category="list-text"><block ref="babc7ae953e58c8202e366520ae9baf4" category="inline-link-rx"></block></block>
+  <block id="9964d0b6e519677dfa6bcd4597b081a2" category="list-text"><block ref="9964d0b6e519677dfa6bcd4597b081a2" category="inline-link-rx"></block></block>
+  <block id="6847efe16c9bfc0feacaef65fc05b7b9" category="list-text"><block ref="6847efe16c9bfc0feacaef65fc05b7b9" category="inline-link-rx"></block></block>
+  <block id="8c1b893f08cfaa147e0cf92bf09039b9" category="list-text"><block ref="8c1b893f08cfaa147e0cf92bf09039b9" category="inline-link-rx"></block></block>
+  <block id="07cad670347ede0ff6ee0e3fb79a5e7b" category="list-text"><block ref="07cad670347ede0ff6ee0e3fb79a5e7b" category="inline-link-rx"></block></block>
+  <block id="e05b0721a950cb94ec4d815fb2fcb330" category="list-text"><block ref="e05b0721a950cb94ec4d815fb2fcb330" category="inline-link-rx"></block></block>
+  <block id="ebe11108519ddfbef101cd084815105d" category="list-text"><block ref="ebe11108519ddfbef101cd084815105d" category="inline-link-rx"></block></block>
+  <block id="03f3b9db548e9f42c7f235f25063891e" category="paragraph">如需協助，請訪問<block ref="735a4464f9ba83268a005dadc317bb68" category="inline-link-rx"></block>查看NetApp控制台文件。</block>
+  <block id="76db590827bcc7b9e832c09d62d82728" category="paragraph">將新的 AWS 憑證新增至控制台以建立和管理 FSx for ONTAP。<block ref="cb54e5f2e6b43484e136e85d736ef0b5" category="inline-link-rx"></block></block>
+  <block id="68841948fc1b61d494dc523ccae2402a" category="list-text"><block ref="68841948fc1b61d494dc523ccae2402a" category="inline-link-rx"></block></block>
+  <block id="acfc32e9de528d5b7c99c6756a63e918" category="paragraph">有關詳細信息，請參閱<block ref="eca356f6dfda2c57cf1ad75280c32e28" category="inline-link-rx"></block></block>
+  <block id="1d593c3f7480ada9580d93cd753c3f93" category="paragraph">這是系統產生的映射到您的電子郵件的 ID。在*NSS 管理*頁面上，您可以顯示來自<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block>菜單。</block>
+  <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">如果您需要刷新登入憑證令牌，還有一個*更新憑證*選項<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block>菜單。</block>
+  <block id="1e0f1983482329aaf670dac68ccfd14f" category="list-text"><block ref="1e0f1983482329aaf670dac68ccfd14f" category="inline-link-rx"></block></block>
+  <block id="fc09b9cb5ee20aeac09d8ff9ad68b475" category="list-text"><block ref="fc09b9cb5ee20aeac09d8ff9ad68b475" category="inline-link-rx"></block></block>
+  <block id="70e099984307d3cf98ed169b8bf816f6" category="list-text"><block ref="70e099984307d3cf98ed169b8bf816f6" category="inline-link-rx"></block></block>
+  <block id="1529bd63e64b40d1ef228cbd84f9cd21" category="list-text"><block ref="1529bd63e64b40d1ef228cbd84f9cd21" category="inline-link-rx"></block></block>
+  <block id="7036572e3eccb7a8e3ea89ae1a860266" category="paragraph"><block ref="7036572e3eccb7a8e3ea89ae1a860266" category="inline-link-rx"></block></block>
+  <block id="822150f48f2d51bfe0452ad1ea4e2911" category="paragraph">有關ONTAP警報的詳細信息，請參閱<block ref="28050ded22ad21dbaedc45fb08ebba1d" category="inline-link-rx"></block>。</block>
+  <block id="743a4db81a7b6f2c4f92da9e23939a38" category="paragraph">有關您可能會看到的警報列表，請參閱<block ref="5fb9e32d1c7ded7c1696f28ab0c19899" category="inline-link-rx"></block>。</block>
+  <block id="a57284f39a940d0122e72daaeca6ad8d" category="list-text">選擇「檢視」前往NetApp勒索軟體復原力儀表板。有關詳細信息，請參閱<block ref="3c5bed37c02dde180dd827f85c3f737b" category="inline-link-rx"></block>。</block>
+  <block id="b961249dcbfab5e6ed490b2b67b9f707" category="list-text">請參閱NetApp勒索軟體復原力儀表板中的「建議操作」。有關詳細信息，請參閱<block ref="ded1247d4865879244e81adb9bed76bb" category="inline-link-rx"></block>。</block>
+  <block id="d3f776e1af04c6d014e62074b89f3eec" category="list-text">選擇警報連結以查看NetApp勒索軟體恢復警報頁面中的警報。有關詳細信息，請參閱<block ref="7ccc0a34cc3d906719091babe4b8dcb5" category="inline-link-rx"></block>。</block>
+  <block id="bfb708a7900e1a2a8e29ed4f45dba55a" category="list-text">選擇“*檢視*”前往NetApp備份和還原儀表板。有關詳細信息，請參閱<block ref="301caaf79db1fedee96dc10f2b708970" category="inline-link-rx"></block>。</block>
+  <block id="3175e3cb4bfda0cca49f10a0807d0711" category="list-text"><block ref="3175e3cb4bfda0cca49f10a0807d0711" category="inline-link-rx"></block></block>
+  <block id="b211195edc33bc74e4474bf0324b1832" category="list-text"><block ref="b211195edc33bc74e4474bf0324b1832" category="inline-link-rx"></block></block>
+  <block id="4241e9ae774203ff269f84b2a1f48dd5" category="list-text"><block ref="4241e9ae774203ff269f84b2a1f48dd5" category="inline-link-rx"></block></block>
+  <block id="e64786dd7cb8f0f615d7953baadfe93d" category="list-text"><block ref="e64786dd7cb8f0f615d7953baadfe93d" category="inline-link-rx"></block></block>
+  <block id="3e9c10d39711a932e38569e3977fc19c" category="list-text"><block ref="3e9c10d39711a932e38569e3977fc19c" category="inline-link-rx"></block></block>
+  <block id="741ac6d95370106a6101f45a55a9d0e9" category="list-text"><block ref="741ac6d95370106a6101f45a55a9d0e9" category="inline-link-rx"></block></block>
+  <block id="dca3a3bf02db53d7851689709d41e3b3" category="list-text"><block ref="dca3a3bf02db53d7851689709d41e3b3" category="inline-link-rx"></block></block>
+  <block id="51ddea41addd6afba49a3f8917e6dd1c" category="list-text"><block ref="51ddea41addd6afba49a3f8917e6dd1c" category="inline-link-rx"></block></block>
+  <block id="a580f203efb1da76755f79253a21d96f" category="list-text"><block ref="a580f203efb1da76755f79253a21d96f" category="inline-link-rx"></block></block>
+  <block id="4e24f9490df0b4af6b4e7bceaa6097a1" category="admonition">如果其他組織邀請您加入或您自己創建一個組織，那麼您可能屬於多個組織。您可以使用 API 建立其他組織。<block ref="54dc9fecd403ebe4164f0404ec85af49" category="inline-link-rx"></block></block>
+  <block id="68105c97320cc4f91ac35396075a2ebb" category="paragraph">如果您在建立控制台代理程式的相同 AWS 帳戶中擁有 Amazon S3 儲存桶，您將看到 Amazon S3 工作環境自動出現在 *系統* 頁面上。<block ref="74eed29a16619fe7bd97e3bf2235caa0" category="inline-link-rx"></block></block>
+  <block id="cb0908023b296d7d49436ab6f97e1722" category="paragraph">如果您在建立控制台代理程式的相同 AWS 帳戶中擁有 Amazon S3 儲存桶，您將看到 Amazon S3 儲存系統自動出現在 *系統* 頁面上。<block ref="e807fcbb34e8f3cdd2199d0fc61d445e" category="inline-link-rx"></block></block>
+  <block id="7b3336affba5ca14937818152aba2704" category="paragraph">如果您在建立控制台代理程式的相同 AWS 帳戶中擁有 Amazon S3 儲存桶，您將看到 Amazon S3 工作環境自動出現在 *系統* 頁面上。<block ref="74eed29a16619fe7bd97e3bf2235caa0" category="inline-link-rx"></block></block>
+  <block id="b1599f1dab16f4dcd35886dbdbbbb28e" category="paragraph">如果您在建立控制台代理程式的相同 Google Cloud 帳戶中擁有 Google Cloud Storage 儲存桶，您將看到 Google Cloud Storage 系統自動出現在 *Systems* 頁面上。<block ref="f1cd5bada461ae8da2b324edaa3edd7e" category="inline-link-rx"></block></block>
+  <block id="22a243e5f9859fe3d0fcb5d054ec0f43" category="paragraph">如果您在建立控制台代理程式的相同 Google Cloud 帳戶中擁有 Google Cloud Storage 儲存桶，您將看到 Google Cloud Storage 系統自動出現在 *Systems* 頁面上。<block ref="f4a6f159093eba0ffefdac7ab4ea2c30" category="inline-link-rx"></block></block>
+  <block id="17fc88f224620f6881e6e779aa01025c" category="paragraph"><block ref="17fc88f224620f6881e6e779aa01025c" category="inline-link-rx"></block></block>
+  <block id="d9976cbb503a12b8c9007ebc729a402f" category="paragraph"><block ref="d9976cbb503a12b8c9007ebc729a402f" category="inline-link-rx"></block></block>
+  <block id="99cee3b8f810202d675de978cef4f9da" category="cell">是的<block ref="514d17d2eb0e043089e13542661abd63" category="inline-link-rx"></block></block>
+  <block id="e6703b56fff183a0ca3800c97f3b18c7" category="list-text">對於從控制台或使用<block ref="cd1b2cc9eeb5a179e7fae6518411110f" category="inline-link-rx"></block>，IMDSv2 在 EC2 執行個體上預設啟用。</block>
+  <block id="b7feb1419e39be60dd56e13eb4251594" category="list-text"><block ref="b7feb1419e39be60dd56e13eb4251594" category="inline-link-rx"></block></block>
+  <block id="c258aa60bfe069555f691666bc14d520" category="list-text"><block ref="c258aa60bfe069555f691666bc14d520" category="inline-link-rx"></block></block>
+  <block id="6235f0da86a54bde0f518b0a78d9ae82" category="list-text"><block ref="6235f0da86a54bde0f518b0a78d9ae82" category="inline-link-rx"></block></block>
+  <block id="776abbf4d80cbef17bd3c86ff37b2257" category="paragraph">需要進行支援註冊才能獲得針對NetApp控制台及其儲存解決方案和資料服務的技術支援。還需要支援註冊才能啟用Cloud Volumes ONTAP系統的關鍵工作流程。</block>
+  <block id="ba4e23e03f4354a0f1ef2781272c8477" category="paragraph">註冊支援並不能使NetApp獲得雲端提供者文件服務的支援。有關雲端提供者文件服務、其基礎設施或使用該服務的任何解決方案的技術支持，請參閱該產品文件中的「取得協助」。</block>
+  <block id="869a868c87f6fb61410cfd773b4f1bab" category="list-text">註冊您的NetApp控制台帳號序號（您的 20 位元 960xxxxxxxxxxxx 序號位於控制台中的「支援資源」頁面上）。</block>
+  <block id="be0b51de4268d87101344aa0368b4403" category="paragraph">這可作為控制台內任何服務的單一支援訂閱 ID。每個控制台帳戶都必須註冊。</block>
+  <block id="3cf9fb70d6921dd90583621f028a395f" category="paragraph">這些序號通常稱為_PAYGO 序號_，由NetApp控制台在Cloud Volumes ONTAP部署時產生。</block>
+  <block id="bf516b6498e37e816d29ae43ae132f74" category="paragraph">註冊兩種類型的序號可以實現開立支援票和自動產生案例等功能。透過將NetApp支援網站 (NSS) 帳戶新增至控制台即可完成註冊，如下所述。</block>
+  <block id="ba5983207e417797fefd5b9374ab4a97" category="section-title">註冊NetApp控制台以取得NetApp支持</block>
+  <block id="dcb7105ba6e3d9411b05e726848feb80" category="paragraph">若要註冊支援並啟動支援權利，您的NetApp控制台帳戶中的一名使用者必須將NetApp支援網站帳戶與其控制台登入名稱關聯。如何註冊NetApp支援取決於您是否已經擁有NetApp支援網站 (NSS) 帳號。</block>
+  <block id="ed5bddb699a442b85bc1bb8e1516fe57" category="paragraph">如果您是擁有 NSS 帳戶的NetApp客戶，只需透過控制台註冊即可獲得支援。</block>
+  <block id="76bc427c3d9c4b81dc353078b942f991" category="list-text">選擇“*管理*”&gt;“*憑證*”。</block>
+  <block id="e9451600769b4bf4b20ca941ba9e6d19" category="list-text">選擇*新增 NSS 憑證*並依照NetApp支援網站 (NSS) 驗證提示進行操作。</block>
+  <block id="1d4ea9fd10f6cfcd6f6fe1f861d354a4" category="paragraph">*資源*頁面應顯示您的控制台帳戶已註冊以獲得支援。</block>
+  <block id="afe8240ca62f4b72006980ff64d371b8" category="paragraph">請注意，如果其他控制台使用者尚未將NetApp支援網站帳戶與其登入名稱關聯，他們將看不到相同的支援註冊狀態。但是，這並不意味著您的帳戶沒有註冊支援。只要組織中的一名使用者遵循了這些步驟，您的帳戶就已註冊。</block>
+  <block id="42eaca1e1c2d9e1f04e932eeaa6d129d" category="paragraph">如果您是現有的NetApp客戶，擁有現有授權和序號但沒有 NSS 帳戶，則需要建立 NSS 帳戶並將其與您的控制台登入關聯。</block>
+  <block id="bd33c4539c7d6985f6edafd4a4f2ba1d" category="list-text">請務必複製上面用於序號欄位的控制台帳戶序號（960xxxx）。這將加快帳戶處理速度。</block>
+  <block id="9b1f48f88cd439b7a50fe3e76eb8a853" category="list-text">完成以下步驟，將您的新 NSS 帳戶與您的控制台登入名稱關聯<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
+  <block id="e7e9f49f4584c68b9d97c578e73b7583" category="list-text">在控制台的右上角，選擇「幫助」圖標，然後選擇「*支援*」。</block>
+  <block id="629757336278be576456cf315303b178" category="paragraph">擁有NetApp支援網站帳號後，請依照下列步驟將該帳號與您的控制台登入關聯<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
+  <block id="f22d1a855e255746a6b925a3b22f7838" category="paragraph">需要將NetApp支援網站憑證與您的控制台帳戶關聯，才能為Cloud Volumes ONTAP啟用以下關鍵工作流程：</block>
+  <block id="daf104544b5203a46e1580e1b8583f1f" category="paragraph">將 NSS 憑證與您的NetApp控制台帳戶關聯與將 NSS 帳戶與控制台使用者登入相關聯。</block>
+  <block id="5bc1315a63455544e7a917a7cc968939" category="paragraph">這些 NSS 憑證與您的特定控制台帳戶 ID 相關聯。屬於控制台組織的使用者可以從*支援 &gt; NSS 管理*存取這些憑證。</block>
+  <block id="7687b0a57d5cb728d9fb892dfc814715" category="paragraph">這些操作使控制台能夠使用您的 NSS 帳戶進行許可證下載、軟體升級驗證和未來支援註冊等操作。</block>
+  <block id="8adebf5472fd1c0238d508bdfa04111b" category="paragraph"><block ref="8adebf5472fd1c0238d508bdfa04111b" category="inline-link-rx"></block></block>
+  <block id="0ea662a78985d73b16fd60cf50ad65a2" category="list-text"><block ref="0ea662a78985d73b16fd60cf50ad65a2" category="inline-link-rx"></block></block>
+  <block id="26323547bd680fab40f920c84c862857" category="list-text"><block ref="26323547bd680fab40f920c84c862857" category="inline-link-rx"></block></block>
+  <block id="7c9136bab44834c94b08c608870f1fd1" category="list-text"><block ref="7c9136bab44834c94b08c608870f1fd1" category="inline-link-rx"></block></block>
+  <block id="d3cdb39411bce89027162422ffb460a4" category="list-text"><block ref="d3cdb39411bce89027162422ffb460a4" category="inline-link-rx"></block></block>
 </blocks>

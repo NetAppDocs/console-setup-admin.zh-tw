@@ -159,10 +159,10 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-prepare-restricted-mode.ht
 
 部署新的控制台代理程式後，請參閱以下頁面以重新發現您的系統。
 
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-adding-systems.html["新增現有的Cloud Volumes ONTAP系統"^]
-* https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["發現本地ONTAP集群"^]
-* https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html["建立或發現 FSx for ONTAP系統"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-adding-systems.html["新增現有的Cloud Volumes ONTAP系統"^]
+* https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["發現本地ONTAP集群"^]
+* https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-creating-fsx-working-environment.html["建立或發現 FSx for ONTAP系統"^]
 * https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-create-system.html["建立Azure NetApp Files系統"^]
-* https://docs.netapp.com/us-en/bluexp-e-series/task-discover-e-series.html["探索 E 系列系統"^]
-* https://docs.netapp.com/us-en/bluexp-storagegrid/task-discover-storagegrid.html["了解StorageGRID系統"^]
+* https://docs.netapp.com/us-en/storage-management-e-series/task-discover-e-series.html["探索 E 系列系統"^]
+* https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html["了解StorageGRID系統"^]
 

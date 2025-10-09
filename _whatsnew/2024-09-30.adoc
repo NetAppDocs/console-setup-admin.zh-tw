@@ -41,9 +41,9 @@
 
 * https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#9-september-2024["2024 年 9 月發布的 Connector 中的新增功能"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#8-august-2024["2024 年 8 月發布的 Connector 中的新增功能"]
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recovery的新功能"^]
-* https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classification的新功能"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["BlueXP中的Cloud Volumes ONTAP管理有哪些新功能"^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recovery的新功能"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classification的新功能"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["BlueXP中的Cloud Volumes ONTAP管理有哪些新功能"^]
 
 
 有關私人模式的更多詳細信息，包括如何升級，請參閱以下內容：

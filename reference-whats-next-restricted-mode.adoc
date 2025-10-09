@@ -18,13 +18,13 @@ summary: 在限制模式下啟動並執行NetApp控制台後，您可以開始�
 
 如需協助，請參閱以下服務的文件：
 
-* https://docs.netapp.com/us-en/bluexp-azure-netapp-files/index.html["Azure NetApp Files文檔"^]
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html["備份和恢復文檔"^]
-* https://docs.netapp.com/us-en/bluexp-classification/index.html["分類文檔"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/index.html["Cloud Volumes ONTAP文檔"^]
-* https://docs.netapp.com/us-en/bluexp-digital-wallet/index.html["數位錢包文檔"^]
-* https://docs.netapp.com/us-en/bluexp-ontap-onprem/index.html["本地ONTAP集群文檔"^]
-* https://docs.netapp.com/us-en/bluexp-replication/index.html["複製文檔"^]
+* https://docs.netapp.com/us-en/storage-management-azure-netapp-files/index.html["Azure NetApp Files文檔"^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["備份和恢復文檔"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/index.html["分類文檔"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/index.html["Cloud Volumes ONTAP文檔"^]
+* https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html["數位錢包文檔"^]
+* https://docs.netapp.com/us-en/storage-management-ontap-onprem/index.html["本地ONTAP集群文檔"^]
+* https://docs.netapp.com/us-en/data-services-replication/index.html["複製文檔"^]
 
 
 .相關資訊

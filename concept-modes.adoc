@@ -164,7 +164,7 @@ API 端點:: 對代理虛擬機器進行 API 呼叫。
 | Azure NetApp Files | 全力支持 
 
 
-| 備份和復原 | 在政府區域和商業區域受限制模式支持。不支援在具有限制模式的主權區域使用。在受限模式下， NetApp Backup and Recovery 僅支援ONTAP磁碟區資料的備份和復原。 https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP資料支援的備份目標列表"^]不支援應用程式資料和虛擬機器資料的備份和還原。 
+| 備份和復原 | 在政府區域和商業區域受限制模式支持。不支援在具有限制模式的主權區域使用。在受限模式下， NetApp Backup and Recovery 僅支援ONTAP磁碟區資料的備份和復原。 https://docs.netapp.com/us-en/data-services-disaster-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP資料支援的備份目標列表"^]不支援應用程式資料和虛擬機器資料的備份和還原。 
 
 
 | NetApp資料分類  a| 
@@ -256,7 +256,7 @@ link:task-quick-start-restricted-mode.html["了解如何開始使用受限模式
 | StorageGRID | 不 
 
 
-.9+| *數據服務* | NetApp備份與復原 | 是的https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP磁碟區資料支援的備份目標列表"^] 
+.9+| *數據服務* | NetApp備份與復原 | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP磁碟區資料支援的備份目標列表"^] 
 
 
 | NetApp資料分類 | 是的 
