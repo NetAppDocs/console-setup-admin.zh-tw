@@ -363,7 +363,7 @@ link:reference-networking-saas-console.html["為NetApp控制台準備網絡"] �
 
 
  a| 
-\https:\\support.netapp.com
+\ https://support.netapp.com
  a| 
 取得許可資訊並向NetApp支援發送AutoSupport訊息以及接收Cloud Volumes ONTAP的軟體更新。
 

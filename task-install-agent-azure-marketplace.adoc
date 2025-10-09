@@ -90,7 +90,7 @@ VNet 與子網路:: 建立控制台代理程式時，您需要指定它所在的
 
 
  a| 
-\https:\\support.netapp.com
+\ https://support.netapp.com
  a| 
 取得許可資訊並向NetApp支援發送AutoSupport訊息以及接收Cloud Volumes ONTAP的軟體更新。
 

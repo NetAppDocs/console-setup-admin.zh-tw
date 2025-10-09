@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-ports-on-prem.html 
-keywords: networking, network, requirements, ports, on-prem, linux, http, https, bluexp 
+keywords: networking, network, requirements, ports, on-prem, linux, http, https, bluexp, console agent, console 
 summary: 當在本機 Linux 主機上手動安裝時，控制台代理使用_入站_連接埠。請參考這些連接埠以進行規劃。 
 ---
 = 本機控制台代理的連接埠

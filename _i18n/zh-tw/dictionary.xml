@@ -5355,13 +5355,11 @@
   <block id="1dcb606a3a707c345cb54b5c3113d621" category="cell">刪除執行鉤子模板</block>
   <block id="386bacb41d61c7b8e46cd3e9198743cd" category="cell">查看工作負載摘要和分析儀表板</block>
   <block id="8bbffbb59e50612d870c42d2db4880dc" category="cell">查看StorageGRID儲存桶和儲存目標</block>
-  <block id="c969e31f72edfcf168ffdd268986844a" category="paragraph">| \ https://mysupport.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息。| \ https://support.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息。| \ https://signin.b2c.netapp.com | 更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp主機。| \https:\\support.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息以及接收Cloud Volumes ONTAP的軟體更新。</block>
   <block id="067f3ef114756cdabe76467602ca9b2e" category="list-text">如果在政府雲端環境中安裝，請停用設定檢查。<block ref="9b8bf974e42c4282e3da7fa6c59f1dce" category="inline-link-macro-rx"></block></block>
   <block id="42c16a43066627b293306439eb1732f6" category="admonition">如果安裝失敗，您可以查看安裝報告和日誌來協助您解決問題。<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
   <block id="c2fc633e22b03955b13beee2049ac471" category="list-text">如果您打算使用NetApp資料分類掃描公司資料來源，則應在控制台代理程式和NetApp資料分類系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。<block ref="95ad16386ae4ac759ff3f180dcafce84" category="inline-link-rx"></block></block>
   <block id="12ad8fdc380a2754e74763c6ec3dd093" category="paragraph">控制台代理程式已改進錯誤訊息，可協助您更了解問題。<block ref="af6db24ea837f8b9ee9738ec7c58a997" category="inline-link-macro-rx"></block></block>
   <block id="ee2dcfcc83687ed3d92f8b7d687f1f05" category="list-text"><block ref="ee2dcfcc83687ed3d92f8b7d687f1f05" category="inline-link-rx"></block></block>
-  <block id="c9c92f70006bb92009b6cd8f9b6b80f7" category="cell">\https:\\support.netapp.com</block>
   <block id="f092dc53062418401abf8d7b17161fcb" category="cell">取得許可資訊並向NetApp支援發送AutoSupport訊息以及接收Cloud Volumes ONTAP的軟體更新。</block>
   <block id="02220399c28525a1c857a5784cf96eca" category="list-text">進入<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>存取診斷工具並按照螢幕上的指示進行操作。+ 例如，您可以驗證所有代理服務是否正在執行。<block ref="50f10aae18a0502372770b812f684d46" category="inline-link-macro-rx"></block> 。</block>
   <block id="d03af09bc0729475142a25d2101f89cb" category="summary">如果您是首次使用NetApp控制台，控制台助手將引導您完成初始設定程序。此助手可協助您新增NetApp支援網站 (NSS) 帳戶、新增控制台代理程式、新增叢集以及新增授權或訂閱，以便更輕鬆地開始管理資料。</block>
@@ -5565,4 +5563,5 @@
   <block id="26323547bd680fab40f920c84c862857" category="list-text"><block ref="26323547bd680fab40f920c84c862857" category="inline-link-rx"></block></block>
   <block id="7c9136bab44834c94b08c608870f1fd1" category="list-text"><block ref="7c9136bab44834c94b08c608870f1fd1" category="inline-link-rx"></block></block>
   <block id="d3cdb39411bce89027162422ffb460a4" category="list-text"><block ref="d3cdb39411bce89027162422ffb460a4" category="inline-link-rx"></block></block>
+  <block id="1edf01eab3b295d8836c4716654a90aa" category="paragraph">| \ https://mysupport.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息。  | \ https://support.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息。  | \ https://signin.b2c.netapp.com | 更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp Console。  | \ https://support.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息以及接收Cloud Volumes ONTAP的軟體更新。</block>
 </blocks>
