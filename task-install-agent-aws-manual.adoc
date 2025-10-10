@@ -88,7 +88,7 @@ Ubuntu
  a| 
 24.04 LTS
  a| 
-3.9.45 或更高版本， NetApp控制台處於標準模式或受限模式
+3.9.45 或更高版本， NetApp Console處於標準模式或受限模式
  a| 
 Docker Engine 23.06 至 28.0.0。
  a| 
@@ -156,7 +156,7 @@ AWS EC2 執行個體類型:: 滿足上述 CPU 和 RAM 要求的執行個體類�
 
 * 啟用並啟動 podman.socket 服務
 * 安裝python3
-* 安裝 podman-compose 軟體套件版本 1.0.6
+* 安裝 podman-compose 套件版本 1.0.6
 * 將 podman-compose 加入到 PATH 環境變量
 * 如果使用 Red Hat Enterprise Linux 8，請驗證您的 Podman 版本使用的是 Aardvark DNS 而不是 CNI
 
@@ -308,7 +308,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 出站互聯網訪問:: 部署控制台代理程式的網路位置必須具有出站網路連線才能聯絡特定端點。
 
 
-使用基於 Web 的NetApp控制台時從電腦聯繫的端點::
+使用基於 Web 的NetApp Console時從電腦聯繫的端點::
 +
 --
 從 Web 瀏覽器存取控制台的電腦必須能夠聯絡多個端點。您需要使用控制台來設定控制台代理並進行控制台的日常使用。
@@ -360,7 +360,7 @@ AWS 服務（amazonaws.com）：
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp控制台。
+更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp Console。
 
 
 
@@ -374,7 +374,7 @@ AWS 服務（amazonaws.com）：
  a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
-在NetApp控制台中提供功能和服務。
+在NetApp Console中提供功能和服務。
 
 
 
@@ -419,14 +419,14 @@ AWS 服務（amazonaws.com）：
 --
 
 
-啟用 NTP:: 如果您打算使用NetApp資料分類掃描公司資料來源，則應在控制台代理程式和NetApp資料分類系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
+啟用 NTP:: 如果您打算使用NetApp Data Classification來掃描公司資料來源，則應在控制台代理程式和NetApp Data Classification系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
 
 
 
 
 == 步驟 4：設定控制台的 AWS 權限
 
-您需要使用下列選項之一向NetApp控制台提供 AWS 權限：
+您需要使用下列選項之一向NetApp Console提供 AWS 權限：
 
 * 選項 1：建立 IAM 原則並將政策附加到可與 EC2 執行個體關聯的 IAM 角色。
 * 選項 2：向控制台提供具有所需權限的 IAM 使用者的 AWS 存取金鑰。
@@ -487,7 +487,7 @@ AWS 服務（amazonaws.com）：
 ** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWS 文件：新增和刪除 IAM 政策"^]
 
 
-. 確保使用者擁有存取金鑰，您可以在安裝控制台代理後將其新增至NetApp控制台。
+. 確保使用者擁有存取金鑰，您可以在安裝控制台代理後將其新增至NetApp Console。
 
 
 .結果
@@ -499,7 +499,7 @@ AWS 服務（amazonaws.com）：
 
 == 步驟 5：安裝控制台代理
 
-前提條件完成後，您可以在自己的 Linux 主機上手動安裝軟體。
+完成先決條件後，您可以在自己的 Linux 主機上手動安裝軟體。
 
 .開始之前
 您應該具有以下內容：
@@ -640,7 +640,7 @@ https://_ipaddress_[]
 .. 輸入系統的名稱。
 .. 在*您是否在安全環境中運作？ *下保持限制模式為停用。
 +
-您應該保持限制模式處於停用狀態，因為這些步驟描述如何在標準模式下使用控制台。只有當您擁有安全的環境並希望中斷此帳戶與後端服務的連線時，才應啟用受限模式。如果真是這樣的話，link:task-quick-start-restricted-mode.html["依照步驟在受限模式下開始使用NetApp控制台"] 。
+您應該保持限制模式處於停用狀態，因為這些步驟描述如何在標準模式下使用控制台。只有當您擁有安全的環境並希望中斷此帳戶與後端服務的連線時，才應啟用受限模式。如果真是這樣的話，link:task-quick-start-restricted-mode.html["依照步驟在受限模式下開始使用NetApp Console"] 。
 
 .. 選擇*讓我們開始吧*。
 
@@ -651,7 +651,7 @@ https://_ipaddress_[]
 
 
 
-== 步驟 6：提供對NetApp控制台的權限
+== 步驟 6：提供對NetApp Console的權限
 
 現在您已經安裝了控制台代理，您需要為控制台提供您先前設定的 AWS 權限。提供權限可讓控制台代理程式能夠管理 AWS 中的資料和儲存基礎架構。
 
@@ -669,7 +669,7 @@ https://_ipaddress_[]
 . 選擇 IAM 角色並選擇 *更新 IAM 角色*。
 
 
-前往 https://console.netapp.com["NetApp控制台"^]開始使用控制台代理。
+前往 https://console.netapp.com["NetApp Console"^]開始使用控制台代理。
 
 --
 .AWS 存取金鑰
@@ -690,7 +690,7 @@ https://_ipaddress_[]
 
 
 
-前往 https://console.netapp.com["NetApp控制台"^]開始使用控制台代理。
+前往 https://console.netapp.com["NetApp Console"^]開始使用控制台代理。
 
 --
 ====

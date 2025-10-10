@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-install-agent-on-prem-ova.html 
 keywords: install agent, on prem agent installation, on prem connector, vmware, OVA, manual install 
-summary: 如果您是 VMWare 用戶，您可以使用 OVA 在您的 VCenter 中安裝控制台代理程式。可透過NetApp控制台下載 OVA 或取得 URL。 
+summary: 如果您是 VMWare 用戶，您可以使用 OVA 在您的 VCenter 中安裝控制台代理程式。可透過NetApp Console取得 OVA 下載或 URL。 
 ---
 = 使用 VCenter 在本機安裝控制台代理
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 如果您是 VMWare 用戶，您可以使用 OVA 在您的 VCenter 中�
 
 
 [role="lead"]
-如果您是 VMWare 用戶，您可以使用 OVA 在您的 VCenter 中安裝控制台代理程式。可透過NetApp控制台下載 OVA 或取得 URL。
+如果您是 VMWare 用戶，您可以使用 OVA 在您的 VCenter 中安裝控制台代理程式。可透過NetApp Console取得 OVA 下載或 URL。
 
 
 NOTE: 當您使用 VCenter 工具安裝控制台代理程式時，您可以使用 VM Web 控制台執行維護任務。link:task-agent-vm-config.html["了解有關代理的 VM 控制台的更多資訊。"]
@@ -53,7 +53,7 @@ NOTE: 在 vCenter 環境中安裝代理，而不是直接在 ESXi 主機上安�
 出站互聯網訪問:: 部署控制台代理程式的網路位置必須具有出站網路連線才能聯絡特定端點。
 
 
-使用基於 Web 的NetApp控制台時從電腦聯繫的端點::
+使用基於 Web 的NetApp Console時從電腦聯繫的端點::
 +
 --
 從 Web 瀏覽器存取控制台的電腦必須能夠聯絡多個端點。您需要使用控制台來設定控制台代理並進行控制台的日常使用。
@@ -122,7 +122,7 @@ AWS 服務（amazonaws.com）：
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp控制台。
+更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp Console。
 
 
 
@@ -136,7 +136,7 @@ AWS 服務（amazonaws.com）：
  a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
-在NetApp控制台中提供功能和服務。
+在NetApp Console中提供功能和服務。
 
 
 
@@ -197,7 +197,7 @@ AWS 服務（amazonaws.com）：
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp控制台。
+更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp Console。
 
 
 
@@ -211,7 +211,7 @@ AWS 服務（amazonaws.com）：
  a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
-在NetApp控制台中提供功能和服務。
+在NetApp Console中提供功能和服務。
 
 
 
@@ -255,7 +255,7 @@ AWS 服務（amazonaws.com）：
 --
 
 
-啟用 NTP:: 如果您打算使用NetApp資料分類掃描公司資料來源，則應在控制台代理程式和NetApp資料分類系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
+啟用 NTP:: 如果您打算使用NetApp Data Classification來掃描公司資料來源，則應在控制台代理程式和NetApp Data Classification系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
 
 
 
@@ -296,7 +296,7 @@ NOTE: 您無法使用安裝在本機的控制台代理程式來管理 Google Clo
 ** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWS 文件：新增和刪除 IAM 政策"^]
 
 
-. 確保使用者擁有存取金鑰，您可以在安裝控制台代理後將其新增至NetApp控制台。
+. 確保使用者擁有存取金鑰，您可以在安裝控制台代理後將其新增至NetApp Console。
 
 
 .結果
@@ -321,7 +321,7 @@ image:screenshot_azure_ad.png["顯示 Microsoft Azure 中的 Active Directory �
 . 指定有關應用程式的詳細資訊：
 +
 ** *名稱*：輸入應用程式的名稱。
-** *帳戶類型*：選擇帳戶類型（任何類型都可以與NetApp控制台一起使用）。
+** *帳戶類型*：選擇帳戶類型（任何類型都可以與NetApp Console一起使用）。
 ** *重定向 URI*：您可以將此欄位留空。
 
 
@@ -405,7 +405,7 @@ image:screenshot_azure_service_principal_role.png["Azure 入口網站的螢幕�
 服務主體現在具有部署控制台代理程式所需的 Azure 權限。
 
 +
-如果您想要從多個 Azure 訂閱部署Cloud Volumes ONTAP ，則必須將服務主體綁定到每個訂閱。在NetApp控制台中，您可以選擇部署Cloud Volumes ONTAP時要使用的訂閱。
+如果您想要從多個 Azure 訂閱部署Cloud Volumes ONTAP ，則必須將服務主體綁定到每個訂閱。在NetApp Console中，您可以選擇部署Cloud Volumes ONTAP時要使用的訂閱。
 
 
 
@@ -453,13 +453,13 @@ image:screenshot_azure_client_secret.gif["Azure 入口網站的螢幕截圖，�
 
 == 在 VCenter 環境中安裝控制台代理
 
-NetApp支援在您的 VCenter 環境中安裝控制台代理程式。 OVA 檔案包含一個預先設定的 VM 映像，您可以在 VMware 環境中部署該映像。可直接從NetApp控制台下載檔案或部署 URL。它包括控制台代理軟體和自簽名證書。
+NetApp支援在您的 VCenter 環境中安裝控制台代理程式。 OVA 檔案包含一個預先設定的 VM 映像，您可以在 VMware 環境中部署該映像。可直接從NetApp Console下載檔案或部署 URL。它包括控制台代理軟體和自簽名證書。
 
 
 
 === 下載 OVA 或複製 URL
 
-直接從NetApp控制台下載 OVA 或複製 OVA URL。
+直接從NetApp Console下載 OVA 或複製 OVA URL。
 
 . 選擇“*管理 > 代理*”。
 . 在「*概覽*」頁面上，選擇「*部署代理程式>本機*」。
@@ -505,7 +505,7 @@ NetApp支援在您的 VCenter 環境中安裝控制台代理程式。 OVA 檔案
 +
 *** *跳過配置檢查*：預設未選取此複選框，這表示代理程式執行配置檢查以驗證網路存取。
 +
-**** NetApp建議不要選取此框，以便安裝包含代理程式的設定檢查。設定檢查驗證代理是否具有所需端點的網路存取權限。如果由於連線問題導致部署失敗，您可以從代理主機存取驗證報告和日誌。在某些情況下，如果您確信代理程式具有網路存取權限，則可以選擇跳過檢查。例如，如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端點"]用於代理升級，驗證失敗並出現錯誤。為了避免這種情況，請勾選複選框以在不進行驗證檢查的情況下進行安裝。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新終端節點列表"] 。
+**** NetApp建議不要選取此框，以便安裝包含代理程式的設定檢查。配置檢查驗證代理是否具有對所需端點的網路存取權限。如果由於連線問題導致部署失敗，您可以從代理主機存取驗證報告和日誌。在某些情況下，如果您確信代理程式具有網路存取權限，則可以選擇跳過檢查。例如，如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端點"]用於代理升級，驗證失敗並出現錯誤。為了避免這種情況，請勾選複選框以在不進行驗證檢查的情況下進行安裝。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新終端節點列表"] 。
 
 
 *** *維修密碼*：設定維修密碼 `maint`允許存取代理維護控制台的使用者。
@@ -534,7 +534,7 @@ NOTE: 如果部署失敗，您可以從代理主機存取驗證報告和日誌�
 
 
 
-== 使用NetApp控制台註冊控制台代理
+== 使用NetApp Console註冊控制台代理
 
 登入控制台並將控制台代理與您的組織關聯。登入方式取決於您使用控制台的模式。如果您在標準模式下使用控制台，則可以透過 SaaS 網站登入。如果您在受限或私人模式下使用控制台，則可以從控制台代理主機本機登入。
 
@@ -583,7 +583,7 @@ NOTE: 如果部署失敗，您可以從代理主機存取驗證報告和日誌�
 
 
 
-您現在可以前往 https://console.netapp.com["NetApp控制台"^]開始使用控制台代理。
+您現在可以前往 https://console.netapp.com["NetApp Console"^]開始使用控制台代理。
 
 --
 .Azure
@@ -600,7 +600,7 @@ NOTE: 如果部署失敗，您可以從代理主機存取驗證報告和日誌�
 +
 *** 應用程式（客戶端）ID
 *** 目錄（租戶）ID
-*** 客戶端機密
+*** 客戶端密鑰
 
 
 .. *市場訂閱*：透過立即訂閱或選擇現有訂閱將市場訂閱與這些憑證關聯。
@@ -610,7 +610,7 @@ NOTE: 如果部署失敗，您可以從代理主機存取驗證報告和日誌�
 
 
 .結果
-控制台代理現在具有代表您在 Azure 中執行操作所需的權限。您現在可以前往 https://console.netapp.com["NetApp控制台"^]開始使用控制台代理。
+控制台代理現在具有代表您在 Azure 中執行操作所需的權限。您現在可以前往 https://console.netapp.com["NetApp Console"^]開始使用控制台代理。
 
 --
 ====

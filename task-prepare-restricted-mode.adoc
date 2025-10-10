@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-prepare-restricted-mode.html 
 keywords: restricted mode requirements, requirements, install options, restricted mode networking, dark site, restricted mode permissions, permissions for restricted mode, networking for restricted mode 
-summary: 在受限模式下部署NetApp控制台之前，請準備好您的環境。您需要查看主機需求、準備網路、設定權限等。 
+summary: 在受限模式下部署NetApp Console之前，請準備好您的環境。您需要查看主機需求、準備網路、設定權限等。 
 ---
 = 準備在受限模式下部署
 :hardbreaks:
@@ -14,15 +14,15 @@ summary: 在受限模式下部署NetApp控制台之前，請準備好您的環�
 
 
 [role="lead"]
-在受限模式下部署NetApp控制台之前，請準備好您的環境。您需要查看主機需求、準備網路、設定權限等。
+在受限模式下部署NetApp Console之前，請準備好您的環境。您需要查看主機需求、準備網路、設定權限等。
 
 
 
 == 步驟 1：了解限制模式的工作原理
 
-在開始之前了解NetApp控制台在受限模式下的工作方式。
+在開始之前了解NetApp Console在受限模式下的工作方式。
 
-使用已安裝的NetApp控制台代理程式本機提供的基於瀏覽器的介面。您無法從透過 SaaS 層提供的基於 Web 的控制台存取NetApp控制台。
+使用已安裝的NetApp Console代理程式本機提供的基於瀏覽器的介面。您無法從透過 SaaS 層提供的基於 Web 的控制台存取NetApp Console。
 
 此外，並非所有控制台功能和NetApp資料服務都可使用。
 
@@ -105,7 +105,7 @@ Ubuntu
  a| 
 24.04 LTS
  a| 
-3.9.45 或更高版本， NetApp控制台處於標準模式或受限模式
+3.9.45 或更高版本， NetApp Console處於標準模式或受限模式
  a| 
 Docker Engine 23.06 至 28.0.0。
  a| 
@@ -173,7 +173,7 @@ Google Cloud 虛擬機器實例上的控制台代理程式支援下列作業系�
 
 * 啟用並啟動 podman.socket 服務
 * 安裝python3
-* 安裝 podman-compose 軟體套件版本 1.0.6
+* 安裝 podman-compose 套件版本 1.0.6
 * 將 podman-compose 加入到 PATH 環境變量
 * 如果使用 Red Hat Enterprise Linux 8，請驗證您的 Podman 版本使用的是 Aardvark DNS 而不是 CNI
 
@@ -320,7 +320,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 設定網路訪問，以便控制台代理可以管理公有雲中的資源。除了為控制台代理提供虛擬網路和子網路之外，您還需要確保滿足以下要求。
 
 連接到目標網絡:: 確保控制台代理程式與儲存位置有網路連線。例如，您計劃部署Cloud Volumes ONTAP 的VPC 或 VNet，或您的本機ONTAP叢集所在的資料中心。
-準備網路以供使用者存取NetApp控制台:: 在受限模式下，使用者從控制台代理 VM 存取控制台。控制台代理聯繫幾個端點來完成資料管理任務。當從控制台完成特定操作時，將從使用者的電腦聯繫這些端點。
+準備網路以供使用者存取NetApp Console:: 在受限模式下，使用者從控制台代理 VM 存取控制台。控制台代理聯繫幾個端點來完成資料管理任務。當從控制台完成特定操作時，將從使用者的電腦聯繫這些端點。
 
 
 
@@ -333,12 +333,12 @@ NOTE: 4.0.0 版本之前的控制台代理需要額外的端點。如果您升�
 | 端點 | 目的 
 
 
-| \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com | 在NetApp控制台中提供功能和服務。 
+| \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com | 在NetApp Console中提供功能和服務。 
 
 
-| \ https://cdn.auth0.com \ https://services.cloud.netapp.com | 您的 Web 瀏覽器透過NetApp控制台連線到這些端點以進行集中式使用者驗證。 
+| \ https://cdn.auth0.com \ https://services.cloud.netapp.com | 您的 Web 瀏覽器透過NetApp Console連線到這些端點以進行集中使用者驗證。 
 |===
-用於日常運營的出站互聯網訪問:: 控制台代理程式的網路位置必須具有出站網際網路存取權限。它需要能夠存取NetApp控制台的 SaaS 服務以及各自公有雲環境中的端點。
+用於日常運營的出站互聯網訪問:: 控制台代理程式的網路位置必須具有出站網際網路存取權限。它需要能夠存取NetApp Console的 SaaS 服務以及各自公有雲環境中的端點。
 +
 --
 [cols="2a,1a"]
@@ -405,7 +405,7 @@ Azure 環境
 
 
  a| 
-* NetApp控制台端點*
+* NetApp Console端點*
 
 
 
@@ -426,7 +426,7 @@ Azure 環境
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp控制台。
+更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp Console。
 
 
 
@@ -440,7 +440,7 @@ Azure 環境
  a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
-在NetApp控制台中提供功能和服務。
+在NetApp Console中提供功能和服務。
 
 
 
@@ -497,7 +497,7 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 --
 
 
-啟用 NTP:: 如果您打算使用NetApp資料分類掃描公司資料來源，則應在控制台代理程式和NetApp資料分類系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
+啟用 NTP:: 如果您打算使用NetApp Data Classification來掃描公司資料來源，則應在控制台代理程式和NetApp Data Classification系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
 +
 --
 如果您打算從雲端提供者的市場建立控制台代理，請在建立控制台代理後實現此網路需求。
@@ -571,7 +571,7 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 ** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWS 文件：新增和刪除 IAM 政策"^]
 
 
-. 確保使用者擁有存取金鑰，您可以在安裝控制台代理後將其新增至NetApp控制台。
+. 確保使用者擁有存取金鑰，您可以在安裝控制台代理後將其新增至NetApp Console。
 
 
 --
@@ -589,7 +589,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azur
 . 複製link:reference-permissions-azure.html["連接器的自訂角色權限"]並將它們保存在 JSON 檔案中。
 . 透過將 Azure 訂閱 ID 新增至可分配範圍來修改 JSON 檔案。
 +
-您應該為想要與NetApp控制台一起使用的每個 Azure 訂閱新增 ID。
+您應該為想要與NetApp Console一起使用的每個 Azure 訂閱新增 ID。
 
 +
 *例子*
@@ -641,7 +641,7 @@ image:screenshot_azure_ad.png["顯示 Microsoft Azure 中的 Active Directory �
 . 指定有關應用程式的詳細資訊：
 +
 ** *名稱*：輸入應用程式的名稱。
-** *帳戶類型*：選擇帳戶類型（任何類型都可以與NetApp控制台一起使用）。
+** *帳戶類型*：選擇帳戶類型（任何類型都可以與NetApp Console一起使用）。
 ** *重定向 URI*：您可以將此欄位留空。
 
 
@@ -725,7 +725,7 @@ image:screenshot_azure_service_principal_role.png["Azure 入口網站的螢幕�
 服務主體現在具有部署控制台代理程式所需的 Azure 權限。
 
 +
-如果您想要從多個 Azure 訂閱部署Cloud Volumes ONTAP ，則必須將服務主體綁定到每個訂閱。在NetApp控制台中，您可以選擇部署Cloud Volumes ONTAP時要使用的訂閱。
+如果您想要從多個 Azure 訂閱部署Cloud Volumes ONTAP ，則必須將服務主體綁定到每個訂閱。在NetApp Console中，您可以選擇部署Cloud Volumes ONTAP時要使用的訂閱。
 
 
 
@@ -829,7 +829,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 ** 身分識別和存取管理 (IAM) API
 ** 雲端金鑰管理服務 (KMS) API
 +
-（僅當您打算將NetApp Backup and Recovery 與客戶管理加密金鑰 (CMEK) 結合使用時才需要）
+（僅當您打算將NetApp Backup and Recovery與客戶管理加密金鑰 (CMEK) 結合使用時才需要）
 
 
 

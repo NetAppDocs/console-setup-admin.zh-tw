@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-iam-platform-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, classification viewer, snapcenter admin, role, iam role, admin, iam, identity and access management, bluexp 
-summary: 為使用者指派平台角色，以授予管理NetApp控制台、指派角色、新增使用者、建立控制台代理程式和管理聯合的權限。 
+summary: 為使用者指派平台角色，以授予管理NetApp Console、指派角色、新增使用者、建立控制台代理程式和管理聯合的權限。 
 ---
-= NetApp控制台平台存取角色
+= NetApp Console平台存取角色
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 為使用者指派平台角色，以授予管理NetApp控制台、指�
 
 
 [role="lead"]
-為使用者指派平台角色，以授予管理NetApp控制台、指派角色、新增使用者、建立控制台代理程式和管理聯合的權限。
+為使用者指派平台角色，以授予管理NetApp Console、指派角色、新增使用者、建立控制台代理程式和管理聯合的權限。
 
 .大型跨國組織的組織角色範例
 XYZ 公司按地區（北美、歐洲和亞太地區）組織資料儲存訪問，從而提供區域控制和集中監督。
@@ -132,7 +132,7 @@ XYZ 公司控制台中的*組織管理員*為每個區域建立一個初始組�
 組織應謹慎使用*超級管理員*存取權限，以最大限度地降低安全風險並符合最小特權原則。大多數組織應該分配具有必要權限的細粒度角色，以降低風險並提高可審計性。
 
 .超級角色範例
-ABC 公司擁有一個由五人組成的小團隊，利用NetApp控制台進行資料服務和儲存管理。他們沒有分配多個角色，而是將「超級管理員」角色分配給兩名高階團隊成員，由他們負責所有管理任務，包括使用者管理和資源配置。其餘三名團隊成員被分配了*超級查看者*角色，允許他們監控儲存健康和數據服務狀態，但無法修改設定。
+ABC 公司擁有一個由五人組成的小團隊，利用NetApp Console進行資料服務和儲存管理。他們沒有分配多個角色，而是將「超級管理員」角色分配給兩名高階團隊成員，由他們負責所有管理任務，包括使用者管理和資源配置。其餘三名團隊成員被分配了*超級查看者*角色，允許他們監控儲存健康和數據服務狀態，但無法修改設定。
 
 [cols="2,1"]
 |===

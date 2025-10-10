@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-federation-manage.html 
 keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity 
-summary: 新增聯合連線後，您可以在NetApp控制台中進行管理。您可以查看連接的狀態，根據需要啟用或停用它。 
+summary: 新增聯合連線後，您可以在NetApp Console中進行管理。您可以查看連接的狀態，根據需要啟用或停用它。 
 ---
-= 在NetApp控制台中管理聯合
+= 在NetApp Console中管理聯合
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 新增聯合連線後，您可以在NetApp控制台中進行管理。�
 
 
 [role="lead"]
-您可以在NetApp控制台中管理您的聯合。您可以停用它，更新過期的憑證，以及在不再需要它時停用它。
+您可以在NetApp Console中管理您的聯合。您可以停用它，更新過期的憑證，以及在不再需要它時停用它。
 
 
 NOTE: 如果您使用NetApp Cloud Central 設定了聯合，請透過 *Federation* 頁面匯入它以在控制台中進行管理。link:task-federation-import.html["了解如何匯入您的聯盟"]
@@ -22,7 +22,7 @@ NOTE: 如果您使用NetApp Cloud Central 設定了聯合，請透過 *Federatio
 您也可以將已驗證的網域新增至現有聯合中，這允許您使用多個網域進行聯合連線。
 
 
-NOTE: 聯合管理事件（例如啟用、停用和更新聯合）顯示在時間軸中。link:task-monitor-cm-operations.html["了解有關在NetApp控制台中監控操作的更多資訊。"]
+NOTE: 聯合管理事件（例如啟用、停用和更新聯合）顯示在時間軸中。link:task-monitor-cm-operations.html["了解有關在NetApp Console中監控操作的更多資訊。"]
 
 .必備角色
 需要聯盟管理員角色來創建和管理聯盟。聯盟檢視者可以查看聯盟頁面。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
@@ -62,7 +62,7 @@ NOTE: 聯合管理事件（例如啟用、停用和更新聯合）顯示在時�
 您可以在控制台中更新聯合的詳細資訊。例如，如果憑證或用戶端機密等憑證過期，則需要更新聯合。在需要時，更新通知日期以提醒您在連線到期之前更新連線。
 
 
-IMPORTANT: 在更新您的 IdP 之前，請先更新控制台以避免登入問題。在此過程中保持登入控制台。
+IMPORTANT: 在更新 IdP 之前，請先更新控制台以避免登入問題。在此過程中保持登入控制台。
 
 .步驟
 . 選擇*管理>身分和存取*。
@@ -76,13 +76,13 @@ IMPORTANT: 在更新您的 IdP 之前，請先更新控制台以避免登入問�
 
 == 測試現有的聯盟
 
-測試現有聯合的連線以驗證其是否正常運作。這可以幫助您識別聯盟中的任何問題並進行故障排除。
+測試現有聯合的連線以驗證其是否有效。這可以幫助您識別聯盟中的任何問題並進行故障排除。
 
 .步驟
 . 選擇*管理>身分和存取*。
 . 選擇“*Federation*”選項卡。
 . 選擇操作選單image:button_3_vert_dots.png["帶有三個垂直點的圖標"]旁邊的您想要新增已驗證網域的聯盟，然後選擇*測試連線*。
-. 選擇*測試*。系統提示您使用公司憑證登入。如果連線成功，您將被重新導向到NetApp控制台。如果連線失敗，您會看到錯誤訊息，表示聯合存在問題。
+. 選擇*測試*。系統提示您使用公司憑證登入。如果連線成功，您將被重新導向到NetApp Console。如果連線失敗，您會看到錯誤訊息，表示聯合存在問題。
 . 選擇“*完成*”返回“*聯合*”選項卡。
 
 

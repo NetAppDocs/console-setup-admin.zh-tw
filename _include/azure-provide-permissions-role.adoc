@@ -7,7 +7,7 @@
 .步驟
 . 從 Azure 入口網站開啟「*訂閱*」服務並選擇您的訂閱。
 +
-從*訂閱*服務分配角色很重要，因為這指定了訂閱等級的角色分配範圍。 _範圍_定義了存取適用的資源集。如果您在不同層級（例如，虛擬機器層級）指定範圍，則您在NetApp控制台內完成操作的能力將受到影響。
+從*訂閱*服務分配角色很重要，因為這指定了訂閱等級的角色分配範圍。 _範圍_定義了存取適用的資源集。如果您在不同層級（例如，虛擬機器層級）指定範圍，則您在NetApp Console內完成操作的能力將受到影響。
 
 +
 https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure 文件：了解 Azure RBAC 的範圍"^]

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-federation.html 
 keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
-summary: 身份聯合支援透過NetApp控制台進行單一登錄，以便使用者可以使用來自您公司身分的憑證登入。首先，查看設定過程。 
+summary: 身份聯合支援透過NetApp Console進行單一登錄，以便使用者可以使用來自您公司身分的憑證登入。首先，查看設定過程。 
 ---
-= 使用NetApp控制台的身份聯合實作單一登入
+= 使用NetApp Console的身份聯合實作單一登入
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 身份聯合支援透過NetApp控制台進行單一登錄，以便使�
 
 
 [role="lead"]
-單一登入（聯合）允許使用者使用其公司憑證登入NetApp控制台，從而簡化了登入流程並增強了安全性。您可以使用身分識別提供者 (IdP) 或NetApp支援網站啟用單一登入 (SSO)。
+單一登入（聯合）允許使用者使用其公司憑證登入NetApp Console，從而簡化了登入流程並增強了安全性。您可以使用身分識別提供者 (IdP) 或NetApp支援網站啟用單一登入 (SSO)。
 
 .所需角色
 組織管理員、聯盟管理員、聯盟檢視器。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
@@ -40,7 +40,7 @@ NetApp支援團隊將審核並處理您的請求。
 
 == 與您的身分提供者建立聯合連接
 
-您可以與身分識別提供者建立聯合連接，以啟用控制台的單一登入 (SSO)。這個過程涉及配置您的身分提供者以信任NetApp作為服務提供者，然後在控制台中建立連線。
+您可以與身分識別提供者建立聯合連接，以便為控制台啟用單一登入 (SSO)。這個過程涉及配置您的身分提供者以信任NetApp作為服務提供者，然後在控制台中建立連線。
 
 
 NOTE: 如果您之前使用NetApp Cloud Central（控制台的外部應用程式）配置了聯合，則需要使用聯合頁面匯入聯合以在控制台內進行管理。link:task-federation-import.html["了解如何導入您的聯盟。"]
@@ -63,7 +63,7 @@ NetApp支援以下聯合協定和身分提供者：
 
 
 
-=== 與NetApp控制台聯合工作流程
+=== 與NetApp Console聯合工作流程
 
 NetApp僅支援服務供應商發起的（SP發起的） SSO。您需要先配置身分提供者以信任NetApp作為服務提供者。然後，您可以在控制台中建立使用身分提供者配置的連線。
 

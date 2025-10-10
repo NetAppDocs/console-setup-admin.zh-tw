@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-agents.html 
 keywords: 'concept, connectors, learn about connectors, what are connectors, what is a connector, what"s a connector, days, 14 days, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
-summary: _控制台代理_是在您的雲端網路或本機網路上執行的NetApp軟體。您可以使用控制台代理將NetApp控制台服務連接到您的儲存環境。 
+summary: _控制台代理_是在您的雲端網路或本機網路上執行的NetApp軟體。您可以使用控制台代理將NetApp Console服務連接到您的儲存環境。 
 ---
-= 了解NetApp控制台代理
+= 了解NetApp Console代理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: _控制台代理_是在您的雲端網路或本機網路上執行的Net
 
 
 [role="lead"]
-_控制台代理_在您的雲端網路或本機網路中運作。您可以使用控制台代理將NetApp控制台服務連接到您的儲存環境。
+_控制台代理_在您的雲端網路或本機網路中運作。您可以使用控制台代理將NetApp Console服務連接到您的儲存環境。
 
 
 
@@ -29,14 +29,14 @@ _控制台代理_在您的雲端網路或本機網路中運作。您可以使用
 * 自動化中心
 * Azure NetApp Files
 +
-您不需要控制台代理來管理Azure NetApp Files，但需要使用NetApp資料分類來掃描Azure NetApp Files。
+您不需要控制台代理程式來管理Azure NetApp Files，但需要使用NetApp Data Classification來掃描Azure NetApp Files。
 
 * Google Cloud NetApp Volumes
-* NetApp複製與同步
+* NetApp Copy and Sync
 * 數位顧問
 * 監控許可證使用情況，訂閱監控需要控制台代理
 +
-通常，您無需使用控制台代理即可為NetApp控制台新增授權。
+通常，您無需使用控制台代理即可為NetApp Console新增授權。
 
 +
 需要代理程式來新增Cloud Volumes ONTAP _基於節點的_許可證，因為資料來自安裝在Cloud Volumes ONTAP系統上的許可證。
@@ -63,18 +63,18 @@ https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-o
 * Amazon FSx for ONTAP管理功能
 * Amazon S3 存儲
 * Azure Blob 儲存
-* NetApp備份與復原
+* NetApp Backup and Recovery
 * 資料分類
 * Cloud Volumes ONTAP
-* NetApp災難復原
+* NetApp Disaster Recovery
 * E系列系統
 * 經濟效率^1^
 * Google Cloud Storage 儲存桶
 * 本地ONTAP叢集與NetApp資料服務的集成
 * NetApp勒索軟體抵禦能力
 * StorageGRID系統
-* NetApp雲端分層
-* NetApp磁碟區快取
+* NetApp Cloud Tiering
+* NetApp Volume Caching
 
 
 ^1^ 您無需控制台代理即可存取這些服務，但需要控制台代理來啟動操作。
@@ -85,7 +85,7 @@ https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-o
 
 == 控制台代理程式必須始終處於執行狀態
 
-控制台代理程式是NetApp控制台的基本組成部分。您（客戶）有責任確保相關代理商隨時處於正常運作和可存取狀態。控制台可以處理短暫的代理程式中斷，但您必須快速修復基礎架構故障。
+控制台代理程式是NetApp Console的基本組成部分。您（客戶）有責任確保相關代理商隨時處於正常運作和可存取狀態。控制台可以處理短暫的代理程式中斷，但您必須快速修復基礎架構故障。
 
 本文檔受 EULA 管轄。按照文件以外的方式操作產品可能會影響其功能和您的 EULA 權利。
 
@@ -119,7 +119,7 @@ https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-o
 
 若要在受限模式下使用控制台，請安裝控制台代理程式並存取在控制台代理程式上本機執行的控制台介面。
 
-link:concept-modes.html["了解NetApp控制台部署模式"] 。
+link:concept-modes.html["了解NetApp Console部署模式"] 。
 
 
 
@@ -127,16 +127,16 @@ link:concept-modes.html["了解NetApp控制台部署模式"] 。
 
 您可以直接從控制台、雲端提供者的市場安裝控制台代理，也可以在您自己的 Linux 主機或 VCenter 環境中手動安裝軟體。如何開始取決於您是在標準模式還是受限模式下使用控制台。
 
-* link:concept-modes.html["了解NetApp控制台部署模式"]
-* link:task-quick-start-standard-mode.html["開始在標準模式下使用NetApp控制台"]
-* link:task-quick-start-restricted-mode.html["開始在受限模式下使用NetApp控制台"]
+* link:concept-modes.html["了解NetApp Console部署模式"]
+* link:task-quick-start-standard-mode.html["開始在標準模式下使用NetApp Console"]
+* link:task-quick-start-restricted-mode.html["開始在受限模式下使用NetApp Console"]
 
 
 
 
 == 雲端權限
 
-您需要特定權限才能直接從NetApp控制台建立控制台代理，並且需要另一組權限來建立控制台代理實例本身。如果您直接從控制台在 AWS 或 Azure 中建立控制台代理，則控制台將使用其所需的權限建立控制台代理。
+您需要特定權限才能直接從NetApp Console建立控制台代理，並且需要另一組權限來建立控制台代理實例本身。如果您直接從控制台在 AWS 或 Azure 中建立控制台代理，則控制台將使用其所需的權限建立控制台代理。
 
 在標準模式下使用控制台時，如何提供權限取決於您計劃如何建立控制台代理。
 
@@ -186,7 +186,7 @@ NetApp每月更新代理軟體以新增功能並提高穩定性。某些控制�
 
 == 多系統和代理
 
-一個代理可以管理多個系統並在控制台中支援資料服務。您可以根據部署規模和使用的資料服務使用單一代理程式來管理多個系統。
+一個代理可以在控制台中管理多個系統並支援資料服務。您可以根據部署規模和使用的資料服務使用單一代理程式來管理多個系統。
 
 對於大規模部署，請與您的NetApp代表合作來確定您的環境規模。如果遇到問題，請聯絡NetApp支援。
 

@@ -33,7 +33,7 @@ summary: 您可以透過為合作夥伴使用者指派組織內資料夾和專�
 * link:reference-iam-platform-roles.html#organization-admin-roles["資料夾或專案管理員"]
 * link:reference-iam-platform-roles.html#federation-roles["聯盟管理員"]
 * link:reference-iam-platform-roles.html#federation-roles["聯邦檢視器"]
-* link:reference-iam-backup-rec-roles.html["備份和還原管理員"]
+* link:reference-iam-backup-rec-roles.html["備份和復原管理員"]
 * link:reference-iam-backup-rec-roles.html["備份檢視器"]
 * link:reference-iam-backup-rec-roles.html["復原管理員"]
 * link:reference-iam-backup-rec-roles.html["複製管理員"]
@@ -58,7 +58,7 @@ link:reference-iam-predefined-roles.html["了解有關預定義角色的更多�
 .步驟
 . 選擇*管理>身分和存取*。
 . 選擇*合作關係*。
-. 選擇*合作關係已啟動*選項卡。
+. 選擇*合作夥伴關係已啟動*選項卡。
 . 選擇操作選單image:icon-action.png["帶有三個垂直點的圖標"]在您想要查看的已建立的合作關係旁邊，選擇「查看詳細資訊」。
 +
 *成員*清單顯示合作夥伴組織已新增至合作夥伴關係的成員。
@@ -87,7 +87,7 @@ link:reference-iam-predefined-roles.html["了解有關預定義角色的更多�
 .步驟
 . 選擇*管理>身分和存取*。
 . 選擇*合作關係*。
-. 選擇*合作關係已啟動*選項卡。
+. 選擇*合作夥伴關係已啟動*選項卡。
 . 選擇操作選單image:icon-action.png["帶有三個垂直點的圖標"]在您想要查看的已建立的合作關係旁邊，選擇「查看詳細資訊」。
 +
 *成員*清單顯示合作夥伴組織已新增至合作夥伴關係的成員。

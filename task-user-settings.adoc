@@ -4,7 +4,7 @@ permalink: task-user-settings.html
 keywords: user profile, mfa, change password, role, login, multi-factor, authentication, dark mode 
 summary: 在控制台中，每個使用者都有一個配置文件，其中包含有關使用者及其設定的資訊。您可以查看和編輯您的個人資料設定。 
 ---
-= 管理您的NetApp控制台使用者設定
+= 管理您的NetApp Console使用者設定
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -38,7 +38,7 @@ summary: 在控制台中，每個使用者都有一個配置文件，其中包�
 
 使用外部身分提供者或NetApp支援網站進行單一登入的使用者無法啟用 MFA。如果您遇到上述任一情況，您將不會在個人資料設定中看到啟用 MFA 的選項。
 
-如果您的使用者帳戶用於 API 訪問，請不要啟用 MFA。當為使用者帳戶啟用多因素身份驗證時，它會停止 API 存取。使用服務帳戶進行所有 API 存取。
+如果您的使用者帳戶用於 API 訪問，請不要啟用 MFA。當為使用者帳戶啟用多重身份驗證時，它會停止 API 存取。使用服務帳戶進行所有 API 存取。
 
 .開始之前
 * 您必須已將身份驗證應用程式（例如 Google Authenticator 或 Microsoft Authenticator）下載到您的裝置。

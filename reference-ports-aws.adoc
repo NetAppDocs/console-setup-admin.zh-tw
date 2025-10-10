@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-ports-aws.html 
 keywords: ports, security group, http, https, inbound, outbound 
-summary: 控制台代理程式的 AWS 安全群組需要入站和出站規則。當您從控制台建立控制台代理時， NetApp控制台會自動建立此安全性群組。您需要為所有其他安裝選項設定此安全群組。 
+summary: 控制台代理程式的 AWS 安全群組需要入站和出站規則。當您從控制台建立控制台代理程式時， NetApp Console會自動建立此安全性群組。您需要為所有其他安裝選項設定此安全群組。 
 ---
 = AWS 中的控制台代理程式安全性群組規則
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 控制台代理程式的 AWS 安全群組需要入站和出站規則。
 
 
 [role="lead"]
-代理程式的 AWS 安全群組需要入站和出站規則。當您從控制台建立控制台代理時， NetApp控制台會自動建立此安全性群組。您需要為所有其他安裝選項設定此安全群組。
+代理程式的 AWS 安全群組需要入站和出站規則。當您從控制台建立控制台代理程式時， NetApp Console會自動建立此安全性群組。您需要為所有其他安裝選項設定此安全群組。
 
 
 
@@ -35,7 +35,7 @@ summary: 控制台代理程式的 AWS 安全群組需要入站和出站規則。
 
 
 
-| HTTPS | 443 | 提供對本機使用者介面的 HTTPS 存取以及來自NetApp資料分類實例的連接 
+| HTTPS | 443 | 提供對本機使用者介面的 HTTPS 存取以及來自NetApp Data Classification實例的連接 
 
 
 | TCP | 3128 | 為Cloud Volumes ONTAP提供網路存取。部署後您必須手動開啟此連接埠。 
@@ -76,7 +76,7 @@ NOTE: 來源IP位址是代理主機。
 | 服務 | 協定 | 港口 | 目的地 | 目的 
 
 
-| API 呼叫和AutoSupport | HTTPS | 443 | 出站互聯網和ONTAP叢集管理 LIF | 對 AWS、 ONTAP、 NetApp資料分類的 API 調用，以及向NetApp發送AutoSupport訊息 
+| API 呼叫和AutoSupport | HTTPS | 443 | 出站互聯網和ONTAP叢集管理 LIF | 對 AWS、 ONTAP、 NetApp Data Classification的API 調用，以及向NetApp發送AutoSupport訊息 
 
 
 .2+| API 呼叫 | TCP | 3000 | ONTAP HA 調解器 | 與ONTAP HA 調解器的通信 

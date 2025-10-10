@@ -75,7 +75,7 @@ link:task-iam-associate-agents.html["將代理程式與資料夾和項目關聯"
 
 == 相關資訊
 
-* link:concept-identity-and-access-management.html["了解NetApp控制台中的身分和存取權限"]
+* link:concept-identity-and-access-management.html["了解NetApp Console中的身分和存取權限"]
 * link:task-iam-get-started.html["開始使用身分和存取權限"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解身分和存取 API"^]
 

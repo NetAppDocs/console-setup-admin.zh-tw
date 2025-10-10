@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-upgrade-agent.html 
 keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade 
-summary: 當您使用標準模式或受限模式時，只要控制台代理具有出站網路存取權限以取得軟體更新， NetApp控制台就會自動將您的控制台代理程式升級到最新版本。 
+summary: 當您使用標準模式或受限模式時，只要控制台代理具有出站網路存取權限以取得軟體更新， NetApp Console就會自動將您的控制台代理程式升級到最新版本。 
 ---
 = 管理控制台代理升級
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 當您使用標準模式或受限模式時，只要控制台代理具�
 
 
 [role="lead"]
-當您使用標準模式或受限模式時，只要控制台代理具有出站網路存取權限以取得軟體更新， NetApp控制台就會自動將您的控制台代理程式升級到最新版本。
+當您使用標準模式或受限模式時，只要控制台代理具有出站網路存取權限以取得軟體更新， NetApp Console就會自動將您的控制台代理程式升級到最新版本。
 
 如果您需要手動管理控制台代理的升級時間，您可以停用標準模式或受限模式的自動升級。
 
@@ -90,7 +90,7 @@ _
 
 == 升級控制台代理
 
-控制台代理程式需要在升級過程中重新啟動，因此NetApp控制台在升級期間將無法使用。
+控制台代理程式需要在升級過程中重新啟動，因此NetApp Console在升級期間將無法使用。
 
 .步驟
 . 從下載控制台代理軟體 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp支援站點"^]。

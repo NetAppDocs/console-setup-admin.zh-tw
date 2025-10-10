@@ -25,7 +25,7 @@ summary: 如果您使用多個控制台代理，則可以直接從控制台在�
 例如，在多雲環境中，您可能在 AWS 中有一個代理，在 Google Cloud 中有一個代理程式。在這些代理之間切換以管理各自雲端環境中的Cloud Volumes ONTAP系統。
 
 
-NOTE: 從代理程式的本機 UI 查看NetApp控制台時，此選項不可用
+NOTE: 從代理程式的本機 UI 查看NetApp Console時，此選項不可用
 
 .步
 . 選擇控制台代理圖示 (image:icon-agent.png["代理圖示"] ) 查看可用代理的清單。

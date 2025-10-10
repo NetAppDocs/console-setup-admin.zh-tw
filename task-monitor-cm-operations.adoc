@@ -4,7 +4,7 @@ permalink: task-monitor-cm-operations.html
 keywords: administer, monitor, timeline, notifications, alerts, events, notification center, email, audit page, audit action 
 summary: 您可以監視控制台正在執行的操作的狀態，以查看是否有需要解決的問題。您可以從審核頁面、通知中心查看狀態，或將通知傳送到您的電子郵件。 
 ---
-= 監控NetApp控制台操作
+= 監控NetApp Console操作
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -50,7 +50,7 @@ summary: 您可以監視控制台正在執行的操作的狀態，以查看是�
 
 .步驟
 . 選擇“管理”>“審計”。
-. 使用表格上方的篩選器來變更表格中顯示的動作。
+. 使用表格上方的篩選器來變更表格中顯示的操作。
 +
 例如，您可以使用*服務*篩選器顯示與特定服務相關的操作，或可以使用*使用者*篩選器顯示與特定使用者帳戶相關的操作。
 
@@ -82,7 +82,7 @@ summary: 您可以監視控制台正在執行的操作的狀態，以查看是�
 
 通知中心使您能夠查看已啟動的操作的狀態並為某些類型的系統活動設定警報通知。同時，警報可讓您查看ONTAP儲存環境中與容量、可用性、效能、保護和安全性相關的問題或潛在風險。
 
-https://docs.netapp.com/us-en/console-alerts/index.html["了解有關NetApp控制台警報的更多信息"^]
+https://docs.netapp.com/us-en/console-alerts/index.html["了解有關NetApp Console警報的更多信息"^]
 
 
 
@@ -140,12 +140,12 @@ image:screenshot_notification_filters.png["螢幕截圖顯示了通知中心中�
 
 [NOTE]
 ====
-* 控制台發送代理、許可證和訂閱、 NetApp複製和同步以及NetApp備份和還原的電子郵件通知。
+* 控制台發送代理、許可證和訂閱、 NetApp Copy and Sync以及NetApp Backup and Recovery的電子郵件通知。
 * 當控制台代理安裝在沒有網路存取的網站時，不支援發送電子郵件通知。
 
 
 ====
-您在通知中心設定的篩選器不會決定您透過電子郵件收到的通知類型。預設情況下，任何組織管理員都會收到所有「關鍵」和「建議」通知的電子郵件。這些通知涵蓋所有服務 - 您無法選擇僅接收某些服務的通知，例如代理或NetApp備份和復原。
+您在通知中心設定的篩選器不會決定您透過電子郵件收到的通知類型。預設情況下，任何組織管理員都會收到所有「關鍵」和「建議」通知的電子郵件。這些通知涵蓋所有服務 - 您無法選擇僅接收某些服務的通知，例如代理或NetApp Backup and Recovery。
 
 所有其他使用者和收件者都配置為不接收任何通知電子郵件 - 因此您需要為任何其他使用者設定通知設定。
 
@@ -174,7 +174,7 @@ _組織使用者_頁面中顯示的使用者是從您的組織或帳戶中的使
 .步驟
 . 從*通知設定*頁面中，選擇*新增收件者*。
 +
-image:screenshot-add-email-recipient.png["顯示如何為警報和通知新增新的電子郵件收件者的螢幕截圖。"]
+image:screenshot-add-email-recipient.png["顯示如何為警報和通知新增電子郵件收件者的螢幕截圖。"]
 
 . 輸入姓名、電子郵件地址，選擇收件者將收到的通知類型，然後選擇*新增收件者*。
 

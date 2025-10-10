@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-quick-start-restricted-mode.html 
 keywords: quick start, restricted mode quick start, govcloud, government, aws gov, azure gov 
-summary: 透過準備環境和部署控制台代理，開始以受限模式使用NetApp控制台。 
+summary: 透過準備環境和部署控制台代理，開始以受限模式使用NetApp Console。 
 ---
 = 入門工作流程（受限模式）
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 透過準備環境和部署控制台代理，開始以受限模式使�
 
 
 [role="lead"]
-透過準備環境和部署控制台代理，開始以受限模式使用NetApp控制台。
+透過準備環境和部署控制台代理，開始以受限模式使用NetApp Console。
 
 受限模式通常由州和地方政府以及受監管的公司使用，包括在 AWS GovCloud 和 Azure Government 區域中的部署。在開始之前，請確保您了解link:concept-agents.html["控制台代理"]和link:concept-modes.html["部署模式"]。
 
@@ -28,10 +28,10 @@ summary: 透過準備環境和部署控制台代理，開始以受限模式使�
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] link:task-install-restricted-mode.html["部署控制台代理"]
 [role="quick-margin-list"]
 . 從雲端提供者的市場安裝控制台代理，或在您自己的 Linux 主機上手動安裝該軟體。
-. 透過開啟 Web 瀏覽器並輸入 Linux 主機的 IP 位址來設定NetApp控制台。
+. 透過開啟 Web 瀏覽器並輸入 Linux 主機的 IP 位址來設定NetApp Console。
 . 向控制台代理提供您先前設定的權限。
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] link:task-subscribe-restricted-mode.html["訂閱NetApp智慧服務（可選）"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] link:task-subscribe-restricted-mode.html["訂閱NetApp Intelligent Services（可選）"]
 [role="quick-margin-para"]
-可選：從雲端供應商的市場訂閱NetApp智慧服務，以按小時費率（PAYGO）或透過年度合約支付資料服務費用。  NetApp智慧服務包括NetApp備份與復原、 Cloud Volumes ONTAP、 NetApp雲端分層、 NetApp勒索軟體復原和NetApp災難復原。  NetApp資料分類包含在您的訂閱中，無需額外付費。
+可選：從雲端供應商的市場訂閱NetApp Intelligent Services，以按小時費率（PAYGO）或透過年度合約支付資料服務費用。  NetApp Intelligent Services包括NetApp Backup and Recovery、 Cloud Volumes ONTAP、 NetApp Cloud Tiering、 NetApp Ransomware Resilience和NetApp Disaster Recovery。  NetApp Data Classification包含在您的訂閱中，無需額外付費。

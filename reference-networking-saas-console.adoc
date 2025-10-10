@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-networking-saas-console.html 
 keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
-summary: NetApp Console、 NetApp Console 代理程式和NetApp資料服務需要出站網路存取以及聯絡必要端點的能力。 
+summary: NetApp Console、 NetApp Console代理和NetApp資料服務需要出站網路存取以及聯繫必要端點的能力。 
 ---
-= 準備NetApp控制台的網路訪問
+= 準備NetApp Console的網路訪問
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,11 +14,11 @@ summary: NetApp Console、 NetApp Console 代理程式和NetApp資料服務需�
 
 
 [role="lead"]
-NetApp Console、 NetApp Console 代理程式和NetApp資料服務需要出站網路存取以及聯絡必要端點的能力。
+NetApp Console、 NetApp Console代理和NetApp資料服務需要出站網路存取以及聯繫必要端點的能力。
 
 您需要為以下操作設定網路存取：
 
-* 以軟體即服務 (SaaS) 形式存取NetApp控制台的計算機
+* 以軟體即服務 (SaaS) 形式存取NetApp Console的計算機
 * 部署在本機或雲端中安裝的控制台代理程式的網路位置。
 * 某些NetApp資料服務的附加端點，包括Cloud Volumes ONTAP。
 
@@ -28,13 +28,13 @@ NOTE: NetApp減少了控制台和控制台代理程式所需的網路端點，�
 
 
 
-== NetApp控制台聯繫的端點
+== NetApp Console聯繫的端點
 
-存取NetApp控制台的每台電腦都必須連接到下面列出的端點。
+存取NetApp Console的每台電腦都必須連接到下面列出的端點。
 
 系統在兩種情況下聯繫這些端點：
 
-* 從電腦存取 https://console.netapp.com["NetApp控制台"^]作為軟體即服務（SaaS）。
+* 從電腦存取 https://console.netapp.com["NetApp Console"^]作為軟體即服務（SaaS）。
 * 從直接存取控制台代理主機的計算機，可以登入並進行設置，也可以從代理主機存取控制台。
 
 
@@ -49,13 +49,13 @@ NOTE: NetApp減少了控制台和控制台代理程式所需的網路端點，�
 | \ https://support.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息。 
 
 
-| \ https://signin.b2c.netapp.com | 更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp控制台。 
+| \ https://signin.b2c.netapp.com | 更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp Console。 
 
 
 | \ https://support.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息以及接收Cloud Volumes ONTAP的軟體更新。 
 
 
-| \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com | 在NetApp控制台中提供功能和服務。 
+| \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com | 在NetApp Console中提供功能和服務。 
 
 
  a| 
@@ -77,7 +77,7 @@ NOTE: NetApp減少了控制台和控制台代理程式所需的網路端點，�
 
 您可以在本機或雲端安裝控制台代理，它會聯絡端點以完成控制台發起的操作。
 
-控制台代理必須能夠存取與NetApp控制台相同的端點，以及根據安裝代理程式的位置而定的其他端點。
+控制台代理必須能夠存取與NetApp Console相同的端點，另外還可以根據代理程式的安裝位置存取其他端點。
 
 在安裝控制台代理之前設定網路端點存取。
 

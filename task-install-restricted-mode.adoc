@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-install-restricted-mode.html 
 keywords: government region, gov, govcloud, connector, sovereign cloud 
-summary: 以受限模式部署控制台代理，以便您可以在有限的出站連線下使用NetApp控制台。首先，安裝控制台代理，透過存取控制台代理上執行的使用者介面來設定控制台，然後提供您先前設定的雲端權限。 
+summary: 以受限模式部署控制台代理，以便您可以在有限的出站連線下使用NetApp Console。首先，安裝控制台代理，透過存取控制台代理上執行的使用者介面來設定控制台，然後提供您先前設定的雲端權限。 
 ---
 = 在限制模式下部署控制台代理
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 以受限模式部署控制台代理，以便您可以在有限的出�
 
 
 [role="lead"]
-以受限模式部署控制台代理，以便您可以在有限的出站連線下使用NetApp控制台。首先，安裝控制台代理，透過存取控制台代理上執行的使用者介面來設定控制台，然後提供您先前設定的雲端權限。
+以受限模式部署控制台代理，以便您可以在有限的出站連線下使用NetApp Console。首先，安裝控制台代理，透過存取控制台代理上執行的使用者介面來設定控制台，然後提供您先前設定的雲端權限。
 
 
 
@@ -46,7 +46,7 @@ link:task-prepare-restricted-mode.html#step-3-review-host-requirements["審查�
 
 
 .步驟
-. 前往 https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace 上的NetApp主機代理程式列表"^]
+. 前往 https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace 上的NetApp Console代理程式列表"^]
 . 在市場頁面上，選擇*繼續訂閱*。
 . 若要訂閱軟體，請選擇*接受條款*。
 +
@@ -68,7 +68,7 @@ link:task-prepare-restricted-mode.html#step-3-review-host-requirements["審查�
 +
 *** 選擇所需的 VPC 和子網路。
 *** 指定執行個體是否應具有公用 IP 位址。
-*** 指定安全性群組設置，以啟用控制台代理實例所需的連接方法：SSH、HTTP 和 HTTPS。
+*** 指定安全性群組設置，為控制台代理實例啟用所需的連線方法：SSH、HTTP 和 HTTPS。
 +
 link:reference-ports-aws.html["查看 AWS 的安全群組規則"] 。
 
@@ -88,7 +88,7 @@ link:reference-ports-aws.html["查看 AWS 的安全群組規則"] 。
 AWS 使用指定的設定啟動軟體。控制台代理實例和軟體運行大約需要五分鐘。
 
 .下一步是什麼？
-設定NetApp控制台。
+設定NetApp Console。
 
 --
 .AWS 政府市場
@@ -109,13 +109,13 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解�
 
 
 .步驟
-. 前往 AWS Marketplace 中提供的NetApp控制台代理程式。
+. 前往 AWS Marketplace 中提供的NetApp Console代理程式。
 +
 .. 開啟 EC2 服務並選擇 *啟動執行個體*。
 .. 選擇 *AWS Marketplace*。
-.. 搜尋NetApp Console 並選擇產品。
+.. 搜尋NetApp Console並選擇產品。
 +
-image:screenshot-gov-cloud-mktp.png["在 AWS Marketplace 中搜尋NetApp控制台後顯示的螢幕截圖"]
+image:screenshot-gov-cloud-mktp.png["在 AWS Marketplace 中搜尋NetApp Console後顯示的螢幕截圖"]
 
 .. 選擇*繼續*。
 
@@ -161,7 +161,7 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解�
 
 
 .步驟
-. 前往 Azure 市場中的NetApp控制台代理 VM 頁面。
+. 前往 Azure 市場中的NetApp Console代理 VM 頁面。
 +
 ** https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-oncommand-cloud-manager["商業區域的 Azure 市集頁面"^]
 ** https://portal.azure.us/#create/netapp.netapp-oncommand-cloud-manageroccm-byol["Azure 政府區域的 Azure 市集頁面"^]
@@ -202,7 +202,7 @@ link:reference-ports-azure.html["查看 Azure 的安全性群組規則"] 。
 Azure 使用指定的設定部署虛擬機器。虛擬機器和控制台代理軟體應在大約五分鐘內運作。
 
 .下一步是什麼？
-設定NetApp控制台。
+設定NetApp Console。
 
 --
 .手動安裝
@@ -337,15 +337,15 @@ Esc:wq
 控制台代理現已安裝。安裝結束時，如果您指定了代理伺服器，控制台代理服務 (occm) 將重新啟動兩次。
 
 .下一步是什麼？
-設定NetApp控制台。
+設定NetApp Console。
 
 --
 ====
 
 
-== 第 2 步：設定NetApp控制台
+== 第 2 步：設定NetApp Console
 
-首次存取控制台時，系統會提示您為控制台代理程式選擇一個組織，並且需要啟用受限模式。
+首次存取控制台時，系統會提示您為控制台代理程式選擇一個組織，並需要啟用受限模式。
 
 .開始之前
 設定控制台代理的人員必須使用尚不屬於控制台組織的登入名稱登入控制台。
@@ -354,7 +354,7 @@ Esc:wq
 
 .步驟
 . 從與控制台代理程式執行個體有連線的主機開啟 Web 瀏覽器，然後輸入您安裝的控制台代理程式的下列 URL。
-. 註冊或登入NetApp控制台。
+. 註冊或登入NetApp Console。
 . 登入後，設定控制台：
 +
 .. 輸入控制台代理的名稱。
@@ -380,7 +380,7 @@ Esc:wq
 
 
 
-== 步驟 3：提供對NetApp控制台的權限
+== 步驟 3：提供對NetApp Console的權限
 
 如果您從 Azure 市集部署了控制台代理，或手動安裝了控制台代理軟體，則需要提供先前設定的權限。
 
@@ -407,7 +407,7 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解�
 --
 .AWS 存取金鑰
 --
-向NetApp控制台提供具有所需權限的 IAM 使用者的 AWS 存取金鑰。
+向NetApp Console提供具有所需權限的 IAM 使用者的 AWS 存取金鑰。
 
 .步驟
 . 選擇“*管理 > 憑證*”。
@@ -430,7 +430,7 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解�
 .步驟
 . 從 Azure 入口網站開啟「*訂閱*」服務並選擇您的訂閱。
 +
-從*訂閱*服務分配角色很重要，因為這指定了訂閱等級的角色分配範圍。 _範圍_定義了存取適用的資源集。如果您在不同層級（例如，虛擬機器層級）指定範圍，則您在NetApp控制台內完成操作的能力將受到影響。
+從*訂閱*服務分配角色很重要，因為這指定了訂閱等級的角色分配範圍。 _範圍_定義了存取適用的資源集。如果您在不同層級（例如，虛擬機器層級）指定範圍，則您在NetApp Console內完成操作的能力將受到影響。
 
 +
 https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure 文件：了解 Azure RBAC 的範圍"^]
@@ -456,7 +456,7 @@ NOTE: 控制台操作員是策略中提供的預設名稱。如果您為角色�
 --
 .Azure 服務主體
 --
-向NetApp控制台提供您先前設定的 Azure 服務主體的憑證。
+向NetApp Console提供您先前設定的 Azure 服務主體的憑證。
 
 .步驟
 . 選擇“*管理 > 憑證*”。
@@ -467,7 +467,7 @@ NOTE: 控制台操作員是策略中提供的預設名稱。如果您為角色�
 +
 *** 應用程式（客戶端）ID
 *** 目錄（租戶）ID
-*** 客戶端機密
+*** 客戶端密鑰
 
 
 .. *市場訂閱*：透過立即訂閱或選擇現有訂閱將市場訂閱與這些憑證關聯。
@@ -477,7 +477,7 @@ NOTE: 控制台操作員是策略中提供的預設名稱。如果您為角色�
 
 
 .結果
-NetApp控制台現在具有代表您在 Azure 中執行操作所需的權限。
+NetApp Console現在具有代表您在 Azure 中執行操作所需的權限。
 
 --
 .Google Cloud 服務帳號

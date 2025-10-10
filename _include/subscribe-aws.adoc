@@ -2,16 +2,16 @@
 :allow-uri-read: 
 
 
-以下影片展示了從 AWS Marketplace 訂閱NetApp智慧服務的步驟：
+以下影片展示了從 AWS Marketplace 訂閱NetApp Intelligent Services的步驟：
 
-.從 AWS Marketplace 訂閱NetApp智慧服務
+.從 AWS Marketplace 訂閱NetApp Intelligent Services
 video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .步驟
 . 選擇“*管理 > 憑證*”。
 . 選擇*組織憑證*。
 . 選擇與控制台代理程式關聯的一組憑證的操作選單，然後選擇*配置訂閱*。
 +
-您必須選擇與控制台代理程式關聯的憑證。您無法將市場訂閱與與NetApp控制台關聯的憑證關聯。
+您必須選擇與控制台代理程式關聯的憑證。您無法將市場訂閱與與NetApp Console關聯的憑證關聯。
 
 +
 image:screenshot_aws_configure_subscription.png["一組現有憑證的操作選單的螢幕截圖。"]
@@ -23,7 +23,7 @@ image:screenshot_aws_configure_subscription.png["一組現有憑證的操作選�
 .. 選擇*訂閱*。
 .. 選擇*設定您的帳戶*。
 +
-您將被重定向到NetApp控制台。
+您將被重新導向到NetApp Console。
 
 .. 從「*訂閱分配*」頁面：
 +

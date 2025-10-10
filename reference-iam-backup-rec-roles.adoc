@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-iam-backup-rec-roles.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, roles, permissions, access control, role-based access control, rbac, role-based access 
-summary: 您可以為使用者指派以下角色，以便他們存取控制台內的NetApp Backup and Recovery。備份和復原角色可讓您靈活地為使用者指派特定於他們需要在組織內完成的任務的角色。如何分配角色取決於您自己的業務和儲存管理實踐。 
+summary: 您可以為使用者指派以下角色，以便他們存取控制台內的NetApp Backup and Recovery 。備份和復原角色可讓您靈活地為使用者指派特定於他們需要在組織內完成的任務的角色。如何分配角色取決於您自己的業務和儲存管理實踐。 
 ---
-= NetApp控制台中的NetApp備份與復原角色
+= NetApp Console中的NetApp Backup and Recovery角色
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,24 +14,24 @@ summary: 您可以為使用者指派以下角色，以便他們存取控制台�
 
 
 [role="lead"]
-您可以為使用者指派以下角色，以便他們存取控制台內的NetApp Backup and Recovery。備份和復原角色可讓您靈活地為使用者指派特定於他們需要在組織內完成的任務的角色。如何分配角色取決於您自己的業務和儲存管理實踐。
+您可以為使用者指派以下角色，以便他們存取控制台內的NetApp Backup and Recovery 。備份和復原角色可讓您靈活地為使用者指派特定於他們需要在組織內完成的任務的角色。如何分配角色取決於您自己的業務和儲存管理實踐。
 
 該服務使用特定於NetApp Backup and Recovery 的以下角色。
 
-* *備份和還原超級管理員*：在NetApp備份和復原中執行任何操作。
-* *備份和還原備份管理員*：在NetApp備份和還原中執行備份到本機快照、複製到二級儲存以及備份到物件儲存作業。
-* *備份和還原復原管理員*：使用NetApp備份和還原復原工作負載。
-* *備份和還原克隆管理*：使用NetApp備份和還原複製應用程式和資料。
-* *備份和還原檢視器*：查看NetApp備份和還原中的信息，但不執行任何操作。
+* *備份和還原超級管理員*：在NetApp Backup and Recovery中執行任何操作。
+* *備份和還原備份管理員*：在NetApp Backup and Recovery中執行備份到本機快照、複製到二級儲存以及備份到物件儲存作業。
+* *備份和還原復原管理員*：使用NetApp Backup and Recovery復原工作負載。
+* *備份和還原克隆管理*：使用NetApp Backup and Recovery應用程式和資料。
+* *備份和還原檢視器*：查看NetApp Backup and Recovery中的信息，但不執行任何操作。
 
 
-有關所有NetApp控制台訪問角色的詳細信息，請參閱 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["控制台設定和管理文檔"^]。
+有關所有NetApp Console訪問角色的詳細信息，請參閱 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["控制台設定和管理文檔"^]。
 
 
 
 == 用於常見操作的角色
 
-下表列出了每個NetApp備份和復原角色可以針對所有工作負載執行的操作。
+下表列出了每個NetApp Backup and Recovery角色可以針對所有工作負載執行的操作。
 
 [cols="20,20,15,15a,15a,15a"]
 |===
@@ -293,13 +293,13 @@ summary: 您可以為使用者指派以下角色，以便他們存取控制台�
 
 == 用於特定於工作負載的操作的角色
 
-下表列出了每個NetApp備份和復原角色可以針對特定工作負載執行的動作。
+下表列出了每個NetApp Backup and Recovery角色可以針對特定工作負載執行的動作。
 
 
 
 === Kubernetes 工作負載
 
-表格顯示了每個NetApp備份和復原角色可以針對特定於 Kubernetes 工作負載的作業執行的操作。
+此表顯示了每個NetApp Backup and Recovery角色可以針對特定於 Kubernetes 工作負載的操作執行的操作。
 
 [cols="20,20,15,15a,15a"]
 |===

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-accounts-azure.html 
 keywords: cloud provider accounts, azure, azure accounts, service principal, multiple accounts, permissions, policy, policies, subscriptions, credentials, marketplace subscription, replace subscription, subscription, bluexp 
-summary: 了解NetApp控制台如何使用 Azure 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您管理一個或多個 Azure 訂閱的憑證。例如，您可能想了解何時在控制台新增其他 Azure 憑證。 
+summary: 了解NetApp Console如何使用 Azure 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您管理一個或多個 Azure 訂閱的憑證。例如，您可能想了解何時在控制台新增其他 Azure 憑證。 
 ---
-= 了解NetApp控制台中的 Azure 憑證和權限
+= 了解NetApp Console中的 Azure 憑證和權限
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 了解NetApp控制台如何使用 Azure 憑證代表您執行操作以�
 
 
 [role="lead"]
-了解NetApp控制台如何使用 Azure 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您管理一個或多個 Azure 訂閱的憑證。例如，您可能想了解何時在控制台新增其他 Azure 憑證。
+了解NetApp Console如何使用 Azure 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您管理一個或多個 Azure 訂閱的憑證。例如，您可能想了解何時在控制台新增其他 Azure 憑證。
 
 
 

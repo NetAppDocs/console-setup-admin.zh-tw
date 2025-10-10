@@ -5,7 +5,7 @@
 . 複製link:reference-permissions-azure.html["連接器的自訂角色權限"]並將它們保存在 JSON 檔案中。
 . 透過將 Azure 訂閱 ID 新增至可分配範圍來修改 JSON 檔案。
 +
-您應該為想要與NetApp控制台一起使用的每個 Azure 訂閱新增 ID。
+您應該為想要與NetApp Console一起使用的每個 Azure 訂閱新增 ID。
 
 +
 *例子*

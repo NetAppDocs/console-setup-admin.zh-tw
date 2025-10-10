@@ -9,6 +9,6 @@
 * 身分識別和存取管理 (IAM) API
 * 雲端金鑰管理服務 (KMS) API
 +
-（僅當您打算將NetApp Backup and Recovery 與客戶管理加密金鑰 (CMEK) 結合使用時才需要）
+（僅當您打算將NetApp Backup and Recovery與客戶管理加密金鑰 (CMEK) 結合使用時才需要）
 
 

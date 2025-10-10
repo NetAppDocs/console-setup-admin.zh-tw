@@ -1,15 +1,15 @@
 ---
 indexpage:
-  title: NetApp控制台設定與管理文檔
-  summary: 開始使用NetApp Console，以便您可以開始在本地和雲端環境中建置、保護和管理資料。設定完成後，您可以使用身分和存取管理 (IAM)
+  title: NetApp Console設定與管理文檔
+  summary: 開始使用NetApp Console ，以便您可以開始在本地和雲端環境中建置、保護和管理資料。設定完成後，您可以使用身分和存取管理 (IAM)
     控制對資源的存取、管理控制台代理、雲端提供者帳戶等。
   keywords: bluexp, netapp console, Console agents, accounts, get started, setup,
     administration, sign up, log in, login, permissions
-  lead: 開始使用NetApp Console，以便您可以開始在本地和雲端環境中建置、保護和管理資料。設定完成後，您可以使用身分和存取管理 (IAM) 控制對資源的存取、管理控制台代理、雲端提供者帳戶等。
+  lead: 開始使用NetApp Console ，以便您可以開始在本地和雲端環境中建置、保護和管理資料。設定完成後，您可以使用身分和存取管理 (IAM) 控制對資源的存取、管理控制台代理、雲端提供者帳戶等。
   tiles:
   - title: 開始
     links:
-    - title: 了解NetApp控制台
+    - title: 了解NetApp Console
       url: concept-overview.html
     - title: 了解部署模式
       url: concept-modes.html
@@ -79,9 +79,9 @@ indexpage:
       url: task-install-agent-on-prem-ova.html
   - title: 部落格和社區
     links:
-    - title: NetApp控制台
+    - title: NetApp Console
       url: https://www.netapp.com/console
-    - title: NetApp資料服務
+    - title: NetApp Data Services
       url: https://www.netapp.com/data-services/
     - title: NetApp社群
       url: https://community.netapp.com/

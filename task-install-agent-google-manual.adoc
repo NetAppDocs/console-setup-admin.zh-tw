@@ -88,7 +88,7 @@ Ubuntu
  a| 
 24.04 LTS
  a| 
-3.9.45 或更高版本， NetApp控制台處於標準模式或受限模式
+3.9.45 或更高版本， NetApp Console處於標準模式或受限模式
  a| 
 Docker Engine 23.06 至 28.0.0。
  a| 
@@ -152,7 +152,7 @@ Google Cloud 虛擬機器實例上的控制台代理程式支援下列作業系�
 
 * 啟用並啟動 podman.socket 服務
 * 安裝python3
-* 安裝 podman-compose 軟體套件版本 1.0.6
+* 安裝 podman-compose 套件版本 1.0.6
 * 將 podman-compose 加入到 PATH 環境變量
 * 如果使用 Red Hat Enterprise Linux 8，請驗證您的 Podman 版本使用的是 Aardvark DNS 而不是 CNI
 
@@ -304,7 +304,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 出站互聯網訪問:: 部署控制台代理程式的網路位置必須具有出站網路連線才能聯絡特定端點。
 
 
-使用基於 Web 的NetApp控制台時從電腦聯繫的端點::
+使用基於 Web 的NetApp Console時從電腦聯繫的端點::
 +
 --
 從 Web 瀏覽器存取控制台的電腦必須能夠聯絡多個端點。您需要使用控制台來設定控制台代理並進行控制台的日常使用。
@@ -348,7 +348,7 @@ link:reference-networking-saas-console.html["為NetApp控制台準備網絡"] �
  a| 
 \ https://signin.b2c.netapp.com
  a| 
-更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp控制台。
+更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp Console。
 
 
 
@@ -362,7 +362,7 @@ link:reference-networking-saas-console.html["為NetApp控制台準備網絡"] �
  a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
-在NetApp控制台中提供功能和服務。
+在NetApp Console中提供功能和服務。
 
 
 
@@ -407,7 +407,7 @@ link:reference-networking-saas-console.html["為NetApp控制台準備網絡"] �
 --
 
 
-啟用 NTP:: 如果您打算使用NetApp資料分類掃描公司資料來源，則應在控制台代理程式和NetApp資料分類系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
+啟用 NTP:: 如果您打算使用NetApp Data Classification來掃描公司資料來源，則應在控制台代理程式和NetApp Data Classification系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
 
 
 
@@ -495,7 +495,7 @@ link:reference-permissions-gcp.html["代理服務帳號策略"]
 | 計算.網路使用者部署管理員.編輯器 | 部署和維護服務項目中的Cloud Volumes ONTAP和服務 
 
 
-| Cloud Volumes ONTAP服務帳戶 | 風俗 | 服務項目 | storage.admin 成員： NetApp Console 服務帳號為 serviceAccount.user | 不適用 | （選購）適用於NetApp Cloud Tiering 和NetApp Backup and Recovery 
+| Cloud Volumes ONTAP服務帳戶 | 風俗 | 服務項目 | storage.admin 成員： NetApp Console服務帳號作為 serviceAccount.user | 不適用 | （選購）適用於NetApp Cloud Tiering和NetApp Backup and Recovery 
 
 
 | Google API 服務代理 | Google雲 | 服務項目  a| 
@@ -513,7 +513,7 @@ link:reference-permissions-gcp.html["代理服務帳號策略"]
 |===
 筆記：
 
-. 如果您沒有將防火牆規則傳遞給部署並選擇讓控制台為您建立規則，則僅主機專案才需要 deploymentmanager.editor。如果未指定規則， NetApp控制台將在主機專案中建立包含 VPC0 防火牆規則的部署。
+. 如果您沒有將防火牆規則傳遞給部署並選擇讓控制台為您建立規則，則僅主機專案才需要 deploymentmanager.editor。如果未指定規則， NetApp Console將在主機專案中建立包含 VPC0 防火牆規則的部署。
 . 只有當您未將防火牆規則傳遞給部署並選擇讓控制台為您建立它們時，才需要firewall.create 和firewall.delete。這些權限位於控制台帳戶 .yaml 檔案中。如果您使用共用 VPC 部署 HA 對，這些權限將用於為 VPC1、2 和 3 建立防火牆規則。對於所有其他部署，這些權限也將用於為 VPC0 建立規則。
 . 對於 Cloud Tiering，分層服務帳戶必須在服務帳戶上具有 serviceAccount.user 角色，而不僅僅是在專案層級。目前，如果您在專案層級指派 serviceAccount.user，則使用 getIAMPolicy 查詢服務帳號時不會顯示權限。
 
@@ -535,7 +535,7 @@ link:reference-permissions-gcp.html["代理服務帳號策略"]
 ** 身分識別和存取管理 (IAM) API
 ** 雲端金鑰管理服務 (KMS) API
 +
-（僅當您打算將NetApp Backup and Recovery 與客戶管理加密金鑰 (CMEK) 結合使用時才需要）
+（僅當您打算將NetApp Backup and Recovery與客戶管理加密金鑰 (CMEK) 結合使用時才需要）
 
 
 
@@ -547,7 +547,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud �
 
 == 步驟 7：安裝控制台代理
 
-前提條件完成後，您可以在自己的 Linux 主機上手動安裝軟體。
+完成先決條件後，您可以在自己的 Linux 主機上手動安裝軟體。
 
 .開始之前
 您應該具有以下內容：
@@ -688,7 +688,7 @@ https://_ipaddress_[]
 .. 輸入系統的名稱。
 .. 在*您是否在安全環境中運作？ *下保持限制模式為停用。
 +
-您應該保持限制模式處於停用狀態，因為這些步驟描述如何在標準模式下使用控制台。只有當您擁有安全的環境並希望中斷此帳戶與後端服務的連線時，才應啟用受限模式。如果真是這樣的話，link:task-quick-start-restricted-mode.html["依照步驟在受限模式下開始使用NetApp控制台"] 。
+您應該保持限制模式處於停用狀態，因為這些步驟描述如何在標準模式下使用控制台。只有當您擁有安全的環境並希望中斷此帳戶與後端服務的連線時，才應啟用受限模式。如果真是這樣的話，link:task-quick-start-restricted-mode.html["依照步驟在受限模式下開始使用NetApp Console"] 。
 
 .. 選擇*讓我們開始吧*。
 
@@ -699,7 +699,7 @@ NOTE: 如果安裝失敗，您可以查看日誌和報告來幫助您排除故�
 
 
 
-如果您在建立控制台代理程式的相同 Google Cloud 帳戶中擁有 Google Cloud Storage 儲存桶，您將看到 Google Cloud Storage 系統自動出現在 *Systems* 頁面上。 https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["了解如何透過NetApp控制台管理 Google Cloud Storage"^]
+如果您在建立控制台代理程式的相同 Google Cloud 帳戶中擁有 Google Cloud Storage 儲存桶，您將看到 Google Cloud Storage 系統自動出現在 *Systems* 頁面上。 https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["了解如何透過NetApp Console管理 Google Cloud Storage"^]
 
 
 

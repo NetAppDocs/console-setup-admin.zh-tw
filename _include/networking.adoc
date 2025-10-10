@@ -17,7 +17,7 @@ VNet 與子網路:: 建立控制台代理程式時，您需要指定它所在的
 出站互聯網訪問:: 部署控制台代理程式的網路位置必須具有出站網路連線才能聯絡特定端點。
 
 
-從NetApp控制台聯繫的端點:: 當您使用透過 SaaS 層提供的基於 Web 的NetApp控制台時，它會聯絡多個端點來完成資料管理任務。這包括從控制台聯繫以部署控制台代理的端點。
+從NetApp控制台聯繫的端點:: 當您使用透過 SaaS 層提供的基於 Web 的NetApp Console時，它會聯絡多個端點來完成資料管理任務。這包括從控制台聯繫以部署控制台代理的端點。
 +
 --
 link:reference-networking-saas-console.html["查看從NetApp控制台聯繫的端點列表"] 。
@@ -70,5 +70,5 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 --
 
 
-啟用 NTP:: 如果您打算使用NetApp資料分類掃描公司資料來源，則應在控制台代理程式和NetApp資料分類系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
+啟用 NTP:: 如果您打算使用NetApp Data Classification來掃描公司資料來源，則應在控制台代理程式和NetApp Data Classification系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
 

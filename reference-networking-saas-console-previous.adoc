@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-networking-saas-console-previous.html 
 keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
-summary: 當您登入並使用基於 Web 的控制台時，它會聯絡多個端點來完成您發起的操作。存取NetApp控制台的電腦必須與這些端點建立連線。 
+summary: 當您登入並使用基於 Web 的控制台時，它會聯絡多個端點來完成您發起的操作。存取NetApp Console的電腦必須與這些端點建立連線。 
 ---
 = 3.9.55 及以下版本所需的網路存取點
 :hardbreaks:
@@ -14,9 +14,9 @@ summary: 當您登入並使用基於 Web 的控制台時，它會聯絡多個端
 
 
 [role="lead"]
-本主題詳細介紹了NetApp控制台 4.0.0 之前的版本標準模式所需的網路存取。 NetAppNetApp、 NetApp控制台代理程式和NetApp資料服務外部網路存取以及聯繫必要端點的能力。您需要確保控制台和您安裝的任何代理程式都具有正確的網路存取權限以使用功能屬性。
+本主題詳細介紹了NetApp Console4.0.0 之前的版本標準模式所需的網路存取、 NetApp ConsoleNetApp Console代理程式和NetApp資料服務出站網路存取以及聯絡必要端點的能力。您需要確保控制台和您安裝的任何代理程式都具有正確的網路存取權限以使用功能屬性。
 
-您需要為以軟體即服務 (SaaS) 形式存取NetApp控制台的電腦以及您在本機或雲端中安裝的任何控制台代理程式設定網路存取。您可能還需要某些NetApp資料服務（包括Cloud Volumes ONTAP）的額外端點。
+您需要為以軟體即服務 (SaaS) 形式存取NetApp Console的電腦以及您在本機或雲端中安裝的任何控制台代理程式設定網路存取。您可能還需要某些NetApp資料服務（包括Cloud Volumes ONTAP）的額外端點。
 
 
 
@@ -47,13 +47,13 @@ systemctl status netapp-service-manager.service
 
 
 
-== NetApp控制台聯繫的端點
+== NetApp Console聯繫的端點
 
-存取NetApp控制台的每台電腦都必須連接到下面列出的端點。
+存取NetApp Console的每台電腦都必須連接到下面列出的端點。
 
 系統在兩種情況下聯繫這些端點：
 
-* 從電腦存取 https://console.netapp.com["NetApp控制台"^]作為軟體即服務（SaaS）。
+* 從電腦存取 https://console.netapp.com["NetApp Console"^]作為軟體即服務（SaaS）。
 * 從直接存取代理主機的計算機，可以登入並進行設置，也可以從代理主機存取控制台。
 
 
@@ -65,7 +65,7 @@ systemctl status netapp-service-manager.service
 | \ https://support.netapp.com \ https://mysupport.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息。 
 
 
-| \https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com | 在NetApp控制台中提供功能和服務。 
+| \https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com | 在NetApp Console中提供功能和服務。 
 
 
  a| 
@@ -87,7 +87,7 @@ NetApp建議在防火牆中允許選項 1 端點，因為它們更安全，並�
 
 * 3.9.47 及更高版本支援選項 1 端點。  3.9.47 之前的版本不支援向後相容。
 * 控制台代理首先啟動與選項 2 中的端點的聯繫。如果這些端點不可訪問，它會自動聯繫選項 1 中的端點。
-* 如果將控制台代理程式與NetApp Backup and Recovery 或 Ransomware Resilience 一起使用，則系統不支援選項 1 端點。允許選項 2 端點並不允許選項 1。
+* 如果將控制台代理程式與NetApp Backup and Recovery或 Ransomware Resilience 一起使用，則系統不支援選項 1 端點。允許選項 2 端點並不允許選項 1。
 
 
 |===
@@ -97,7 +97,7 @@ NetApp建議在防火牆中允許選項 1 端點，因為它們更安全，並�
 
 您可以在本機或雲端安裝控制台代理，它會聯絡端點以完成控制台發起的操作。
 
-控制台代理需要存取與NetApp控制台相同的端點，如果您在雲端提供者中部署代理，則還需要存取其他端點。
+控制台代理需要存取與NetApp Console相同的端點，如果您在雲端提供者中部署代理，則還需要存取其他端點。
 
 
 
@@ -135,7 +135,7 @@ NetApp建議在防火牆中允許選項 1 端點，因為它們更安全，並�
 
 * 3.9.47 及更高版本支援選項 1 端點。  3.9.47 之前的版本不支援向後相容。
 * 控制台代理首先啟動與選項 2 中的端點的聯繫。如果這些端點不可訪問，它會自動聯繫選項 1 中的端點。
-* 如果將控制台代理程式與NetApp Backup and Recovery 或 Ransomware Resilience 一起使用，則系統不支援選項 1 端點。允許選項 2 端點並不允許選項 1。
+* 如果將控制台代理程式與NetApp Backup and Recovery或 Ransomware Resilience 一起使用，則系統不支援選項 1 端點。允許選項 2 端點並不允許選項 1。
 
 
 |===
@@ -178,7 +178,7 @@ NetApp建議在防火牆中允許選項 1 端點，因為它們更安全，並�
 
 * 3.9.47 及更高版本支援選項 1 端點。  3.9.47 之前的版本不支援向後相容。
 * 控制台代理首先啟動與選項 2 中的端點的聯繫。如果這些端點不可訪問，它會自動聯繫選項 1 中的端點。
-* 如果將控制台代理程式與NetApp Backup and Recovery 或 Ransomware Resilience 一起使用，則系統不支援選項 1 端點。允許選項 2 端點並不允許選項 1。
+* 如果將控制台代理程式與NetApp Backup and Recovery或 Ransomware Resilience 一起使用，則系統不支援選項 1 端點。允許選項 2 端點並不允許選項 1。
 
 
 |===
@@ -218,7 +218,7 @@ NetApp建議在防火牆中允許選項 1 端點，因為它們更安全，而�
 
 * 從控制台代理 3.9.47 版本開始，系統支援選項 1 中列出的端點。控制台代理的先前版本不支援向後相容。
 * 控制台代理程式首先聯絡選項 2 中的端點。如果這些端點不可訪問，它會自動聯繫選項 1 中的端點。
-* 如果將控制台代理程式與NetApp Backup and Recovery 或 Ransomware Resilience 一起使用，則系統不支援選項 1 端點。允許選項 2 端點並不允許選項 1。
+* 如果將控制台代理程式與NetApp Backup and Recovery或 Ransomware Resilience 一起使用，則系統不支援選項 1 端點。允許選項 2 端點並不允許選項 1。
 
 
 |===

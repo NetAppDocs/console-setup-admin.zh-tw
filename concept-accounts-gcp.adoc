@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-accounts-gcp.html 
 keywords: cloud provider accounts, gcp, gcp accounts, google cloud platform, google accounts, google cloud platform accounts, permissions, project, google cloud project, credential, bluexp 
-summary: 了解NetApp控制台如何使用 Google Cloud 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您管理一個或多個 Google Cloud 專案的憑證。例如，您可能想要了解與控制台代理 VM 關聯的服務帳戶。 
+summary: 了解NetApp Console如何使用 Google Cloud 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您管理一個或多個 Google Cloud 專案的憑證。例如，您可能想要了解與控制台代理 VM 關聯的服務帳戶。 
 ---
 = 了解 Google Cloud 專案和權限
 :hardbreaks:
@@ -14,11 +14,11 @@ summary: 了解NetApp控制台如何使用 Google Cloud 憑證代表您執行操
 
 
 [role="lead"]
-了解NetApp控制台如何使用 Google Cloud 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您管理一個或多個 Google Cloud 專案的憑證。例如，您可能想要了解與控制台代理 VM 關聯的服務帳戶。
+了解NetApp Console如何使用 Google Cloud 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您管理一個或多個 Google Cloud 專案的憑證。例如，您可能想要了解與控制台代理 VM 關聯的服務帳戶。
 
 
 
-== NetApp控制台的專案和權限
+== NetApp Console的專案和權限
 
 您必須先部署控制台代理，然後才能使用控制台管理 Google Cloud 專案中的資源。代理程式不能在您的場所或不同的雲端提供者中運作。
 

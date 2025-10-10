@@ -3,7 +3,7 @@
 
 
 .步驟
-. 前往 https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace 上的NetApp主機代理程式列表"^]
+. 前往 https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace 上的NetApp Console代理程式列表"^]
 . 在市場頁面上，選擇*繼續訂閱*。
 . 若要訂閱軟體，請選擇*接受條款*。
 +
@@ -25,7 +25,7 @@
 +
 *** 選擇所需的 VPC 和子網路。
 *** 指定執行個體是否應具有公用 IP 位址。
-*** 指定安全性群組設置，以啟用控制台代理實例所需的連接方法：SSH、HTTP 和 HTTPS。
+*** 指定安全性群組設置，為控制台代理實例啟用所需的連線方法：SSH、HTTP 和 HTTPS。
 +
 link:reference-ports-aws.html["查看 AWS 的安全群組規則"] 。
 

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-iam-get-started.html 
 keywords: iam, quick start, get started, get started with iam, identity and access management 
-summary: 若要在NetApp控制台中開始身分識別和存取管理，請自訂組織的層級結構、新增其他成員、新增或發現資源，並將這些資源與專案關聯。 
+summary: 若要開始在NetApp Console中進行身分識別和存取管理，請自訂組織的層級結構、新增其他成員、新增或發現資源，並將這些資源與專案關聯。 
 ---
-= 開始在NetApp控制台中使用身分和存取權限
+= 開始在NetApp Console中使用身分和存取權限
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 若要在NetApp控制台中開始身分識別和存取管理，請自�
 
 
 [role="lead"]
-當您註冊NetApp控制台時，系統會提示您建立一個新的組織。該組織包括一名成員（組織管理員）和一個預設項目。要設定身分和存取管理 (IAM) 來滿足您的業務需求，您需要自訂組織的層次結構、新增其他成員、新增或發現資源，並在整個層次結構中關聯這些資源。
+當您註冊NetApp Console時，系統會提示您建立一個新的組織。該組織包括一名成員（組織管理員）和一個預設項目。要設定身分和存取管理 (IAM) 來滿足您的業務需求，您需要自訂組織的層次結構、新增其他成員、新增或發現資源，並在整個層次結構中關聯這些資源。
 
 您必須擁有*組織管理員*權限才能管理整個組織的身分和存取權限。如果您具有*資料夾或專案管理員*權限，則您只能管理您有權限的資料夾和專案。
 
@@ -52,7 +52,7 @@ link:task-iam-manage-members-permissions.html["了解如何管理成員及其權
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"]將資源與其他項目關聯
 [role="quick-margin-para"]
-在控制台中新增或發現系統會自動將資源與目前選定的項目關聯。若要使該資源可用於組織中的另一個項目，請將其與對應的項目關聯。如果使用控制台代理程式來管理資源，請將控制台代理程式與對應的項目關聯。
+在控制台中新增或發現系統會自動將資源與目前選定的項目關聯。若要使該資源可供組織中的另一個專案使用，請將其與對應的專案關聯。如果使用控制台代理程式來管理資源，請將控制台代理程式與對應的項目關聯。
 
 [role="quick-margin-list"]
 * link:task-iam-manage-resources.html["了解如何管理組織的資源層次結構"] 。
@@ -60,6 +60,6 @@ link:task-iam-manage-members-permissions.html["了解如何管理成員及其權
 
 
 .相關資訊
-* link:concept-identity-and-access-management.html["了解NetApp控制台中的身分和存取管理"]
+* link:concept-identity-and-access-management.html["了解NetApp Console中的身分和存取管理"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解身分和存取 API"^]
 

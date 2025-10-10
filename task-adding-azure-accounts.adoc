@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-adding-azure-accounts.html 
 keywords: permissions, microsoft, azure, permissions, custom role, role, json, active directory, ad, service principal, key, tenant id, application key, application id, operator role, managed identity, iam, operator, role, virtual machine, create custom role, create azure custom role, azure custom role 
-summary: 新增和管理 Azure 憑證，以便NetApp控制台具有在 Azure 訂閱中部署和管理雲端資源所需的權限。如果您管理多個 Azure 市場訂閱，則可以從「憑證」頁面將每個訂閱指派給不同的 Azure 憑證。 
+summary: 新增和管理 Azure 憑證，以便NetApp Console具有在 Azure 訂閱中部署和管理雲端資源所需的權限。如果您管理多個 Azure 市場訂閱，則可以從「憑證」頁面將每個訂閱指派給不同的 Azure 憑證。 
 ---
-= 管理NetApp控制台的 Azure 憑證和市集訂閱
+= 管理NetApp Console的 Azure 憑證和市集訂閱
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 新增和管理 Azure 憑證，以便NetApp控制台具有在 Azure 訂
 
 
 [role="lead"]
-新增和管理 Azure 憑證，以便NetApp控制台具有在 Azure 訂閱中部署和管理雲端資源所需的權限。如果您管理多個 Azure 市場訂閱，則可以從「憑證」頁面將每個訂閱指派給不同的 Azure 憑證。
+新增和管理 Azure 憑證，以便NetApp Console具有在 Azure 訂閱中部署和管理雲端資源所需的權限。如果您管理多個 Azure 市場訂閱，則可以從「憑證」頁面將每個訂閱指派給不同的 Azure 憑證。
 
 
 
@@ -65,7 +65,7 @@ image:screenshot_accounts_switch_azure_subscription.gif["螢幕截圖顯示了�
 
 
 
-== 在NetApp控制台中新增其他 Azure 憑證
+== 為NetApp Console新增其他 Azure 憑證
 
 從控制台部署控制台代理程式時，控制台會在具有所需權限的虛擬機器上啟用系統指派的託管識別碼。當您為Cloud Volumes ONTAP建立新系統時，控制台會預設選擇這些 Azure 憑證。
 
@@ -113,7 +113,7 @@ image:screenshot_azure_ad.png["顯示 Microsoft Azure 中的 Active Directory �
 . 指定有關應用程式的詳細資訊：
 +
 ** *名稱*：輸入應用程式的名稱。
-** *帳戶類型*：選擇帳戶類型（任何類型都可以與NetApp控制台一起使用）。
+** *帳戶類型*：選擇帳戶類型（任何類型都可以與NetApp Console一起使用）。
 ** *重定向 URI*：您可以將此欄位留空。
 
 
@@ -203,7 +203,7 @@ image:screenshot_azure_service_principal_role.png["Azure 入口網站的螢幕�
 服務主體現在具有部署控制台代理程式所需的 Azure 權限。
 
 +
-如果您想要從多個 Azure 訂閱部署Cloud Volumes ONTAP ，則必須將服務主體綁定到每個訂閱。在NetApp控制台中，您可以選擇部署Cloud Volumes ONTAP時要使用的訂閱。
+如果您想要從多個 Azure 訂閱部署Cloud Volumes ONTAP ，則必須將服務主體綁定到每個訂閱。在NetApp Console中，您可以選擇部署Cloud Volumes ONTAP時要使用的訂閱。
 
 
 
@@ -287,7 +287,7 @@ image:screenshot_azure_client_secret.gif["Azure 入口網站的螢幕截圖，�
 +
 *** 應用程式（客戶端）ID
 *** 目錄（租戶）ID
-*** 客戶端機密
+*** 客戶端密鑰
 
 
 .. *市場訂閱*：透過立即訂閱或選擇現有訂閱將市場訂閱與這些憑證關聯。
@@ -327,7 +327,7 @@ image:screenshot_accounts_switch_azure.gif["螢幕截圖顯示在「詳細資料
 . 選擇*組織憑證*。
 . 選擇與控制台代理程式關聯的一組憑證的操作選單，然後選擇*配置訂閱*。
 +
-您必須選擇與控制台代理程式關聯的憑證。您無法將市場訂閱與與NetApp控制台關聯的憑證關聯。
+您必須選擇與控制台代理程式關聯的憑證。您無法將市場訂閱與與NetApp Console關聯的憑證關聯。
 
 . 若要將憑證與現有訂閱關聯，請從下拉清單中選擇訂閱並選擇*配置*。
 . 若要將憑證與新訂閱關聯，請選擇「新增訂閱」>「繼續」*，然後按照 Azure 市場中的步驟操作：
@@ -337,7 +337,7 @@ image:screenshot_accounts_switch_azure.gif["螢幕截圖顯示在「詳細資料
 .. 填寫表格並選擇*訂閱*。
 .. 訂閱程序完成後，選擇*立即配置帳戶*。
 +
-您將被重定向到NetApp控制台。
+您將被重新導向到NetApp Console。
 
 .. 從「*訂閱分配*」頁面：
 +
@@ -354,7 +354,7 @@ image:screenshot_accounts_switch_azure.gif["螢幕截圖顯示在「詳細資料
 以下影片展示了從 Azure 市場訂閱的步驟：
 
 +
-.從 Azure 市場訂閱NetApp智慧服務
+.從 Azure 市場訂閱NetApp Intelligent Services
 video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 
 

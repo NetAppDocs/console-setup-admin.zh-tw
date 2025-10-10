@@ -23,7 +23,7 @@
 
 * 啟用並啟動 podman.socket 服務
 * 安裝python3
-* 安裝 podman-compose 軟體套件版本 1.0.6
+* 安裝 podman-compose 套件版本 1.0.6
 * 將 podman-compose 加入到 PATH 環境變量
 * 如果使用 Red Hat Enterprise Linux 8，請驗證您的 Podman 版本使用的是 Aardvark DNS 而不是 CNI
 

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-adding-nss-accounts.html 
 keywords: adding, creating, netapp support site account, nss, update account, update nss account, update nss credentials, delete nss account, remove nss account, change working environment, working environment nss, digital wallet, license, change system, system nss, licenses and subscriptions 
-summary: 將NetApp支援網站帳號與您的NetApp控制台組織關聯，以啟用Cloud Volumes ONTAP 的關鍵工作流程。這些 NSS 憑證與整個組織相關。 
+summary: 將NetApp支援網站帳號與您的NetApp Console組織關聯，以啟用Cloud Volumes ONTAP 的關鍵工作流程。這些 NSS 憑證與整個組織相關。 
 ---
-= 管理與NetApp控制台關聯的 NSS 憑證
+= 管理與NetApp Console關聯的 NSS 憑證
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -148,7 +148,7 @@ TIP: 當您前往 NSS 管理頁面時，控制台會為表中的每個帳戶產�
 
 == 刪除 NSS 帳戶
 
-刪除不再想與控制台一起使用的所有 NSS 帳戶。
+刪除不再想在控制台中使用的所有 NSS 帳戶。
 
 您無法刪除目前與Cloud Volumes ONTAP系統關聯的帳戶。你首先需要<<attach-system-nss-account,將這些系統附加到不同的 NSS 帳戶>>。
 

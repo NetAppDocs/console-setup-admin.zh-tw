@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases' 
-summary: 了解NetApp控制台管理功能的新增功能：IAM、控制台代理、雲端提供者憑證等。 
+summary: 了解NetApp Console管理功能的新增功能：IAM、控制台代理、雲端提供者憑證等。 
 ---
 = 什麼是新的
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 了解NetApp控制台管理功能的新增功能：IAM、控制台代�
 
 
 [role="lead"]
-了解NetApp控制台管理功能的新增功能：身分識別和存取管理 (IAM)、控制台代理、雲端提供者憑證等。
+了解NetApp Console管理功能的新增功能：身分識別和存取管理 (IAM)、控制台代理程式、雲端提供者憑證等。
 
 
 
@@ -22,15 +22,15 @@ summary: 了解NetApp控制台管理功能的新增功能：IAM、控制台代�
 
 
 
-== BlueXP現在是NetApp控制台
+== BlueXP現在是NetApp Console
 
-NetApp控制台建立在增強和重組的BlueXP基礎之上，可在企業級內部和雲端環境中集中管理NetApp儲存和NetApp資料服務，提供即時洞察、更快的工作流程以及高度安全且合規的簡化管理。
+NetApp Console建立在增強和重組的BlueXP基礎之上，可在企業級內部和雲端環境中集中管理NetApp儲存和NetApp Data Services，提供即時洞察、更快的工作流程以及高度安全且合規的簡化管理。
 
 
 
 === 導航選單和頁面
 
-NetApp將大多數選單選項移至左側導覽窗格，並重新組織選單以便在NetApp控制台中更輕鬆地導覽。
+NetApp將大多數選單選項移至左側導覽窗格，並重新組織選單以便在NetApp Console中更輕鬆地導覽。
 
 
 
@@ -44,7 +44,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage
 
 ==== 擴充儲存選單
 
-*儲存*選單包括*警報*以查看ONTAP系統警報和*生命週期規劃*（以前稱為*經濟效率*）以識別未使用或未充分利用的資源。
+*儲存*選單包括*警報*，用於查看ONTAP系統警報和*生命週期規劃*（以前稱為*經濟效率*），用於識別未使用或未充分利用的資源。
 
 NetApp已將Keystone移至 *儲存* 選單，您可以在其中管理您的NetApp Keystone訂閱並查看您的使用情況。
 
@@ -54,7 +54,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage
 
 ==== 管理選單
 
-使用集中式*管理*選單來管理NetApp控制台、支援案例、許可證和訂閱（以前稱為數位錢包）。
+使用集中式*管理*選單來管理NetApp Console、支援案例、授權和訂閱（以前稱為數位錢包）。
 
 image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-admin-menu.png["管理選單的螢幕截圖。"]
 
@@ -82,7 +82,7 @@ NetApp重命名了幾個元素、資料服務和功能以明確其用途。主�
 
 [cols="10,24"]
 |===
-| *曾用名* | * NetApp控制台名稱* 
+| *曾用名* | * NetApp Console名稱* 
 
 
 | 連接器  a| 
@@ -107,7 +107,7 @@ NetApp重命名了幾個元素、資料服務和功能以明確其用途。主�
 
 
 | BlueXP勒索軟體防護  a| 
-NetApp勒索軟體復原能力。
+NetApp Ransomware Resilience。
 
 勒索軟體復原能力可協助您保護資料並從勒索軟體攻擊中快速復原。
 
@@ -123,9 +123,9 @@ NetApp勒索軟體復原能力。
 
 
 | BlueXP digital wallet  a| 
-授權和訂閱
+Licenses and subscriptions
 
-從*管理>許可證和訂閱*選單存取您的許可證和訂閱。
+從*管理>Licenses and subscriptions*選單存取您的許可證和訂閱。
 
 |===
 
@@ -160,7 +160,7 @@ NetApp減少了控制台和控制台代理程式所需的網路端點，增強�
 
 === 支援 VCenter 部署控制台代理
 
-您可以使用 OVA 檔案在 VMware 環境中部署控制台代理程式。 OVA 檔案包含一個預先配置的 VM 映像，其中包含控制台代理軟體和用於連接到NetApp控制台的設定。可直接從NetApp控制台下載檔案或部署 URL。link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem-ova.html["了解如何在 VMware 環境中部署控制台代理程式。"]
+您可以使用 OVA 檔案在 VMware 環境中部署控制台代理程式。 OVA 檔案包含一個預先配置的 VM 映像，其中包含控制台代理軟體和用於連接到NetApp Console的設定。可直接從NetApp Console下載檔案或部署 URL。link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem-ova.html["了解如何在 VMware 環境中部署控制台代理程式。"]
 
 VMware 的控制台代理程式 OVA 提供了預先配置的 VM 映像以便快速部署。
 
@@ -168,7 +168,7 @@ VMware 的控制台代理程式 OVA 提供了預先配置的 VM 映像以便快�
 
 === 失敗代理部署的驗證報告
 
-當您從NetApp控制台部署控制台代理程式時，您現在可以選擇驗證代理程式配置。如果控制台無法部署代理，它會提供可下載的報告來幫助您排除故障。
+當您從NetApp Console部署控制台代理程式時，您現在可以選擇驗證代理程式配置。如果控制台無法部署代理，它會提供可下載的報告來幫助您排除故障。
 
 
 
@@ -178,9 +178,9 @@ VMware 的控制台代理程式 OVA 提供了預先配置的 VM 映像以便快�
 
 
 
-== NetApp控制台
+== NetApp Console
 
-NetApp控制台管理包含以下新功能：
+NetApp Console管理包含以下新功能：
 
 
 
@@ -198,7 +198,7 @@ NetApp控制台的主頁儀表板提供儲存基礎架構的即時可見性，�
 
 === 服務帳戶身份驗證
 
-NetApp控制台支援使用系統產生的用戶端 ID 和金鑰或客戶管理的 JWT 進行服務帳戶身份驗證，從而允許組織選擇最適合其安全要求和整合工作流程的方法。私鑰 JWT 用戶端身份驗證使用非對稱加密，比傳統的客戶端 ID 和秘密方法提供更強的安全性。私鑰 JWT 用戶端身份驗證使用非對稱加密，在客戶環境中保證私鑰的安全，降低憑證被盜風險，並提高自動化堆疊和客戶端應用程式的安全性。link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#service-account["了解如何新增服務帳戶。"]
+NetApp Console支援使用系統產生的用戶端 ID 和金鑰或客戶管理的 JWT 進行服務帳戶身份驗證，從而允許組織選擇最適合其安全要求和整合工作流程的方法。私鑰 JWT 用戶端身份驗證使用非對稱加密，比傳統的客戶端 ID 和秘密方法提供更強的安全性。私鑰 JWT 用戶端身份驗證使用非對稱加密，在客戶環境中保證私鑰的安全，降低憑證被盜風險，並提高自動化堆疊和客戶端應用程式的安全性。link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#service-account["了解如何新增服務帳戶。"]
 
 
 
@@ -210,7 +210,7 @@ NetApp控制台支援使用系統產生的用戶端 ID 和金鑰或客戶管理�
 
 === 支持組織之間的夥伴關係
 
-您可以在NetApp控制台中建立合作夥伴關係，讓合作夥伴跨組織邊界安全地管理NetApp資源，讓協作更輕鬆、更安全。link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html["學習如何管理合作關係"] 。
+您可以在NetApp Console中建立合作夥伴關係，讓合作夥伴跨組織邊界安全地管理NetApp資源，讓協作更輕鬆、更安全。link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html["學習如何管理合作關係"] 。
 
 
 
@@ -228,7 +228,7 @@ NetApp控制台支援使用系統產生的用戶端 ID 和金鑰或客戶管理�
 
 === 刪除了支援聊天
 
-NetApp已從NetApp控制台中刪除了支援聊天功能。使用「管理」>「支援」頁面來建立和管理支援案例。
+NetApp已從NetApp Console中刪除了支援聊天功能。使用「管理」>「支援」頁面來建立和管理支援案例。
 
 
 
@@ -256,7 +256,7 @@ BlueXP UI 現已提供日文版本。如果您的瀏覽器語言是日語， Blu
 
 
 
-=== BlueXP身分和存取管理（IAM）
+=== BlueXP身分和存取管理 (IAM)
 
 BlueXP中的身分和存取管理現在提供以下功能。
 
@@ -312,7 +312,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 
 
 
-=== BlueXP身分和存取管理（IAM）
+=== BlueXP身分和存取管理 (IAM)
 
 
 
@@ -344,7 +344,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 
 
 
-=== BlueXP身分和存取管理（IAM）
+=== BlueXP身分和存取管理 (IAM)
 
 BlueXP中的身分和存取管理現在提供以下功能：
 
@@ -384,7 +384,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-federation.html["�
 
 ==== BlueXP backup and recovery、 BlueXP disaster recovery和聯合管理的新存取角色
 
-BlueXP現在支援使用 IAM 角色實現以下功能和資料服務：
+BlueXP現在支援使用 IAM 角色來實現以下功能和資料服務：
 
 * BlueXP backup and recovery
 * BlueXP disaster recovery
@@ -427,7 +427,7 @@ link:https://docs.netapp.com/us-en/keystone-staas/index.html["了解BlueXP中的
 
 
 
-=== BlueXP身分和存取管理（IAM）
+=== BlueXP身分和存取管理 (IAM)
 
 
 
@@ -507,7 +507,7 @@ BlueXP中的NetApp Keystone測試版增加了對Keystone管理的存取權。您
 
 
 
-=== BlueXP身分和存取管理（IAM）
+=== BlueXP身分和存取管理 (IAM)
 
 
 
@@ -572,7 +572,7 @@ BlueXP Connector 的此版本包含一些小的安全性改進和錯誤修復。
 
 
 
-=== BlueXP身分和存取管理（IAM）
+=== BlueXP身分和存取管理 (IAM)
 
 * 必須為沒有組織管理員或資料夾或專案管理員的使用者指派勒索軟體保護角色才能存取勒索軟體保護。您可以為使用者指派以下兩個角色之一：勒索軟體保護管理員或勒索軟體保護檢視者。
 * 沒有組織管理員或資料夾或專案管理員的使用者必須指派Keystone角色才能存取Keystone。您可以為使用者指派兩個角色之一： Keystone管理員或Keystone檢視者。
@@ -745,7 +745,7 @@ BlueXP IAM 提供更精細的資源和權限管理：
 
 這些增強功能可以更好地控制使用者可以執行的操作和可以存取的資源。
 
-.BlueXP IAM 在受限模式下如何影響您的現有帳戶
+.BlueXP IAM 如何在受限模式下影響您現有的帳戶
 當您登入BlueXP時，您會注意到以下變化：
 
 * 您的_帳戶_現在稱為_組織_
@@ -1039,7 +1039,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.
 
 BlueXP現在支援在強制模式或授權模式下啟用 SELinux 的 Red Hat Enterprise Linux 主機的連接器。
 
-對 SELinux 的支援從 3.9.40 版本開始適用於標準模式和限制模式，從 3.9.42 版本開始適用於私有模式。
+從 3.9.40 版本開始支援標準模式和限制模式，從 3.9.42 版本開始支援私有模式。
 
 請注意以下限制：
 

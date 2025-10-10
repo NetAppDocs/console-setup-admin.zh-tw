@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-iam-disaster-rec-roles.html 
 keywords: disaster recovery, role-based access control, failover admin, replication plans, job- monitoring, business continuity, compliance- management, operational governance, access delegation, rbac, IAM roles 
-summary: 您可以為使用者指派以下角色，以便他們存取控制台內的NetApp災難復原。災難復原角色可讓您靈活地為使用者指派特定於他們需要在組織內完成的任務的角色。如何分配角色取決於您自己的業務和儲存管理實踐。 
+summary: 您可以為使用者指派以下角色，以便他們存取控制台內的NetApp Disaster Recovery。災難復原角色可讓您靈活地為使用者指派特定於他們需要在組織內完成的任務的角色。如何分配角色取決於您自己的業務和儲存管理實踐。 
 ---
-= NetApp控制台中的NetApp災難復原角色
+= NetApp Console中的NetApp Disaster Recovery角色
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: 您可以為使用者指派以下角色，以便他們存取控制台�
 
 
 [role="lead"]
-您可以為使用者指派以下角色，以便他們存取控制台內的NetApp災難復原。災難復原角色可讓您靈活地為使用者指派特定於他們需要在組織內完成的任務的角色。如何分配角色取決於您自己的業務和儲存管理實踐。
+您可以為使用者指派以下角色，以便他們存取控制台內的NetApp Disaster Recovery。災難復原角色可讓您靈活地為使用者指派特定於他們需要在組織內完成的任務的角色。如何分配角色取決於您自己的業務和儲存管理實踐。
 
 災難復原使用以下角色：
 

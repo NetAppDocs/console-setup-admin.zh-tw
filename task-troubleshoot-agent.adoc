@@ -236,7 +236,7 @@ image:screenshot-system-id.png["顯示支援儀表板中出現的系統 ID 的�
 如果您遇到問題， NetApp可能會要求您向NetApp支援發送AutoSupport訊息以進行故障排除。
 
 
-NOTE: 由於負載平衡， NetApp控制台最多需要五個小時才能發送AutoSupport訊息。對於緊急通信，請下載文件並手動發送。
+NOTE: 由於負載平衡， NetApp Console最多需要五個小時才能發送AutoSupport訊息。對於緊急通信，請下載文件並手動發送。
 
 .步驟
 . 選擇*管理>支援>代理*。

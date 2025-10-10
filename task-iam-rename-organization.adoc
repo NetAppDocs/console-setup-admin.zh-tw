@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-iam-rename-organization.html 
 keywords: rename organization, change organization name, name change, rename, change name, iam, ID, integration, project, organization, API, identity and access management 
-summary: 如果需要，您可以變更NetApp控制台組織的名稱。 
+summary: 如果需要，您可以變更NetApp Console組織的名稱。 
 ---
 = 組織和專案 ID
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 如果需要，您可以變更NetApp控制台組織的名稱。
 
 
 [role="lead"]
-您的NetApp控制台組織有一個名稱和一個 ID。您可以為您的組織選擇一個名稱以幫助識別它。您可能還需要檢索某些整合的組織 ID。
+您的NetApp Console組織有一個名稱和一個 ID。您可以為您的組織選擇一個名稱以幫助識別它。您可能還需要檢索某些整合的組織 ID。
 
 
 

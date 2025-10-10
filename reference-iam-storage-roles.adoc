@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-iam-storage-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
-summary: 您可以為使用者指派以下角色，以便他們存取NetApp控制台中的儲存管理功能。您可以為使用者指派管理角色來管理儲存或指派檢視者角色來監控。 
+summary: 您可以為使用者指派以下角色，以便他們存取NetApp Console中的儲存管理功能。您可以為使用者指派管理角色來管理儲存或指派檢視者角色來監控。 
 ---
-= NetApp控制台的儲存存取角色
+= NetApp Console的儲存存取角色
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,10 @@ summary: 您可以為使用者指派以下角色，以便他們存取NetApp控�
 
 
 [role="lead"]
-您可以為使用者指派以下角色，以便他們存取NetApp控制台中的儲存管理功能。您可以為使用者指派管理角色來管理儲存或指派檢視者角色來監控。
+您可以為使用者指派以下角色，以便他們存取NetApp Console中的儲存管理功能。您可以為使用者指派管理角色來管理儲存或指派檢視者角色來監控。
 
 
-NOTE: NetApp控制台合作夥伴 API 不提供這些角色。
+NOTE: NetApp Console合作夥伴 API 不會提供這些角色。
 
 管理員可以為使用者指派以下儲存資源和功能的儲存角色：
 
@@ -36,7 +36,7 @@ NOTE: NetApp控制台合作夥伴 API 不提供這些角色。
 * 永續性
 
 
-.NetApp控制台中的儲存角色範例
+.NetApp Console中的儲存角色範例
 XYZ 公司是一家跨國公司，擁有龐大的儲存工程師和儲存管理員團隊。它們允許該團隊管理其所在地區的儲存資產，同時限制對核心控制台任務（如使用者管理、代理建立和許可證管理）的存取。
 
 在一個由 12 人組成的團隊中，有兩名使用者被賦予「儲存檢視者」角色，這使他們能夠監控與他們被分配到的控制台專案相關的儲存資源。其餘九人被賦予*儲存管理員*角色，包括管理軟體更新、透過控制台存取ONTAP系統管理員以及發現儲存資源（新增系統）的能力。團隊中的一名成員被賦予*系統健康專家*角色，以便他們可以管理其所在區域的儲存資源的健康狀況，但不能修改或刪除任何系統。此人還可以對其所分配項目的儲存資源執行軟體更新。
@@ -110,7 +110,7 @@ XYZ 公司是一家跨國公司，擁有龐大的儲存工程師和儲存管理�
 
 
 
-4+| *許可證和訂閱* 
+4+| *Licenses and subscriptions* 
 
 
 | 查看所有頁面和功能  a| 

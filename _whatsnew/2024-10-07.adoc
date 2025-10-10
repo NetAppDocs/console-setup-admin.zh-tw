@@ -74,7 +74,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.
 
 BlueXP現在支援在強制模式或授權模式下啟用 SELinux 的 Red Hat Enterprise Linux 主機的連接器。
 
-對 SELinux 的支援從 3.9.40 版本開始適用於標準模式和限制模式，從 3.9.42 版本開始適用於私有模式。
+從 3.9.40 版本開始支援標準模式和限制模式，從 3.9.42 版本開始支援私有模式。
 
 請注意以下限制：
 

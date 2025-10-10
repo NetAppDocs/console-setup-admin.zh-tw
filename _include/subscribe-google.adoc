@@ -13,10 +13,10 @@ image:screenshot_gcp_associate.gif["為 Google Cloud 憑證所選的 Google Clou
 . 如果您還沒有訂閱，請選擇*新增訂閱>繼續*並按照 Google Cloud Marketplace 中的步驟操作。
 +
 
-NOTE: 在完成以下步驟之前，請確保您在 Google Cloud 帳戶中同時擁有 Billing Admin 權限以及NetApp Console 登入權限。
+NOTE: 在完成以下步驟之前，請確保您在 Google Cloud 帳戶中同時擁有 Billing Admin 權限以及NetApp Console登入權限。
 
 +
-.. 在您被重定向到 https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud Marketplace 上的NetApp智慧服務頁面"^]，確保在頂部導航選單中選擇了正確的項目。
+.. 在您被重定向到 https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud Marketplace 上的NetApp Intelligent Services頁面"^]，確保在頂部導航選單中選擇了正確的項目。
 +
 image:screenshot_gcp_cvo_marketplace.png["Google Cloud 中Cloud Volumes ONTAP市場頁面的螢幕截圖。"]
 
@@ -36,7 +36,7 @@ image:screenshot_gcp_marketplace_register.png["註冊彈出視窗的螢幕截圖
 .. 完成「*訂閱分配*」頁面上的步驟：
 +
 
-NOTE: 如果您組織中的某人已經從您的結算帳戶訂閱了市場，那麼您將被重新導向到 https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["NetApp控制台中的Cloud Volumes ONTAP頁面"^]反而。如果這是意外情況，請聯絡您的NetApp銷售團隊。  Google 為每個 Google 結算帳戶僅啟用一項訂閱。
+NOTE: 如果您組織中的某人已經從您的結算帳戶訂閱了市場，那麼您將被重新導向到 https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["NetApp Console中的Cloud Volumes ONTAP頁面"^]反而。如果這是意外情況，請聯絡您的NetApp銷售團隊。  Google 為每個 Google 結算帳戶僅啟用一項訂閱。
 
 +
 *** 選擇您想要與此訂閱關聯的控制台組織或帳戶。

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-install-options-aws.html 
 keywords: install connector aws, aws install connector, connector aws, aws connector, installation options, aws marketplace, manual install, deploy 
-summary: 有幾種不同的方法可以在 AWS 中建立控制台代理。直接從NetApp控制台是最常見的方式。 
+summary: 有幾種不同的方法可以在 AWS 中建立控制台代理。直接從NetApp Console是最常見的方式。 
 ---
 = AWS 中的控制台代理安裝選項
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 有幾種不同的方法可以在 AWS 中建立控制台代理。直接
 
 
 [role="lead"]
-有幾種不同的方法可以在 AWS 中建立控制台代理。直接從NetApp控制台是最常見的方式。
+有幾種不同的方法可以在 AWS 中建立控制台代理。直接從NetApp Console是最常見的方式。
 
 有以下安裝選項可用：
 

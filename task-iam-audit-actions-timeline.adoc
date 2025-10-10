@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-iam-audit-actions-timeline.html 
 keywords: iam, audit, monitor, audit iam actions, monitor iam actions 
-summary: 從稽核頁面監控或稽核NetApp控制台身分和存取管理操作。 
+summary: 從稽核頁面監控或稽核NetApp Console身分和存取管理操作。 
 ---
 = 監控或稽核 IAM 活動
 :hardbreaks:

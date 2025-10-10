@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-installing-https-cert.html 
 keywords: https certificate, certificate, adding, installing, ca, certificate authority, format, encoding, restricted mode, access 
-summary: 在受限模式下使用NetApp控制台時，安裝 CA 簽署的憑證以便使用者存取基於 Web 的控制台。 
+summary: 在受限模式下使用NetApp Console時，安裝 CA 簽署的憑證以便使用者存取基於 Web 的控制台。 
 ---
 = 安裝 CA 簽署的憑證以進行基於 Web 的控制台訪問
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 在受限模式下使用NetApp控制台時，安裝 CA 簽署的憑證�
 
 
 [role="lead"]
-當您在受限模式下使用NetApp控制台時，可以從部署在雲端區域或本機的控制台代理虛擬機器存取使用者介面。預設情況下，控制台使用自簽名 SSL 憑證為控制台代理程式上執行的基於 Web 的控制台提供安全的 HTTPS 存取。
+當您在受限模式下使用NetApp Console時，可以從部署在雲端區域或本機的控制台代理虛擬機器存取使用者介面。預設情況下，控制台使用自簽名 SSL 憑證為控制台代理程式上執行的基於 Web 的控制台提供安全的 HTTPS 存取。
 
 如果您的業務需要，您可以安裝由憑證授權單位 (CA) 簽署的證書，它比自簽名憑證提供更好的安全保護。安裝憑證後，當使用者存取基於 Web 的控制台時，控制台將使用 CA 簽署的憑證。
 

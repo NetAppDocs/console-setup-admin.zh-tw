@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-modes.html 
 keywords: dark site, internet, on prem, no internet, supported deployments, govcloud, government access, environments, supported environments, deployment modes, modes, private mode, restricted mode, il6, sc2s, c2s, dark site, sovereign region, saas, government region, secret region, top secret, aws secret, aws top secret, private 
-summary: 'NetApp控制台提供多種部署模式，讓您能夠滿足您的業務和安全需求。_標準模式_利用軟體即服務 (SaaS) 層來提供全部功能，而_限制模式_和_私人模式_適用於有連線限制的組織。' 
+summary: 'NetApp Console提供多種部署模式，讓您能夠滿足您的業務和安全需求。_標準模式_利用軟體即服務 (SaaS) 層來提供全部功能，而_限制模式_和_私人模式_適用於有連線限制的組織。' 
 ---
-= 了解NetApp控制台部署模式
+= 了解NetApp Console部署模式
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,12 +14,12 @@ summary: 'NetApp控制台提供多種部署模式，讓您能夠滿足您的業�
 
 
 [role="lead"]
-NetApp控制台提供多種部署模式，讓您能夠滿足您的業務和安全需求。
+NetApp Console提供多種部署模式，讓您能夠滿足您的業務和安全需求。
 
 * _標準模式_利用軟體即服務 (SaaS) 層來提供完整的功能。使用者透過基於 Web 的託管介面存取控制台
-* _限制模式_適用於有連線限制並希望在自己的公有雲中安裝NetApp控制台的組織。使用者透過託管在其雲端環境中的控制台代理程式上的基於 Web 的介面存取控制台。
+* _限制模式_適用於有連線限制並希望在自己的公有雲中安裝NetApp Console的組織。使用者透過託管在其雲端環境中的控制台代理程式上的基於 Web 的介面存取控制台。
 +
-NetApp Console 在受限模式下限制流量、通訊和數據，您必須確保您的環境（本地端和雲端）符合所需的規定。
+NetApp Console在受限模式下限制流量、通訊和數據，您必須確保您的環境（本地端和雲端）符合所需的規定。
 
 
 
@@ -35,7 +35,7 @@ NetApp Console 在受限模式下限制流量、通訊和數據，您必須確�
 此模式使用公共網際網路上的加密資料傳輸。
 
 --
-限制模式:: 您在雲端（在政府、主權或商業區域）安裝控制台代理，並且它與NetApp控制台 SaaS 層的出站連接有限。
+限制模式:: 您在雲端（在政府、主權或商業區域）安裝控制台代理，並且它與NetApp ConsoleSaaS 層的出站連接有限。
 +
 --
 這種模式通常由州和地方政府以及受監管的公司使用。
@@ -82,7 +82,7 @@ BlueXP私人模式（僅限舊版BlueXP介面）:: BlueXP私有模式（傳統Bl
 
 | 資料服務許可選項 | 市場訂閱和 BYOL | 市場訂閱和 BYOL 
 |===
-閱讀以下部分以了解有關這些模式的更多信息，包括支援哪些NetApp控制台功能和服務。
+閱讀以下部分以了解有關這些模式的更多信息，包括支援哪些NetApp Console功能和服務。
 
 
 
@@ -121,7 +121,7 @@ API 端點:: API 呼叫針對以下端點：\ https://api.bluexp.netapp.com
 驗證:: 使用 auth0 或NetApp支援網站 (NSS) 登入進行驗證。身份聯合可用。
 支援的數據服務:: 支援所有NetApp資料服務。link:https://docs.netapp.com/us-en/data-services-family/index.html["了解有關NetApp數據服務的更多信息"^] 。
 支援的許可選項:: 標準模式支援市場訂閱和 BYOL；但是，支援的授權選項取決於您使用的NetApp資料服務。查看每項服務的文件以了解有關可用許可選項的更多資訊。
-如何開始使用標準模式:: 前往 https://console.netapp.com["NetApp控制台"^]並註冊。
+如何開始使用標準模式:: 前往 https://console.netapp.com["NetApp Console"^]並註冊。
 +
 --
 link:task-quick-start-standard-mode.html["了解如何開始使用標準模式"] 。
@@ -164,10 +164,10 @@ API 端點:: 對代理虛擬機器進行 API 呼叫。
 | Azure NetApp Files | 全力支持 
 
 
-| 備份和復原 | 在政府區域和商業區域受限制模式支持。不支援在具有限制模式的主權區域使用。在受限模式下， NetApp Backup and Recovery 僅支援ONTAP磁碟區資料的備份和復原。 https://docs.netapp.com/us-en/data-services-disaster-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP資料支援的備份目標列表"^]不支援應用程式資料和虛擬機器資料的備份和還原。 
+| 備份和復原 | 在政府區域和商業區域受限制模式支持。不支援在具有限制模式的主權區域使用。在受限模式下， NetApp Backup and Recovery and Recovery僅支援ONTAP磁碟區資料的備份和復原。 https://docs.netapp.com/us-en/data-services-disaster-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP資料支援的備份目標列表"^]不支援應用程式資料和虛擬機器資料的備份和還原。 
 
 
-| NetApp資料分類  a| 
+| NetApp Data Classification  a| 
 在政府區域內受限制模式支持。不支援商業區域或具有限制模式的主權區域。
 
 
@@ -175,7 +175,7 @@ API 端點:: 對代理虛擬機器進行 API 呼叫。
 | Cloud Volumes ONTAP | 全力支持 
 
 
-| 授權和訂閱 | 您可以使用下面列出的受限模式支援的許可選項存取許可證和訂閱資訊。 
+| Licenses and subscriptions | 您可以使用下面列出的受限模式支援的許可選項存取許可證和訂閱資訊。 
 
 
 | 本地ONTAP集群 | 使用控制台代理的發現和不使用控制台代理的發現（直接發現）均受支援。當您發現沒有控制台代理程式的本機叢集時，進階視圖（系統管理員）不受支援。 
@@ -203,7 +203,7 @@ API 端點:: 對代理虛擬機器進行 API 呼叫。
 
 
 --
-如何開始使用受限模式:: 建立NetApp控制台組織時，您需要啟用受限模式。
+如何開始使用受限模式:: 建立NetApp Console組織時，您需要啟用受限模式。
 
 
 如果您還沒有組織，當您第一次從手動安裝的控制台代理或從雲端提供者的市場建立的控制台代理登入控制台時，系統會提示您建立組織並啟用受限模式。
@@ -226,7 +226,7 @@ link:task-quick-start-restricted-mode.html["了解如何開始使用受限模式
 | 產品領域 | NetApp資料服務或功能 | 限制模式 
 
 
-.10+| *儲存* 表格的此部分列出了從控制台管理儲存系統的支援。它沒有指出NetApp Backup and Recovery 支援的備份目標。 | 適用於ONTAP 的Amazon FSx | 不 
+.10+| *儲存* 表格的此部分列出了從控制台管理儲存系統的支援。它沒有指明NetApp Backup and Recovery支援的備份目標。 | 適用於ONTAP 的Amazon FSx | 不 
 
 
 | 亞馬遜 S3 | 不 
@@ -259,22 +259,22 @@ link:task-quick-start-restricted-mode.html["了解如何開始使用受限模式
 .9+| *數據服務* | NetApp備份與復原 | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP磁碟區資料支援的備份目標列表"^] 
 
 
-| NetApp資料分類 | 是的 
+| NetApp Data Classification | 是的 
 
 
-| NetApp複製與同步 | 不 
+| NetApp Copy and Sync | 不 
 
 
-| NetApp災難復原 | 不 
+| NetApp Disaster Recovery | 不 
 
 
-| NetApp勒索軟體抵禦能力 | 不 
+| NetApp Ransomware Resilience | 不 
 
 
-| NetApp複製 | 是的 
+| NetApp Replication | 是的 
 
 
-| NetApp雲端分層 | 不 
+| NetApp Cloud Tiering | 不 
 
 
 | NetApp磁碟區快取 | 不 

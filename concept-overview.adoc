@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-overview.html 
 keywords: overview, concepts, features, use case, cloud manager, bluexp, how bluexp works, supported cloud providers, cloud providers, hyperscalers, aws, google, how NetApp Console works 
-summary: NetApp控制台可在企業範圍內跨本機和雲端環境集中管理NetApp儲存和資料服務。 
+summary: NetApp Console可在企業範圍內跨本機和雲端環境集中管理NetApp儲存和資料服務。 
 ---
-= 了解NetApp控制台
+= 了解NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp控制台可在企業範圍內跨本機和雲端環境集中管�
 
 
 [role="lead"]
-NetApp控制台在企業級內部和雲端環境中提供對NetApp儲存和NetApp資料服務的集中管理，提供即時洞察、更快的工作流程和簡化的管理，高度安全且合規。
+NetApp Console在企業級內部和雲端環境中提供對NetApp儲存和NetApp Data Services的集中管理，提供即時洞察、更快的工作流程和簡化的管理，並且高度安全且合規。
 
 它是一種服務 (SaaS) 平台，提供儲存管理、資料移動性、資料保護以及資料分析和控制。管理功能透過基於 Web 的控制台和 API 提供。
 
@@ -82,23 +82,23 @@ image:screenshot-canvas.png["控制台的螢幕截圖顯示了多個系統，其
 
 儲存警報:: 查看與ONTAP環境中的容量、可用性、效能、保護和安全性相關的問題。
 自動化中心:: 使用腳本解決方案來自動化NetApp產品和服務的部署和整合。
-NetApp備份與復原:: 備份和還原雲端和本地資料。
-NetApp資料分類:: 讓您的應用程式資料和雲端環境隱私做好準備。
-NetApp複製與同步:: 在本地端和雲端資料儲存之間同步資料。
+NetApp Backup and Recovery:: 備份和還原雲端和本地資料。
+NetApp Data Classification:: 讓您的應用程式資料和雲端環境隱私做好準備。
+NetApp Copy and Sync:: 在本地端和雲端資料儲存之間同步資料。
 NetApp數位顧問 (Active IQ):: 使用預測分析和主動支援來優化您的資料基礎架構。
-授權和訂閱:: 管理和監控您的許可證和訂閱。
-NetApp災難復原:: 使用 VMware Cloud on Amazon FSx for ONTAP作為災難復原站點來保護本機 VMware 工作負載。
+Licenses and subscriptions:: 管理和監控您的許可證和訂閱。
+NetApp Disaster Recovery:: 使用 VMware Cloud on Amazon FSx for ONTAP作為災難復原站點來保護本機 VMware 工作負載。
 生命週期規劃:: 識別目前或預測容量較低的群集並實施資料分層或額外容量建議。
-NetApp勒索軟體抵禦能力:: 偵測可能導致勒索軟體攻擊的異常。保護和恢復工作負載。
-NetApp複製:: 在儲存系統之間複製資料以支援備份和災難復原。
+NetApp Ransomware Resilience:: 偵測可能導致勒索軟體攻擊的異常。保護和恢復工作負載。
+NetApp Replication:: 在儲存系統之間複製資料以支援備份和災難復原。
 軟體更新:: 自動評估、規劃和執行ONTAP升級。
 永續性儀表板:: 分析儲存系統的可持續性。
-NetApp雲端分層:: 將您的本機ONTAP儲存擴展到雲端。
-NetApp磁碟區快取:: 建立可寫入的快取磁碟區以加快資料存取速度或卸載存取量大的磁碟區的流量。
+NetApp Cloud Tiering:: 將您的本機ONTAP儲存擴展到雲端。
+NetApp Volume Caching:: 建立可寫入的快取磁碟區以加快資料存取速度或卸載存取量大的磁碟區的流量。
 NetApp工作負載:: 使用Amazon FSx for NetApp ONTAP設計、設定和執行關鍵工作負載。
 
 
-https://www.netapp.com/bluexp/["了解有關NetApp控制台和可用資料服務的更多信息"^]
+https://www.netapp.com/bluexp/["了解有關NetApp Console和可用資料服務的更多信息"^]
 
 
 
@@ -110,13 +110,13 @@ https://www.netapp.com/bluexp/["了解有關NetApp控制台和可用資料服務
 
 == 成本
 
-NetApp控制台是免費的。如果您在雲端中部署控制台代理程式或使用在雲端中部署的受限模式，則會產生費用。某些NetApp資料服務會產生相關費用。https://bluexp.netapp.com/pricing["了解NetApp數據服務定價"^]
+NetApp Console是免費的。如果您在雲端中部署控制台代理程式或使用在雲端中部署的受限模式，則會產生費用。某些NetApp資料服務會產生相關費用。https://bluexp.netapp.com/pricing["了解NetApp數據服務定價"^]
 
 
 
-== NetApp控制台的工作原理
+== NetApp Console的工作原理
 
-NetApp控制台是一個基於 Web 的控制台，透過 SaaS 層、資源和存取管理系統、管理儲存系統和啟用NetApp資料服務的控制台代理程式以及不同的部署模式提供，以滿足您的業務需求。
+NetApp Console是一個基於 Web 的控制台，透過 SaaS 層、資源和存取管理系統、管理儲存系統和啟用NetApp資料服務的控制台代理程式以及不同的部署模式提供，以滿足您的業務需求。
 
 
 
@@ -134,7 +134,7 @@ NetApp控制台是一個基於 Web 的控制台，透過 SaaS 層、資源和存
 * _資料夾_ 使您可以將相關項目分組在一起
 * 資源管理可讓您將資源與一個或多個資料夾或項目關聯
 * 存取管理可讓您為組織層次結構中不同層級的成員指派角色
-* link:concept-identity-and-access-management.html["了解有關NetApp控制台中的 IAM 的更多信息"]
+* link:concept-identity-and-access-management.html["了解有關NetApp Console中的 IAM 的更多信息"]
 
 
 
@@ -149,7 +149,7 @@ link:concept-agents.html["了解有關控制台代理的更多信息"] 。
 
 === 部署模式
 
-NetApp為NetApp控制台提供了兩種部署模式：_標準模式_使用軟體即服務 (SaaS) 層實現全部功能，而_受限模式_限制出站連線。
+NetApp為NetApp Console提供了兩種部署模式：_標準模式_使用軟體即服務 (SaaS) 層實現全部功能，而_受限模式_限制出站連線。
 
 NetApp持續為不需要出站連線的站點提供BlueXP 。  BlueXP僅在私人模式下可用。link:task-quick-start-private-mode.html["了解沒有網路連線的站點的BlueXP （私人模式）。"]
 

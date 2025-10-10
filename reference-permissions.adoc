@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-permissions.html 
 keywords: permissions, actions 
-summary: 若要使用NetApp控制台功能和服務，您需要提供權限，以便控制台可以在您的雲端環境中執行操作。使用此頁面上的連結可以根據您的目標快速存取所需的權限。 
+summary: 若要使用NetApp Console功能和服務，您需要提供權限，以便控制台可以在您的雲端環境中執行操作。使用此頁面上的連結可以根據您的目標快速存取所需的權限。 
 ---
-= NetApp控制台的權限摘要
+= NetApp Console的權限摘要
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: 若要使用NetApp控制台功能和服務，您需要提供權限，�
 
 
 [role="lead"]
-若要使用NetApp控制台功能和服務，您需要提供權限，以便控制台可以在您的雲端環境中執行操作。使用此頁面上的連結可以根據您的目標快速存取所需的權限。
+若要使用NetApp Console功能和服務，您需要提供權限，以便控制台可以在您的雲端環境中執行操作。使用此頁面上的連結可以根據您的目標快速存取所需的權限。
 
 
 
 == AWS 權限
 
-NetApp控制台需要控制台代理程式和各服務的 AWS 權限。
+NetApp Console需要控制台代理程式和各服務的 AWS 權限。
 
 
 
@@ -38,14 +38,14 @@ NetApp控制台需要控制台代理程式和各服務的 AWS 權限。
 |===
 
 
-=== NetApp備份與復原
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
 | 目標 | 描述 | 關聯 
 
 
-| 使用NetApp備份和還原將本地ONTAP叢集備份到 Amazon S3 | 在ONTAP磁碟區上啟動備份時， NetApp Backup and Recovery 會提示​​您輸入具有特定權限的 IAM 使用者的存取金鑰和密碼。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-aws.html["設定備份的 S3 權限"^] 
+| 使用NetApp Backup and Recovery將本機ONTAP叢集備份到 Amazon S3 | 在ONTAP磁碟區上啟動備份時， NetApp Backup and Recovery會提示您輸入具有特定權限的 IAM 使用者的存取金鑰和密碼。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-aws.html["設定備份的 S3 權限"^] 
 |===
 
 
@@ -56,11 +56,11 @@ NetApp控制台需要控制台代理程式和各服務的 AWS 權限。
 | 目標 | 描述 | 關聯 
 
 
-| 為Cloud Volumes ONTAP節點提供權限 | 必須將 IAM 角色附加到 AWS 中的每個Cloud Volumes ONTAP節點。對於 HA 調解員也是如此。預設選項是讓控制台為您建立 IAM 角色，但您可以在控制台中建立系統時使用自己的角色。 | https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-set-up-iam-roles.html["了解如何自行設定 IAM 角色"^] 
+| 為Cloud Volumes ONTAP節點提供權限 | 必須將 IAM 角色附加到 AWS 中的每個Cloud Volumes ONTAP節點。對於 HA 調解員也是如此。預設選項是讓控制台為您建立 IAM 角色，但您可以在控制台中建立系統時使用您自己的角色。 | https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-set-up-iam-roles.html["了解如何自行設定 IAM 角色"^] 
 |===
 
 
-=== NetApp複製與同步
+=== NetApp Copy and Sync
 
 [cols="20,60,20"]
 |===
@@ -70,7 +70,7 @@ NetApp控制台需要控制台代理程式和各服務的 AWS 權限。
 | 在 AWS 中部署資料代理 | 用於部署資料代理程式的 AWS 使用者帳戶必須具有特定權限。 | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#permissions-required-to-deploy-the-data-broker-in-aws["在 AWS 中部署資料代理程式所需的權限"^] 
 
 
-| 為數據經紀人提供權限 | 當NetApp Copy and Sync 部署資料代理程式時，它會為資料代理實例建立一個 IAM 角色。如果您願意，您可以使用自己的 IAM 角色部署資料代理程式。 | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#requirements-to-use-your-own-iam-role-with-the-aws-data-broker["使用您自己的 IAM 角色與 AWS 資料代理程式的要求"^] 
+| 為數據經紀人提供權限 | 當NetApp Copy and Sync部署資料代理程式時，它會為資料代理實例建立一個 IAM 角色。如果您願意，您可以使用自己的 IAM 角色部署資料代理程式。 | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#requirements-to-use-your-own-iam-role-with-the-aws-data-broker["使用您自己的 IAM 角色與 AWS 資料代理程式的要求"^] 
 
 
 | 為手動安裝的資料代理程式啟用 AWS 訪問 | 如果您使用包含 S3 儲存桶的同步關係的資料代理，那麼您應該準備好 Linux 主機以供 AWS 存取。安裝資料代理程式時，您需要為具有程式存取權限和特定權限的 IAM 使用者提供 AWS 金鑰。 | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-linux.html#enabling-access-to-aws["啟用對 AWS 的訪問"^] 
@@ -88,14 +88,14 @@ NetApp控制台需要控制台代理程式和各服務的 AWS 權限。
 |===
 
 
-=== NetApp雲端分層
+=== NetApp Cloud Tiering
 
 [cols="20,60,20"]
 |===
 | 目標 | 描述 | 關聯 
 
 
-| 將本機ONTAP叢集分層到 Amazon S3 | 當您啟用NetApp Cloud Tiering 到 AWS 時，精靈會提示您輸入存取金鑰和金鑰。這些憑證會傳遞到ONTAP集群，以便ONTAP可以將資料分層到 S3 儲存桶。 | https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#set-up-s3-permissions["設定 S3 分層權限"^] 
+| 將本機ONTAP叢集分層到 Amazon S3 | 當您啟用NetApp Cloud Tiering到 AWS 時，精靈會提示您輸入存取金鑰和金鑰。這些憑證會傳遞到ONTAP集群，以便ONTAP可以將資料分層到 S3 儲存桶。 | https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#set-up-s3-permissions["設定 S3 分層權限"^] 
 |===
 
 
@@ -127,7 +127,7 @@ link:reference-permissions-azure.html["控制台代理程式的 Azure 權限"]
 |===
 
 
-=== NetApp備份與復原
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
@@ -135,7 +135,7 @@ link:reference-permissions-azure.html["控制台代理程式的 Azure 權限"]
 
 
 | 將Cloud Volumes ONTAP備份到 Azure Blob 存儲  a| 
-使用NetApp Backup and Recovery 備份Cloud Volumes ONTAP時，您需要在下列情況下新增權限至控制台代理：
+使用NetApp Backup and Recovery備份Cloud Volumes ONTAP時，您需要在下列情況下新增權限至控制台代理：
 
 * 您想使用“搜尋和恢復”功能
 * 您想要使用客戶管理的加密金鑰 (CMEK)
@@ -146,7 +146,7 @@ link:reference-permissions-azure.html["控制台代理程式的 Azure 權限"]
 
 
 
-| 將本機ONTAP叢集備份到 Azure Blob 存儲 | 使用NetApp Backup and Recovery 備份本機 ONTAP 叢集時，您需要新增權限至控制台代理才能使用「搜尋與復原」功能。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-azure.html["使用備份和還原將本機ONTAP資料備份到 Azure Blob 存儲"^] 
+| 將本機ONTAP叢集備份到 Azure Blob 存儲 | 使用NetApp Backup and Recovery本機 ONTAP 叢集時，您需要新增權限至控制台代理才能使用「搜尋與復原」功能。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-azure.html["使用備份和還原將本機ONTAP資料備份到 Azure Blob 存儲"^] 
 |===
 
 
@@ -181,7 +181,7 @@ link:reference-permissions-azure.html["控制台代理程式的 Azure 權限"]
 |===
 
 
-=== NetApp備份與復原
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
@@ -189,7 +189,7 @@ link:reference-permissions-azure.html["控制台代理程式的 Azure 權限"]
 
 
 | 將Cloud Volumes ONTAP備份到 Google Cloud  a| 
-使用NetApp Backup and Recovery 備份Cloud Volumes ONTAP時，您需要在下列情況下新增權限至控制台代理：
+使用NetApp Backup and Recovery備份Cloud Volumes ONTAP時，您需要在下列情況下新增權限至控制台代理：
 
 * 您想使用“搜尋和恢復”功能
 * 您想要使用客戶管理的加密金鑰 (CMEK)
@@ -201,11 +201,11 @@ link:reference-permissions-azure.html["控制台代理程式的 Azure 權限"]
 
 
 
-| 將本地ONTAP叢集備份到 Google Cloud | 使用NetApp Backup and Recovery 備份本機 ONTAP 叢集時，您需要新增權限至控制台代理才能使用「搜尋與復原」功能。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-gcp.html["使用備份和還原將本地ONTAP資料備份到 Google Cloud Storage"^] 
+| 將本地ONTAP叢集備份到 Google Cloud | 使用NetApp Backup and Recovery本機 ONTAP 叢集時，您需要新增權限至控制台代理才能使用「搜尋與復原」功能。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-gcp.html["使用備份和還原將本地ONTAP資料備份到 Google Cloud Storage"^] 
 |===
 
 
-=== NetApp複製與同步
+=== NetApp Copy and Sync
 
 [cols="20,60,20"]
 |===
@@ -225,23 +225,23 @@ link:reference-permissions-azure.html["控制台代理程式的 Azure 權限"]
 
 
 
-=== NetApp備份與復原
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
 | 目標 | 描述 | 關聯 
 
 
-| 將本機ONTAP叢集備份到StorageGRID | 當您準備將StorageGRID作為ONTAP叢集的備份目標時， NetApp Backup and Recovery 會提示​​您輸入具有特定權限的 IAM 使用者的存取金鑰和密碼。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-storagegrid.html["準備StorageGRID作為備份目標"^] 
+| 將本機ONTAP叢集備份到StorageGRID | 當您準備將StorageGRID作為ONTAP叢集的備份目標時， NetApp Backup and Recovery會提示您輸入具有特定權限的 IAM 使用者的存取金鑰和密碼。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-storagegrid.html["準備StorageGRID作為備份目標"^] 
 |===
 
 
-=== NetApp雲端分層
+=== NetApp Cloud Tiering
 
 [cols="20,60,20"]
 |===
 | 目標 | 描述 | 關聯 
 
 
-| 將本地ONTAP集群分層到StorageGRID | 當您將NetApp Cloud Tiering 設定到StorageGRID時，您需要向 Cloud Tiering 提供 S3 存取金鑰和金鑰。雲端分層使用密鑰來存取您的儲存桶。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-storagegrid.html["準備分層到StorageGRID"^] 
+| 將本地ONTAP集群分層到StorageGRID | 當您將NetApp Cloud Tiering設定為StorageGRID時，您需要向 Cloud Tiering 提供 S3 存取金鑰和金鑰。雲端分層使用密鑰來存取您的儲存桶。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-storagegrid.html["準備分層到StorageGRID"^] 
 |===

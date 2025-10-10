@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-whats-next-restricted-mode.html 
 keywords: restricted mode, what you can do 
-summary: 在限制模式下啟動並執行NetApp控制台後，您可以開始使用限制模式支援的服務。 
+summary: 在限制模式下啟動並執行NetApp Console後，您可以開始使用限制模式支援的服務。 
 ---
 = 接下來可以做什麼（受限模式）
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 在限制模式下啟動並執行NetApp控制台後，您可以開始�
 
 
 [role="lead"]
-在限制模式下啟動並執行NetApp控制台後，您可以開始使用限制模式支援的服務。
+在限制模式下啟動並執行NetApp Console後，您可以開始使用限制模式支援的服務。
 
 如需協助，請參閱以下服務的文件：
 
@@ -28,4 +28,4 @@ summary: 在限制模式下啟動並執行NetApp控制台後，您可以開始�
 
 
 .相關資訊
-link:concept-modes.html["NetApp控制台部署模式"]
+link:concept-modes.html["NetApp Console部署模式"]

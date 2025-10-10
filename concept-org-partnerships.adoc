@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-org-partnerships.html 
 keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
-summary: 透過在NetApp控制台中建立組織之間的合作夥伴關係，組織合作夥伴可以跨組織邊界安全地管理NetApp資源，從而簡化協作並增強安全性。 
+summary: 透過在NetApp Console中建立組織之間的合作夥伴關係，組織合作夥伴可以跨組織邊界安全地管理NetApp資源，從而簡化協作並增強安全性。 
 ---
-= NetApp控制台中的合作夥伴關係
+= NetApp Console中的合作夥伴關係
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 透過在NetApp控制台中建立組織之間的合作夥伴關係，�
 
 
 [role="lead"]
-透過在組織之間建立合作夥伴關係， NetApp控制台可讓合作夥伴跨組織邊界安全地管理NetApp資源，從而簡化協作並增強安全性。
+透過在組織之間建立合作夥伴關係， NetApp Console可讓合作夥伴跨組織邊界安全地管理NetApp資源，從而簡化協作並增強安全性。
 
 .必備角色
 合作夥伴管理員link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
@@ -30,15 +30,15 @@ summary: 透過在NetApp控制台中建立組織之間的合作夥伴關係，�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"]與發起組織共用您的組織 ID
 [role="quick-margin-para"]
-要發起合作關係，發起者必須知道目標組織的組織 ID。只有相應的組織可以存取此組織 ID。透過電子郵件或其他方式直接與NetApp控制台以外的發起組織共用。
+要發起合作關係，發起者必須知道目標組織的組織 ID。只有相應的組織可以存取此組織 ID。透過電子郵件或其他方式直接與NetApp Console以外的發起組織共用。
 
 發起組織是授予其資源存取權限的組織。
 
 image:diagram-partnership-org-id.png["顯示初始組織的圖表"]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]在NetApp控制台內建立合作關係
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]在NetApp Console內建立合作關係
 [role="quick-margin-para"]
-發起合作關係的組織透過從NetApp控制台發送合作關係請求來發起合作關係。
+發起合作關係的組織透過從NetApp Console發送合作關係請求來發起合作關係。
 
 image:diagram-partnership-accept.png["顯示夥伴關係接受度的圖表"]
 

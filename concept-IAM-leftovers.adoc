@@ -155,7 +155,7 @@ link:reference-iam-predefined-roles.html["了解訪問角色"] 。
 
 
 
-您可以從BlueXP IAM 中的「連接器」頁面建立關聯：
+您可以從BlueXP IAM 中的 *連接器* 頁面建立關聯：
 
 * 將連接器與項目關聯
 +

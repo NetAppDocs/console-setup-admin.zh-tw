@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-iam-analyst-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
-summary: NetApp控制台身分和存取管理提供支援分析師角色來協助監控和支援案例。 
+summary: NetApp Console身分和存取管理提供支援分析師角色來協助監控和支援案例。 
 ---
-= NetApp控制台的營運支援分析師存取角色
+= NetApp Console的營運支援分析師存取角色
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

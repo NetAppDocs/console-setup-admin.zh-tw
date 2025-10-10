@@ -4,7 +4,7 @@ permalink: task-iam-manage-resources.html
 keywords: resource, hierarchy, association, access, resource permissions, resource hierarchy, iam, identity and access management 
 summary: 透過將資源與特定專案和資料夾關聯來管理組織的資源層次結構。 
 ---
-= 管理NetApp控制台組織中的資源層次結構
+= 管理NetApp Console組織中的資源層次結構
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -108,7 +108,7 @@ NOTE: 若要從整個組織中刪除已發現的資源，請從「*系統*」頁
 
 == 相關資訊
 
-* link:concept-identity-and-access-management.html["了解NetApp控制台中的身分和存取權限"]
-* link:task-iam-get-started.html["開始在NetApp控制台中使用身分和存取權限"]
+* link:concept-identity-and-access-management.html["了解NetApp Console中的身分和存取權限"]
+* link:task-iam-get-started.html["開始在NetApp Console中使用身分和存取權限"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["了解身分和存取 API"^]
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-permissions-azure.html 
 keywords: permissions, azure, azure permissions, bluexp 
-summary: 當NetApp控制台在 Azure 中啟動控制台代理程式時，它會將自訂角色附加到 VM，該 VM 為代理程式提供管理該 Azure 訂閱中的資源和流程的權限。代理程式使用權限對多個 Azure 服務進行 API 呼叫。 
+summary: 當NetApp Console在 Azure 中啟動控制台代理程式時，它會將自訂角色附加到 VM，該 VM 為代理程式提供管理該 Azure 訂閱中的資源和流程的權限。代理程式使用權限對多個 Azure 服務進行 API 呼叫。 
 ---
 = 控制台代理程式的 Azure 權限
 :hardbreaks:
@@ -14,11 +14,11 @@ summary: 當NetApp控制台在 Azure 中啟動控制台代理程式時，它會�
 
 
 [role="lead"]
-當NetApp控制台在 Azure 中啟動控制台代理程式時，它會將自訂角色附加到 VM，該 VM 為代理程式提供管理該 Azure 訂閱中的資源和流程的權限。代理程式使用權限對多個 Azure 服務進行 API 呼叫。
+當NetApp Console在 Azure 中啟動控制台代理程式時，它會將自訂角色附加到 VM，該 VM 為代理程式提供管理該 Azure 訂閱中的資源和流程的權限。代理程式使用權限對多個 Azure 服務進行 API 呼叫。
 
 是否需要為代理程式建立此自訂角色取決於您如何部署它。
 
-.從NetApp控制台部署
+.從NetApp Console部署
 當您使用控制台在 Azure 中部署代理虛擬機器時，它會啟用 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["系統分配的託管標識"^]在虛擬機器上，建立自訂角色，並將其指派給虛擬機器。此角色為控制台提供管理該 Azure 訂閱內的資源和流程所需的權限。當代理升級時，角色的權限保持最新。您不需要為代理程式建立此角色或管理更新。
 
 .手動部署或從 Azure 市場部署
@@ -183,7 +183,7 @@ summary: 當NetApp控制台在 Azure 中啟動控制台代理程式時，它會�
 
 === Azure NetApp Files
 
-當您使用NetApp資料分類掃描Azure NetApp Files資料時，代理程式會發出以下 API 請求：
+當您使用NetApp Data Classification掃描Azure NetApp Files資料時，代理程式會發出以下 API 請求：
 
 * NetApp。 NetApp /netAppAccounts/read
 * NetApp。 NetApp /netAppAccounts/capacityPools/read
@@ -194,9 +194,9 @@ summary: 當NetApp控制台在 Azure 中啟動控制台代理程式時，它會�
 
 
 
-=== NetApp備份與復原
+=== NetApp Backup and Recovery
 
-控制台代理程式對NetApp備份和復原發出以下 API 請求：
+控制台代理程式對NetApp Backup and Recovery發出以下 API 請求：
 
 * Microsoft.Storage/storageAccounts/listkeys/action
 * Microsoft.Storage/storageAccounts/讀取
@@ -209,7 +209,7 @@ summary: 當NetApp控制台在 Azure 中啟動控制台代理程式時，它會�
 * Microsoft.Resources/訂閱/位置/讀取
 * Microsoft.Network/virtualNetworks/讀取
 * Microsoft.Network/virtualNetworks/子網路/讀取
-* Microsoft.Resources/訂閱/資源群組/讀取
+* Microsoft.Resources/訂閱/resourceGroups/讀取
 * Microsoft.Resources/訂閱/資源群組/資源/讀取
 * Microsoft.Resources/訂閱/資源群組/寫入
 * Microsoft.授權/鎖定/*
@@ -242,7 +242,7 @@ summary: 當NetApp控制台在 Azure 中啟動控制台代理程式時，它會�
 
 
 
-=== NetApp資料分類
+=== NetApp Data Classification
 
 當您使用資料分類時，代理程式會發出以下 API 請求。
 
@@ -314,7 +314,7 @@ summary: 當NetApp控制台在 Azure 中啟動控制台代理程式時，它會�
 | Microsoft.Network/網路介面/讀取 | 是的 | 是的 
 
 
-| Microsoft.Network/networkInterfaces/寫入 | 是的 | 不 
+| Microsoft.Network/網路介面/寫入 | 是的 | 不 
 
 
 | Microsoft.Network/networkInterfaces/join/action | 是的 | 不 
@@ -377,7 +377,7 @@ summary: 當NetApp控制台在 Azure 中啟動控制台代理程式時，它會�
 | Microsoft.Resources/subscriptions/resourceGroups/delete | 是的 | 不 
 
 
-| Microsoft.Resources/訂閱/資源群組/讀取 | 是的 | 是的 
+| Microsoft.Resources/訂閱/resourceGroups/讀取 | 是的 | 是的 
 
 
 | Microsoft.Resources/訂閱/資源群組/資源/讀取 | 是的 | 是的 
@@ -447,7 +447,7 @@ summary: 當NetApp控制台在 Azure 中啟動控制台代理程式時，它會�
 .4+| 在目標子網路中建立和管理網路介面 | Microsoft.Network/網路介面/讀取 | 是的 | 是的 | 不 
 
 
-| Microsoft.Network/networkInterfaces/寫入 | 是的 | 是的 | 不 
+| Microsoft.Network/網路介面/寫入 | 是的 | 是的 | 不 
 
 
 | Microsoft.Network/networkInterfaces/join/action | 是的 | 是的 | 不 
@@ -510,7 +510,7 @@ summary: 當NetApp控制台在 Azure 中啟動控制台代理程式時，它會�
 | Microsoft.Resources/subscriptions/resourceGroups/delete | 是的 | 是的 | 是的 
 
 
-| Microsoft.Resources/訂閱/資源群組/讀取 | 不 | 是的 | 不 
+| Microsoft.Resources/訂閱/resourceGroups/讀取 | 不 | 是的 | 不 
 
 
 | Microsoft.Resources/訂閱/資源群組/資源/讀取 | 是的 | 是的 | 不 
@@ -711,10 +711,10 @@ summary: 當NetApp控制台在 Azure 中啟動控制台代理程式時，它會�
 
 === 分層
 
-當您設定NetApp Cloud Tiering 時，代理會發出以下 API 請求。
+當您設定NetApp Cloud Tiering時，代理會發出以下 API 請求。
 
 * Microsoft.Storage/storageAccounts/listkeys/action
-* Microsoft.Resources/訂閱/資源群組/讀取
+* Microsoft.Resources/訂閱/resourceGroups/讀取
 * Microsoft.Resources/訂閱/位置/讀取
 
 
@@ -757,7 +757,7 @@ summary: 當NetApp控制台在 Azure 中啟動控制台代理程式時，它會�
 
 === 2023年12月5日
 
-將磁碟區資料備份到 Azure Blob 儲存體時， NetApp Backup and Recovery 不再需要以下權限：
+將磁碟區資料備份到 Azure Blob 儲存體時， NetApp Backup and Recovery不再需要以下權限：
 
 * Microsoft.Compute/虛擬機器/讀取
 * Microsoft.Compute/virtualMachines/啟動/操作
@@ -801,7 +801,7 @@ Cloud Volumes ONTAP仍需要此權限。
 * Microsoft.Storage/storageAccounts/listAccountSas/action
 * Microsoft.Synapse/工作區/privateEndpointConnectionsApproval/操作
 +
-NetApp備份和復原需要這些權限。
+NetApp Backup and Recovery需要這些權限。
 
 * Microsoft.Network/loadBalancers/backendAddressPools/join/action
 +

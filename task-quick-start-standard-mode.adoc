@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-quick-start-standard-mode.html 
 keywords: quick start, standard mode quick start 
-summary: 透過為控制台準備網路、註冊並建立帳戶以及（可選）建立控制台代理，以標準模式開始使用NetApp控制台。 
+summary: 透過為控制台準備網路、註冊並建立帳戶以及（可選）建立控制台代理，以標準模式開始使用NetApp Console。 
 ---
 = 入門工作流程（標準模式）
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 透過為控制台準備網路、註冊並建立帳戶以及（可選�
 
 
 [role="lead"]
-透過為控制台準備網路、註冊並建立帳戶以及（可選）建立控制台代理，以標準模式開始使用NetApp控制台。
+透過為控制台準備網路、註冊並建立帳戶以及（可選）建立控制台代理，以標準模式開始使用NetApp Console。
 
 在標準模式下，您可以存取由NetApp作為軟體即服務 (SaaS) 產品託管的基於 Web 的控制台。在開始之前，請確保您了解link:concept-modes.html["部署模式"]和link:concept-agents.html["控制台代理"]。
 
@@ -47,6 +47,6 @@ summary: 透過為控制台準備網路、註冊並建立帳戶以及（可選�
 [role="quick-margin-para"]
 若要使用NetApp智慧數據服務管理 Google Cloud 中的儲存和數據，請確保控制台代理程式在 Google Cloud 中運作。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"] link:task-subscribe-standard-mode.html["訂閱NetApp智慧服務（可選）"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"] link:task-subscribe-standard-mode.html["訂閱NetApp Intelligent Services（可選）"]
 [role="quick-margin-para"]
-透過您的雲端供應商註冊NetApp智慧服務，按小時付費（PAYGO）或透過年度合約付費。  NetApp智慧服務包括NetApp備份與復原、 Cloud Volumes ONTAP、 NetApp雲端分層、 NetApp勒索軟體復原和NetApp災難復原。  NetApp資料分類包含在您的訂閱中，無需額外付費。
+透過您的雲端供應商註冊NetApp Intelligent Services，按小時付費（PAYGO）或透過年度合約付費。  NetApp Intelligent Services包括NetApp Backup and Recovery、 Cloud Volumes ONTAP、 NetApp Cloud Tiering、 NetApp Ransomware Resilience和NetApp Disaster Recovery。  NetApp Data Classification包含在您的訂閱中，無需額外付費。

@@ -32,7 +32,7 @@ link:https://docs.netapp.com/us-en/keystone-staas/index.html["了解BlueXP中的
 
 
 
-=== BlueXP身分和存取管理（IAM）
+=== BlueXP身分和存取管理 (IAM)
 
 
 

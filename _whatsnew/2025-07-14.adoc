@@ -17,7 +17,7 @@
 
 
 
-=== BlueXP身分和存取管理（IAM）
+=== BlueXP身分和存取管理 (IAM)
 
 BlueXP中的身分和存取管理現在提供以下功能：
 
@@ -57,7 +57,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-federation.html["�
 
 ==== BlueXP backup and recovery、 BlueXP disaster recovery和聯合管理的新存取角色
 
-BlueXP現在支援使用 IAM 角色實現以下功能和資料服務：
+BlueXP現在支援使用 IAM 角色來實現以下功能和資料服務：
 
 * BlueXP backup and recovery
 * BlueXP disaster recovery

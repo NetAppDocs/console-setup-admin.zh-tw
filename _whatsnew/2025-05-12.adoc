@@ -30,7 +30,7 @@ BlueXP中的NetApp Keystone測試版增加了對Keystone管理的存取權。您
 
 
 
-=== BlueXP身分和存取管理（IAM）
+=== BlueXP身分和存取管理 (IAM)
 
 
 

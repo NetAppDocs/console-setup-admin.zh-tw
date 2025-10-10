@@ -31,7 +31,7 @@ TIP: 如果您有現成的代理，您應該注意link:reference-agent-operating
 
 如果您從控制台建立控制台代理，它會使用預設配置在您的雲端提供者中部署 VM 執行個體。建立代理程式後，請勿切換到具有較少 CPU 或 RAM 的較小 VM 執行個體。
 
-下表列出了 CPU 和 RAM 需求：
+下表列出了 CPU 和 RAM 要求：
 
 中央處理器:: 8 個核心或 8 個 vCPU
 記憶體:: 32GB
@@ -88,7 +88,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html["AWS
 Azure:: 在 Azure 中建立代理程式 VM 時，您可以指定使用者名稱並選擇使用密碼或 SSH 公鑰進行驗證。使用您選擇的身份驗證方法連線到虛擬機器。
 +
 --
-https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys#ssh-into-your-vm["Azure 文件：透過 SSH 進入您的 VM"^]
+https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys#ssh-into-your-vm["Azure 文件：透過 SSH 進入您的虛擬機"^]
 
 --
 Google雲:: 在 Google Cloud 中建立代理程式時，您無法指定身份驗證方法。但是，您可以使用 Google Cloud Console 或 Google Cloud CLI (gcloud) 連線到 Linux VM 執行個體。
