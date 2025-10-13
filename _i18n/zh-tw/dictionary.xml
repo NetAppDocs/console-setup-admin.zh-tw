@@ -1298,7 +1298,6 @@
   <block id="c7a576f5db262c0475afa4a53822979e" category="list-text">經濟效率^1^</block>
   <block id="390e388eccc77b388b4d54d73b76f902" category="list-text">Google Cloud Storage 儲存桶</block>
   <block id="016d4dd0efd43648613b0639e13ba2c7" category="list-text">本地ONTAP叢集與NetApp資料服務的集成</block>
-  <block id="cf399270632323e6349a7298f0e7eb09" category="list-text">NetApp勒索軟體抵禦能力</block>
   <block id="a94a2dfcff08cd86c973716edaf32722" category="list-text">NetApp Cloud Tiering</block>
   <block id="6f267103f7f652e22e0ead9f66014cd4" category="list-text">NetApp Volume Caching</block>
   <block id="06f4d4213c3d87db39929c4ce6ffcc0f" category="paragraph">^1^ 您無需控制台代理即可存取這些服務，但需要控制台代理來啟動操作。</block>
@@ -2214,7 +2213,6 @@
   <block id="065933ac7339c32c2a386f3f69e4fd61" category="list-text"><block ref="065933ac7339c32c2a386f3f69e4fd61" category="inline-link-macro-rx"></block></block>
   <block id="470bbf3695958272c2830107baeb6411" category="summary">在NetApp Console中，您可以授予角色以允許使用者存取NetApp Ransomware Resilience。</block>
   <block id="5f87170a21a0b0d135060af816ac1433" category="doc">NetApp Console的勒索軟體恢復存取角色</block>
-  <block id="9d9ae6ee36b5e9aae30cd19d4d3c6b92" category="paragraph">勒索軟體復原角色為使用者提供對NetApp Ransomware Resilience的存取權限。這兩個角色分別是勒索軟體保護管理員和勒索軟體保護檢視者。這兩個角色的主要區別在於他們在勒索軟體恢復中可以採取的行動。</block>
   <block id="e6d88107afe61c1a78c0dac0689d8fac" category="paragraph">下表顯示了每個角色可以執行的操作。</block>
   <block id="2961ef9224153d664a9bde6ee6ef2570" category="cell">在儀表板上更新推薦狀態</block>
   <block id="bb73fa2a07d0c544491039dc1ffed7b8" category="cell">啟動工作負載的重新發現</block>
@@ -4005,8 +4003,6 @@
   <block id="cf3b3d414366a26f5b43041b5056897c" category="summary">在NetApp Console中，您可以根據使用者需要執行的操作和位置為使用者指派角色。</block>
   <block id="14750286cb2a5a61bf62b65d9b9d2112" category="doc">使用角色管理使用者對NetApp Console資源的訪問</block>
   <block id="5f24947dab075e3413b914aa36df023a" category="paragraph">在控制台中，您可以根據使用者需要做什麼以及在哪裡為使用者指派角色。</block>
-  <block id="e5bb4954536b904550d932928f88306d" category="paragraph">具有*組織管理員*或*資料夾或專案管理員*角色的使用者有責任將角色指派給其他使用者。您可以根據專案或資料夾指派存取角色。例如，您可以為使用者指派一個專案的勒索軟體保護管理員角色，並為另一個專案指派SnapCenter管理員角色。或者，如果使用者需要特定資料夾內所有項目的分類管理員角色，您可以在資料夾層級授予他們此角色。</block>
-  <block id="982e57f560511ceb443082e656219246" category="paragraph">使用存取角色根據使用者需求執行的特定任務分配對儲存資源的存取權限。例如，如果使用者需要與勒索軟體保護服務進行交互，則必須為他們授予存取角色，該角色包括對授予該存取角色的項目的勒索軟體保護服務的檢視或管理權限。</block>
   <block id="61258c54d2a7f09077a72a4eeb56874d" category="paragraph">根據您的 IAM 策略為使用者指派角色以增強安全性。  IAM 角色確保使用者只擁有所需的存取權限。</block>
   <block id="3908f1e42aa5b81b8316befd30a6965d" category="inline-link-macro">了解如何使用資料夾和項目來組織您的資源。</block>
   <block id="ecdeffad8e53c7c9b1fb61f02a3cb5d1" category="admonition">請記住，您不能直接授予對資源的存取權限。首先將資源分配給專案。在指派使用者存取權限之前，請考慮設定資源層次結構。<block ref="122b4639308e055d5bdfeb8a65e1794d" category="inline-link-macro-rx"></block></block>
@@ -4016,7 +4012,6 @@
   <block id="12815307393fa19648b391d49b4282e4" category="section-title">為成員新增存取角色</block>
   <block id="9a9b4b286a389bc98dfdeb3214c134a1" category="paragraph">您通常在為組織新增成員時指派角色，但您可以隨時透過刪除或新增角色來更新它。</block>
   <block id="ba364a79f6fbfab0c8591198ecfd87cc" category="paragraph">您可以為使用者指派組織、資料夾或專案的存取角色。</block>
-  <block id="9e9b03c43a95d80b4d040ec538e41373" category="paragraph">成員可以在同一個專案內以及不同的專案中擁有多個角色。例如，較小的組織可能會將所有可用的存取角色分配給同一個用戶，而較大的組織可能會讓用戶執行更專業的任務。或者，您也可以為一個使用者指派組織的勒索軟體保護管理員角色。在該範例中，使用者將能夠對組織內的所有專案執行勒索軟體保護任務。</block>
   <block id="7a43b6f649f8cf73a12056888057076b" category="paragraph">您的存取角色策略應與您組織NetApp資源的方式保持一致。</block>
   <block id="20c36cd6c77d407b6118c77ebe403934" category="admonition">被指派了組織管理員角色的成員不能被指派任何其他角色。他們已經擁有整個組織的權限。具有資料夾或專案角色的成員不能被指派資料夾或專案中他們已經具有該角色的任何其他角色。這兩個角色都提供對其被指派範圍內的所有服務的存取權限。</block>
   <block id="068135177d9d1843118236d5f10dc5b7" category="section-title">更改成員的指定角色</block>
@@ -4978,7 +4973,6 @@
   <block id="99cee3b8f810202d675de978cef4f9da" category="cell">是的<block ref="514d17d2eb0e043089e13542661abd63" category="inline-link-rx"></block></block>
   <block id="e216b7a924341f796bca310d1d812baf" category="cell">複製和同步</block>
   <block id="645a84975202e30700b572b49a5ee29d" category="cell">災難復原</block>
-  <block id="7478f8f98c41fc2f5747e6f31892fe6f" category="cell">勒索軟體防護</block>
   <block id="ff45d71e69fb5930de79de7c94326d7b" category="cell">卷緩存</block>
   <block id="35ccbae2ce9b9594b9af9196a3bed361" category="cell">工作負載工廠</block>
   <block id="3d1f92a565d3b1a61880236e33c49bf3" category="cell">時間軸</block>
@@ -5531,7 +5525,6 @@
   <block id="35cbd88f43ce85ef7ed6866daa2c6066" category="sidebar">數據服務角色</block>
   <block id="38dd106db79e0463f64b237d9de58a8e" category="sidebar">備份和還原角色</block>
   <block id="2879d04f18c304fb2a3d5cf00deff6e2" category="sidebar">災難復原角色</block>
-  <block id="0310ff69ee2ad8b9fa1fbf2f23946a8e" category="sidebar">勒索軟體保護角色</block>
   <block id="4dd7bf281f080fe43c775a741f9f2cc1" category="sidebar">合作組織</block>
   <block id="d6cca643be1ccfaa32ccfdc068061f15" category="sidebar">了解組織合作關係</block>
   <block id="d88a163f40de4d60f08d7006db6dbc69" category="sidebar">建立組織夥伴關係</block>
@@ -5564,4 +5557,11 @@
   <block id="abfd94e3956e611a257a32b0f396af25" category="sidebar">Google Cloud 中的控制台代理防火牆規則</block>
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">控制台網路存取（舊版）</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識和支持</block>
+  <block id="253b718b7b0bb8f190e2ebe1c721295e" category="paragraph">勒索軟體復原角色為使用者提供對NetApp Ransomware Resilience的存取權限。勒索軟體復原能力支援以下角色：</block>
+  <block id="b7055c90f2b38b6e2d3cddd08ec5c936" category="paragraph">角色賦予對設定和操作的不同存取權限。若要設定或查看可疑的使用者行為活動，您必須使用其中一個使用者行為角色。</block>
+  <block id="f75989b6aa2a7a3c16b04e40aebffd8f" category="paragraph">具有*組織管理員*或*資料夾或專案管理員*角色的使用者有責任將角色指派給其他使用者。您可以根據專案或資料夾指派存取角色。例如，您可以為使用者指派一個專案的勒索軟體復原管理員角色，並為另一個專案指派SnapCenter管理員角色。或者，如果使用者需要特定資料夾內所有項目的分類管理員角色，您可以在資料夾層級授予他們此角色。</block>
+  <block id="e55d79a6c1774cf0f39d67ca04d67bc0" category="paragraph">使用存取角色根據使用者需求執行的特定任務分配對儲存資源的存取權限。例如，如果使用者需要與 Ransomware Resilience 進行交互，則必須為他們授予存取角色，該角色包括對授予存取角色的專案的 Ransomware Resilience 的檢視或管理權限。</block>
+  <block id="e6bf2bfbd541e12c3cb2fca42df08ed3" category="paragraph">成員可以在同一個專案內以及不同的專案中擁有多個角色。例如，較小的組織可能會將所有可用的存取角色分配給同一個用戶，而較大的組織可能會讓用戶執行更專業的任務。或者，您也可以為一個使用者指派組織的勒索軟體復原管理員角色。在該範例中，使用者將能夠對組織內的所有專案執行勒索軟體復原任務。</block>
+  <block id="c36b12344113082dcf8a9786e36a3536" category="cell">勒索軟體抵禦能力</block>
+  <block id="16a7e3e925ade6eef4533f96172d423f" category="sidebar">勒索軟體抵禦能力角色</block>
 </blocks>

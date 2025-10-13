@@ -154,7 +154,7 @@ sidebar:
             url: "/reference-iam-backup-rec-roles.html"
           - title: 災難復原角色
             url: "/reference-iam-disaster-rec-roles.html"
-          - title: 勒索軟體保護角色
+          - title: 勒索軟體抵禦能力角色
             url: "/reference-iam-ransomware-roles.html"
     - title: 合作組織
       entries:

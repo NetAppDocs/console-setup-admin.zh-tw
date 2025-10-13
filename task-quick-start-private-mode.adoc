@@ -85,7 +85,7 @@ link:media/BlueXP-Private-Mode-legacy-interface.pdf["BlueXP私人模式的 PDF �
 | 經濟效益 | 不 
 
 
-| 勒索軟體防護 | 不 
+| 勒索軟體抵禦能力 | 不 
 
 
 | 複製 | 是的 

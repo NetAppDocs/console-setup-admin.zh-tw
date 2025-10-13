@@ -71,7 +71,7 @@ https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-o
 * 經濟效率^1^
 * Google Cloud Storage 儲存桶
 * 本地ONTAP叢集與NetApp資料服務的集成
-* NetApp勒索軟體抵禦能力
+* NetApp Ransomware Resilience
 * StorageGRID系統
 * NetApp Cloud Tiering
 * NetApp Volume Caching
