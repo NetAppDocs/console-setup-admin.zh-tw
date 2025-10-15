@@ -175,10 +175,8 @@
   <block id="6fc418bd4d8d26d716d678ffb2c516e9" category="paragraph">| 管理 Azure 中國區域的資源。</block>
   <block id="1e20d05d6d0ad597892e7e3d08324340" category="paragraph">| \ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta https://www.googleapis.com/storage/v1 https://storage.googleapis.com/storage/v1 https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/projects</block>
   <block id="641d1f191c2b819061a8e9b6046fdbeb" category="paragraph">| 管理 Google Cloud 中的資源。</block>
-  <block id="1edf01eab3b295d8836c4716654a90aa" category="paragraph">| \ https://mysupport.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息。| \ https://support.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息。| \ https://signin.b2c.netapp.com | 更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp Console。| \ https://support.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息以及接收Cloud Volumes ONTAP的軟體更新。</block>
   <block id="c642b24062280a73e940087788371986" category="paragraph">https://cdn.auth0.com \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \ https://components.console.bluexp.netapp.com \</block>
   <block id="4600c0d23dfe95b8db6f735a4b192742" category="paragraph">a| \ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io a| 取得控制台代理升級的圖像。</block>
-  <block id="047e3fbb2dcfe77fd82c7af9c6b59cde" category="list-text">當您部署新代理程式時，驗證檢查會測試與目前端點的連線。如果你使用<block ref="3f791c7fe5360af04e14756765d7002d" category="inline-link-macro-rx"></block>，驗證檢查失敗。為了避免此失敗，請跳過驗證檢查。</block>
   <block id="4691a33bfa50c006ca907ff0f1c2ff22" category="inline-link-macro">了解如何更新終端節點列表</block>
   <block id="6e9c9d81baee7aa9e962024fc724b7ca" category="paragraph">儘管先前的端點仍然受支持，但NetApp建議盡快將防火牆規則更新至目前端點。<block ref="b264fb455cda46e4971383987c8dce4c" category="inline-link-macro-rx"></block> 。</block>
   <block id="b44e4956810f4ddc108ea4c7e1339c8b" category="list-text">當您更新到防火牆中的目前端點時，您現有的代理程式將繼續運作。</block>
@@ -531,7 +529,6 @@
   <block id="402a934d05f32752831bc2ed8043fb03" category="list-text">安裝python3</block>
   <block id="e7655ce2e211e4106a4d229011bca18b" category="list-text">安裝 podman-compose 套件版本 1.0.6</block>
   <block id="a50a451f2ba0bc5a53f19d6887c717e4" category="list-text">將 podman-compose 加入到 PATH 環境變量</block>
-  <block id="8fef27449fb74ae98514453c89c33853" category="list-text">如果使用 Red Hat Enterprise Linux 8，請驗證您的 Podman 版本使用的是 Aardvark DNS 而不是 CNI</block>
   <block id="72647f42887226fbe161a7784cde9900" category="admonition">安裝代理程式後調整 aardvark-dns 連接埠（預設值：53），以避免 DNS 連接埠衝突。按照說明配置連接埠。</block>
   <block id="b7f382be5c79895b47058d13f21b554a" category="list-text">如果主機上安裝了 podman-docker 套件，請將其刪除。</block>
   <block id="3c7e0e0689042d7582c0880e1b998f2c" category="list-text">安裝 Podman。</block>
@@ -1613,7 +1610,6 @@
   <block id="f4c6f851b00d5518bf888815de279aba" category="cell">筆記</block>
   <block id="34678ee868eeabce720fc4a0fd60c17a" category="cell">全力支持</block>
   <block id="34c6561859a3a97caa0248fbb4372124" category="inline-link">查看ONTAP資料支援的備份目標列表</block>
-  <block id="d49ef528aa6be744e9ccc075b5f5ea3f" category="cell">在政府區域和商業區域受限制模式支持。不支援在具有限制模式的主權區域使用。在受限模式下， NetApp Backup and Recovery and Recovery僅支援ONTAP磁碟區資料的備份和復原。<block ref="b4c1403d372f1f9b47ce9baa913046c0" category="inline-link-rx"></block>不支援應用程式資料和虛擬機器資料的備份和還原。</block>
   <block id="91d5470ff0de1d64ddb0c8c3bef0b246" category="cell">NetApp Data Classification</block>
   <block id="0a44fe605745a017fde35750e5fae36a" category="paragraph">在政府區域內受限制模式支持。不支援商業區域或具有限制模式的主權區域。</block>
   <block id="63d604af1c7a5bfef29d50c6c2c2591f" category="cell">您可以使用下面列出的受限模式支援的許可選項存取許可證和訂閱資訊。</block>
@@ -5564,4 +5560,8 @@
   <block id="e6bf2bfbd541e12c3cb2fca42df08ed3" category="paragraph">成員可以在同一個專案內以及不同的專案中擁有多個角色。例如，較小的組織可能會將所有可用的存取角色分配給同一個用戶，而較大的組織可能會讓用戶執行更專業的任務。或者，您也可以為一個使用者指派組織的勒索軟體復原管理員角色。在該範例中，使用者將能夠對組織內的所有專案執行勒索軟體復原任務。</block>
   <block id="c36b12344113082dcf8a9786e36a3536" category="cell">勒索軟體抵禦能力</block>
   <block id="16a7e3e925ade6eef4533f96172d423f" category="sidebar">勒索軟體抵禦能力角色</block>
+  <block id="e40a74210464aa0305c3d66c083f2e23" category="paragraph">| \ https://mysupport.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息。| \ https://signin.b2c.netapp.com | 更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp Console。| \ https://support.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息以及接收Cloud Volumes ONTAP的軟體更新。</block>
+  <block id="4ed68ecf8e006d0fab7f06897731cf53" category="list-text">當您部署新代理程式時，驗證檢查會測試與目前端點的連線。如果你使用<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block>，驗證檢查失敗。為了避免此失敗，請跳過驗證檢查。</block>
+  <block id="cfc9caf6832f568fe347d970af78e108" category="list-text">如果使用 Red Hat Enterprise Linux，請驗證您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI</block>
+  <block id="a0a50b50b6bb8edb1f818d3ca9526b4b" category="cell">在政府區域和商業區域受限制模式支持。不支援在具有限制模式的主權區域使用。在受限模式下， NetApp Backup and Recovery and Recovery僅支援ONTAP磁碟區資料的備份和復原。<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block>不支援應用程式資料和虛擬機器資料的備份和還原。</block>
 </blocks>
