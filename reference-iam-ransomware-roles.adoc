@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-iam-ransomware-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, 
-summary: 在NetApp Console中，您可以授予角色以允許使用者存取NetApp Ransomware Resilience。 
+summary: 勒索軟體復原力提供不同的使用者角色來管理對特權操作和報告的存取。 
 ---
 = NetApp Console的勒索軟體恢復存取角色
 :hardbreaks:
@@ -22,32 +22,26 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 * 勒索軟體恢復用戶行為檢視器
 
 
-角色賦予對設定和操作的不同存取權限。若要設定或查看可疑的使用者行為活動，您必須使用其中一個使用者行為角色。
+角色賦予對設定和操作的不同層級的存取權限。
 
-下表顯示了每個角色可以執行的操作。
+勒索軟體恢復使用者行為管理員和使用者行為檢視者角色可用的操作僅限於 link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["可疑的用戶活動"^]。這些角色旨在添加到勒索軟體恢復管理員或查看者角色。若要配置可疑使用者行為設定並回應警報，使用者必須具有勒索軟體復原使用者行為管理員角色。要僅查看可疑用戶行為警報，用戶應具有勒索軟體恢復用戶行為查看者角色。
 
-[cols="40,20a,20a,20a,20a"]
+下表區分了勒索軟體復原管理員和勒索軟體復原檢視者角色可用的操作。
+
+[cols="40,20a,20a"]
 |===
-| 特徵和動作 | 勒索軟體抵禦能力管理員 | 勒索軟體復原力檢視器 | 勒索軟體復原力用戶行為管理員 | 勒索軟體恢復用戶行為檢視器 
+| 特徵和動作 | 勒索軟體抵禦能力管理員 | 勒索軟體復原力檢視器 
 
 
 | 查看儀表板和所有選項卡  a| 
 是的
  a| 
 是的
- a| 
-不
- a| 
-不
 
 
 
 | 在儀表板上更新推薦狀態  a| 
 是的
- a| 
-不
- a| 
-不
  a| 
 不
 
@@ -57,19 +51,11 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 不
- a| 
-不
- a| 
-不
 
 
 
 | 啟動工作負載發現  a| 
 是的
- a| 
-不
- a| 
-不
  a| 
 不
 
@@ -79,22 +65,14 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 不
- a| 
-不
- a| 
-不
 
 
 
-5+| *在「保護」標籤上*： 
+3+| *在「保護」標籤上*： 
 
 
 | 新增、修改或刪除保護計劃  a| 
 是的
- a| 
-不
- a| 
-不
  a| 
 不
 
@@ -104,19 +82,11 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 不
- a| 
-不
- a| 
-不
 
 
 
 | 識別敏感資料的暴露  a| 
 是的
- a| 
-不
- a| 
-不
  a| 
 不
 
@@ -126,10 +96,6 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 是的
- a| 
-不
- a| 
-不
 
 
 
@@ -137,10 +103,6 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 是的
- a| 
-不
- a| 
-不
 
 
 
@@ -148,19 +110,11 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 是的
- a| 
-不
- a| 
-不
 
 
 
 | 建立、編輯或刪除保護群組  a| 
 是的
- a| 
-不
- a| 
-不
  a| 
 不
 
@@ -170,33 +124,21 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 是的
- a| 
-不
- a| 
-不
 
 
 
-5+| *在「警報」標籤上*： 
+3+| *在「警報」標籤上*： 
 
 
 | 查看警報和警報詳細信息  a| 
 是的
  a| 
 是的
- a| 
-不
- a| 
-不
 
 
 
 | 編輯事件狀態  a| 
 是的
- a| 
-不
- a| 
-不
  a| 
 不
 
@@ -206,10 +148,6 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 不
- a| 
-不
- a| 
-不
 
 
 
@@ -217,19 +155,11 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 是的
- a| 
-不
- a| 
-不
 
 
 
 | 解除或解決事件  a| 
 是的
- a| 
-不
- a| 
-不
  a| 
 不
 
@@ -239,19 +169,11 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 不
- a| 
-不
- a| 
-不
 
 
 
 | 取得受影響文件的完整列表  a| 
 是的
- a| 
-不
- a| 
-不
  a| 
 不
 
@@ -261,10 +183,6 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 是的
- a| 
-不
- a| 
-不
 
 
 
@@ -272,22 +190,14 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 不
  a| 
 不
- a| 
-是的
- a| 
-是的
 
 
 
-5+| *在「恢復」標籤上*： 
+3+| *在「恢復」標籤上*： 
 
 
 | 下載受影響的文件  a| 
 是的
- a| 
-不
- a| 
-不
  a| 
 不
 
@@ -297,10 +207,6 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 不
- a| 
-不
- a| 
-不
 
 
 
@@ -308,10 +214,6 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 是的
- a| 
-不
- a| 
-不
 
 
 
@@ -319,22 +221,14 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 是的
- a| 
-不
- a| 
-不
 
 
 
-5+| *在「設定」標籤上*： 
+3+| *在「設定」標籤上*： 
 
 
 | 新增或修改備份目標  a| 
 是的
- a| 
-不
- a| 
-不
  a| 
 不
 
@@ -344,10 +238,6 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 是的
- a| 
-不
- a| 
-不
 
 
 
@@ -355,19 +245,11 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 是的
- a| 
-不
- a| 
-不
 
 
 
 | 新增或修改 SIEM 目標  a| 
 是的
- a| 
-不
- a| 
-不
  a| 
 不
 
@@ -377,19 +259,11 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 不
- a| 
-不
- a| 
-不
 
 
 
 | 開始準備演習  a| 
 是的
- a| 
-不
- a| 
-不
  a| 
 不
 
@@ -399,19 +273,11 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 不
- a| 
-不
- a| 
-不
 
 
 
 | 編輯準備演習  a| 
 是的
- a| 
-不
- a| 
-不
  a| 
 不
 
@@ -421,19 +287,11 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 是的
- a| 
-不
- a| 
-不
 
 
 
 | 更新發現配置  a| 
 是的
- a| 
-不
- a| 
-不
  a| 
 不
 
@@ -443,10 +301,6 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 是的
  a| 
 是的
- a| 
-不
- a| 
-不
 
 
 
@@ -454,23 +308,15 @@ summary: 在NetApp Console中，您可以授予角色以允許使用者存取Net
 不
  a| 
 不
- a| 
-是的
- a| 
-不
 
 
 
-5+| *在「報告」標籤上*： 
+3+| *在「報告」標籤上*： 
 
 
 | 下載報告  a| 
 是的
  a| 
 是的
- a| 
-不
- a| 
-不
 
 |===

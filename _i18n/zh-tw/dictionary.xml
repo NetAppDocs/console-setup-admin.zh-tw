@@ -2207,9 +2207,7 @@
   <block id="05271cfa0bdeea693a59837fb97cbc3b" category="list-text"><block ref="05271cfa0bdeea693a59837fb97cbc3b" category="inline-link-macro-rx"></block></block>
   <block id="d5c64a8daa89e747afab2353c532cfd0" category="inline-link-macro">開始使用NetApp Console IAM</block>
   <block id="065933ac7339c32c2a386f3f69e4fd61" category="list-text"><block ref="065933ac7339c32c2a386f3f69e4fd61" category="inline-link-macro-rx"></block></block>
-  <block id="470bbf3695958272c2830107baeb6411" category="summary">在NetApp Console中，您可以授予角色以允許使用者存取NetApp Ransomware Resilience。</block>
   <block id="5f87170a21a0b0d135060af816ac1433" category="doc">NetApp Console的勒索軟體恢復存取角色</block>
-  <block id="e6d88107afe61c1a78c0dac0689d8fac" category="paragraph">下表顯示了每個角色可以執行的操作。</block>
   <block id="2961ef9224153d664a9bde6ee6ef2570" category="cell">在儀表板上更新推薦狀態</block>
   <block id="bb73fa2a07d0c544491039dc1ffed7b8" category="cell">啟動工作負載的重新發現</block>
   <block id="26548eb85488e3cdc0f0b9b27802995f" category="cell">*在「保護」標籤上*：</block>
@@ -2219,7 +2217,6 @@
   <block id="e1b7f478f4648932399a0f8d6835740b" category="cell">列出保護計劃和細節</block>
   <block id="8921dd8678af3de7359bee784af9a8e0" category="cell">列出保護組</block>
   <block id="97803e7af23cd9dd5e46bef4245a8480" category="cell">查看保護組詳細信息</block>
-  <block id="70348d94ac22a6df8ff175b1e3a7535b" category="cell">建立、編輯或刪除保護群組</block>
   <block id="4330b42a340140b836c42bbe9c7105be" category="cell">下載數據</block>
   <block id="b1e60ac72e50f485ca0a5ea9c82143d2" category="cell">*在「警報」標籤上*：</block>
   <block id="a0da34eb7fa7ce71299612d3548b6f6a" category="cell">查看警報和警報詳細信息</block>
@@ -5519,8 +5516,6 @@
   <block id="a11961cab6627eac643ea36ae57ce8df" category="sidebar">Keystone角色</block>
   <block id="7654fe6ca44295ba5f844fc9798f0103" category="sidebar">儲存角色</block>
   <block id="35cbd88f43ce85ef7ed6866daa2c6066" category="sidebar">數據服務角色</block>
-  <block id="38dd106db79e0463f64b237d9de58a8e" category="sidebar">備份和還原角色</block>
-  <block id="2879d04f18c304fb2a3d5cf00deff6e2" category="sidebar">災難復原角色</block>
   <block id="4dd7bf281f080fe43c775a741f9f2cc1" category="sidebar">合作組織</block>
   <block id="d6cca643be1ccfaa32ccfdc068061f15" category="sidebar">了解組織合作關係</block>
   <block id="d88a163f40de4d60f08d7006db6dbc69" category="sidebar">建立組織夥伴關係</block>
@@ -5554,7 +5549,6 @@
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">控制台網路存取（舊版）</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識和支持</block>
   <block id="253b718b7b0bb8f190e2ebe1c721295e" category="paragraph">勒索軟體復原角色為使用者提供對NetApp Ransomware Resilience的存取權限。勒索軟體復原能力支援以下角色：</block>
-  <block id="b7055c90f2b38b6e2d3cddd08ec5c936" category="paragraph">角色賦予對設定和操作的不同存取權限。若要設定或查看可疑的使用者行為活動，您必須使用其中一個使用者行為角色。</block>
   <block id="f75989b6aa2a7a3c16b04e40aebffd8f" category="paragraph">具有*組織管理員*或*資料夾或專案管理員*角色的使用者有責任將角色指派給其他使用者。您可以根據專案或資料夾指派存取角色。例如，您可以為使用者指派一個專案的勒索軟體復原管理員角色，並為另一個專案指派SnapCenter管理員角色。或者，如果使用者需要特定資料夾內所有項目的分類管理員角色，您可以在資料夾層級授予他們此角色。</block>
   <block id="e55d79a6c1774cf0f39d67ca04d67bc0" category="paragraph">使用存取角色根據使用者需求執行的特定任務分配對儲存資源的存取權限。例如，如果使用者需要與 Ransomware Resilience 進行交互，則必須為他們授予存取角色，該角色包括對授予存取角色的專案的 Ransomware Resilience 的檢視或管理權限。</block>
   <block id="e6bf2bfbd541e12c3cb2fca42df08ed3" category="paragraph">成員可以在同一個專案內以及不同的專案中擁有多個角色。例如，較小的組織可能會將所有可用的存取角色分配給同一個用戶，而較大的組織可能會讓用戶執行更專業的任務。或者，您也可以為一個使用者指派組織的勒索軟體復原管理員角色。在該範例中，使用者將能夠對組織內的所有專案執行勒索軟體復原任務。</block>
@@ -5564,4 +5558,12 @@
   <block id="4ed68ecf8e006d0fab7f06897731cf53" category="list-text">當您部署新代理程式時，驗證檢查會測試與目前端點的連線。如果你使用<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block>，驗證檢查失敗。為了避免此失敗，請跳過驗證檢查。</block>
   <block id="cfc9caf6832f568fe347d970af78e108" category="list-text">如果使用 Red Hat Enterprise Linux，請驗證您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI</block>
   <block id="a0a50b50b6bb8edb1f818d3ca9526b4b" category="cell">在政府區域和商業區域受限制模式支持。不支援在具有限制模式的主權區域使用。在受限模式下， NetApp Backup and Recovery and Recovery僅支援ONTAP磁碟區資料的備份和復原。<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block>不支援應用程式資料和虛擬機器資料的備份和還原。</block>
+  <block id="7ce9d6824315daa5b3ba4a80bef8768d" category="summary">勒索軟體復原力提供不同的使用者角色來管理對特權操作和報告的存取。</block>
+  <block id="f74b0b36940f757370478cb904680fe8" category="paragraph">角色賦予對設定和操作的不同層級的存取權限。</block>
+  <block id="d8ed8dce9d98718d4019d9388c24353d" category="inline-link-macro">可疑的用戶活動</block>
+  <block id="592abd5ea65ad47726532e14cc5e25d7" category="paragraph">勒索軟體恢復使用者行為管理員和使用者行為檢視者角色可用的操作僅限於 <block ref="ab0f0a524b6807cce9d5b60fdac0f887" category="inline-link-macro-rx"></block>。這些角色旨在添加到勒索軟體恢復管理員或查看者角色。若要配置可疑使用者行為設定並回應警報，使用者必須具有勒索軟體復原使用者行為管理員角色。要僅查看可疑用戶行為警報，用戶應具有勒索軟體恢復用戶行為查看者角色。</block>
+  <block id="6ebf0d56afdbe7f6542cf91826e113ef" category="paragraph">下表區分了勒索軟體復原管理員和勒索軟體復原檢視者角色可用的操作。</block>
+  <block id="1ea8198251e36e2c445f036c869bfd7f" category="cell">建立、編輯或刪除保護群組</block>
+  <block id="a8b7063e167b83f7676ad4659510d5ea" category="sidebar">備份和還原角色</block>
+  <block id="ffce0d237e59f85993727b9607fade6c" category="sidebar">災難復原角色</block>
 </blocks>
