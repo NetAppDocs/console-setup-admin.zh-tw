@@ -159,7 +159,7 @@ link:reference-networking-saas-console.html["查看從NetApp控制台聯繫的�
 
 您需要建立一個具有在 Azure 中部署控制台代理程式的權限的自訂角色。
 
-建立 Azure 自訂角色，您可以將其指派給您的 Azure 帳戶或 Microsoft Entra 服務主體。控制台透過 Azure 進行驗證，並使用這些權限代表您建立控制台代理執行個體。
+建立 Azure 自訂角色，您可以將其指派給您的 Azure 帳戶或 Microsoft Entra 服務主體。控制台透過 Azure 進行驗證，並使用這些權限代表您建立控制台代理程式。
 
 控制台在 Azure 中部署控制台代理虛擬機，啟用 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["系統分配的託管標識"^]，建立所需的角色，並將其指派給虛擬機器。link:reference-permissions-azure.html["查看控制台如何使用權限"] 。
 
@@ -444,7 +444,7 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=L
 
 * 如果您不希望控制台自動為控制台代理程式建立 Azure 角色，則需要建立自己的link:reference-permissions-azure.html["使用此頁面上的政策"]。
 +
-這些權限適用於控制台代理實例本身。這與您先前為部署控制台代理虛擬機器而設定的權限不同。
+這些權限適用於控制台代理本身。這與您先前為部署控制台代理虛擬機器而設定的權限不同。
 
 
 
@@ -481,7 +481,7 @@ TIP: 如果您已經登入 Azure 帳戶，則控制台會自動使用該帳戶�
 +
 https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["了解如何連接到 Azure 中的 Linux VM"^]
 
-. 在「詳細資料」頁面上，輸入實例的名稱，指定標籤，並選擇是否希望控制台建立具有所需權限的新角色，或是否要選擇您設定的現有角色link:reference-permissions-azure.html["所需的權限"]。
+. 在「詳細資料」頁面上，輸入代理的名稱，指定標籤，並選擇是否希望控制台建立具有所需權限的新角色，或是否要選擇您設定的現有角色link:reference-permissions-azure.html["所需的權限"]。
 +
 請注意，您可以選擇與此角色關聯的 Azure 訂閱。您選擇的每個訂閱都會為控制台代理提供管理該訂閱中的資源的權限（例如， Cloud Volumes ONTAP）。
 
@@ -506,7 +506,7 @@ link:reference-ports-azure.html["查看 Azure 的安全性群組規則"] 。
 ====
 . 選擇“*新增*”。
 +
-控制台大約需要 10 分鐘才能準備好實例。停留在該頁面上，直到過程完成。
+控制台大約需要 10 分鐘才能準備好代理。停留在該頁面上，直到過程完成。
 
 
 
@@ -516,4 +516,4 @@ link:reference-ports-azure.html["查看 Azure 的安全性群組規則"] 。
 
 NOTE: 如果部署失敗，您可以從控制台下載報告和日誌來幫助您解決問題。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解決安裝問題。"]
 
-如果您在建立控制台代理程式的相同 Azure 訂閱中擁有 Azure Blob 存儲，您將看到 Azure Blob 儲存系統自動出現在「系統」頁面上。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["了解如何透過NetApp Console管理 Azure Blob 儲存"^]
+如果您在建立控制台代理程式的相同 Azure 帳戶中擁有 Azure Blob 存儲，您將看到 Azure Blob 儲存體會自動出現在 *系統* 頁面上。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["了解如何透過NetApp Console管理 Azure Blob 儲存"^]

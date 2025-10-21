@@ -14,7 +14,7 @@ summary: 控制台代理程式需要權限才能在您的雲端提供者中執�
 
 
 [role="lead"]
-NetApp Console需要權限才能在 Google Cloud 中執行操作。這些權限包含在NetApp提供的自訂角色中。您應該了解代理程式使用這些權限做什麼。
+控制台代理程式需要權限才能在 Google Cloud 中執行操作。這些權限包含在NetApp提供的自訂角色中。您應該了解代理程式使用這些權限做什麼。
 
 
 
@@ -33,7 +33,7 @@ NetApp Console需要權限才能在 Google Cloud 中執行操作。這些權限�
 [source, yaml]
 ----
 title: NetApp Console agent
-description: Permissions for the service account associated with the Console agent instance.
+description: Permissions for the service account associated with the Console agent.
 stage: GA
 includedPermissions:
 - iam.serviceAccounts.actAs
