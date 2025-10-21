@@ -34,10 +34,6 @@ NetApp Data Classification可透過您的訂閱啟用，但使用分類是免費
 ====
 .AWS
 --
-以下影片展示了從 AWS Marketplace 訂閱NetApp Intelligent Services的步驟：
-
-.從 AWS Marketplace 訂閱NetApp Intelligent Services
-video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .步驟
 . 選擇“*管理 > 憑證*”。
 . 選擇*組織憑證*。
@@ -105,12 +101,6 @@ image:screenshot_aws_configure_subscription.png["一組現有憑證的操作選�
 對於所有其他組織或帳戶，您需要重複這些步驟來手動關聯訂閱。
 
 *** 選擇*儲存*。
-+
-以下影片展示了從 Azure 市場訂閱的步驟：
-
-+
-.從 Azure 市場訂閱NetApp Intelligent Services
-video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 
 
 
@@ -170,19 +160,15 @@ NOTE: 如果您組織中的某人已經從您的結算帳戶訂閱了市場，�
 對於所有其他組織或帳戶，您需要重複這些步驟來手動關聯訂閱。
 
 *** 選擇*儲存*。
-+
-以下影片展示了從 Google Cloud Marketplace 訂閱的步驟：
-
-+
-.從 Google Cloud Marketplace 訂閱
-video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
 
 
-.. 此過程完成後，導覽回控制台中的「憑證」頁面並選擇此新訂閱。
+
+
+
+
+. 此過程完成後，導覽回控制台中的「憑證」頁面並選擇此新訂閱。
 +
 image:screenshot_gcp_associate.gif["訂閱分配頁面的螢幕截圖。"]
-
-
 
 
 

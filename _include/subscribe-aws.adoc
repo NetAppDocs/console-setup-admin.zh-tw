@@ -2,10 +2,6 @@
 :allow-uri-read: 
 
 
-以下影片展示了從 AWS Marketplace 訂閱NetApp Intelligent Services的步驟：
-
-.從 AWS Marketplace 訂閱NetApp Intelligent Services
-video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .步驟
 . 選擇“*管理 > 憑證*”。
 . 選擇*組織憑證*。
