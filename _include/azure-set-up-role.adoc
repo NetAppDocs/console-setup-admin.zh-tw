@@ -32,7 +32,7 @@ image:screenshot_azure_shell_upload.png["Azure Cloud Shell 的螢幕截圖，您
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 
 

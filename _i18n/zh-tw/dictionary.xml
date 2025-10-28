@@ -497,7 +497,6 @@
   <block id="e53619c1fe611a51eeeb8d148ba6e532" category="list-text">記憶體</block>
   <block id="911ede8df5585598c294830dafe276fa" category="list-text">32GB</block>
   <block id="38522fbf43585538a7a55ea25460e779" category="list-text">AWS EC2 執行個體類型</block>
-  <block id="3cb4677fb343d8a6f3ab8d904462fda9" category="list-text">滿足上述 CPU 和 RAM 要求的執行個體類型。我們推薦 t3.2xlarge。</block>
   <block id="6cd56a4cc4ddbbfd2bc9d57de5d788aa" category="list-text">密鑰對</block>
   <block id="56ff78b5911451c928f64308fe1d80b3" category="list-text">建立控制台代理程式時，您需要選擇一個 EC2 金鑰對來與執行個體一起使用。</block>
   <block id="c8e7383477673ee726b6ba29dc487444" category="list-text">使用 IMDSv2 時的 PUT 響應跳數限制</block>
@@ -507,9 +506,7 @@
   <block id="75c0fbf84b1614b17a984df62bf849f6" category="inline-link">AWS 文件：變更 PUT 回應跳數限制</block>
   <block id="ca7f44589a06d75665d92002d6148e98" category="list-text"><block ref="ca7f44589a06d75665d92002d6148e98" category="inline-link-rx"></block></block>
   <block id="893ba5865a015de9dc77765cdf7184e3" category="list-text">Azure VM 大小</block>
-  <block id="021caa7094e7de94c50c2e35da292351" category="list-text">滿足上述 CPU 和 RAM 要求的執行個體類型。我們推薦 Standard_D8s_v3。</block>
   <block id="35ba60210572b9248078c07c4079b9ab" category="list-text">Google Cloud 機器類型</block>
-  <block id="bff17a7a57b9d5cdc97a4f823a72230f" category="list-text">滿足上述 CPU 和 RAM 要求的執行個體類型。我們推薦 n2-standard-8。</block>
   <block id="984ca77a9a51746d3dd5a855a71d3493" category="inline-link">受防護的虛擬機器功能</block>
   <block id="8cf4908ee9f94967cb06f69408879f3b" category="paragraph">Google Cloud 虛擬機器實例上的控制台代理程式支援下列作業系統：<block ref="bd10301ee2e8f0cb38112a71d2b6920c" category="inline-link-rx"></block></block>
   <block id="0a772cdeecb207bdf7ffd5850a8d59bd" category="list-text">/opt 中的磁碟空間</block>
@@ -1868,15 +1865,10 @@
   <block id="fd976d7410ccbb05f33da778aade918e" category="section-title">如何開始使用 RHEL 8 和 9</block>
   <block id="ff1e80df6a2782ea650e40a872d2e409" category="paragraph">有關主機要求、Podman 要求以及安裝 Podman 和 Cagent 的步驟的詳細信息，請參閱以下頁面：</block>
   <block id="b604a3e5099a3ec9c55ef70ee5afe1d3" category="inline-link">在本機安裝並設定控制台代理</block>
-  <block id="b1d29a547b37c5ca536185e06aad8c38" category="list-text"><block ref="b1d29a547b37c5ca536185e06aad8c38" category="inline-link-rx"></block></block>
   <block id="a64fe2903c7070d5b81ce6dce3b03548" category="inline-link">在 AWS 中手動安裝控制台代理</block>
-  <block id="de0ae011b0cce336af3e7c07509c4273" category="list-text"><block ref="de0ae011b0cce336af3e7c07509c4273" category="inline-link-rx"></block></block>
   <block id="49b6ed50435718c0a1e9c1c394702ab8" category="inline-link">在 Azure 中手動安裝控制台代理</block>
-  <block id="b8485a51d966129a5585c0a1be3fc645" category="list-text"><block ref="b8485a51d966129a5585c0a1be3fc645" category="inline-link-rx"></block></block>
   <block id="eccadaf4d74bf176f32c91d78a6673c8" category="inline-link">在 Google Cloud 中手動安裝控制台代理</block>
-  <block id="8aefadd00f648d310359bbc4b016e9e8" category="list-text"><block ref="8aefadd00f648d310359bbc4b016e9e8" category="inline-link-rx"></block></block>
   <block id="6df5369b59a40f64ce1869a0d4d405ea" category="inline-link">準備在受限模式下部署</block>
-  <block id="9f1e71ff4946538e6e8d4160102056bb" category="paragraph"><block ref="9f1e71ff4946538e6e8d4160102056bb" category="inline-link-rx"></block></block>
   <block id="fcd7347bb021d8231184894bed7bd347" category="section-title">如何重新發現你的系統</block>
   <block id="cdb83aacf48e960662fcf2d6745e5b60" category="paragraph">部署新的控制台代理程式後，請參閱以下頁面以重新發現您的系統。</block>
   <block id="6c0fb6078ec778ca2319e375a19e994b" category="inline-link">新增現有的Cloud Volumes ONTAP系統</block>
@@ -1884,7 +1876,6 @@
   <block id="c5fbee6586294d81141f8dd158707985" category="inline-link">發現本地ONTAP集群</block>
   <block id="f610a540e2ecafae9447279876425a0e" category="list-text"><block ref="f610a540e2ecafae9447279876425a0e" category="inline-link-rx"></block></block>
   <block id="504f5f6c5adc93609131b644e3f8c2a9" category="inline-link">建立或發現 FSx for ONTAP系統</block>
-  <block id="f93f1cb0f92d9e89cd92ec94db26274f" category="list-text"><block ref="f93f1cb0f92d9e89cd92ec94db26274f" category="inline-link-rx"></block></block>
   <block id="8111d5a0f80f0b3c708f77dc1b05dc00" category="inline-link">建立Azure NetApp Files系統</block>
   <block id="ee2dcfcc83687ed3d92f8b7d687f1f05" category="list-text"><block ref="ee2dcfcc83687ed3d92f8b7d687f1f05" category="inline-link-rx"></block></block>
   <block id="e4a9dd1c7d750241fad0d52a3bc7903b" category="inline-link">探索 E 系列系統</block>
@@ -2273,25 +2264,12 @@
   <block id="55334f6c7481482659eaa1b0aef1601a" category="paragraph">與其他應用程式共用的虛擬機器不支援該代理程式。  VM 必須專用於代理軟體。</block>
   <block id="39c131bd8f90ef7749228972a6486162" category="section-title">第三方代理和擴展</block>
   <block id="4b7e9b197f794c9b7019035a05713f81" category="paragraph">代理虛擬機器不支援第三方代理或虛擬機器擴充。</block>
-  <block id="5c189366c181471a6cd7a0fd9423b536" category="summary">當您登入並使用基於 Web 的控制台時，它會聯絡多個端點來完成您發起的操作。存取NetApp Console的電腦必須與這些端點建立連線。</block>
-  <block id="5c391484b92635a85b81f4c8d0e49deb" category="doc">3.9.55 及以下版本所需的網路存取點</block>
-  <block id="f19f55c1a9162421ca7d1afd7a70e205" category="paragraph">本主題詳細介紹了NetApp Console4.0.0 之前的版本標準模式所需的網路存取、 NetApp ConsoleNetApp Console代理程式和NetApp資料服務出站網路存取以及聯絡必要端點的能力。您需要確保控制台和您安裝的任何代理程式都具有正確的網路存取權限以使用功能屬性。</block>
-  <block id="3f137c5ea124b1f3a059cf7b573f064d" category="paragraph">您需要為以軟體即服務 (SaaS) 形式存取NetApp Console的電腦以及您在本機或雲端中安裝的任何控制台代理程式設定網路存取。您可能還需要某些NetApp資料服務（包括Cloud Volumes ONTAP）的額外端點。</block>
   <block id="7b7f8f1228adee0b98f669d033848211" category="section-title">將您的終端機清單更新為 4.0.0 及更高版本的修訂清單</block>
   <block id="4c9c91c3daf4ca466e31f9eaa8cef3d2" category="paragraph">從 4.0.0 版本開始，控制台代理需要的端點更少。 4.0.0 之前的現有部署仍然受支援。升級到 4.0.0 或更高版本後，您可以在方便時從允許清單中刪除舊端點。</block>
-  <block id="69d1d632a1bef1823c2e6978a8ec48a4" category="paragraph">NetApp建議您更新防火牆規則以使用修訂後的端點清單。修改後的清單更小，因此更安全且更易於管理。</block>
-  <block id="a090914d06379fb21d650db09e763abe" category="inline-link-macro">4.0.0 及更高版本支援的端點</block>
-  <block id="495dc5be8b2dffcc4b87563ad8019997" category="paragraph">審查<block ref="5d27d1bef0dabbacd053766b50c0ccca" category="inline-link-macro-rx"></block></block>
   <block id="ae702d0a49628819c46d528d565558a9" category="inline-link-macro">4.0.0 及更高版本支援的端點</block>
   <block id="29336372af9a1e2392c4f443c954f44f" category="list-text">將端點列入白名單<block ref="3d8ba9dde5b52d1c1933603757e09278" category="inline-link-macro-rx"></block>。</block>
   <block id="507b02d897089d910d9bc5b402ca61f5" category="list-text">透過執行以下命令重新啟動每個代理程式上的服務管理員 2 服務：</block>
   <block id="676fa375fa6a8741c606249933e8d347" category="list-text">執行以下指令並驗證代理程式的狀態是否顯示為_active(running)_：_</block>
-  <block id="8022b55ce4a5f3a2ba458e22097b2c3d" category="list-text">從允許清單中刪除舊端點。</block>
-  <block id="d8fef6a6d61cdd4c511a17a3b901fe2a" category="section-title">NetApp Console聯繫的端點</block>
-  <block id="ab2bd68622da4c3251d86a26932580c8" category="paragraph">存取NetApp Console的每台電腦都必須連接到下面列出的端點。</block>
-  <block id="1d69c4b71aa988e71520fc1776bcce8c" category="paragraph">系統在兩種情況下聯繫這些端點：</block>
-  <block id="a3a17bc80dc2595291a5560d6cb288e1" category="list-text">從電腦存取<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block>作為軟體即服務（SaaS）。</block>
-  <block id="5d00584a124779bdb80eb803f08be0ad" category="list-text">從直接存取代理主機的計算機，可以登入並進行設置，也可以從代理主機存取控制台。</block>
   <block id="e4790a0da59cd51d8f46272b21b89870" category="cell">\ https://support.netapp.com \ https://mysupport.netapp.com</block>
   <block id="db9e137068a05efe5440105c2494b7f1" category="cell">取得許可資訊並向NetApp支援發送AutoSupport訊息。</block>
   <block id="8009adbb433e9c2ef597d562ea535af5" category="cell">\https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com</block>
@@ -2303,51 +2281,26 @@
   <block id="f3b521898fd9510c7d26d0b0ea8284c8" category="list-text">3.9.47 及更高版本支援選項 1 端點。  3.9.47 之前的版本不支援向後相容。</block>
   <block id="3f22e8460387fbe2426f3e71560e86e4" category="list-text">控制台代理首先啟動與選項 2 中的端點的聯繫。如果這些端點不可訪問，它會自動聯繫選項 1 中的端點。</block>
   <block id="5a1acaa8c83a1beeb2be7c01dd1efeb3" category="list-text">如果將控制台代理程式與NetApp Backup and Recovery或 Ransomware Resilience 一起使用，則系統不支援選項 1 端點。允許選項 2 端點並不允許選項 1。</block>
-  <block id="4f82485cadfd42a1a7920faaa08dd4eb" category="section-title">控制台代理聯繫的端點</block>
-  <block id="6bf3c3b6320a25ca1c756d707beb9501" category="paragraph">您可以在本機或雲端安裝控制台代理，它會聯絡端點以完成控制台發起的操作。</block>
-  <block id="11de2fc225151812a62c02855c50d6e0" category="paragraph">控制台代理需要存取與NetApp Console相同的端點，如果您在雲端提供者中部署代理，則還需要存取其他端點。</block>
-  <block id="4d3694235fe47618495789cb51a45b99" category="section-title">AWS 的代理端點</block>
-  <block id="63e19220969e7a68e2e526befc1666be" category="paragraph">這些端點適用於 4.0.0 之前的控制台代理。</block>
-  <block id="2fb275317dd3b17c9c9f418ac55fc85f" category="cell">AWS 服務 (amazonaws.com)：CloudFormation 彈性運算雲端 (EC2) 身分識別與存取管理 (IAM) 金鑰管理服務 (KMS) 安全性權杖服務 (STS) 簡單儲存服務 (S3)</block>
-  <block id="91fc04a757a54f41a1e535fbce01e9c4" category="cell">管理 AWS 中的資源。確切的端點取決於您使用的 AWS 區域。有關詳細信息，請參閱 AWS 文件以獲取許可信息並向NetApp支援發送AutoSupport訊息。</block>
-  <block id="876974bae0861068d4d4bad2bcfb2030" category="section-title">Azure 的代理端點</block>
-  <block id="c00fd35fb36d540f88a9f585e3eacbf4" category="paragraph">這些端點適用於 4.0.0 之前的控制台代理。</block>
   <block id="7dfb843f052469a3cc66d13554feb0f4" category="cell">\ https://management.azure.com \ https://login.microsoftonline.com \ https://blob.core.windows.net \ https://core.windows.net</block>
   <block id="068395f3cd26ca40ad905de3790c9435" category="cell">管理 Azure 公用區域中的資源。</block>
   <block id="6d03c18e4e6ecfac89f686c621314d96" category="cell">\ https://management.chinacloudapi.cn \ https://login.chinacloudapi.cn \ https://blob.core.chinacloudapi.cn \ https://core.chinacloudapi.cn</block>
   <block id="232055d452a21264f8d549e50d695b18" category="cell">管理 Azure 中國區域的資源。</block>
-  <block id="9479dd672c1173937cff0e6b2bf64e73" category="section-title">Google Cloud 的代理端點</block>
-  <block id="8220d542eb7f542142d33f264325fad2" category="cell">\ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta https://www.googleapis.com/storage/v1 https://storage.googleapis.com/storage/v1 https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/project</block>
   <block id="d377a02fb22cec7bf850087d3c9a31fa" category="cell">管理 Google Cloud 中的資源。</block>
-  <block id="3e85017db5f11cb5fd9a2ce0cc5c2952" category="paragraph">NetApp建議在防火牆中允許選項 1 端點，因為它們更安全，而不允許選項 2 端點。請注意有關這些端點的以下事項：</block>
-  <block id="355aa2cb084da03a5497f77553128a7e" category="list-text">從控制台代理 3.9.47 版本開始，系統支援選項 1 中列出的端點。控制台代理的先前版本不支援向後相容。</block>
-  <block id="39f1f892613e1b48ea2dcb8e91007840" category="list-text">控制台代理程式首先聯絡選項 2 中的端點。如果這些端點不可訪問，它會自動聯繫選項 1 中的端點。</block>
-  <block id="0f21327cfa5424ff9e53ceabb12fc793" category="section-title">本地代理端點</block>
   <block id="4bfdb1b61ef66a3957a6d5d1361c6ccf" category="summary">NetApp Console、 NetApp Console代理和NetApp資料服務需要出站網路存取以及聯繫必要端點的能力。</block>
   <block id="4f5ec630b094c4c82b26ea6404d2fb60" category="doc">準備NetApp Console的網路訪問</block>
   <block id="4233b9cb96923f9b990894123ee8b824" category="paragraph">您需要為以下操作設定網路存取：</block>
   <block id="2252b9effa4a2578182ceca5e5099224" category="list-text">以軟體即服務 (SaaS) 形式存取NetApp Console的計算機</block>
-  <block id="a46336f4b91114f84d727815dd065275" category="list-text">部署在本機或雲端中安裝的控制台代理程式的網路位置。</block>
-  <block id="fff5e3dfea178a23d7b2584ff3483b21" category="list-text">某些NetApp資料服務的附加端點，包括Cloud Volumes ONTAP。</block>
   <block id="76e8c2ef4f00506a56e17505bb27d4f1" category="inline-link-macro">了解如何更新您的端點清單。</block>
-  <block id="99417dfb179b84518f26cde4bd5522ec" category="admonition">NetApp減少了控制台和控制台代理程式所需的網路端點，增強了安全性並簡化了部署。重要的是，4.0.0 版本之前的所有部署都將繼續全面支援。雖然先前的端點仍然可供現有代理程式使用，但NetApp強烈建議在確認代理程式升級成功後將防火牆規則更新到目前端點。<block ref="c20299b46c31a56bf458fdfeb71942cd" category="inline-link-macro-rx"></block></block>
-  <block id="d2e2173be8de3803d29804ba7e3cbcab" category="list-text">從直接存取控制台代理主機的計算機，可以登入並進行設置，也可以從代理主機存取控制台。</block>
   <block id="8963387394e2ee3e2a5a9ba160566a58" category="cell">\ https://support.netapp.com</block>
   <block id="fe0afb21d6cb9bc2fa6c390327246314" category="cell">更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp Console。</block>
   <block id="f092dc53062418401abf8d7b17161fcb" category="cell">取得許可資訊並向NetApp支援發送AutoSupport訊息以及接收Cloud Volumes ONTAP的軟體更新。</block>
   <block id="1daedeccee3ce9bebdac02815a88e596" category="cell">\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com</block>
-  <block id="96fe77e6e2cd8589ca112918c9a04ec6" category="section-title">為控制台代理準備網絡</block>
-  <block id="79ad55cf82aac1a039766a722bd36b49" category="paragraph">控制台代理必須能夠存取與NetApp Console相同的端點，另外還可以根據代理程式的安裝位置存取其他端點。</block>
-  <block id="8e67676c15ae2a94213bdd7971d44506" category="paragraph">在安裝控制台代理之前設定網路端點存取。</block>
   <block id="5eda3a7f9f9788e7beae44ca11c3fca1" category="inline-link-macro">為控制台代理程式設定 AWS 網路訪問</block>
   <block id="fe65e3a837dc9a3749e87481b67ff0fb" category="list-text"><block ref="fe65e3a837dc9a3749e87481b67ff0fb" category="inline-link-macro-rx"></block></block>
   <block id="413296dfc7c1face41e185f79c4f8f7a" category="inline-link-macro">為控制台代理程式設定 Azure 網路訪問</block>
   <block id="64594581e02e022dfc201735b71465f0" category="list-text"><block ref="64594581e02e022dfc201735b71465f0" category="inline-link-macro-rx"></block></block>
   <block id="6be29013501c644b088dfb30237d31df" category="inline-link-macro">為控制台代理設定 Google Cloud 網路訪問</block>
   <block id="4b93f2e9726ccb43bb5df85b409d91b3" category="list-text"><block ref="4b93f2e9726ccb43bb5df85b409d91b3" category="inline-link-macro-rx"></block></block>
-  <block id="f10bf17567a71d86b25d142d5d98b33b" category="inline-link-macro">為控制台代理程式設定本地網路訪問</block>
-  <block id="c918e5911e84e6725906f864a7cf4ed3" category="list-text"><block ref="c918e5911e84e6725906f864a7cf4ed3" category="inline-link-macro-rx"></block></block>
-  <block id="627545d3fae412b9188d4c9140899c75" category="section-title">為Cloud Volumes ONTAP準備網絡</block>
   <block id="fd6e08319e0931b5b5ca23214370bc11" category="paragraph">一些NetApp資料服務以及Cloud Volumes ONTAP要求代理程式具有額外的出站網路存取權限。</block>
   <block id="3a10984b52469b032ed6d718a9e2670f" category="section-title">Cloud Volumes ONTAP的端點</block>
   <block id="16c64e82d59e1f4418f7d809b42f2983" category="inline-link-macro">AWS 中的Cloud Volumes ONTAP端點</block>
@@ -2356,8 +2309,6 @@
   <block id="d64c0a8c2325cb4b58acab3ef2d51a05" category="list-text"><block ref="d64c0a8c2325cb4b58acab3ef2d51a05" category="inline-link-macro-rx"></block></block>
   <block id="90da399078404708cface539488b8fb2" category="inline-link-macro">Google Cloud 中Cloud Volumes ONTAP的端點</block>
   <block id="46a1f2a1262e75b4e5ea88e748ead245" category="list-text"><block ref="46a1f2a1262e75b4e5ea88e748ead245" category="inline-link-macro-rx"></block></block>
-  <block id="8dfda8cf3bfed1ba46319b9487959873" category="inline-link">請參閱對應的NetApp資料服務文件。</block>
-  <block id="9e66adbc40ae0df7bfa345fcbb26e31b" category="paragraph"><block ref="9e66adbc40ae0df7bfa345fcbb26e31b" category="inline-link-rx"></block></block>
   <block id="87536203946c0c72fcd130937e3cc7ef" category="doc">控制台代理的 AWS 權限</block>
   <block id="c1141a37b962270fc1e8960233830c99" category="section-title">IAM 策略</block>
   <block id="573b0df2f89364b268637488ea138d56" category="paragraph">下面提供的 IAM 政策提供了控制台代理根據您的 AWS 區域管理公有雲環境內的資源和流程所需的權限。</block>
@@ -4482,7 +4433,6 @@
   <block id="e9a22dbe949aceeeba0832b4920f12de" category="paragraph">如果您在政府區域部署了控制台代理，則該核取方塊已啟用且無法變更。這是因為限制模式是政府區域唯一支持的模式。</block>
   <block id="34ef49f2003b645a0f1b248a8e158945" category="paragraph">控制台代理現在已安裝並設定到您的控制台組織。所有使用者都需要使用控制台代理執行個體的 IP 位址存取控制台。</block>
   <block id="cb763b4641bf6e6767c99d379a3c59aa" category="paragraph">向控制台提供您先前設定的權限。</block>
-  <block id="c9164a572d40f77b59f664b9b1e570ce" category="section-title">步驟 3：提供對NetApp Console的權限</block>
   <block id="0d90b7023964fcc3c91d83c1e214d24e" category="paragraph">如果您從 Azure 市集部署了控制台代理，或手動安裝了控制台代理軟體，則需要提供先前設定的權限。</block>
   <block id="9ec50c85d379863701d46321169dc12e" category="paragraph">如果您從 AWS Marketplace 部署了控制台代理，則這些步驟不適用，因為您在部署期間選擇了所需的 IAM 角色。</block>
   <block id="d8325912caeaba85aaefdb17eacaea8d" category="inline-link-macro">了解如何準備雲端權限</block>
@@ -5597,4 +5547,56 @@
   <block id="446a691d3cf6457cb60610b81794fdbc" category="paragraph">AWS 使用指定的設定啟動軟體。控制台代理大約需要五分鐘即可部署。</block>
   <block id="118b5697b68c5f4ada51d65dffac2674" category="paragraph">如果您使用標準 SKU IP 位址，則控制台將使用控制台代理程式的_私有_ IP 位址，而不是公用 IP。如果您用於存取控制台的機器無法存取該私人 IP 位址，則控制台中的操作將會失敗。</block>
   <block id="d1cb423c9810b1ddd65eea821845fff2" category="admonition">若要啟動可疑使用者活動偵測，您必須具有控制台組織管理員角色。</block>
+  <block id="148a5defddc98b9d994f39780f74e348" category="cell">*先前的端點*</block>
+  <block id="c563d78603e1e09616c6c043a19061ba" category="cell">*4.0.0 以上版本的端點*</block>
+  <block id="1463a95efc33a52765f03569e1e39a10" category="cell">*目的*</block>
+  <block id="3b02fb538695ecfedde92943f6fd865e" category="paragraph">用於許可和聯繫NetApp支援。</block>
+  <block id="37ba276f010f4ea07f1196b487811443" category="list-text">\https://*.api.bluexp.netapp.com</block>
+  <block id="e1095ff19466581c5274f67123c95036" category="list-text">\ https://api.bluexp.netapp.com</block>
+  <block id="9e434ddc2ad4b9de005368b77254223d" category="list-text">\https://*.cloudmanager.cloud.netapp.com</block>
+  <block id="115781a0043a85f8707c5c99fd02dc75" category="list-text">\ https://cloudmanager.cloud.netapp.com</block>
+  <block id="300f031c227ed1b4448a8bb51abec2bb" category="list-text">\ https://netapp-cloud-account.auth0.com</block>
+  <block id="14a739c7dd9ae7124076d6fca0a62a7e" category="list-text">\ https://netapp-cloud-account.us.auth0.com</block>
+  <block id="03275fa7fd8487800900fe5ed21b50b4" category="list-text">\ https://console.bluexp.netapp.com</block>
+  <block id="5802dd4b381723f6988464d2d6587cfa" category="list-text">\https://*.console.bluexp.netapp.com</block>
+  <block id="be39dcb2fcc989bf18987169d1f8afc4" category="list-text">\ https://console.netapp.com</block>
+  <block id="9ebf544c1d9c2833a9338e1e70ee31de" category="list-text">\ https://components.console.bluexp.netapp.com</block>
+  <block id="44c8f9fac8ac8a713dca77d34b7e902d" category="list-text">\ https://cdn.auth0.com</block>
+  <block id="30c4239755a3fa7fe7952fafec8297dd" category="paragraph">用於日常營運。</block>
+  <block id="533560d1d92ef216fc2f7047b132da5b" category="list-text">滿足 CPU 和 RAM 要求的實例類型。  NetApp推薦使用 t3.2xlarge。</block>
+  <block id="5218e689f8059e737f702b1608b1d2aa" category="list-text">滿足 CPU 和 RAM 要求的實例類型。  NetApp推薦 Standard_D8s_v3。</block>
+  <block id="8cf6ae40c51e78159e689e6172cff9c8" category="list-text">滿足 CPU 和 RAM 要求的實例類型。  NetApp推薦 n2-standard-8。</block>
+  <block id="8506e9451ada0f6713ff22e19ea5ea81" category="list-text"><block ref="8506e9451ada0f6713ff22e19ea5ea81" category="inline-link-rx"></block></block>
+  <block id="4339f3c8171824c42987385b4c398ef1" category="list-text"><block ref="4339f3c8171824c42987385b4c398ef1" category="inline-link-rx"></block></block>
+  <block id="1c9245a65b8c79506ab48fc890a4c565" category="list-text"><block ref="1c9245a65b8c79506ab48fc890a4c565" category="inline-link-rx"></block></block>
+  <block id="a84a1e7810d5b8e81646124511b75732" category="list-text"><block ref="a84a1e7810d5b8e81646124511b75732" category="inline-link-rx"></block></block>
+  <block id="7dfa5cc30dbbbfee91158767b86487c0" category="paragraph"><block ref="7dfa5cc30dbbbfee91158767b86487c0" category="inline-link-rx"></block></block>
+  <block id="9588595fbe3fa7f47431af3c53dbfa23" category="list-text"><block ref="9588595fbe3fa7f47431af3c53dbfa23" category="inline-link-rx"></block></block>
+  <block id="cb4f6677094ab1c46678dcab5e428e83" category="summary">您需要確保控制台和您安裝的任何代理程式都具有正確的網路存取權限才能正常運作。</block>
+  <block id="08c556d51e4f6c65d7b6fa418e7669be" category="doc">3.9.55 及以下版本需要網路訪問</block>
+  <block id="fffe82f62bbb62138e05f9a97b7b3c53" category="paragraph">NetApp Console、 NetApp Console代理程式和NetApp資料服務需要出站網路存取才能聯絡必要的端點。</block>
+  <block id="85c99bdcf4951ca82a78bf31a1de7173" category="inline-link-macro">4.0.0 及更高版本所需的端點</block>
+  <block id="e631f72e5da7444059b0ba7e6eae2fc7" category="admonition">本主題記錄了NetApp Console標準模式 3.9.55 及以下版本所需的網路存取。對於 4.0.0 及更高版本所需的端點，請查看<block ref="ef1073f8509c45bff5f75999a15fb4b5" category="inline-link-macro-rx"></block>。</block>
+  <block id="be32f6aa31e21ef01c8c31dad096f006" category="paragraph">您需要為以下內容設定網路存取：</block>
+  <block id="5b16a9b1f1c5db997bd70dba9f662b5e" category="list-text">您在本機或雲端安裝的控制台代理程式。</block>
+  <block id="3b62838410a7c6895d979922d9581f52" category="paragraph">NetApp建議更新防火牆規則以使用修訂後的端點列表，該列表更小、更安全且更易於管理。  NetApp消除了對通配符條目的需求，且代理程式升級的端點支援所有資料服務。</block>
+  <block id="35da316807382c07bf908d0aa0e25366" category="inline-link-macro">查看代理版本。</block>
+  <block id="f9920faba4be0356d6cca95490bf1c5e" category="list-text">驗證您的代理是否為 4.0.0 或更高版本。<block ref="87e2f33545ea1e2438f05031eeb588f8" category="inline-link-macro-rx"></block></block>
+  <block id="13c50e9c029227770d707c8452860d49" category="list-text">從防火牆允許清單中刪除舊端點。</block>
+  <block id="7429bce12833578efeb5b94559cdb2cc" category="section-title">3.9.55 及以下版本的NetApp Console和控制台代理的端點</block>
+  <block id="99f5210f9005cdc79b5e7445fc47dfa6" category="paragraph">這些端點用於控制台代理 3.9.55 及以下版本。</block>
+  <block id="6d7ce399b2920c8a12c1f75743f81bf1" category="section-title">控制台代理聯繫的雲端提供者端點</block>
+  <block id="62382c601b0acb2fd67b8ef8d844f33d" category="paragraph">如果控制台代理程式部署在您的雲端提供者中，則它們必須能夠存取其他端點。</block>
+  <block id="9b80fcff76bb72e8a8ad5585de95999c" category="paragraph">在安裝控制台代理之前啟用對雲端提供者端點的存取。</block>
+  <block id="34abad90bc81b2b4339231b5d1e66cd2" category="paragraph">所有版本的雲端供應商端點都是相同的。</block>
+  <block id="1f3baebddcc5e633764f391ecbf1a431" category="section-title">控制台代理聯繫的資料服務端點</block>
+  <block id="8c046aa00b403bc460358c56847f6566" category="paragraph">控制台代理程式需要額外的外部網路存取來支援某些NetApp資料服務和Cloud Volumes ONTAP。</block>
+  <block id="f879fd651c263b963ba75d4b5bb22e1c" category="list-text">您在本機或雲端安裝的控制台代理程式。控制台代理。</block>
+  <block id="290681220934acfd2c865ebc995ac39d" category="admonition">在 4.0.0 中， NetApp減少了控制台和控制台代理程式所需的網路端點，增強了安全性並簡化了部署。重要的是，4.0.0 版本之前的所有部署都將繼續全面支援。雖然先前的端點仍然可供現有代理程式使用，但NetApp強烈建議在確認代理程式升級成功後將防火牆規則更新到目前端點。<block ref="c20299b46c31a56bf458fdfeb71942cd" category="inline-link-macro-rx"></block></block>
+  <block id="053ff009632babfa14d2ab9238cc32ea" category="section-title">NetApp Console和控制台代理程式聯繫的端點</block>
+  <block id="d15daa74ffdfc25ce19959268f28c7cd" category="paragraph">您部署的每個代理程式和存取NetApp Console的每台電腦都必須連接到下面列出的端點。</block>
+  <block id="6cb7b38169a9c67522d02da6290d53d7" category="paragraph">部署在您的雲端提供者中的控制台代理程式需要存取該雲端提供者各自的端點。</block>
+  <block id="a64b4879b658ef7dd1a5bf863f66e510" category="section-title">雲端提供者端點聯繫了控制台代理</block>
+  <block id="334af2b72c201a4f9aea3650a21ea8ec" category="paragraph">在安裝控制台代理之前設定雲端提供者網路端點存取。</block>
+  <block id="9ccb545b97d1ad0ce41d2577f6ae2e82" category="section-title">步驟 3：向控制台代理提供權限</block>
 </blocks>

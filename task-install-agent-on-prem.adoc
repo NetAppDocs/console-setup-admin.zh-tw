@@ -427,7 +427,7 @@ image:screenshot_azure_shell_upload.png["Azure Cloud Shell 的螢幕截圖，您
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 +
 現在您應該有一個名為「控制台操作員」的自訂角色，可以將其指派給控制台代理虛擬機器。

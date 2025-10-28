@@ -19,24 +19,19 @@ NetApp Console、 NetApp Console代理和NetApp資料服務需要出站網路存
 您需要為以下操作設定網路存取：
 
 * 以軟體即服務 (SaaS) 形式存取NetApp Console的計算機
-* 部署在本機或雲端中安裝的控制台代理程式的網路位置。
-* 某些NetApp資料服務的附加端點，包括Cloud Volumes ONTAP。
+* 您在本機或雲端安裝的控制台代理程式。控制台代理。
 
 
 
-NOTE: NetApp減少了控制台和控制台代理程式所需的網路端點，增強了安全性並簡化了部署。重要的是，4.0.0 版本之前的所有部署都將繼續全面支援。雖然先前的端點仍然可供現有代理程式使用，但NetApp強烈建議在確認代理程式升級成功後將防火牆規則更新到目前端點。link:reference-networking-saas-console-previous.html["了解如何更新您的端點清單。"]
+NOTE: 在 4.0.0 中， NetApp減少了控制台和控制台代理程式所需的網路端點，增強了安全性並簡化了部署。重要的是，4.0.0 版本之前的所有部署都將繼續全面支援。雖然先前的端點仍然可供現有代理程式使用，但NetApp強烈建議在確認代理程式升級成功後將防火牆規則更新到目前端點。link:reference-networking-saas-console-previous.html["了解如何更新您的端點清單。"]
 
 
 
-== NetApp Console聯繫的端點
+== NetApp Console和控制台代理程式聯繫的端點
 
-存取NetApp Console的每台電腦都必須連接到下面列出的端點。
+您部署的每個代理程式和存取NetApp Console的每台電腦都必須連接到下面列出的端點。
 
-系統在兩種情況下聯繫這些端點：
-
-* 從電腦存取 https://console.netapp.com["NetApp Console"^]作為軟體即服務（SaaS）。
-* 從直接存取控制台代理主機的計算機，可以登入並進行設置，也可以從代理主機存取控制台。
-
+部署在您的雲端提供者中的控制台代理程式需要存取該雲端提供者各自的端點。
 
 [cols="2*"]
 |===
@@ -70,23 +65,20 @@ NOTE: NetApp減少了控制台和控制台代理程式所需的網路端點，�
 |===
 
 
-== 為控制台代理準備網絡
+== 雲端提供者端點聯繫了控制台代理
 
-您可以在本機或雲端安裝控制台代理，它會聯絡端點以完成控制台發起的操作。
+如果控制台代理程式部署在您的雲端提供者中，則它們必須能夠存取其他端點。
 
-控制台代理必須能夠存取與NetApp Console相同的端點，另外還可以根據代理程式的安裝位置存取其他端點。
-
-在安裝控制台代理之前設定網路端點存取。
+在安裝控制台代理之前設定雲端提供者網路端點存取。
 
 * link:task-install-agent-aws-console.html#networking-aws-agent["為控制台代理程式設定 AWS 網路訪問"]
 * link:task-install-agent-azure-console.html#networking-azure-agent["為控制台代理程式設定 Azure 網路訪問"]
 * link:task-install-agent-google-console-gcloud.html#networking-gcp-agent["為控制台代理設定 Google Cloud 網路訪問"]
-* link:task-install-agent-on-prem.html#network-access-agent["為控制台代理程式設定本地網路訪問"]
 
 
 
 
-== 為Cloud Volumes ONTAP準備網絡
+== 控制台代理聯繫的資料服務端點
 
 一些NetApp資料服務以及Cloud Volumes ONTAP要求代理程式具有額外的出站網路存取權限。
 
@@ -98,5 +90,3 @@ NOTE: NetApp減少了控制台和控制台代理程式所需的網路端點，�
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html["Azure 中的Cloud Volumes ONTAP端點"]
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Google Cloud 中Cloud Volumes ONTAP的端點"]
 
-
-https://docs.netapp.com/us-en/data-services-family/["請參閱對應的NetApp資料服務文件。"^]

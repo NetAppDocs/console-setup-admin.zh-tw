@@ -177,7 +177,7 @@ AWS 服務（amazonaws.com）：
 
 中央處理器:: 8 個核心或 8 個 vCPU
 記憶體:: 32GB
-AWS EC2 執行個體類型:: 滿足上述 CPU 和 RAM 要求的執行個體類型。我們推薦 t3.2xlarge。
+AWS EC2 執行個體類型:: 滿足 CPU 和 RAM 要求的實例類型。  NetApp推薦使用 t3.2xlarge。
 
 
 

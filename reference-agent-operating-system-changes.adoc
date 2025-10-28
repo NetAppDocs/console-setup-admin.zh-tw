@@ -140,16 +140,16 @@ https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/rhel-7-e
 ====
 .標準模式
 --
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["在本機安裝並設定控制台代理"]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-aws-manual.html["在 AWS 中手動安裝控制台代理"]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-azure-manual.html["在 Azure 中手動安裝控制台代理"]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-google-manual.html["在 Google Cloud 中手動安裝控制台代理"]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["在本機安裝並設定控制台代理"]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-manual.html["在 AWS 中手動安裝控制台代理"]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-azure-manual.html["在 Azure 中手動安裝控制台代理"]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-google-manual.html["在 Google Cloud 中手動安裝控制台代理"]
 
 
 --
 .限制模式
 --
-https://docs.netapp.com/us-en/bluexp-setup-admin/task-prepare-restricted-mode.html["準備在受限模式下部署"]
+https://docs.netapp.com/us-en/console-setup-admin/task-prepare-restricted-mode.html["準備在受限模式下部署"]
 
 --
 ====
@@ -161,7 +161,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-prepare-restricted-mode.ht
 
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-adding-systems.html["新增現有的Cloud Volumes ONTAP系統"^]
 * https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["發現本地ONTAP集群"^]
-* https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-creating-fsx-working-environment.html["建立或發現 FSx for ONTAP系統"^]
+* https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-create-fsx-system.html["建立或發現 FSx for ONTAP系統"^]
 * https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-create-system.html["建立Azure NetApp Files系統"^]
 * https://docs.netapp.com/us-en/storage-management-e-series/task-discover-e-series.html["探索 E 系列系統"^]
 * https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html["了解StorageGRID系統"^]

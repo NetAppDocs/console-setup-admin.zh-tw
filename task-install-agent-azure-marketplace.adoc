@@ -153,7 +153,7 @@ VNet 與子網路:: 建立控制台代理程式時，您需要指定它所在的
 
 中央處理器:: 8 個核心或 8 個 vCPU
 記憶體:: 32GB
-Azure VM 大小:: 滿足上述 CPU 和 RAM 要求的執行個體類型。我們推薦 Standard_D8s_v3。
+Azure VM 大小:: 滿足 CPU 和 RAM 要求的實例類型。  NetApp推薦 Standard_D8s_v3。
 
 
 
@@ -209,7 +209,7 @@ image:screenshot_azure_shell_upload.png["Azure Cloud Shell 的螢幕截圖，您
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 
 
@@ -280,7 +280,7 @@ image:screenshot_azure_shell_upload.png["Azure Cloud Shell 的螢幕截圖，您
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 +
 現在您應該有一個名為「控制台操作員」的自訂角色，可以將其指派給控制台代理虛擬機器。

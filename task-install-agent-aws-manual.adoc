@@ -50,6 +50,7 @@ NOTE: 控制台代理保留 19000 到 19200 的 UID 和 GID 範圍。這個範�
 
 
 --
+AWS EC2 執行個體類型:: 滿足 CPU 和 RAM 要求的實例類型。  NetApp推薦使用 t3.2xlarge。
 虛擬機器管理程序:: 需要經過認證可運行支援的作業系統的裸機或託管虛擬機器管理程式。
 [[podman-versions]]作業系統和容器要求:: 在標準模式或受限模式下使用控制台時，控制台代理程式支援下列作業系統。安裝代理之前需要一個容器編排工具。
 +
@@ -107,7 +108,6 @@ Docker Engine 23.0.6 至 28.0.0。
 
 |===
 --
-AWS EC2 執行個體類型:: 滿足上述 CPU 和 RAM 要求的執行個體類型。我們推薦 t3.2xlarge。
 密鑰對:: 建立控制台代理程式時，您需要選擇一個 EC2 金鑰對來與執行個體一起使用。
 使用 IMDSv2 時的 PUT 響應跳數限制:: 如果在 EC2 執行個體上啟用了 IMDSv2（這是新 EC2 執行個體的預設設定），則必須將執行個體上的 PUT 回應跳數限制變更為 3。如果您不變更 EC2 執行個體的限制，則在嘗試設定代理程式時會收到 UI 初始化錯誤。
 +
@@ -115,18 +115,6 @@ AWS EC2 執行個體類型:: 滿足上述 CPU 和 RAM 要求的執行個體類�
 * link:task-require-imdsv2.html["要求在 Amazon EC2 執行個體上使用 IMDSv2"]
 * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-existing-instances.html#modify-PUT-response-hop-limit["AWS 文件：變更 PUT 回應跳數限制"^]
 
-
---
-/opt 中的磁碟空間:: 必須有 100 GiB 可用空間
-+
---
-代理使用 `/opt`安裝 `/opt/application/netapp`目錄及其內容。
-
---
-/var 中的磁碟空間:: 必須有 20 GiB 可用空間
-+
---
-控制台代理需要此空間 `/var`因為 Docker 或 Podman 的設計目的是在此目錄中建立容器。具體來說，他們將在 `/var/lib/containers/storage`目錄。外部安裝或符號連結不適用於此空間。
 
 --
 

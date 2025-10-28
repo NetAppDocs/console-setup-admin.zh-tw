@@ -46,6 +46,46 @@
 
 https://cdn.auth0.com \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \ https://components.console.bluexp.netapp.com \
 
+[cols="2*"]
+|===
+| 端點 | 目的 
+
+
+ a| 
+\ https://support.netapp.com \ https://mysupport.netapp.com
+ a| 
+取得許可資訊並向NetApp支援發送AutoSupport訊息。
+
+
+
+ a| 
+\https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com
+| 在NetApp Console中提供功能和服務。 
+
+
+ a| 
+在兩組端點之間進行選擇：
+
+* 選項 1（建議）
++
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+
+* 選項 2
++
+\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
+
+
+ a| 
+取得控制台代理升級的影像。
+
+NetApp建議在防火牆中允許選項 1 端點，因為它們更安全，並禁止選項 2 端點，除非您使用勒索軟體復原或備份和復原。請注意有關這些端點的以下事項：
+
+* 3.9.47 及更高版本支援選項 1 端點。  3.9.47 之前的版本不支援向後相容。
+* 控制台代理首先啟動與選項 2 中的端點的聯繫。如果這些端點不可訪問，它會自動聯繫選項 1 中的端點。
+* 如果將控制台代理程式與NetApp Backup and Recovery或 Ransomware Resilience 一起使用，則系統不支援選項 1 端點。允許選項 2 端點並不允許選項 1。
+
+
+|===
 a| \ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io a| 取得控制台代理升級的圖像。
 
 * 當您部署新代理程式時，驗證檢查會測試與目前端點的連線。如果你使用link:reference-networking-saas-console-previous.html["先前的端點"]，驗證檢查失敗。為了避免此失敗，請跳過驗證檢查。
@@ -80,3 +120,56 @@ a| 如果控制台代理位於商業區域或主權區域，您可以在兩組�
 
 
 | 當控制台代理安裝在商業區域或主權區域時，取得控制台代理程式升級的影像。
+
+[cols="3*"]
+|===
+| *先前的端點* | *4.0.0 以上版本的端點* | *目的* 
+
+
+ a| 
+* \ https://support.netapp.com
+* \ https://mysupport.netapp.com
+
+ a| 
+* \ https://mysupport.netapp.com
+* \ https://signin.b2c.netapp.com
+* \ https://support.netapp.com
+
+ a| 
+用於許可和聯繫NetApp支援。
+
+
+
+ a| 
+* \https://*.api.bluexp.netapp.com
+* \ https://api.bluexp.netapp.com
+* \https://*.cloudmanager.cloud.netapp.com
+* \ https://cloudmanager.cloud.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.bluexp.netapp.com
+* \https://*.console.bluexp.netapp.com
+
+ a| 
+* \ https://api.bluexp.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.netapp.com
+* \ https://components.console.bluexp.netapp.com
+* \ https://cdn.auth0.com
+
+ a| 
+用於日常營運。
+
+
+
+ a| 
+* \https://*.blob.core.windows.net
+* \ https://cloudmanagerinfraprod.azurecr.io
+
+ a| 
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
+| 取得控制台代理升級的影像。 
+|===
