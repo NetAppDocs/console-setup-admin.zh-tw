@@ -1012,7 +1012,6 @@
   <block id="e95d0df05962f4456b8b569c54b396c6" category="paragraph">4.0.0 版本適用於標準模式和限制模式。</block>
   <block id="5412276bd0dd11677309c5862e9a5a84" category="section-title">整合並減少所需的網路端點</block>
   <block id="d0994d4e248da3f28077f3de0aa07b31" category="paragraph">NetApp減少了控制台和控制台代理程式所需的網路端點，增強了安全性並簡化了部署。重要的是，4.0.0 版本之前的所有部署都將繼續全面支援。雖然先前的端點仍然可供現有代理程式使用，但NetApp強烈建議在確認代理程式升級成功後將防火牆規則更新到目前端點。</block>
-  <block id="cca12c7916c4a96b099460567ed56f7b" category="list-text"><block ref="8aad0fd6d4c3bc8fa0ee8715b00de090" category="inline-link-macro-rx"></block> 。</block>
   <block id="8880ac717c8ca7c5aacda1dbf0aa76b4" category="inline-link-macro">了解有關所需端點的更多資訊。</block>
   <block id="a65e1c365f170de138a296cb93571b83" category="list-text"><block ref="a65e1c365f170de138a296cb93571b83" category="inline-link-macro-rx"></block></block>
   <block id="dcd681e02807cfe12b61283485a64b57" category="section-title">支援 VCenter 部署控制台代理</block>
@@ -5547,7 +5546,6 @@
   <block id="446a691d3cf6457cb60610b81794fdbc" category="paragraph">AWS 使用指定的設定啟動軟體。控制台代理大約需要五分鐘即可部署。</block>
   <block id="118b5697b68c5f4ada51d65dffac2674" category="paragraph">如果您使用標準 SKU IP 位址，則控制台將使用控制台代理程式的_私有_ IP 位址，而不是公用 IP。如果您用於存取控制台的機器無法存取該私人 IP 位址，則控制台中的操作將會失敗。</block>
   <block id="d1cb423c9810b1ddd65eea821845fff2" category="admonition">若要啟動可疑使用者活動偵測，您必須具有控制台組織管理員角色。</block>
-  <block id="148a5defddc98b9d994f39780f74e348" category="cell">*先前的端點*</block>
   <block id="c563d78603e1e09616c6c043a19061ba" category="cell">*4.0.0 以上版本的端點*</block>
   <block id="1463a95efc33a52765f03569e1e39a10" category="cell">*目的*</block>
   <block id="3b02fb538695ecfedde92943f6fd865e" category="paragraph">用於許可和聯繫NetApp支援。</block>
@@ -5599,4 +5597,7 @@
   <block id="a64b4879b658ef7dd1a5bf863f66e510" category="section-title">雲端提供者端點聯繫了控制台代理</block>
   <block id="334af2b72c201a4f9aea3650a21ea8ec" category="paragraph">在安裝控制台代理之前設定雲端提供者網路端點存取。</block>
   <block id="9ccb545b97d1ad0ce41d2577f6ae2e82" category="section-title">步驟 3：向控制台代理提供權限</block>
+  <block id="9c4179cb78e78f8bd52b0a9525df84e3" category="cell">*適用於 3.9.55 及以下版本的端點*</block>
+  <block id="af1ce09274091f662d34169f09b1482e" category="inline-link-macro">了解如何更新端點列表並查看比較信息</block>
+  <block id="87bf0287482e9096c75805420a81b7ea" category="list-text"><block ref="eaf36d8f2aa9f00c9dd600ce08237a22" category="inline-link-macro-rx"></block>。</block>
 </blocks>

@@ -152,7 +152,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-agent-i
 
 NetApp減少了控制台和控制台代理程式所需的網路端點，增強了安全性並簡化了部署。重要的是，4.0.0 版本之前的所有部署都將繼續全面支援。雖然先前的端點仍然可供現有代理程式使用，但NetApp強烈建議在確認代理程式升級成功後將防火牆規則更新到目前端點。
 
-* link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新終端節點列表"] 。
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新端點列表並查看比較信息"]。
 * link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console.html["了解有關所需端點的更多資訊。"]
 
 
