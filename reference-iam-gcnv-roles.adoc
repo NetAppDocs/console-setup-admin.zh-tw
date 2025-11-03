@@ -19,5 +19,5 @@ summary: NetApp Console身分和存取管理提供了管理員角色，您可以
 Google Cloud NetApp Volumes使用下列角色：
 
 * * Google Cloud NetApp Volumes管理員*：在控制台中發現並管理Google Cloud NetApp Volumes 。
-* * Google Cloud NetApp Volumes使用者*：在控制台中檢視Google Cloud NetApp Volumes 。
+* * Google Cloud NetApp Volumes檢視器*：在控制台中檢視Google Cloud NetApp Volumes 。
 

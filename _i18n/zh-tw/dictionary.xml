@@ -5600,8 +5600,7 @@
   <block id="9c4179cb78e78f8bd52b0a9525df84e3" category="cell">*適用於 3.9.55 及以下版本的端點*</block>
   <block id="af1ce09274091f662d34169f09b1482e" category="inline-link-macro">了解如何更新端點列表並查看比較信息</block>
   <block id="87bf0287482e9096c75805420a81b7ea" category="list-text"><block ref="eaf36d8f2aa9f00c9dd600ce08237a22" category="inline-link-macro-rx"></block>。</block>
-  <block id="2962c1a7fe92cfcf3549be1fab41fe03" category="list-text">* Google Cloud NetApp Volumes使用者*：在控制台中檢視Google Cloud NetApp Volumes 。</block>
-  <block id="17cdef451662108afad065e4f519eb25" category="inline-link-macro">Google Cloud NetApp Volumes用戶</block>
-  <block id="19183ef46064eef64c72d986b0ab1571" category="cell"><block ref="19183ef46064eef64c72d986b0ab1571" category="inline-link-macro-rx"></block></block>
   <block id="caf28471250404467f130940e7fd6e28" category="cell">具有Google Cloud NetApp Volumes使用者角色的使用者可以查看Google Cloud NetApp Volumes。</block>
+  <block id="ab925d8c9a6924f34df64e8e1fb1a38d" category="list-text">* Google Cloud NetApp Volumes檢視器*：在控制台中檢視Google Cloud NetApp Volumes 。</block>
+  <block id="7d04a8adb8b138151b42f809761295c7" category="cell"><block ref="7d04a8adb8b138151b42f809761295c7" category="inline-link-macro-rx"></block></block>
 </blocks>
