@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: 'what"s new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases' 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases, console' 
 summary: 了解NetApp Console管理功能的新增功能：IAM、控制台代理、雲端提供者憑證等。 
 ---
 = 什麼是新的
