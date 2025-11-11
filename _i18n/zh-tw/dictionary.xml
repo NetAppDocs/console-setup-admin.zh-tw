@@ -1165,7 +1165,6 @@
   <block id="70b92c994098903dd4d795e576df0178" category="section-title">我可以將現有的Cloud Volumes ONTAP系統移至不同的 AWS 帳號嗎？</block>
   <block id="76dceba3264b49dee2ad272ffb9d4744" category="paragraph">不可以，無法將與您的Cloud Volumes ONTAP系統關聯的 AWS 資源移至其他 AWS 帳戶。</block>
   <block id="d8313e84240e5bf3fd7c17d104ad227d" category="section-title">憑證如何用於市場部署和本地部署？</block>
-  <block id="e69076ba30bc8d2834e054c4781b1d9d" category="paragraph">以上部分描述了控制台代理的建議部署方法，即從控制台部署。您也可以從 AWS Marketplace 在 AWS 部署代理，並且可以在自己的 Linux 主機上手動安裝控制台代理軟體。</block>
   <block id="a4542ce435b67066671321f478dce8cc" category="paragraph">如果您使用市場，則權限以相同的方式提供。您只需手動建立和設定 IAM 角色，然後為任何其他帳戶提供權限。</block>
   <block id="13faeab8d56294c16f52b682c4081994" category="paragraph">對於本機部署，您無法為控制台設定 IAM 角色，但可以使用 AWS 存取金鑰提供權限。</block>
   <block id="796c918f0fce99224fa4a1b54f518f96" category="paragraph">若要了解如何設定權限，請參閱以下頁面：</block>
@@ -5400,7 +5399,6 @@
   <block id="648c906efc1699c9d3ad4578bac84bd5" category="paragraph">控制台將用這個新訂閱替換組織中所有憑證的現有訂閱。如果一組憑證從未與訂閱關聯，那麼這個新訂閱將不會與這些憑證關聯。</block>
   <block id="fec37ac1cd6af148e5a37feded7851f2" category="paragraph">從控制台部署控制台代理程式時，您需要提供 IAM 角色的 ARN 或 IAM 使用者的存取金鑰。身份驗證方法必須具有在 AWS 中部署控制台的權限。所需的權限列在連結中：task-install-agent-aws-the Console.html#aws-permissions-agent[AWS 的代理部署策略]。</block>
   <block id="6d98b6cff569df2b13894056f584ec94" category="inline-link-macro">查看代理如何使用權限</block>
-  <block id="2530b567a30729c8ca55db7e56f9039a" category="paragraph">當控制台在 AWS 中啟動控制台代理時，它會為代理程式建立一個 IAM 角色和一個設定檔。它還附加了一項策略，為控制台代理提供管理該 AWS 帳戶內的資源和流程的權限。<block ref="c8fcf01cd703cc98adb501c59ec6e8ce" category="inline-link-macro-rx"></block>。</block>
   <block id="9bdb90e2cf9f7f97285de5520ab53a37" category="inline-image-macro">顯示在 AWS 帳戶中部署控制台代理程式的控制台的概念圖。IAM 政策被指派給 IAM 角色，該角色附加到控制台。</block>
   <block id="6200ddd5978ec4a6ebc04f286e729487" category="paragraph"><block ref="6200ddd5978ec4a6ebc04f286e729487" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1aed0c96ab82a81ab5988e9702bb43da" category="paragraph">如上文所述，控制台可讓您透過幾種方式提供 AWS 憑證：與控制台代理程式關聯的 IAM 角色、在受信任的帳戶中承擔 IAM 角色或提供 AWS 存取金鑰。</block>
@@ -5609,4 +5607,6 @@
   <block id="527d18dfa760fc67196d102d429a8ea0" category="section-title">2024年12月9日</block>
   <block id="f66c63cf0ff76c19209f85ca687a2fb4" category="section-title">2024年10月7日</block>
   <block id="827939177a8e56e6d981ae1fc3dcb065" category="section-title">2024年9月9日</block>
+  <block id="be8fd45f96dc537f9f4473811d5a2cb7" category="paragraph">當控制台在 AWS 中啟動控制台代理時，它會為代理程式建立一個 IAM 角色和一個設定檔。它還附加了一項策略，為控制台代理提供管理該 AWS 帳戶內的資源和流程的權限。<block ref="c8fcf01cd703cc98adb501c59ec6e8ce" category="inline-link-macro-rx"></block>。</block>
+  <block id="fe4b6329accdde90ed8d83073374f9cc" category="paragraph">以上部分描述了控制台代理的建議部署方法，即從控制台部署。您也可以從 AWS Marketplace 在 AWS 部署代理，也可以在您自己的 Linux 主機或 VCenter 中手動安裝控制台代理軟體。</block>
 </blocks>
