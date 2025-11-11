@@ -361,8 +361,6 @@
   <block id="e115a77efdd4b6a7256261431461cb96" category="list-text">如果密碼包含以下任何特殊字符，則必須在該特殊字符前面加上反斜杠來轉義該特殊字符：&amp; 或 !</block>
   <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">例如：</block>
   <block id="9a8e93f292200e4d86cfd716262b53cc" category="paragraph">\http://bxpproxyuser:netapp1\!@網址:3128</block>
-  <block id="5ee4651c5c9cc230b5562d22f6bee0d6" category="paragraph"><block ref="a2bb8d2428da5c2a723c47bd3b78308d" prefix="" category="inline-code"></block>指定用於控制台代理程式和代理伺服器之間的 HTTPS 存取的 CA 簽章憑證。  HTTPS代理伺服器、攔截代理伺服器、透明代理伺服器都需要此參數。</block>
-  <block id="546e142a2330599c0ba92c6922dd0480" category="paragraph">+ 下面是設定透明代理伺服器的範例。配置透明代理時，不需要定義代理伺服器。您只需將 CA 簽署的憑證新增至控制台代理主機：</block>
   <block id="4d286ab7c41699ac1c0222a6a25c8ee6" category="list-text">如果您使用 Podman，則需要調整 aardvark-dns 連接埠。</block>
   <block id="e8dcd2e9fa3c43b9aef9e395e7e2b4c9" category="list-text">透過 SSH 連接到控制台代理虛擬機器。</block>
   <block id="dbd4c3db8125866be9bb5a796f445d43" category="list-text">開啟 podman _/usr/share/containers/containers.conf_ 檔案並修改 Aardvark DNS 服務的選定連接埠。例如，將其更改為54。</block>
@@ -536,7 +534,6 @@
   <block id="d85624226a34d354eb24bd9f58803ee7" category="list-text">啟用並啟動 podman.socket 服務。</block>
   <block id="c258dc586685c07a851bfdce98251de9" category="list-text">安裝 python3。</block>
   <block id="97c0d440ee76e86ece38ee9da4a462cb" category="list-text">如果您的系統上還沒有 EPEL 儲存庫包，請安裝它。</block>
-  <block id="07a2769ace9f16b5207f20d01a394569" category="list-text">如果使用 Red Hat Enterprise：</block>
   <block id="93052470e7c6a20358c8d89c161e4880" category="paragraph">此步驟是必要的，因為 podman-compose 可從 Extra Packages for Enterprise Linux (EPEL) 儲存庫中取得。</block>
   <block id="6f3a42415c589950b9ae4d3fe1f87dc7" category="list-text">安裝 podman-compose 套件 1.0.6。</block>
   <block id="ec7c87651a5ede2a98ad4091fe48b517" category="admonition">使用<block ref="02c7499137a5d8d10292d68634eb22a0" prefix=" " category="inline-code"></block>指令滿足將 podman-compose 新增至 PATH 環境變數的要求。安裝指令將 podman-compose 新增至 /usr/bin，它已經包含在<block ref="c9bac30d1d0554c0790285219e5ad518" prefix=" " category="inline-code"></block>主機上的選項。</block>
@@ -1763,12 +1760,10 @@
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有關NetApp軟體中使用的第三方版權和許可的資訊。</block>
   <block id="50dbf63cd0ab8144a287e5cd6a0f1de2" category="inline-link-macro">NetApp Console通知</block>
   <block id="2fdb3c88062031f1ec65eef60690cee3" category="paragraph"><block ref="2fdb3c88062031f1ec65eef60690cee3" category="inline-link-macro-rx"></block></block>
-  <block id="dee61e6ddd6fefdf0afebb3453a2f2ae" category="summary">在部署控制台代理之前，請詳細了解它。</block>
   <block id="40ee256581d30fba4f74b0c1e02c7709" category="doc">控制台代理的預設配置</block>
   <block id="7cfc350cfd83ea139353035474462a76" category="paragraph">在部署控制台代理程式之前，請先了解有關其配置的更多資訊。</block>
   <block id="87047facc49847cec237f6d055d56b31" category="section-title">可存取互聯網的預設配置</block>
   <block id="ee67bef980f9156a14c8bfbb2de4f437" category="paragraph">如果您從NetApp Console、雲端提供者的市場部署了控制台代理，或在具有 Internet 存取權限的本機 Linux 主機上手動安裝了控制台代理，則下列設定詳細資訊適用。</block>
-  <block id="5eeca886fa07462826a9ea747483f528" category="section-title">AWS 詳細資訊</block>
   <block id="716a3a2cd4a75b8f8b3cee509c10b300" category="paragraph">如果您從控制台或雲端提供者的市場部署了控制台代理，請注意以下事項：</block>
   <block id="33ff271280dc3e0c2c15bf39aeefdeb9" category="list-text">EC2 執行個體類型為 t3.2xlarge。</block>
   <block id="7c42c6e2f8295dada12f50f825327ddf" category="list-text">該映像的作業系統是 Ubuntu 22.04 LTS。</block>
@@ -1776,22 +1771,15 @@
   <block id="688aea6136f160e02c8d5bbec6894343" category="list-text">安裝包括 Docker Engine，它是必需的容器編排工具。</block>
   <block id="8061654f55b31a1347dadde5417b3bbe" category="list-text">EC2 Linux 執行個體的使用者名稱是 ubuntu（對於 2023 年 5 月之前建立的代理，使用者名稱是 ec2-user）。</block>
   <block id="efabd80ebdd217a47d9be936e5f0b8aa" category="list-text">預設系統磁碟是 100 GiB gp2 磁碟。</block>
-  <block id="b8c4a5bd8ed4eb470e80955a542dd4bf" category="section-title">Azure 詳細信息</block>
   <block id="f637fe372218bb6ee39fd481301dc99f" category="list-text">VM 類型為 Standard_D8s_v3。</block>
   <block id="474a089504b47eb34ee00ee62f121108" category="list-text">預設系統碟為100GiB高級SSD碟。</block>
-  <block id="f246cf5f23e765f0a7ebed4a6c1d923a" category="section-title">Google Cloud 詳細資訊</block>
   <block id="691706b9c4449b81a486ce65a12e3b41" category="paragraph">如果您從控制台部署了控制台代理，請注意以下事項：</block>
   <block id="d8c41b98cc9656d72fb99f79ff2425ba" category="list-text">VM 實例是 n2-standard-8。</block>
   <block id="6cb5fb9b61376b8ee3092321445fdea4" category="list-text">預設系統磁碟是 100 GiB SSD 持久性磁碟。</block>
   <block id="bc4aa6323016172de14a6835883b27c7" category="section-title">安裝資料夾</block>
-  <block id="aca8e180ed4d4b3e9c008a4c9e1a9221" category="paragraph">代理安裝資料夾位於下列位置：</block>
-  <block id="1290fecb35d9c7e8b4f1faf1f9b5c7f3" category="paragraph">/opt/應用程式/netapp/cloudmanager</block>
   <block id="81fae4ea40cc442afa43dab4cc001004" category="section-title">紀錄檔案</block>
   <block id="af22c16aeca9d8bc2515764efff73455" category="paragraph">日誌檔案包含在以下資料夾中：</block>
-  <block id="ff6e28c8eaa73c74f132f30b8a504071" category="list-text">/opt/application/netapp/cloudmanager/log 或</block>
-  <block id="f41aa0898b72dcd91cd63bd3d33d4258" category="list-text">/opt/application/netapp/service-manager-2/logs（從新的 3.9.23 安裝開始）</block>
   <block id="e414095fd4f025b97d685f64e5c1c7af" category="paragraph">這些資料夾中的日誌提供了有關控制台代理的詳細資訊。</block>
-  <block id="b7fb1cb20b803995e802d3588f424efa" category="list-text">/opt/應用程式/netapp/cloudmanager/docker_occm/資料/日誌</block>
   <block id="d1a35865336c23dad37aac219ce9f1eb" category="paragraph">此資料夾中的日誌提供有關雲端服務和在控制台代理程式上運行的控制台服務的詳細資訊。</block>
   <block id="aa72bf3f5aa3c9bc5daf446b3f9fdc56" category="section-title">控制台代理服務</block>
   <block id="f7a5a4e55ec5894123bb84b3d77ad464" category="list-text">控制台代理服務名為 occm。</block>
@@ -1803,8 +1791,6 @@
   <block id="953a0ee991cb0f7fd649dff3efa51614" category="section-title">無需互聯網訪問的預設配置</block>
   <block id="23b1e0717b9b8b52e9ae0f29f7fc4241" category="inline-link-macro">了解有關此安裝選項的更多信息</block>
   <block id="1422f7c6b7eca106db4cb823ab49f18a" category="paragraph">如果您在沒有網際網路存取權限的本機 Linux 主機上手動安裝了控制台代理，則適用下列設定。<block ref="571c6581ab5c68db9f7f7beaff42a50d" category="inline-link-macro-rx"></block> 。</block>
-  <block id="7068d488f38430eabf6c395a593e8e5a" category="paragraph">/opt/應用程式/netapp/ds</block>
-  <block id="a15b1a7954f2d926c5ee7f261a97b4d2" category="paragraph">/var/lib/docker/volumes/ds_occmdata/_data/log</block>
   <block id="76a8602c4b7b9c5cc69c5fd8bd4bd2e0" category="paragraph">此資料夾中的日誌提供有關控制台代理程式和 Docker 映像的詳細資訊。</block>
   <block id="590b2ea5933ad8ead3c9a15a914f1a9c" category="list-text">所有服務都在docker容器內運行</block>
   <block id="f76b4c57c56377745199382d59cdeed3" category="paragraph">這些服務依賴docker運行時服務的運行</block>
@@ -2164,7 +2150,6 @@
   <block id="0b4f61b04d569052cea1ace94b4690a4" category="cell"><block ref="0b4f61b04d569052cea1ace94b4690a4" category="inline-link-macro-rx"></block></block>
   <block id="b30f7fc42ef226f0249c91a8c5e5e7da" category="cell">僅查看資訊。</block>
   <block id="1393a4279651a3334e20f39925a139f5" category="cell">分類檢視器</block>
-  <block id="f373bf1ea256b4e774a8cdeea678371c" category="cell">允許使用者查看NetApp Data Classification掃描結果。具有此角色的使用者可以查看合規性資訊並產生他們有權存取的資源的報告。這些使用者無法啟用或停用磁碟區、儲存桶或資料庫模式的掃描。分類沒有查看者角色。</block>
   <block id="c10ec7420a89528925b58b685b8759d7" category="cell"><block ref="c10ec7420a89528925b58b685b8759d7" category="inline-link-macro-rx"></block></block>
   <block id="2b0e5e5222c0782da1fb9f13296d9728" category="cell">管理NetApp Ransomware Resilience的「保護」、「警報」、「復原」、「設定」和「報告」標籤上的操作。</block>
   <block id="afa8b9420190b4b20d1eb84b7e53d1d6" category="cell"><block ref="afa8b9420190b4b20d1eb84b7e53d1d6" category="inline-link-macro-rx"></block></block>
@@ -2253,7 +2238,6 @@
   <block id="3908aae7c317936ea6bb5e64e5b1e19b" category="inline-link-macro">代理IP與現有網路衝突</block>
   <block id="e0f2ecf720846ace68fd17b91a2fe18b" category="paragraph">請參閱知識庫文章<block ref="7fdfcc240d5e57de761ad01a7e9f5a42" category="inline-link-macro-rx"></block>有關如何變更代理介面的 IP 位址的說明。</block>
   <block id="1bc21092e961975ea4123f4414693f69" category="section-title">不支援 SSL 解密</block>
-  <block id="312404bd3f092c4ae2981261f9be883d" category="paragraph">控制台不支援啟用 SSL 解密的防火牆設定。如果啟用了 SSL 解密，控制台中會出現錯誤訊息，且代理實例顯示為非活動狀態。</block>
   <block id="7bd92bd111bfbf23b12f73672eb0dd1c" category="inline-link-macro">安裝由憑證授權單位 (CA) 簽署的 HTTPS 憑證</block>
   <block id="c3ce271d53cbf6a7afd137a37f4ee8d6" category="paragraph">為了增強安全性，您可以選擇<block ref="11df3d19916b70ba1d82d33e876689bc" category="inline-link-macro-rx"></block>。</block>
   <block id="e949623e23f093c132f86ba2771e8a2e" category="section-title">載入本機 UI 時出現空白頁</block>
@@ -2261,8 +2245,6 @@
   <block id="1f8685c3e9591b0ac770ad3c60e0ea9b" category="paragraph">此問題與快取問題有關。解決方法是使用隱身或私人網路瀏覽器會話。</block>
   <block id="3b9690f89f4029f3b099f8b7c371b951" category="section-title">不支援共享 Linux 主機</block>
   <block id="55334f6c7481482659eaa1b0aef1601a" category="paragraph">與其他應用程式共用的虛擬機器不支援該代理程式。  VM 必須專用於代理軟體。</block>
-  <block id="39c131bd8f90ef7749228972a6486162" category="section-title">第三方代理和擴展</block>
-  <block id="4b7e9b197f794c9b7019035a05713f81" category="paragraph">代理虛擬機器不支援第三方代理或虛擬機器擴充。</block>
   <block id="7b7f8f1228adee0b98f669d033848211" category="section-title">將您的終端機清單更新為 4.0.0 及更高版本的修訂清單</block>
   <block id="4c9c91c3daf4ca466e31f9eaa8cef3d2" category="paragraph">從 4.0.0 版本開始，控制台代理需要的端點更少。 4.0.0 之前的現有部署仍然受支援。升級到 4.0.0 或更高版本後，您可以在方便時從允許清單中刪除舊端點。</block>
   <block id="ae702d0a49628819c46d528d565558a9" category="inline-link-macro">4.0.0 及更高版本支援的端點</block>
@@ -3321,7 +3303,6 @@
   <block id="349027440539dc46278ee9e93260025d" category="section-title">如果控制台代理無法存取互聯網，請更新它</block>
   <block id="71164e4bc7911ce651a366899f4f487b" category="paragraph">如果您的網路代理程式配置發生變化，您的代理程式可能會失去對網際網路的存取權限。例如，如果有人更改了代理伺服器的密碼或更新了憑證。在這種情況下，您需要直接從控制台代理主機存取 UI 並更新設定。確保您可以透過網路存取控制台代理主機，並且可以登入控制台。</block>
   <block id="54734e5bba3b83b2757e43d1ff24b2c4" category="section-title">啟用直接 API 流量</block>
-  <block id="2a398a7caf83846d0b6a5ffb7e46e036" category="paragraph">如果您將控制台代理程式設定為使用代理伺服器，則可以在控制台代理程式上啟用直接 API 流量，以便將 API 呼叫直接傳送至雲端提供者服務，而無需透過代理程式。在 AWS、Azure 或 Google Cloud 中執行的代理程式支援此選項。</block>
   <block id="c37870a98a047f7cae1ee48e164d5230" category="paragraph">如果您停用帶有Cloud Volumes ONTAP 的Azure Private Links 並使用服務端點，請啟用直接 API 流量。否則，流量將無法正確路由。</block>
   <block id="ac10c9401f16ed5ff0a029bce2712adc" category="inline-link">了解有關將 Azure Private Link 或服務端點與Cloud Volumes ONTAP結合使用的更多信息</block>
   <block id="7036572e3eccb7a8e3ea89ae1a860266" category="paragraph"><block ref="7036572e3eccb7a8e3ea89ae1a860266" category="inline-link-rx"></block></block>
@@ -4554,7 +4535,6 @@
   <block id="776c814c9b0c72880dcd5eaf49118ff2" category="paragraph">您可以新增和刪除代理程式的統一資源標識符 (URI)。</block>
   <block id="ae3e99ad1c50edf4e25c2d64cf2eefa5" category="list-text">展開*代理 URI* 欄以查看代理 URI。</block>
   <block id="fb9b59364e346ccfcbfc4636f13644b5" category="list-text">新增和刪除 URI，然後選擇*應用*。</block>
-  <block id="b6abeefbbae1a52ba573ab84b4b8c35a" category="summary">如果您使用多個控制台代理，則可以直接從控制台在這些代理之間切換。您也可以使用多個控制台代理來管理單一系統。</block>
   <block id="322805244d3cfbc06b20be41ebf54d36" category="doc">使用多個控制台代理</block>
   <block id="c73b380f2cf43cbe65e10db11adc4709" category="paragraph">如果您使用多個控制台代理，則可以直接從控制台在這些控制台代理之間切換以查看相關係統。</block>
   <block id="74bd0729b4aa2adbd6a34d8410d08abb" category="paragraph">例如，在多雲環境中，您可能在 AWS 中有一個代理，在 Google Cloud 中有一個代理程式。在這些代理之間切換以管理各自雲端環境中的Cloud Volumes ONTAP系統。</block>
@@ -4563,18 +4543,6 @@
   <block id="39a66cbd55302576b83a0a5471064712" category="inline-image-macro">螢幕截圖顯示了標題列中的代理圖示和切換操作。</block>
   <block id="2bf29a9ec2a497699149ddb5c47450d4" category="paragraph"><block ref="2bf29a9ec2a497699149ddb5c47450d4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7453879259a0b97c6566954016435290" category="paragraph">控制台刷新並顯示與所選代理程式關聯的系統。</block>
-  <block id="5cb02414ba99e03fa83bad53db22c1e4" category="section-title">設定災難復原配置</block>
-  <block id="30e4546ef393337cf90d00ca9e7087d9" category="paragraph">您可以同時使用多個控制台代理來管理系統，以實現災難復原。如果一個控制台代理程式發生故障，您可以切換到另一個代理程式來立即管理系統。</block>
-  <block id="093c50014a3f6a42c69939ec5e59a13b" category="list-text">切換到您想要使用控制台代理程式管理的其他控制台代理程式。</block>
-  <block id="7a9a9f715597e50c4cb86a39ec829d54" category="list-text">發現現有系統。</block>
-  <block id="08018a7c53e51cbc09b4bf8d9664fd5e" category="inline-link">將現有的Cloud Volumes ONTAP系統新增至控制台</block>
-  <block id="a6725a99f3665240f29a037172d05628" category="list-text"><block ref="a6725a99f3665240f29a037172d05628" category="inline-link-rx"></block></block>
-  <block id="a1ebf612d281c8e7fb16bbfa253b9627" category="inline-link">發現ONTAP集群</block>
-  <block id="49aaf65c31a811a37b2627a951f6f6d2" category="list-text"><block ref="49aaf65c31a811a37b2627a951f6f6d2" category="inline-link-rx"></block></block>
-  <block id="6bf1988b3312f00ea9a8a52aa7a47355" category="list-text">如果您正在管理Cloud Volumes ONTAP系統，請將容量管理模式調整為*手動模式*。</block>
-  <block id="0bf2e021b970775f65586d6866bfeb5f" category="paragraph">為了避免爭用問題，只有主控制台代理程式應設定為*自動模式*。</block>
-  <block id="f05a0e154340f7c017b3a9bfa5a8bf05" category="inline-link">了解有關容量管理模式的更多信息</block>
-  <block id="17fc88f224620f6881e6e779aa01025c" category="paragraph"><block ref="17fc88f224620f6881e6e779aa01025c" category="inline-link-rx"></block></block>
   <block id="1e12fbabb20fb5fd9d147dfb17d80816" category="summary">根據您在控制台中執行的操作，您可能已將ONTAP憑證和NetApp支援網站 (NSS) 憑證與您的使用者登入關聯。關聯這些憑證後，您可以檢視和管理它們。例如，如果您變更這些憑證的密碼，則需要在控制台中更新密碼。</block>
   <block id="d86c06c14b06c848fca4417d1ccfa279" category="doc">管理與您的NetApp Console登入關聯的憑證</block>
   <block id="823a6e1d7fe661be55dd3af05f972b11" category="section-title">ONTAP憑證</block>
@@ -5130,11 +5098,9 @@
   <block id="e1b145fbf942267f38a8e6f0928d8629" category="paragraph"><block ref="9ff6aead716ef57f3a1e9e40a858062f" prefix="" category="inline-code"></block></block>
   <block id="0bb43692ecd0352eecc69c235e34d6f0" category="paragraph">_silent_ 運行腳本而不提示您確認。</block>
   <block id="5706dd8bbae1725311aa98f5ff571442" category="section-title">從控制台中刪除控制台代理</block>
-  <block id="d6e4f33a31f72ef4b58be87971dbaf7e" category="paragraph">如果控制台代理程式處於非活動狀態，您可以將其從代理程式清單中刪除。如果您刪除代理虛擬機器或卸載代理軟體，則可能會執行此操作。</block>
   <block id="6535e883467a2f7723aa12bfbf398d49" category="paragraph">刪除控制台代理程式時請注意以下事項：</block>
   <block id="41b9dde34c587a177c2f3827a8427dfd" category="list-text">此操作不會刪除虛擬機器。</block>
   <block id="4d921e8b119cda6cf295382929919d43" category="list-text">此操作無法恢復 - 一旦刪除控制台代理，就無法將其加回。</block>
-  <block id="3865cf3e4751d28b58d7666313ad5652" category="list-text">在*概覽*頁面上，選擇非活動代理程式的操作選單，然後選擇*刪除代理*。</block>
   <block id="592190ac81807f2097b7f4253f7b5646" category="list-text">輸入代理人的姓名進行確認，然後選擇*刪除*。</block>
   <block id="2c474831a621d6f0b4bdd5da67196b84" category="summary">當您使用標準模式或受限模式時，只要控制台代理具有出站網路存取權限以取得軟體更新， NetApp Console就會自動將您的控制台代理程式升級到最新版本。</block>
   <block id="ca901ca59322c0976d1191fbab40ddfb" category="doc">管理控制台代理升級</block>
@@ -5197,24 +5163,19 @@
   <block id="54fd6ad42040e4dcd0dcda5cc49c6c66" category="summary">了解NetApp Console管理功能的新增功能：IAM、控制台代理、雲端提供者憑證等。</block>
   <block id="490414e0366b091220802d406e52c076" category="doc">什麼是新的</block>
   <block id="3243765239f2c6f00af00297914a69d4" category="paragraph">了解NetApp Console管理功能的新增功能：身分識別和存取管理 (IAM)、控制台代理程式、雲端提供者憑證等。</block>
-  <block id="91d6aafc857e46203357e992ab4434f8" category="section-title">2025年10月6日</block>
   <block id="b9d888f58b09c4007db0247286e392b5" category="section-title">2025年8月11日</block>
   <block id="328e39c031d3f6a77403904d6dda2377" category="section-title">2025年7月31日</block>
   <block id="6bf86021a24fd009a31d432250a9ad20" category="section-title">2025年7月21日</block>
   <block id="f2673d4a3fe0162a501d43f5168ae950" category="section-title">2025年7月14日</block>
-  <block id="f27f1ce6df3e2ec2518f77e8e1a4a531" category="section-title">2025年6月9日</block>
   <block id="1971cba9fca6bc598cf10a08dfb20cb6" category="section-title">2025年5月29日</block>
   <block id="4409983c60e456858bb3e9ef5737f98a" category="section-title">2025年4月14日</block>
   <block id="5f2734b84896bdabcf7fd3574325d116" category="section-title">2025年3月28日</block>
   <block id="f070435ef55d6c7cc1db59f0a41a4609" category="section-title">2025年3月10日</block>
-  <block id="278edfabbac204688aa13f79c6f52497" category="section-title">2025年3月6日</block>
   <block id="df3f743aae5476a7b16bbbc329251f85" category="section-title">2025年2月18日</block>
   <block id="c523b074da0b63e607578686184d5981" category="section-title">2025年2月10日</block>
   <block id="2b513ec32615ab736c1cab315db516f8" category="section-title">2025年1月13日</block>
   <block id="c33f35ab44944cc0d09e5bb702125592" category="section-title">2024年12月16日</block>
-  <block id="1f86b1e4048d088ce153a6f451fb30d6" category="section-title">2024年12月9日</block>
   <block id="a1fe52ea216874a5214f41ae7e5bbd63" category="section-title">2024年10月10日</block>
-  <block id="e5182edc3707e8e354c40ab7fa819f39" category="section-title">2024年10月7日</block>
   <block id="964635dcf6206ebb279b58d13cf69a92" category="section-title">2024年9月30日</block>
   <block id="2e5948b55d019081bde9b17268d72c2c" category="section-title">連接器 3.9.44</block>
   <block id="eef503d0bc4de5d76d47f4691b412e15" category="paragraph">此版本包括對 Docker Engine 26 的支援、對 SSL 憑證的增強以及錯誤修復。</block>
@@ -5603,4 +5564,49 @@
   <block id="caf28471250404467f130940e7fd6e28" category="cell">具有Google Cloud NetApp Volumes使用者角色的使用者可以查看Google Cloud NetApp Volumes。</block>
   <block id="ab925d8c9a6924f34df64e8e1fb1a38d" category="list-text">* Google Cloud NetApp Volumes檢視器*：在控制台中檢視Google Cloud NetApp Volumes 。</block>
   <block id="7d04a8adb8b138151b42f809761295c7" category="cell"><block ref="7d04a8adb8b138151b42f809761295c7" category="inline-link-macro-rx"></block></block>
+  <block id="a5e170ce8c9d104f0b20e67e54257be5" category="paragraph">如果您的網路需要代理來存取互聯網，則需要新增代理資訊。您可以在安裝過程中新增明確代理程式。--proxy 和 --cacert 參數是可選的，系統不會提示您新增它們。如果您有明確的代理伺服器，則需要以所示方式輸入參數。</block>
+  <block id="247a6a0ee254b2ff09347b727ee46227" category="inline-link-macro">了解代理維護控制台</block>
+  <block id="ed63faa45dd9543220a2183fa0e02b97" category="admonition">如果要設定透明代理，可以在安裝完成後進行設定。 <block ref="6d6c38ccb358695b7ab850225fcd83aa" category="inline-link-macro-rx"></block></block>
+  <block id="fbcd7669a7a0c8cc9053c7c78029654b" category="admonition">手動安裝控制台代理程式時，無法為透明代理伺服器設定憑證。如果需要為透明代理伺服器設定證書，則必須在安裝後使用維護控制台。詳細了解<block ref="d3f69ee6935d5f5f8542f4da69ac2bb6" category="inline-link-macro-rx"></block>。</block>
+  <block id="4fcd2b24226e5ab1f33572cdc55d9b7b" category="list-text">如果使用 Red Hat Enterprise 9：</block>
+  <block id="334ed7efb24267c8a9d5f60a214ee627" category="list-text">安裝 podman-compose 套件 1.5.0。</block>
+  <block id="83291537b9ae75a78c7add56b73a4688" category="list-text">如果使用的是 Red Hat Enterprise Linux 8：</block>
+  <block id="9c1b6a208384484254769349d91e3af9" category="doc">控制台代理 4.1.0</block>
+  <block id="e8cdaf5bab63b64f0740dc40a9389ed9" category="paragraph">此版本的控制台代理程式包含安全性改進、錯誤修復以及以下功能：</block>
+  <block id="e32e1b9613d2e086e1fc46ae7489620c" category="paragraph">4.1.0 版本適用於標準模式和限制模式。</block>
+  <block id="650940dddaeb353d547fc2674ba4d35b" category="paragraph-title">重命名代理程式狀態指示器</block>
+  <block id="9722491a4236a9be86f414fa5b3eebb8" category="paragraph">將控制台代理程式的狀態指示器從 *Active* 和 *Inactive* 重新命名為 *Connected* 和 *Disconnected*，使其用途更加明確。</block>
+  <block id="d9e7da7d4b9cc9086a7ab3a5a270f7da" category="paragraph-title">支援 Red Hat Enterprise Linux (RHEL) 9.6 和 Podman 5.4.0</block>
+  <block id="d90d113f70d4f4d024f99f4015bbbb96" category="paragraph">控制台代理現在支援 RHEL 9.6 和 Podman 5.4.0。此外，在使用 RHEL 9 及更高版本時， NetApp支援 podman-compose 1.5.0。</block>
+  <block id="2749b80160d80f9500fa8b5d5b4da1ba" category="section-title">NetApp Console管理</block>
+  <block id="a0d96dec6c85f67c2563063cec22ac66" category="paragraph">本次發布包含以下內容：</block>
+  <block id="ac740509743c941164fb7e88fc8b768e" category="paragraph-title">NetApp Console通知的新電子郵件地址</block>
+  <block id="3ded9fa2f8cf197bdf563d5509101e3a" category="paragraph">發送NetApp Console通知的電子郵件地址已從 *service@console.bluexp.netapp.com* 變更為 *service@console.netapp.com*。NetApp建議更新所有電子郵件規則，允許 *service@console.netapp.com* 發送郵件，以確保您繼續收到NetApp Console電子郵件通知。</block>
+  <block id="6ee211c536d8760f2108dd2c3e9fde0b" category="summary">在部署控制台代理程式之前，請先了解有關該代理程式的更多資訊。</block>
+  <block id="e079e06be34bd849355b3a013a28ade3" category="section-title">AWS 控制台代理 VM 詳細信息</block>
+  <block id="0759ecf4e00f5c23dd6fcb46adfd5f73" category="section-title">Azure 控制台代理 VM 詳細信息</block>
+  <block id="a284e20714904b80b3bc57b894975967" category="section-title">Google Cloud 控制台代理 VM 詳細信息</block>
+  <block id="ccc39ad27a3e5ae6ae32a3552e89ecf6" category="paragraph">代理程式安裝資料夾位於下列位置：</block>
+  <block id="d19b8636dbd523d212642fc43cc17d39" category="paragraph"><block ref="1290fecb35d9c7e8b4f1faf1f9b5c7f3" prefix="" category="inline-code"></block></block>
+  <block id="549ccc427eb51e8795fefc7eb58efbd7" category="list-text"><block ref="9038f40808a3b534dd4031904a7d2ce8" prefix="" category="inline-code"></block> 或者</block>
+  <block id="7879cfbe1211d2f970424c1b2506a0a1" category="list-text"><block ref="0d4b69d94aa57fab56e1a31c631b6b9d" prefix="" category="inline-code"></block> （從新安裝的 3.9.23 版本開始）</block>
+  <block id="77504c6121663bb82697faa2adb426c0" category="list-text"><block ref="b7fb1cb20b803995e802d3588f424efa" prefix="" category="inline-code"></block></block>
+  <block id="8c0ce03e205216a2506b72de21ab36d0" category="paragraph"><block ref="7068d488f38430eabf6c395a593e8e5a" prefix="" category="inline-code"></block></block>
+  <block id="a7678a59b185360eec3ece4df3f90a18" category="paragraph"><block ref="a15b1a7954f2d926c5ee7f261a97b4d2" prefix="" category="inline-code"></block></block>
+  <block id="49868b41c479810c405bc3509cdb1907" category="cell">允許使用者查看NetApp Data Classification掃描結果。具有此角色的使用者可以查看合規性資訊並產生他們有權存取的資源的報告。這些使用者無法啟用或停用磁碟區、儲存桶或資料庫模式的掃描。分類功能沒有管理員角色。</block>
+  <block id="93fd98d5e6dc8e59c7d87e83e4b28b54" category="paragraph">控制台不支援啟用 SSL 解密的防火牆設定。如果啟用了 SSL 解密，則控制台中將顯示錯誤訊息，且代理實例顯示為「已斷開連線」。</block>
+  <block id="5ef1446cf0ab868961d473d928c394d6" category="section-title">第三方代理和擴充程序</block>
+  <block id="08ea771e22fb933fc1428178b36eb902" category="paragraph">代理虛擬機器不支援第三方代理或虛擬機器擴充。</block>
+  <block id="c976a9d1d7322a1a795f641867000e2b" category="paragraph">如果您已將控制台代理程式配置為使用代理伺服器，則可以在控制台代理上啟用直接 API 流量，以便直接向雲端提供者服務發送 API 呼叫，而無需透過代理程式。在 AWS、Azure 或 Google Cloud 中執行的代理程式支援此選項。</block>
+  <block id="8b1d2ab0552c5d7793153d9fda3b575d" category="paragraph"><block ref="51298227862ac5270d9350ee1061138a" category="inline-link-macro-rx"></block>。</block>
+  <block id="e5d52cc85bda9d53a6d755f08201667b" category="summary">如果您使用多個控制台代理，則可以直接從控制台在這些代理之間切換。</block>
+  <block id="b634c2786e9d7bad38c80a81b3416dd7" category="paragraph">如果您刪除了代理虛擬機器或卸載了代理，則應將其從控制台的代理清單中刪除。刪除代理虛擬機器或卸載代理軟體後，代理程式在控制台中顯示狀態為「已中斷連線」。</block>
+  <block id="f6b8e4c4df658aad1c40b366b5c5d259" category="list-text">在「概覽」頁面上，選擇已中斷連線的代理程式的操作選單，然後選擇「移除代理程式」。</block>
+  <block id="77750efa6f5ff153acdc42067058017f" category="section-title">2025年11月10日</block>
+  <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">2025年10月6日</block>
+  <block id="791d05d0e9072626d0316ef0a7cf21bc" category="section-title">2025年6月9日</block>
+  <block id="cceeb5ea78b799b3b8575b2829590616" category="section-title">2025年3月6日</block>
+  <block id="527d18dfa760fc67196d102d429a8ea0" category="section-title">2024年12月9日</block>
+  <block id="f66c63cf0ff76c19209f85ca687a2fb4" category="section-title">2024年10月7日</block>
+  <block id="827939177a8e56e6d981ae1fc3dcb065" category="section-title">2024年9月9日</block>
 </blocks>

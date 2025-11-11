@@ -216,27 +216,33 @@ sudo systemctl enable --now podman.socket
 sudo dnf install python3
 ----
 . 如果您的系統上還沒有 EPEL 儲存庫包，請安裝它。
-. 如果使用 Red Hat Enterprise：
-+
+
+
 此步驟是必要的，因為 podman-compose 可從 Extra Packages for Enterprise Linux (EPEL) 儲存庫中取得。
 
-+
-對於 Red Hat Enterprise Linux 9：
-
+. 如果使用 Red Hat Enterprise 9：
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 ----
 +
-對於 Red Hat Enterprise Linux 8：
+.. 安裝 podman-compose 套件 1.5.0。
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.5.0
+----
 
+
+. 如果使用的是 Red Hat Enterprise Linux 8：
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-. 安裝 podman-compose 套件 1.0.6。
++
+.. 安裝 podman-compose 套件 1.0.6。
 +
 [source, cli]
 ----
@@ -246,39 +252,41 @@ sudo dnf install podman-compose-1.0.6
 
 NOTE: 使用 `dnf install`指令滿足將 podman-compose 新增至 PATH 環境變數的要求。安裝指令將 podman-compose 新增至 /usr/bin，它已經包含在 `secure_path`主機上的選項。
 
-. 如果使用 Red Hat Enterprise Linux 8，請驗證您的 Podman 版本是否使用具有 Aardvark DNS 的 NetAvark 而不是 CNI。
-+
-.. 透過執行以下命令檢查您的 networkBackend 是否設定為 CNI：
+.. 如果使用 Red Hat Enterprise Linux 8，請驗證您的 Podman 版本是否使用具有 Aardvark DNS 的 NetAvark 而不是 CNI。
+
+
+. 透過執行以下命令檢查您的 networkBackend 是否設定為 CNI：
 +
 [source, cli]
 ----
 podman info | grep networkBackend
 ----
-.. 如果 networkBackend 設定為 `CNI`，你需要將其更改為 `netavark`。
-.. 安裝 `netavark`和 `aardvark-dns`使用以下命令：
+. 如果 networkBackend 設定為 `CNI`，你需要將其更改為 `netavark`。
+. 安裝 `netavark`和 `aardvark-dns`使用以下命令：
 +
 [source, cli]
 ----
 dnf install aardvark-dns netavark
 ----
-.. 打開 `/etc/containers/containers.conf`檔案並修改 network_backend 選項以使用“netavark”而不是“cni”。
-
-
+. 打開 `/etc/containers/containers.conf`檔案並修改 network_backend 選項以使用“netavark”而不是“cni”。
 +
 如果 `/etc/containers/containers.conf`不存在，請將配置變更為 `/usr/share/containers/containers.conf`。
 
-. 重新啟動 podman。
++
+.. 重新啟動 podman。
 +
 [source, cli]
 ----
 systemctl restart podman
 ----
-. 使用以下命令確認 networkBackend 現在已更改為“netavark”：
+.. 使用以下命令確認 networkBackend 現在已更改為“netavark”：
 +
 [source, cli]
 ----
 podman info | grep networkBackend
 ----
+
+
 
 
 --

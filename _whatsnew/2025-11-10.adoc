@@ -1,0 +1,26 @@
+= 控制台代理 4.1.0
+:allow-uri-read: 
+
+
+
+
+== 控制台代理 4.1.0
+
+此版本的控制台代理程式包含安全性改進、錯誤修復以及以下功能：
+
+4.1.0 版本適用於標準模式和限制模式。
+
+.重命名代理程式狀態指示器
+將控制台代理程式的狀態指示器從 *Active* 和 *Inactive* 重新命名為 *Connected* 和 *Disconnected*，使其用途更加明確。
+
+.支援 Red Hat Enterprise Linux (RHEL) 9.6 和 Podman 5.4.0
+控制台代理現在支援 RHEL 9.6 和 Podman 5.4.0。此外，在使用 RHEL 9 及更高版本時， NetApp支援 podman-compose 1.5.0。
+
+
+
+== NetApp Console管理
+
+本次發布包含以下內容：
+
+.NetApp Console通知的新電子郵件地址
+發送NetApp Console通知的電子郵件地址已從 *service@console.bluexp.netapp.com* 變更為 *service@console.netapp.com*。NetApp建議更新所有電子郵件規則，允許 *service@console.netapp.com* 發送郵件，以確保您繼續收到NetApp Console電子郵件通知。
