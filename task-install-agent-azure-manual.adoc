@@ -67,6 +67,27 @@ Azure VM 大小:: 滿足 CPU 和 RAM 要求的實例類型。  NetApp推薦 Stan
 
  a| 
  a| 
+9.6
+
+* 僅限英文版本。
+* 主機必須在 Red Hat 訂閱管理中註冊。如果未註冊，主機將無法在代理安裝期間存取儲存庫來更新所需的第三方軟體。
+
+ a| 
+4.0.0 或更高版本，控制台處於標準模式或受限模式
+ a| 
+Podman 版本 5.4.0，podman-compose 版本 1.5.0。
+
+<<podman-configuration,查看 Podman 設定要求>> 。
+ a| 
+在強制模式或寬容模式下受支持
+
+* 作業系統上啟用了 SELinux 的代理程式不支援對Cloud Volumes ONTAP系統的管理。
+
+
+
+
+ a| 
+ a| 
 9.1 至 9.4
 
 * 僅限英文版本。
@@ -75,7 +96,7 @@ Azure VM 大小:: 滿足 CPU 和 RAM 要求的實例類型。  NetApp推薦 Stan
  a| 
 3.9.50 或更高版本，控制台處於標準模式或受限模式
  a| 
-Podman 版本 5.4.0，podman-compose 版本 1.5.0。
+Podman 版本 4.9.4，podman-compose 版本 1.5.0。
 
 <<podman-configuration,查看 Podman 設定要求>> 。
  a| 
@@ -96,7 +117,7 @@ Podman 版本 5.4.0，podman-compose 版本 1.5.0。
  a| 
 3.9.50 或更高版本，控制台處於標準模式或受限模式
  a| 
-Podman 版本 4.6.1 或 4.9.4
+Podman 版本 4.6.1 或 4.9.4，搭配 podman-compose 1.0.6。
 
 <<podman-configuration,查看 Podman 設定要求>> 。
  a| 

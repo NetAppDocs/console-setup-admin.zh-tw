@@ -1,6 +1,6 @@
 ---
 permalink: task-set-up-permissions-azure.html 
-redirect: bluexp-setup-admin/task-install-connector-azure-bluexp.html 
+redirect: console-setup-admintask-install-connector-azure-bluexp.html 
 ---
 = 
 :allow-uri-read: 

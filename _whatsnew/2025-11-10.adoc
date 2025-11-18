@@ -14,7 +14,7 @@
 將控制台代理程式的狀態指示器從 *Active* 和 *Inactive* 重新命名為 *Connected* 和 *Disconnected*，使其用途更加明確。
 
 .支援 Red Hat Enterprise Linux (RHEL) 9.6 和 Podman 5.4.0
-控制台代理現在支援 RHEL 9.6 和 Podman 5.4.0。此外，在使用 RHEL 9 及更高版本時， NetApp支援 podman-compose 1.5.0。
+手動安裝控制台代理程式時，代理現在支援 RHEL 9.6 和 Podman 5.4.0。此外，在使用 RHEL 9 及更高版本時， NetApp支援 podman-compose 1.5.0。link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html["查看作業系統需求"]。
 
 
 
