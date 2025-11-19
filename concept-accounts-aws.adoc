@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-accounts-aws.html 
 keywords: cloud provider accounts, aws, aws accounts, keys, multiple accounts, permission, aws permissions, policy, policies, credentials, marketplace, subscription, replace subscription, subscription, amazon, bluexp, agent 
-summary: 了解NetApp Console如何使用 AWS 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您在控制台中管理一個或多個 AWS 帳戶的憑證。例如，您可能想了解何時在控制台新增額外的 AWS 憑證。 
+summary: 您可以使用NetApp Console管理 AWS 憑證和市場訂閱，透過在控制台代理部署期間提供適當的 IAM 憑證，並將其與 AWS Marketplace 訂閱關聯，從而安全、經濟高效地部署Cloud Volumes ONTAP和其他資料服務，以便在單一或多個 AWS 帳戶中進行計費。 
 ---
 = 了解NetApp Console中的 AWS 憑證和權限
 :hardbreaks:
@@ -14,13 +14,13 @@ summary: 了解NetApp Console如何使用 AWS 憑證代表您執行操作以及�
 
 
 [role="lead"]
-了解NetApp Console如何使用 AWS 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您在NetApp Console中管理一個或多個 AWS 帳戶的憑證。例如，您可能想了解何時新增額外的 AWS 憑證。
+您可以透過NetApp Console直接管理 AWS 憑證和市集訂閱，透過在控制台代理部署期間提供適當的 IAM 憑證並將其與 AWS Marketplace 訂閱關聯以進行計費，來確保Cloud Volumes ONTAP和其他資料服務的安全部署。
 
 
 
 == 初始 AWS 憑證
 
-從控制台部署控制台代理程式時，您需要提供 IAM 角色的 ARN 或 IAM 使用者的存取金鑰。身份驗證方法必須具有在 AWS 中部署控制台的權限。所需的權限列在連結中：task-install-agent-aws-the Console.html#aws-permissions-agent[AWS 的代理部署策略]。
+從控制台部署控制台代理程式時，您需要提供 IAM 角色的 ARN 或 IAM 使用者的存取金鑰。身份驗證方法必須具有在 AWS 中部署控制台代理程式的權限。所需權限列於表中link:task-install-agent-aws-console.html#aws-permissions-agent["AWS代理部署策略"]。
 
 當控制台在 AWS 中啟動控制台代理時，它會為代理程式建立一個 IAM 角色和一個設定檔。它還附加了一項策略，為控制台代理提供管理該 AWS 帳戶內的資源和流程的權限。link:reference-permissions-aws.html["查看代理如何使用權限"]。
 
@@ -38,7 +38,7 @@ image:screenshot_accounts_select_aws.gif["顯示「詳細資料和憑證」頁�
 
 在下列情況下，您可能會為控制台新增其他 AWS 憑證：
 
-* 將現有的控制台代理與其他 AWS 帳戶一起使用
+* 若要將您現有的控制台代理程式與額外的 AWS 帳戶一起使用，請執行下列操作：
 * 在特定 AWS 帳戶中建立新代理
 * 建立和管理 FSx for ONTAP檔案系統
 
@@ -49,11 +49,11 @@ image:screenshot_accounts_select_aws.gif["顯示「詳細資料和憑證」頁�
 
 === 新增 AWS 憑證以將控制台代理程式與另一個 AWS 帳戶一起使用
 
-如果您想要將控制台與其他 AWS 帳戶一起使用，則可以為 IAM 使用者提供 AWS 金鑰或受信任帳戶中角色的 ARN。下圖顯示了兩個附加帳戶，一個透過受信任帳戶中的 IAM 角色提供權限，另一個透過 IAM 使用者的 AWS 金鑰提供權限：
+若要將控制台與額外的 AWS 帳戶一起使用，請提供 AWS 金鑰或受信任帳戶中角色的 ARN。下圖顯示了兩個附加帳戶，一個透過受信任帳戶中的 IAM 角色提供權限，另一個透過 IAM 使用者的 AWS 金鑰提供權限：
 
 image:diagram_permissions_multiple_aws.png["顯示兩個附加帳號的概念圖。每個都有一個 IAM 策略，一個附加到 IAM 用戶，另一個附加到 IAM 角色。"]
 
-然後，您可以透過指定 IAM 角色的 Amazon 資源名稱 (ARN) 或 IAM 使用者的 AWS 金鑰將帳戶憑證新增至控制台。
+您可以透過指定 IAM 角色的 Amazon 資源名稱 (ARN) 或 IAM 使用者的 AWS 金鑰，將帳戶憑證新增至控制台。
 
 例如，您可以在建立新的Cloud Volumes ONTAP系統時在憑證之間切換：
 
@@ -65,7 +65,7 @@ link:task-adding-aws-accounts.html#add-credentials-agent-aws["了解如何將 AW
 
 === 新增 AWS 憑證以建立控制台代理
 
-在控制台新增的 AWS 憑證可提供建立控制台代理程式所需的權限。
+新增 AWS 憑證即可取得建立控制台代理的權限。
 
 link:task-adding-aws-accounts.html#add-credentials-agent-aws["了解如何將 AWS 憑證新增至控制台以建立控制台代理"]
 
@@ -81,7 +81,7 @@ https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-set
 
 == 憑證和市場訂閱
 
-您新增至控制台代理的憑證必須與 AWS Marketplace 訂閱相關聯，以便您可以按小時費率 (PAYGO) 和其他NetApp資料服務或透過年度合約支付Cloud Volumes ONTAP費用。link:task-adding-aws-accounts.html#subscribe["了解如何關聯 AWS 訂閱"] 。
+您必須將新增至控制台代理的憑證與 AWS Marketplace 訂閱關聯起來，才能按小時費率 (PAYGO) 支付Cloud Volumes ONTAP費用，並透過年度合約支付其他NetApp資料服務費用。link:task-adding-aws-accounts.html#subscribe["了解如何關聯 AWS 訂閱"]。
 
 請注意以下有關 AWS 憑證和市場訂閱的事項：
 

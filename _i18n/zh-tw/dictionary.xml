@@ -1107,9 +1107,7 @@
   <block id="e85ac916ed94cb910b4635be78c76be1" category="list-text">將連接器與資料夾關聯</block>
   <block id="b586758af094fc2bd17d0a7998a3c157" category="paragraph">將連接器與資料夾關聯並不會自動使資料夾中的所有項目都可以存取該連接器。在您將連接器與特定項目關聯之前，組織成員無法從專案存取連接器。</block>
   <block id="201614334b2723fd3338cf698f37ecd4" category="paragraph">_組織管理員_可能會將連接器與資料夾關聯，以便_資料夾或專案管理員_可以決定將該連接器與資料夾中的對應項目關聯。</block>
-  <block id="0830fad71d2bb7f475047013d300103c" category="summary">了解NetApp Console如何使用 AWS 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您在控制台中管理一個或多個 AWS 帳戶的憑證。例如，您可能想了解何時在控制台新增額外的 AWS 憑證。</block>
   <block id="e54158140168d6bfda7951dabc8a0468" category="doc">了解NetApp Console中的 AWS 憑證和權限</block>
-  <block id="64aa23be91006f71d837b2f3d1037b91" category="paragraph">了解NetApp Console如何使用 AWS 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您在NetApp Console中管理一個或多個 AWS 帳戶的憑證。例如，您可能想了解何時新增額外的 AWS 憑證。</block>
   <block id="9ef43b020d41cab5808d78fdf855c429" category="section-title">初始 AWS 憑證</block>
   <block id="055263949ee2b6bf634a650444f9e58d" category="inline-link-macro">查看控制台如何使用權限</block>
   <block id="3f466a41e365e816f063997e9ea5af63" category="paragraph">如果您新增的Cloud Volumes ONTAP系統，控制台將預設選擇以下 AWS 憑證：</block>
@@ -1118,22 +1116,18 @@
   <block id="46483ba96fe3c90ee9ae2be631fa9be3" category="paragraph">使用初始 AWS 憑證部署所有Cloud Volumes ONTAP系統，或者您可以新增其他憑證。</block>
   <block id="59cf740f037c70fa5f9d43001aabf6b9" category="section-title">額外的 AWS 憑證</block>
   <block id="486ebb98338c3a4ed24b089d033146b2" category="paragraph">在下列情況下，您可能會為控制台新增其他 AWS 憑證：</block>
-  <block id="15138f43eb979115a1c3d63a4a8666c3" category="list-text">將現有的控制台代理與其他 AWS 帳戶一起使用</block>
   <block id="4f792f15a23b6696cebf72dd0355d408" category="list-text">在特定 AWS 帳戶中建立新代理</block>
   <block id="3f9d6d7606eb17252b87adea9b9f458c" category="list-text">建立和管理 FSx for ONTAP檔案系統</block>
   <block id="1fba93959336f34e08c6d34d0ca68230" category="paragraph">請參閱以下部分以了解更多詳細資訊。</block>
   <block id="660e634b3a4b701f7ae1b606cb192b19" category="section-title">新增 AWS 憑證以將控制台代理程式與另一個 AWS 帳戶一起使用</block>
-  <block id="a25bfad69e6f508506b137d23c885050" category="paragraph">如果您想要將控制台與其他 AWS 帳戶一起使用，則可以為 IAM 使用者提供 AWS 金鑰或受信任帳戶中角色的 ARN。下圖顯示了兩個附加帳戶，一個透過受信任帳戶中的 IAM 角色提供權限，另一個透過 IAM 使用者的 AWS 金鑰提供權限：</block>
   <block id="25743d3dcac2dfe95c6e899571bfccc3" category="inline-image-macro">顯示兩個附加帳號的概念圖。每個都有一個 IAM 策略，一個附加到 IAM 用戶，另一個附加到 IAM 角色。</block>
   <block id="49a11e441cb19dc0d43b1d3a3794d033" category="paragraph"><block ref="49a11e441cb19dc0d43b1d3a3794d033" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ff01842f7b4acebb303e830058485fb3" category="paragraph">然後，您可以透過指定 IAM 角色的 Amazon 資源名稱 (ARN) 或 IAM 使用者的 AWS 金鑰將帳戶憑證新增至控制台。</block>
   <block id="f1e73f0a47d8521aadcfb5742670657b" category="paragraph">例如，您可以在建立新的Cloud Volumes ONTAP系統時在憑證之間切換：</block>
   <block id="21eadec2055a6f0a03fad1207bdeece7" category="inline-image-macro">螢幕截圖顯示在「詳細資料和憑證」頁面中選擇「切換帳戶」後在雲端提供者帳戶之間進行選擇。</block>
   <block id="670a8a47b7b3908f997fce0320ebba4d" category="paragraph"><block ref="516be10b96635b1f3aefce4dcd4540dd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="da22995ad42a8249c58bddbed85c0a94" category="inline-link-macro">了解如何將 AWS 憑證新增至現有代理程式。</block>
   <block id="8f266fe0f1b8382f13e1c92dfa0aa783" category="paragraph"><block ref="8f266fe0f1b8382f13e1c92dfa0aa783" category="inline-link-macro-rx"></block></block>
   <block id="4f5462b4520ce630810c9207255695e0" category="section-title">新增 AWS 憑證以建立控制台代理</block>
-  <block id="ec1a02cdf3b56cd4158baff8b7c666f3" category="paragraph">在控制台新增的 AWS 憑證可提供建立控制台代理程式所需的權限。</block>
   <block id="d7e1108e154e0e449f267561a37c369e" category="inline-link-macro">了解如何將 AWS 憑證新增至控制台以建立控制台代理</block>
   <block id="c6a7b5494f1327adb316bcc8e1dfe566" category="paragraph"><block ref="c6a7b5494f1327adb316bcc8e1dfe566" category="inline-link-macro-rx"></block></block>
   <block id="ed552ed06cb5ce7bb73441c3ee146d12" category="section-title">為 FSx for ONTAP新增 AWS 憑證</block>
@@ -1142,7 +1136,6 @@
   <block id="a535b5a334dd47af1818cf6df5088728" category="paragraph"><block ref="a535b5a334dd47af1818cf6df5088728" category="inline-link-rx"></block></block>
   <block id="3bf21bdc87a8f6ebde5b75e8cb0d5138" category="section-title">憑證和市場訂閱</block>
   <block id="f1b38e057f0b3e3f883f386f412fd0a9" category="inline-link-macro">了解如何關聯 AWS 訂閱</block>
-  <block id="1a20071f82239d99732f8888027d653e" category="paragraph">您新增至控制台代理的憑證必須與 AWS Marketplace 訂閱相關聯，以便您可以按小時費率 (PAYGO) 和其他NetApp資料服務或透過年度合約支付Cloud Volumes ONTAP費用。<block ref="ec04a55c38de32bb88fa7b4155061e7c" category="inline-link-macro-rx"></block> 。</block>
   <block id="76561e64ef8af12896c02fcfaddaf89e" category="paragraph">請注意以下有關 AWS 憑證和市場訂閱的事項：</block>
   <block id="7b0c974aab7fa6523b2e4aa45c818464" category="list-text">您只能將一個 AWS Marketplace 訂閱與一組 AWS 憑證關聯</block>
   <block id="d9fbcede0b5dd54b1e4b6bd98ebd3fff" category="list-text">您可以使用新的訂閱替換現有的市場訂閱</block>
@@ -1755,7 +1748,6 @@
   <block id="50dbf63cd0ab8144a287e5cd6a0f1de2" category="inline-link-macro">NetApp Console通知</block>
   <block id="2fdb3c88062031f1ec65eef60690cee3" category="paragraph"><block ref="2fdb3c88062031f1ec65eef60690cee3" category="inline-link-macro-rx"></block></block>
   <block id="40ee256581d30fba4f74b0c1e02c7709" category="doc">控制台代理的預設配置</block>
-  <block id="7cfc350cfd83ea139353035474462a76" category="paragraph">在部署控制台代理程式之前，請先了解有關其配置的更多資訊。</block>
   <block id="87047facc49847cec237f6d055d56b31" category="section-title">可存取互聯網的預設配置</block>
   <block id="ee67bef980f9156a14c8bfbb2de4f437" category="paragraph">如果您從NetApp Console、雲端提供者的市場部署了控制台代理，或在具有 Internet 存取權限的本機 Linux 主機上手動安裝了控制台代理，則下列設定詳細資訊適用。</block>
   <block id="716a3a2cd4a75b8f8b3cee509c10b300" category="paragraph">如果您從控制台或雲端提供者的市場部署了控制台代理，請注意以下事項：</block>
@@ -5359,7 +5351,6 @@
   <block id="669bdf1134d50e3993628c05585e5734" category="list-text">選擇您想要與此訂閱關聯的控制台組織。</block>
   <block id="d530645223f70d357ab17787b555f381" category="list-text">在「取代現有訂閱」欄位中，選擇是否要用這個新訂閱自動取代組織的現有訂閱。</block>
   <block id="648c906efc1699c9d3ad4578bac84bd5" category="paragraph">控制台將用這個新訂閱替換組織中所有憑證的現有訂閱。如果一組憑證從未與訂閱關聯，那麼這個新訂閱將不會與這些憑證關聯。</block>
-  <block id="fec37ac1cd6af148e5a37feded7851f2" category="paragraph">從控制台部署控制台代理程式時，您需要提供 IAM 角色的 ARN 或 IAM 使用者的存取金鑰。身份驗證方法必須具有在 AWS 中部署控制台的權限。所需的權限列在連結中：task-install-agent-aws-the Console.html#aws-permissions-agent[AWS 的代理部署策略]。</block>
   <block id="6d98b6cff569df2b13894056f584ec94" category="inline-link-macro">查看代理如何使用權限</block>
   <block id="9bdb90e2cf9f7f97285de5520ab53a37" category="inline-image-macro">顯示在 AWS 帳戶中部署控制台代理程式的控制台的概念圖。IAM 政策被指派給 IAM 角色，該角色附加到控制台。</block>
   <block id="6200ddd5978ec4a6ebc04f286e729487" category="paragraph"><block ref="6200ddd5978ec4a6ebc04f286e729487" category="inline-image-macro-rx" type="image"></block></block>
@@ -5536,7 +5527,6 @@
   <block id="a0d96dec6c85f67c2563063cec22ac66" category="paragraph">本次發布包含以下內容：</block>
   <block id="ac740509743c941164fb7e88fc8b768e" category="paragraph-title">NetApp Console通知的新電子郵件地址</block>
   <block id="3ded9fa2f8cf197bdf563d5509101e3a" category="paragraph">發送NetApp Console通知的電子郵件地址已從 *service@console.bluexp.netapp.com* 變更為 *service@console.netapp.com*。NetApp建議更新所有電子郵件規則，允許 *service@console.netapp.com* 發送郵件，以確保您繼續收到NetApp Console電子郵件通知。</block>
-  <block id="6ee211c536d8760f2108dd2c3e9fde0b" category="summary">在部署控制台代理程式之前，請先了解有關該代理程式的更多資訊。</block>
   <block id="e079e06be34bd849355b3a013a28ade3" category="section-title">AWS 控制台代理 VM 詳細信息</block>
   <block id="0759ecf4e00f5c23dd6fcb46adfd5f73" category="section-title">Azure 控制台代理 VM 詳細信息</block>
   <block id="a284e20714904b80b3bc57b894975967" category="section-title">Google Cloud 控制台代理 VM 詳細信息</block>
@@ -5600,4 +5590,14 @@
   <block id="73361bbe50a41bd2e76e59f453c19c62" category="paragraph">除非您使用的是舊版索引，否則備份和還原不再需要以下權限：</block>
   <block id="c47b4df454cbc8c7bf8207225c8c507d" category="paragraph">以下權限已移至「其他備份和復原權限」部分，因為最小配置不需要這些權限：</block>
   <block id="862b252e960e9fce5bfb6811edec4eb5" category="list-text">執行以下命令並驗證代理程式的狀態是否顯示為_active(running)_：</block>
+  <block id="fd45d2e80d190b12659f895ff5aa6e01" category="summary">您可以使用NetApp Console管理 AWS 憑證和市場訂閱，透過在控制台代理部署期間提供適當的 IAM 憑證，並將其與 AWS Marketplace 訂閱關聯，從而安全、經濟高效地部署Cloud Volumes ONTAP和其他資料服務，以便在單一或多個 AWS 帳戶中進行計費。</block>
+  <block id="1efd890aee5019c9dd6a5ca79812af47" category="paragraph">您可以透過NetApp Console直接管理 AWS 憑證和市集訂閱，透過在控制台代理部署期間提供適當的 IAM 憑證並將其與 AWS Marketplace 訂閱關聯以進行計費，來確保Cloud Volumes ONTAP和其他資料服務的安全部署。</block>
+  <block id="e2df328564731e7d9ccff77a0ccc21d0" category="inline-link-macro">AWS代理部署策略</block>
+  <block id="696095255d7c0298653c0328a018bda8" category="paragraph">從控制台部署控制台代理程式時，您需要提供 IAM 角色的 ARN 或 IAM 使用者的存取金鑰。身份驗證方法必須具有在 AWS 中部署控制台代理程式的權限。所需權限列於表中<block ref="90ba5e70f609b78ed2966a8cb311c96b" category="inline-link-macro-rx"></block>。</block>
+  <block id="1b87d5ac2b76ff03a714cd78cd28bf3b" category="list-text">若要將您現有的控制台代理程式與額外的 AWS 帳戶一起使用，請執行下列操作：</block>
+  <block id="93b7ab66bd8976eacd3146faac726986" category="paragraph">若要將控制台與額外的 AWS 帳戶一起使用，請提供 AWS 金鑰或受信任帳戶中角色的 ARN。下圖顯示了兩個附加帳戶，一個透過受信任帳戶中的 IAM 角色提供權限，另一個透過 IAM 使用者的 AWS 金鑰提供權限：</block>
+  <block id="1bd60f6ffbfbe027889fb2ff7fd8f14c" category="paragraph">您可以透過指定 IAM 角色的 Amazon 資源名稱 (ARN) 或 IAM 使用者的 AWS 金鑰，將帳戶憑證新增至控制台。</block>
+  <block id="04a0a4e163c04f3082e39c4a05b56121" category="paragraph">新增 AWS 憑證即可取得建立控制台代理的權限。</block>
+  <block id="325cf27c7a62fb4beb8b270094e56814" category="paragraph">您必須將新增至控制台代理的憑證與 AWS Marketplace 訂閱關聯起來，才能按小時費率 (PAYGO) 支付Cloud Volumes ONTAP費用，並透過年度合約支付其他NetApp資料服務費用。<block ref="ec04a55c38de32bb88fa7b4155061e7c" category="inline-link-macro-rx"></block>。</block>
+  <block id="349b76807d98d4378df29b585951b7a4" category="summary">了解 AWS、Azure 和 Google Cloud 上標準部署（可存取網際網路）的控制台代理預設配置，以及本機環境受限部署（無法存取網際網路）的控制台代理程式預設配置。</block>
 </blocks>
