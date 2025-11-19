@@ -68,11 +68,11 @@ aws ec2 modify-instance-metadata-options \
     --http-tokens required \
     --http-endpoint enabled
 ----
-
-
 +
 
 NOTE: 這 `http-tokens`參數將 IMDSv2 設定為必要。什麼時候 `http-tokens`是必需的，您還必須設置 `http-endpoint`啟用。
+
+
 
 . 要求在Cloud Volumes ONTAP實例上使用 IMDSv2：
 +

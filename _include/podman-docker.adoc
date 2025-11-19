@@ -118,15 +118,17 @@ NOTE: 使用 `dnf install`指令滿足將 podman-compose 新增至 PATH 環境�
 
 
 . 透過執行以下命令檢查您的 networkBackend 是否設定為 CNI：
-+
-[source, cli]
+
+
+[listing]
 ----
 podman info | grep networkBackend
 ----
 . 如果 networkBackend 設定為 `CNI`，你需要將其更改為 `netavark`。
 . 安裝 `netavark`和 `aardvark-dns`使用以下命令：
-+
-[source, cli]
+
+
+[listing]
 ----
 dnf install aardvark-dns netavark
 ----
@@ -136,21 +138,21 @@ dnf install aardvark-dns netavark
 
 +
 .. 重新啟動 podman。
-+
-[source, cli]
+
+
+
+
+[listing]
 ----
 systemctl restart podman
 ----
-.. 使用以下命令確認 networkBackend 現在已更改為“netavark”：
-+
-[source, cli]
+. 使用以下命令確認 networkBackend 現在已更改為“netavark”：
+
+
+[listing]
 ----
 podman info | grep networkBackend
 ----
-
-
-
-
 --
 .Docker 引擎
 --

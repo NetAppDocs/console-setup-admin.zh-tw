@@ -44,7 +44,7 @@ chmod +x NetApp-Console-Agent-<version>
 +
 [source, cli]
 ----
- ./NetApp-Console-Agent-<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+./NetApp-Console-Agent-<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
 ----
 +
 --proxy 和 --cacert 參數是可選的。如果您有代理伺服器，則需要輸入所示的參數。安裝程式不會提示您提供有關代理的資訊。
@@ -55,7 +55,7 @@ chmod +x NetApp-Console-Agent-<version>
 +
 [source, cli]
 ----
- ./NetApp-Console-Agent-v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp-Console-Agent-v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
 --proxy 使用下列格式之一將代理程式設定為使用 HTTP 或 HTTPS 代理伺服器：
@@ -96,15 +96,19 @@ chmod +x NetApp-Console-Agent-<version>
 [source, cli]
 ----
 vi /usr/share/containers/containers.conf
-...
+----
++
+例如：
+
++
+[source, text]
+----
 # Port to use for dns forwarding daemon with netavark in rootful bridge
 # mode and dns enabled.
 # Using an alternate port might be useful if other DNS services should
 # run on the machine.
 #
 dns_bind_port = 54
-...
-Esc:wq
 ----
 .. 重新啟動代理虛擬機器。
 

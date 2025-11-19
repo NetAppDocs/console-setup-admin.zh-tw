@@ -114,27 +114,28 @@ https://cloud.google.com/compute/docs/instances/connecting-to-instance["Google C
 
 +
 .. 從Cloud Volumes ONTAP CLI，將權限等級設定為進階：
-+
-[source, cli]
+
+
+
+
+[listing]
 ----
 set -privilege advanced
 ----
-.. 執行以下命令以顯示目前備份目標：
-+
-[source, cli]
+. 執行以下命令以顯示目前備份目標：
+
+
+[listing]
 ----
 system configuration backup settings show
 ----
-.. 執行以下命令來更新備份目標的 IP 位址：
-+
-[source, cli]
+. 執行以下命令來更新備份目標的 IP 位址：
+
+
+[listing]
 ----
 system configuration backup settings modify -destination <target-location>
 ----
-
-
-
-
 
 
 == 編輯代理的 URI

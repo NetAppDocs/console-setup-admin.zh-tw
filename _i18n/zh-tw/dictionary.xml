@@ -345,7 +345,6 @@
   <block id="68ff18cb109d61d9e97d66c63cadf9e7" category="inline-link-macro">了解如何停用手動安裝的設定檢查。</block>
   <block id="067f3ef114756cdabe76467602ca9b2e" category="list-text">如果在政府雲端環境中安裝，請停用設定檢查。<block ref="9b8bf974e42c4282e3da7fa6c59f1dce" category="inline-link-macro-rx"></block></block>
   <block id="325740f998865be7879e32048d406868" category="list-text">運行安裝腳本。</block>
-  <block id="95df10d2ac630ff125b089e1f8e0e67f" category="paragraph">如果您的網路需要代理來存取互聯網，則需要新增代理資訊。您可以新增透明或顯式代理程式。 --proxy 和 --cacert 參數是可選的，系統不會提示您新增它們。如果您有代理伺服器，則需要輸入所示的參數。</block>
   <block id="5f4022bf0d27f22f4c44ac2e617ae12d" category="paragraph">以下是使用 CA 簽章憑證設定明確代理伺服器的範例：</block>
   <block id="0e4e2076c75603c2622d2ec78b60debe" category="paragraph"><block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix="" category="inline-code"></block>使用下列格式之一將控制台代理程式配置為使用 HTTP 或 HTTPS 代理伺服器：</block>
   <block id="2ceb0e196c300f23618f8a9e66bf0553" category="list-text">\http://位址:埠</block>
@@ -437,9 +436,6 @@
   <block id="9c0e62a86b9fe558cad9c4d280ea439d" category="list-text">啟用 NTP</block>
   <block id="62286fee1b0c285ac291bc232fe7f74f" category="inline-link">了解有關NetApp資料分類的更多信息</block>
   <block id="c2fc633e22b03955b13beee2049ac471" category="list-text">如果您打算使用NetApp Data Classification來掃描公司資料來源，則應在控制台代理程式和NetApp Data Classification系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。<block ref="95ad16386ae4ac759ff3f180dcafce84" category="inline-link-rx"></block></block>
-  <block id="64de7c6251637d266e8df72d8ab7c1d3" category="paragraph">--proxy 使用下列格式之一將控制台代理程式設定為使用 HTTP 或 HTTPS 代理伺服器：</block>
-  <block id="9d9d85de516d17d89215c336041bd69c" category="paragraph">--cacert 指定用於控制台代理程式和代理伺服器之間的 HTTPS 存取的 CA 簽章憑證。  HTTPS代理伺服器、攔截代理伺服器、透明代理伺服器都需要此參數。</block>
-  <block id="fa5c0c80d3dab7b433f9ebd1f6d0e8db" category="paragraph">下面是配置透明代理伺服器的範例。配置透明代理時，不需要定義代理伺服器。您只需將 CA 簽署的憑證新增至控制台代理主機：</block>
   <block id="da9c5bf0a2786648e8cd1c7f9b39bd31" category="list-text">與其他應用程式共用的主機不支援控制台代理。該主機必須是專用主機。主機可以是滿足以下大小要求的任何架構：</block>
   <block id="df4af5ebfed55f726690fe09695fb1fa" category="list-text">CPU：8 核心或 8 個 vCPU</block>
   <block id="357a496c919d7b340d6f4582397b89b5" category="list-text">記憶體：32 GB</block>
@@ -2262,7 +2258,6 @@
   <block id="87536203946c0c72fcd130937e3cc7ef" category="doc">控制台代理的 AWS 權限</block>
   <block id="c1141a37b962270fc1e8960233830c99" category="section-title">IAM 策略</block>
   <block id="573b0df2f89364b268637488ea138d56" category="paragraph">下面提供的 IAM 政策提供了控制台代理根據您的 AWS 區域管理公有雲環境內的資源和流程所需的權限。</block>
-  <block id="61fec915f59809a2c499bb7406d1bae7" category="list-text">如果您直接從控制台在標準 AWS 區域中建立控制台代理，則控制台會自動將政策套用至該代理程式。</block>
   <block id="fd09f851de413bc1029af2eb92f37484" category="list-text">如果您從 AWS Marketplace 部署代理程式、在 Linux 主機上手動安裝代理程式或想要為控制台新增其他 AWS 憑證，則需要自行設定政策。</block>
   <block id="27bfd6a18f38f12efb7983c46e54e86c" category="list-text">無論哪種情況，您都需要確保策略是最新的，因為在後續版本中新增了新的權限。如果需要新的權限，它們將在發行說明中列出。</block>
   <block id="5409221a62615b6b2cf0061a5376c983" category="inline-link">AWS 文件：條件元素</block>
@@ -2445,7 +2440,6 @@
   <block id="6545a52408abec0206b47af0244f3ccf" category="paragraph">由於NetApp Console不再支援NetApp邊緣快取以及 Kubernetes 叢集的發現和管理，因此從標準區域的策略 #2 中刪除了權限。</block>
   <block id="233590199dce2cbcf120d8b311c92db1" category="example-title">查看從策略中刪除的權限</block>
   <block id="0683995d371439e19d907680da921ba9" category="section-title">2024年5月9日</block>
-  <block id="376a26b461e6c64a1c38b284dbc9703f" category="paragraph">Cloud Volumes ONTAP現在需要以下權限：</block>
   <block id="6a7140fd5370f297d9a834d30e26ffde" category="section-title">2023年6月6日</block>
   <block id="14cbfe27bd7092d1b2ab4502adbdd584" category="paragraph">Cloud Volumes ONTAP現在需要以下權限：</block>
   <block id="5fc531b28735a6e141b39c2b5e2f1dcc" category="section-title">2023年2月14日</block>
@@ -2466,7 +2460,6 @@
   <block id="d532d42cdca6427a0c94a0fe2b7724bf" category="list-text">NetApp/netAppAccounts/capacityPools/volumes/write</block>
   <block id="8a2ef2886600a50e48c7ea77de74ad9a" category="list-text">NetApp/netAppAccounts/capacityPools/volumes/read</block>
   <block id="c937da506293f901431e22784134365b" category="list-text">NetApp/netAppAccounts/capacityPools/volumes/delete</block>
-  <block id="76219afbe04a082bd3390701b179af3f" category="paragraph">控制台代理程式對NetApp Backup and Recovery發出以下 API 請求：</block>
   <block id="0e7d546ff80798b31300a1327e64204c" category="list-text">Microsoft.Storage/storageAccounts/listkeys/action</block>
   <block id="b5de09220c1fb4fce37725ad40aa9087" category="list-text">Microsoft.Storage/storageAccounts/讀取</block>
   <block id="ab2f957dea03d2c901135f72a5272e10" category="list-text">Microsoft.Storage/storageAccounts/write</block>
@@ -2493,7 +2486,6 @@
   <block id="63995d3955eeab39b2079345713c2d18" category="list-text">Microsoft.Network/networkSecurityGroups/刪除</block>
   <block id="b80b64cd9bf543f64855143ed4b5fcd0" category="list-text">Microsoft.Resources/部署/刪除</block>
   <block id="9d86ed535c7b2cd7f809bf10164a64e2" category="list-text">Microsoft.ManagedIdentity/userAssignedIdentities/分配/操作</block>
-  <block id="875ef5d584e3eb0968edca9a86c0490e" category="paragraph">當您使用搜尋和復原功能時，代理程式會發出以下 API 請求：</block>
   <block id="cfefa5c4ff629c9bf9659dbc829c253a" category="list-text">Microsoft.Synapse/工作區/寫入</block>
   <block id="3ba03ce8c40b9ebf7c3ac1f662b6b3a0" category="list-text">Microsoft.Synapse/工作區/讀取</block>
   <block id="2191541210eaa82f809d85b6c0aa6998" category="list-text">Microsoft.Synapse/工作區/刪除</block>
@@ -5581,4 +5573,31 @@
   <block id="b3df2aaed88f61f572a7284cb28844ec" category="inline-link-macro">查看作業系統需求</block>
   <block id="43a9602052a44f890e2bbc95a0205a46" category="paragraph">手動安裝控制台代理程式時，代理現在支援 RHEL 9.6 和 Podman 5.4.0。此外，在使用 RHEL 9 及更高版本時， NetApp支援 podman-compose 1.5.0。<block ref="dd394ea917033ddbf269729b5d828637" category="inline-link-macro-rx"></block>。</block>
   <block id="823f8bc81b61298de6fde6292c77465f" category="list-text">重新發現這些系統。</block>
+  <block id="0d23055c9cd9e24b47c678ce2ce12890" category="doc">在根橋接中使用 NetAvark 時，用於 DNS 轉送守護程序的連接埠</block>
+  <block id="a4a1852476f94952d74e4b8343a1caa2" category="paragraph">vi /usr/share/containers/containers.conf</block>
+  <block id="d5b159520f19881fc40a4bd748f62fc6" category="section-title">模式和 DNS 已啟用。</block>
+  <block id="b1a96ed8e5a02719308e8b11ad1f055b" category="section-title">如果其他 DNS 服務需要使用備用端口，使用備用端口可能很有用。</block>
+  <block id="090648da33ae39ea5780d1a31fb1c849" category="section-title">在機器上運行。</block>
+  <block id="876565374bfaef3930e6f9d90f47177b" category="paragraph"># dns_bind_port = 54</block>
+  <block id="f20af7c9fe0c9b9091735f55df3a51e1" category="list-text">如果直接從控制台在標準 AWS 區域中建立控制台代理，則控制台會自動將政策套用至該代理程式。</block>
+  <block id="8a2272b9faf18eb35a631e80900ec216" category="section-title">備份和還原的舊版權限</block>
+  <block id="cf1f3a91d24e23f8dd4687e01a5c8192" category="paragraph">如果您在索引版本 v2 發布之前啟用了舊版索引功能，則只需要下列權限：</block>
+  <block id="1760c97f466ea374318a8c0bedcb2aff" category="section-title">2025年11月11日</block>
+  <block id="ea135b9ba1abf88c0fc0f304bed7b8b2" category="paragraph">除非您使用舊版索引，否則NetApp Backup and Recovery不再需要以下權限。這些權限已從本頁面的策略移除：</block>
+  <block id="6e6af573aec8151ae299651fd317472d" category="paragraph">以下是用於備份和復原的自訂策略，它使用的權限最少，範圍也最窄：</block>
+  <block id="085d2cc48c6bbf7296c097a07804a4d1" category="section-title">NetApp Backup and Recovery權限</block>
+  <block id="46602301e1e9b92a123cc69be96445a2" category="paragraph">控制台代理程式會發出以下 API 請求以實現基本的NetApp Backup and Recovery功能：</block>
+  <block id="ff9be13f0dd01fa19eeb632c57e75912" category="list-text">Microsoft.Authorization/locks/write</block>
+  <block id="9c54728f345d88de2c032cfb76dbdb17" category="list-text">Microsoft.Authorization/locks/read</block>
+  <block id="761a802cfbda43d4d27ac578e6d1127e" category="section-title">其他備份和恢復權限</block>
+  <block id="02eee31e5109fac37be42cd2ad631e0f" category="paragraph">控制台代理程式發出以下 API 請求，以實現進階備份和復原作業以及搜尋和復原功能。這些權限允許管理網路、金鑰庫和受管身分：</block>
+  <block id="9db96a7be686af799d5b0df68ebdf3a8" category="paragraph">當您使用搜尋和復原功能時，代理程式會發出以下 API 請求。只有在索引版本 v2 發布之前啟用了舊版索引功能，才需要這些權限：</block>
+  <block id="d3a274c843d8b8ce75d55d7c7829a6af" category="paragraph">為了使範例能夠反映備份和復原所需的最低權限，已從 JSON 角色範例中移除下列權限：</block>
+  <block id="f4b5566a2cd5de876b361e9f7aaa2d92" category="list-text">Microsoft.Insights/Metrics/讀取</block>
+  <block id="542e0e990e0a90f3111cc38f8fc96301" category="list-text">Microsoft.Compute/virtualMachines/extensions/write</block>
+  <block id="027acd9694c335956d7cb35872c2d7f5" category="list-text">Microsoft.Compute/virtualMachines/extensions/read</block>
+  <block id="ebd9939fa785bda0707a6efaf5d7b8da" category="paragraph">以下權限已新增至 JSON 角色範例：</block>
+  <block id="73361bbe50a41bd2e76e59f453c19c62" category="paragraph">除非您使用的是舊版索引，否則備份和還原不再需要以下權限：</block>
+  <block id="c47b4df454cbc8c7bf8207225c8c507d" category="paragraph">以下權限已移至「其他備份和復原權限」部分，因為最小配置不需要這些權限：</block>
+  <block id="862b252e960e9fce5bfb6811edec4eb5" category="list-text">執行以下命令並驗證代理程式的狀態是否顯示為_active(running)_：</block>
 </blocks>

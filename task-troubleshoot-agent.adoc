@@ -176,7 +176,7 @@ systemctl stop netapp-service-manager.service
 +
 [source, json]
 ----
-  "skipConfigCheck": true,
+  "skipConfigCheck": true
 ----
 . 儲存您的文件。
 . 透過執行以下命令重新啟動服務管理員 2 服務：
