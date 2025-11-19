@@ -1,6 +1,6 @@
 ---
 permalink: task-provide-permissions-azure.html 
-redirect: console-setup-admintask-install-connector-azure-marketplace.html 
+redirect: console-setup-admin/task-install-connector-azure-marketplace.html 
 ---
 = 
 :allow-uri-read: 

@@ -1,6 +1,6 @@
 ---
 permalink: task-quick-start-connector-google.html 
-redirect: console-setup-adminconcept-install-options-google.html 
+redirect: console-setup-admin/concept-install-options-google.html 
 ---
 = 
 :allow-uri-read: 
