@@ -1919,14 +1919,8 @@
   <block id="38b9e3522d3a7fe6b61f60b3419f6cd2" category="summary">您可以為使用者指派以下角色，以便他們存取控制台內的NetApp Disaster Recovery。災難復原角色可讓您靈活地為使用者指派特定於他們需要在組織內完成的任務的角色。如何分配角色取決於您自己的業務和儲存管理實踐。</block>
   <block id="26c3a94bfb05fb2052bc1a9cc30a1cf4" category="doc">NetApp Console中的NetApp Disaster Recovery角色</block>
   <block id="881a358307b4d99de00f95aa58fb5a43" category="paragraph">災難復原使用以下角色：</block>
-  <block id="3db89b44d26706e71a450352c7c5a1da" category="list-text">*災難復原管理員*：執行任何動作。</block>
-  <block id="1e732ca66bd89df595b8e795e5dfa4ac" category="list-text">*災難復原故障轉移管理*：執行故障轉移和遷移。</block>
-  <block id="014b84d038553d60cf09cbddcb4e7d08" category="list-text">*災難復原應用程式管理員*：建立複製計劃。修改複製計劃。開始測試故障轉移。</block>
-  <block id="ca931702830a76aaa24d5f451156d2b4" category="list-text">*災難復原檢視器*：僅查看資訊。</block>
   <block id="05d21d5a33096194ae80a609c95e316b" category="paragraph">下表列出了每個角色可以執行的操作。</block>
   <block id="df2d943b4d0652d322ec6b3cb52e3036" category="cell">災難復原管理員</block>
-  <block id="71aa2505b70e192a741f69ce63677f4b" category="cell">災難復原故障轉移管理員</block>
-  <block id="49f16ca5444f519e5203bb5067957eef" category="cell">災難復原應用程式管理員</block>
   <block id="ba4b33592d18613c28d684c20110e152" category="cell">災難復原檢視器</block>
   <block id="20f0d287f3a16854279c9e5960c749e1" category="cell">*在「網站」標籤上*：</block>
   <block id="24f9533e942cbf2b6f6f10572e7060a3" category="cell">查看網站</block>
@@ -2838,8 +2832,6 @@
   <block id="babc7ae953e58c8202e366520ae9baf4" category="list-text"><block ref="babc7ae953e58c8202e366520ae9baf4" category="inline-link-rx"></block></block>
   <block id="6187e32203fd05e22e575166349f5b99" category="inline-link">備份和恢復文檔</block>
   <block id="9964d0b6e519677dfa6bcd4597b081a2" category="list-text"><block ref="9964d0b6e519677dfa6bcd4597b081a2" category="inline-link-rx"></block></block>
-  <block id="e97ae785ddbd746339946844f92175e6" category="inline-link">分類文檔</block>
-  <block id="6847efe16c9bfc0feacaef65fc05b7b9" category="list-text"><block ref="6847efe16c9bfc0feacaef65fc05b7b9" category="inline-link-rx"></block></block>
   <block id="2971acb1ab572cfb61b7c86d49e2b300" category="inline-link">Cloud Volumes ONTAP文檔</block>
   <block id="8c1b893f08cfaa147e0cf92bf09039b9" category="list-text"><block ref="8c1b893f08cfaa147e0cf92bf09039b9" category="inline-link-rx"></block></block>
   <block id="32bf39c0f4f8e0ff3b8343a1c55eccc0" category="inline-link">數位錢包文檔</block>
@@ -4633,21 +4625,13 @@
   <block id="4e6fd6febc63e73f33b1e12bb15eab7a" category="paragraph">合作夥伴組織必須先將成員加入合作關係中，然後您才能為他們指派組織中資源的角色。<block ref="af42bf104f841b0c4c7b71f12b6693d9" category="inline-link-macro-rx"></block></block>
   <block id="575c38cd2c5990295bb75895f260de3b" category="section-title">了解合作夥伴使用者的角色</block>
   <block id="a7a7adfb76bf7fb68d92346dfa9d529d" category="paragraph">您可以按照管理自己的角色的方式來管理合作夥伴組織成員的角色。然而，並非所有角色都適合合作夥伴使用者。特別是，您不能授予合作夥伴使用者允許軟體更新的角色。更新ONTAP軟體通常需要直接網路存取。</block>
-  <block id="aa5691f6d018b3411c8082be20a4529f" category="paragraph">您可以為合作夥伴使用者指派以下角色：</block>
-  <block id="eaec472b7a23d9c311a78adfd10b1032" category="inline-link-macro">備份和復原管理員</block>
-  <block id="9b589496549b93bcbd645613fbd03c9c" category="list-text"><block ref="9b589496549b93bcbd645613fbd03c9c" category="inline-link-macro-rx"></block></block>
   <block id="8cf933db073501a5f76a2e7dfd953164" category="list-text"><block ref="8cf933db073501a5f76a2e7dfd953164" category="inline-link-macro-rx"></block></block>
   <block id="29ff866c1c97d8c216bf004c4f447a77" category="inline-link-macro">復原管理員</block>
   <block id="4662f8e16785669755651e2b47080d3a" category="list-text"><block ref="4662f8e16785669755651e2b47080d3a" category="inline-link-macro-rx"></block></block>
   <block id="0ebca6a2628eb3838eff9087ecfc2909" category="inline-link-macro">複製管理員</block>
   <block id="4db6f06f37e5b34186c68c70b344b6e5" category="list-text"><block ref="4db6f06f37e5b34186c68c70b344b6e5" category="inline-link-macro-rx"></block></block>
-  <block id="760c54a4cb61f02dffc8c2331073ae1d" category="list-text"><block ref="760c54a4cb61f02dffc8c2331073ae1d" category="inline-link-macro-rx"></block></block>
-  <block id="db385d806691bf16134876c971ae47ac" category="list-text"><block ref="db385d806691bf16134876c971ae47ac" category="inline-link-macro-rx"></block></block>
-  <block id="456f871b4f4ee4ad376b69d4040f5120" category="list-text"><block ref="456f871b4f4ee4ad376b69d4040f5120" category="inline-link-macro-rx"></block></block>
-  <block id="78d4b42d7cc8df44f5151da486494386" category="list-text"><block ref="78d4b42d7cc8df44f5151da486494386" category="inline-link-macro-rx"></block></block>
   <block id="107d607a0fbcdbb5eddd688662ad90ca" category="inline-link-macro">營運支援分析師</block>
   <block id="f06c384501f4ddab22ea69f586c70caf" category="list-text"><block ref="f06c384501f4ddab22ea69f586c70caf" category="inline-link-macro-rx"></block></block>
-  <block id="67580c71df9613a2df5711bad8e2d8d9" category="list-text"><block ref="67580c71df9613a2df5711bad8e2d8d9" category="inline-link-macro-rx"></block></block>
   <block id="31597ba98a5fab9e8c6bca4a800f5ea5" category="inline-link-macro">了解有關預定義角色的更多信息</block>
   <block id="dbf8f6054238418a17441da56cada5ea" category="paragraph"><block ref="dbf8f6054238418a17441da56cada5ea" category="inline-link-macro-rx"></block></block>
   <block id="f2d039d8870676819e12952f7e38048c" category="section-title">為合作夥伴使用者新增角色</block>
@@ -5303,7 +5287,6 @@
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">控制台網路存取（舊版）</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識和支持</block>
   <block id="253b718b7b0bb8f190e2ebe1c721295e" category="paragraph">勒索軟體復原角色為使用者提供對NetApp Ransomware Resilience的存取權限。勒索軟體復原能力支援以下角色：</block>
-  <block id="f75989b6aa2a7a3c16b04e40aebffd8f" category="paragraph">具有*組織管理員*或*資料夾或專案管理員*角色的使用者有責任將角色指派給其他使用者。您可以根據專案或資料夾指派存取角色。例如，您可以為使用者指派一個專案的勒索軟體復原管理員角色，並為另一個專案指派SnapCenter管理員角色。或者，如果使用者需要特定資料夾內所有項目的分類管理員角色，您可以在資料夾層級授予他們此角色。</block>
   <block id="e55d79a6c1774cf0f39d67ca04d67bc0" category="paragraph">使用存取角色根據使用者需求執行的特定任務分配對儲存資源的存取權限。例如，如果使用者需要與 Ransomware Resilience 進行交互，則必須為他們授予存取角色，該角色包括對授予存取角色的專案的 Ransomware Resilience 的檢視或管理權限。</block>
   <block id="e6bf2bfbd541e12c3cb2fca42df08ed3" category="paragraph">成員可以在同一個專案內以及不同的專案中擁有多個角色。例如，較小的組織可能會將所有可用的存取角色分配給同一個用戶，而較大的組織可能會讓用戶執行更專業的任務。或者，您也可以為一個使用者指派組織的勒索軟體復原管理員角色。在該範例中，使用者將能夠對組織內的所有專案執行勒索軟體復原任務。</block>
   <block id="c36b12344113082dcf8a9786e36a3536" category="cell">勒索軟體抵禦能力</block>
@@ -5504,7 +5487,6 @@
   <block id="77504c6121663bb82697faa2adb426c0" category="list-text"><block ref="b7fb1cb20b803995e802d3588f424efa" prefix="" category="inline-code"></block></block>
   <block id="8c0ce03e205216a2506b72de21ab36d0" category="paragraph"><block ref="7068d488f38430eabf6c395a593e8e5a" prefix="" category="inline-code"></block></block>
   <block id="a7678a59b185360eec3ece4df3f90a18" category="paragraph"><block ref="a15b1a7954f2d926c5ee7f261a97b4d2" prefix="" category="inline-code"></block></block>
-  <block id="49868b41c479810c405bc3509cdb1907" category="cell">允許使用者查看NetApp Data Classification掃描結果。具有此角色的使用者可以查看合規性資訊並產生他們有權存取的資源的報告。這些使用者無法啟用或停用磁碟區、儲存桶或資料庫模式的掃描。分類功能沒有管理員角色。</block>
   <block id="93fd98d5e6dc8e59c7d87e83e4b28b54" category="paragraph">控制台不支援啟用 SSL 解密的防火牆設定。如果啟用了 SSL 解密，則控制台中將顯示錯誤訊息，且代理實例顯示為「已斷開連線」。</block>
   <block id="5ef1446cf0ab868961d473d928c394d6" category="section-title">第三方代理和擴充程序</block>
   <block id="08ea771e22fb933fc1428178b36eb902" category="paragraph">代理虛擬機器不支援第三方代理或虛擬機器擴充。</block>
@@ -5665,4 +5647,17 @@
   <block id="bc803c81454ea9df76e9060827a7bc53" category="list-text">compute.instances.addAccessConfig</block>
   <block id="f14cdbbd5f80553660910a0a1219e605" category="section-title">2025年11月26日</block>
   <block id="3f7540ad5f30cb6539b7476d85d2f608" category="paragraph">權限已更新，以使其用途更加清晰，但未添加或刪除任何權限。新增三列，分別指示每個權限是用於部署、日常操作或刪除。除此之外，還有一些權限根據其在NetApp Data Classification和NetApp Backup and Recovery的用途進行了劃分。</block>
+  <block id="babdf7713555e95437e95d0dc578e050" category="list-text">*災難復原管理員*：執行任何動作。</block>
+  <block id="756062c061caa73b104caf35ad95abd9" category="list-text">*災難復原故障轉移管理員*：執行故障轉移和遷移。</block>
+  <block id="99c828ca537070159318271d66dda996" category="list-text">*災難復原應用程式管理員*：建立複製計劃。修改複製計劃。開始測試故障轉移。</block>
+  <block id="10bfeabec8da9ffb3c60c40834621a5d" category="list-text">*災難復原檢視器*：僅查看資訊。</block>
+  <block id="f66b3ba81642886354f66476eebc171c" category="cell">允許使用者查看NetApp Data Classification掃描結果。具有此角色的使用者可以查看合規性資訊並產生他們有權存取的資源的報告。這些使用者無法啟用或停用磁碟區、儲存桶或資料庫模式的掃描。資料分類沒有管理員角色。</block>
+  <block id="9320804217d782369dccfe3cfe90fd29" category="inline-link">資料分類文檔</block>
+  <block id="81584a5aa440695d6dd39594311c7b2d" category="list-text"><block ref="81584a5aa440695d6dd39594311c7b2d" category="inline-link-rx"></block></block>
+  <block id="d1047a2a7e1c25fc1d5cbd4c2dea5954" category="paragraph">具有*組織管理員*或*資料夾或專案管理員*角色的使用者有責任將角色指派給其他使用者。您可以根據專案或資料夾指派存取角色。例如，您可以為使用者指派一個專案的勒索軟體復原管理員角色，並為另一個專案指派SnapCenter管理員角色。或者，如果使用者需要特定資料夾內所有項目的勒索軟體復原管理員角色，您可以為該使用者在資料夾層級授予此角色。</block>
+  <block id="4c56531120cb5dd49448926a4a5fd1fd" category="paragraph">您可以為合作夥伴使用者指派以下角色：</block>
+  <block id="c291dac152d909d3eb9020000be43137" category="inline-link-macro">資料分類檢視器</block>
+  <block id="c7e28713a896e9488b74e428eb025ad0" category="list-text"><block ref="c7e28713a896e9488b74e428eb025ad0" category="inline-link-macro-rx"></block></block>
+  <block id="08324e7c6f4c191ebd76163dd3616c9a" category="list-text"><block ref="08324e7c6f4c191ebd76163dd3616c9a" category="inline-link-macro-rx"></block></block>
+  <block id="4feead535ae6dd1e4ba78516194fe4b1" category="list-text"><block ref="4feead535ae6dd1e4ba78516194fe4b1" category="inline-link-macro-rx"></block></block>
 </blocks>

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-iam-ransomware-roles.html 
-keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, ransomware, ransomware resilience 
 summary: 勒索軟體復原力提供不同的使用者角色來管理對設定、操作和報告的存取。 
 ---
 = NetApp Console的勒索軟體恢復存取角色
