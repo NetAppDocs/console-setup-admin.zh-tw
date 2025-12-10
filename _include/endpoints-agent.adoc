@@ -22,6 +22,13 @@
 
 | 管理 AWS 資源。端點取決於您的 AWS 區域。 https://docs.aws.amazon.com/general/latest/gr/rande.html["有關詳細信息，請參閱 AWS 文檔"^]
 
+| Amazon FsX for NetApp ONTAP：
+
+* api.workloads.netapp.com
+
+
+| 基於 Web 的控制台透過此端點與 Workload Factory API 進行交互，以管理和操作基於ONTAP 的FSx 工作負載。
+
 | \ https://management.azure.com \ https://login.microsoftonline.com \ https://blob.core.windows.net \ https://core.windows.net
 
 | 管理 Azure 公用區域中的資源。
@@ -38,7 +45,7 @@
 
 | 管理 Azure 中國區域的資源。
 
-| \ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta https://www.googleapis.com/storage/v1 https://storage.googleapis.com/storage/v1 https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/projects
+| \ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects https://www.googleapis.com/storage/v1 https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \// https://config.googleapis.com/v1/projects
 
 | 管理 Google Cloud 中的資源。
 

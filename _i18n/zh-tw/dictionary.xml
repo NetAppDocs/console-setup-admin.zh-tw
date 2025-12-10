@@ -173,7 +173,6 @@
   <block id="4e223f64569ea1042cb81c1032cff1f8" category="paragraph">| 管理 Azure 政府區域中的資源。</block>
   <block id="2b7f6d951b3a705af72cb63a7d0788dd" category="paragraph">| \ https://management.chinacloudapi.cn \ https://login.chinacloudapi.cn \ https://blob.core.chinacloudapi.cn \ https://core.chinacloudapi.cn</block>
   <block id="6fc418bd4d8d26d716d678ffb2c516e9" category="paragraph">| 管理 Azure 中國區域的資源。</block>
-  <block id="1e20d05d6d0ad597892e7e3d08324340" category="paragraph">| \ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta https://www.googleapis.com/storage/v1 https://storage.googleapis.com/storage/v1 https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/projects</block>
   <block id="641d1f191c2b819061a8e9b6046fdbeb" category="paragraph">| 管理 Google Cloud 中的資源。</block>
   <block id="c642b24062280a73e940087788371986" category="paragraph">https://cdn.auth0.com \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \ https://components.console.bluexp.netapp.com \</block>
   <block id="4600c0d23dfe95b8db6f735a4b192742" category="paragraph">a| \ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io a| 取得控制台代理升級的圖像。</block>
@@ -238,10 +237,7 @@
   <block id="8f93743fbd54f532def6ac1dbad2311c" category="list-text">需要具有管理權限的 IdP 帳號。與您的 IdP 管理員協調以完成這些步驟。</block>
   <block id="6b46a604d63ba159459b8912d7a91a98" category="inline-link-macro">在NetApp Console中驗證您的網域</block>
   <block id="323b172f396879dcec7aaeccff2097c0" category="list-text">確定要用於聯合的域。您可以使用您的電子郵件網域或您擁有的其他網域。如果您想要使用電子郵件網域以外的網域，則必須先在控制台中驗證該網域。您可以按照以下步驟操作<block ref="a68d68e2e08ca1853c0f2263bccee217" category="inline-link-macro-rx"></block>話題。</block>
-  <block id="1f6f159c41e8184975acbe6c7565ebfd" category="list-text">選擇*測試連線*來測試您的連線。您將被引導至 IdP 伺服器的登入頁面。使用您的 IdP 憑證登入以完成測試並返回控制台以啟用連線。</block>
-  <block id="f0761ff93e66859d8caa58e0c31e7b93" category="list-text">在「啟用聯合」頁面上，查看聯合詳細信息，然後選擇「啟用聯合」。</block>
   <block id="c27bc1dfe805a5825a9acbc35c1a7070" category="list-text">選擇“*完成*”以完成該過程。</block>
-  <block id="862a4be632d4835e1b078c54f61faa22" category="paragraph">啟用聯合後，使用者可以使用其公司憑證登入NetApp Console。</block>
   <block id="f9e5e080572c03ab317bbccdc54d6420" category="list-text">輸入您的網域詳細資料：</block>
   <block id="9532d6ece2fef47ed8c4e96a717a9d5a" category="list-text">選擇您是否要使用已驗證的網域或您的電子郵件網域。電子郵件網域是與您登入的帳戶關聯的網域。</block>
   <block id="7418fbd49ebe84785dec096769ba5b4d" category="list-text">輸入您正在設定的聯盟的名稱。</block>
@@ -266,8 +262,6 @@
   <block id="49cfb78048f1f3515483265f3346abf2" category="list-text">從 Google Cloud 啟動雲殼。</block>
   <block id="58ffd52090b3c8f5d53c7a41dce5badd" category="list-text">上傳包含所需權限的 YAML 檔案。</block>
   <block id="e53a12ca8bd24ad75a525265c644c5c7" category="list-text">使用建立自訂角色<block ref="46cbf543e45ddd605bb826dcc9a3c498" prefix=" " category="inline-code"></block>命令。</block>
-  <block id="60696c8c3376d314543ef1f6c5dd3364" category="paragraph">以下範例在專案層級建立一個名為「connector」的角色：</block>
-  <block id="faa2f324a4d310b356e12aa82056254e" category="paragraph"><block ref="c95ec05c4ecf0f3a1ae9ac9ed3381eba" prefix="" category="inline-code"></block></block>
   <block id="bddcef6ecce1c29406e404e0432421e3" category="inline-link">Google Cloud 文件：建立和管理自訂角色</block>
   <block id="df04ae29fdadbced9cd2cbe7c3037ab8" category="paragraph"><block ref="df04ae29fdadbced9cd2cbe7c3037ab8" category="inline-link-rx"></block></block>
   <block id="2afbc6cdafdfd50d0796ff7ccdc0fd3e" category="list-text">在 Google Cloud 中建立服務帳號並將角色指派給該服務帳號：</block>
@@ -290,7 +284,6 @@
   <block id="a586afd44f6b4a0aadf87baaebfe958b" category="list-text">建立一個 YAML 文件，其中包含在<block ref="5fa46f1796046b3ca5c88fd6f18f408a" category="inline-link-macro-rx"></block>。</block>
   <block id="dea708cc736d31b65dc27e1f81cc0f15" category="list-text">上傳包含控制台代理程式所需權限的 YAML 檔案。</block>
   <block id="bd67573655874b669c5ced800e8181a2" category="list-text">在 Google Cloud 中建立服務帳號：</block>
-  <block id="9ed3505a9736251271f6b1b08b3433f5" category="paragraph">現在您擁有一個可以指派給控制台代理 VM 實例的服務帳戶。</block>
   <block id="258ec60588311e40d9028ecd4b015f8a" category="paragraph">如果您使用共用 VPC 將資源部署到服務項目中，則需要準備好您的權限。</block>
   <block id="d723567d50507549f1f0eed5e785438e" category="paragraph">此表僅供參考，當 IAM 配置完成時，您的環境應該反映權限表。</block>
   <block id="658340d0aa3e36a759f733841569dc13" category="example-title">查看共用 VPC 權限</block>
@@ -332,7 +325,6 @@
   <block id="4417d966b724524a7dd995ebe740c6cb" category="paragraph">您可以選擇在安裝後設定代理伺服器，但這樣做需要重新啟動控制台代理。</block>
   <block id="a9f9e821b8a8692181584ef4520bb0f5" category="list-text">如果代理伺服器使用 HTTPS 或代理是攔截代理，則需要 CA 簽署的憑證。</block>
   <block id="f055093e2366ca02aea03df7cfb1248e" category="inline-link-macro">代理維護控制台</block>
-  <block id="4439aaaad475e34c70f12f09ad6165d9" category="admonition">手動安裝控制台代理程式時，無法為透明代理伺服器設定憑證。如果需要為透明代理伺服器設定證書，則必須在安裝後使用維護控制台。詳細了解<block ref="0f8b8c9e4ded9a5f5a72925670422347" category="inline-link-macro-rx"></block>。</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">關於此任務</block>
   <block id="659f0b9a6a18db69662f4738cacedeb4" category="paragraph">NetApp支援網站上提供的安裝程式可能是早期版本。安裝後，如果有新版本可用，控制台代理會自動更新。</block>
   <block id="16c184ab0a5376cef0ecef7f0da93ac2" category="list-text">如果主機上設定了 _http_proxy_ 或 _https_proxy_ 系統變量，請將其刪除：</block>
@@ -436,7 +428,6 @@
   <block id="9c0e62a86b9fe558cad9c4d280ea439d" category="list-text">啟用 NTP</block>
   <block id="62286fee1b0c285ac291bc232fe7f74f" category="inline-link">了解有關NetApp資料分類的更多信息</block>
   <block id="c2fc633e22b03955b13beee2049ac471" category="list-text">如果您打算使用NetApp Data Classification來掃描公司資料來源，則應在控制台代理程式和NetApp Data Classification系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。<block ref="95ad16386ae4ac759ff3f180dcafce84" category="inline-link-rx"></block></block>
-  <block id="da9c5bf0a2786648e8cd1c7f9b39bd31" category="list-text">與其他應用程式共用的主機不支援控制台代理。該主機必須是專用主機。主機可以是滿足以下大小要求的任何架構：</block>
   <block id="df4af5ebfed55f726690fe09695fb1fa" category="list-text">CPU：8 核心或 8 個 vCPU</block>
   <block id="357a496c919d7b340d6f4582397b89b5" category="list-text">記憶體：32 GB</block>
   <block id="69fc366414a2e0b9932f47f1ac056ee7" category="list-text">磁碟空間：建議主機預留165GB空間，分割區需求如下：</block>
@@ -482,7 +473,6 @@
   <block id="607262a04e5c4340fc8d641e874a5695" category="paragraph">3.9.29 或更高版本</block>
   <block id="a3336db0e9f7b6341a12794c144076b6" category="paragraph">Docker Engine 23.0.6 至 26.0.0</block>
   <block id="5556c95763913c6cfa8f61d9cab4f4f2" category="paragraph">26.0.0 支援 _new_ agent 3.9.44 或更高版本的安裝</block>
-  <block id="2482bd6110246df30d07035a37ec9284" category="list-text">在作業系統上啟用了 SELinux 的代理程式不支援對Cloud Volumes ONTAP系統的管理。</block>
   <block id="afaf0577b469adb0296b4fcfa6f2af91" category="list-text">這些作業系統的英文版本支援控制台代理。</block>
   <block id="31acdb1c0f97e43347645b47a1cb7ad5" category="list-text">對於 RHEL，主機必須在 Red Hat 訂閱管理中註冊。如果未註冊，主機將無法在代理安裝期間存取儲存庫來更新所需的第三方軟體。</block>
   <block id="2b55387dd066c5bac646ac61543d152d" category="list-text">中央處理器</block>
@@ -493,7 +483,6 @@
   <block id="6cd56a4cc4ddbbfd2bc9d57de5d788aa" category="list-text">密鑰對</block>
   <block id="56ff78b5911451c928f64308fe1d80b3" category="list-text">建立控制台代理程式時，您需要選擇一個 EC2 金鑰對來與執行個體一起使用。</block>
   <block id="c8e7383477673ee726b6ba29dc487444" category="list-text">使用 IMDSv2 時的 PUT 響應跳數限制</block>
-  <block id="6072a0c0865bf8071e3960e01a77d5f4" category="list-text">如果在 EC2 執行個體上啟用了 IMDSv2（這是新 EC2 執行個體的預設設定），則必須將執行個體上的 PUT 回應跳數限制變更為 3。如果您不變更 EC2 執行個體的限制，則在嘗試設定代理程式時會收到 UI 初始化錯誤。</block>
   <block id="98dddf7eafbbdfa88756d62945237473" category="inline-link-macro">要求在 Amazon EC2 執行個體上使用 IMDSv2</block>
   <block id="8d8efedf65fe740dfe59c5779c9d745c" category="list-text"><block ref="8d8efedf65fe740dfe59c5779c9d745c" category="inline-link-macro-rx"></block></block>
   <block id="75c0fbf84b1614b17a984df62bf849f6" category="inline-link">AWS 文件：變更 PUT 回應跳數限制</block>
@@ -944,7 +933,6 @@
   <block id="0b0a6d9ce7462fc9a218e93ccbee32e7" category="section-title">導航選單和頁面</block>
   <block id="7ceea4a6639fef28fae4477857f229e5" category="paragraph">NetApp將大多數選單選項移至左側導覽窗格，並重新組織選單以便在NetApp Console中更輕鬆地導覽。</block>
   <block id="4fa56c3d158c844dc75b2826ee4c98d0" category="section-title">畫布被系統頁面取代</block>
-  <block id="e98962c5bb7d0d1afd483518e730b4c8" category="paragraph">NetApp將 Canvas 重新命名為 *Systems* 頁面。從「*儲存 &gt; 管理*」選單導覽至「*系統*」頁面。</block>
   <block id="ddd56b1479dbec10cfb6fc0a3a8afe57" category="inline-image-macro">系統頁面的螢幕截圖。</block>
   <block id="028a5defa734a1e5527100ece8ea2e66" category="paragraph"><block ref="028a5defa734a1e5527100ece8ea2e66" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e6ee78fd171283b1b449978ae0c73e06" category="section-title">擴充儲存選單</block>
@@ -1136,7 +1124,6 @@
   <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="section-title">常問問題</block>
   <block id="d33d86c6f3f99b3b9b1b988bde0679bd" category="paragraph">以下問題與憑證和訂閱有關。</block>
   <block id="70bfaa19a89e29bf0fc2b34b8f3150ba" category="section-title">如何安全地輪換我的 AWS 憑證？</block>
-  <block id="3f306aaee2a65dfda1ad13f709a0b4ae" category="paragraph">對於前兩個選項，控制台使用 AWS 安全性令牌服務來取得不斷輪換的臨時憑證。這個過程是最佳實踐——它是自動的並且是安全的。</block>
   <block id="0756a90a4a5e55dd02063c7dc80562de" category="paragraph">如果您向控制台提供 AWS 存取金鑰，則應透過定期在控制台中更新金鑰來輪替金鑰。這是一個完全手動的過程。</block>
   <block id="c32ecd65cd5790ceb41fc1ef7d6a6e7d" category="section-title">我可以更改Cloud Volumes ONTAP系統的 AWS Marketplace 訂閱嗎？</block>
   <block id="469da6edf5632bcbb4aae525bd58406a" category="paragraph">是的，你可以。當您變更與一組憑證關聯的 AWS Marketplace 訂閱時，所有現有和新的Cloud Volumes ONTAP系統都會根據新訂閱收費。</block>
@@ -1617,7 +1604,6 @@
   <block id="eda63b570db82e05c2fd7b5f0c3bb20f" category="cell">審計</block>
   <block id="6c781c37150950b9639b1a88927fa671" category="summary">透過在NetApp Console中建立組織之間的合作夥伴關係，組織合作夥伴可以跨組織邊界安全地管理NetApp資源，從而簡化協作並增強安全性。</block>
   <block id="48b10af85ea37189fccab5406ba059ed" category="doc">NetApp Console中的合作夥伴關係</block>
-  <block id="7fa861748c4d1659172de0b58f97b1f9" category="paragraph">透過在組織之間建立合作夥伴關係， NetApp Console可讓合作夥伴跨組織邊界安全地管理NetApp資源，從而簡化協作並增強安全性。</block>
   <block id="8f032c748fc26fa9d1200f8efa6a0d8c" category="paragraph-title">必備角色</block>
   <block id="8dab33dda3f37e096d3ad18f7ab81434" category="paragraph">合作夥伴管理員<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
   <block id="324861aee136989b2cba2eb117747e57" category="paragraph">合作夥伴關係允許使用控制台中的角色驅動關係跨組織安全地管理NetApp資源。發起組織授予對其資源的存取權限，而接受組織提供被授予存取權限的使用者或服務帳戶。合作夥伴關係是透過自助服務工作流程建立的，使發起組織能夠完全控制共享的資源、分配的角色以及根據需要加入、管理或撤銷合作夥伴存取權限的能力。</block>
@@ -1775,19 +1761,12 @@
   <block id="590b2ea5933ad8ead3c9a15a914f1a9c" category="list-text">所有服務都在docker容器內運行</block>
   <block id="f76b4c57c56377745199382d59cdeed3" category="paragraph">這些服務依賴docker運行時服務的運行</block>
   <block id="846c386cf81542225b98b6f2bb22ac66" category="summary">您可以使用控制台代理維護控制台來設定控制台代理以使用透明代理伺服器。</block>
-  <block id="201ded18828aa36cabf001ad5b286fef" category="doc">控制台代理維護控制台</block>
   <block id="64a20b3b93e3313beb44e4cdfaa3fc62" category="section-title">存取代理維護控制台</block>
   <block id="54b21d666b59ebab4d006b20d3923a8a" category="paragraph">您可以從控制台代理主機存取維護控制台。導航到以下目錄：</block>
   <block id="38c16b07265a0ea453b6c31b87484378" category="section-title">透明代理命令</block>
-  <block id="4108bec2e5adefed2de8ccea6de208c1" category="paragraph">代理維護控制台提供指令來設定代理程式使用透明代理伺服器。</block>
-  <block id="67ee408ff988e76f6d3799ac5efa460f" category="section-title">查看目前透明代理配置</block>
-  <block id="a2a14e0f8a35f998c35eb5e7b4f11c63" category="paragraph">若要查看目前的透明代理配置，請使用下列命令：</block>
-  <block id="2060dbc448df049844e06c84fd90c8cc" category="section-title">新增透明代理伺服器</block>
   <block id="d55c6a8d11c5ba3e1a749110d08d13a0" category="paragraph">若要新增透明代理伺服器，請使用以下命令，其中<block ref="b2ade5ab23fdcff48ad66c933b8c0a7a" prefix=" " category="inline-code"></block>是代理伺服器憑證檔案的路徑。證書文件必須為 PEM 格式：</block>
   <block id="2dfbed833348a18ef6acd6126802e582" category="paragraph">確保證書檔案與命令位於同一目錄中，或指定證書檔案的完整路徑。</block>
-  <block id="37113521420e96a3a50c96de96815289" category="section-title">更新透明代理伺服器的證書</block>
   <block id="7e3520831eb4f49402b5e66b7de0cf9b" category="paragraph">若要更新透明代理伺服器的證書，請使用下列命令，其中<block ref="b2ade5ab23fdcff48ad66c933b8c0a7a" prefix=" " category="inline-code"></block>是代理伺服器的新憑證檔案的路徑。證書文件必須為 PEM 格式：</block>
-  <block id="f45f29ba66bb2b571ee2752605accdb9" category="section-title">刪除透明代理伺服器</block>
   <block id="0bddca9be37ec136c74bc13d67a2327c" category="paragraph">若要刪除透明代理伺服器，請使用以下命令：</block>
   <block id="e73e4a152d192531e90aca4120b4f30b" category="section-title">查看任何命令的幫助</block>
   <block id="6e59373a630740150c04aaac47bb0503" category="paragraph">若要查看任何命令的協助，請附加<block ref="0c113ca6d57519b559ba5a426be3c6b6" prefix=" " category="inline-code"></block>到命令。例如，要查看<block ref="08bc9d3537a56e203564c5b4357049f4" prefix=" " category="inline-code"></block>命令，使用以下命令：</block>
@@ -1818,9 +1797,7 @@
   <block id="8f4f872a5a91b4fda0f95e21e0b83fb1" category="list-text"><block ref="8f4f872a5a91b4fda0f95e21e0b83fb1" category="inline-link-rx"></block></block>
   <block id="d85b01f001ee16ebd8eb1917c739d824" category="inline-link">了解StorageGRID系統</block>
   <block id="6dd67f54d38094b3a7d65e4eeed06755" category="list-text"><block ref="6dd67f54d38094b3a7d65e4eeed06755" category="inline-link-rx"></block></block>
-  <block id="9957f1fffd0798d003f7701530308820" category="summary">NetApp Console身分和存取管理提供支援分析師角色來協助監控和支援案例。</block>
   <block id="bd35c1f622cddab38a157ba7ccffd7a0" category="doc">NetApp Console的營運支援分析師存取角色</block>
-  <block id="7e901891254682b3e1fddc06e4e1938a" category="paragraph">您可以為使用者指派以下角色，以便他們存取警報和監控。具有此角色的使用者還可以開啟支援案例。</block>
   <block id="a9c987c5ba386ab7cea1039db6dab527" category="section-title">營運支援分析師</block>
   <block id="eaeb30f9f18e0c50b178676f3eaef45f" category="cell">任務</block>
   <block id="6b67f7084bd7c23cc1a6915c07f7db8a" category="cell">可以執行</block>
@@ -2175,7 +2152,6 @@
   <block id="1dc9c22149f4c0ef8e2fc6c49159dc73" category="cell">使用者憑證</block>
   <block id="1eba71d64e6c5e410e558530711e835b" category="summary">已知限制標識了該產品的此版本不支援或無法與其正確互通的平台、裝置或功能。仔細審查這些限制。</block>
   <block id="c6fe3fe7cf3d078b181c8a9d01950402" category="doc">NetApp Console的已知限制</block>
-  <block id="882e98b214f100c29ca675a0c0b4c5a4" category="paragraph">這些限制特定於 NEtApp 控制台和管理的設定：代理、軟體即服務 (SaaS) 平台等等。</block>
   <block id="66bf395a11c3c005c11b5085fdfc7337" category="section-title">控制台代理限制</block>
   <block id="911d15b7ac55478d2b567e8488658687" category="section-title">可能與 172 範圍內的 IP 位址衝突</block>
   <block id="c4c2e36276fced82261124b9b0bb8f65" category="paragraph">NetApp Console部署了一個具有兩個介面的代理，這兩個介面的 IP 位址分別在 172.17.0.0/16 和 172.18.0.0/16 範圍內。</block>
@@ -2609,9 +2585,6 @@
   <block id="accd9735475d1c9d7b0b5006261d6484" category="summary">控制台代理程式需要權限才能在您的雲端提供者中執行操作。這些權限包含在NetApp提供的策略中。您應該了解代理程式使用這些權限做什麼。</block>
   <block id="1a24ebef5708132569792a414e03e094" category="doc">控制台代理的 Google Cloud 權限</block>
   <block id="6b45b097205607d8631a7d487a76da98" category="section-title">服務帳戶權限</block>
-  <block id="48f3320f6327aedea52854dfcbcf31d9" category="paragraph">下面顯示的自訂角色提供了控制台代理程式管理 Google Cloud 網路內的資源和流程所需的權限。</block>
-  <block id="82a6f573069dcbf74094644066f00ff8" category="paragraph">您需要將此自訂角色套用到附加到控制台代理程式 VM 的服務帳戶。</block>
-  <block id="4560d9b851db1f575c8bd1ba53369c0a" category="paragraph">您還需要確保角色是最新的，因為後續版本中會新增新的權限。如果需要新的權限，它們將在發行說明中列出。</block>
   <block id="823b2e7894c2b52c1e9adc9ea10b9be5" category="section-title">Google Cloud 權限的使用方式</block>
   <block id="06df33001c1d7187fdd81ea1f5b277aa" category="cell">行動</block>
   <block id="f66d598893a55fa43b7676b10c66160f" category="cell">為Cloud Volumes ONTAP建立和管理磁碟。</block>
@@ -2644,12 +2617,10 @@
   <block id="c5338aa09d091a71f3080053c9a0edc0" category="cell">在Cloud Volumes ONTAP HA 對上建立和管理儲存虛擬機器。</block>
   <block id="884e026d3505b2b3847b25f6cecb4de7" category="cell">發現有關 Google Cloud Storage 儲存桶的資訊。</block>
   <block id="d07a6a967273763e473875b528aab4ea" category="cell">在NetApp Backup and Recovery啟動精靈中選擇您自己的客戶管理金鑰，而不是使用預設的 Google 管理加密金鑰。</block>
-  <block id="00e6f4ddf63e81c5de84a3913163d11d" category="section-title">2023年2月06日</block>
   <block id="26e9753e85fc2c13a9569cd1345a5b06" category="paragraph">此策略中新增了以下權限：</block>
   <block id="3503950ea6a1ba87d4be44e07b1a16c8" category="list-text">計算.實例.更新網路介面</block>
   <block id="0f30e2d10fca6f69c5f7a23bb2b30b1b" category="paragraph">Cloud Volumes ONTAP需要此權限。</block>
   <block id="8988a38ba3aaf6cb48e549dc3babd50e" category="section-title">2023年1月27日</block>
-  <block id="6f3dd3aa6f04d6f98a881afe84a14828" category="paragraph">已將以下權限新增至策略：</block>
   <block id="d5b52c55f0ffe2752d39b0d85f9ad0ef" category="list-text">cloudkms.cryptoKeys.getIamPolicy</block>
   <block id="631730c9e44e80f5f69e36901808bf98" category="list-text">cloudkms.cryptoKeys.setIamPolicy</block>
   <block id="7d5beaedd0c93a11314ff6699a51454e" category="list-text">cloudkms.keyRings.get</block>
@@ -3028,21 +2999,6 @@
   <block id="a7f8ea7817d42a132120d2a3377b0d22" category="paragraph">在控制台中編輯您的 Azure 憑證。例如，如果為服務主體應用程式建立了新的金鑰，您可以更新客戶端金鑰。</block>
   <block id="fca161e7e3d0f11c877617c572f2054d" category="list-text">選擇一組憑證的操作選單，然後選擇*編輯憑證*。</block>
   <block id="343f14fa04538530ee19575d02711691" category="list-text">在*組織憑證*頁面上，選擇一組憑證的操作選單，然後選擇*刪除憑證*。</block>
-  <block id="aca93a34ac0830ae93442a45a45230ca" category="summary">您可以透過關聯市場訂閱並對訂閱程序進行故障排除來管理與控制台代理 VM 執行個體關聯的 Google Cloud 憑證。這兩項任務確保您可以使用市場訂閱來支付數據服務。</block>
-  <block id="7fb6ce6ba61ee2f889266f6591c8bf62" category="paragraph">您可以透過關聯市場訂閱並對訂閱程序進行故障排除來管理與控制台代理 VM 執行個體關聯的 Google Cloud 憑證。這兩項任務確保您可以使用市場訂閱來支付數據服務。</block>
-  <block id="209e33f8aa50ade8c82e5bc82a8c023d" category="section-title">將 Marketplace 訂閱與 Google Cloud 憑證關聯</block>
-  <block id="eb7e6d1f8bb6ef3fd9a4c9dde493222f" category="paragraph">在 Google Cloud 中部署控制台代理程式時，控制台會建立一組與控制台代理虛擬機器實例關聯的預設憑證。您可以隨時變更與這些憑證關聯的 Google Cloud Marketplace 訂閱。透過訂閱，您可以建立按使用量付費的Cloud Volumes ONTAP系統，並使用其他資料服務。</block>
-  <block id="55c766cf4228626844250621a71175de" category="section-title">解決 Marketplace 訂閱流程問題</block>
-  <block id="5e8a9e85694a19d502ffc719ffe16636" category="inline-link">Google Cloud Marketplace 上的NetApp頁面</block>
-  <block id="d6e50a6d3ec0159b4980423911b0d4c3" category="list-text">導航至<block ref="50dc0afbab90b927abe9802e2e044626" category="inline-link-rx"></block>檢查訂單狀態。如果頁面顯示*在提供者管理*，請向下捲動並選擇*管理訂單*。</block>
-  <block id="1602e955f4d68623784fbd9b3e232de3" category="inline-image-macro">市場頁面貼文訂閱的螢幕截圖。</block>
-  <block id="138509c56fb0084f814c9be7b6c3f21d" category="paragraph"><block ref="138509c56fb0084f814c9be7b6c3f21d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e934500d9ced37392a4bfadda2e26daf" category="list-text">如果訂單顯示綠色複選標記且這是意外情況，則組織中使用相同計費帳戶的其他人可能已經訂閱。如果這是意外情況或您需要此訂閱的詳細信息，請聯絡您的NetApp銷售團隊。</block>
-  <block id="bb7a877315ec49d95bef4521481a238d" category="inline-image-macro">已接受權利的螢幕截圖。</block>
-  <block id="57c37d5700a1b0612b4ca2402852172a" category="paragraph"><block ref="57c37d5700a1b0612b4ca2402852172a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="342df35452bbec008148c714d47038f6" category="list-text">如果訂單顯示時鐘和*待定*狀態，請返回市場頁面並選擇*在提供者管理*以完成如上所述的流程。</block>
-  <block id="9547217bb6aa822040056cba67310321" category="inline-image-macro">待定市場權利的螢幕截圖。</block>
-  <block id="e6ec8d6dff39d45a9056311495699cef" category="paragraph"><block ref="e6ec8d6dff39d45a9056311495699cef" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2ef5f9dff59a7d4a9d1cf5d43f11c644" category="summary">將NetApp支援網站帳號與您的NetApp Console組織關聯，以啟用Cloud Volumes ONTAP 的關鍵工作流程。這些 NSS 憑證與整個組織相關。</block>
   <block id="1f2fc513e25e1f4b4fdc575d67f8f88d" category="doc">管理與NetApp Console關聯的 NSS 憑證</block>
   <block id="b7dc979cedad1454168cefa97164fdc4" category="paragraph">將NetApp支援網站帳號與您的控制台組織關聯，以啟用儲存管理的關鍵工作流程。這些 NSS 憑證與整個組織相關。</block>
@@ -3205,7 +3161,6 @@
   <block id="b797d654931eeb3fd544b972b537bc1a" category="paragraph">確保證書檔案為 PEM 格式並與命令位於同一目錄中，或指定證書檔案的完整路徑。</block>
   <block id="76fe97fb8546b1f5923f0501c8e25ae0" category="section-title">修改控制台代理的透明代理</block>
   <block id="92621940050d65fc4b47ade313d8f178" category="inline-link-macro">代理維護控制台</block>
-  <block id="20257cdf81419bff017c7b16260ebb25" category="paragraph">您可以使用<block ref="091092579ca8cede1b760e7c5a90a003" prefix=" " category="inline-code"></block>命令或使用<block ref="ef5ebb9e0c08ee0463e7503ff1111f4c" prefix=" " category="inline-code"></block>命令。有關詳細信息，請參閱<block ref="9370e1eb4855e9767e8414447e836404" category="inline-link-macro-rx"></block>。</block>
   <block id="349027440539dc46278ee9e93260025d" category="section-title">如果控制台代理無法存取互聯網，請更新它</block>
   <block id="71164e4bc7911ce651a366899f4f487b" category="paragraph">如果您的網路代理程式配置發生變化，您的代理程式可能會失去對網際網路的存取權限。例如，如果有人更改了代理伺服器的密碼或更新了憑證。在這種情況下，您需要直接從控制台代理主機存取 UI 並更新設定。確保您可以透過網路存取控制台代理主機，並且可以登入控制台。</block>
   <block id="54734e5bba3b83b2757e43d1ff24b2c4" category="section-title">啟用直接 API 流量</block>
@@ -3601,19 +3556,14 @@
   <block id="c91d4274dbc95093979f44d9158f63c4" category="doc">使用資料夾和專案組織您的NetApp Console資源</block>
   <block id="6dca94e5f8ef4f7534b19b4528884acb" category="paragraph">在NetApp Console中，您可以使用專案和資料夾來組織您的NetApp資源。  _專案_代表控制台中的一個工作區，組織成員可以存取該工作區來管理_資源_（例如， Cloud Volumes ONTAP系統）。 _資料夾_將相關項目分組在一起。將資源組織到資料夾和專案後​​，您可以透過向組織成員提供特定資料夾和項目的權限來授予對資源的細粒度存取權限。</block>
   <block id="c08b7d4448e95633b73e2495389e853c" category="section-title">新增資料夾或項目</block>
-  <block id="bbc694ba62c62df49795c9c42c96c762" category="paragraph">當您建立組織時，它包含一個項目。新增項目來管理資源和資料夾來對相關項目進行分組。</block>
-  <block id="c35523034b7fc4da98dc5a67f27b9d9d" category="paragraph">您的組織的資源層次結構最多可以有七個級別，其中資料夾嵌套六級，項目位於第七級。</block>
   <block id="8b2ab7e3ad5d97cdc07606024ad7cd90" category="list-text">選擇*組織*。</block>
   <block id="54f6cd3aa5e387ea27f8d46fcd265b0f" category="list-text">從*組織*頁面中，選擇*新增資料夾或項目*。</block>
   <block id="0bb9526fc793356f11cea651032b1b15" category="list-text">選擇*資料夾*或*項目*。</block>
-  <block id="5506a3204ff4171234856af0ca0d34fd" category="list-text">提供有關資料夾或項目的詳細資訊：</block>
-  <block id="dd3673b97acb6c067381ad1c2f6b16eb" category="list-text">*名稱和位置*：輸入名稱並選擇資料夾或項目的層次結構中的位置。資料夾或項目可以直接位於組織下方或資料夾內。</block>
   <block id="f46059ba82cb53e4af025ce918760999" category="list-text">*資源*：選擇您想要與此資料夾或項目關聯的資源。</block>
   <block id="3c3738a24f68869d5cec5d24654be31c" category="paragraph">您可以選擇與父資料夾或項目相關的資源。</block>
   <block id="2aa8f2be43810963811ccc42047d868e" category="inline-link-macro">了解何時將資源與資料夾關聯</block>
   <block id="1cfaf9081db0e3182d27f586bb481603" category="paragraph"><block ref="9b735c42d80f104cecdf7ab600a203a6" category="inline-link-macro-rx"></block> 。</block>
   <block id="8bb3c5dc86a399d0babf2eb49831e5ec" category="list-text">*存取*：根據資源層次結構中已定義的現有權限，查看有權存取資料夾或項目的成員。</block>
-  <block id="bb1674c6ad82758dbe5312cfed6ce30a" category="paragraph">選擇*新增成員*為其他成員指派存取權限和角色。角色定義成員對資料夾或項目的權限。</block>
   <block id="7f394af8afb3598061eec3ed6197180d" category="section-title">重新命名資料夾或項目</block>
   <block id="f8ca84129dded5d2d753c0d0cc1ddea1" category="paragraph">如果需要，您可以變更資料夾和項目的名稱。</block>
   <block id="f53392d049b9dddff4ba55ad74c96588" category="inline-image-macro">帶有三個點的圖標</block>
@@ -3621,9 +3571,6 @@
   <block id="ec4b36b02d2682a0624b6df463ee2789" category="list-text">在*編輯*頁面上，輸入新名稱並選擇*應用*。</block>
   <block id="03b976867f3d4bd64ebf2dde3b296e4d" category="section-title">刪除資料夾或項目</block>
   <block id="486b799bb85b3d2fe9d51e27f973ebbf" category="paragraph">刪除不再需要的資料夾和項目。</block>
-  <block id="11c35e27e51a047151d75fb0ede09570" category="inline-xref">了解如何解除資源關聯</block>
-  <block id="9a4d17fef1beed2567fc013cd2bec581" category="list-text">確保資料夾或項目沒有關聯資源。<block ref="802e9206ed2588cee6f64d588f1bc58d" category="inline-xref-macro-rx"></block> 。</block>
-  <block id="7e3bd90255d7fc608bda397ba970467a" category="list-text">確保資料夾或項目沒有關聯資源。</block>
   <block id="42f2baba648ca8f4aea79acfaf1465c8" category="list-text">從「組織」頁面，導覽至表中的項目或資料夾，選擇<block ref="e85cc783c74f9ef35cfeeca99fcaf6f6" category="inline-image-macro-rx" type="image"></block>然後選擇*刪除*。</block>
   <block id="48a726f3d57687547ef8fb70fab0c713" category="list-text">確認您要刪除資料夾或項目。</block>
   <block id="7ef08e2a2795e0ebd33ca241791da34d" category="section-title">查看與資料夾或項目關聯的資源</block>
@@ -3635,7 +3582,6 @@
   <block id="a470fed0aa4603c3c8d460c4028252f1" category="list-text">選擇“*資源*”來查看相關資源。在表中，「*狀態*」列標識與資料夾或項目相關的資源。</block>
   <block id="c2fdbd86cd719dffbb80161af27b0ec9" category="inline-image-macro">編輯項目頁面的螢幕截圖，顯示可與項目關聯或取消關聯的可用資源。</block>
   <block id="65381685a85e45e94ee53dbceff322ff" category="paragraph"><block ref="65381685a85e45e94ee53dbceff322ff" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="df3e2bd0fe2ced6b1bd1a55dad748146" category="section-title">修改與資料夾或項目關聯的資源</block>
   <block id="189b8907a7ab6c4c7b1ea92510e40d70" category="paragraph">擁有資料夾或專案權限的成員可以存取其相關資源。</block>
   <block id="0727cfa5c59f7b7114ac7246e406611c" category="list-text">在*編輯*頁面上，選擇*資源*。</block>
   <block id="d66e1bd376f74d0703fc72b368b92cd7" category="paragraph">在表中，「*狀態*」列標識與資料夾或項目相關的資源。</block>
@@ -3643,15 +3589,12 @@
   <block id="77132bcd63b33103ab4d954f60736e06" category="list-text">根據您選擇的資源，選擇*與項目關聯*或*與項目取消關聯*。</block>
   <block id="152ff89b1af4f8995e50a4b8f158db52" category="inline-image-macro">編輯項目頁面的螢幕截圖，其中顯示了選擇目前未關聯的資源後可用的關聯資源選項。</block>
   <block id="883f9a97670aa2ea1a29d0163ef97be1" category="paragraph"><block ref="883f9a97670aa2ea1a29d0163ef97be1" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c16f1c2a54634bdad6dee177f8131ef5" category="list-text">選擇“*應用*”</block>
   <block id="e3621d23b92254c73b3a713d227a66f5" category="section-title">查看與資料夾或項目關聯的成員</block>
   <block id="6b1db5558a176057dbfc6d02d715d5ee" category="list-text">選擇*存取*來查看有權存取該資料夾或項目的成員。</block>
   <block id="68f9e92246f3af16e2706083b8012f92" category="inline-image-macro">編輯項目頁面的螢幕截圖，顯示有權存取該項目的成員。</block>
   <block id="e537768f43901c1791172250c6c08115" category="paragraph"><block ref="e537768f43901c1791172250c6c08115" category="inline-image-macro-rx" type="image"></block></block>
   <block id="19df46354fac1ffd06065f8388377f84" category="section-title">修改成員對資料夾或項目的存取權限</block>
-  <block id="838d404665efe77bad8374ea27c3b7ca" category="paragraph">修改成員存取權限以確保正確的成員可以存取相關資源。</block>
   <block id="f676fbba085923546a37baf94ce6784b" category="inline-link-macro">從「會員」頁面管理權限</block>
-  <block id="08e3536d495a23d703d2d1e7d2054ba1" category="paragraph">較高層次結構層級提供的成員存取權限不能在較低層級變更。更新更高層次結構層級的成員權限以變更存取權限。或者，您可以<block ref="2e250d63a19626cb0aeed14260bd2f59" category="inline-link-macro-rx"></block>。</block>
   <block id="6774afc9942c8dcab2e06828e8f199cb" category="inline-link-macro">了解有關角色繼承的詳細信息</block>
   <block id="8945f05b50a19ebe83ee85e629a09120" category="paragraph"><block ref="e2e11ae218588663759cb10a40da4876" category="inline-link-macro-rx"></block> 。</block>
   <block id="2bd6967deb6b9eb3d79e794bad318fb4" category="list-text">在*編輯*頁面上，選擇*存取*以查看有權存取所選資料夾或項目的成員清單。</block>
@@ -3672,7 +3615,6 @@
   <block id="f2822d5dedda5be93d6f6e298458878b" category="paragraph">具有此角色的使用者只能管理指定資料夾或專案的成員</block>
   <block id="31c547d7cd4c250a91b1a8bef306d954" category="paragraph">_資料夾或專案管理員_可以在*成員*頁面上查看所有成員，但只能管理他們有權存取的資料夾和專案的權限。<block ref="c691e2b9b4224ed90bb4f1f11059b372" category="inline-link-macro-rx"></block> 。</block>
   <block id="e3a1bd8f43fc761424ef512d07c27a8b" category="section-title">在您的組織中加入成員</block>
-  <block id="af1944d628b4a4ffaf6c377d8bfd75a9" category="paragraph">您可以為您的組織新增兩種類型的成員：使用者帳戶和服務帳戶。應用程式使用服務帳戶來執行 API 任務，無需人工幹預。人們通常使用使用者帳戶來登入和管理資源。</block>
   <block id="4a6e57c6cb2443ee81ba504493e38c0d" category="paragraph">使用者必須先註冊NetApp Console，然後您才能將他們新增至組織或為他們指派角色。您可以直接從控制台建立服務帳戶。</block>
   <block id="e882dcb285b727741daef45bc38e2d7b" category="paragraph">若要管理使用者及其權限，您必須具有*組織管理員*角色或*資料夾或專案管理員*角色。請記住，具有「資料夾或專案管理員」角色的使用者只能管理他們具有管理員權限的資料夾或專案的成員。</block>
   <block id="7915733bd673ab1728be20879c847f08" category="section-title">新增使用者帳戶</block>
@@ -3698,7 +3640,6 @@
   <block id="8e7e960ee764c7e6e42c82f1edaa4133" category="list-text">對於*會員類型*，選擇*服務帳戶*。</block>
   <block id="e14a6ae0776860dda96f0e481824bccd" category="list-text">輸入服務帳戶的名稱。</block>
   <block id="ebcb63e875051cc6846253b2c9ce48da" category="list-text">如果您想使用 JWT 驗證，請選擇 *使用私密金鑰 JWT 驗證* 並上傳您的公用 RSA 金鑰或憑證。如果您想使用客戶端 ID 和金鑰，請跳過此步驟。</block>
-  <block id="f17ae6fd3e69f0e9652031dd252bbc3e" category="paragraph">您的 X.509 證書。它必須是 PEM、CRT 或 CER 格式。</block>
   <block id="fc0041752419b9f94c8f1b7af4db8c4a" category="list-text">選擇一個*類別*，然後選擇一個*角色*，該角色為成員提供與您選擇的組織、資料夾或專案相關的資源的權限。</block>
   <block id="78f6d8218cb580b136d9697f7235ad36" category="list-text">如果您沒有選擇使用 JWT 驗證，請下載或複製用戶端 ID 和用戶端金鑰。 + 控制台僅顯示一次用戶端金鑰。安全地複製它；如果需要，您可以稍後重新建立它。</block>
   <block id="3f1c25aff6cde8c3443a53dfb8490e46" category="list-text">如果您選擇 JWT 驗證，請下載或複製用戶端 ID 和 JWT 受眾。此資訊僅顯示一次，之後無法檢索。</block>
@@ -3712,7 +3653,6 @@
   <block id="d5e4a18be128c90b65012755ecabfe00" category="paragraph">*成員*表格列出了您組織的成員。</block>
   <block id="4137654b2b560bb6af478553cbc120b2" category="section-title">從您的組織中移除成員</block>
   <block id="e4cb5729a397d486706aec2c33ce4ea6" category="paragraph">您可能需要從您的組織中刪除某個成員 - 例如，如果他們離開了您的公司。</block>
-  <block id="b6be293e7a1c53f72d15da417976fc81" category="paragraph">系統將刪除該成員的權限，但保留其控制台和NetApp支援網站帳戶。</block>
   <block id="17968a6208774a9e7e1a042da70ec52f" category="list-text">從「成員」頁面，導覽至表中的成員，選擇<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>然後選擇*刪除使用者*。</block>
   <block id="6e49938f1c5b86ad879eeaf086442b08" category="list-text">確認您要從組織中刪除該成員。</block>
   <block id="a657b530c9804722859fcb4792bf4466" category="section-title">重新建立服務帳戶的憑證</block>
@@ -3720,10 +3660,8 @@
   <block id="587ee44a2d8c31788fd2c2219c69f11c" category="paragraph">重新建立憑證時，您將刪除服務帳戶的現有憑證並建立新的憑證。您不能使用先前的憑證。</block>
   <block id="bb0f4333667b84217bd737a0e3fc6024" category="list-text">在「成員」表中，導覽至服務帳戶，選擇<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>然後選擇*重新建立秘密*。</block>
   <block id="8de213850e1e3dc79a14014382d25163" category="list-text">選擇*重新建立*。</block>
-  <block id="26099ee95e920d1bb32d1205490ad92b" category="list-text">下載或複製客戶端 ID 和客戶端金鑰。 + 用戶端金鑰僅顯示一次。複製或下載並安全儲存。</block>
   <block id="25240dbf964ce37736226ead112d31f2" category="section-title">管理用戶的多重身份驗證 (MFA)</block>
   <block id="50ce8407589b8befd67cd61c66e1dd17" category="paragraph">如果使用者失去對其 MFA 設備的存取權限，您可以刪除或停用其 MFA 配置。</block>
-  <block id="a860c0a128dada61cfda723f07532eda" category="paragraph">刪除後，使用者必須在登入時重新配置 MFA。如果使用者只是暫時無法存取其 MFA 設備，他們可以使用設定 MFA 時儲存的恢復代碼登入。</block>
   <block id="e0703bf0ce92b0a162c7173416f52e67" category="paragraph">如果他們沒有恢復代碼，請暫時停用 MFA 以允許登入。當您為使用者停用 MFA 時，它只會停用八個小時，然後自動重新啟用。在此期間，用戶無需 MFA 即可登入一次。八小時後，使用者必須使用 MFA 才能登入。</block>
   <block id="5882327647586429810441bede064892" category="admonition">若要管理使用者的多重身分驗證，您必須擁有與受影響使用者位於相同網域的電子郵件地址。</block>
   <block id="4c03cc49e70b34418f2385277d266d90" category="list-text">從「成員」頁面，導覽至表中的成員，選擇<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>然後選擇*管理多重身份驗證*。</block>
@@ -3731,11 +3669,8 @@
   <block id="2fe6c9d572351b2d4e0b387a62bdf1e2" category="summary">透過將資源與特定專案和資料夾關聯來管理組織的資源層次結構。</block>
   <block id="0b99b236783ea746ceb31085990e767d" category="paragraph">當您將成員與您的組織關聯時，您會在組織、資料夾或專案層級提供權限。為了確保這些成員有權存取正確的資源，您需要透過將資源與特定專案和資料夾關聯來管理組織的資源層次結構。  _資源_是控制台已管理或知道的儲存系統或控制台代理程式。</block>
   <block id="98ca801aa8933a24531043c30c475e2e" category="section-title">查看組織中的資源</block>
-  <block id="19c483b3cc14239dca4a799e0b75956f" category="paragraph">您可以查看與您的組織相關的已發現和未發現的資源。未發現的資源是已識別但尚未新增至控制台的儲存資源。</block>
-  <block id="90e05d9e1b72166781e95442b46203c0" category="admonition">注意：資源頁面不包括Amazon FSx for NetApp ONTAP資源，因為使用者無法將它們與角色關聯。在系統頁面或工作負載中查看它們。</block>
   <block id="95c9ea5440ca8b54a3d3dae8e1d1f492" category="list-text">選擇*資源*。</block>
   <block id="a5d2efab4d8509840f3f76fe8f0a57c1" category="list-text">選擇*進階搜尋和過濾*。</block>
-  <block id="3d1bc41342a56d581edf9d1765f01a0b" category="list-text">使用任何可用選項來尋找​​您正在尋找的資源：</block>
   <block id="48ca2619b5dca392dc3969df94469cf3" category="list-text">*按資源名稱搜尋*：輸入文字字串並選擇*新增*。</block>
   <block id="b2efca9e0863336ee0d7aa6af1771c24" category="list-text">*平台*：選擇一個或多個平台，例如 Amazon Web Services。</block>
   <block id="e6d1209910233e075e359b7fdb3892a8" category="list-text">*資源*：選擇一個或多個資源，例如Cloud Volumes ONTAP。</block>
@@ -3761,10 +3696,8 @@
   <block id="0d8f80667cd7bc86a6f6ea26c12d18b9" category="paragraph">以下範例顯示了與一個項目關聯的資源。</block>
   <block id="a46cbe82e9adff7ecc82d6eadb58aa97" category="inline-image-macro">資源詳細資訊頁面的螢幕截圖，顯示與組織下屬專案關聯的資源。</block>
   <block id="7cadbb5f400f149f938a910df5c5cb0d" category="paragraph"><block ref="7cadbb5f400f149f938a910df5c5cb0d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7e77a0d272b850a5b082c2fed060594a" category="admonition">如果您需要確定哪些組織成員有權存取該資源，您可以<block ref="7b75e3c2af3e500cfb657c057dbc7c5e" category="inline-link-macro-rx"></block>。</block>
   <block id="02daa88c7c6888cad8b055624d764072" category="section-title">從資料夾或項目中刪除資源</block>
   <block id="101c2fc402187ad7ad2fa40cf25d35b2" category="paragraph">若要從資料夾或項目中刪除資源，您需要刪除資料夾或項目與資源之間的關聯。當您刪除關聯時，它會阻止成員管理資料夾或專案中的資源。</block>
-  <block id="0ca2d7cec61f3ffe672d4b8efae574f3" category="admonition">若要從整個組織中刪除已發現的資源，請從「*系統*」頁面中刪除該系統。</block>
   <block id="a55ecc4bf928da93f86f41bb1fa482cc" category="inline-image-macro">垃圾桶的圖標</block>
   <block id="4fc3c6ef596dbec8a3af38f79c84cf02" category="list-text">對於要刪除資源的資料夾或項目，選擇<block ref="5aa3fbfa4a030d3d0fb7677a91fd2eba" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ece216a1c354b015ef19084b08f5e92f" category="list-text">選擇“*刪除*”確認您要刪除關聯。</block>
@@ -3772,11 +3705,9 @@
   <block id="cf3b3d414366a26f5b43041b5056897c" category="summary">在NetApp Console中，您可以根據使用者需要執行的操作和位置為使用者指派角色。</block>
   <block id="14750286cb2a5a61bf62b65d9b9d2112" category="doc">使用角色管理使用者對NetApp Console資源的訪問</block>
   <block id="5f24947dab075e3413b914aa36df023a" category="paragraph">在控制台中，您可以根據使用者需要做什麼以及在哪裡為使用者指派角色。</block>
-  <block id="61258c54d2a7f09077a72a4eeb56874d" category="paragraph">根據您的 IAM 策略為使用者指派角色以增強安全性。  IAM 角色確保使用者只擁有所需的存取權限。</block>
   <block id="3908f1e42aa5b81b8316befd30a6965d" category="inline-link-macro">了解如何使用資料夾和項目來組織您的資源。</block>
   <block id="ecdeffad8e53c7c9b1fb61f02a3cb5d1" category="admonition">請記住，您不能直接授予對資源的存取權限。首先將資源分配給專案。在指派使用者存取權限之前，請考慮設定資源層次結構。<block ref="122b4639308e055d5bdfeb8a65e1794d" category="inline-link-macro-rx"></block></block>
   <block id="34025ad60edecbf8612a359edaca8684" category="section-title">查看指派給成員的角色</block>
-  <block id="aa71b6597d142a17d9d21782a5fd883b" category="paragraph">當您為組織新增成員時，系統會提示您為其指派角色。您可以向成員驗證他們目前被指派了哪些角色。</block>
   <block id="317e1169ce13ad8808ce0775bf310cef" category="paragraph">如果您具有_資料夾或專案管理員_角色，則該頁面將顯示組織中的所有成員。但是，您只能查看和管理您擁有權限的資料夾和專案的成員權限。<block ref="c691e2b9b4224ed90bb4f1f11059b372" category="inline-link-macro-rx"></block> 。</block>
   <block id="12815307393fa19648b391d49b4282e4" category="section-title">為成員新增存取角色</block>
   <block id="9a9b4b286a389bc98dfdeb3214c134a1" category="paragraph">您通常在為組織新增成員時指派角色，但您可以隨時透過刪除或新增角色來更新它。</block>
@@ -3784,7 +3715,6 @@
   <block id="7a43b6f649f8cf73a12056888057076b" category="paragraph">您的存取角色策略應與您組織NetApp資源的方式保持一致。</block>
   <block id="20c36cd6c77d407b6118c77ebe403934" category="admonition">被指派了組織管理員角色的成員不能被指派任何其他角色。他們已經擁有整個組織的權限。具有資料夾或專案角色的成員不能被指派資料夾或專案中他們已經具有該角色的任何其他角色。這兩個角色都提供對其被指派範圍內的所有服務的存取權限。</block>
   <block id="068135177d9d1843118236d5f10dc5b7" category="section-title">更改成員的指定角色</block>
-  <block id="88ccee89efe2b556b8fcc7b01ae63c9f" category="paragraph">如果您需要調整使用者的存取權限，您可以變更成員指派的角色。</block>
   <block id="4edfdeb74f014e9408efa692c71a9d2e" category="admonition">必須為使用者指派至少一個角色。您無法刪除使用者的所有角色。如果您需要刪除所有角色，則必須從組織中刪除該使用者。</block>
   <block id="2be01e6baa22b9b0a4f0a2c054fe7289" category="summary">如果需要，您可以變更NetApp Console組織的名稱。</block>
   <block id="1920da3586c2e2872f88b02997c971c3" category="doc">組織和專案 ID</block>
@@ -3901,7 +3831,6 @@
   <block id="80308b1bd5b2d563350bbb74c701710f" category="section-title">步驟 3：設定網絡</block>
   <block id="80196471f6a2f8c78a5455f640296b19" category="paragraph">確保您打算安裝控制台代理的網路位置支援以下要求。滿足這些要求使控制台代理程式能夠管理混合雲環境中的資源和流程。</block>
   <block id="c39c5a4e7fd2ccefcd663038795421ed" category="section-title">步驟 4：設定控制台的 AWS 權限</block>
-  <block id="103049e74e847c769a97fe33d5d46712" category="paragraph">您需要使用下列選項之一向NetApp Console提供 AWS 權限：</block>
   <block id="168b098cb315f9dde326e5fcaa738ac3" category="list-text">選項 1：建立 IAM 原則並將政策附加到可與 EC2 執行個體關聯的 IAM 角色。</block>
   <block id="ab285b81ee6660fa09c5ad9eb7eb49a6" category="list-text">選項 2：向控制台提供具有所需權限的 IAM 使用者的 AWS 存取金鑰。</block>
   <block id="380b440efe1d4d54168900055656ba0c" category="paragraph">依照步驟準備控制台的權限。</block>
@@ -3918,8 +3847,6 @@
   <block id="b3175a7a8c2ba73aad02f57026632d9b" category="inline-link">了解如何透過NetApp ConsoleP 管理 S3 儲存桶</block>
   <block id="cb0908023b296d7d49436ab6f97e1722" category="paragraph">如果您在建立控制台代理程式的相同 AWS 帳戶中擁有 Amazon S3 儲存桶，您將看到 Amazon S3 儲存系統自動出現在 *系統* 頁面上。<block ref="e807fcbb34e8f3cdd2199d0fc61d445e" category="inline-link-rx"></block></block>
   <block id="c38f7847f04d50ab6fcbc66333ed1e25" category="section-title">步驟 6：提供對NetApp Console的權限</block>
-  <block id="abdfcd483825370c001a0b749d453dc4" category="paragraph">現在您已經安裝了控制台代理，您需要為控制台提供您先前設定的 AWS 權限。提供權限可讓控制台代理程式能夠管理 AWS 中的資料和儲存基礎架構。</block>
-  <block id="5a52914d8d01c8e84d9a721dbf01a42b" category="paragraph">將您先前建立的 IAM 角色附加到控制台代理 EC2 執行個體。</block>
   <block id="0ceede4f3f6785079b421e3b767884a7" category="paragraph">前往<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block>開始使用控制台代理。</block>
   <block id="478934e77aeec11eff664bb1d6c547a8" category="paragraph">向控制台提供具有所需權限的 IAM 使用者的 AWS 存取金鑰。</block>
   <block id="0950c5af4754899d3da4c72fa2993986" category="list-text">確保目前在控制台中選擇了正確的控制台代理。</block>
@@ -4073,7 +4000,6 @@
   <block id="702a1eca6754acddde443fd4cb404a99" category="doc">透過NetApp Console在 Google Cloud 中建立控制台代理</block>
   <block id="4b4904242b46a5c5de838c3bf8de1c06" category="paragraph">您可以從控制台在 Google Cloud 中建立控制台代理程式。您需要設定網路、準備 Google Cloud 權限、啟用 Google Cloud API，然後建立控制台代理。</block>
   <block id="05e4e55b4a1ded174cd4d080db80632c" category="paragraph">設定網路以確保控制台代理可以管理資源，並連接到目標網路和出站網路存取。</block>
-  <block id="47bf230a49ecee72c3b36a37f9758812" category="paragraph">\ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta https://www.googleapis.com/storage/v1 https://storage.googleapis.com/storage/v1 https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/projects</block>
   <block id="1ac278db12cb6e29a5837e46be7230d6" category="paragraph">建立控制台代理程式後實現此網路需求。</block>
   <block id="367fc1a15d8d93ee5b98ec9fb0626a3f" category="section-title">步驟 2：設定權限以建立控制台代理</block>
   <block id="770085896a0aaa47d2b2a21de5e713fe" category="paragraph">在從控制台部署控制台代理程式之前，您需要為部署控制台代理程式 VM 的 Google 平台使用者設定權限。</block>
@@ -4162,7 +4088,6 @@
   <block id="d7134f839db72245fe3e0d8d0bfce146" category="section-title">步驟 4：設定控制台代理的權限</block>
   <block id="a0e4b6848b26b9f671f19438b07d341b" category="section-title">步驟 5：設定共享 VPC 權限</block>
   <block id="ed699bb1e56dba725718c6f093e80619" category="section-title">第 6 步：啟用 Google Cloud API</block>
-  <block id="69f380f2398b7565bd53d007caa73472" category="paragraph">在 Google Cloud 中部署Cloud Volumes ONTAP系統之前，必須啟用多個 Google Cloud API。</block>
   <block id="e8e253336558188ed5f5c2ffa5852d13" category="section-title">步驟 7：安裝控制台代理</block>
   <block id="99564e0e630cf4a642f3e276f6caacab" category="inline-link">了解如何透過NetApp Console管理 Google Cloud Storage</block>
   <block id="22a243e5f9859fe3d0fcb5d054ec0f43" category="paragraph">如果您在建立控制台代理程式的相同 Google Cloud 帳戶中擁有 Google Cloud Storage 儲存桶，您將看到 Google Cloud Storage 系統自動出現在 *Systems* 頁面上。<block ref="f4a6f159093eba0ffefdac7ab4ea2c30" category="inline-link-rx"></block></block>
@@ -4297,7 +4222,6 @@
   <block id="25ed61080ee73d701a5ba6feef931050" category="paragraph"><block ref="25ed61080ee73d701a5ba6feef931050" category="inline-link-macro-rx"></block></block>
   <block id="8ac340f924d72696326df51a32dbdee5" category="inline-link">Azure 政府區域的 Azure 市集頁面</block>
   <block id="cc337b5a93c54f8a59d4731866297bf2" category="list-text"><block ref="cc337b5a93c54f8a59d4731866297bf2" category="inline-link-rx"></block></block>
-  <block id="ece4476b2389e3e8eff9a96e00d892b7" category="list-text">*公用 IP*：如果您想要將公用 IP 位址與控制台代理程式 VM 一起使用，則該 IP 位址必須使用基本 SKU 以確保控制台使用此公用 IP 位址。</block>
   <block id="92fa0fc1299e55c066d0a19cd22b4e7b" category="list-text">*身分*：在*管理*下，選擇*啟用系統指派的託管身分*。</block>
   <block id="b99469b29b000bd070b5f230caa3b887" category="paragraph">Azure 使用指定的設定部署虛擬機器。虛擬機器和控制台代理軟體應在大約五分鐘內運作。</block>
   <block id="8f40f6b9cda905fc9a83217435e6b940" category="open-title">手動安裝</block>
@@ -4307,7 +4231,6 @@
   <block id="dff3d2b179cc5b62a2e772cc8404f515" category="section-title">第 2 步：設定NetApp Console</block>
   <block id="673e7aa51056c2e179dd721d8108e744" category="paragraph">首次存取控制台時，系統會提示您為控制台代理程式選擇一個組織，並需要啟用受限模式。</block>
   <block id="94c608264d0740c1539084d4a2415780" category="paragraph">設定控制台代理的人員必須使用尚不屬於控制台組織的登入名稱登入控制台。</block>
-  <block id="09bf19e6ad387b1e458c5178d9016692" category="paragraph">如果您的登入資訊與其他組織相關聯，則您需要使用新的登入資訊進行註冊。否則，您將不會在設定畫面上看到啟用受限模式的選項。</block>
   <block id="e698c1fd9cae8de09d0fab313c0adf0b" category="list-text">從與控制台代理程式執行個體有連線的主機開啟 Web 瀏覽器，然後輸入您安裝的控制台代理程式的下列 URL。</block>
   <block id="2f8c3ab071a9ded2677148c9c94dcab3" category="list-text">註冊或登入NetApp Console。</block>
   <block id="7c129580ce3fdaedbab5835e1c6efc59" category="list-text">登入後，設定控制台：</block>
@@ -4319,7 +4242,6 @@
   <block id="e9a22dbe949aceeeba0832b4920f12de" category="paragraph">如果您在政府區域部署了控制台代理，則該核取方塊已啟用且無法變更。這是因為限制模式是政府區域唯一支持的模式。</block>
   <block id="34ef49f2003b645a0f1b248a8e158945" category="paragraph">控制台代理現在已安裝並設定到您的控制台組織。所有使用者都需要使用控制台代理執行個體的 IP 位址存取控制台。</block>
   <block id="cb763b4641bf6e6767c99d379a3c59aa" category="paragraph">向控制台提供您先前設定的權限。</block>
-  <block id="0d90b7023964fcc3c91d83c1e214d24e" category="paragraph">如果您從 Azure 市集部署了控制台代理，或手動安裝了控制台代理軟體，則需要提供先前設定的權限。</block>
   <block id="9ec50c85d379863701d46321169dc12e" category="paragraph">如果您從 AWS Marketplace 部署了控制台代理，則這些步驟不適用，因為您在部署期間選擇了所需的 IAM 角色。</block>
   <block id="d8325912caeaba85aaefdb17eacaea8d" category="inline-link-macro">了解如何準備雲端權限</block>
   <block id="1b9eb4a1347f52519d9e7d0e26300a53" category="paragraph"><block ref="01cf67ff20127008355664826b726767" category="inline-link-macro-rx"></block> 。</block>
@@ -4905,7 +4827,6 @@
   <block id="a6c767dcba3869189c00afe8384d49d1" category="inline-link-macro">NetApp知識庫。</block>
   <block id="c5210c54ffa8d650855e8cf9ce855ee5" category="paragraph">如果您有NetApp支援網站帳戶，您也可以查看<block ref="b7101d8626a4e0032aefbb96762d5e1f" category="inline-link-macro-rx"></block></block>
   <block id="980194f6da5ee72bc5d20ee6e316a73f" category="section-title">常見錯誤訊息和解決方法</block>
-  <block id="ece4155d60ae4e8dfd6eeb423c8526dd" category="paragraph">下表列出了常見的錯誤訊息及其解決建議：</block>
   <block id="e20cbb947afcf84cf58de1358ee1068d" category="cell">錯誤訊息</block>
   <block id="b72ac10807b29c77f5b7e4b80ea40414" category="cell">解釋</block>
   <block id="a18bb1dfc38a5f8bdbcc37d7ddf92320" category="cell">該怎麼辦</block>
@@ -4926,7 +4847,6 @@
   <block id="41dd69dc7c6b4f3a269a4e72a6eedce5" category="list-text">檢查 OCCM 容器是否正在運作並正常運作。</block>
   <block id="2fa1ea75814dc1fdfdc37b059a82eaea" category="paragraph">無法載入代理的支援資訊。</block>
   <block id="f741099adb576ac2cebaca78923cb39c" category="paragraph">如果代理無法存取您的支援帳戶，則會顯示此訊息。</block>
-  <block id="8c301b35d1707a20114f884ea75e3e4f" category="paragraph">* *。</block>
   <block id="f1250585f9c248976b034c285b91672c" category="paragraph">使用以下命令之一來驗證您的控制台代理。所有服務的狀態都應為「正在運作」。如果不是這種情況，請聯絡NetApp支援。</block>
   <block id="0960e06fac3e48e6403802fb4aa8fbde" category="paragraph">有關訪問控制台代理診斷的詳細信息，請參閱以下主題：</block>
   <block id="a25b82d4083e9054d77530a1b1771861" category="inline-link-macro">檢查控制台代理程式狀態（適用於 Linux 主機部署）</block>
@@ -4945,10 +4865,6 @@
   <block id="3b2256fce45383ccea4ebfc8f456dcf9" category="section-title">控制台代理安裝問題</block>
   <block id="2cca0346972b04930650bf988ebae1ab" category="paragraph">如果安裝失敗，請查看報告和日誌以解決問題。</block>
   <block id="f8a1a17cd9b62f1fc12e61715a042238" category="section-title">停用手動安裝的設定檢查</block>
-  <block id="849f51f76842f376ad2d4b11f1383701" category="paragraph">有時您可能需要停用在安裝期間驗證出站連線的設定檢查。例如：</block>
-  <block id="763a64c54c72ab3083be417c5fc344f7" category="list-text">在政府雲端環境中手動安裝代理程式時，您需要停用設定檢查，否則安裝將失敗。</block>
-  <block id="09791c89411350b678fc1839765eab56" category="list-text">如果您繼續使用先前的端點清單進行代理程式升級，您可能還需要停用這些檢查。</block>
-  <block id="d904cff226021034938fcc2411d0007a" category="paragraph">您可以透過在 _com/opt/application/netapp/service-manager-2/config.json_ 檔案中設定 _skipConfigCheck_ 標誌來停用設定檢查。預設情況下，此標誌設定為 false，且設定檢查會驗證代理程式的出站存取。將此標誌設為 true 以停用檢查。在完成此步驟之前，您應該熟悉 JSON 語法。</block>
   <block id="2b7c431e56422c4f2f72e4103ac272de" category="paragraph">若要重新啟用設定檢查，請使用下列步驟並將_skipConfigCheck_標誌設為false。</block>
   <block id="e67f6596d19ecc5846a8d78e917daf2d" category="list-text">以 root 身分或使用 sudo 權限存取控制台代理主機。</block>
   <block id="d0ec983e93943635bce3349bbdcbf79e" category="list-text">建立 _/opt/application/netapp/service-manager-2/config.json_ 檔案的備份副本，以確保您可以還原變更。</block>
@@ -4956,13 +4872,6 @@
   <block id="e5a62c3c41fbb902bf1696d9b5ee861e" category="list-text">編輯 _/opt/application/netapp/service-manager-2/config.json_ 檔案並將 _skipConfigCheck_ 標誌的值變更為 true。</block>
   <block id="9e3e4c61d70076bf677edfc157a67761" category="list-text">儲存您的文件。</block>
   <block id="92ae5258778c2fa8ece2b13c88ec0853" category="list-text">透過執行以下命令重新啟動服務管理員 2 服務：</block>
-  <block id="662f9a338a22b54f53c272273a014b79" category="section-title">用於升級的端點安裝失敗</block>
-  <block id="433bf8d69523b6c45bd3e9074176c8e4" category="paragraph">如果您仍在使用<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block>用於代理升級，驗證失敗並出現錯誤。為避免這種情況，請在安裝到 VCenter 時取消選取 *驗證代理程式配置* 複選框或跳過配置檢查。</block>
-  <block id="b223d695dc0a3cfeb346189c2e0da719" category="inline-link-macro">當前端點</block>
-  <block id="6ff810ad8ac9135f58145c78533c4ad6" category="inline-link-macro">了解如何更新您的端點</block>
-  <block id="1d9f2c477941ad369756e011cc9d7f3f" category="paragraph">NetApp建議更新防火牆規則以允許訪問<block ref="4eae8a7245c9e90ebe2b3731e8a0c4a1" category="inline-link-macro-rx"></block>儘早。<block ref="81e8d12b12d5dbcaca843cd6eacbf7e1" category="inline-link-macro-rx"></block> 。</block>
-  <block id="651580bc14c37a80ea60b4945de22424" category="paragraph">請務必驗證唯一的錯誤是否與前面的端點有關：</block>
-  <block id="5142e35e06a4059a377c9fc09d2a174e" category="paragraph">如果存在其他錯誤，您需要先解決它們，然後才能繼續。</block>
   <block id="efc08f7ae120eb6ea0a122c03f686581" category="section-title">與NetApp支援部門合作</block>
   <block id="d0bc8404c6e69b4ebc8cadb9768f40e3" category="paragraph">如果您無法解決控制台代理的問題，您可能需要聯絡NetApp支援。  NetApp支援人員可能會要求您提供控制台代理 ID，或者如果他們還沒有控制台代理程式日誌，則要求您將控制台代理程式日誌傳送給他們。</block>
   <block id="7a4c595a1d52f82afae3ef326e950386" category="section-title">尋找控制台代理 ID</block>
@@ -5376,10 +5285,6 @@
   <block id="63355a9119047d0bb5216fe09819ed76" category="admonition">您無法編輯與控制台代理實例或Amazon FSx for ONTAP實例關聯的實例設定檔的憑證。您只能重新命名 FSx for ONTAP實例的憑證。</block>
   <block id="f2a10e059f22d2e4e590bf375629f82c" category="list-text">在*組織憑證*頁面上，選擇一組憑證的操作選單，然後選擇*編輯憑證*。</block>
   <block id="76f673856509040ebe6f53809741b891" category="admonition">您無法刪除與控制台代理程式關聯的實例設定檔的憑證。</block>
-  <block id="fe0e7233937189ab2b2856c5f3bbfefc" category="doc">將控制台代理程式憑證與您的 Google Cloud 訂閱關聯</block>
-  <block id="be6d6ead122d68c4f8ddf176dfa23437" category="paragraph">在 Google Cloud 中建立控制台代理程式時，您可以使用相關憑證訂閱NetApp Intelligent Services（包括Cloud Volumes ONTAP）和NetApp資料服務。您必須將訂閱與您想要使用其憑證來支付服務的代理商關聯起來。</block>
-  <block id="1e494b5627bead907a00e4ea2064baa4" category="paragraph">用新的市場訂閱取代目前的市場訂閱會更新現有和新的Cloud Volumes ONTAP系統的訂閱。</block>
-  <block id="0e0ee6c108e2775832f3d4fec4e5c9ab" category="paragraph">透過 Google Cloud Marketplace 訂閱NetApp資料服務可能會因權限不正確或錯過重定向到控制台而失敗。如果發生這種情況，請按照以下步驟完成訂閱程序。</block>
   <block id="743026d6272c7eac4898bf78c6a0ec00" category="paragraph">控制台需要透過 AWS 進行身份驗證，然後才能在您的 VPC 中部署控制台代理程式。您可以選擇以下身份驗證方法之一：</block>
   <block id="3c3077c55d74474a96914d3933e99034" category="paragraph">無論選擇哪種方式，第一步都是建立 IAM 策略。此原則僅包含從控制台啟動 AWS 中的控制台代理程式所需的權限。</block>
   <block id="a6ff8031b9b97942fbb164a958bb15cb" category="inline-link-macro">查看控制台代理本身所需的權限</block>
@@ -5399,7 +5304,6 @@
   <block id="b40610ec83466e7c103049d70ad18892" category="inline-link-macro">審查代理要求</block>
   <block id="8a62551759227881974703cf10bfc946" category="paragraph"><block ref="e2790838ef7051b1907224142bc33625" category="inline-link-macro-rx"></block>。</block>
   <block id="446a691d3cf6457cb60610b81794fdbc" category="paragraph">AWS 使用指定的設定啟動軟體。控制台代理大約需要五分鐘即可部署。</block>
-  <block id="118b5697b68c5f4ada51d65dffac2674" category="paragraph">如果您使用標準 SKU IP 位址，則控制台將使用控制台代理程式的_私有_ IP 位址，而不是公用 IP。如果您用於存取控制台的機器無法存取該私人 IP 位址，則控制台中的操作將會失敗。</block>
   <block id="d1cb423c9810b1ddd65eea821845fff2" category="admonition">若要啟動可疑使用者活動偵測，您必須具有控制台組織管理員角色。</block>
   <block id="c563d78603e1e09616c6c043a19061ba" category="cell">*4.0.0 以上版本的端點*</block>
   <block id="1463a95efc33a52765f03569e1e39a10" category="cell">*目的*</block>
@@ -5418,7 +5322,6 @@
   <block id="30c4239755a3fa7fe7952fafec8297dd" category="paragraph">用於日常營運。</block>
   <block id="533560d1d92ef216fc2f7047b132da5b" category="list-text">滿足 CPU 和 RAM 要求的實例類型。  NetApp推薦使用 t3.2xlarge。</block>
   <block id="5218e689f8059e737f702b1608b1d2aa" category="list-text">滿足 CPU 和 RAM 要求的實例類型。  NetApp推薦 Standard_D8s_v3。</block>
-  <block id="8cf6ae40c51e78159e689e6172cff9c8" category="list-text">滿足 CPU 和 RAM 要求的實例類型。  NetApp推薦 n2-standard-8。</block>
   <block id="9588595fbe3fa7f47431af3c53dbfa23" category="list-text"><block ref="9588595fbe3fa7f47431af3c53dbfa23" category="inline-link-rx"></block></block>
   <block id="cb4f6677094ab1c46678dcab5e428e83" category="summary">您需要確保控制台和您安裝的任何代理程式都具有正確的網路存取權限才能正常運作。</block>
   <block id="08c556d51e4f6c65d7b6fa418e7669be" category="doc">3.9.55 及以下版本需要網路訪問</block>
@@ -5455,7 +5358,6 @@
   <block id="7d04a8adb8b138151b42f809761295c7" category="cell"><block ref="7d04a8adb8b138151b42f809761295c7" category="inline-link-macro-rx"></block></block>
   <block id="a5e170ce8c9d104f0b20e67e54257be5" category="paragraph">如果您的網路需要代理來存取互聯網，則需要新增代理資訊。您可以在安裝過程中新增明確代理程式。--proxy 和 --cacert 參數是可選的，系統不會提示您新增它們。如果您有明確的代理伺服器，則需要以所示方式輸入參數。</block>
   <block id="247a6a0ee254b2ff09347b727ee46227" category="inline-link-macro">了解代理維護控制台</block>
-  <block id="ed63faa45dd9543220a2183fa0e02b97" category="admonition">如果要設定透明代理，可以在安裝完成後進行設定。 <block ref="6d6c38ccb358695b7ab850225fcd83aa" category="inline-link-macro-rx"></block></block>
   <block id="fbcd7669a7a0c8cc9053c7c78029654b" category="admonition">手動安裝控制台代理程式時，無法為透明代理伺服器設定憑證。如果需要為透明代理伺服器設定證書，則必須在安裝後使用維護控制台。詳細了解<block ref="d3f69ee6935d5f5f8542f4da69ac2bb6" category="inline-link-macro-rx"></block>。</block>
   <block id="334ed7efb24267c8a9d5f60a214ee627" category="list-text">安裝 podman-compose 套件 1.5.0。</block>
   <block id="83291537b9ae75a78c7add56b73a4688" category="list-text">如果使用的是 Red Hat Enterprise Linux 8：</block>
@@ -5464,11 +5366,9 @@
   <block id="e32e1b9613d2e086e1fc46ae7489620c" category="paragraph">4.1.0 版本適用於標準模式和限制模式。</block>
   <block id="650940dddaeb353d547fc2674ba4d35b" category="paragraph-title">重命名代理程式狀態指示器</block>
   <block id="9722491a4236a9be86f414fa5b3eebb8" category="paragraph">將控制台代理程式的狀態指示器從 *Active* 和 *Inactive* 重新命名為 *Connected* 和 *Disconnected*，使其用途更加明確。</block>
-  <block id="d9e7da7d4b9cc9086a7ab3a5a270f7da" category="paragraph-title">支援 Red Hat Enterprise Linux (RHEL) 9.6 和 Podman 5.4.0</block>
   <block id="2749b80160d80f9500fa8b5d5b4da1ba" category="section-title">NetApp Console管理</block>
   <block id="a0d96dec6c85f67c2563063cec22ac66" category="paragraph">本次發布包含以下內容：</block>
   <block id="ac740509743c941164fb7e88fc8b768e" category="paragraph-title">NetApp Console通知的新電子郵件地址</block>
-  <block id="3ded9fa2f8cf197bdf563d5509101e3a" category="paragraph">發送NetApp Console通知的電子郵件地址已從 *service@console.bluexp.netapp.com* 變更為 *service@console.netapp.com*。NetApp建議更新所有電子郵件規則，允許 *service@console.netapp.com* 發送郵件，以確保您繼續收到NetApp Console電子郵件通知。</block>
   <block id="e079e06be34bd849355b3a013a28ade3" category="section-title">AWS 控制台代理 VM 詳細信息</block>
   <block id="0759ecf4e00f5c23dd6fcb46adfd5f73" category="section-title">Azure 控制台代理 VM 詳細信息</block>
   <block id="a284e20714904b80b3bc57b894975967" category="section-title">Google Cloud 控制台代理 VM 詳細信息</block>
@@ -5550,7 +5450,6 @@
   <block id="4a882eeef3e6c50d3bb4d82f84d57379" category="cell">計算防火牆刪除</block>
   <block id="29dc352467775fda0809adc424204117" category="cell">計算防火牆</block>
   <block id="dbfb0e7e24eb5b7c01752edd4c67baa0" category="cell">計算防火牆列表</block>
-  <block id="4a1e6993ee92e55c56f575a1285bdc17" category="cell">compute.globalOperations.get。</block>
   <block id="d8bd74ea171478953e02b86e43191839" category="cell">compute.images.get</block>
   <block id="a2f8719fc4688979942132e6c83c9b02" category="cell">compute.images.getFromFamily</block>
   <block id="0c47c066c21579629745163c6286259e" category="cell">計算圖像列表</block>
@@ -5637,26 +5536,333 @@
   <block id="a4421516ae043bd916b22750fd43a081" category="list-text">計算子網路使用</block>
   <block id="e308cbdddf34fb65f938301ff80d4538" category="list-text">compute.subnetworks.useExternalIp</block>
   <block id="bc803c81454ea9df76e9060827a7bc53" category="list-text">compute.instances.addAccessConfig</block>
-  <block id="f14cdbbd5f80553660910a0a1219e605" category="section-title">2025年11月26日</block>
   <block id="3f7540ad5f30cb6539b7476d85d2f608" category="paragraph">權限已更新，以使其用途更加清晰，但未添加或刪除任何權限。新增三列，分別指示每個權限是用於部署、日常操作或刪除。除此之外，還有一些權限根據其在NetApp Data Classification和NetApp Backup and Recovery的用途進行了劃分。</block>
-  <block id="babdf7713555e95437e95d0dc578e050" category="list-text">*災難復原管理員*：執行任何動作。</block>
-  <block id="756062c061caa73b104caf35ad95abd9" category="list-text">*災難復原故障轉移管理員*：執行故障轉移和遷移。</block>
-  <block id="99c828ca537070159318271d66dda996" category="list-text">*災難復原應用程式管理員*：建立複製計劃。修改複製計劃。開始測試故障轉移。</block>
-  <block id="10bfeabec8da9ffb3c60c40834621a5d" category="list-text">*災難復原檢視器*：僅查看資訊。</block>
-  <block id="f66b3ba81642886354f66476eebc171c" category="cell">允許使用者查看NetApp Data Classification掃描結果。具有此角色的使用者可以查看合規性資訊並產生他們有權存取的資源的報告。這些使用者無法啟用或停用磁碟區、儲存桶或資料庫模式的掃描。資料分類沒有管理員角色。</block>
-  <block id="9320804217d782369dccfe3cfe90fd29" category="inline-link">資料分類文檔</block>
-  <block id="81584a5aa440695d6dd39594311c7b2d" category="list-text"><block ref="81584a5aa440695d6dd39594311c7b2d" category="inline-link-rx"></block></block>
-  <block id="d1047a2a7e1c25fc1d5cbd4c2dea5954" category="paragraph">具有*組織管理員*或*資料夾或專案管理員*角色的使用者有責任將角色指派給其他使用者。您可以根據專案或資料夾指派存取角色。例如，您可以為使用者指派一個專案的勒索軟體復原管理員角色，並為另一個專案指派SnapCenter管理員角色。或者，如果使用者需要特定資料夾內所有項目的勒索軟體復原管理員角色，您可以為該使用者在資料夾層級授予此角色。</block>
-  <block id="4c56531120cb5dd49448926a4a5fd1fd" category="paragraph">您可以為合作夥伴使用者指派以下角色：</block>
-  <block id="c291dac152d909d3eb9020000be43137" category="inline-link-macro">資料分類檢視器</block>
-  <block id="c7e28713a896e9488b74e428eb025ad0" category="list-text"><block ref="c7e28713a896e9488b74e428eb025ad0" category="inline-link-macro-rx"></block></block>
-  <block id="08324e7c6f4c191ebd76163dd3616c9a" category="list-text"><block ref="08324e7c6f4c191ebd76163dd3616c9a" category="inline-link-macro-rx"></block></block>
-  <block id="4feead535ae6dd1e4ba78516194fe4b1" category="list-text"><block ref="4feead535ae6dd1e4ba78516194fe4b1" category="inline-link-macro-rx"></block></block>
-  <block id="6131a90681ddf9c2c7134fa754e90d4e" category="paragraph">安裝並設定 Podman：</block>
-  <block id="68d20f859d04971de5875c315c929e92" category="list-text">安裝對應的 podman-compose 包</block>
-  <block id="5448bfba9b19b99ebf560293cc6b89ab" category="list-text">請確認您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI。</block>
-  <block id="bf58c65de2201356b331dfea5e7eb976" category="paragraph">從 Red Hat Enterprise Linux 軟體倉庫取得 Podman。</block>
-  <block id="2632bb82f2d43ffb72d31ea06ed68352" category="list-text">安裝 EPEL 以取得 podman-compose。</block>
-  <block id="3c7d277b4a6a1367e3f2567411648df9" category="paragraph">請依照以下步驟安裝支援的 Docker Engine 版本。請勿安裝最新版本，因為主機不支援該版本。</block>
   <block id="18ecbdaa6bb0f123dda150b973bd53b7" category="list-text">如果使用的是 Red Hat Enterprise 9.1 至 9.6 版本：</block>
+  <block id="2f78cc1ceedbe872d890b3b087731dee" category="paragraph">| Amazon FsX for NetApp ONTAP：</block>
+  <block id="fccc45024c0efe519c08e43bb1bd4c5f" category="list-text">api.workloads.netapp.com</block>
+  <block id="5e57ad0482de1c13a4a285a6101f6c13" category="paragraph">| 基於 Web 的控制台透過此端點與 Workload Factory API 進行交互，以管理和操作基於ONTAP 的FSx 工作負載。</block>
+  <block id="d273096b8b8c7966eb2a2fb6ca248366" category="paragraph">| \ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects https://www.googleapis.com/storage/v1 https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \// https://config.googleapis.com/v1/projects</block>
+  <block id="f8cd35bf6f398c2f8c485bfd95309caa" category="list-text">。選擇*測試連線*來測試您的連線。您將被引導至 IdP 伺服器的登入頁面。使用您的身分提供者憑證登入。登入後，返回控制台啟用連線。</block>
+  <block id="61169bbb57ab5c82abb2ac47499153f3" category="list-text">在控制台中，選擇「下一步」以查看摘要頁面。</block>
+  <block id="95d9f0b87c61b5cd1f8c21678ced4a5c" category="list-text">設定通知。</block>
+  <block id="ec811988404f148d3a7f84f040f45531" category="paragraph">您可以選擇七天或三十天。系統會透過電子郵件向具有以下角色的任何使用者發送到期通知，並在控制台中顯示這些通知：超級管理員、組織管理員、聯盟管理員和聯盟檢視者。</block>
+  <block id="88f10db937786a2fa2751961ec03f831" category="list-text">查看聯盟詳細信息，然後選擇“啟用聯盟”。</block>
+  <block id="a59486087b1574debcf33e28dd13ed9f" category="paragraph">啟用聯合身份驗證後，使用者可以使用其企業憑證登入NetApp Console。</block>
+  <block id="15b890fd729e8bd42b01f29b115cdada" category="list-text">雲端基礎架構管理器 API</block>
+  <block id="10cefdd3da771664f7b0150b62c249ed" category="paragraph">以下範例在專案層級建立一個名為「agent」的角色：</block>
+  <block id="1d98a973e28127ca1d5a524c0a65c609" category="paragraph"><block ref="6970de80a07cb67923442f88622aa01f" prefix="" category="inline-code"></block></block>
+  <block id="f84b7166fdd9d73f9025b6ebc8f1a1e2" category="admonition">手動安裝控制台代理程式時，無法為透明代理伺服器設定憑證。如果需要為透明代理伺服器設定證書，則必須在安裝後使用維護控制台。詳細了解<block ref="67604b84b6c55a93968d120e00fd25fc" category="inline-link-macro-rx"></block>。</block>
+  <block id="e6153b5af910bd914558e46567df943b" category="paragraph">安裝後，如果有新版本可用，控制台代理會自動更新。</block>
+  <block id="5f8a3be418076860c7498d8c5d0e14c3" category="list-text">下載控制台代理軟體，然後將其複製到 Linux 主機。您可以從NetApp Console或NetApp支援網站下載。</block>
+  <block id="4775980021a4840f05c457f43800b94a" category="list-text">NetApp Console：前往*代理程式 &gt; 管理 &gt; 部署代理程式 &gt; 本機部署 &gt; 手動安裝*。</block>
+  <block id="06f42bb69fed27c52f7bae78f3878026" category="paragraph">選擇下載代理安裝程式檔案或檔案的 URL。</block>
+  <block id="0501357b97c3d33dc8ef20b31207b3cc" category="list-text">NetApp支援網站（如果您還沒有存取控制台的權限，則需要此網站）<block ref="384f9db5f56c00fd1d970f44502ee5ff" category="inline-link-rx"></block> ，</block>
+  <block id="1619892cf61e304c5a69af0282981660" category="admonition">如果要設定透明代理，可以在安裝完成後進行設定。 <block ref="42ec89ae005e4bc718304f7a7f9af7dd" category="inline-link-macro-rx"></block></block>
+  <block id="f74259191e67bafc8413f9d445c37856" category="list-text">控制台代理需要專用主機。只要滿足以下尺寸要求，任何架構都受支援：</block>
+  <block id="1123fbbce8c7742c0e3dcd6cccd5cce6" category="paragraph">控制台代理需要此空間<block ref="ca905eb4a00d34150573153a09e2e79b" prefix=" " category="inline-code"></block>因為 Podman 或 Docker 的設計初衷就是在這個目錄下建立容器。具體來說，他們將在以下位置建立容器：<block ref="af5045a6e72956f67984a97cd3e8b9da" prefix=" " category="inline-code"></block>目錄和<block ref="2e1a4e3f55001820560b237188c70bc3" prefix=" " category="inline-code"></block>用於 Docker。外部安裝或符號連結不適用於此空間。</block>
+  <block id="1c6e1ba9ff363a7122e316a4b7f2c7e3" category="list-text">如果啟用了 IMDSv2（新 EC2 執行個體的預設設定），請將 PUT 回應跳數限制設為 3。否則，系統會在代理設定期間顯示 UI 初始化錯誤。</block>
+  <block id="328d5228f325395bc3a386f41499640a" category="list-text">滿足 CPU 和 RAM 要求的實例類型。NetApp推薦 n2-standard-8。</block>
+  <block id="36321f8de6704271c20efb18c2788361" category="paragraph">請依照以下步驟安裝和設定 Podman：</block>
+  <block id="e7655ce2e211e4106a4d229011bca18b" category="list-text">安裝 podman-compose 套件版本 1.0.6</block>
+  <block id="cfc9caf6832f568fe347d970af78e108" category="list-text">如果使用 Red Hat Enterprise Linux，請驗證您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI</block>
+  <block id="e822146085e921b554750abcae74cd4a" category="paragraph">您可以從官方 Red Hat Enterprise Linux 儲存庫取得 Podman。</block>
+  <block id="97c0d440ee76e86ece38ee9da4a462cb" category="list-text">如果您的系統上還沒有 EPEL 儲存庫包，請安裝它。</block>
+  <block id="93052470e7c6a20358c8d89c161e4880" category="paragraph">此步驟是必要的，因為 podman-compose 可從 Extra Packages for Enterprise Linux (EPEL) 儲存庫中取得。</block>
+  <block id="657da9022df45645ff2569b61278d3c3" category="paragraph">請依照步驟安裝支援的 Docker Engine 版本。請勿安裝最新版本，因為控制台不支援它。</block>
+  <block id="ae41cdf98d6f24f84727785b0c41cda9" category="paragraph">NetApp將 Canvas 重新命名為 *Systems* 頁面。從「儲存 &gt; 管理」功能表導覽至「系統」頁面。</block>
+  <block id="6f111d20190d5490668e3e0ac2cad5d2" category="paragraph-title">支援 Red Hat Enterprise Linux (RHEL) 9.6 和 Podman 5.4.0</block>
+  <block id="db70fced03768e8735fbdebf7ea67e66" category="paragraph">發送NetApp Console通知的電子郵件地址已從 *service@console.bluexp.netapp.com* 變更為 *service@console.netapp.com*。NetApp建議更新所有電子郵件規則，允許 *service@console.netapp.com* 發送郵件，以確保您繼續收到NetApp Console電子郵件通知。</block>
+  <block id="026970f0ac157044199489d6744c2491" category="doc">控制台代理 4.2.0</block>
+  <block id="7051fe17573689080a1f11b0e88a8603" category="paragraph">4.2.0 版本同時支援標準模式和受限模式。</block>
+  <block id="dfcd07d4790b963532ec4f8f70f184cd" category="paragraph-title">支援 Google Cloud Infrastructure Manager</block>
+  <block id="221dc7db98837c8091cba0d42f55b28d" category="inline-link-macro">雲端部署管理器</block>
+  <block id="e7858dcbf9687c88e071775eb4ee07ea" category="paragraph">NetApp現在使用 Google Cloud Infrastructure Manager (IM) 而不是 Google Cloud Deployment Manager 來部署代理程式和管理 Google Cloud 中的代理程式。做出此項更改是因為谷歌將棄用此功能。<block ref="9574f21b6b64ac1c3366333a9bb489f6" category="inline-link-macro-rx"></block> 。</block>
+  <block id="817a59a137d2f36b17e19b14b0e90545" category="inline-link-macro">查看權限變更日誌。</block>
+  <block id="05345eddc0e94be562e27e8d53b608ae" category="list-text">任何 4.2.0 及更高版本的新代理程式都使用基礎架構管理器，您應該更新用於部署的使用者帳戶和服務帳戶權限。<block ref="ca3a237b8d0ef6729093b3abe4bab2f0" category="inline-link-macro-rx"></block></block>
+  <block id="cc598dc1e413aff136dd2366a85faf46" category="list-text">部署代理程式時，系統也會建立一個 Google Cloud 儲存桶來儲存部署檔案。</block>
+  <block id="d9dfb1e70d9002b82990e5020a243087" category="list-title">改進了控制台代理的配置檢查</block>
+  <block id="1c113e32e8394b861faad1f61a9626cb" category="inline-link-macro">了解更多關於控制台代理程式所需端點的資訊。</block>
+  <block id="675d71adc8a1b2329a23e817b7275840" category="list-text">控制台代理現在在執行設定檢查時會檢查已棄用的端點。如果您尚未更新至 4.0.0 或更高版本的新端點列表，則只要係統能夠存取先前的端點列表，安裝就會成功。<block ref="4fa9d5f65f1179ca8dedab794aee5677" category="inline-link-macro-rx"></block></block>
+  <block id="5cf1eebafa9e566db5b16d2f75b10866" category="inline-link-macro">了解如何對控制台代理程式運行配置檢查。</block>
+  <block id="532e2205eae250e20138ac0d4fb7670a" category="list-text">從控制台或代理程式維護控制台對已安裝的控制台代理程式執行設定檢查，以驗證連線性並排除故障。<block ref="2d14832e5c27ace253e7c4b1295d1814" category="inline-link-macro-rx"></block></block>
+  <block id="f1a69f998a4fd4d34f139b76d2b1cf5d" category="paragraph-title">直接從NetApp Console下載代理軟體</block>
+  <block id="ffb09157eddacde0f2ddbb27b8b5a58d" category="inline-link-macro">了解如何直接從NetApp Console下載控制台代理軟體。</block>
+  <block id="0d8ee60431ecde7e8c0ca3d789c24bae" category="paragraph">當您需要手動安裝代理程式時，除了NetApp支援網站之外，您還可以直接從NetApp Console存取代理程式軟體。<block ref="3ce006bd909dc885369b2f86674a08a3" category="inline-link-macro-rx"></block></block>
+  <block id="f33a1c02aef9134dd317909d568855ae" category="paragraph-title">能夠設定憑證過期通知。</block>
+  <block id="eb85d454a2ba07f1bf0f8e315ae0b696" category="paragraph">設定服務帳戶和聯合身分驗證憑證過期的通知。選擇七天或三十天。控制台會向具有相應角色的使用者顯示通知和電子郵件。組織管理員會收到服務帳戶通知。組織管理員、聯盟管理員和聯盟檢視者會收到聯盟通知。</block>
+  <block id="c76ecba1e00b52577de6653acbf29014" category="paragraph-title">啟用聯合身份驗證後，本地登入將不可用。</block>
+  <block id="e713ec00d2b4c1f46099d8669c70bc4a" category="paragraph">為控制台組織啟用聯合身份驗證後，使用者將無法使用本機登錄，而是會被引導至聯合身份驗證登入。</block>
+  <block id="37922d4b00cf704156c5276d88caa05c" category="paragraph-title">提升儲存管理頁面的易用性</block>
+  <block id="e8f9974435fe7b24ffa11827d0104693" category="paragraph">現在，您可以從儲存管理頁面更輕鬆地查看和管理有關ONTAP本機系統（以及 FSx for ONTAP）的詳細資訊。</block>
+  <block id="c513928c0b95afec773bd29d135d4632" category="list-text">「Discoverable systems」頁面將摘要資訊與可用系統的標籤顯示分開，從而更容易查看有關可發現系統的全面資訊。</block>
+  <block id="044a03cc529cee34c57112a210e50b35" category="paragraph">對於前兩個選項，控制台使用 AWS 安全性令牌服務來取得不斷輪換的臨時憑證。這個流程是最佳實踐——它既自動化又安全。</block>
+  <block id="b0d37b69696e5fe98085933a2a7e3fc1" category="paragraph">在NetApp Console中建立組織間的合作夥伴關係，可讓合作夥伴安全地跨組織邊界管理NetApp資源，從而簡化協作並增強安全性。</block>
+  <block id="d7046de4945385aed3cb44fde274d256" category="doc">使用維護控制台進行代理驗證</block>
+  <block id="af6e565b77baba04e851ef6db3453fab" category="paragraph">您可以使用控制台代理維護控制台來驗證控制台代理程式的安裝和配置。</block>
+  <block id="2df2419e3b3e4992394516227a5f4a71" category="section-title">配置檢查器驗證</block>
+  <block id="11d2b70f92f5671a073ee7f95edbc568" category="paragraph">這<block ref="2df2419e3b3e4992394516227a5f4a71" prefix=" " category="inline-code"></block>此命令可讓您驗證控制台代理的配置。</block>
+  <block id="3225a10b07f1580f10dee4abc3779e6c" category="section-title">參數</block>
+  <block id="bb9f0d8e73ffa6630952dc1ecc6cd9de" category="paragraph"><block ref="6a11199e55b0cb53d751c5170e5f74f9" prefix="" category="inline-code"></block> - *必需的* -</block>
+  <block id="69dfddf838a2ddd2939ee5adc69cb83c" category="paragraph">選擇一項或多項服務進行驗證。有效的服務名稱包括：<block ref="8b55a44b49368262df89fd0e17b1a181" prefix="*" category="inline-code"></block>驗證與所需控制台端點的網路連線。</block>
+  <block id="1fde504b28ae1c1b6dbb99c104b00a85" category="paragraph"><block ref="693f786102104e01b7396235926fc506" prefix="" category="inline-code"></block>--*必填*-- 選擇要執行的一種或多種驗證類型。有效的驗證類型包括：*<block ref="25835188a2355e9530d3a10fcbe4c65b" prefix=" " category="inline-code"></block>驗證與所需控制台端點的網路連線。</block>
+  <block id="b3c3244f084b65704359870cc6488d93" category="paragraph"><block ref="f2d537814e28e44e0e35d5b4ce13cadb" prefix="" category="inline-code"></block> - *選修的* -</block>
+  <block id="d076e244720434cf026cb278c7f19d8e" category="paragraph">指定用於驗證的代理伺服器 URL。如果您的代理程式配置為使用代理伺服器，則此項目為必填項。</block>
+  <block id="775c73e442d845c4596a67e7c69aefd9" category="paragraph"><block ref="b58f4fd799634e7ef624ae15a007f9bb" prefix="" category="inline-code"></block> - *選修的* -</block>
+  <block id="4ed623d06dfe32e4f16db9d33c5ede6c" category="paragraph">指定用於驗證的一個或多個證書檔案的路徑。證書文件必須為PEM格式。多個路徑之間以逗號分隔。如果您的代理程式使用自訂證書，則此參數為必填項。</block>
+  <block id="6a90f9864a2f9aa8de0590c60d07a970" category="section-title">配置檢查器驗證範例</block>
+  <block id="56cc3a7f96b8e67c7d92a9185e36c08e" category="listing-title">基本驗證：</block>
+  <block id="2947152e0492b862524897c4ae5ba389" category="listing-title">使用代理伺服器作為代理時的驗證：</block>
+  <block id="97df144968d77a81cf138d0e4021ce2c" category="listing-title">使用證書驗證代理程式：</block>
+  <block id="6db60e859007b84c686f5dc3f04f4697" category="section-title">代理獲取</block>
+  <block id="5b9ef687e725b42e8780bea1b481641c" category="paragraph">這<block ref="6db60e859007b84c686f5dc3f04f4697" prefix=" " category="inline-code"></block>此命令顯示有關目前透明代理伺服器配置的資訊。若要查看目前透明代理伺服器配置，請使用下列命令：</block>
+  <block id="e08f6bee8517842a48e4ef6996aea3e0" category="section-title">代理獲取範例</block>
+  <block id="73c7d09b23bd1ddf9009062714384bf3" category="paragraph">若要查看目前透明代理伺服器配置，請使用下列命令：</block>
+  <block id="08bc9d3537a56e203564c5b4357049f4" category="section-title">新增代理</block>
+  <block id="74c09d7b43cd297a5639a898e7348c8b" category="paragraph">這<block ref="08bc9d3537a56e203564c5b4357049f4" prefix=" " category="inline-code"></block>該命令將代理配置為使用透明代理伺服器。</block>
+  <block id="0e2fd9178e3f3c1cede27d7b2ecab1c8" category="paragraph"><block ref="681b381a05010f3412144ddec4fb6462" prefix="" category="inline-code"></block></block>
+  <block id="6868c5dea32c658d31e34cd6c643eda9" category="paragraph">指定代理伺服器憑證檔案的路徑。證書文件必須為PEM格式。確保證書檔案與命令位於同一目錄中，或指定證書檔案的完整路徑。</block>
+  <block id="b7660892597c4cc86dbc7d99b33701af" category="section-title">代理添加範例</block>
+  <block id="091092579ca8cede1b760e7c5a90a003" category="section-title">代理更新</block>
+  <block id="6902b4aa3527b74bdb35b5dd12aec412" category="paragraph">這<block ref="091092579ca8cede1b760e7c5a90a003" prefix=" " category="inline-code"></block>該命令允許您更新透明代理的憑證。</block>
+  <block id="6f1a60eec202a10b5b6d62f479ba4428" category="paragraph"><block ref="681b381a05010f3412144ddec4fb6462" prefix="" category="inline-code"></block>指定代理伺服器憑證檔案的路徑。證書文件必須為PEM格式。</block>
+  <block id="06b30352eda5cf9b69816fe23dff936f" category="section-title">代理更新範例</block>
+  <block id="ef5ebb9e0c08ee0463e7503ff1111f4c" category="section-title">代理移除</block>
+  <block id="f07ee52c9fc05f9047d0eb5e87de40b1" category="paragraph">這<block ref="ef5ebb9e0c08ee0463e7503ff1111f4c" prefix=" " category="inline-code"></block>此命令從代理程式中移除透明代理伺服器設定。</block>
+  <block id="7aa5255fb9f7e29b797e1c6816a0d999" category="section-title">代理移除範例</block>
+  <block id="e1c2619e19fc02c38aacafc93d795901" category="summary">您可以將營運支援分析師角色指派給用戶，以便他們能夠存取警報和監控功能。具有此角色的使用者還可以開啟支援案例。</block>
+  <block id="3db89b44d26706e71a450352c7c5a1da" category="list-text">*災難復原管理員*：執行任何動作。</block>
+  <block id="1e732ca66bd89df595b8e795e5dfa4ac" category="list-text">*災難復原故障轉移管理*：執行故障轉移和遷移。</block>
+  <block id="014b84d038553d60cf09cbddcb4e7d08" category="list-text">*災難復原應用程式管理員*：建立複製計劃。修改複製計劃。開始測試故障轉移。</block>
+  <block id="ca931702830a76aaa24d5f451156d2b4" category="list-text">*災難復原檢視器*：僅查看資訊。</block>
+  <block id="71aa2505b70e192a741f69ce63677f4b" category="cell">災難復原故障轉移管理員</block>
+  <block id="49f16ca5444f519e5203bb5067957eef" category="cell">災難復原應用程式管理員</block>
+  <block id="49868b41c479810c405bc3509cdb1907" category="cell">允許使用者查看NetApp Data Classification掃描結果。具有此角色的使用者可以查看合規性資訊並產生他們有權存取的資源的報告。這些使用者無法啟用或停用磁碟區、儲存桶或資料庫模式的掃描。分類功能沒有管理員角色。</block>
+  <block id="7fefc96661449151a3bee08edda3e255" category="paragraph">這些限制是NetApp Console和管理設定特有的：代理、軟體即服務 (SaaS) 平台等等。</block>
+  <block id="332ea1ed79fb36acca4a28cb73bfb8c3" category="section-title">Google Cloud 使用者帳戶權限</block>
+  <block id="83ad392c56898ad2bc9258551bd9dc50" category="paragraph">以下自訂角色賦予 Google Cloud 使用者部署代理程式所需的權限。將此自訂角色指派給將要部署代理程式的使用者。</block>
+  <block id="3434c5106687454490c5ce3fd3325b7e" category="example-title">查看 Google Cloud 使用者帳戶權限</block>
+  <block id="5e03aefcc897db1801bbaa45747a2971" category="paragraph">以下自訂角色可賦予附加至控制台代理程式的 Google Cloud 服務帳號管理 Google Cloud 網路中的資源和流程所需的權限。</block>
+  <block id="d25721a787a66e973329bd6a7db30c28" category="paragraph">將此自訂角色套用至附加至控制台代理虛擬機器的服務帳戶。</block>
+  <block id="60067761727ed2480c4d7988a096bea6" category="example-title">查看 Google 服務帳號權限</block>
+  <block id="2ed702ae3741d2ab2632b3029a0f8e32" category="inline-link-macro">查看 Google 權限變更日誌</block>
+  <block id="46bc318b70c402ba98ca33c35bb84afc" category="inline-link-macro">查看如何新增 Google Cloud 服務帳號</block>
+  <block id="8dcaddb2ef42a50a271974a377b95e29" category="paragraph">隨著後續版本中權限的增加或刪除，請確保角色資訊保持最新。變更日誌列出了所有需要的新權限。<block ref="d7c0ba232558007d3f0cd6897a857261" category="inline-link-macro-rx"></block> <block ref="a191fc816c4388da3117cded8f9ecd39" category="inline-link-macro-rx"></block></block>
+  <block id="99b25e2af002c77f33933ee7b2cca7b6" category="paragraph">控制台代理程式使用自訂角色中的權限來管理 Google Cloud 網路中的Cloud Volumes ONTAP資源和NetApp資料服務流程。以下各節描述了代理如何使用這些權限。</block>
+  <block id="ba28f37a50f35b5b62bf9d0cebb79e6a" category="section-title">Cloud Volumes ONTAP所使用的權限</block>
+  <block id="45c85e2fcbcad00a3b3aff5447627a5b" category="paragraph">控制台代理程式使用自訂角色中的權限來管理 Google Cloud 網路中的Cloud Volumes ONTAP資源和進程。以下各節描述了代理如何使用這些權限。</block>
+  <block id="05fedb77715f320017d52f66da44b1b0" category="example-title">Cloud Volumes ONTAP的權限</block>
+  <block id="1978fc577443d8841749463c81c14e1b" category="cell">*config.deployments.create*</block>
+  <block id="7011503cf97d17706ff8163876018fb2" category="cell">使用 Google Cloud Infrastructure Manager 部署Cloud Volumes ONTAP虛擬機器實例。</block>
+  <block id="90859ccfb98bd6357cfd9888e01654f7" category="cell">*config.deployments.delete*</block>
+  <block id="1c823c113d5b21854ab32fb4006d239e" category="cell">*config.deployments.deleteState*</block>
+  <block id="4aef8bfd5362969e0a14daaef6aa2206" category="cell">*config.deployments.get*</block>
+  <block id="39871c3ed7f15a544a81dd29a8f6d5be" category="cell">*config.deployments.getLock*</block>
+  <block id="6f5bdaf7fca0180616b4ae4d03d58a28" category="cell">*config.deployments.getState*</block>
+  <block id="3f52aa0019ca6c92a0b2ce5ef1585bb7" category="cell">*config.deployments.list*</block>
+  <block id="91ea1caf7d132e95307e5641e3eb678a" category="cell">*config.deployments.lock*</block>
+  <block id="5cea6e43ecc95c4f000154ebf17ffe41" category="cell">*config.deployments.update*</block>
+  <block id="efda381a960e37f6857c4e005d80f4d4" category="cell">*config.deployments.updateState*</block>
+  <block id="527ac12ac6f7f67f130d341677f2666a" category="cell">*config.operations.get*</block>
+  <block id="09cbd21df4067bcce7aca81e1d55d7f9" category="cell">*config.previews.get*</block>
+  <block id="4f81cd437237e3919ef57ccf6f896eab" category="cell">*config.previews.list*</block>
+  <block id="25beaddbb4bfa58c896401064f614a49" category="cell">*config.resources.list*</block>
+  <block id="b47fce5e3845afb2bed0589dd445f4b1" category="cell">*config.revisions.get*</block>
+  <block id="6e9d76e8116c43eb4d333f5e51a59158" category="cell">*compute.forwardingRules.create*</block>
+  <block id="1204549a036d6f1fa0e77a33b66ba5fc" category="cell">建立轉送規則，將流量路由到後端服務。</block>
+  <block id="51f4457e4ce6f71c07304daee30d55a4" category="cell">*compute.forwardingRules.delete*</block>
+  <block id="5625df4a9e5fad50b5ed7483ef854ba0" category="cell">刪除現有轉送規則。</block>
+  <block id="2747d1bc3f8c306dcd87a303e8d46ac4" category="cell">*compute.forwardingRules.get*</block>
+  <block id="518cdf23dbd2f2786baa04a1b251789f" category="cell">取得現有轉送規則的詳細資訊。</block>
+  <block id="be4ea57d513cf3eb072627e23f9ab07d" category="cell">*compute.forwardingRules.setLabels*</block>
+  <block id="f5be53441d39f1e3531a7e05f4c9cb41" category="cell">設定或更新組織轉送規則的標籤。</block>
+  <block id="2df5b761a5ee0099ec61a876d1eb970a" category="cell">compute.globalOperations.get</block>
+  <block id="e91ad303361b5fdc2d2c5336e085b399" category="cell">*compute.healthChecks.create*</block>
+  <block id="cd9c9102f061e7080ec044f1de8be60f" category="cell">建立和管理健康檢查，以監控後端服務的運作狀況。</block>
+  <block id="69c63ecfab8251f5332b3f093989452b" category="cell">*compute.healthChecks.delete*</block>
+  <block id="91fc716755c2ccb249d395deaddc51d1" category="cell">*compute.healthChecks.get*</block>
+  <block id="1d0d0f012d65150fe8a659ddc5246c6b" category="cell">*compute.healthChecks.useReadOnly*</block>
+  <block id="51c92eabc0dc72041fa2d618c547a3b3" category="cell">*計算實例使用*</block>
+  <block id="60f9a4c26542d13806ebfceda41b622a" category="cell">使用虛擬機器實例（啟動、停止、連線操作）。</block>
+  <block id="7694a96be1a3706f979373e54371672a" category="cell">*compute.resourcePolicies.create*</block>
+  <block id="69c9360ed1f6b9f362a8bb04cc2f9976" category="cell">建立和管理資源策略，實現資源自動化管理。</block>
+  <block id="5c1436481ccb784f0099a466930a9d4b" category="cell">*compute.resourcePolicies.delete*</block>
+  <block id="79c6a1fb6244cc1241f910477c4585fa" category="cell">*compute.resourcePolicies.get*</block>
+  <block id="946819076f570f98fc2669abc5ebb221" category="cell">*logging.logEntries.create*</block>
+  <block id="365620bda694367699a9e977c245c99d" category="cell">建立並路由日誌條目，用於監控、偵錯和稽核。</block>
+  <block id="24073bc546846441de345b264ff9733b" category="cell">*logging.logEntries.route*</block>
+  <block id="af467f9a70abceae95e202a38cab79bc" category="cell">*cloudbuild.builds.get*</block>
+  <block id="f93ac717762cc8fe2abd2d13026a6e0c" category="cell">*iam.serviceAccounts.create*</block>
+  <block id="97f415e7bf3ae2691c030ac84e8a7ab4" category="cell">*iam.serviceAccountKeys.create*</block>
+  <block id="d097a5e02531e9d8606a4b9016211fb0" category="cell">storage.objects.create</block>
+  <block id="18e2e5fd1011d7608a9039b76959973f" category="cell">在 Google Cloud Storage 儲存桶中建立和管理物件（檔案）。</block>
+  <block id="877dd561e8b326f974d6649bf025cc47" category="cell">儲存物件刪除</block>
+  <block id="75c9b1d045f5bd31e38a2fe8fc99685b" category="cell">*compute.addresses.createInternal*</block>
+  <block id="a01609be65377c550c1f3f9c95e301e9" category="cell">在VPC網路內建立內部IP位址以進行資源分配。</block>
+  <block id="67ce54621d28117b563f4a29bba7ea15" category="cell">*compute.addresses.deleteInternal*</block>
+  <block id="eb8b5851a4b3813a0b7d8271e9390168" category="cell">刪除內部 IP 位址以進行資源清理。</block>
+  <block id="4a9033f2bc4de0bb816e8bb0b5d4f954" category="cell">*compute.addresses.setLabels*</block>
+  <block id="c9100b96b75009cc80c0b2c138896bf1" category="cell">更新地址資源上的標籤。</block>
+  <block id="f80885b173b15e9ea2234f900e51e402" category="cell">*compute.addresses.useInternal*</block>
+  <block id="d52c5aaec9bec122290d546577a86741" category="cell">網路通訊請使用內部IP位址。</block>
+  <block id="6cf64ac632269f6541c1da37cd735d52" category="cell">建立和管理用於流量路由的後端服務。</block>
+  <block id="d8e30cab07834e99dd81b60d6b1eb695" category="cell">*compute.regionBackendServices.delete*</block>
+  <block id="d71ae8f686ef0997fc9137df9832b3a3" category="cell">*compute.regionBackendServices.update*</block>
+  <block id="6ffa2106d04c5f11c8219cf00218c867" category="cell">*compute.regionBackendServices.use*</block>
+  <block id="8afe1371ad74901fbfca12f6507394f7" category="cell">*compute.instanceGroups.create*</block>
+  <block id="31837e29feaf463250d44e6b633644d1" category="cell">*compute.instanceGroups.delete*</block>
+  <block id="a231c32ea863f8bc2002ebefe954023f" category="cell">*compute.instanceGroups.update*</block>
+  <block id="008a67a6e66af0c91194d03a05ed9ca6" category="cell">*compute.instanceGroups.use*</block>
+  <block id="fee9fb5dae000866e2823c08577b5639" category="paragraph">控制台代理程式使用自訂角色中的權限來管理 Google Cloud 網路中的NetApp Backup and Recovery資源和進程。以下各節描述了代理如何使用這些權限。</block>
+  <block id="a696d2e75adad45b4173573021542ba7" category="example-title">查看NetApp Backup and Recovery的權限</block>
+  <block id="d5ca4eff15be43a2a5ebcb745899160d" category="paragraph">控制台代理程式使用自訂角色中的權限來管理 Google Cloud 網路中的NetApp Data Classification資源和進程。以下各節描述了代理如何使用這些權限。</block>
+  <block id="b8eb36ca4f2271dadd68e9f2f9d9f7b6" category="example-title">查看NetApp Data Classification的權限</block>
+  <block id="7a5913617c08594a652178dd2ed587bf" category="paragraph">新增和移除的權限如下所示。</block>
+  <block id="2727f68982ff25e8b3c57e026120561d" category="section-title">2025年12月8日</block>
+  <block id="a70054dca76030cd2e7762887511fa92" category="paragraph">NetApp正在從 Google Cloud Deployment Manager 遷移到 Google Cloud Infrastructure Manager (IM)，以便在 Google Cloud 中部署和執行控制台代理程式。為支援此更改，新增了以下權限。</block>
+  <block id="9460401daaedfab505f0b1eadec0cb88" category="paragraph">部署代理程式的 Google Cloud 使用者需要以下附加權限：</block>
+  <block id="e198f8a2ce0814efb4de119c73722602" category="list-text">儲存資料夾創建</block>
+  <block id="89d185c8189ca757fe8cb3161961069c" category="list-text">iam.serviceAccount.actAs</block>
+  <block id="7ead255295d96ea6de46a56ecad36e7d" category="list-text">config.deployments.create</block>
+  <block id="b00d998cacf7883bfb4d60b7f7b8dbe6" category="list-text">config.operations.get</block>
+  <block id="a77f8f520fc19fb807c12336eeb6e0f1" category="paragraph">用於日常運營的 Google Cloud 服務帳號需要以下額外權限：</block>
+  <block id="9c91d0a29ec8c0b89d42f6feb1b8b213" category="list-text">cloudbuild.connections.list</block>
+  <block id="d22ee60cbc3ff63b0c7d8688d3ea75be" category="list-text">cloudbuild.repositories.accessReadToken</block>
+  <block id="7848d877069a98fcc73fd0262b50d5dc" category="list-text">cloudbuild.repositories.list</block>
+  <block id="0e3e1067c310a197feb8287fe779ff81" category="list-text">cloudquotas.quotas.get</block>
+  <block id="a3b719875760fa108520adf339dee562" category="list-text">config.artifacts.import</block>
+  <block id="55cd451af096a93731b1e3d7e3429492" category="list-text">config.deployments.deleteState</block>
+  <block id="cd9b1a46a946b53d4fc054be8e028486" category="list-text">config.deployments.getLock</block>
+  <block id="995b280499f482fca8bf81a7ede55340" category="list-text">config.deployments.getState</block>
+  <block id="1b4d8bafd38f9bad158f509da5c485c6" category="list-text">config.deployments.updateState</block>
+  <block id="44c2cc8ff119df5a29b6a6ccee852e48" category="list-text">config.previews.upload</block>
+  <block id="2ae9911aee10f552e485d65f256fff31" category="list-text">config.revisions.getState</block>
+  <block id="77d9be0a069b64561dcc06d563707f9c" category="list-text">日誌記錄條目創建</block>
+  <block id="3cae5e024ce5f256c03eeb10c3ad4e19" category="list-text">儲存物件更新</block>
+  <block id="f91284eb9de39f3d7e2a21cf5994571d" category="list-text">iam.serviceAccounts.get</block>
+  <block id="5c2f845538267fafb03ca99ce0dc3f48" category="paragraph">部署Cloud Volumes ONTAP需要以下附加權限：</block>
+  <block id="c163c809c2a0ca0c891139509a6ca65b" category="list-text">cloudbuild.builds.get</block>
+  <block id="8e69fbd4d05c5ecfcdaac5c9421ee931" category="list-text">config.deployments.delete</block>
+  <block id="36f59298cb7a695036b1f410b8e7a025" category="list-text">config.deployments.get</block>
+  <block id="12daf2722e0103231cb0dd113fd916ec" category="list-text">config.deployments.list</block>
+  <block id="f3c2c7bca6e535ec0244d2c8af06efd6" category="list-text">config.deployments.update</block>
+  <block id="44f3f9390fa3822713843b857e27b3fe" category="list-text">config.previews.get</block>
+  <block id="fa7d29940aaac850cb247120a867e23e" category="list-text">config.previews.list</block>
+  <block id="7f61b5a7a77adeb9e9f1790f452235c4" category="list-text">config.revisions.get</block>
+  <block id="635a490a44ad3028c4acede5b8484cc2" category="list-text">config.resources.list</block>
+  <block id="9989c44bee8dee4cb7f01266fafda94f" category="list-text">iam.serviceAccountKeys.create</block>
+  <block id="ee0506f09d6a7976f7ba93533e0a25a9" category="list-text">iam.serviceAccounts.create</block>
+  <block id="dd7e4582f9999edf3b40d496843fa529" category="paragraph">對於用於Cloud Volumes ONTAP日常操作的服務帳戶，需要下列附加權限。</block>
+  <block id="5fb65d9866ed23983e68b0b7fddd0d15" category="list-text">計算.位址.建立內部</block>
+  <block id="c2bc156592faf656f145d38a4823df20" category="list-text">計算.位址.刪除內部</block>
+  <block id="ef34b61f78525c155ff3b7e9c0b2be2d" category="list-text">計算.位址.設定標籤</block>
+  <block id="4a8f52870b8cc6d947fd943722432e79" category="list-text">計算.位址.使用內部位址</block>
+  <block id="d57d373ca78566db582c948674bf5b7f" category="list-text">計算轉送規則創建</block>
+  <block id="448aabe83942e3bb9ef25173b527144e" category="list-text">計算轉送規則刪除</block>
+  <block id="1a7221f68ba7e68197368c69ea43808d" category="list-text">計算轉送規則</block>
+  <block id="dc6e0a34de68c5e87f224f9d6f2eaddb" category="list-text">計算.轉送規則.設定標籤</block>
+  <block id="663b65df0be4371d9e7079d58724e3ca" category="list-text">計算健康檢查創建</block>
+  <block id="6b0675fc6728b7261f48895cbdaa668b" category="list-text">compute.healthChecks.delete</block>
+  <block id="761112290226750e922fcc41ea79565e" category="list-text">compute.healthChecks.get</block>
+  <block id="1ff641b277f1da1dc822ea8772aa7f7d" category="list-text">compute.healthChecks.useReadOnly</block>
+  <block id="007222f573b047fac21eb0c4010a04ae" category="list-text">compute.instanceGroups.create</block>
+  <block id="6fc202cfdabf6604e7e98cf9441ec3c9" category="list-text">compute.instanceGroups.delete</block>
+  <block id="b27ccd3f28fa1ae2c4c242ce4375b0d3" category="list-text">compute.instanceGroups.update</block>
+  <block id="756a8e6c0ce83856240259584a8f747f" category="list-text">compute.instanceGroups.use</block>
+  <block id="5a83ef5325f336f451391fea875ac476" category="list-text">compute.instances.use</block>
+  <block id="3341ac251f90eb3feda08fa2af91c449" category="list-text">compute.regionBackendServices.delete</block>
+  <block id="8c5348684057fdb6ea94f53d6e91debe" category="list-text">compute.regionBackendServices.update</block>
+  <block id="413fb87968c99457c19bc2cedb8a31e4" category="list-text">compute.regionBackendServices.use</block>
+  <block id="0b257a26721cbf5e7a10cd95066d7b49" category="list-text">計算資源策略創建</block>
+  <block id="738061c248141ac453e6b42cf82c2a8e" category="list-text">計算資源策略刪除</block>
+  <block id="32c06ac076ffdc3b2ccf1214454c6243" category="list-text">compute.resourcePolicies.get</block>
+  <block id="72ca8180a628903ebd8eea37a1c92bcc" category="list-text">日誌記錄.日誌條目.路由</block>
+  <block id="f3f7e6957e72ba16a78d58e8ac7a43cd" category="list-text">config.deployments.lock</block>
+  <block id="33fb61c4c752d541a30c9ba8194091da" category="section-title">2025年11月26日</block>
+  <block id="90e7692e452d555a08bc34e6a38ecd0c" category="section-title">2023年2月6日</block>
+  <block id="47d455f427b4674cc00157a8a2934409" category="paragraph">此策略新增了以下權限：</block>
+  <block id="e97ae785ddbd746339946844f92175e6" category="inline-link">分類文檔</block>
+  <block id="6847efe16c9bfc0feacaef65fc05b7b9" category="list-text"><block ref="6847efe16c9bfc0feacaef65fc05b7b9" category="inline-link-rx"></block></block>
+  <block id="9b894a36c4ebb01df8469fa98daba21f" category="summary">NetApp有時會在將控制台代理部署到 Google Cloud 時更新用於該代理程式的服務帳戶所需的權限。</block>
+  <block id="d6d6c33d995f278b372d3d2f7a10524d" category="doc">管理 Google Cloud 部署的控制台代理權限</block>
+  <block id="daf1fbd23852baa7dc431ec2658722d9" category="inline-link-macro">核實所需的 Google 權限列表</block>
+  <block id="c35025e4c3afa1c5d645893259cbce25" category="paragraph"><block ref="df29c88404b44d3e8df12197653b40b2" category="inline-link-macro-rx"></block>。</block>
+  <block id="4860b54918e1580143a7c01984c21fe1" category="paragraph">使用 Google Cloud 控制台更新指派給服務帳號的 IAM 角色，使其與新的權限集相符。</block>
+  <block id="34e82a1501cca5af4e190be9c03c0fbb" category="inline-link-macro">Google Cloud 文件：編輯自訂角色</block>
+  <block id="322a5219fa870735040f24cb43da8303" category="paragraph"><block ref="322a5219fa870735040f24cb43da8303" category="inline-link-macro-rx"></block></block>
+  <block id="16d62d361fbd1153b9fe75b035aa7c51" category="paragraph">您可以使用下列方法更新控制台代理現有的透明代理伺服器：<block ref="091092579ca8cede1b760e7c5a90a003" prefix=" " category="inline-code"></block>透過使用命令來移除透明代理伺服器<block ref="ef5ebb9e0c08ee0463e7503ff1111f4c" prefix=" " category="inline-code"></block>命令。更多信息，請查閱相關文件。<block ref="1b2f5cd7e64b458e431e40fa20571324" category="inline-link-macro-rx"></block> 。</block>
+  <block id="6c69cf52de815b4e3d26a89db4f26c8a" category="paragraph">當您建立組織時，它包含一個項目。新增專案以管理資源，新增資料夾以將相關項目分組在一起。</block>
+  <block id="2bc87be9675bb8a069610f3430a1e3e8" category="paragraph">您可以在組織的資源結構中建立最多七層的資料夾和項目。在資料夾內建立資料夾，為您的組織建立嵌套結構。</block>
+  <block id="e403ae80ee5407293bf60157033759c8" category="list-text">請輸入資料夾或項目詳細資料：</block>
+  <block id="e3a15113b550a2e5d2560f495223b05a" category="list-text">*名稱和位置*：輸入名稱並選擇資料夾或項目的層次結構中的位置。將資料夾或項目放在組織下或另一個資料夾內。</block>
+  <block id="d67cf2e8c3d97e0eed9561206ed3e9ca" category="paragraph">選擇“新增成員”以指派存取權限和角色。</block>
+  <block id="70fdeef63f056c10a8cdcc5f3fbc8eb3" category="inline-xref">了解如何移除資源</block>
+  <block id="d66b571e57bc053e8b1ad8e43b91ee4e" category="paragraph">刪除資料夾或項目之前，請確保其中不包含任何資源。<block ref="2ce0cd71e2b80657c61ce3337cd46c5f" category="inline-xref-macro-rx"></block>。</block>
+  <block id="2634a609591cac73e3cee6d75b3a8299" category="section-title">更改與資料夾或項目關聯的資源</block>
+  <block id="e1485c69a5051018e6f541a40ac64334" category="paragraph">修改成員存取權限以控制資源存取。</block>
+  <block id="3aab6b4b2431f483b7e867e25c7dc17f" category="paragraph">如果成員存取權限是從較高層級繼承而來，則無法在較低層級變更成員存取權限。 或者，你可以。更新更高層次結構層級的成員權限以變更存取權限。或者，您可以<block ref="2e250d63a19626cb0aeed14260bd2f59" category="inline-link-macro-rx"></block>。</block>
+  <block id="dc56ef546dad0049c4fe42c718817af1" category="paragraph">您可以為您的組織新增兩種類型的成員：使用者帳戶和服務帳戶。應用程式使用服務帳戶自動執行 API 任務。人們使用用戶帳戶登入和管理資源。</block>
+  <block id="0a8fdeec95373b802409cb30efb505de" category="paragraph">您的 X.509 證書。它必須是 PEM、CRT 或 CER 格式。</block>
+  <block id="81e59e8e4bf25fcadc8863ff39bcfc04" category="list-text">設定證書到期通知。您可以選擇七天或三十天。到期通知將透過電子郵件發送給具有超級管理員或組織管理員角色的用戶，並在控制台中顯示。</block>
+  <block id="1753b2507377ecd0602ed08944b9d1b2" category="paragraph">刪除成員時，系統會撤銷其權限，但保留其控制台和NetApp支援網站帳號。</block>
+  <block id="a758e86398ed40898f56dc46bf8d3b3b" category="list-text">下載或複製客戶端 ID 和客戶端金鑰。+ 控制台只會顯示一次用戶端金鑰。複製或下載並安全儲存。</block>
+  <block id="a3d754fa6f41840770949e7570cb4dc0" category="paragraph">使用者移除多因素身份驗證後，登入時必須重新設定多因素身份驗證。如果使用者只是暫時無法存取其 MFA 設備，他們可以使用設定 MFA 時儲存的恢復代碼登入。</block>
+  <block id="e41f7fb86a6b410ae7e503a4ccc83ef6" category="paragraph">您可以查看與您的組織相關的已發現和未發現的資源。系統會尋找儲存資源，並將其標記為未發現，直到您將其新增至控制台為止。</block>
+  <block id="fc35c417bbb2c0ec9081298a05b3071b" category="admonition">資源頁面不包含Amazon FSx for NetApp ONTAP資源，因為使用者無法將其與角色關聯。可以在「系統」頁面或「工作負載」中查看。</block>
+  <block id="62ff23d019d29d30b64698ce14ebdc09" category="list-text">利用現有選項尋找資源：</block>
+  <block id="aaff9ff22e8e6739bcdc8cc79cb3614b" category="inline-link-macro">查看有權存取關聯資料夾和項目的成員</block>
+  <block id="8b3be42a579e101783dbee0366282232" category="admonition">要查看哪些組織成員有權存取該資源，<block ref="d3f770deeda88cc3cea0d73a63cf7240" category="inline-link-macro-rx"></block> 。</block>
+  <block id="d23b81e3e519af34ae1d1368f055ab5c" category="admonition">若要從整個組織中刪除已發現的資源，請前往「系統」頁面並刪除該系統。</block>
+  <block id="876c2ced14b405974ba0e1bffce7d0d5" category="paragraph">具有*組織管理員*或*資料夾或專案管理員*角色的使用者有責任將角色指派給其他使用者。您可以根據專案或資料夾指派存取角色。按項目或資料夾指派存取角色。例如，將「勒索軟體復原」管理員角色指派給一個專案的用戶，將「SnapCenter」管理員角色指派給另一個專案的使用者。若要為使用者授予資料夾中所有項目的勒索軟體復原管理員角色，請在資料夾層級指派該角色。</block>
+  <block id="ed59bba19a8b1215a5da046694459de3" category="paragraph">根據您的身分和存取管理 (IAM) 政策指派角色，以提高安全性。  IAM角色限制使用者存取權限，使其僅限於必要的權限。</block>
+  <block id="dff14b7229aae5e011982b724c9867d3" category="paragraph">當您為組織新增成員時，系統會提示您為其指派角色。您可以查看他們目前被指派的角色。</block>
+  <block id="d47741191d2932672428925f5a647577" category="paragraph">更改成員角色以更新其存取權限。</block>
+  <block id="c0597b9526c7ff0d7645fb305fbbb302" category="paragraph">Amazon FsX for NetApp ONTAP：</block>
+  <block id="deb5ab06bb4820c3ddaf1096673112dd" category="paragraph">基於 Web 的控制台透過與 Workload Factory API 互動來管理和操作基於ONTAP 的FSx 工作負載。</block>
+  <block id="92e2005838617f772873a40c3ba5ee87" category="paragraph">確保運行控制台代理軟體的主機符合作業系統、記憶體和連接埠要求。</block>
+  <block id="7477110a62e7e23490489fd5dde0d9b3" category="paragraph">請確保網路位置符合以下要求，以便控制台代理程式能夠管理混合雲中的資源。</block>
+  <block id="4a2cd5186a22d99f67f031f282623ea8" category="paragraph">請使用下列選項之一為NetApp Console提供 AWS 權限：</block>
+  <block id="cb55016940e52c1c7b882becfa96703f" category="paragraph">完成所有先決條件後，請在您的 Linux 主機上手動安裝軟體。</block>
+  <block id="3a25df27a9593be32d58d660128319d2" category="paragraph">安裝控制台代理程式後，提供您設定的 AWS 權限，以便控制台代理程式可以管理您在 AWS 中的資料和儲存基礎架構。</block>
+  <block id="5c585aa7c70930b73bdafb2cb9161f8a" category="paragraph">將建立的 IAM 角色附加到控制台代理 EC2 執行個體。</block>
+  <block id="ba496406ba5e67bd0a486e583b8cd337" category="paragraph">\ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta https://www.googleapis.com/storage/v1 https://storage.googleapis.com/storage/v1 https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \// https://config.googleapis.com/v1/projects</block>
+  <block id="483f6f30ec7b7da81659462b08c18e8a" category="paragraph">以下範例在專案層級建立一個名為「agentDeployment」的角色：</block>
+  <block id="606b4f54c298cd84f8c9d4d46c74820a" category="paragraph">gcloud iam roles create connectorDeployment --project=myproject --file=agent-deployment.yaml</block>
+  <block id="a447c4cad2c58e7308d516639f777fff" category="section-title">步驟 3：建立 Google Cloud 服務帳戶以與代理程式一起使用。</block>
+  <block id="45395d40cf0cb384fb917beab8ac0f5c" category="admonition">在 Google Cloud 中部署代理程式時，代理程式會建立一個儲存桶來儲存部署文件。</block>
+  <block id="478d6690c508002bc0e2f9e7c3ee46d5" category="paragraph">在 Google Cloud 中部署控制台代理程式之前，必須啟用多個 Google Cloud API。</block>
+  <block id="1fe3854ddba0cc13565a8a11d513f6a0" category="paragraph">需要以下物品：</block>
+  <block id="989c7bb7f839354a9ed40ce2b95bb63a" category="list-text">依照提示設定並啟動實例：</block>
+  <block id="b95854f0f3ff949a77556f1717a2053a" category="list-text">*公網 IP*：若要將公網 IP 位址與控制台代理 VM 一起使用，請選擇基本 SKU。</block>
+  <block id="14b08ffab5a3e9a00dd089a48d7cb1c4" category="paragraph">如果您使用標準 SKU IP 位址，則控制台將使用控制台代理程式的_私有_ IP 位址，而不是公用 IP。如果用於存取控制台的電腦無法存取私人 IP 位址，則控制台將無法運作。</block>
+  <block id="e1f80f0a4664c5510ddb707c6296dd7c" category="paragraph">託管識別允許控制台代理虛擬機器無需憑證即可向 Microsoft Entra ID 進行身份驗證。<block ref="f91ce7faef49711445322691b4d6ac64" category="inline-link-rx"></block> 。</block>
+  <block id="c5edce68cac7e488fac66a004543fa61" category="paragraph">如果您的登入資訊與另一個組織關聯，您需要註冊一個新的登入資訊。否則，您將在設定畫面上看不到啟用受限模式的選項。</block>
+  <block id="b32ca5cd3832e04aa3786f7647aecbcc" category="paragraph">如果您是從 Azure Marketplace 或手動安裝的控制台代理，則需要授予您先前設定的權限。</block>
+  <block id="124aaa31a673a34a4e59e30b752222d2" category="paragraph">必須連接控制台代理才能進行編輯。</block>
+  <block id="aa5691f6d018b3411c8082be20a4529f" category="paragraph">您可以為合作夥伴使用者指派以下角色：</block>
+  <block id="eaec472b7a23d9c311a78adfd10b1032" category="inline-link-macro">備份和復原管理員</block>
+  <block id="9b589496549b93bcbd645613fbd03c9c" category="list-text"><block ref="9b589496549b93bcbd645613fbd03c9c" category="inline-link-macro-rx"></block></block>
+  <block id="760c54a4cb61f02dffc8c2331073ae1d" category="list-text"><block ref="760c54a4cb61f02dffc8c2331073ae1d" category="inline-link-macro-rx"></block></block>
+  <block id="db385d806691bf16134876c971ae47ac" category="list-text"><block ref="db385d806691bf16134876c971ae47ac" category="inline-link-macro-rx"></block></block>
+  <block id="456f871b4f4ee4ad376b69d4040f5120" category="list-text"><block ref="456f871b4f4ee4ad376b69d4040f5120" category="inline-link-macro-rx"></block></block>
+  <block id="78d4b42d7cc8df44f5151da486494386" category="list-text"><block ref="78d4b42d7cc8df44f5151da486494386" category="inline-link-macro-rx"></block></block>
+  <block id="67580c71df9613a2df5711bad8e2d8d9" category="list-text"><block ref="67580c71df9613a2df5711bad8e2d8d9" category="inline-link-macro-rx"></block></block>
+  <block id="7c53729e63e6d7b0ff2748297a9aa07d" category="paragraph">此表列出了常見的錯誤訊息以及解決方法：</block>
+  <block id="5d3a908b240fe98ac0740455635b4cc0" category="list-text">如果仍有問題，請聯絡客服。</block>
+  <block id="13ab9425db1c4ad9c7ca529999f6de24" category="list-text">確認代理程式擁有所需端點的出站存取權。<block ref="c7fe41b97889c23a57defbbf2129845e" category="inline-link-macro-rx"></block></block>
+  <block id="61af83c0a45998dc351428765c46fa2e" category="section-title">對控制台代理運行配置檢查</block>
+  <block id="764bd6d2ae27e2401a34b6a482fc62d3" category="paragraph">從控制台或代理程式維護控制台對控制台代理程式執行設定檢查，以確保它們已連線。</block>
+  <block id="cb4e992a592d7b26e6c218cdde9ee1b5" category="inline-link-macro">了解更多關於使用 config-checker validate 命令的資訊。</block>
+  <block id="adbf5b321ab6472093079a96d92216c2" category="paragraph">您也可以使用代理維護控制台執行設定檢查。<block ref="714b5c6de8ffee7e082263b89290e9dc" category="inline-link-macro-rx"></block></block>
+  <block id="2c8b526b02d94d86279aebb87311c90d" category="admonition">您只能驗證狀態為「已連線」的代理程式。</block>
+  <block id="2256ce9e5331fffeb7ded438ec67c9bf" category="list-title">控制台操作步驟</block>
+  <block id="80ed8e269497520c11a5f07aaac10ca9" category="list-text">選擇要檢查的控制台代理程式的操作選單，然後選擇「驗證」。</block>
+  <block id="5dfebfd3b68f37eb76c1cbde60947384" category="inline-image-macro">螢幕截圖顯示了代理「操作」選單中的「驗證」選項。</block>
+  <block id="9bccdaa91fb930ee1c5038c140fa7f92" category="paragraph"><block ref="9bccdaa91fb930ee1c5038c140fa7f92" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5a8fd97dba9bde8fc857ad3f2edce597" category="paragraph">驗證過程可能需要長達 15 分鐘。結果會在完成後顯示。</block>
+  <block id="e1da0c759b99b40771f992144973dfe0" category="paragraph">有時您可能需要停用在安裝期間驗證出站連線的設定檢查。例如，在政府雲端環境中手動安裝代理程式時，需要停用設定檢查，否則安裝將失敗。</block>
+  <block id="749e848334a8eeda9b72b5bef6878260" category="paragraph">您可以透過在 _com/opt/application/netapp/service-manager-2/config.json_ 檔案中設定 _skipConfigCheck_ 標誌來停用設定檢查。預設情況下，此標誌設定為 false，且設定檢查會驗證代理程式的出站存取。將此標誌設為 true 以停用檢查。在完成此步驟之前，請先熟悉 JSON 語法。</block>
+  <block id="174dd97dd1f160583ac76fa482fa6a5e" category="section-title">2025年12月10日</block>
+  <block id="426c031f387e762bb968fd54671cf5a6" category="paragraph">&lt;stdin&gt; 中存在未解析的指令 - include::_whatsnew/2025-12-08.adoc[]</block>
+  <block id="5a348f21cc989b094b43c61561c46351" category="sidebar">配置檢查</block>
+  <block id="800641e37082e3805299720dbe2f9713" category="sidebar">透明代理</block>
 </blocks>

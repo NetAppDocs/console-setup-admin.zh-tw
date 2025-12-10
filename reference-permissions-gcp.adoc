@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-permissions-gcp.html 
-keywords: permissions, gcp, gcp permissions, bluexp 
+keywords: permissions, gcp, gcp permissions, bluexp, console agent 
 summary: 控制台代理程式需要權限才能在您的雲端提供者中執行操作。這些權限包含在NetApp提供的策略中。您應該了解代理程式使用這些權限做什麼。 
 ---
 = 控制台代理的 Google Cloud 權限
@@ -18,17 +18,117 @@ summary: 控制台代理程式需要權限才能在您的雲端提供者中執�
 
 
 
+== Google Cloud 使用者帳戶權限
+
+以下自訂角色賦予 Google Cloud 使用者部署代理程式所需的權限。將此自訂角色指派給將要部署代理程式的使用者。
+
+.查看 Google Cloud 使用者帳戶權限
+[%collapsible]
+====
+[source, yaml]
+----
+title: Console agent deployment policy
+description: Permissions for the user who deploys the Console agent
+stage: GA
+includedPermissions:
+
+- cloudbuild.builds.get
+- compute.disks.create
+- compute.disks.get
+- compute.disks.list
+- compute.disks.setLabels
+- compute.disks.use
+- compute.firewalls.create
+- compute.firewalls.delete
+- compute.firewalls.get
+- compute.firewalls.list
+- compute.globalOperations.get
+- compute.images.get
+- compute.images.getFromFamily
+- compute.images.list
+- compute.images.useReadOnly
+- compute.instances.attachDisk
+- compute.instances.create
+- compute.instances.get
+- compute.instances.list
+- compute.instances.setDeletionProtection
+- compute.instances.setLabels
+- compute.instances.setMachineType
+- compute.instances.setMetadata
+- compute.instances.setTags
+- compute.instances.start
+- compute.instances.updateDisplayDevice
+- compute.machineTypes.get
+- compute.networks.get
+- compute.networks.list
+- compute.networks.updatePolicy
+- compute.projects.get
+- compute.regions.get
+- compute.regions.list
+- compute.subnetworks.get
+- compute.subnetworks.list
+- compute.zoneOperations.get
+- compute.zones.get
+- compute.zones.list
+- *config.deployments.create*
+- *config.operations.get*
+- *config.deployments.delete*
+- *config.deployments.deleteState*
+- *config.deployments.get*
+- *config.deployments.getState*
+- *config.deployments.list*
+- *config.deployments.update*
+- *config.deployments.updateState*
+- *config.previews.get*
+- *config.previews.list*
+- *config.revisions.get*
+- *config.resources.list*
+- deploymentmanager.compositeTypes.get
+- deploymentmanager.compositeTypes.list
+- deploymentmanager.deployments.create
+- deploymentmanager.deployments.delete
+- deploymentmanager.deployments.get
+- deploymentmanager.deployments.list
+- deploymentmanager.manifests.get
+- deploymentmanager.manifests.list
+- deploymentmanager.operations.get
+- deploymentmanager.operations.list
+- deploymentmanager.resources.get
+- deploymentmanager.resources.list
+- deploymentmanager.typeProviders.get
+- deploymentmanager.typeProviders.list
+- deploymentmanager.types.get
+- deploymentmanager.types.list
+- resourcemanager.projects.get
+- compute.instances.setServiceAccount
+- *iam.serviceAccounts.actAs*
+- *iam.serviceAccounts.create*
+- iam.serviceAccounts.list
+- *iam.serviceAccountKeys.create*
+- *storage.buckets.create*
+- *storage.buckets.get*
+- *storage.objects.create*
+- *storage.folders.create*
+- *storage.objects.list*
+
+----
+====
+
+
 == 服務帳戶權限
 
-下面顯示的自訂角色提供了控制台代理程式管理 Google Cloud 網路內的資源和流程所需的權限。
+以下自訂角色可賦予附加至控制台代理程式的 Google Cloud 服務帳號管理 Google Cloud 網路中的資源和流程所需的權限。
 
-您需要將此自訂角色套用到附加到控制台代理程式 VM 的服務帳戶。
+將此自訂角色套用至附加至控制台代理虛擬機器的服務帳戶。
 
 * link:task-install-agent-google-console-gcloud.html#agent-permissions-google["設定標準模式的 Google Cloud 權限"]
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["設定限制模式的權限"]
 
 
-您還需要確保角色是最新的，因為後續版本中會新增新的權限。如果需要新的權限，它們將在發行說明中列出。
+.查看 Google 服務帳號權限
+[%collapsible]
+====
+隨著後續版本中權限的增加或刪除，請確保角色資訊保持最新。變更日誌列出了所有需要的新權限。link:reference-permissions-gcp.html#gcp-permissions-change-log["查看 Google 權限變更日誌"] link:task-adding-gcp-accounts.html["查看如何新增 Google Cloud 服務帳號"]
 
 [source, yaml]
 ----
@@ -36,13 +136,46 @@ title: NetApp Console agent
 description: Permissions for the service account associated with the Console agent.
 stage: GA
 includedPermissions:
-- iam.serviceAccounts.actAs
+- *cloudbuild.builds.get*
+- *cloudbuild.connections.list*
+- *cloudbuild.repositories.accessReadToken*
+- *cloudbuild.repositories.list*
+- *cloudquotas.quotas.get*
+- cloudkms.cryptoKeys.getIamPolicy
+- cloudkms.cryptoKeys.setIamPolicy
+- cloudkms.keyRings.get
+- cloudkms.keyRings.getIamPolicy
+- cloudkms.keyRings.setIamPolicy
+- *config.artifacts.import*
+- *config.deployments.create*
+- *config.deployments.delete*
+- *config.deployments.deleteState*
+- *config.deployments.get*
+- *config.deployments.getLock*
+- *config.deployments.getState*
+- *config.deployments.update*
+- *config.deployments.updateState*
+- *config.previews.upload*
+- *config.revisions.get*
+- *config.revisions.getState*
+- *config.deployments.getLock*
+- *config.deployments.list*
+- *config.deployments.lock*
+- *config.operations.get*
+- *config.previews.get*
+- *config.previews.list*
+- *config.resources.list*
 - compute.regionBackendServices.create
 - compute.regionBackendServices.get
 - compute.regionBackendServices.list
+- *compute.regionBackendServices.update*
 - compute.networks.updatePolicy
+- *compute.addresses.createInternal*
+- *compute.addresses.deleteInternal*
+- *compute.addresses.list*
+- *compute.addresses.setLabels*
+- *compute.addresses.useInternal*
 - compute.backendServices.create
-- compute.addresses.list
 - compute.disks.create
 - compute.disks.createSnapshot
 - compute.disks.delete
@@ -54,7 +187,15 @@ includedPermissions:
 - compute.firewalls.delete
 - compute.firewalls.get
 - compute.firewalls.list
+- *compute.forwardingRules.create*
+- *compute.forwardingRules.delete*
+- *compute.forwardingRules.get*
+- *compute.forwardingRules.setLabels*
 - compute.globalOperations.get
+- *compute.healthChecks.create*
+- *compute.healthChecks.delete*
+- *compute.healthChecks.get*
+- *compute.healthChecks.useReadOnly*
 - compute.images.get
 - compute.images.getFromFamily
 - compute.images.list
@@ -75,15 +216,26 @@ includedPermissions:
 - compute.instances.start
 - compute.instances.stop
 - compute.instances.updateDisplayDevice
+- *compute.instances.use*
+- *compute.instanceGroups.create*
+- *compute.instanceGroups.delete*
 - compute.instanceGroups.get
+- *compute.instanceGroups.update*
+- *compute.instanceGroups.use*
 - compute.addresses.get
 - compute.instances.updateNetworkInterface
+- compute.instances.setMinCpuPlatform
 - compute.machineTypes.get
 - compute.networks.get
 - compute.networks.list
 - compute.projects.get
 - compute.regions.get
 - compute.regions.list
+- *compute.regionBackendServices.delete*
+- *compute.regionBackendServices.use*
+- *compute.resourcePolicies.create*
+- *compute.resourcePolicies.delete*
+- *compute.resourcePolicies.get*
 - compute.snapshots.create
 - compute.snapshots.delete
 - compute.snapshots.get
@@ -115,35 +267,98 @@ includedPermissions:
 - deploymentmanager.types.list
 - logging.logEntries.list
 - logging.privateLogEntries.list
+- *logging.logEntries.create*
+- *logging.logEntries.route*
+- monitoring.timeSeries.list
 - resourcemanager.projects.get
 - storage.buckets.create
 - storage.buckets.delete
 - storage.buckets.get
 - storage.buckets.list
+- *storage.objects.create*
+- *storage.objects.delete*
+- *storage.objects.update*
 - cloudkms.cryptoKeyVersions.useToEncrypt
 - cloudkms.cryptoKeys.get
 - cloudkms.cryptoKeys.list
 - cloudkms.keyRings.list
 - storage.buckets.update
+- iam.serviceAccounts.actAs
+- *iam.serviceAccounts.create*
+- *iam.serviceAccounts.get*
 - iam.serviceAccounts.getIamPolicy
 - iam.serviceAccounts.list
+- *iam.serviceAccountKeys.create*
 - storage.objects.get
-- storage.objects.list
-- monitoring.timeSeries.list
 - storage.buckets.getIamPolicy
-- cloudkms.cryptoKeys.getIamPolicy
-- cloudkms.cryptoKeys.setIamPolicy
-- cloudkms.keyRings.get
-- cloudkms.keyRings.getIamPolicy
-- cloudkms.keyRings.setIamPolicy
+
+
+
 ----
+====
 
 
 == Google Cloud 權限的使用方式
 
+控制台代理程式使用自訂角色中的權限來管理 Google Cloud 網路中的Cloud Volumes ONTAP資源和NetApp資料服務流程。以下各節描述了代理如何使用這些權限。
+
+
+
+=== Cloud Volumes ONTAP所使用的權限
+
+控制台代理程式使用自訂角色中的權限來管理 Google Cloud 網路中的Cloud Volumes ONTAP資源和進程。以下各節描述了代理如何使用這些權限。
+
+.Cloud Volumes ONTAP的權限
+[%collapsible]
+====
 [cols="5*"]
 |===
 | 行動 | 目的 | 用於部署？ | 用於日常營運？ | 用於刪除？ 
+
+
+| *config.deployments.create* .15+| 使用 Google Cloud Infrastructure Manager 部署Cloud Volumes ONTAP虛擬機器實例。 | 是的 | 不 | 不 
+
+
+| *config.deployments.delete* | 不 | 不 | 是的 
+
+
+| *config.deployments.deleteState* | 不 | 不 | 是的 
+
+
+| *config.deployments.get* | 不 | 是的 | 不 
+
+
+| *config.deployments.getLock* | 不 | 是的 | 不 
+
+
+| *config.deployments.getState* | 不 | 是的 | 不 
+
+
+| *config.deployments.list* | 不 | 是的 | 不 
+
+
+| *config.deployments.lock* | 不 | 是的 | 不 
+
+
+| *config.deployments.update* | 不 | 是的 | 不 
+
+
+| *config.deployments.updateState* | 不 | 是的 | 不 
+
+
+| *config.operations.get* | 不 | 是的 | 不 
+
+
+| *config.previews.get* | 不 | 是的 | 不 
+
+
+| *config.previews.list* | 不 | 是的 | 不 
+
+
+| *config.resources.list* | 不 | 是的 | 不 
+
+
+| *config.revisions.get* | 不 | 是的 | 不 
 
 
 | 計算磁碟創建 .7+| 為Cloud Volumes ONTAP建立和管理磁碟。 | 是的 | 是的 | 不 
@@ -179,7 +394,31 @@ includedPermissions:
 | 計算防火牆列表 | 是的 | 是的 | 不 
 
 
-| compute.globalOperations.get。 | 獲取操作狀態。 | 是的 | 是的 | 不 
+| *compute.forwardingRules.create* | 建立轉送規則，將流量路由到後端服務。 | 不 | 是的 | 不 
+
+
+| *compute.forwardingRules.delete* | 刪除現有轉送規則。 | 不 | 是的 | 不 
+
+
+| *compute.forwardingRules.get* | 取得現有轉送規則的詳細資訊。 | 不 | 是的 | 不 
+
+
+| *compute.forwardingRules.setLabels* | 設定或更新組織轉送規則的標籤。 | 不 | 是的 | 不 
+
+
+| compute.globalOperations.get | 獲取操作狀態。 | 是的 | 是的 | 不 
+
+
+| *compute.healthChecks.create* .4+| 建立和管理健康檢查，以監控後端服務的運作狀況。 | 不 | 是的 | 不 
+
+
+| *compute.healthChecks.delete* | 不 | 是的 | 不 
+
+
+| *compute.healthChecks.get* | 不 | 是的 | 不 
+
+
+| *compute.healthChecks.useReadOnly* | 不 | 是的 | 不 
 
 
 | compute.images.get .4+| 取得虛擬機器實例的影像。 | 是的 | 不 | 不 
@@ -242,10 +481,22 @@ includedPermissions:
 | compute.instances.updateDisplayDevice | 是的 | 是的 | 不 
 
 
+| *計算實例使用* | 使用虛擬機器實例（啟動、停止、連線操作）。 | 不 | 是的 | 不 
+
+
 | compute.machineTypes.get | 取得核心數以檢查配額。 | 是的 | 不 | 不 
 
 
 | compute.projects.get | 支援多項目。 | 是的 | 不 | 不 
+
+
+| *compute.resourcePolicies.create* .3+| 建立和管理資源策略，實現資源自動化管理。 | 不 | 是的 | 不 
+
+
+| *compute.resourcePolicies.delete* | 不 | 是的 | 不 
+
+
+| *compute.resourcePolicies.get* | 不 | 是的 | 不 
 
 
 | 計算快照創建 .5+| 建立和管理持久性磁碟快照。 | 是的 | 是的 | 不 
@@ -344,6 +595,12 @@ includedPermissions:
 | logging.privateLogEntries.list | 是的 | 是的 | 不 
 
 
+| *logging.logEntries.create* .2+| 建立並路由日誌條目，用於監控、偵錯和稽核。 | 是的 | 是的 | 不 
+
+
+| *logging.logEntries.route* | 是的 | 是的 | 不 
+
+
 | resourcemanager.projects.get | 支援多項目。 | 是的 | 是的 | 不 
 
 
@@ -362,7 +619,7 @@ includedPermissions:
 | 儲存桶更新 | 不 | 是的 | 不 
 
 
-| cloudkms.cryptoKeyVersions.useToEncrypt .4+| 將來自 Cloud Key Management Service 的客戶管理加密金鑰與Cloud Volumes ONTAP結合使用。 | 是的 | 是的 | 不 
+| cloudkms.cryptoKeyVersions.useToEncrypt .5+| 將來自 Cloud Key Management Service 的客戶管理加密金鑰與Cloud Volumes ONTAP結合使用。 | 是的 | 是的 | 不 
 
 
 | cloudkms.cryptoKeys.get | 是的 | 是的 | 不 
@@ -374,16 +631,31 @@ includedPermissions:
 | cloudkms.keyRings.列表 | 是的 | 是的 | 不 
 
 
+| *cloudbuild.builds.get* | 是的 | 不 | 不 
+
+
 | compute.instances.setServiceAccount .6+| 在Cloud Volumes ONTAP實例上設定服務帳戶。此服務帳戶提供將資料分層至 Google Cloud Storage 儲存桶的權限。 | 是的 | 是的 | 不 
 
 
 | iam.serviceAccounts.actAs | 是的 | 不 | 不 
 
 
+| *iam.serviceAccounts.create* | 是的 | 不 | 不 
+
+
 | iam.serviceAccounts.getIamPolicy | 是的 | 是的 | 不 
 
 
 | iam.serviceAccounts.list | 是的 | 是的 | 不 
+
+
+| *iam.serviceAccountKeys.create* | 是的 | 不 | 不 
+
+
+| storage.objects.create .4+| 在 Google Cloud Storage 儲存桶中建立和管理物件（檔案）。 | 是的 | 是的 | 不 
+
+
+| 儲存物件刪除 | 不 | 不 | 是的 
 
 
 | storage.objects.get | 是的 | 是的 | 不 
@@ -395,22 +667,43 @@ includedPermissions:
 | 計算地址列表 | 在部署 HA 對時檢索區域中的位址。 | 是的 | 不 | 不 
 
 
-| compute.backendServices.create .4+| 配置後端服務以在 HA 對中分配流量。 | 是的 | 不 | 不 
+| *compute.addresses.createInternal* | 在VPC網路內建立內部IP位址以進行資源分配。 | 不 | 是的 | 不 
 
 
-| compute.regionBackendServices.create | 是的 | 不 | 不 
+| *compute.addresses.deleteInternal* | 刪除內部 IP 位址以進行資源清理。 | 不 | 是的 | 不 
+
+
+| *compute.addresses.setLabels* | 更新地址資源上的標籤。 | 不 | 是的 | 不 
+
+
+| *compute.addresses.useInternal* | 網路通訊請使用內部IP位址。 | 不 | 是的 | 不 
+
+
+| compute.backendServices.create | 配置後端服務以在 HA 對中分配流量。 | 是的 | 不 | 不 
+
+
+| compute.regionBackendServices.create .6+| 建立和管理用於流量路由的後端服務。 | 是的 | 不 | 不 
+
+
+| *compute.regionBackendServices.delete* | 不 | 是的 | 不 
 
 
 | compute.regionBackendServices.get | 是的 | 不 | 不 
 
 
+| *compute.regionBackendServices.update* | 是的 | 是的 | 不 
+
+
 | compute.regionBackendServices.list | 是的 | 不 | 不 
+
+
+| *compute.regionBackendServices.use* | 不 | 是的 | 不 
 
 
 | compute.networks.updatePolicy | 在 HA 對的 VPC 和子網路上套用防火牆規則。 | 是的 | 不 | 不 
 
 
-| compute.instanceGroups.get .3+| 在Cloud Volumes ONTAP HA 對上建立和管理儲存虛擬機器。 | 是的 | 是的 | 不 
+| compute.instanceGroups.get .7+| 在Cloud Volumes ONTAP HA 對上建立和管理儲存虛擬機器。 | 是的 | 是的 | 不 
 
 
 | 計算地址 | 是的 | 是的 | 不 
@@ -419,15 +712,33 @@ includedPermissions:
 | 計算.實例.更新網路介面 | 是的 | 是的 | 不 
 
 
+| *compute.instanceGroups.create* | 不 | 是的 | 不 
+
+
+| *compute.instanceGroups.delete* | 不 | 是的 | 不 
+
+
+| *compute.instanceGroups.update* | 不 | 是的 | 不 
+
+
+| *compute.instanceGroups.use* | 不 | 是的 | 不 
+
+
 | 監控時間序列列表 .2+| 發現有關 Google Cloud Storage 儲存桶的資訊。 | 是的 | 是的 | 不 
 
 
 | storage.buckets.getIamPolicy | 是的 | 是的 | 不 
 |===
+====
 
 
 === NetApp Backup and Recovery所使用的權限
 
+控制台代理程式使用自訂角色中的權限來管理 Google Cloud 網路中的NetApp Backup and Recovery資源和進程。以下各節描述了代理如何使用這些權限。
+
+.查看NetApp Backup and Recovery的權限
+[%collapsible]
+====
 [cols="5*"]
 |===
 
@@ -447,10 +758,16 @@ includedPermissions:
 
 | 在NetApp Backup and Recovery啟動精靈中選擇您自己的客戶管理金鑰，而不是使用預設的 Google 管理加密金鑰。 | 是的 | 是的 | 不 
 |===
+====
 
 
 === NetApp Data Classification所使用的權限
 
+控制台代理程式使用自訂角色中的權限來管理 Google Cloud 網路中的NetApp Data Classification資源和進程。以下各節描述了代理如何使用這些權限。
+
+.查看NetApp Data Classification的權限
+[%collapsible]
+====
 [cols="5*"]
 |===
 
@@ -465,11 +782,103 @@ includedPermissions:
 
 | 啟用NetApp Data Classification。 | 是的 | 不 | 不 
 |===
+====
 
 
 == 更改日誌
 
-當新增和刪除權限時，我們會在下面的部分中註明。
+新增和移除的權限如下所示。
+
+
+
+=== 2025年12月8日
+
+NetApp正在從 Google Cloud Deployment Manager 遷移到 Google Cloud Infrastructure Manager (IM)，以便在 Google Cloud 中部署和執行控制台代理程式。為支援此更改，新增了以下權限。
+
+部署代理程式的 Google Cloud 使用者需要以下附加權限：
+
+* 儲存桶創建
+* 存儲桶獲取
+* storage.objects.create
+* 儲存資料夾創建
+* 儲存物件列表
+* iam.serviceAccount.actAs
+* config.deployments.create
+* config.operations.get
+
+
+用於日常運營的 Google Cloud 服務帳號需要以下額外權限：
+
+* cloudbuild.connections.list
+* cloudbuild.repositories.accessReadToken
+* cloudbuild.repositories.list
+* cloudquotas.quotas.get
+* config.artifacts.import
+* config.deployments.deleteState
+* config.deployments.getLock
+* config.deployments.getState
+* config.deployments.updateState
+* config.previews.upload
+* config.revisions.getState
+* 日誌記錄條目創建
+* storage.objects.create
+* 儲存物件刪除
+* 儲存物件更新
+* iam.serviceAccounts.get
+
+
+部署Cloud Volumes ONTAP需要以下附加權限：
+
+* cloudbuild.builds.get
+* config.deployments.delete
+* config.deployments.deleteState
+* config.deployments.get
+* config.deployments.getState
+* config.deployments.list
+* config.deployments.update
+* config.deployments.updateState
+* config.previews.get
+* config.previews.list
+* config.revisions.get
+* config.resources.list
+* iam.serviceAccountKeys.create
+* iam.serviceAccounts.create
+
+
+對於用於Cloud Volumes ONTAP日常操作的服務帳戶，需要下列附加權限。
+
+* 計算.位址.建立內部
+* 計算.位址.刪除內部
+* 計算.位址.設定標籤
+* 計算.位址.使用內部位址
+* 計算轉送規則創建
+* 計算轉送規則刪除
+* 計算轉送規則
+* 計算.轉送規則.設定標籤
+* 計算健康檢查創建
+* compute.healthChecks.delete
+* compute.healthChecks.get
+* compute.healthChecks.useReadOnly
+* compute.instanceGroups.create
+* compute.instanceGroups.delete
+* compute.instanceGroups.update
+* compute.instanceGroups.use
+* compute.instances.use
+* compute.regionBackendServices.delete
+* compute.regionBackendServices.update
+* compute.regionBackendServices.use
+* 計算資源策略創建
+* 計算資源策略刪除
+* compute.resourcePolicies.get
+* 日誌記錄.日誌條目.路由
+* config.deployments.create
+* config.deployments.delete
+* config.deployments.get
+* config.deployments.update
+* config.revisions.get
+* config.deployments.lock
+* config.operations.get
+
 
 
 
@@ -479,7 +888,7 @@ includedPermissions:
 
 
 
-=== 2023年2月06日
+=== 2023年2月6日
 
 此策略中新增了以下權限：
 
@@ -492,7 +901,7 @@ Cloud Volumes ONTAP需要此權限。
 
 === 2023年1月27日
 
-已將以下權限新增至策略：
+此策略新增了以下權限：
 
 * cloudkms.cryptoKeys.getIamPolicy
 * cloudkms.cryptoKeys.setIamPolicy

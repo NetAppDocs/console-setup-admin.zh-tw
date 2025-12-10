@@ -37,16 +37,12 @@ summary: 您可以透過為合作夥伴使用者指派組織內資料夾和專�
 * link:reference-iam-backup-rec-roles.html["備份檢視器"]
 * link:reference-iam-backup-rec-roles.html["復原管理員"]
 * link:reference-iam-backup-rec-roles.html["複製管理員"]
-* link:reference-iam-predefined-roles.html["資料分類檢視器"]
 * link:reference-iam-disaster-rec-roles.html["災難復原管理員"]
 * link:reference-iam-disaster-rec-roles.html["災難復原故障轉移管理員"]
 * link:reference-iam-disaster-rec-roles.html["災難復原應用程式管理員"]
 * link:reference-iam-disaster-rec-roles.html["災難復原檢視器"]
 * link:reference-iam-storage-roles.html["營運支援分析師"]
-* link:reference-iam-ransomware-roles.html["勒索軟體抵禦能力管理員"]
-* link:reference-iam-ransomware-roles.html["勒索軟體復原力檢視器"]
-* link:reference-iam-ransomware-roles.html#user-behavior-roles["勒索軟體復原力用戶行為管理員"]
-* link:reference-iam-ransomware-roles.html#user-behavior-roles["勒索軟體恢復用戶行為檢視器"]
+* link:reference-iam-predefined-roles.html["分類檢視器"]
 
 
 link:reference-iam-predefined-roles.html["了解有關預定義角色的更多信息"]

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-agent-default-config.html 
-keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, agent folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
+keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
 summary: 了解 AWS、Azure 和 Google Cloud 上標準部署（可存取網際網路）的控制台代理預設配置，以及本機環境受限部署（無法存取網際網路）的控制台代理程式預設配置。 
 ---
 = 控制台代理的預設配置

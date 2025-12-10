@@ -27,7 +27,7 @@ summary: 以受限模式部署控制台代理，以便您可以在有限的出�
 .AWS 商業市場
 --
 .開始之前
-您應該具有以下內容：
+需要以下物品：
 
 * 滿足組網需求的VPC及子網路。
 +
@@ -94,7 +94,7 @@ AWS 使用指定的設定啟動軟體。控制台代理大約需要五分鐘即�
 .AWS 政府市場
 --
 .開始之前
-您應該具有以下內容：
+需要以下物品：
 
 * 滿足組網需求的VPC及子網路。
 +
@@ -120,7 +120,7 @@ image:screenshot-gov-cloud-mktp.png["在 AWS Marketplace 中搜尋NetApp Console
 .. 選擇*繼續*。
 
 
-. 依照提示配置並部署實例：
+. 依照提示設定並啟動實例：
 +
 ** *選擇實例類型*：根據區域可用性，選擇一種受支援的執行個體類型（建議使用 t3.2xlarge）。
 +
@@ -175,12 +175,12 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解�
 +
 ** *VM 大小*：選擇符合 CPU 和 RAM 需求的 VM 大小。我們推薦 Standard_D8s_v3。
 ** *磁碟*：控制台代理可以透過 HDD 或 SSD 磁碟實現最佳效能。
-** *公用 IP*：如果您想要將公用 IP 位址與控制台代理程式 VM 一起使用，則該 IP 位址必須使用基本 SKU 以確保控制台使用此公用 IP 位址。
+** *公網 IP*：若要將公網 IP 位址與控制台代理 VM 一起使用，請選擇基本 SKU。
 +
 image:screenshot-azure-sku.png["Azure 中建立新 IP 位址的螢幕截圖，可讓您在 SKU 欄位下選擇「基本」。"]
 
 +
-如果您使用標準 SKU IP 位址，則控制台將使用控制台代理程式的_私有_ IP 位址，而不是公用 IP。如果您用於存取控制台的機器無法存取該私人 IP 位址，則控制台中的操作將會失敗。
+如果您使用標準 SKU IP 位址，則控制台將使用控制台代理程式的_私有_ IP 位址，而不是公用 IP。如果用於存取控制台的電腦無法存取私人 IP 位址，則控制台將無法運作。
 
 +
 https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku["Azure 文件：公用 IP SKU"^]
@@ -191,7 +191,7 @@ link:reference-ports-azure.html["查看 Azure 的安全性群組規則"] 。
 
 ** *身分*：在*管理*下，選擇*啟用系統指派的託管身分*。
 +
-此設定很重要，因為託管身分允許控制台代理虛擬機器向 Microsoft Entra ID 標識自己，而無需提供任何憑證。 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["詳細了解 Azure 資源的託管標識"^] 。
+託管識別允許控制台代理虛擬機器無需憑證即可向 Microsoft Entra ID 進行身份驗證。 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["詳細了解 Azure 資源的託管標識"^] 。
 
 
 
@@ -219,14 +219,14 @@ Azure 使用指定的設定部署虛擬機器。虛擬機器和控制台代理�
 
 
 
-NOTE: 手動安裝控制台代理程式時，無法為透明代理伺服器設定憑證。如果需要為透明代理伺服器設定證書，則必須在安裝後使用維護控制台。詳細了解link:reference-agent-maint-console.html["代理維護控制台"]。
+NOTE: 手動安裝控制台代理程式時，無法為透明代理伺服器設定憑證。如果需要為透明代理伺服器設定證書，則必須在安裝後使用維護控制台。詳細了解link:reference-agent-maint-console-proxy.html["代理維護控制台"]。
 
 * 您需要停用安裝期間驗證出站連線的設定檢查。如果未停用此檢查，手動安裝將失敗。link:task-troubleshoot-agent.html["了解如何停用手動安裝的設定檢查。"]
 * 根據您的作業系統，在安裝控制台代理之前需要 Podman 或 Docker Engine。
 
 
 .關於此任務
-NetApp支援網站上提供的安裝程式可能是早期版本。安裝後，如果有新版本可用，控制台代理會自動更新。
+安裝後，如果有新版本可用，控制台代理會自動更新。
 
 .步驟
 . 如果主機上設定了 _http_proxy_ 或 _https_proxy_ 系統變量，請將其刪除：
@@ -239,9 +239,14 @@ unset https_proxy
 +
 如果不刪除這些系統變量，安裝將會失敗。
 
-. 從下載控制台代理軟體 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp支援站點"^]，然後將其複製到Linux主機上。
+. 下載控制台代理軟體，然後將其複製到 Linux 主機。您可以從NetApp Console或NetApp支援網站下載。
 +
-您應該下載適用於您的網路或雲端中的「線上」代理安裝程式。
+** NetApp Console：前往*代理程式 > 管理 > 部署代理程式 > 本機部署 > 手動安裝*。
++
+選擇下載代理安裝程式檔案或檔案的 URL。
+
+** NetApp支援網站（如果您還沒有存取控制台的權限，則需要此網站） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp支援站點"^] ，
+
 
 . 分配運行腳本的權限。
 +
@@ -301,7 +306,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 
 
 
-NOTE: 如果要設定透明代理，可以在安裝完成後進行設定。 link:reference-agent-maint-console.html["了解代理維護控制台"]
+NOTE: 如果要設定透明代理，可以在安裝完成後進行設定。 link:reference-agent-maint-console-proxy.html["了解代理維護控制台"]
 
 . 如果您使用 Podman，則需要調整 aardvark-dns 連接埠。
 +
@@ -347,7 +352,7 @@ dns_bind_port = 54
 .開始之前
 設定控制台代理的人員必須使用尚不屬於控制台組織的登入名稱登入控制台。
 
-如果您的登入資訊與其他組織相關聯，則您需要使用新的登入資訊進行註冊。否則，您將不會在設定畫面上看到啟用受限模式的選項。
+如果您的登入資訊與另一個組織關聯，您需要註冊一個新的登入資訊。否則，您將在設定畫面上看不到啟用受限模式的選項。
 
 .步驟
 . 從與控制台代理程式執行個體有連線的主機開啟 Web 瀏覽器，然後輸入您安裝的控制台代理程式的下列 URL。
@@ -379,7 +384,7 @@ dns_bind_port = 54
 
 == 步驟 3：向控制台代理提供權限
 
-如果您從 Azure 市集部署了控制台代理，或手動安裝了控制台代理軟體，則需要提供先前設定的權限。
+如果您是從 Azure Marketplace 或手動安裝的控制台代理，則需要授予您先前設定的權限。
 
 如果您從 AWS Marketplace 部署了控制台代理，則這些步驟不適用，因為您在部署期間選擇了所需的 IAM 角色。
 

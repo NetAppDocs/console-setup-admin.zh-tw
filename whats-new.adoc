@@ -18,6 +18,57 @@ summary: 了解NetApp Console管理功能的新增功能：IAM、控制台代理
 
 
 
+== 2025年12月10日
+
+
+
+=== 控制台代理 4.2.0
+
+4.2.0 版本同時支援標準模式和受限模式。
+
+此版本的控制台代理程式包含安全性改進、錯誤修復以及以下功能：
+
+.支援 Google Cloud Infrastructure Manager
+NetApp現在使用 Google Cloud Infrastructure Manager (IM) 而不是 Google Cloud Deployment Manager 來部署代理程式和管理 Google Cloud 中的代理程式。做出此項更改是因為谷歌將棄用此功能。link:https://docs.cloud.google.com/deployment-manager/docs/deprecations["雲端部署管理器"] 。
+
+* 任何 4.2.0 及更高版本的新代理程式都使用基礎架構管理器，您應該更新用於部署的使用者帳戶和服務帳戶權限。link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log["查看權限變更日誌。"^]
+* 部署代理程式時，系統也會建立一個 Google Cloud 儲存桶來儲存部署檔案。
+
+
+.改進了控制台代理的配置檢查
+* 控制台代理現在在執行設定檢查時會檢查已棄用的端點。如果您尚未更新至 4.0.0 或更高版本的新端點列表，則只要係統能夠存取先前的端點列表，安裝就會成功。link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["了解更多關於控制台代理程式所需端點的資訊。"^]
+* 從控制台或代理程式維護控制台對已安裝的控制台代理程式執行設定檢查，以驗證連線性並排除故障。link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["了解如何對控制台代理程式運行配置檢查。"^]
+
+
+.直接從NetApp Console下載代理軟體
+當您需要手動安裝代理程式時，除了NetApp支援網站之外，您還可以直接從NetApp Console存取代理程式軟體。link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html#install-the-console-agent-manually["了解如何直接從NetApp Console下載控制台代理軟體。"^]
+
+
+
+=== NetApp Console管理
+
+本次發布包含以下內容：
+
+.能夠設定憑證過期通知。
+設定服務帳戶和聯合身分驗證憑證過期的通知。選擇七天或三十天。控制台會向具有相應角色的使用者顯示通知和電子郵件。組織管理員會收到服務帳戶通知。組織管理員、聯盟管理員和聯盟檢視者會收到聯盟通知。
+
+.啟用聯合身份驗證後，本地登入將不可用。
+為控制台組織啟用聯合身份驗證後，使用者將無法使用本機登錄，而是會被引導至聯合身份驗證登入。
+
+.提升儲存管理頁面的易用性
+現在，您可以從儲存管理頁面更輕鬆地查看和管理有關ONTAP本機系統（以及 FSx for ONTAP）的詳細資訊。
+
+* 「Discoverable systems」頁面將摘要資訊與可用系統的標籤顯示分開，從而更容易查看有關可發現系統的全面資訊。
+
+
+
+
+== 2025年12月8日
+
+<stdin> 中存在未解析的指令 - include::_whatsnew/2025-12-08.adoc[]
+
+
+
 == 2025年11月10日
 
 
@@ -63,7 +114,7 @@ NetApp將大多數選單選項移至左側導覽窗格，並重新組織選單�
 
 ==== 畫布被系統頁面取代
 
-NetApp將 Canvas 重新命名為 *Systems* 頁面。從「*儲存 > 管理*」選單導覽至「*系統*」頁面。
+NetApp將 Canvas 重新命名為 *Systems* 頁面。從「儲存 > 管理」功能表導覽至「系統」頁面。
 
 image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-mgmt.png["系統頁面的螢幕截圖。"]
 

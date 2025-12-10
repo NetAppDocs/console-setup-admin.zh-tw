@@ -14,7 +14,7 @@ summary: 透過在NetApp Console中建立組織之間的合作夥伴關係，組
 
 
 [role="lead"]
-透過在組織之間建立合作夥伴關係， NetApp Console可讓合作夥伴跨組織邊界安全地管理NetApp資源，從而簡化協作並增強安全性。
+在NetApp Console中建立組織間的合作夥伴關係，可讓合作夥伴安全地跨組織邊界管理NetApp資源，從而簡化協作並增強安全性。
 
 .必備角色
 合作夥伴管理員link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]

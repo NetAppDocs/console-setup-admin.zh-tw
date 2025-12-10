@@ -14,10 +14,10 @@
 .. 上傳包含所需權限的 YAML 檔案。
 .. 使用建立自訂角色 `gcloud iam roles create`命令。
 +
-以下範例在專案層級建立一個名為「connector」的角色：
+以下範例在專案層級建立一個名為「agent」的角色：
 
 +
-`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+`gcloud iam roles create connector --project=myproject --file=agent.yaml`
 
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud 文件：建立和管理自訂角色"^]

@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: reference-agent-maint-console-config-checker.html 
+keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
+summary: 您可以使用控制台代理維護控制台來設定控制台代理以使用透明代理伺服器。 
+---
+= 使用維護控制台進行代理驗證
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用控制台代理維護控制台來驗證控制台代理程式的安裝和配置。
+
+
+
+== 存取代理維護控制台
+
+您可以從控制台代理主機存取維護控制台。導航到以下目錄：
+
+[source, cli]
+----
+/opt/application/netapp/service-manager-2/agent-maint-console
+----
+
+
+== 配置檢查器驗證
+
+這 `config-checker validate`此命令可讓您驗證控制台代理的配置。
+
+
+
+=== 參數
+
+`--services <comma-separated list of services to validate>` - *必需的* -
+
+[role="quick-margin-para"]
+選擇一項或多項服務進行驗證。有效的服務名稱包括：*`PLATFORM`驗證與所需控制台端點的網路連線。
+
+`--validationTypes <comma-separated list validation types to run>`--*必填*-- 選擇要執行的一種或多種驗證類型。有效的驗證類型包括：* `NETWORK`驗證與所需控制台端點的網路連線。
+
+`--proxy <url>` - *選修的* -
+
+[role="quick-margin-para"]
+指定用於驗證的代理伺服器 URL。如果您的代理程式配置為使用代理伺服器，則此項目為必填項。
+
+`--certs <paths>` - *選修的* -
+
+[role="quick-margin-para"]
+指定用於驗證的一個或多個證書檔案的路徑。證書文件必須為PEM格式。多個路徑之間以逗號分隔。如果您的代理程式使用自訂證書，則此參數為必填項。
+
+
+
+=== 配置檢查器驗證範例
+
+.基本驗證：
+[source, cli]
+----
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK
+----
+.使用代理伺服器作為代理時的驗證：
+[source, cli]
+----
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --proxy http://proxy.company.com:8080
+----
+.使用證書驗證代理程式：
+[source, cli]
+----
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --certs /path/to/cert1.pem,/path/to/cert2.pem
+----
+
+
+=== 查看任何命令的幫助
+
+若要查看任何命令的協助，請附加 `--help`到命令。例如，要查看 `proxy add`命令，使用以下命令：
+
+[source, cli]
+----
+./agent-maint-console proxy add --help
+----

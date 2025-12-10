@@ -2,6 +2,7 @@
 :allow-uri-read: 
 
 
+* 雲端基礎架構管理器 API
 * 雲端部署管理器 V2 API
 * 雲端日誌 API
 * 雲端資源管理器 API

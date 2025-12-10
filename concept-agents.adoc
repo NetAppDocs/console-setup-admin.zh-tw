@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-agents.html 
-keywords: 'concept, connectors, learn about connectors, what are connectors, what is a connector, what"s a connector, days, 14 days, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
+keywords: 'concept, Console agents, learn about agents, what are connectors, what is a connector, what"s a connector, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
 summary: _控制台代理_是在您的雲端網路或本機網路上執行的NetApp軟體。您可以使用控制台代理將NetApp Console服務連接到您的儲存環境。 
 ---
 = 了解NetApp Console代理

@@ -19,13 +19,13 @@
 ====
 .Podman
 --
-安裝並設定 Podman：
+請依照以下步驟安裝和設定 Podman：
 
 * 啟用並啟動 podman.socket 服務
 * 安裝python3
-* 安裝對應的 podman-compose 包
+* 安裝 podman-compose 套件版本 1.0.6
 * 將 podman-compose 加入到 PATH 環境變量
-* 請確認您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI。
+* 如果使用 Red Hat Enterprise Linux，請驗證您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI
 
 
 
@@ -41,7 +41,7 @@ rm /var/run/docker.sock
 ----
 . 安裝 Podman。
 +
-從 Red Hat Enterprise Linux 軟體倉庫取得 Podman。
+您可以從官方 Red Hat Enterprise Linux 儲存庫取得 Podman。
 
 +
 對於 Red Hat Enterprise Linux 9：
@@ -77,32 +77,34 @@ sudo systemctl enable --now podman.socket
 ----
 sudo dnf install python3
 ----
-. 安裝 EPEL 以取得 podman-compose。
-+
-.. 如果使用的是 Red Hat Enterprise 9.1 至 9.6 版本：
+. 如果您的系統上還沒有 EPEL 儲存庫包，請安裝它。
+
+
+此步驟是必要的，因為 podman-compose 可從 Extra Packages for Enterprise Linux (EPEL) 儲存庫中取得。
+
+. 如果使用的是 Red Hat Enterprise 9.1 至 9.6 版本：
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 ----
-
-
-. 安裝 podman-compose 套件 1.5.0。
++
+.. 安裝 podman-compose 套件 1.5.0。
 +
 [source, cli]
 ----
 sudo dnf install podman-compose-1.5.0
 ----
-+
-.. 如果使用的是 Red Hat Enterprise Linux 8：
+
+
+. 如果使用的是 Red Hat Enterprise Linux 8：
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-
-
-. 安裝 podman-compose 套件 1.0.6。
++
+.. 安裝 podman-compose 套件 1.0.6。
 +
 [source, cli]
 ----
@@ -112,11 +114,10 @@ sudo dnf install podman-compose-1.0.6
 
 NOTE: 使用 `dnf install`指令滿足將 podman-compose 新增至 PATH 環境變數的要求。安裝指令將 podman-compose 新增至 /usr/bin，它已經包含在 `secure_path`主機上的選項。
 
-. 如果使用 Red Hat Enterprise Linux 8，請驗證您的 Podman 版本是否使用具有 Aardvark DNS 的 NetAvark 而不是 CNI。
-+
-.. 透過執行以下命令檢查您的 networkBackend 是否設定為 CNI：
+.. 如果使用 Red Hat Enterprise Linux 8，請驗證您的 Podman 版本是否使用具有 Aardvark DNS 的 NetAvark 而不是 CNI。
 
 
+. 透過執行以下命令檢查您的 networkBackend 是否設定為 CNI：
 
 
 [listing]
@@ -160,7 +161,7 @@ podman info | grep networkBackend
 .步驟
 . https://docs.docker.com/engine/install/["查看 Docker 的安裝說明"^]
 +
-請依照以下步驟安裝支援的 Docker Engine 版本。請勿安裝最新版本，因為主機不支援該版本。
+請依照步驟安裝支援的 Docker Engine 版本。請勿安裝最新版本，因為控制台不支援它。
 
 . 驗證 Docker 是否已啟用並正在運行。
 +
