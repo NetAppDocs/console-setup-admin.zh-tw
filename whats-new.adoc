@@ -63,12 +63,6 @@ NetApp現在使用 Google Cloud Infrastructure Manager (IM) 而不是 Google Clo
 
 
 
-== 2025年12月8日
-
-<stdin> 中存在未解析的指令 - include::_whatsnew/2025-12-08.adoc[]
-
-
-
 == 2025年11月10日
 
 

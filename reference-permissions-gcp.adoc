@@ -70,19 +70,19 @@ includedPermissions:
 - compute.zoneOperations.get
 - compute.zones.get
 - compute.zones.list
-- *config.deployments.create*
-- *config.operations.get*
-- *config.deployments.delete*
-- *config.deployments.deleteState*
-- *config.deployments.get*
-- *config.deployments.getState*
-- *config.deployments.list*
-- *config.deployments.update*
-- *config.deployments.updateState*
-- *config.previews.get*
-- *config.previews.list*
-- *config.revisions.get*
-- *config.resources.list*
+- config.deployments.create
+- config.operations.get
+- config.deployments.delete
+- config.deployments.deleteState
+- config.deployments.get
+- config.deployments.getState
+- config.deployments.list
+- config.deployments.update
+- config.deployments.updateState
+- config.previews.get
+- config.previews.list
+- config.revisions.get
+- config.resources.list
 - deploymentmanager.compositeTypes.get
 - deploymentmanager.compositeTypes.list
 - deploymentmanager.deployments.create
@@ -101,15 +101,15 @@ includedPermissions:
 - deploymentmanager.types.list
 - resourcemanager.projects.get
 - compute.instances.setServiceAccount
-- *iam.serviceAccounts.actAs*
-- *iam.serviceAccounts.create*
+- iam.serviceAccounts.actAs
+- iam.serviceAccounts.create
 - iam.serviceAccounts.list
-- *iam.serviceAccountKeys.create*
-- *storage.buckets.create*
-- *storage.buckets.get*
-- *storage.objects.create*
-- *storage.folders.create*
-- *storage.objects.list*
+- iam.serviceAccountKeys.create
+- storage.buckets.create
+- storage.buckets.get
+- storage.objects.create
+- storage.folders.create
+- storage.objects.list
 
 ----
 ====
@@ -136,45 +136,45 @@ title: NetApp Console agent
 description: Permissions for the service account associated with the Console agent.
 stage: GA
 includedPermissions:
-- *cloudbuild.builds.get*
-- *cloudbuild.connections.list*
-- *cloudbuild.repositories.accessReadToken*
-- *cloudbuild.repositories.list*
-- *cloudquotas.quotas.get*
+- cloudbuild.builds.get
+- cloudbuild.connections.list
+- cloudbuild.repositories.accessReadToken
+- cloudbuild.repositories.list
+- cloudquotas.quotas.get
 - cloudkms.cryptoKeys.getIamPolicy
 - cloudkms.cryptoKeys.setIamPolicy
 - cloudkms.keyRings.get
 - cloudkms.keyRings.getIamPolicy
 - cloudkms.keyRings.setIamPolicy
-- *config.artifacts.import*
-- *config.deployments.create*
-- *config.deployments.delete*
-- *config.deployments.deleteState*
-- *config.deployments.get*
-- *config.deployments.getLock*
-- *config.deployments.getState*
-- *config.deployments.update*
-- *config.deployments.updateState*
-- *config.previews.upload*
-- *config.revisions.get*
-- *config.revisions.getState*
-- *config.deployments.getLock*
-- *config.deployments.list*
-- *config.deployments.lock*
-- *config.operations.get*
-- *config.previews.get*
-- *config.previews.list*
-- *config.resources.list*
+- config.artifacts.import
+- config.deployments.create
+- config.deployments.delete
+- config.deployments.deleteState
+- config.deployments.get
+- config.deployments.getLock
+- config.deployments.getState
+- config.deployments.update
+- config.deployments.updateState
+- config.previews.upload
+- config.revisions.get
+- config.revisions.getState
+- config.deployments.getLock
+- config.deployments.list
+- config.deployments.lock
+- config.operations.get
+- config.previews.get
+- config.previews.list
+- config.resources.list
 - compute.regionBackendServices.create
 - compute.regionBackendServices.get
 - compute.regionBackendServices.list
-- *compute.regionBackendServices.update*
+- compute.regionBackendServices.update
 - compute.networks.updatePolicy
-- *compute.addresses.createInternal*
-- *compute.addresses.deleteInternal*
-- *compute.addresses.list*
-- *compute.addresses.setLabels*
-- *compute.addresses.useInternal*
+- compute.addresses.createInternal
+- compute.addresses.deleteInternal
+- compute.addresses.list
+- compute.addresses.setLabels
+- compute.addresses.useInternal
 - compute.backendServices.create
 - compute.disks.create
 - compute.disks.createSnapshot
@@ -187,15 +187,15 @@ includedPermissions:
 - compute.firewalls.delete
 - compute.firewalls.get
 - compute.firewalls.list
-- *compute.forwardingRules.create*
-- *compute.forwardingRules.delete*
-- *compute.forwardingRules.get*
-- *compute.forwardingRules.setLabels*
+- compute.forwardingRules.create
+- compute.forwardingRules.delete
+- compute.forwardingRules.get
+- compute.forwardingRules.setLabels
 - compute.globalOperations.get
-- *compute.healthChecks.create*
-- *compute.healthChecks.delete*
-- *compute.healthChecks.get*
-- *compute.healthChecks.useReadOnly*
+- compute.healthChecks.create
+- compute.healthChecks.delete
+- compute.healthChecks.get
+- compute.healthChecks.useReadOnly
 - compute.images.get
 - compute.images.getFromFamily
 - compute.images.list
@@ -216,12 +216,12 @@ includedPermissions:
 - compute.instances.start
 - compute.instances.stop
 - compute.instances.updateDisplayDevice
-- *compute.instances.use*
-- *compute.instanceGroups.create*
-- *compute.instanceGroups.delete*
+- compute.instances.use
+- compute.instanceGroups.create
+- compute.instanceGroups.delete
 - compute.instanceGroups.get
-- *compute.instanceGroups.update*
-- *compute.instanceGroups.use*
+- compute.instanceGroups.update
+- compute.instanceGroups.use
 - compute.addresses.get
 - compute.instances.updateNetworkInterface
 - compute.instances.setMinCpuPlatform
@@ -231,11 +231,11 @@ includedPermissions:
 - compute.projects.get
 - compute.regions.get
 - compute.regions.list
-- *compute.regionBackendServices.delete*
-- *compute.regionBackendServices.use*
-- *compute.resourcePolicies.create*
-- *compute.resourcePolicies.delete*
-- *compute.resourcePolicies.get*
+- compute.regionBackendServices.delete
+- compute.regionBackendServices.use
+- compute.resourcePolicies.create
+- compute.resourcePolicies.delete
+- compute.resourcePolicies.get
 - compute.snapshots.create
 - compute.snapshots.delete
 - compute.snapshots.get
@@ -267,28 +267,28 @@ includedPermissions:
 - deploymentmanager.types.list
 - logging.logEntries.list
 - logging.privateLogEntries.list
-- *logging.logEntries.create*
-- *logging.logEntries.route*
+- logging.logEntries.create
+- logging.logEntries.route
 - monitoring.timeSeries.list
 - resourcemanager.projects.get
 - storage.buckets.create
 - storage.buckets.delete
 - storage.buckets.get
 - storage.buckets.list
-- *storage.objects.create*
-- *storage.objects.delete*
-- *storage.objects.update*
+- storage.objects.create
+- storage.objects.delete
+- storage.objects.update
 - cloudkms.cryptoKeyVersions.useToEncrypt
 - cloudkms.cryptoKeys.get
 - cloudkms.cryptoKeys.list
 - cloudkms.keyRings.list
 - storage.buckets.update
 - iam.serviceAccounts.actAs
-- *iam.serviceAccounts.create*
-- *iam.serviceAccounts.get*
+- iam.serviceAccounts.create
+- iam.serviceAccounts.get
 - iam.serviceAccounts.getIamPolicy
 - iam.serviceAccounts.list
-- *iam.serviceAccountKeys.create*
+- iam.serviceAccountKeys.create
 - storage.objects.get
 - storage.buckets.getIamPolicy
 
@@ -316,49 +316,49 @@ includedPermissions:
 | 行動 | 目的 | 用於部署？ | 用於日常營運？ | 用於刪除？ 
 
 
-| *config.deployments.create* .15+| 使用 Google Cloud Infrastructure Manager 部署Cloud Volumes ONTAP虛擬機器實例。 | 是的 | 不 | 不 
+| config.deployments.create .15+| 使用 Google Cloud Infrastructure Manager 部署Cloud Volumes ONTAP虛擬機器實例。 | 是的 | 不 | 不 
 
 
-| *config.deployments.delete* | 不 | 不 | 是的 
+| config.deployments.delete | 不 | 不 | 是的 
 
 
-| *config.deployments.deleteState* | 不 | 不 | 是的 
+| config.deployments.deleteState | 不 | 不 | 是的 
 
 
-| *config.deployments.get* | 不 | 是的 | 不 
+| config.deployments.get | 不 | 是的 | 不 
 
 
-| *config.deployments.getLock* | 不 | 是的 | 不 
+| config.deployments.getLock | 不 | 是的 | 不 
 
 
-| *config.deployments.getState* | 不 | 是的 | 不 
+| config.deployments.getState | 不 | 是的 | 不 
 
 
-| *config.deployments.list* | 不 | 是的 | 不 
+| config.deployments.list | 不 | 是的 | 不 
 
 
-| *config.deployments.lock* | 不 | 是的 | 不 
+| config.deployments.lock | 不 | 是的 | 不 
 
 
-| *config.deployments.update* | 不 | 是的 | 不 
+| config.deployments.update | 不 | 是的 | 不 
 
 
-| *config.deployments.updateState* | 不 | 是的 | 不 
+| config.deployments.updateState | 不 | 是的 | 不 
 
 
-| *config.operations.get* | 不 | 是的 | 不 
+| config.operations.get | 不 | 是的 | 不 
 
 
-| *config.previews.get* | 不 | 是的 | 不 
+| config.previews.get | 不 | 是的 | 不 
 
 
-| *config.previews.list* | 不 | 是的 | 不 
+| config.previews.list | 不 | 是的 | 不 
 
 
-| *config.resources.list* | 不 | 是的 | 不 
+| config.resources.list | 不 | 是的 | 不 
 
 
-| *config.revisions.get* | 不 | 是的 | 不 
+| config.revisions.get | 不 | 是的 | 不 
 
 
 | 計算磁碟創建 .7+| 為Cloud Volumes ONTAP建立和管理磁碟。 | 是的 | 是的 | 不 
@@ -394,31 +394,31 @@ includedPermissions:
 | 計算防火牆列表 | 是的 | 是的 | 不 
 
 
-| *compute.forwardingRules.create* | 建立轉送規則，將流量路由到後端服務。 | 不 | 是的 | 不 
+| 計算轉送規則創建 | 建立轉送規則，將流量路由到後端服務。 | 不 | 是的 | 不 
 
 
-| *compute.forwardingRules.delete* | 刪除現有轉送規則。 | 不 | 是的 | 不 
+| 計算轉送規則刪除 | 刪除現有轉送規則。 | 不 | 是的 | 不 
 
 
-| *compute.forwardingRules.get* | 取得現有轉送規則的詳細資訊。 | 不 | 是的 | 不 
+| 計算轉送規則 | 取得現有轉送規則的詳細資訊。 | 不 | 是的 | 不 
 
 
-| *compute.forwardingRules.setLabels* | 設定或更新組織轉送規則的標籤。 | 不 | 是的 | 不 
+| 計算.轉送規則.設定標籤 | 設定或更新組織轉送規則的標籤。 | 不 | 是的 | 不 
 
 
 | compute.globalOperations.get | 獲取操作狀態。 | 是的 | 是的 | 不 
 
 
-| *compute.healthChecks.create* .4+| 建立和管理健康檢查，以監控後端服務的運作狀況。 | 不 | 是的 | 不 
+| 計算健康檢查創建 .4+| 建立和管理健康檢查，以監控後端服務的運作狀況。 | 不 | 是的 | 不 
 
 
-| *compute.healthChecks.delete* | 不 | 是的 | 不 
+| compute.healthChecks.delete | 不 | 是的 | 不 
 
 
-| *compute.healthChecks.get* | 不 | 是的 | 不 
+| compute.healthChecks.get | 不 | 是的 | 不 
 
 
-| *compute.healthChecks.useReadOnly* | 不 | 是的 | 不 
+| compute.healthChecks.useReadOnly | 不 | 是的 | 不 
 
 
 | compute.images.get .4+| 取得虛擬機器實例的影像。 | 是的 | 不 | 不 
@@ -481,7 +481,7 @@ includedPermissions:
 | compute.instances.updateDisplayDevice | 是的 | 是的 | 不 
 
 
-| *計算實例使用* | 使用虛擬機器實例（啟動、停止、連線操作）。 | 不 | 是的 | 不 
+| compute.instances.use | 使用虛擬機器實例（啟動、停止、連線操作）。 | 不 | 是的 | 不 
 
 
 | compute.machineTypes.get | 取得核心數以檢查配額。 | 是的 | 不 | 不 
@@ -490,13 +490,13 @@ includedPermissions:
 | compute.projects.get | 支援多項目。 | 是的 | 不 | 不 
 
 
-| *compute.resourcePolicies.create* .3+| 建立和管理資源策略，實現資源自動化管理。 | 不 | 是的 | 不 
+| 計算資源策略創建 .3+| 建立和管理資源策略，實現資源自動化管理。 | 不 | 是的 | 不 
 
 
-| *compute.resourcePolicies.delete* | 不 | 是的 | 不 
+| 計算資源策略刪除 | 不 | 是的 | 不 
 
 
-| *compute.resourcePolicies.get* | 不 | 是的 | 不 
+| compute.resourcePolicies.get | 不 | 是的 | 不 
 
 
 | 計算快照創建 .5+| 建立和管理持久性磁碟快照。 | 是的 | 是的 | 不 
@@ -595,10 +595,10 @@ includedPermissions:
 | logging.privateLogEntries.list | 是的 | 是的 | 不 
 
 
-| *logging.logEntries.create* .2+| 建立並路由日誌條目，用於監控、偵錯和稽核。 | 是的 | 是的 | 不 
+| 日誌記錄條目創建 .2+| 建立並路由日誌條目，用於監控、偵錯和稽核。 | 是的 | 是的 | 不 
 
 
-| *logging.logEntries.route* | 是的 | 是的 | 不 
+| 日誌記錄.日誌條目.路由 | 是的 | 是的 | 不 
 
 
 | resourcemanager.projects.get | 支援多項目。 | 是的 | 是的 | 不 
@@ -631,7 +631,7 @@ includedPermissions:
 | cloudkms.keyRings.列表 | 是的 | 是的 | 不 
 
 
-| *cloudbuild.builds.get* | 是的 | 不 | 不 
+| cloudbuild.builds.get | 是的 | 不 | 不 
 
 
 | compute.instances.setServiceAccount .6+| 在Cloud Volumes ONTAP實例上設定服務帳戶。此服務帳戶提供將資料分層至 Google Cloud Storage 儲存桶的權限。 | 是的 | 是的 | 不 
@@ -640,7 +640,7 @@ includedPermissions:
 | iam.serviceAccounts.actAs | 是的 | 不 | 不 
 
 
-| *iam.serviceAccounts.create* | 是的 | 不 | 不 
+| iam.serviceAccounts.create | 是的 | 不 | 不 
 
 
 | iam.serviceAccounts.getIamPolicy | 是的 | 是的 | 不 
@@ -649,7 +649,7 @@ includedPermissions:
 | iam.serviceAccounts.list | 是的 | 是的 | 不 
 
 
-| *iam.serviceAccountKeys.create* | 是的 | 不 | 不 
+| iam.serviceAccountKeys.create | 是的 | 不 | 不 
 
 
 | storage.objects.create .4+| 在 Google Cloud Storage 儲存桶中建立和管理物件（檔案）。 | 是的 | 是的 | 不 
@@ -667,16 +667,16 @@ includedPermissions:
 | 計算地址列表 | 在部署 HA 對時檢索區域中的位址。 | 是的 | 不 | 不 
 
 
-| *compute.addresses.createInternal* | 在VPC網路內建立內部IP位址以進行資源分配。 | 不 | 是的 | 不 
+| 計算.位址.建立內部 | 在VPC網路內建立內部IP位址以進行資源分配。 | 不 | 是的 | 不 
 
 
-| *compute.addresses.deleteInternal* | 刪除內部 IP 位址以進行資源清理。 | 不 | 是的 | 不 
+| 計算.位址.刪除內部 | 刪除內部 IP 位址以進行資源清理。 | 不 | 是的 | 不 
 
 
-| *compute.addresses.setLabels* | 更新地址資源上的標籤。 | 不 | 是的 | 不 
+| 計算.位址.設定標籤 | 更新地址資源上的標籤。 | 不 | 是的 | 不 
 
 
-| *compute.addresses.useInternal* | 網路通訊請使用內部IP位址。 | 不 | 是的 | 不 
+| 計算.位址.使用內部位址 | 網路通訊請使用內部IP位址。 | 不 | 是的 | 不 
 
 
 | compute.backendServices.create | 配置後端服務以在 HA 對中分配流量。 | 是的 | 不 | 不 
@@ -685,19 +685,19 @@ includedPermissions:
 | compute.regionBackendServices.create .6+| 建立和管理用於流量路由的後端服務。 | 是的 | 不 | 不 
 
 
-| *compute.regionBackendServices.delete* | 不 | 是的 | 不 
+| compute.regionBackendServices.delete | 不 | 是的 | 不 
 
 
 | compute.regionBackendServices.get | 是的 | 不 | 不 
 
 
-| *compute.regionBackendServices.update* | 是的 | 是的 | 不 
+| compute.regionBackendServices.update | 是的 | 是的 | 不 
 
 
 | compute.regionBackendServices.list | 是的 | 不 | 不 
 
 
-| *compute.regionBackendServices.use* | 不 | 是的 | 不 
+| compute.regionBackendServices.use | 不 | 是的 | 不 
 
 
 | compute.networks.updatePolicy | 在 HA 對的 VPC 和子網路上套用防火牆規則。 | 是的 | 不 | 不 
@@ -712,16 +712,16 @@ includedPermissions:
 | 計算.實例.更新網路介面 | 是的 | 是的 | 不 
 
 
-| *compute.instanceGroups.create* | 不 | 是的 | 不 
+| compute.instanceGroups.create | 不 | 是的 | 不 
 
 
-| *compute.instanceGroups.delete* | 不 | 是的 | 不 
+| compute.instanceGroups.delete | 不 | 是的 | 不 
 
 
-| *compute.instanceGroups.update* | 不 | 是的 | 不 
+| compute.instanceGroups.update | 不 | 是的 | 不 
 
 
-| *compute.instanceGroups.use* | 不 | 是的 | 不 
+| compute.instanceGroups.use | 不 | 是的 | 不 
 
 
 | 監控時間序列列表 .2+| 發現有關 Google Cloud Storage 儲存桶的資訊。 | 是的 | 是的 | 不 

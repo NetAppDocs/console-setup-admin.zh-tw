@@ -86,9 +86,6 @@ Podman 版本 5.4.0，podman-compose 版本 1.5.0。
  a| 
 在強制模式或寬容模式下受支持
 
-* 作業系統上啟用了 SELinux 的代理程式不支援對Cloud Volumes ONTAP系統的管理。
-
-
 
 
  a| 
@@ -107,9 +104,6 @@ Podman 版本 4.9.4，podman-compose 版本 1.5.0。
  a| 
 在強制模式或寬容模式下受支持
 
-* 作業系統上啟用了 SELinux 的代理程式不支援對Cloud Volumes ONTAP系統的管理。
-
-
 
 
  a| 
@@ -127,9 +121,6 @@ Podman 版本 4.6.1 或 4.9.4，搭配 podman-compose 1.0.6。
 <<podman-configuration,查看 Podman 設定要求>> 。
  a| 
 在強制模式或寬容模式下受支持
-
-* 作業系統上啟用了 SELinux 的代理程式不支援對Cloud Volumes ONTAP系統的管理。
-
 
 
 
