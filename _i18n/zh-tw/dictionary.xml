@@ -457,7 +457,6 @@
   <block id="98119697a8c596d6a586655f867a2cda" category="inline-xref">查看 Podman 設定要求</block>
   <block id="a4facfb2d16d1ed97d33467440808582" category="paragraph"><block ref="70e106a4b5e10c3f8e254a047f7ddb34" category="inline-xref-macro-rx"></block> 。</block>
   <block id="80626b31c22fa123b11c56011b1f23b6" category="paragraph">在強制模式或寬容模式下受支持</block>
-  <block id="af068a958b6647626147316242b85435" category="list-text">作業系統上啟用了 SELinux 的代理程式不支援對Cloud Volumes ONTAP系統的管理。</block>
   <block id="3d945423f8e9496c429a5d8c65b4604f" category="paragraph">Ubuntu</block>
   <block id="4cb2cce5e859bbc5a24d65a5385fba47" category="paragraph">24.04 LTS</block>
   <block id="c7c28552abf6b30437f72dd034b10f4b" category="paragraph">3.9.45 或更高版本， NetApp Console處於標準模式或受限模式</block>
@@ -469,7 +468,6 @@
   <block id="8f06b143b878ae3919ba41cd38ea7380" category="list-text">在私人模式下使用控制台時，下列作業系統支援控制台代理程式。安裝代理之前需要一個容器編排工具。</block>
   <block id="1a3d8802d280d4ec910f54042cd62998" category="cell">SELinux</block>
   <block id="730752c250979031a3c93723f75e0b07" category="paragraph">3.9.42 或更高版本，控制台處於私人模式</block>
-  <block id="7e4159d172a1854b6946f160a149d326" category="paragraph">在強制模式或寬容模式下受支持^1^</block>
   <block id="607262a04e5c4340fc8d641e874a5695" category="paragraph">3.9.29 或更高版本</block>
   <block id="a3336db0e9f7b6341a12794c144076b6" category="paragraph">Docker Engine 23.0.6 至 26.0.0</block>
   <block id="5556c95763913c6cfa8f61d9cab4f4f2" category="paragraph">26.0.0 支援 _new_ agent 3.9.44 或更高版本的安裝</block>
@@ -509,7 +507,6 @@
   <block id="72647f42887226fbe161a7784cde9900" category="admonition">安裝代理程式後調整 aardvark-dns 連接埠（預設值：53），以避免 DNS 連接埠衝突。按照說明配置連接埠。</block>
   <block id="b7f382be5c79895b47058d13f21b554a" category="list-text">如果主機上安裝了 podman-docker 套件，請將其刪除。</block>
   <block id="3c7e0e0689042d7582c0880e1b998f2c" category="list-text">安裝 Podman。</block>
-  <block id="29c15383bb54e5c0c3bfba429503d481" category="paragraph">對於 Red Hat Enterprise Linux 9：</block>
   <block id="6d76d2ad5a4defbd1ab7de4805041d08" category="paragraph">其中 &lt;version&gt; 是您正在安裝的 Podman 支援的版本。<block ref="f431862ab66067d97cd0bf60cb34059c" category="inline-xref-macro-rx"></block> 。</block>
   <block id="084cfc903eb108eb15642e42f36348f9" category="paragraph">對於 Red Hat Enterprise Linux 8：</block>
   <block id="d85624226a34d354eb24bd9f58803ee7" category="list-text">啟用並啟動 podman.socket 服務。</block>
@@ -784,14 +781,6 @@
   <block id="b539e86fbaa7eae465366a0142624ec2" category="paragraph">BlueXP管理員（具有組織管理員角色的使用者）可以設定BlueXP以提示使用者輸入其ONTAP憑證以存取ONTAP系統管理員。啟用此設定後，使用者每次都需要輸入其ONTAP憑證，因為它們不會儲存在BlueXP中。</block>
   <block id="990a2328425e217648ea5dd2ae370ffb" category="inline-link-macro">了解如何配置憑證設定。</block>
   <block id="a97214620795cdb6071bd24584271e12" category="paragraph">此功能可在連接器版本 3.9.49 及更高版本中使用。<block ref="d8aff65091362c86f97d60b0103d6fe5" category="inline-link-macro-rx"></block> 。</block>
-  <block id="a03c6dfbb1d64911f1090d54175ff8d3" category="section-title">連接器 3.9.48 更新</block>
-  <block id="1697b2b05dc5c7ad63e22e713e94ba7c" category="section-title">能夠停用連接器的自動升級設置</block>
-  <block id="91f4c340492e583f80db57f970516c1f" category="paragraph">您可以停用連接器的自動升級功能。</block>
-  <block id="459e65cb3fcf9e226149b023791951b2" category="paragraph">當您在標準模式或受限模式下使用BlueXP時，只要連接器具有出站網路存取權限以取得軟體更新， BlueXP就會自動將您的連接器升級到最新版本。如果您需要手動管理連接器的升級時間，現在可以停用標準模式或受限模式的自動升級。</block>
-  <block id="01d6125faf020265bf432216c335698c" category="admonition">此變更不會影響BlueXP私人模式，在該模式下您必須始終自行升級連接器。</block>
-  <block id="0e9ee8d377b683ca8ac77de05c3539d9" category="paragraph">此功能可在 Connector 版本 3.9.48 及更高版本中使用。</block>
-  <block id="355c51d49cd780f57fe417fdede5f61c" category="inline-link-macro">了解如何停用連接器的自動升級。</block>
-  <block id="205d3d3e91b5bdc14b60b9aa01a583a5" category="paragraph"><block ref="205d3d3e91b5bdc14b60b9aa01a583a5" category="inline-link-macro-rx"></block></block>
   <block id="23b3b711859803a815b81aca1cc4811c" category="doc">連接器 3.9.50</block>
   <block id="490e13bea5876f4583d326593619ee16" category="list-text">現在，作業系統上啟用了 SELinux 的連接器支援對Cloud Volumes ONTAP系統的管理。</block>
   <block id="256d8753a695f4395908c9903ae723b2" category="paragraph">目前，3.9.50 版本適用於標準模式和限制模式。</block>
@@ -5175,7 +5164,6 @@
   <block id="c8fa489b70f23c314b0b945db2384452" category="sidebar">維護 VCenter 安裝的代理</block>
   <block id="70328d3965555bdfe7c71386e9e25887" category="sidebar">安裝 CA 簽章憑證以存取 Web 控制台</block>
   <block id="417a7f2f69f19fbcd309a4694944397e" category="sidebar">要求在 EC2 執行個體上使用 IMDSv2</block>
-  <block id="c33d6b870a4603154aa9aca1e2bdc138" category="sidebar">管理代理升級</block>
   <block id="e5c32965ed32649bcfd48bc8b138f3d2" category="sidebar">解除安裝並刪除控制台代理</block>
   <block id="7c584a16cbf4210dc0a344179e274e09" category="sidebar">預設配置</block>
   <block id="8f235a758f8b25f9b4ff4eddf53e6c5e" category="sidebar">在NetApp Console中強制執行ONTAP權限</block>
@@ -5537,7 +5525,6 @@
   <block id="e308cbdddf34fb65f938301ff80d4538" category="list-text">compute.subnetworks.useExternalIp</block>
   <block id="bc803c81454ea9df76e9060827a7bc53" category="list-text">compute.instances.addAccessConfig</block>
   <block id="3f7540ad5f30cb6539b7476d85d2f608" category="paragraph">權限已更新，以使其用途更加清晰，但未添加或刪除任何權限。新增三列，分別指示每個權限是用於部署、日常操作或刪除。除此之外，還有一些權限根據其在NetApp Data Classification和NetApp Backup and Recovery的用途進行了劃分。</block>
-  <block id="18ecbdaa6bb0f123dda150b973bd53b7" category="list-text">如果使用的是 Red Hat Enterprise 9.1 至 9.6 版本：</block>
   <block id="2f78cc1ceedbe872d890b3b087731dee" category="paragraph">| Amazon FsX for NetApp ONTAP：</block>
   <block id="fccc45024c0efe519c08e43bb1bd4c5f" category="list-text">api.workloads.netapp.com</block>
   <block id="5e57ad0482de1c13a4a285a6101f6c13" category="paragraph">| 基於 Web 的控制台透過此端點與 Workload Factory API 進行交互，以管理和操作基於ONTAP 的FSx 工作負載。</block>
@@ -5651,67 +5638,24 @@
   <block id="ba28f37a50f35b5b62bf9d0cebb79e6a" category="section-title">Cloud Volumes ONTAP所使用的權限</block>
   <block id="45c85e2fcbcad00a3b3aff5447627a5b" category="paragraph">控制台代理程式使用自訂角色中的權限來管理 Google Cloud 網路中的Cloud Volumes ONTAP資源和進程。以下各節描述了代理如何使用這些權限。</block>
   <block id="05fedb77715f320017d52f66da44b1b0" category="example-title">Cloud Volumes ONTAP的權限</block>
-  <block id="1978fc577443d8841749463c81c14e1b" category="cell">*config.deployments.create*</block>
   <block id="7011503cf97d17706ff8163876018fb2" category="cell">使用 Google Cloud Infrastructure Manager 部署Cloud Volumes ONTAP虛擬機器實例。</block>
-  <block id="90859ccfb98bd6357cfd9888e01654f7" category="cell">*config.deployments.delete*</block>
-  <block id="1c823c113d5b21854ab32fb4006d239e" category="cell">*config.deployments.deleteState*</block>
-  <block id="4aef8bfd5362969e0a14daaef6aa2206" category="cell">*config.deployments.get*</block>
-  <block id="39871c3ed7f15a544a81dd29a8f6d5be" category="cell">*config.deployments.getLock*</block>
-  <block id="6f5bdaf7fca0180616b4ae4d03d58a28" category="cell">*config.deployments.getState*</block>
-  <block id="3f52aa0019ca6c92a0b2ce5ef1585bb7" category="cell">*config.deployments.list*</block>
-  <block id="91ea1caf7d132e95307e5641e3eb678a" category="cell">*config.deployments.lock*</block>
-  <block id="5cea6e43ecc95c4f000154ebf17ffe41" category="cell">*config.deployments.update*</block>
-  <block id="efda381a960e37f6857c4e005d80f4d4" category="cell">*config.deployments.updateState*</block>
-  <block id="527ac12ac6f7f67f130d341677f2666a" category="cell">*config.operations.get*</block>
-  <block id="09cbd21df4067bcce7aca81e1d55d7f9" category="cell">*config.previews.get*</block>
-  <block id="4f81cd437237e3919ef57ccf6f896eab" category="cell">*config.previews.list*</block>
-  <block id="25beaddbb4bfa58c896401064f614a49" category="cell">*config.resources.list*</block>
-  <block id="b47fce5e3845afb2bed0589dd445f4b1" category="cell">*config.revisions.get*</block>
-  <block id="6e9d76e8116c43eb4d333f5e51a59158" category="cell">*compute.forwardingRules.create*</block>
   <block id="1204549a036d6f1fa0e77a33b66ba5fc" category="cell">建立轉送規則，將流量路由到後端服務。</block>
-  <block id="51f4457e4ce6f71c07304daee30d55a4" category="cell">*compute.forwardingRules.delete*</block>
   <block id="5625df4a9e5fad50b5ed7483ef854ba0" category="cell">刪除現有轉送規則。</block>
-  <block id="2747d1bc3f8c306dcd87a303e8d46ac4" category="cell">*compute.forwardingRules.get*</block>
   <block id="518cdf23dbd2f2786baa04a1b251789f" category="cell">取得現有轉送規則的詳細資訊。</block>
-  <block id="be4ea57d513cf3eb072627e23f9ab07d" category="cell">*compute.forwardingRules.setLabels*</block>
   <block id="f5be53441d39f1e3531a7e05f4c9cb41" category="cell">設定或更新組織轉送規則的標籤。</block>
   <block id="2df5b761a5ee0099ec61a876d1eb970a" category="cell">compute.globalOperations.get</block>
-  <block id="e91ad303361b5fdc2d2c5336e085b399" category="cell">*compute.healthChecks.create*</block>
   <block id="cd9c9102f061e7080ec044f1de8be60f" category="cell">建立和管理健康檢查，以監控後端服務的運作狀況。</block>
-  <block id="69c63ecfab8251f5332b3f093989452b" category="cell">*compute.healthChecks.delete*</block>
-  <block id="91fc716755c2ccb249d395deaddc51d1" category="cell">*compute.healthChecks.get*</block>
-  <block id="1d0d0f012d65150fe8a659ddc5246c6b" category="cell">*compute.healthChecks.useReadOnly*</block>
-  <block id="51c92eabc0dc72041fa2d618c547a3b3" category="cell">*計算實例使用*</block>
   <block id="60f9a4c26542d13806ebfceda41b622a" category="cell">使用虛擬機器實例（啟動、停止、連線操作）。</block>
-  <block id="7694a96be1a3706f979373e54371672a" category="cell">*compute.resourcePolicies.create*</block>
   <block id="69c9360ed1f6b9f362a8bb04cc2f9976" category="cell">建立和管理資源策略，實現資源自動化管理。</block>
-  <block id="5c1436481ccb784f0099a466930a9d4b" category="cell">*compute.resourcePolicies.delete*</block>
-  <block id="79c6a1fb6244cc1241f910477c4585fa" category="cell">*compute.resourcePolicies.get*</block>
-  <block id="946819076f570f98fc2669abc5ebb221" category="cell">*logging.logEntries.create*</block>
   <block id="365620bda694367699a9e977c245c99d" category="cell">建立並路由日誌條目，用於監控、偵錯和稽核。</block>
-  <block id="24073bc546846441de345b264ff9733b" category="cell">*logging.logEntries.route*</block>
-  <block id="af467f9a70abceae95e202a38cab79bc" category="cell">*cloudbuild.builds.get*</block>
-  <block id="f93ac717762cc8fe2abd2d13026a6e0c" category="cell">*iam.serviceAccounts.create*</block>
-  <block id="97f415e7bf3ae2691c030ac84e8a7ab4" category="cell">*iam.serviceAccountKeys.create*</block>
   <block id="d097a5e02531e9d8606a4b9016211fb0" category="cell">storage.objects.create</block>
   <block id="18e2e5fd1011d7608a9039b76959973f" category="cell">在 Google Cloud Storage 儲存桶中建立和管理物件（檔案）。</block>
   <block id="877dd561e8b326f974d6649bf025cc47" category="cell">儲存物件刪除</block>
-  <block id="75c9b1d045f5bd31e38a2fe8fc99685b" category="cell">*compute.addresses.createInternal*</block>
   <block id="a01609be65377c550c1f3f9c95e301e9" category="cell">在VPC網路內建立內部IP位址以進行資源分配。</block>
-  <block id="67ce54621d28117b563f4a29bba7ea15" category="cell">*compute.addresses.deleteInternal*</block>
   <block id="eb8b5851a4b3813a0b7d8271e9390168" category="cell">刪除內部 IP 位址以進行資源清理。</block>
-  <block id="4a9033f2bc4de0bb816e8bb0b5d4f954" category="cell">*compute.addresses.setLabels*</block>
   <block id="c9100b96b75009cc80c0b2c138896bf1" category="cell">更新地址資源上的標籤。</block>
-  <block id="f80885b173b15e9ea2234f900e51e402" category="cell">*compute.addresses.useInternal*</block>
   <block id="d52c5aaec9bec122290d546577a86741" category="cell">網路通訊請使用內部IP位址。</block>
   <block id="6cf64ac632269f6541c1da37cd735d52" category="cell">建立和管理用於流量路由的後端服務。</block>
-  <block id="d8e30cab07834e99dd81b60d6b1eb695" category="cell">*compute.regionBackendServices.delete*</block>
-  <block id="d71ae8f686ef0997fc9137df9832b3a3" category="cell">*compute.regionBackendServices.update*</block>
-  <block id="6ffa2106d04c5f11c8219cf00218c867" category="cell">*compute.regionBackendServices.use*</block>
-  <block id="8afe1371ad74901fbfca12f6507394f7" category="cell">*compute.instanceGroups.create*</block>
-  <block id="31837e29feaf463250d44e6b633644d1" category="cell">*compute.instanceGroups.delete*</block>
-  <block id="a231c32ea863f8bc2002ebefe954023f" category="cell">*compute.instanceGroups.update*</block>
-  <block id="008a67a6e66af0c91194d03a05ed9ca6" category="cell">*compute.instanceGroups.use*</block>
   <block id="fee9fb5dae000866e2823c08577b5639" category="paragraph">控制台代理程式使用自訂角色中的權限來管理 Google Cloud 網路中的NetApp Backup and Recovery資源和進程。以下各節描述了代理如何使用這些權限。</block>
   <block id="a696d2e75adad45b4173573021542ba7" category="example-title">查看NetApp Backup and Recovery的權限</block>
   <block id="d5ca4eff15be43a2a5ebcb745899160d" category="paragraph">控制台代理程式使用自訂角色中的權限來管理 Google Cloud 網路中的NetApp Data Classification資源和進程。以下各節描述了代理如何使用這些權限。</block>
@@ -5862,7 +5806,10 @@
   <block id="e1da0c759b99b40771f992144973dfe0" category="paragraph">有時您可能需要停用在安裝期間驗證出站連線的設定檢查。例如，在政府雲端環境中手動安裝代理程式時，需要停用設定檢查，否則安裝將失敗。</block>
   <block id="749e848334a8eeda9b72b5bef6878260" category="paragraph">您可以透過在 _com/opt/application/netapp/service-manager-2/config.json_ 檔案中設定 _skipConfigCheck_ 標誌來停用設定檢查。預設情況下，此標誌設定為 false，且設定檢查會驗證代理程式的出站存取。將此標誌設為 true 以停用檢查。在完成此步驟之前，請先熟悉 JSON 語法。</block>
   <block id="174dd97dd1f160583ac76fa482fa6a5e" category="section-title">2025年12月10日</block>
-  <block id="426c031f387e762bb968fd54671cf5a6" category="paragraph">&lt;stdin&gt; 中存在未解析的指令 - include::_whatsnew/2025-12-08.adoc[]</block>
   <block id="5a348f21cc989b094b43c61561c46351" category="sidebar">配置檢查</block>
   <block id="800641e37082e3805299720dbe2f9713" category="sidebar">透明代理</block>
+  <block id="313de8c309a0a212c02f6a6a480a0bf1" category="list-text">對於 Red Hat Enterprise Linux 9.6：</block>
+  <block id="d5bf119df844977ba02663feefe22591" category="list-text">適用於 Red Hat Enterprise Linux 9.1 至 9.4：</block>
+  <block id="4fcd2b24226e5ab1f33572cdc55d9b7b" category="list-text">如果使用 Red Hat Enterprise 9：</block>
+  <block id="fd1ad73a99f49752f7ad262decfb3b45" category="list-text">安裝EPEL存儲庫軟體包。</block>
 </blocks>

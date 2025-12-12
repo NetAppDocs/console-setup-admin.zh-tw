@@ -219,26 +219,34 @@ rm /var/run/docker.sock
 您可以從官方 Red Hat Enterprise Linux 儲存庫取得 Podman。
 
 +
-對於 Red Hat Enterprise Linux 9：
-
+.. 對於 Red Hat Enterprise Linux 9.6：
 +
 [source, cli]
 ----
-sudo dnf install podman-2:<version>
+sudo dnf install podman-5:<version>
 ----
 +
 其中 <version> 是您正在安裝的 Podman 支援的版本。<<podman-versions,查看支援的 Podman 版本>> 。
 
-+
-對於 Red Hat Enterprise Linux 8：
-
+.. 適用於 Red Hat Enterprise Linux 9.1 至 9.4：
 +
 [source, cli]
 ----
-sudo dnf install podman-3:<version>
+sudo dnf install podman-4:<version>
 ----
 +
 其中 <version> 是您正在安裝的 Podman 支援的版本。<<podman-versions,查看支援的 Podman 版本>> 。
+
+.. 對於 Red Hat Enterprise Linux 8：
++
+[source, cli]
+----
+sudo dnf install podman-4:<version>
+----
++
+其中 <version> 是您正在安裝的 Podman 支援的版本。<<podman-versions,查看支援的 Podman 版本>> 。
+
+
 
 . 啟用並啟動 podman.socket 服務。
 +
@@ -253,11 +261,14 @@ sudo systemctl enable --now podman.socket
 sudo dnf install python3
 ----
 . 如果您的系統上還沒有 EPEL 儲存庫包，請安裝它。
-
-
++
 此步驟是必要的，因為 podman-compose 可從 Extra Packages for Enterprise Linux (EPEL) 儲存庫中取得。
 
-. 如果使用的是 Red Hat Enterprise 9.1 至 9.6 版本：
+. 如果使用 Red Hat Enterprise 9：
++
+.. 安裝EPEL存儲庫軟體包。
+
+
 +
 [source, cli]
 ----
@@ -274,11 +285,12 @@ sudo dnf install podman-compose-1.5.0
 
 . 如果使用的是 Red Hat Enterprise Linux 8：
 +
+.. 安裝EPEL存儲庫軟體包。
++
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-+
 .. 安裝 podman-compose 套件 1.0.6。
 +
 [source, cli]
@@ -290,44 +302,42 @@ sudo dnf install podman-compose-1.0.6
 NOTE: 使用 `dnf install`指令滿足將 podman-compose 新增至 PATH 環境變數的要求。安裝指令將 podman-compose 新增至 /usr/bin，它已經包含在 `secure_path`主機上的選項。
 
 .. 如果使用 Red Hat Enterprise Linux 8，請驗證您的 Podman 版本是否使用具有 Aardvark DNS 的 NetAvark 而不是 CNI。
-
-
-. 透過執行以下命令檢查您的 networkBackend 是否設定為 CNI：
-
-
-[listing]
++
+... 透過執行以下命令檢查您的 networkBackend 是否設定為 CNI：
++
+[source, cli]
 ----
 podman info | grep networkBackend
 ----
-. 如果 networkBackend 設定為 `CNI`，你需要將其更改為 `netavark`。
-. 安裝 `netavark`和 `aardvark-dns`使用以下命令：
-
-
-[listing]
+... 如果 networkBackend 設定為 `CNI`，你需要將其更改為 `netavark`。
+... 安裝 `netavark`和 `aardvark-dns`使用以下命令：
++
+[source, cli]
 ----
 dnf install aardvark-dns netavark
 ----
-. 打開 `/etc/containers/containers.conf`檔案並修改 network_backend 選項以使用“netavark”而不是“cni”。
+... 打開 `/etc/containers/containers.conf`檔案並修改 network_backend 選項以使用“netavark”而不是“cni”。
 +
 如果 `/etc/containers/containers.conf`不存在，請將配置變更為 `/usr/share/containers/containers.conf`。
 
+... 重新啟動 podman。
 +
-.. 重新啟動 podman。
-
-
-
-
-[listing]
+[source, cli]
 ----
 systemctl restart podman
 ----
-. 使用以下命令確認 networkBackend 現在已更改為“netavark”：
-
-
-[listing]
+... 使用以下命令確認 networkBackend 現在已更改為“netavark”：
++
+[source, cli]
 ----
 podman info | grep networkBackend
 ----
+
+
+
+
+
+
 --
 .Docker 引擎
 --
