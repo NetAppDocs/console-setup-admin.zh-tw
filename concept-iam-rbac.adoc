@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: concept-iam-rbac.html 
+keywords: roles, permissions, role-based access control, rbac, iam, identity and access management, least privilege, access control, NetApp Console access, organization access, folder access, project access, resource access 
+summary: '使用基於角色的存取控制 (RBAC) 管理使用者對NetApp Console的訪問，在組織、資料夾或專案層級指派預先定義角色。每個角色都授予特定的權限，定義使用者在其指派的權限範圍內可以執行哪些操作。' 
+---
+= 了解NetApp Console基於角色的存取控制 (RBAC)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用基於角色的存取控制 (RBAC) 管理使用者對NetApp Console的訪問，在組織、資料夾或專案層級指派預先定義角色。每個角色都授予特定的權限，定義使用者在其指派的權限範圍內可以執行哪些操作。
+
+NetApp在設計控制台角色時遵循最小權限原則，因此每個角色僅包含其任務所需的權限。這種方法透過限制每個成員所需的存取權限來增強安全性。
+
+將資源整理成資料夾和專案後​​，為組織成員指派特定資料夾或專案的角色，使他們只能履行自己的職責。
+
+例如，您可以為特定專案層級的成員指派勒索軟體復原管理員角色，允許他們對該專案內的資源執行勒索軟體復原操作，而無需授予他們對整個組織的更廣泛存取權限。同一使用者可以被授予組織內多個專案的角色。
+
+您可以根據使用者的職責，為相同範圍或不同範圍的使用者指派多個角色。例如，規模較小的組織可能會讓同一用戶在組織層級管理勒索軟體復原和備份與復原任務，而規模較大的組織可能會在專案層級為每個角色分配不同的使用者。
+
+
+
+== 控制台組織成員的類型
+
+NetApp Console組織中有三種類型的成員：* _使用者帳號_：登入NetApp Console以管理資源的個人使用者。使用者必須先註冊NetApp Console，然後才能被加入到組織中。* _服務帳戶_：應用程式或服務透過 API 與NetApp Console互動時使用的非人類帳戶。您可以將服務帳戶直接新增至您的控制台組織。* _聯合群組_：從您的身分提供者 (IdP) 同步的群組，可讓您集中管理多個使用者的存取權限。聯合群組中的每個使用者都必須先註冊NetApp Console，並被新增到您的組織中，並且擁有相應的存取角色，然後才能存取授予該群組的資源。
+
+link:task-iam-manage-members-permissions.html#add-members["了解如何為您的組織新增成員。"]
+
+
+
+== NetApp Console中的預先定義角色
+
+NetApp Console包含預先定義角色，您可以將其指派給組織成員。每個角色都包含權限，用於指定成員在其指派的範圍（組織、資料夾或專案）內可以執行哪些操作。
+
+NetApp Console角色採用最小權限原則，確保成員僅擁有完成任務所需的權限，並按角色提供的存取權限類型對其進行分類：
+
+* 平台角色：提供控制台管理權限
+* 資料服務角色：提供管理特定資料服務的權限，例如勒索軟體復原和備份與復原。
+* 應用程式角色：提供管理儲存以及審核控制台事件和警報的權限
+
+
+您可以根據成員的職責為其指派多個角色。例如，您可以為特定項目為一名成員指派勒索軟體復原管理員角色和備份與復原管理員角色。
+
+link:reference-iam-predefined-roles.html["了解NetApp Console中可用的預先定義角色"]。

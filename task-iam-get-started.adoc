@@ -16,7 +16,7 @@ summary: 若要開始在NetApp Console中進行身分識別和存取管理，請
 [role="lead"]
 當您註冊NetApp Console時，系統會提示您建立一個新的組織。該組織包括一名成員（組織管理員）和一個預設項目。要設定身分和存取管理 (IAM) 來滿足您的業務需求，您需要自訂組織的層次結構、新增其他成員、新增或發現資源，並在整個層次結構中關聯這些資源。
 
-您必須擁有*組織管理員*權限才能管理整個組織的身分和存取權限。如果您具有*資料夾或專案管理員*權限，則您只能管理您有權限的資料夾和專案。
+您需要擁有*組織管理員*或*超級管理員*權限才能管理組織的身分和存取權限。擁有*資料夾或專案管理員*權限，您只能管理您有權存取的資料夾和專案。
 
 請依照以下步驟建立一個新組織。該順序可能會根據您組織的需求而有所不同。
 
@@ -29,7 +29,7 @@ link:task-iam-manage-folders-projects.html["了解如何使用資料夾和項目
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"]將成員與您的組織關聯
 [role="quick-margin-para"]
-將使用者帳戶連結到您的組織並分配權限。您也可以選擇為您的組織新增服務帳戶。
+當使用者註冊NetApp Console後，您必須明確地將他們新增至您的 Console 組織。您也可以選擇為您的組織新增服務帳戶。
 
 [role="quick-margin-para"]
 link:task-iam-manage-members-permissions.html["了解如何管理成員及其權限"] 。

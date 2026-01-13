@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-quick-start-standard-mode.html 
 keywords: quick start, standard mode quick start 
-summary: 透過為控制台準備網路、註冊並建立帳戶以及（可選）建立控制台代理，以標準模式開始使用NetApp Console。 
+summary: '要開始使用NetApp Console(SaaS)，請先準備控制台的網絡，註冊並建立帳戶，然後使用NetApp助理設定初始功能。' 
 ---
-= 入門工作流程（標準模式）
+= 入門工作流程（SaaS）
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,22 +14,29 @@ summary: 透過為控制台準備網路、註冊並建立帳戶以及（可選�
 
 
 [role="lead"]
-透過為控制台準備網路、註冊並建立帳戶以及（可選）建立控制台代理，以標準模式開始使用NetApp Console。
+要開始使用NetApp Console(SaaS)，請先準備控制台的網絡，註冊並建立帳戶，然後使用控制台助手設定初始功能。
 
-在標準模式下，您可以存取由NetApp作為軟體即服務 (SaaS) 產品託管的基於 Web 的控制台。在開始之前，請確保您了解link:concept-modes.html["部署模式"]和link:concept-agents.html["控制台代理"]。
+您可以存取由NetApp提供的基於 Web 的控制台，該控制台是軟體即服務 (SaaS) 產品。您可以使用控制台管理混合雲儲存環境並使用NetApp資料服務。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] link:reference-networking-saas-console.html["準備使用NetApp控制台的網絡"]
 [role="quick-margin-para"]
-存取NetApp控制台的電腦應該與特定端點建立連線。如果您的網路限制出站訪問，您應該確保允許這些端點。
+確保存取NetApp控制台的電腦能夠透過網路存取所需的端點。
+
+link:reference-networking-saas-console.html["了解如何為NetApp控制台配置網路。"]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] link:task-sign-up-saas.html["註冊並建立組織"]
 [role="quick-margin-para"]
-前往 https://console.netapp.com["NetApp控制台"^]並註冊。您將可以選擇建立一個組織，但如果您的公司已經有現有組織，則應跳過該步驟。
+前往 https://console.netapp.com["NetApp控制台"^] 並註冊。如果系統提示您建立組織，而您認為您的公司已經存在組織，請關閉對話方塊並告知您的組織管理員。如果貴公司目前沒有組織管理員，您可以認領此角色。 link:task-user-settings.html#contact-admin["了解如何聯絡組織管理員。"^]
 
 [role="quick-margin-para"]
-此時，您已登入並可開始管理儲存體和使用Digital Advisor、 Amazon FSx for ONTAP、 Azure NetApp Files等服務。link:concept-agents.html["了解沒有控制台代理您可以做什麼"] 。
+此時，您已登錄，可以使用NetApp助理開始設定控制台。首先，請將您的NetApp支援帳號與控制台代理程式關聯，以啟用全部功能。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]建立控制台代理
+如果您選擇不使用NetApp助理或安裝控制台代理，您可以開始管理儲存體並使用Digital Advisor、 Amazon FSx for ONTAP、 Azure NetApp Files等服務。link:concept-agents.html["了解沒有控制台代理您可以做什麼"]。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 關聯您的NetApp支援網站 (NSS) 帳戶
+將您的NetApp支援網站 (NSS) 帳戶與控制台關聯，可以更輕鬆地管理您的授權和訂閱，並直接從控制台存取支援資源。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"] 建立控制台代理
 [role="quick-margin-para"]
 進階儲存管理功能和某些NetApp資料服務要求您安裝控制台代理程式。控制台代理程式使控制台能夠管理混合雲環境中的資源和流程。
 
@@ -44,9 +51,18 @@ summary: 透過為控制台準備網路、註冊並建立帳戶以及（可選�
 * link:task-install-agent-on-prem.html["了解如何在本機建立控制台代理"]
 
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] 為主機新增儲存系統
 [role="quick-margin-para"]
-若要使用NetApp智慧數據服務管理 Google Cloud 中的儲存和數據，請確保控制台代理程式在 Google Cloud 中運作。
+在NetApp Console中，您可以新增或發現儲存系統來管理您的混合雲端儲存環境。使用NetApp助理新增您的第一個儲存系統。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"] link:task-subscribe-standard-mode.html["訂閱NetApp Intelligent Services（可選）"]
+
+TIP: 如果在 AWS、Microsoft Azure 或 Google Cloud 中安裝控制台代理，則控制台會自動發現代理安裝位置的 Amazon S3 儲存桶、Azure Blob 儲存體或 Google Cloud Storage 儲存桶的相關資訊。這些系統會自動加入到「系統」頁面。
+
+* link:https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["了解如何發現ONTAP系統"]
+* link:https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html["了解如何發現StorageGRID系統"]
+* link:https://docs.netapp.com/us-en/storage-management-e-series/task-discover-e-series.html["了解如何發現 E 系列系統"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六"] link:task-subscribe-standard-mode.html["訂閱NetApp Intelligent Services（可選）"]
 [role="quick-margin-para"]
-透過您的雲端供應商註冊NetApp Intelligent Services，按小時付費（PAYGO）或透過年度合約付費。  NetApp Intelligent Services包括NetApp Backup and Recovery、 Cloud Volumes ONTAP、 NetApp Cloud Tiering、 NetApp Ransomware Resilience和NetApp Disaster Recovery。  NetApp Data Classification包含在您的訂閱中，無需額外付費。
+透過您的雲端供應商註冊NetApp Intelligent Services ，即可按小時（按需求付費）或按年計費。訂閱包含NetApp Backup and Recovery、 Cloud Volumes ONTAP、 NetApp Cloud Tiering、 NetApp Ransomware Resilience、 NetApp Disaster Recovery和NetApp Data Classification。

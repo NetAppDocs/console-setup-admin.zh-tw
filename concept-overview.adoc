@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-overview.html 
 keywords: overview, concepts, features, use case, cloud manager, bluexp, how bluexp works, supported cloud providers, cloud providers, hyperscalers, aws, google, how NetApp Console works 
-summary: NetApp Console可在企業範圍內跨本機和雲端環境集中管理NetApp儲存和資料服務。 
+summary: 該控制台透過整合資料服務統一混合多雲的儲存管理和保護，以保護和最佳化資料。 
 ---
 = 了解NetApp Console
 :hardbreaks:
@@ -14,25 +14,19 @@ summary: NetApp Console可在企業範圍內跨本機和雲端環境集中管理
 
 
 [role="lead"]
-NetApp Console在企業級內部和雲端環境中提供對NetApp儲存和NetApp Data Services的集中管理，提供即時洞察、更快的工作流程和簡化的管理，並且高度安全且合規。
-
-它是一種服務 (SaaS) 平台，提供儲存管理、資料移動性、資料保護以及資料分析和控制。管理功能透過基於 Web 的控制台和 API 提供。
-
-
-
-== 特徵
-
 該控制台透過整合資料服務統一混合多雲的儲存管理和保護，以保護和最佳化資料。
 
+它既可以作為軟體即服務 (SaaS) 平台使用，也可以作為自託管選項安裝在您自己的主權雲端中。它提供儲存管理、資料移動性、資料保護以及資料分析和控制。管理功能透過基於 Web 的控制台和 API 提供。
 
 
-=== 集中儲存管理
+
+== 集中儲存管理
 
 使用控制台發現、部署和管理雲端和本地儲存。
 
 
 
-==== 支援的雲端和本地存儲
+=== 支援的雲端和本地存儲
 
 您可以從控制台管理以下類型的儲存空間：
 
@@ -68,15 +62,15 @@ NetApp Console在企業級內部和雲端環境中提供對NetApp儲存和NetApp
 
 
 
-==== 儲存管理
+=== 儲存管理
 
 在控制台中，_systems_ 代表已發現或已部署的儲存空間。您可以選擇一個系統將其與NetApp資料服務整合或管理存儲，例如新增磁碟區。
 
-image:screenshot-canvas.png["控制台的螢幕截圖顯示了多個系統，其中一個已被選中，並顯示了啟用NetApp資料服務或選擇 *進入系統* 來管理儲存的能力。"]
+image:screenshot-canvas.png["控制台截圖，顯示了多個系統。選取其中一個選項，即可啟用NetApp資料服務，或選擇「進入系統」來管理儲存。"]
 
 
 
-=== 整合數據服務和儲存管理，以保護、保障和最佳化數據
+== 整合數據服務和儲存管理，以保護、保障和最佳化數據
 
 控制台提供資料服務以保護和維護儲存可用性。
 
@@ -147,11 +141,11 @@ link:concept-agents.html["了解有關控制台代理的更多信息"] 。
 
 
 
-=== 部署模式
+=== SaaS 與主權雲端部署
 
-NetApp為NetApp Console提供了兩種部署模式：_標準模式_使用軟體即服務 (SaaS) 層實現全部功能，而_受限模式_限制出站連線。
+您可以透過註冊 SaaS 服務或部署在您的主權雲端來開始使用NetApp Console 。在主權雲端部署NetApp Console時， NetApp會限制出站連接，以滿足您組織的安全性和合規性要求。當控制台部署在主權雲端時，並非所有功能和服務都可用。
 
-NetApp持續為不需要出站連線的站點提供BlueXP 。  BlueXP僅在私人模式下可用。link:task-quick-start-private-mode.html["了解沒有網路連線的站點的BlueXP （私人模式）。"]
+NetApp持續為不需要出站連線的站點提供BlueXP 。BlueXP可以安裝在您的網路上，無需任何出站連線。 link:task-quick-start-private-mode.html["了解沒有網路連線的站點的BlueXP （私人模式）。"]
 
 link:concept-modes.html["了解有關部署模式的更多信息"] 。
 

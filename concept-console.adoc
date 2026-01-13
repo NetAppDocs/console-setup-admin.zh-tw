@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: concept-modes.html 
+permalink: concept-console.html 
 keywords: dark site, internet, on prem, no internet, supported deployments, govcloud, government access, environments, supported environments, deployment modes, modes, private mode, restricted mode, il6, sc2s, c2s, dark site, sovereign region, saas, government region, secret region, top secret, aws secret, aws top secret, private 
-summary: 'NetApp Console提供多種部署模式，讓您能夠滿足您的業務和安全需求。_標準模式_利用軟體即服務 (SaaS) 層來提供全部功能，而_限制模式_和_私人模式_適用於有連線限制的組織。' 
+summary: NetApp Console提供 SaaS 體驗，可存取所有功能；也提供自架選項，適用於網路連線受限的組織。 
 ---
-= 了解NetApp Console部署模式
+= 了解NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,13 @@ summary: 'NetApp Console提供多種部署模式，讓您能夠滿足您的業�
 
 
 [role="lead"]
-NetApp Console提供多種部署模式，讓您能夠滿足您的業務和安全需求。
+NetApp Console提供 SaaS 體驗，可存取所有功能；也提供自架選項，適用於網路連線受限的組織。
 
-* _標準模式_利用軟體即服務 (SaaS) 層來提供完整的功能。使用者透過基於 Web 的託管介面存取控制台
-* _限制模式_適用於有連線限制並希望在自己的公有雲中安裝NetApp Console的組織。使用者透過託管在其雲端環境中的控制台代理程式上的基於 Web 的介面存取控制台。
-+
-NetApp Console在受限模式下限制流量、通訊和數據，您必須確保您的環境（本地端和雲端）符合所需的規定。
+您可以透過兩種方式使用NetApp Console ：作為完全託管的 SaaS 體驗，或作為您自己的雲端環境中的自架解決方案。使用 SaaS 選項，您可以透過 console.netapp.com 存取控制台，而NetApp管理所有基礎架構、驗證和更新。您可以透過網頁瀏覽器直接存取所有功能。如果選擇自架選項，則需要在 AWS、Azure 或 Google Cloud 環境中安裝控制台代理程式。此介面在本地運行，代理程式與NetApp保持有限的出站連接，以執行身份驗證和更新等基本任務。
 
+如果您的組織擁有標準的網路連接，請選擇 SaaS 體驗。您可以享受最簡單的設定、自動更新以及對所有NetApp儲存系統、資料服務和進階功能的完全存取權。您可以直接從控制台新增代理， NetApp會處理所有維護工作。
 
+如果您的組織需要嚴格的連接性、安全性或合規性控制，例如政府或受監管行業，請選擇自託管選項。您可以獲得更多控制權和網路隔離，但只能管理選定的NetApp儲存系統並使用有限的資料服務，且某些功能不可用。您可以手動安裝控制台代理，並直接從本機代理介面存取控制台。透過雲端市場或手動安裝安裝代理，代理僅與NetApp進行出站通信，確保沒有入站網路連線。
 
 
 
