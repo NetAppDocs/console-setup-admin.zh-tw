@@ -189,6 +189,7 @@ includedPermissions:
 - compute.firewalls.list
 - compute.forwardingRules.create
 - compute.forwardingRules.delete
+- compute.forwardingRules.update
 - compute.forwardingRules.get
 - compute.forwardingRules.setLabels
 - compute.globalOperations.get
@@ -401,6 +402,9 @@ includedPermissions:
 
 
 | 計算轉送規則 | 取得現有轉送規則的詳細資訊。 | 不 | 是的 | 不 
+
+
+| 計算轉送規則更新 | 更新現有流量管理轉送規則。 | 不 | 是的 | 不 
 
 
 | 計算.轉送規則.設定標籤 | 設定或更新組織轉送規則的標籤。 | 不 | 是的 | 不 

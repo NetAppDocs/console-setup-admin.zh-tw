@@ -1293,7 +1293,6 @@
   <block id="320a91e2547bc28be93b76779dc849b4" category="paragraph">您選擇的安裝選項會影響您如何準備安裝。這包括如何為控制台代理程式提供在 Azure 中驗證和管理資源所需的權限。</block>
   <block id="011286419a3e5b900c9f64647edebdf7" category="summary">有幾種不同的方法可以在 Google Cloud 中建立控制台代理。直接從NetApp Console是最常見的方式。</block>
   <block id="89facd2099770d471c8de70fdb5d0651" category="doc">Google Cloud 中的控制台代理安裝選項</block>
-  <block id="0e60cc3f489de1661d16a80c2219b147" category="paragraph">有幾種不同的方法可以在 Google Cloud 中建立控制台代理。直接從NetApp Console是最常見的方式。  ---</block>
   <block id="1a208b984fe61bb9d1e4e6b026e30354" category="list-text"><block ref="84693cca73c9981e6b563eb4572174e7" category="inline-link-macro-rx"></block>（這是標準選項）</block>
   <block id="efbe29648b3d8def21619f8bba35784f" category="paragraph">此操作將在您選擇的 VPC 中啟動運行 Linux 和控制台代理軟體的 VM 執行個體。</block>
   <block id="f47b616e0890c8a8507745d52fc62533" category="inline-link-macro">使用 Google Platform 建立控制台代理</block>
@@ -5904,4 +5903,9 @@
   <block id="4c61619ce49044f354b1f5cc38707fd2" category="sidebar">AWS 代理權限和安全性規則</block>
   <block id="20ec4216ad7aef42619add3b96b89c33" category="sidebar">Azure 權限和所需安全性規則</block>
   <block id="347863a199ea8f4c7e1e9540d041ca12" category="sidebar">Google Cloud 權限和所需的防火牆規則</block>
+  <block id="772b95b1a689cd9ca0f7d8935114e25c" category="paragraph-title">針對Cloud Volumes ONTAP 的其他 Google Cloud 權限</block>
+  <block id="335ea2f40a7e49b48a24b0867a975d2b" category="paragraph">為了支援 Google Cloud 中的Cloud Volumes ONTAP管理，控制台代理現在需要額外的權限。已向控制台代理程式使用的服務帳戶新增下列權限：compute.forwardingRules.update</block>
+  <block id="b4c9682d1423fe286221a4951d5900b8" category="paragraph"><block ref="b4c9682d1423fe286221a4951d5900b8" category="inline-link-macro-rx"></block></block>
+  <block id="b18fad63d8ccb120bf7c88b5cde19431" category="cell">計算轉送規則更新</block>
+  <block id="d82499f632494fadd7c3cb95a45cdd03" category="cell">更新現有流量管理轉送規則。</block>
 </blocks>
