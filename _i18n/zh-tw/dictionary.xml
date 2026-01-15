@@ -5744,9 +5744,7 @@
   <block id="1065e278b83db0baa7239d1c2c89e558" category="paragraph">控制台只會顯示一次客戶端金鑰。請妥善備份；如果遺失，您可以稍後重新建立。</block>
   <block id="6c07155a6c5b387b3649e57518b2acbf" category="list-text">如果您選擇 JWT 驗證，請下載或複製用戶端 ID 和 JWT 受眾群體。控制台只會顯示此資訊一次，之後無法再檢索。</block>
   <block id="1e5bd0e3b2f8efdd44ff92b7d355c374" category="section-title">在您的組織中新增聯合組</block>
-  <block id="c4d8a0f38fcfd51b64b45642a963ccd2" category="paragraph">您可以將來自身分提供者 (IdP) 的聯合群組新增至您的組織。聯合群組的成員將繼承您在控制台中指派給該群組的角色。</block>
   <block id="1f87469083830ec60b59de86a65908a9" category="inline-link-macro">了解如何建立聯邦。</block>
-  <block id="44c50d77ce337726b2c52859655871e2" category="paragraph">在新增聯合群組之前，請確保以下事項： * 您必須已在身分識別提供者 (IdP) 和控制台之間設定聯合。<block ref="562353f9c9a6ec120d22140ce361907b" category="inline-link-macro-rx"></block> * 該群組必須已存在於您的身分提供者 (IdP) 中。* 您必須知道身分提供者 (IdP) 中群組的確切名稱。* 該群組使用者必須已註冊NetApp Console，並在控制台中被明確指派了角色。</block>
   <block id="16a2c505069eacd418dca553f5b68d99" category="list-text">對於“成員類型”，請選擇“聯合群組”。</block>
   <block id="00cfd65508d24955faa8b609b29efc15" category="list-text">選擇該團體所屬的聯邦。</block>
   <block id="be1ae879869c7f401beda2410fc2ef42" category="list-text">對於“群組名稱”，請輸入您身分提供者 (IdP) 中群組的確切名稱。</block>
@@ -5903,9 +5901,13 @@
   <block id="4c61619ce49044f354b1f5cc38707fd2" category="sidebar">AWS 代理權限和安全性規則</block>
   <block id="20ec4216ad7aef42619add3b96b89c33" category="sidebar">Azure 權限和所需安全性規則</block>
   <block id="347863a199ea8f4c7e1e9540d041ca12" category="sidebar">Google Cloud 權限和所需的防火牆規則</block>
-  <block id="772b95b1a689cd9ca0f7d8935114e25c" category="paragraph-title">針對Cloud Volumes ONTAP 的其他 Google Cloud 權限</block>
-  <block id="335ea2f40a7e49b48a24b0867a975d2b" category="paragraph">為了支援 Google Cloud 中的Cloud Volumes ONTAP管理，控制台代理現在需要額外的權限。已向控制台代理程式使用的服務帳戶新增下列權限：compute.forwardingRules.update</block>
-  <block id="b4c9682d1423fe286221a4951d5900b8" category="paragraph"><block ref="b4c9682d1423fe286221a4951d5900b8" category="inline-link-macro-rx"></block></block>
-  <block id="b18fad63d8ccb120bf7c88b5cde19431" category="cell">計算轉送規則更新</block>
-  <block id="d82499f632494fadd7c3cb95a45cdd03" category="cell">更新現有流量管理轉送規則。</block>
+  <block id="9f3261123c8a658e7b62dee5c17371f4" category="paragraph-title">NetApp Console中聯合群組的角色存取控制</block>
+  <block id="c4d7a3f544d6f76c7c70bcb232209dbf" category="paragraph">NetApp Console支援將角色指派給聯合群組（例如 Active Directory 群組），從而允許管理員根據組織身分提供者 (IdP) 中的群組成員身分自動執行使用者入職和離職。此功能可減少管理開銷，並透過在群組成員身分變更時立即更新控制台存取權限來確保安全、一致的存取。</block>
+  <block id="ac4ebbe533b328180ba7587ac3ed17ea" category="inline-link-macro">了解如何為您的組織提供聯合群組的存取權限。</block>
+  <block id="bd8d483345dcb63c75668983c3887b87" category="paragraph"><block ref="bd8d483345dcb63c75668983c3887b87" category="inline-link-macro-rx"></block></block>
+  <block id="8e21188f4a561525a629d0158af709a2" category="paragraph">您可以將身分提供者 (IdP) 中的聯合群組新增至您的組織，並為其指派一個或多個角色。聯合群組的成員將繼承您在控制台中指派給該群組的角色。</block>
+  <block id="74339c243d7e2c57c81d3b6eeb492598" category="paragraph">在為聯合組分配角色之前，請確保以下事項：</block>
+  <block id="99673e10ad28f12bcaf375fb16592097" category="list-text">在身分識別提供者 (IdP) 和控制台之間建立聯盟。 <block ref="562353f9c9a6ec120d22140ce361907b" category="inline-link-macro-rx"></block></block>
+  <block id="2e2db2e64333e9c722068fbbc6cceb8e" category="list-text">該群組必須已存在於您的身分提供者 (IdP) 中，並且已被指派對控制台的應用程式存取權。</block>
+  <block id="06d5b18e5be0feb68eea2f9f0a2102d0" category="list-text">屬於該群組的使用者必須已經註冊了NetApp Console，並且已明確指派了控制台中的角色。NetApp建議指派最低存取權限角色，例如組織檢視者。</block>
 </blocks>

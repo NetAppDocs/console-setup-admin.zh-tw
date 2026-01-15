@@ -21,6 +21,11 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.h
 
 本次發布包含以下內容：
 
+.NetApp Console中聯合群組的角色存取控制
+NetApp Console支援將角色指派給聯合群組（例如 Active Directory 群組），從而允許管理員根據組織身分提供者 (IdP) 中的群組成員身分自動執行使用者入職和離職。此功能可減少管理開銷，並透過在群組成員身分變更時立即更新控制台存取權限來確保安全、一致的存取。
+
+link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#add-a-federated-group-to-your-organization["了解如何為您的組織提供聯合群組的存取權限。"]
+
 .NetApp Console處於受限模式時支援聯合身份驗證
 現在您可以為受限模式的NetApp Console組織啟用聯合驗證。這樣，使用者就可以使用其公司憑證登入控制台，同時保持受限模式的安全優勢。
 
