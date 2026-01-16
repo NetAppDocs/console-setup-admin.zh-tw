@@ -34,4 +34,4 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-p
 
 link:https://docs.netapp.com/us-en/console-setup-admin/task-enable-read-only-mode.html["了解如何為控制台組織啟用唯讀模式。"]
 
-link:https://docs.netapp.com/us-en/console-setup-admin/task-user-settings["當你的組織處於唯讀模式時，了解如何提升你的角色。"]
+link:https://docs.netapp.com/us-en/console-setup-admin/task-user-settings.html["當你的組織處於唯讀模式時，了解如何提升你的角色。"]
