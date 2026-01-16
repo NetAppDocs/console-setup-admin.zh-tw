@@ -5910,4 +5910,8 @@
   <block id="99673e10ad28f12bcaf375fb16592097" category="list-text">在身分識別提供者 (IdP) 和控制台之間建立聯盟。 <block ref="562353f9c9a6ec120d22140ce361907b" category="inline-link-macro-rx"></block></block>
   <block id="2e2db2e64333e9c722068fbbc6cceb8e" category="list-text">該群組必須已存在於您的身分提供者 (IdP) 中，並且已被指派對控制台的應用程式存取權。</block>
   <block id="06d5b18e5be0feb68eea2f9f0a2102d0" category="list-text">屬於該群組的使用者必須已經註冊了NetApp Console，並且已明確指派了控制台中的角色。NetApp建議指派最低存取權限角色，例如組織檢視者。</block>
+  <block id="881a7400da554e794b5b8e9d39c7db4a" category="section-title">工作負載端點</block>
+  <block id="7226c299553546c713e6b5ab556098c8" category="paragraph">控制台代理程式必須能夠存取以下NetApp工作負載端點。</block>
+  <block id="0eda8bbe61d2248f5418aba76b8dc5b1" category="paragraph">https://api.workloads.netapp.com</block>
+  <block id="a2d795d1d62d99052325545b09f9236f" category="paragraph">基於 Web 的控制台透過與 Workload Factory API 互動來管理和操作基於ONTAP 的FSx 工作負載。</block>
 </blocks>
