@@ -11,9 +11,9 @@
 此版本的控制台代理程式包含安全性改進、錯誤修復以及以下功能：
 
 .能夠驗證控制台代理的網路連接
-現在可以直接從NetApp Console驗證已連線的控制台代理程式的網路連線。此功能有助於驗證連接性並排查控制台代理的問題。
+現在，您可以直接從 NetApp Console 驗證已連接 Console 代理的網路連線。此功能有助於驗證連接性並排查 Console 代理的問題。此外，您也可以透過 Console 代理程式維護主控台命令列介面（CLI）來執行網路診斷程式。
 
-link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["了解如何對控制台代理程式運行配置檢查。"]
+link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["了解如何從 NetApp Console 運行配置。"]
 
 
 

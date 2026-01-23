@@ -4838,7 +4838,6 @@
   <block id="70328d3965555bdfe7c71386e9e25887" category="sidebar">安裝 CA 簽章憑證以存取 Web 控制台</block>
   <block id="417a7f2f69f19fbcd309a4694944397e" category="sidebar">要求在 EC2 執行個體上使用 IMDSv2</block>
   <block id="e5c32965ed32649bcfd48bc8b138f3d2" category="sidebar">解除安裝並刪除控制台代理</block>
-  <block id="7c584a16cbf4210dc0a344179e274e09" category="sidebar">預設配置</block>
   <block id="8f235a758f8b25f9b4ff4eddf53e6c5e" category="sidebar">在NetApp Console中強制執行ONTAP權限</block>
   <block id="cbaee96b9499da2c5c6d3b23090382c6" category="sidebar">了解憑證和權限</block>
   <block id="9d812302dfdd0fdbf4faa0fe53b9ed24" category="sidebar">了解項目和權限</block>
@@ -5461,8 +5460,6 @@
   <block id="79af92d05f2b214eab2c765e215beb6b" category="doc">控制台代理 4.3.0</block>
   <block id="6f1b51eea64496510e6cf5a5a2d57d29" category="paragraph">4.3.0 版本同時支援標準模式和受限模式。</block>
   <block id="664a9e1da962d9131b0a035da50bbcc7" category="paragraph-title">能夠驗證控制台代理的網路連接</block>
-  <block id="81cc16a2354d8ec80802e2e4ac22f15a" category="paragraph">現在可以直接從NetApp Console驗證已連線的控制台代理程式的網路連線。此功能有助於驗證連接性並排查控制台代理的問題。</block>
-  <block id="65ce32eae3a28c0b24f8cc33c345ab84" category="paragraph"><block ref="65ce32eae3a28c0b24f8cc33c345ab84" category="inline-link-macro-rx"></block></block>
   <block id="8b71edf4fd7d99d72da1d37de5e154b7" category="paragraph-title">NetApp Console處於受限模式時支援聯合身份驗證</block>
   <block id="58bbe2cc0931c12594be1bafb70597fb" category="paragraph">現在您可以為受限模式的NetApp Console組織啟用聯合驗證。這樣，使用者就可以使用其公司憑證登入控制台，同時保持受限模式的安全優勢。</block>
   <block id="ac811c471ef716f9c8a3865d7f14caa3" category="paragraph-title">唯讀模式</block>
@@ -5780,7 +5777,6 @@
   <block id="cc58a3864ec91bd4d491cafcb895e671" category="paragraph">使用者註冊NetApp Console後，您可以將他們新增至您的組織並指派角色，以便向他們提供資源存取權。 <block ref="43b297cbb0e75204baf387be01022755" category="inline-link-macro-rx"></block></block>
   <block id="729d1ca3c10203fc503fd9f53e1e1025" category="paragraph">您可以根據需要新增或刪除角色來調整成員的存取權限。</block>
   <block id="385f92ada47188b8c301664b007e6ca3" category="paragraph">成員可以在同一個專案內或不同的專案中擔任多個角色。例如，規模較小的組織可能會將所有可用的存取角色分配給相同用戶，而規模較大的組織可能會讓用戶執行更專業的任務。或者，您也可以在組織層級為一名使用者指派勒索軟體復原管理員角色。在這個例子中，使用者可以對組織內的所有項目執行勒索軟體復原任務。</block>
-  <block id="185fff519c8fc661f991bd10bba243ab" category="admonition">被指派了組織管理員角色的成員不能被指派任何其他角色。他們已經擁有整個組織的權限。擁有資料夾或專案管理員角色的成員不能被指派到他們已經擁有該角色的資料夾或專案中的任何其他角色。這兩個角色都可以存取其職責範圍內的所有服務。</block>
   <block id="ebeb67c2ab58cfe7b88d1a1bc054c1a8" category="list-text">選擇成員標籤之一：*使用者*、*服務帳戶*或*聯合群組*。</block>
   <block id="a62c20a6e8e006e17ebdbe37484ef3e8" category="paragraph">如果成員離開您的組織，則將其從組織中移除。</block>
   <block id="b28aef4c16ab3aa23caf8777e9998b0c" category="paragraph">刪除成員時，系統會撤銷其控制台權限，但保留其控制台和NetApp支援網站帳號。</block>
@@ -5914,4 +5910,10 @@
   <block id="0eda8bbe61d2248f5418aba76b8dc5b1" category="paragraph">https://api.workloads.netapp.com</block>
   <block id="a2d795d1d62d99052325545b09f9236f" category="paragraph">基於 Web 的控制台透過與 Workload Factory API 互動來管理和操作基於ONTAP 的FSx 工作負載。</block>
   <block id="1f48aa3b8a17cda9bff69e07d29acd50" category="paragraph"><block ref="1f48aa3b8a17cda9bff69e07d29acd50" category="inline-link-macro-rx"></block></block>
+  <block id="3a78a8ea0b02debae5e6b16cc1929cb5" category="paragraph">現在，您可以直接從 NetApp Console 驗證已連接 Console 代理的網路連線。此功能有助於驗證連接性並排查 Console 代理的問題。此外，您也可以透過 Console 代理程式維護主控台命令列介面（CLI）來執行網路診斷程式。</block>
+  <block id="16e0d5a8229f3c0136c12aa9def60bb1" category="inline-link-macro">了解如何從 NetApp Console 運行配置。</block>
+  <block id="3cb937c3382e580784aa7486c365ec19" category="paragraph"><block ref="3cb937c3382e580784aa7486c365ec19" category="inline-link-macro-rx"></block></block>
+  <block id="ee856bddd35f8f0d8d6a5e0b5017b7dd" category="sidebar">了解 Console 代理</block>
+  <block id="10895cced39195f7b9456b154a2c8530" category="sidebar">開始使用私密模式</block>
+  <block id="1b074cef0a39f307bf3f23d76207e4f6" category="sidebar">預設代理程式配置</block>
 </blocks>
