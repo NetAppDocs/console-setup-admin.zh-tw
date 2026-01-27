@@ -269,48 +269,35 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
 ----
 +
-如果您的網路需要代理來存取互聯網，則需要新增代理資訊。您可以在安裝過程中新增明確代理程式。--proxy 和 --cacert 參數是可選的，系統不會提示您新增它們。如果您有明確的代理伺服器，則需要以所示方式輸入參數。
-
-+
-以下是使用 CA 簽章憑證設定明確代理伺服器的範例：
-
-+
-[source, cli]
-----
-./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
-----
-+
-`--proxy`使用下列格式之一將控制台代理程式配置為使用 HTTP 或 HTTPS 代理伺服器：
-
-+
-** \http://位址:埠
-** \http://用戶名:密碼@地址:端口
-** \http://網域%92用戶名:密碼@位址:端口
-** \https://位址:埠
-** \https://使用者名稱:密碼@位址:端口
-** \https://網域%92用戶名:密碼@地址:端口
-+
-請注意以下事項：
-
-+
-*** 使用者可以是本機使用者或網域使用者。
-*** 對於網域用戶，您必須使用 \ 的 ASCII 代碼，如上所示。
-*** 控制台代理不支援包含 @ 字元的使用者名稱或密碼。
-*** 如果密碼包含以下任何特殊字符，則必須在該特殊字符前面加上反斜杠來轉義該特殊字符：& 或 !
-+
-例如：
-
-+
-\http://bxpproxyuser:netapp1\!@網址:3128
-
-
-
-
+如果您的網路需要代理才能存取互聯網，則需要新增代理資訊。您可以在安裝過程中明確新增代理程式。 `--proxy`和 `--cacert`參數是可選的，系統不會提示您新增。如果您有明確的代理伺服器，則需要以所示方式輸入參數。
 
 
 
 
 NOTE: 如果要設定透明代理，可以在安裝完成後進行設定。 link:reference-agent-maint-console-proxy.html["了解代理維護控制台"]
+
++
+
+以下是使用 CA 簽章憑證設定明確代理伺服器的範例：
+
++
+
+[source, cli]
+----
+./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+----
++
+`--proxy` 設定 Console 代理程式以使用下列格式之一的 HTTP 或 HTTPS 代理伺服器：
+
++ * \http://address:port * \http://user-name:password@address:port * \http://domain-name%92user-name:password@address:port * \https://address:port * \https://user-name:password@address:port * \https://domain-name%92user-name:password@address:port
+
++ 請注意以下事項：
+
++ ** 使用者可以是本機使用者或網域使用者。** 對於網域使用者，您必須使用如上所示的 \ ASCII 碼。** Console 代理程式不支援包含 @ 字元的使用者名稱或密碼。** 如果密碼包含以下任何特殊字元，您必須在其前面加上反斜線以進行轉義：& 或 !
+
++ 例如：
+
++ \http://bxpproxyuser:netapp1\!@address:3128
 
 . 如果您使用 Podman，則需要調整 aardvark-dns 連接埠。
 +

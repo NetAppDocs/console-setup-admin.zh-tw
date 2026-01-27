@@ -338,7 +338,6 @@
   <block id="067f3ef114756cdabe76467602ca9b2e" category="list-text">如果在政府雲端環境中安裝，請停用設定檢查。<block ref="9b8bf974e42c4282e3da7fa6c59f1dce" category="inline-link-macro-rx"></block></block>
   <block id="325740f998865be7879e32048d406868" category="list-text">運行安裝腳本。</block>
   <block id="5f4022bf0d27f22f4c44ac2e617ae12d" category="paragraph">以下是使用 CA 簽章憑證設定明確代理伺服器的範例：</block>
-  <block id="0e4e2076c75603c2622d2ec78b60debe" category="paragraph"><block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix="" category="inline-code"></block>使用下列格式之一將控制台代理程式配置為使用 HTTP 或 HTTPS 代理伺服器：</block>
   <block id="2ceb0e196c300f23618f8a9e66bf0553" category="list-text">\http://位址:埠</block>
   <block id="5c19a40334d46880274be75a5173b4c4" category="list-text">\http://用戶名:密碼@地址:端口</block>
   <block id="33dbf59ca7c7ba76bec757cd7f795ed4" category="list-text">\http://網域%92用戶名:密碼@位址:端口</block>
@@ -1987,7 +1986,6 @@
   <block id="bd604d27ce180b4c17807361e716806b" category="paragraph">如果您的網路具有配置了這些範圍之一的子網，那麼您可能會遇到控制台連線失敗的情況。例如，在控制台中發現本機ONTAP叢集可能會失敗。</block>
   <block id="3908aae7c317936ea6bb5e64e5b1e19b" category="inline-link-macro">代理IP與現有網路衝突</block>
   <block id="e0f2ecf720846ace68fd17b91a2fe18b" category="paragraph">請參閱知識庫文章<block ref="7fdfcc240d5e57de761ad01a7e9f5a42" category="inline-link-macro-rx"></block>有關如何變更代理介面的 IP 位址的說明。</block>
-  <block id="1bc21092e961975ea4123f4414693f69" category="section-title">不支援 SSL 解密</block>
   <block id="7bd92bd111bfbf23b12f73672eb0dd1c" category="inline-link-macro">安裝由憑證授權單位 (CA) 簽署的 HTTPS 憑證</block>
   <block id="c3ce271d53cbf6a7afd137a37f4ee8d6" category="paragraph">為了增強安全性，您可以選擇<block ref="11df3d19916b70ba1d82d33e876689bc" category="inline-link-macro-rx"></block>。</block>
   <block id="e949623e23f093c132f86ba2771e8a2e" category="section-title">載入本機 UI 時出現空白頁</block>
@@ -5005,7 +5003,6 @@
   <block id="caf28471250404467f130940e7fd6e28" category="cell">具有Google Cloud NetApp Volumes使用者角色的使用者可以查看Google Cloud NetApp Volumes。</block>
   <block id="ab925d8c9a6924f34df64e8e1fb1a38d" category="list-text">* Google Cloud NetApp Volumes檢視器*：在控制台中檢視Google Cloud NetApp Volumes 。</block>
   <block id="7d04a8adb8b138151b42f809761295c7" category="cell"><block ref="7d04a8adb8b138151b42f809761295c7" category="inline-link-macro-rx"></block></block>
-  <block id="a5e170ce8c9d104f0b20e67e54257be5" category="paragraph">如果您的網路需要代理來存取互聯網，則需要新增代理資訊。您可以在安裝過程中新增明確代理程式。--proxy 和 --cacert 參數是可選的，系統不會提示您新增它們。如果您有明確的代理伺服器，則需要以所示方式輸入參數。</block>
   <block id="247a6a0ee254b2ff09347b727ee46227" category="inline-link-macro">了解代理維護控制台</block>
   <block id="fbcd7669a7a0c8cc9053c7c78029654b" category="admonition">手動安裝控制台代理程式時，無法為透明代理伺服器設定憑證。如果需要為透明代理伺服器設定證書，則必須在安裝後使用維護控制台。詳細了解<block ref="d3f69ee6935d5f5f8542f4da69ac2bb6" category="inline-link-macro-rx"></block>。</block>
   <block id="334ed7efb24267c8a9d5f60a214ee627" category="list-text">安裝 podman-compose 套件 1.5.0。</block>
@@ -5028,7 +5025,6 @@
   <block id="77504c6121663bb82697faa2adb426c0" category="list-text"><block ref="b7fb1cb20b803995e802d3588f424efa" prefix="" category="inline-code"></block></block>
   <block id="8c0ce03e205216a2506b72de21ab36d0" category="paragraph"><block ref="7068d488f38430eabf6c395a593e8e5a" prefix="" category="inline-code"></block></block>
   <block id="a7678a59b185360eec3ece4df3f90a18" category="paragraph"><block ref="a15b1a7954f2d926c5ee7f261a97b4d2" prefix="" category="inline-code"></block></block>
-  <block id="93fd98d5e6dc8e59c7d87e83e4b28b54" category="paragraph">控制台不支援啟用 SSL 解密的防火牆設定。如果啟用了 SSL 解密，則控制台中將顯示錯誤訊息，且代理實例顯示為「已斷開連線」。</block>
   <block id="5ef1446cf0ab868961d473d928c394d6" category="section-title">第三方代理和擴充程序</block>
   <block id="08ea771e22fb933fc1428178b36eb902" category="paragraph">代理虛擬機器不支援第三方代理或虛擬機器擴充。</block>
   <block id="c976a9d1d7322a1a795f641867000e2b" category="paragraph">如果您已將控制台代理程式配置為使用代理伺服器，則可以在控制台代理上啟用直接 API 流量，以便直接向雲端提供者服務發送 API 呼叫，而無需透過代理程式。在 AWS、Azure 或 Google Cloud 中執行的代理程式支援此選項。</block>
@@ -5916,4 +5912,13 @@
   <block id="ee856bddd35f8f0d8d6a5e0b5017b7dd" category="sidebar">了解 Console 代理</block>
   <block id="10895cced39195f7b9456b154a2c8530" category="sidebar">開始使用私密模式</block>
   <block id="1b074cef0a39f307bf3f23d76207e4f6" category="sidebar">預設代理程式配置</block>
+  <block id="cf6adff661a596f01b211beffb99d879" category="paragraph">如果您的網路需要代理才能存取互聯網，則需要新增代理資訊。您可以在安裝過程中明確新增代理程式。<block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix=" " category="inline-code"></block>和<block ref="a2bb8d2428da5c2a723c47bd3b78308d" prefix=" " category="inline-code"></block>參數是可選的，系統不會提示您新增。如果您有明確的代理伺服器，則需要以所示方式輸入參數。</block>
+  <block id="55ccbb5c67dea0ea25dc1703475c6f80" category="paragraph">+<block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix=" " category="inline-code"></block> 設定 Console 代理程式以使用下列格式之一的 HTTP 或 HTTPS 代理伺服器：</block>
+  <block id="f1c3efde333f7f855c03b55ae236bf19" category="paragraph">+ * \http://address:port * \http://user-name:password@address:port * \http://domain-name%92user-name:password@address:port * \https://address:port * \https://user-name:password@address:port * \https://domain-name%92user-name:password@address:port</block>
+  <block id="b968056bd5b82381c88e0c9d86ac33b7" category="paragraph">+ 請注意以下事項：</block>
+  <block id="40555c907279e68c131ed885fbd297f2" category="paragraph">+ ** 使用者可以是本機使用者或網域使用者。** 對於網域使用者，您必須使用如上所示的 \ ASCII 碼。** Console 代理程式不支援包含 @ 字元的使用者名稱或密碼。** 如果密碼包含以下任何特殊字元，您必須在其前面加上反斜線以進行轉義：&amp; 或 !</block>
+  <block id="2c21faf59a15a9c898da7576148c66a6" category="paragraph">+ 例如：</block>
+  <block id="3f8f6b484a02379b30f40e52234f6023" category="paragraph">+ \http://bxpproxyuser:netapp1\!@address:3128</block>
+  <block id="b7dbcbc4cff4a1c8e5622a89842cfa05" category="section-title">僅 Cloud Volumes ONTAP 支援 SSL 解密</block>
+  <block id="8b497b868891e9ffde67fbc8a398c594" category="paragraph">僅支援與 Cloud Volumes ONTAP 關聯的代理使用透明代理伺服器。如果代理也與其他 NetApp 資料服務一起使用，則無法為其使用透明代理。如果您將 NetApp 資料服務與 Cloud Volumes ONTAP 搭配使用，請為 Cloud Volumes ONTAP 建立專用代理，以便使用透明代理伺服器。</block>
 </blocks>
