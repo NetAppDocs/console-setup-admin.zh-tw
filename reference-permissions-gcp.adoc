@@ -191,6 +191,7 @@ includedPermissions:
 - compute.forwardingRules.delete
 - compute.forwardingRules.get
 - compute.forwardingRules.setLabels
+- compute.forwardingRules.update
 - compute.globalOperations.get
 - compute.healthChecks.create
 - compute.healthChecks.delete
@@ -406,6 +407,9 @@ includedPermissions:
 
 
 | 計算.轉送規則.設定標籤 | 設定或更新組織轉送規則的標籤。 | 不 | 是的 | 不 
+
+
+| compute.forwardingRules.update | 更新現有的流量管理轉送規則。 | 不 | 是的 | 不 
 
 
 | compute.globalOperations.get | 獲取操作狀態。 | 是的 | 是的 | 不 
@@ -790,6 +794,12 @@ includedPermissions:
 == 更改日誌
 
 新增和移除的權限如下所示。
+
+
+
+=== 2026 年 2 月 09 日
+
+新增 `compute.forwardingRules.update`權限是為了支援 Google Cloud 中 Cloud Volumes ONTAP 部署的 Infrastructure Manager。
 
 
 

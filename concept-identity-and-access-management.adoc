@@ -18,7 +18,7 @@ summary: '使用NetApp控制台的身分和存取管理 (IAM) 根據您的業務
 
 資源按層級排列：組織位於頂層，其次是資料夾（可以包含其他資料夾或項目），然後是項目，項目包含儲存系統、工作負載和代理。
 
-在組織、資料夾或專案層級為成員指派基於角色的存取控制 (RBAC) 權限，以確保使用者擁有對資源的適當存取權限。
+在組織、資料夾或專案層級指派存取角色，以便使用者擁有對資源的正確存取權限。
 
 
 NOTE: 您必須擁有_超級管理員_、_組織管理員_或_資料夾或專案管理員_角色才能在NetApp Console中管理 IAM。
@@ -57,7 +57,7 @@ link:task-iam-manage-folders-projects.html["了解如何為您的組織新增資
 
 === 資源
 
-資源包括儲存系統、 Keystone訂閱以及控制台代理。
+_資源_ 是指 NetApp Console 可識別並可指派給專案的實體。_資源_ 包括儲存系統、Keystone 訂閱、部分 NetApp Backup and Recovery 工作負載以及 NetApp Console 代理。
 
 + 必須先將資源與項目關聯，其他人才能存取該資源。
 
@@ -69,14 +69,10 @@ link:task-iam-manage-folders-projects.html["了解如何為您的組織新增資
 
 link:task-iam-manage-resources.html["了解如何將資源關聯到專案。"]
 
-儲存系統和Keystone訂閱:: 儲存系統是您在NetApp Console中管理的主要資源。NetApp Console支援對本機和雲端儲存系統的管理。必須先在專案中新增儲存系統，其他人才能存取該專案。
-+
---
-儲存系統會自動與新增它們的項目關聯，但您也可以從「資源」頁面將它們與其他項目或資料夾關聯。
-
-Keystone訂閱也是您可以與專案關聯的資源，以便授予使用者在NetApp Console中存取訂閱的權限。
-
---
+儲存系統和Keystone訂閱:: 儲存系統是您在 NetApp Console 中管理的主要資源。NetApp Console 支援管理內部部署和雲端儲存系統。您必須將儲存系統新增至專案，以便指派給該專案的人員可以存取它。
+儲存系統:: 儲存系統會自動關聯到新增它們的專案，但您也可以在 *Resources* 頁面中將它們關聯到其他專案或資料夾。您無法將 FSx for NetApp ONTAP 儲存系統關聯到專案或資料夾，但可以在 *Systems* 頁面或 Workloads 中查看它們。
+Keystone訂閱:: Keystone訂閱也是您可以與專案關聯的資源，以便授予使用者在NetApp Console中存取訂閱的權限。
+備份與還原工作負載（Oracle 和 Microsoft SQL Server）:: 某些 Backup and Recovery 工作負載也被視為資源。您可以為使用者指派存取 Backup and Recovery 的權限。
 
 
 [[associate-agents]]

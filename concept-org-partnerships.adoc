@@ -4,7 +4,7 @@ permalink: concept-org-partnerships.html
 keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
 summary: 透過在NetApp Console中建立組織之間的合作夥伴關係，組織合作夥伴可以跨組織邊界安全地管理NetApp資源，從而簡化協作並增強安全性。 
 ---
-= NetApp Console中的合作夥伴關係
+= NetApp Console 中的組織合作夥伴關係
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -26,7 +26,7 @@ summary: 透過在NetApp Console中建立組織之間的合作夥伴關係，組
 作為合作夥伴，您可以獲得跨客戶環境的集中可見性和控制力。您可以輕鬆切換到客戶的組織來管理資源、運行數據服務並在定義的邊界內監控健康狀況，從而減少自訂工具並確保與每個客戶的政策保持一致。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"]為一個或多個使用者指派合作夥伴管理員角色
-為發起組織和接收組織中的一個或多個使用者指派合作夥伴管理員角色來建立和管理合作夥伴關係。您可以將合作夥伴檢視器角色指派給只需要查看合作夥伴關係而不需要管理的使用者。
+在發起組織和接收組織中，分別分配一個或多個使用者 Partnership admin 角色，以便他們建立和管理合作夥伴關係。您可以將 Partnership viewer 角色指派給只需要查看合作夥伴關係而無需管理的使用者。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"]與發起組織共用您的組織 ID
 [role="quick-margin-para"]

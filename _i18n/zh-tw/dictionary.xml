@@ -247,8 +247,6 @@
   <block id="9e636409b20980fb5089c87705851b4d" category="list-text">雲端資源管理器 API</block>
   <block id="1101b09020ade12e90a562489e315c8d" category="list-text">計算引擎 API</block>
   <block id="71660685d00034957db3f9a31c160978" category="list-text">身分識別和存取管理 (IAM) API</block>
-  <block id="b86699cce9d5045d0f0bc82298a74e55" category="list-text">雲端金鑰管理服務 (KMS) API</block>
-  <block id="69245535097faf15b4cd50ccdf260cb5" category="paragraph">（僅當您打算將NetApp Backup and Recovery與客戶管理加密金鑰 (CMEK) 結合使用時才需要）</block>
   <block id="96e9d2544a631c0e7dc2d1406389b951" category="paragraph">將服務帳戶與控制台代理 VM 關聯。</block>
   <block id="f44a9773a2e7b335a94a01e88c993003" category="list-text">前往 Google Cloud 入口網站並將服務帳戶指派給控制台代理程式 VM 執行個體。</block>
   <block id="81c722be01f6c1251ced26ff2ff9dd3f" category="inline-link">Google Cloud 文件：變更執行個體的服務帳戶和存取範圍</block>
@@ -1206,14 +1204,12 @@
   <block id="3799cba2b024e60d963d2e86eaf51655" category="paragraph">單一登入（聯合）允許使用者使用其公司憑證登入NetApp Console，從而簡化了登入流程並增強了安全性。您可以使用身分識別提供者 (IdP) 或NetApp支援網站啟用單一登入 (SSO)。</block>
   <block id="c4173993f088503294e79bbbe0bb63d6" category="paragraph-title">所需角色</block>
   <block id="4610064cac3ad84114cc400649031071" category="paragraph">組織管理員、聯盟管理員、聯盟檢視器。<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
-  <block id="517210395e603e1c3d5f72b67c9d0d8b" category="section-title">與NetApp支援站點的身份聯合</block>
   <block id="89a60a6294b7338e14dd136c35959073" category="paragraph">與NetApp支援網站聯合允許使用者使用相同的憑證登入控制台、 Active IQ Digital Advisor和其他相關應用程式。</block>
   <block id="465e770e13636214d49910bb014b1053" category="admonition">如果您與NetApp支援網站聯合，則您不能與您的企業身分管理提供者聯合。選擇最適合您組織的一種。</block>
   <block id="0a3bde973847d35b12a69e1debea9ca9" category="inline-link">NetApp聯合申請表</block>
   <block id="2364b4b1093b706141a365b97b678a4d" category="list-text">下載並完成<block ref="82f36446881e14fa28b945cd41d2b383" category="inline-link-rx"></block>。</block>
   <block id="28ff396d9aacc41256de2a2d064386fd" category="list-text">將表格提交至表格中指定的電子郵件地址。</block>
   <block id="d712dedaa07f66d96d580961a7fed8f3" category="paragraph">NetApp支援團隊將審核並處理您的請求。</block>
-  <block id="d6a05f20cad23a452bca7452f796d46c" category="section-title">與您的身分提供者建立聯合連接</block>
   <block id="7b223ab8cf744681107757b61b395c2f" category="paragraph">您可以與身分識別提供者建立聯合連接，以便為控制台啟用單一登入 (SSO)。這個過程涉及配置您的身分提供者以信任NetApp作為服務提供者，然後在控制台中建立連線。</block>
   <block id="21199c6ee115447074a02f720b934dab" category="inline-link-macro">了解如何導入您的聯盟。</block>
   <block id="041cf6bc84476cee962155554c00e44d" category="admonition">如果您之前使用NetApp Cloud Central（控制台的外部應用程式）配置了聯合，則需要使用聯合頁面匯入聯合以在控制台內進行管理。<block ref="f94fc06031e07cb597f1d58d86de05fb" category="inline-link-macro-rx"></block></block>
@@ -1441,14 +1437,12 @@
   <block id="13348442cc6a27032d2b4aa28b75a5d3" category="cell">搜尋</block>
   <block id="eda63b570db82e05c2fd7b5f0c3bb20f" category="cell">審計</block>
   <block id="6c781c37150950b9639b1a88927fa671" category="summary">透過在NetApp Console中建立組織之間的合作夥伴關係，組織合作夥伴可以跨組織邊界安全地管理NetApp資源，從而簡化協作並增強安全性。</block>
-  <block id="48b10af85ea37189fccab5406ba059ed" category="doc">NetApp Console中的合作夥伴關係</block>
   <block id="8f032c748fc26fa9d1200f8efa6a0d8c" category="paragraph-title">必備角色</block>
   <block id="8dab33dda3f37e096d3ad18f7ab81434" category="paragraph">合作夥伴管理員<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
   <block id="324861aee136989b2cba2eb117747e57" category="paragraph">合作夥伴關係允許使用控制台中的角色驅動關係跨組織安全地管理NetApp資源。發起組織授予對其資源的存取權限，而接受組織提供被授予存取權限的使用者或服務帳戶。合作夥伴關係是透過自助服務工作流程建立的，使發起組織能夠完全控制共享的資源、分配的角色以及根據需要加入、管理或撤銷合作夥伴存取權限的能力。</block>
   <block id="bd0fbd65df8bd548c584ca52608e419f" category="paragraph">客戶可以授權 MSP 或經銷商來管理NetApp環境，而無需複雜的設定。客戶可以控制合作夥伴可以存取哪些叢集以及他們擁有哪些角色，並且可以隨時撤銷存取權限以維護安全性和合規性。</block>
   <block id="defd5f35301947f3054b93e7318c1f2d" category="paragraph">作為合作夥伴，您可以獲得跨客戶環境的集中可見性和控制力。您可以輕鬆切換到客戶的組織來管理資源、運行數據服務並在定義的邊界內監控健康狀況，從而減少自訂工具並確保與每個客戶的政策保持一致。</block>
   <block id="85fffa8f040ebb57cf579e93b9c39695" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>為一個或多個使用者指派合作夥伴管理員角色</block>
-  <block id="34953e94d11f858dd747183567e19d40" category="paragraph">為發起組織和接收組織中的一個或多個使用者指派合作夥伴管理員角色來建立和管理合作夥伴關係。您可以將合作夥伴檢視器角色指派給只需要查看合作夥伴關係而不需要管理的使用者。</block>
   <block id="9477ff40729a388541d0a190df83371a" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>與發起組織共用您的組織 ID</block>
   <block id="012e05f5b47ec3c1eaa86aec6a2a9373" category="paragraph">要發起合作關係，發起者必須知道目標組織的組織 ID。只有相應的組織可以存取此組織 ID。透過電子郵件或其他方式直接與NetApp Console以外的發起組織共用。</block>
   <block id="2cf522f52d209f1cccd3f7a42da11247" category="paragraph">發起組織是授予其資源存取權限的組織。</block>
@@ -5528,7 +5522,6 @@
   <block id="e6f301b2c67375931164ffab8594268a" category="summary">使用NetApp控制台的身分和存取管理 (IAM) 根據您的業務層次結構（例如按位置、部門或專案）來建置和控制資源存取。</block>
   <block id="8f0b3e866642f7b2bd73e95879da522a" category="paragraph">使用NetApp控制台的身分和存取管理 (IAM) 來組織您的NetApp資源，並根據您的業務結構（按位置、部門或專案）控制存取權限。</block>
   <block id="3ffaa4542bdc105235c2aa6d84398ba1" category="paragraph">資源按層級排列：組織位於頂層，其次是資料夾（可以包含其他資料夾或項目），然後是項目，項目包含儲存系統、工作負載和代理。</block>
-  <block id="4802d1fc79ac23aaf44455daac9d6bb8" category="paragraph">在組織、資料夾或專案層級為成員指派基於角色的存取控制 (RBAC) 權限，以確保使用者擁有對資源的適當存取權限。</block>
   <block id="6eccc51ae400d9583687f84b5fbdb257" category="admonition">您必須擁有_超級管理員_、_組織管理員_或_資料夾或專案管理員_角色才能在NetApp Console中管理 IAM。</block>
   <block id="e8c67cc0d7ca66d55340b50ff19e81d8" category="inline-image-macro">資源管理組成部分的概念圖</block>
   <block id="64e87e268d8a02cfb5d37a77e92402d6" category="paragraph"><block ref="0642d6783c4254d0630aae1c47f2e5b2" category="inline-image-macro-rx" type="image"></block>]</block>
@@ -5543,14 +5536,11 @@
   <block id="dbbd0be2ab27e73b122e8161ad90c3da" category="list-text">將相關項目分組到_資料夾_中，以便按位置、站點或業務部門進行組織。您無法直接將資源與資料夾關聯，但將使用者指派到資料夾層級的角色，即可使其存取該資料夾中的所有項目。</block>
   <block id="4141f49cc8cf63834c1efaa049d309e0" category="inline-link-macro">了解如何為您的組織新增資料夾。</block>
   <block id="9b81d805be63395863d2a1721014a6bb" category="paragraph"><block ref="9b81d805be63395863d2a1721014a6bb" category="inline-link-macro-rx"></block></block>
-  <block id="b1b22dc4c5575b2e202a4925725a072a" category="paragraph">資源包括儲存系統、 Keystone訂閱以及控制台代理。</block>
   <block id="de535fcbd4d214b2ab192b8311cd28bb" category="paragraph">+ 必須先將資源與項目關聯，其他人才能存取該資源。</block>
   <block id="41e1fd34ab20918035d6b06b198a4dd6" category="paragraph">例如，您可以將Cloud Volumes ONTAP系統與一個專案或組織中的所有專案關聯起來。資源的分配方式取決於貴組織的需求。</block>
   <block id="ea7af68e4527f06be6522ac5e2825e2d" category="inline-link-macro">了解如何將資源關聯到專案。</block>
   <block id="54b06ad2f4c53f14ee1e9e9d7c2b1b2a" category="paragraph"><block ref="54b06ad2f4c53f14ee1e9e9d7c2b1b2a" category="inline-link-macro-rx"></block></block>
   <block id="235f31305ad49210767c08b30ea8f944" category="list-text">儲存系統和Keystone訂閱</block>
-  <block id="e09e666756aaffdfff2449235d7d9d0d" category="list-text">儲存系統是您在NetApp Console中管理的主要資源。NetApp Console支援對本機和雲端儲存系統的管理。必須先在專案中新增儲存系統，其他人才能存取該專案。</block>
-  <block id="5c130a5ccad0215f526f58692320aa7a" category="paragraph">儲存系統會自動與新增它們的項目關聯，但您也可以從「資源」頁面將它們與其他項目或資料夾關聯。</block>
   <block id="acf67f786e22a15c3ff04ae1f6c8ea12" category="paragraph">Keystone訂閱也是您可以與專案關聯的資源，以便授予使用者在NetApp Console中存取訂閱的權限。</block>
   <block id="8e88fe5e613df95ef0fde3cf27c21a5b" category="list-text">組織管理員建立控制台代理來管理儲存系統並啟用NetApp資料服務。代理最初與創建它們的項目關聯，但管理員可以從“代理”頁面將它們添加到其他項目或資料夾。</block>
   <block id="628d9176cd0fff84e7a7642d6e347c77" category="paragraph">將代理程式與專案關聯起來，可以管理該專案中的資源；而將代理程式與資料夾關聯起來，可以讓資料夾或專案管理員決定哪些專案應該使用該代理程式。代理人必須與特定項目關聯才能提供管理能力。</block>
@@ -5610,7 +5600,6 @@
   <block id="950a35d7aced985e8ee1b6240f65a908" category="doc">NetApp Console的安全性合規性</block>
   <block id="eedfa09a5feb67c791cc20a479679c67" category="paragraph">NetApp Console符合 SOC 2 II 型標準。</block>
   <block id="051ae024df3188ffe4e3ac43a493c874" category="inline-link-macro">了解更多關於NetApp SOC 2合規性的資訊。</block>
-  <block id="5c1f694e43aab1bf26b300260c3822c2" category="paragraph"><block ref="5c1f694e43aab1bf26b300260c3822c2" category="inline-link-macro-rx"></block></block>
   <block id="a7cbfcc3f40f9b759d21b6e0bfb565ec" category="cell">允許使用者不受限制地存取已指派的項目和資料夾。可以將成員新增到他們管理的資料夾或專案中，以及執行任何任務並在他們被指派的資料夾或專案內的資源上使用任何資料服務或應用程式。資料夾或專案管理員無法建立控制台代理。</block>
   <block id="143bd02c953bba9b731282024d3a9f3d" category="cell">允許使用者查看NetApp Data Classification掃描結果。具有此角色的使用者可以查看合規性資訊並產生他們有權存取的資源的報告。這些使用者無法啟用或停用磁碟區、儲存桶或資料庫模式的掃描。分類功能沒有管理員角色。</block>
   <block id="1282f90034162aa1eb616797e0379691" category="paragraph">您需要為控制台代理提供適當的權限，以便它可以在您的雲端環境中執行操作。使用此頁面上的鏈接，您可以根據目標快速存取所需的權限。</block>
@@ -5921,4 +5910,30 @@
   <block id="3f8f6b484a02379b30f40e52234f6023" category="paragraph">+ \http://bxpproxyuser:netapp1\!@address:3128</block>
   <block id="b7dbcbc4cff4a1c8e5622a89842cfa05" category="section-title">僅 Cloud Volumes ONTAP 支援 SSL 解密</block>
   <block id="8b497b868891e9ffde67fbc8a398c594" category="paragraph">僅支援與 Cloud Volumes ONTAP 關聯的代理使用透明代理伺服器。如果代理也與其他 NetApp 資料服務一起使用，則無法為其使用透明代理。如果您將 NetApp 資料服務與 Cloud Volumes ONTAP 搭配使用，請為 Cloud Volumes ONTAP 建立專用代理，以便使用透明代理伺服器。</block>
+  <block id="9b0564a9487057897c8645ec862ad856" category="list-text">Cloud Key Management Service (KMS) API（僅當您打算使用 NetApp Backup and Recovery 搭配客戶管理的加密金鑰（CMEK）時才需要）</block>
+  <block id="362cb79b6626c8ace583ce4914bc2e72" category="list-text">Cloud Quotas API（使用 Infrastructure Manager 部署 Cloud Volumes ONTAP 時需要）</block>
+  <block id="1076db915b54c5214ad7cd6d4bac394d" category="doc">Console 代理 4.4.0</block>
+  <block id="19ddf31000061ed231618214ee45c8af" category="paragraph">4.4.0 版本同時支援標準模式和受限模式。</block>
+  <block id="9c62117ea7b157d383c8d20f426de6ce" category="paragraph">此版本的 Console 代理程式包含安全性改善和錯誤修正。</block>
+  <block id="83d800fe01b0b9d8ce89e835fc6accad" category="paragraph-title">支援 NetApp Backup and Recovery 工作負載（Oracle 和 Microsoft SQL Server）的角色型存取控制</block>
+  <block id="06ee57c0bd0d81d8eb2d33f86f1d8a97" category="paragraph">您可以將 NetApp Backup and Recovery 工作負載（Oracle 和 Microsoft SQL Server）與專案建立關聯。指派給專案後，獲指派該專案 NetApp Backup and Recovery 角色的使用者可以使用這些工作負載。目前其他工作負載不支援基於角色的存取。</block>
+  <block id="55791ddd61c5fe5bce016bba04360146" category="inline-link-macro">了解更多關於為 Backup and Recovery 工作負載設定基於角色的存取權限的資訊。</block>
+  <block id="15346ab7cdfe10fa94df581d10043017" category="paragraph"><block ref="15346ab7cdfe10fa94df581d10043017" category="inline-link-macro-rx"></block></block>
+  <block id="02c628ba4f7790b56fb6aacb4a07a4f6" category="section-title">透過 NetApp Support Site 進行單一登入</block>
+  <block id="ee4c6f236464665c90e91a3f4c9b027f" category="section-title">使用身分提供者進行單一登入</block>
+  <block id="118079baff415c40b2ccc891079ba2e1" category="paragraph">在組織、資料夾或專案層級指派存取角色，以便使用者擁有對資源的正確存取權限。</block>
+  <block id="16c8cb56a7f9e98bee6f5799207b5d74" category="paragraph">_資源_ 是指 NetApp Console 可識別並可指派給專案的實體。_資源_ 包括儲存系統、Keystone 訂閱、部分 NetApp Backup and Recovery 工作負載以及 NetApp Console 代理。</block>
+  <block id="17fcc6a962ac37e30e3ac0efd8e7e1ab" category="list-text">儲存系統是您在 NetApp Console 中管理的主要資源。NetApp Console 支援管理內部部署和雲端儲存系統。您必須將儲存系統新增至專案，以便指派給該專案的人員可以存取它。</block>
+  <block id="87d2b5d50a3f94d38a8b567627e0fb58" category="list-text">儲存系統</block>
+  <block id="c5a4c92d61a00aa93ed0e2e91cd396e5" category="list-text">儲存系統會自動關聯到新增它們的專案，但您也可以在 *Resources* 頁面中將它們關聯到其他專案或資料夾。您無法將 FSx for NetApp ONTAP 儲存系統關聯到專案或資料夾，但可以在 *Systems* 頁面或 Workloads 中查看它們。</block>
+  <block id="b21b013b17072459deed40157a28f04c" category="list-text">備份與還原工作負載（Oracle 和 Microsoft SQL Server）</block>
+  <block id="74869869e1e77d7ff0af89938eb46965" category="list-text">某些 Backup and Recovery 工作負載也被視為資源。您可以為使用者指派存取 Backup and Recovery 的權限。</block>
+  <block id="e1826278f73613e39c2eb5a5b9bc4593" category="doc">NetApp Console 中的組織合作夥伴關係</block>
+  <block id="566147af4c9016826e0b72e65115c15c" category="paragraph">在發起組織和接收組織中，分別分配一個或多個使用者 Partnership admin 角色，以便他們建立和管理合作夥伴關係。您可以將 Partnership viewer 角色指派給只需要查看合作夥伴關係而無需管理的使用者。</block>
+  <block id="fa65dbaec8413a6f5b464ae076206d91" category="paragraph"><block ref="fa65dbaec8413a6f5b464ae076206d91" category="inline-link-macro-rx"></block></block>
+  <block id="b18fad63d8ccb120bf7c88b5cde19431" category="cell">compute.forwardingRules.update</block>
+  <block id="d82499f632494fadd7c3cb95a45cdd03" category="cell">更新現有的流量管理轉送規則。</block>
+  <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">2026 年 2 月 09 日</block>
+  <block id="86adfecaaa4dc7c9c4b8f67dcfd84a27" category="paragraph">新增<block ref="b18fad63d8ccb120bf7c88b5cde19431" prefix=" " category="inline-code"></block>權限是為了支援 Google Cloud 中 Cloud Volumes ONTAP 部署的 Infrastructure Manager。</block>
+  <block id="dea86e9f14e9d4847c31a2b6d002bdbc" category="paragraph">includes::_whatsnew/2026-02-09.adoc[]</block>
 </blocks>
