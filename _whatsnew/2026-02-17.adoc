@@ -1,0 +1,26 @@
+= Console 代理 4.4.1
+:allow-uri-read: 
+
+
+
+
+=== Console 代理 4.4.1
+
+4.4.0 版本同時支援標準模式和受限模式。
+
+此版本的 Console 代理程式包含安全性改善和錯誤修正。
+
+
+
+=== NetApp Console管理
+
+本次發布包含以下內容：
+
+
+
+=== NetApp Console管理
+
+本次發布包含以下內容：
+
+.從 NetApp Console 存取 NetApp Data Infrastructure Insights
+您可以在 NetApp Console 中存取 NetApp Data Infrastructure Insights 的免費試用版。前往 *Governance* > *Data Infrastructure Insights* 註冊，即可探索有關您的資料環境的洞察和分析。
