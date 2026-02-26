@@ -906,6 +906,7 @@ s3:取得加密配置
 * cloudformation:刪除堆疊
 * cloudformation:描述Stacks
 * cloudformation：描述堆疊事件
+* cloudformation：ListStacks
 * iam:新增角色到實例設定檔
 * ec2:AssociateIamInstanceProfile
 * ec2：描述IamInstanceProfileAssociations
@@ -1195,6 +1196,14 @@ s3:取得加密配置
 == 更改日誌
 
 當新增和刪除權限時，我們會在下面的部分中註明。
+
+
+
+=== 2026 年 2 月 24 日
+
+資料分類現在需要以下權限：
+
+cloudformation：ListStacks
 
 
 
