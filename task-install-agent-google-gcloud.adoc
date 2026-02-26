@@ -75,7 +75,7 @@ VPC 和子網:: 建立控制台代理程式時，您需要指定它所在的 VPC
 
 
  a| 
-\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
  a| 
 在NetApp Console中提供功能和服務。
 
@@ -97,7 +97,7 @@ VPC 和子網:: 建立控制台代理程式時，您需要指定它所在的 VPC
 --
 
 
-從NetApp控制台聯繫的端點:: 當您使用透過 SaaS 層提供的基於 Web 的NetApp Console時，它會聯絡多個端點來完成資料管理任務。這包括從控制台聯繫以部署控制台代理的端點。
+從NetApp控制台聯繫的端點:: 當您使用基於 Web 的 NetApp Console SaaS 應用程式時，它會連接多個端點以完成資料管理任務。這包括用於從 Console 部署 Console 代理的端點。
 +
 --
 link:reference-networking-saas-console.html["查看從NetApp控制台聯繫的端點列表"] 。
@@ -377,6 +377,7 @@ link:reference-permissions-gcp.html["代理服務帳號策略"]
 .步
 . 在您的專案中啟用以下 Google Cloud API：
 +
+** Cloud Build API （使用 Infrastructure Manager 進行私有模式 Cloud Volumes ONTAP 部署所需）
 ** 雲端部署管理器 V2 API
 ** 雲端基礎架構管理器 API
 ** 雲端日誌 API

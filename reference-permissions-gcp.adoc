@@ -140,6 +140,8 @@ includedPermissions:
 - cloudbuild.connections.list
 - cloudbuild.repositories.accessReadToken
 - cloudbuild.repositories.list
+- cloudbuild.workerpools.list
+- cloudbuild.workerpools.get
 - cloudquotas.quotas.get
 - cloudkms.cryptoKeys.getIamPolicy
 - cloudkms.cryptoKeys.setIamPolicy
@@ -640,6 +642,12 @@ includedPermissions:
 | cloudbuild.builds.get | 是的 | 不 | 不 
 
 
+| cloudbuild.workerpools.get | 使用 Infrastructure Manager 在私有模式部署和轉換 Cloud Volumes ONTAP 系統期間存取工作池資訊。 | 是的 | 是的 | 是的 
+
+
+| cloudbuild.workerpools.list | 使用 Infrastructure Manager 在私有模式下部署 Cloud Volumes ONTAP 系統時，列出工作池資訊。 | 是的 | 不 | 不 
+
+
 | compute.instances.setServiceAccount .6+| 在Cloud Volumes ONTAP實例上設定服務帳戶。此服務帳戶提供將資料分層至 Google Cloud Storage 儲存桶的權限。 | 是的 | 是的 | 不 
 
 
@@ -794,6 +802,12 @@ includedPermissions:
 == 更改日誌
 
 新增和移除的權限如下所示。
+
+
+
+=== 2026 年 2 月 26 日
+
+新增  `cloudbuild.workerpools.get` 和  `cloudbuild.workerpools.list` 權限是為了支援 Google Cloud 中 Cloud Volumes ONTAP 私有模式部署的 Infrastructure Manager。
 
 
 

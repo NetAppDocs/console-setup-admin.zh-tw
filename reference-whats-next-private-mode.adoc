@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: reference-whats-next-private-mode.html 
+keywords: private mode, supported features for private mode 
+summary: 在你以私有模式啟動並運行 NetApp Console 之後，你可以開始使用支援私有模式的服務。 
+---
+= 接下來您可以做什麼（私密模式）
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在你以私有模式啟動並運行 NetApp Console 之後，你可以開始使用支援私有模式的服務。
+
+如需協助，請參閱以下文件：
+
+* https://docs.netapp.com/us-en/storage-management-ontap-onprem/index.html["發現本地ONTAP集群"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html["使用 NetApp Classification 掃描內部部署 ONTAP Volume 資料"^]
+* https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-on-prem-clusters.html["監控授權使用情況"^]
+

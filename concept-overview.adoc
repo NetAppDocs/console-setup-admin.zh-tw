@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept-overview.html 
-keywords: overview, concepts, features, use case, cloud manager, bluexp, how bluexp works, supported cloud providers, cloud providers, hyperscalers, aws, google, how NetApp Console works 
-summary: 該控制台透過整合資料服務統一混合多雲的儲存管理和保護，以保護和最佳化資料。 
+keywords: overview, concepts, features, use case, cloud manager, netapp console, how bluexp works, supported cloud providers, cloud providers, hyperscalers, aws, google, how NetApp Console works 
+summary: NetApp Console 可協助您管理和保護所有雲端和本機系統中的資料。它包含各種工具，可確保您的資料安全可靠地運作。 
 ---
-= 了解NetApp Console
+= NetApp Console 統一儲存管理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,21 +14,63 @@ summary: 該控制台透過整合資料服務統一混合多雲的儲存管理�
 
 
 [role="lead"]
-該控制台透過整合資料服務統一混合多雲的儲存管理和保護，以保護和最佳化資料。
+NetApp Console 可協助您管理和保護所有雲端和本機系統中的資料。它包含各種工具，可確保您的資料安全可靠地運作。
 
-它既可以作為軟體即服務 (SaaS) 平台使用，也可以作為自託管選項安裝在您自己的主權雲端中。它提供儲存管理、資料移動性、資料保護以及資料分析和控制。管理功能透過基於 Web 的控制台和 API 提供。
+您可以將 Console 當作軟體即服務 (SaaS) 應用程式使用，也可以將其安裝在雲端或本機環境中（受限模式或私有模式）。每種模式支援不同的功能集和安全要求。
 
-
-
-== 集中儲存管理
-
-使用控制台發現、部署和管理雲端和本地儲存。
+NetApp Console 可與您部署在環境中的 Console 代理程式搭配使用，以管理資源並協調本地和雲端環境中的流程。
 
 
 
-=== 支援的雲端和本地存儲
+== 選擇如何存取 NetApp Console
 
-您可以從控制台管理以下類型的儲存空間：
+要開始使用 NetApp Console，您可以註冊 SaaS 應用程式（標準模式）、將其安裝在雲端（受限模式）或本機（私有模式）。部分功能在受限模式或私有模式下不可用。
+
+link:concept-modes.html["了解有關部署模式的更多信息"] 。
+
+
+
+== 使用 Console 代理擴充 Console 功能
+
+Console 代理程式是輕量級軟體元件，可提供與 NetApp Console SaaS 應用程式和基於雲端的 API 的連接，從而實現進階功能和資料服務。
+
+在受限或私有模式下，請在雲端或內部部署環境中安裝 Console 代理程式，以存取 NetApp Console 應用程式。您需要部署其他代理程式，以支援需要直接連線至 NetApp Console 及其 API 的功能。
+
+link:concept-agents.html["了解有關控制台代理的更多信息"] 。
+
+
+
+== 在 NetApp Console 中管理使用者存取權限與許可
+
+NetApp Console 提供身分和存取管理（IAM）功能，以增強資料基礎架構的安全性和控制力。圍繞組織角色和職責組織儲存和資料服務，以降低未經授權存取的風險，同時保持營運效率：
+
+* 頂級 _organization_ 可讓您授予和撤銷對整個基礎架構中儲存系統和專案的存取權限
+* _Folders_ 功能可讓您根據業務功能或合規性要求將儲存資源和專案分組在一起
+* _Projects_ 可讓您控制哪些團隊可以存取特定的儲存系統、磁碟區和資料服務
+* _基於角色的存取控制（RBAC）_可讓您為不同層級的團隊成員授予儲存管理權限，從而可以在不授予過多存取權限的情況下委派任務
+
+
+link:concept-identity-and-access-management.html["了解有關NetApp Console中的 IAM 的更多信息"]
+
+
+
+== NetApp Console 的安全性和合規性
+
+啟用單一登入（SSO）等安全性和合規性功能，以控制對儲存和資料服務的存取。擁有組織管理員角色的使用者預設可以設定唯讀模式，使用者必須申請提升的權限才能變更儲存系統和使用資料服務。您也可以使用 NetApp Console 監控儲存管理和使用者活動。NetApp Console 已通過 SOC 2 Type 2 認證，並可 NetApp 向客戶提供 SOC 2 報告。
+
+https://www.netapp.com/company/trust-center/compliance/soc-2/["查看 NetApp 的 SOC 2 報告"^]
+
+
+
+== NetApp Console 功能和支援的儲存
+
+NetApp Console 支援本機和雲端環境中的各種儲存類型、功能和資料服務。使用 Console 管理您的儲存系統，監控其運作狀況和效能，並啟用資料服務來保護和最佳化您的資料。
+
+
+
+=== 在 NetApp Console 中支援的雲端與內部部署儲存
+
+從 Console 管理這些儲存類型：
 
 雲端儲存解決方案::
 +
@@ -62,97 +104,54 @@ summary: 該控制台透過整合資料服務統一混合多雲的儲存管理�
 
 
 
-=== 儲存管理
+=== NetApp Console 中的儲存管理和健全狀況服務
 
-在控制台中，_systems_ 代表已發現或已部署的儲存空間。您可以選擇一個系統將其與NetApp資料服務整合或管理存儲，例如新增磁碟區。
+NetApp Console 透過單一介面提供 NetApp 儲存基礎架構的統一管理。
+
+在 Console 中，_Systems_ 代表您已發現或已部署的儲存空間。您可以直接在 Console 中管理儲存卷，也可以開啟系統的管理介面以取得更多選項。
 
 image:screenshot-canvas.png["控制台截圖，顯示了多個系統。選取其中一個選項，即可啟用NetApp資料服務，或選擇「進入系統」來管理儲存。"]
 
+除了儲存管理之外，還可以使用基礎架構服務來監控和管理所有環境中的儲存基礎架構。
 
-
-== 整合數據服務和儲存管理，以保護、保障和最佳化數據
-
-控制台提供資料服務以保護和維護儲存可用性。
-
-儲存警報:: 查看與ONTAP環境中的容量、可用性、效能、保護和安全性相關的問題。
-自動化中心:: 使用腳本解決方案來自動化NetApp產品和服務的部署和整合。
-NetApp Backup and Recovery:: 備份和還原雲端和本地資料。
-NetApp Data Classification:: 讓您的應用程式資料和雲端環境隱私做好準備。
-NetApp Copy and Sync:: 在本地端和雲端資料儲存之間同步資料。
-NetApp數位顧問 (Active IQ):: 使用預測分析和主動支援來優化您的資料基礎架構。
+健康與效能監控:: 查看儲存系統運作狀況和效能的儀錶板，並在問題造成嚴重後果之前收到警示以進行修復。
 Licenses and subscriptions:: 管理和監控您的許可證和訂閱。
-NetApp Disaster Recovery:: 使用 VMware Cloud on Amazon FSx for ONTAP作為災難復原站點來保護本機 VMware 工作負載。
-生命週期規劃:: 識別目前或預測容量較低的群集並實施資料分層或額外容量建議。
-NetApp Ransomware Resilience:: 偵測可能導致勒索軟體攻擊的異常。保護和恢復工作負載。
-NetApp Replication:: 在儲存系統之間複製資料以支援備份和災難復原。
-軟體更新:: 自動評估、規劃和執行ONTAP升級。
+生命週期規劃:: 找出空間不足的叢集，並根據需要增加容量或移動資料。
+NetApp數位顧問 (Active IQ):: 使用預測分析和主動支援來優化您的資料基礎架構。
+軟體更新:: 實現 ONTAP 升級的評估、規劃和完成自動化。
+儲存警報:: 查看與ONTAP環境中的容量、可用性、效能、保護和安全性相關的問題。
+系統頁面:: 在一個位置查看所有儲存系統，並快速存取其管理介面。直接從 Systems 頁面拖放即可啟用資料服務。
 永續性儀表板:: 分析儲存系統的可持續性。
-NetApp Cloud Tiering:: 將您的本機ONTAP儲存擴展到雲端。
-NetApp Volume Caching:: 建立可寫入的快取磁碟區以加快資料存取速度或卸載存取量大的磁碟區的流量。
-NetApp工作負載:: 使用Amazon FSx for NetApp ONTAP設計、設定和執行關鍵工作負載。
-
-
-https://www.netapp.com/bluexp/["了解有關NetApp Console和可用資料服務的更多信息"^]
-
-
-
-== 支援的雲端提供者
-
-此控制台可讓您管理雲端儲存並使用 Amazon Web Services、Microsoft Azure 和 Google Cloud 中的雲端服務。
-
-
-
-== 成本
-
-NetApp Console是免費的。如果您在雲端中部署控制台代理程式或使用在雲端中部署的受限模式，則會產生費用。某些NetApp資料服務會產生相關費用。https://bluexp.netapp.com/pricing["了解NetApp數據服務定價"^]
-
-
-
-== NetApp Console的工作原理
-
-NetApp Console是一個基於 Web 的控制台，透過 SaaS 層、資源和存取管理系統、管理儲存系統和啟用NetApp資料服務的控制台代理程式以及不同的部署模式提供，以滿足您的業務需求。
-
-
-
-=== 軟體即服務
-
-您可以透過 https://console.netapp.com["網路為基礎的介面"^]和 API。這種 SaaS 體驗使您能夠在最新功能發佈時自動存取它們。
-
-
-
-=== 身分和存取管理 (IAM)
-
-控制台為資源和存取管理提供身分和存取管理 (IAM)。此 IAM 模型提供資源和權限的細粒度管理：
-
-* 頂級組織使您能夠管理各個專案之間的存取權限
-* _資料夾_ 使您可以將相關項目分組在一起
-* 資源管理可讓您將資源與一個或多個資料夾或項目關聯
-* 存取管理可讓您為組織層次結構中不同層級的成員指派角色
-* link:concept-identity-and-access-management.html["了解有關NetApp Console中的 IAM 的更多信息"]
 
 
 
 
-=== 控制台代理
+=== NetApp Console 中的資料安全和保護服務
 
-一些附加功能和資料服務需要控制台代理。它使您能夠管理本地和雲端環境中的資源和流程。您需要它來管理一些系統（例如， Cloud Volumes ONTAP）並使用一些NetApp資料服務。
+利用內建資料服務保護關鍵資料並最佳化儲存效率。
 
-link:concept-agents.html["了解有關控制台代理的更多信息"] 。
-
-
-
-=== SaaS 與主權雲端部署
-
-您可以透過註冊 SaaS 服務或部署在您的主權雲端來開始使用NetApp Console 。在主權雲端部署NetApp Console時， NetApp會限制出站連接，以滿足您組織的安全性和合規性要求。當控制台部署在主權雲端時，並非所有功能和服務都可用。
-
-NetApp持續為不需要出站連線的站點提供BlueXP 。BlueXP可以安裝在您的網路上，無需任何出站連線。 link:task-quick-start-private-mode.html["了解沒有網路連線的站點的BlueXP （私人模式）。"]
-
-link:concept-modes.html["了解有關部署模式的更多信息"] 。
+NetApp Backup and Recovery:: 備份和還原雲端及內部部署資料。需要訂閱。
+NetApp Copy and Sync:: 在內部部署和雲端資料存放區之間同步資料。
+NetApp Disaster Recovery:: 使用 VMware Cloud on Amazon FSx for ONTAP 作為災難復原站台，保護內部部署 VMware 工作負載。需要訂閱。
+NetApp Ransomware Resilience:: 偵測可能導致勒索軟體攻擊的異常情況。保護並恢復工作負載。需要訂閱。
+NetApp Replication:: 在儲存系統之間複製資料以支援備份和災難復原。
 
 
 
-== SOC 2 類型 2 認證
 
-一家獨立的註冊會計師事務所和服務審計師審查了控制台，並確認其根據適用的信託服務標準實現了 SOC 2 類型 2 報告。
+=== NetApp Console 中的成本和合規性管理服務
 
-https://www.netapp.com/company/trust-center/compliance/soc-2/["查看 NetApp 的 SOC 2 報告"^]
+追蹤所有系統中的合約狀態，以改善成本管理、法規遵循和採購決策。
+
+自動化中心:: 使用腳本解決方案自動設定和連接 NetApp 產品和服務，以實現更流暢、更一致的操作。
+NetApp Cloud Tiering:: 將您的內部部署 ONTAP 儲存設備擴充至雲端，以實現成本最佳化和資料生命週期管理。
+NetApp Data Classification:: 讓您的應用程式資料和雲端環境做好隱私準備，以符合資料隱私法規。訂閱即可免費使用。
+NetApp Volume Caching:: 建立可寫入快取磁碟區，以加快資料存取速度或將流量從存取頻繁的磁碟區中卸載，從而提高效能和成本效益。
+NetApp工作負載:: 使用 Amazon FSx for NetApp ONTAP 設計、設定及操作關鍵工作負載，以優化特定應用程式的效能和成本。
+
+
+
+
+=== NetApp Console 成本
+
+NetApp 不會對 Console 收費。當您部署 Console 代理程式或在雲端使用受限模式時，會產生費用。某些 NetApp 資料服務也會產生相關費用。https://bluexp.netapp.com/pricing["了解NetApp數據服務定價"^]

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-quick-start-private-mode.html 
-keywords: private mode quick start, quick start, aws top secret cloud, aws secret cloud, secret cloud, top secret cloud, bluexp legacy, bluexp 
-summary: 私有模式通常用於沒有網路連線的本機環境和安全雲端區域，其中包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。  NetApp Console尚未支援私有模式。  NetApp繼續透過BlueXP舊介面支援這些環境。連結：<doc link to PDF> 
+keywords: private mode quick start, quick start, aws top secret cloud, aws secret cloud, secret cloud, top secret cloud, bluexp legacy, bluexp, netapp console private mode 
+summary: 私有模式通常用於沒有網際網路連線的內部部署環境以及安全的雲端區域，包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。 
 ---
-= 入門工作流程（BlueXP私人模式）
+= 在私有模式下使用 NetApp Console 的入門工作流程
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,118 +14,165 @@ summary: 私有模式通常用於沒有網路連線的本機環境和安全雲�
 
 
 [role="lead"]
-BlueXP私有模式（傳統BlueXP介面）通常用於沒有網路連線的本機環境和安全雲端區域，其中包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。  NetApp繼續透過傳統的BlueXP介面支援這些環境。
+您可以將 NetApp Console 安裝在本地或安全的雲端環境中。私有模式通常用於沒有網路連線的本地環境以及安全的雲端區域，包括 https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^]、 https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^]和 https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-dod-il6["Azure IL6"^]
 
-link:media/BlueXP-Private-Mode-legacy-interface.pdf["BlueXP私人模式的 PDF 文檔"^]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] link:task-prepare-private-mode.html["準備部署"]
+[role="quick-margin-list"]
+. 準備一個符合 CPU、RAM、磁碟空間、容器編排工具等要求的專用 Linux 主機。
+. 設定可存取目標網路的網路。
+. 對於雲端部署，請在雲端供應商中設定權限，以便在安裝軟體後將這些權限與 Console 代理程式建立關聯。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] link:task-install-private-mode.html["部署控制台代理"]
+[role="quick-margin-list"]
+. 在您自己的 Linux 主機上安裝 Console 代理程式。
+. 開啟網頁瀏覽器並輸入 Linux 主機的 IP 位址，即可設定 NetApp Console。
+. 對於雲端部署，請向 NetApp Console 提供您先前設定的權限。
 
 
 
-== 私有模式支援的功能和資料服務
 
-下表可以幫助您快速識別哪些BlueXP服務和功能支援私人模式。
+== NetApp Console 私有模式支援的功能與服務
 
-請注意，某些服務可能會受到限制。
+下表列出了在私有模式下安裝 NetApp Console 時可用的儲存管理功能、資料服務和管理功能。在雲端安裝 NetApp Console 與在本地安裝時，功能有所不同。
 
-[cols="19,27,27"]
+
+
+=== 雲端已安裝私有模式
+
+[cols="3*"]
 |===
-| 產品領域 | BlueXP服務或功能 | 私人模式 
+| 產品領域 | NetApp 服務或功能 | 需要 Console 代理 
 
 
-.10+| *工作環境* 表格的這一部分列出了對BlueXP畫布的工作環境管理的支援。它沒有指出BlueXP backup and recovery所支援的備份目的地。 | 適用於ONTAP 的Amazon FSx | 不 
+.2+| *儲存系統管理* 本表的此部分列出了從 NetApp Console 管理儲存系統的支援情況。這不表示 NetApp Backup and Recovery 支援的備份目的地。 | Cloud Volumes ONTAP | 是的，但是由於沒有網際網路存取，以下功能不可用：自動軟體升級和 AutoSupport。 
 
 
-| 亞馬遜 S3 | 不 
+ a| 
+本地ONTAP集群
+
+* 需要從雲端 （安裝 Console 代理程式的位置） 連接到內部部署環境。
++
+您必須安裝 Console 代理程式才能探索內部部署 ONTAP 叢集。
 
 
-| Azure Blob | 不 
+| 您可以無需 Console 代理即可使用直接發現功能,但要使用管理功能則需要代理。 
 
 
-| Azure NetApp Files | 不 
+.3+| *數據服務*  a| 
+備份與還原
+
+* 在私有模式下，NetApp Backup and Recovery 僅支援 ONTAP 磁碟區資料的備份和還原。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["查看ONTAP資料支援的備份目標列表"^]不支援應用程式資料和虛擬機器資料的備份和還原。
+* Google Cloud 或 https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^]、 https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^]或 https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-dod-il6["Azure IL6"^]不支援
+
+| 是的 
 
 
-| Cloud Volumes ONTAP | 是的 
+ a| 
+NetApp 分類
+
+* 唯一支援的資料來源是您可以在本地探索的資料來源。 https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#supported-data-sources["檢視您可以在本地探索的來源"^]
+* 不支援需要對外網際網路存取的功能。 https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#limitations["檢視功能限制"^]
+
+| 是的 
 
 
-| Google Cloud NetApp Volumes | 不 
+| NetApp Replication | 是的*（如果是從 ONTAP 內部部署複製到 ONTAP 內部部署，則不需要） 
 
 
-| Google 雲端儲存 | 不 
+| *NetApp 支援合約功能* | 無 | -- 
 
 
-| 本地ONTAP集群 | 是的 
+.6+| *管理功能* | 審計 | 不 
 
 
-| E系列 | 不 
+ a| 
+Licenses and subscriptions 管理
+
+* 私密模式僅支援 BYOL。
++
+對於 Cloud Volumes ONTAP BYOL ，僅支援基於節點的授權。不支援基於容量的授權。由於無法使用對外網際網路連線，您需要在 Console 中手動上傳 Cloud Volumes ONTAP 授權檔案。
 
 
-| StorageGRID | 不 
+
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#add-unassigned-licenses["了解如何新增 Licenses"^]
+| 不 
 
 
-.15+| *服務* | 警報 | 不 
+| 身分和存取管理 | 不 
 
 
-| 備份和復原 | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["查看ONTAP磁碟區資料支援的備份目標列表"^] 
+| 管理雲端提供者憑證 | 不 
 
 
-| 資料分類 | 是的 
-
-
-| 複製和同步 | 不 
-
-
-| 數位顧問 | 不 
-
-
-| 數位錢包 | 是的 
-
-
-| 災難復原 | 不 
-
-
-| 經濟效益 | 不 
-
-
-| 勒索軟體抵禦能力 | 不 
-
-
-| 複製 | 是的 
-
-
-| 軟體更新 | 不 
-
-
-| 永續性 | 不 
-
-
-| 分層 | 不 
-
-
-| 卷緩存 | 不 
-
-
-| 工作負載工廠 | 不 
-
-
-.8+| *特徵* | 身分和存取管理 | 是的 
-
-
-| 證書 | 是的 
-
-
-| 聯邦 | 不 
-
-
-| 多因素身份驗證 | 不 
-
-
-| NSS 帳戶 | 不 
+| 唯讀模式 | 不 
 
 
 | 通知 | 不 
+|===
 
 
-| 搜尋 | 不 
+=== 私有模式已安裝在內部部署環境
+
+[cols="3*"]
+|===
+| 產品領域 | NetApp 服務或功能 | 需要 Console 代理 
 
 
-| 時間軸 | 是的 
+| *儲存系統管理* 本表的此部分列出了從 NetApp Console 管理儲存系統的支援情況。這不表示 NetApp Backup and Recovery 支援的備份目的地。  a| 
+本地ONTAP集群
+
+* 需要從雲端 （安裝 Console 代理程式的位置） 連接到內部部署環境。
++
+您必須安裝 Console 代理程式才能探索內部部署 ONTAP 叢集。
+
+
+| 您可以無需 Console 代理即可使用直接發現功能,但要使用管理功能則需要代理。 
+
+
+.3+| *數據服務*  a| 
+備份與還原
+
+* 在私有模式下，NetApp Backup and Recovery 僅支援 ONTAP 磁碟區資料的備份和還原。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["查看ONTAP資料支援的備份目標列表"^]
+* 不支援應用程式資料和虛擬機器資料的備份和還原。
+
+| 是的 
+
+
+ a| 
+NetApp 分類
+
+* 唯一支援的資料來源是您可以在本地探索的資料來源。 https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#supported-data-sources["檢視您可以在本地探索的來源"^]
+* 不支援需要對外網際網路存取的功能。 https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#limitations["檢視功能限制"^]
+
+| 是的 
+
+
+| NetApp Replication | 是的*（如果是從 ONTAP 內部部署複製到 ONTAP 內部部署，則不需要） 
+
+
+| *NetApp 支援合約功能* | 無 | 不適用 
+
+
+.6+| *管理功能* | 審計 | 不 
+
+
+ a| 
+Licenses and subscriptions 管理
+
+* 私密模式僅支援 BYOL。
+
+| 不 
+
+
+| 身分和存取管理 | 不 
+
+
+| 管理雲端提供者憑證 | 不 
+
+
+| 唯讀模式 | 不 
+
+
+| 通知 | 不 
 |===

@@ -18,6 +18,9 @@ summary: 要開始使用控制台，第一步是使用您的NetApp支援網站�
 
 在唯讀模式下，具有管理員角色的使用者必須手動提升權限才能進行更改，這確保了更改是有意為之的。
 
+
+NOTE: 當 NetApp Console 處於私人模式時，唯讀模式無法使用。link:concept-modes.html["深入瞭解 NetApp Console 模式"]。
+
 .所需存取權限
 超級管理員或組織管理員。
 

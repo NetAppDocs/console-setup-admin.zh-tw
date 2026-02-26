@@ -31,6 +31,7 @@ summary: 當NetApp Console在 Azure 中啟動控制台代理程式時，它會�
 ** link:task-install-agent-azure-marketplace.html#step-3-set-up-permissions["設定 Azure 市場部署的權限"]
 ** link:task-install-agent-on-prem.html#agent-permission-aws-azure["設定本地部署的權限"]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["設定限制模式的權限"]
+** link:task-prepare-private-mode.html#step-6-prepare-cloud-permissions["設定私密模式的權限"]
 
 
 

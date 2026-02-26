@@ -1,0 +1,142 @@
+---
+sidebar: sidebar 
+permalink: concept-agent-overview.html 
+keywords: console agent, agent, what is an agent, deployment, hybrid cloud, storage management, data services 
+summary: 您可以透過部署 Console 代理程式來啟用 NetApp Console 功能，Console 代理程式是一個輕量級軟體元件，可在您的內部部署和雲端儲存系統與 NetApp Console 之間提供安全連線，從而實現進階儲存協調和資料服務。 
+---
+= 了解NetApp Console代理
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以透過部署 Console 代理程式來啟用 NetApp Console 功能，Console 代理程式是一種輕量級軟體元件，可在您的內部部署和雲端儲存系統與 NetApp Console 之間提供安全連線，從而實現進階儲存協調和資料服務。
+
+
+
+== Console 代理程式的作用
+
+Console 代理程式彌合了儲存系統和 NetApp Console 之間的網路鴻溝。它能安全地將您的基礎架構連接到 NetApp API 和 Console，讓您能夠：
+
+* 透過 NetApp Console 發現並監控 AWS、Azure、Google Cloud 和內部部署環境中的儲存系統。
+* 在 NetApp Console 上協調儲存系統的儲存資源配置與設定任務。
+* 啟用進階資料保護和最佳化服務。
+* 將您的雲端供應商憑證與 Console 代理程式關聯，以安全地追蹤雲端服務使用情況，並將部署連接到正確的訂閱，從而實現準確的計費和成本管理。
+
+
+
+
+=== 代理架構
+
+代理程式使用輕量級程序運行，這些程序：
+
+* 從 Console SaaS 應用程式拉取或推送資料（標準模式和受限模式），或完全在本地操作（私有模式）
+* 啟動所有通訊 — Console 絕不會主動向代理程式發起撥出通話
+* 使用標準管理協定連線至您的儲存系統
+* 使用 TLS 1.3 與雲端提供者和 NetApp Console API 進行安全通訊
+
+
+
+
+=== 代理程式可用性和營運要求
+
+Console 代理程式是 NetApp Console 的關鍵基礎架構。NetApp Console 可以處理短暫的中斷、但代理程式必須保持運作且可連線、以確保不中斷的管理和資料服務。您有責任確保：
+
+* 代理程式仍在運作中
+* 代理程式具有與所需端點的網路連線
+* 基礎架構故障能夠迅速解決
+* 代理虛擬機器根據 NetApp 相關建議進行維護和升級
+
+
+
+
+== 當您需要 Console 代理時
+
+當您需要執行以下操作時，至少需要部署一個 Console 代理程式：
+
+* 使用受限或私有部署模式（NetApp Console 安裝在您自己的環境中）。啟用某些服務需要額外的代理。
+* 存取進階資料服務（NetApp Backup and Recovery、NetApp Disaster Recovery、NetApp Ransomware Resilience、NetApp Data Classification 等）。
+* 管理 Cloud Volumes ONTAP 系統。
+* 對內部部署 ONTAP 叢集執行進階管理工作。
+* 追蹤授權、監控儲存設備健全狀況並規劃生命週期升級。
+
+
+如果沒有代理程式，您可以執行基本的儲存探索，並存取有限的監控和儲存管理功能。但是，大多數企業使用案例需要一個或多個操作代理程式。
+
+link:concept-modes.html["了解NetApp Console部署模式"] 了解何時需要代理以及代理能夠提供哪些功能。
+
+
+
+== Console 代理程式的部署選項
+
+您可以將 Console 代理部署在：
+
+* Amazon Web Services （標準模式、受限模式或私有模式）
+* Microsoft Azure（標準模式、受限模式或私有模式）
+* Google Cloud （標準模式、限制模式或私有模式）
+* 在您的場所（標準或私有模式）
+
+
+您的 Console 部署模式、儲存環境和資料主權需求決定了代理程式的部署位置。為了實現組織隔離或滿足業務需求，可以在不同環境中部署多個代理程式。
+
+部署代理程式後，您需要將其註冊到 NetApp Console 組織，以啟用該組織的功能。您可以將多個儲存系統和資料服務與單一代理程式關聯，也可以跨環境部署多個代理程式，以滿足組織隔離或業務需求。
+
+
+
+=== NetApp Console SaaS 應用程式（標準模式）的代理程式
+
+在雲端或內部部署代理程式，以橋接與雲端託管 Console SaaS 應用程式的連線。代理程式可啟用進階功能，同時 Console UI 仍可從任何位置存取。
+
+使用 SaaS 應用程式（標準模式）時，您可以直接從 Console 安裝代理程式。您可以將其安裝在 AWS、Azure 或 Google Cloud 上，也可以手動安裝在內部部署環境中您自己的 Linux 主機或 VCenter 環境中。
+
+當您在內部部署環境安裝代理程式時，您可以關聯對應的雲端供應商認證，以啟用帳單整合和資料服務。
+
+
+
+=== 受限模式下 NetApp Console 的代理程式
+
+您需要安裝一個代理，使用者將透過該代理存取 NetApp Console 。啟用資料服務和管理儲存系統還需要其他代理程式。
+
+如果您在受限模式下使用 NetApp Console，則可以從雲端供應商的市場安裝代理程式，或手動將軟體安裝到您自己的雲端、本機或 VCenter 環境中的 Linux 主機上。
+
+您需要安裝一個代理，用戶將透過該代理存取 NetApp Console。啟用資料服務和管理儲存系統還需要其他代理程式。
+
+當您在內部部署環境安裝代理程式時，您可以關聯對應的雲端供應商認證，以啟用帳單整合和資料服務。
+
+
+
+=== 用於私有模式（內部部署或在雲端且無對外連線）的 NetApp Console 代理程式
+
+您需要安裝一個代理，使用者將透過該代理存取 NetApp Console 。啟用資料服務和管理儲存系統還需要其他代理程式。
+
+在您的資料中心或實體隔離環境中安裝代理程式。代理程式無法連線到 NetApp API 端點。所有操作均在本地進行，並擁有完全的資料主權和控制權。
+
+您需要安裝一個代理，用戶將透過該代理存取 NetApp Console。啟用資料服務和管理儲存系統還需要其他代理程式。
+
+當您在內部部署環境安裝代理程式時，您可以關聯對應的雲端供應商認證，以啟用帳單整合和資料服務。
+
+
+
+=== 必要時使用多個代理程式
+
+每個代理程式獨立運作，可以管理多個儲存系統和資料服務。在需要時部署多個代理程式：
+
+* 依儲存類型或組織功能進行隔離
+* 滿足地理或網路分段要求
+
+
+
+
+== 相關資訊
+
+了解如何部署 Console 代理程式：
+
+* link:task-install-agent-aws-console.html["在 AWS 中安裝代理程式"]。
+* link:task-install-agent-azure-console.html["在 Azure 中安裝代理程式"]。
+* link:task-install-agent-google-console-gcloud.html["在 Google Cloud 中安裝代理程式"]。
+* link:task-install-agent-on-prem.html["在本地安裝代理"]。
+

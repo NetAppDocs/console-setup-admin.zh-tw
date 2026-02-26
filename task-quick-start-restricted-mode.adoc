@@ -4,7 +4,7 @@ permalink: task-quick-start-restricted-mode.html
 keywords: quick start, restricted mode quick start, govcloud, government, aws gov, azure gov 
 summary: 透過準備環境和部署控制台代理，開始以受限模式使用NetApp Console。 
 ---
-= 入門工作流程（受限模式）
+= 在受限模式下開始使用 NetApp Console 的工作流程
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -35,3 +35,103 @@ summary: 透過準備環境和部署控制台代理，開始以受限模式使�
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] link:task-subscribe-restricted-mode.html["訂閱NetApp Intelligent Services（可選）"]
 [role="quick-margin-para"]
 可選：從雲端供應商的市場訂閱NetApp Intelligent Services，以按小時費率（PAYGO）或透過年度合約支付資料服務費用。  NetApp Intelligent Services包括NetApp Backup and Recovery、 Cloud Volumes ONTAP、 NetApp Cloud Tiering、 NetApp Ransomware Resilience和NetApp Disaster Recovery。  NetApp Data Classification包含在您的訂閱中，無需額外付費。
+
+
+
+== 受限模式下 NetApp Console 支援的功能與服務
+
+下表列出了在受限模式下安裝 NetApp Console 時可用的儲存管理功能、資料服務和管理功能。
+
+[cols="3*"]
+|===
+| 產品領域 | NetApp 服務或功能 | 需要 Console 代理 
+
+
+.3+| *儲存系統管理* 此表顯示您可以透過 NetApp Console 管理的儲存系統。它不列出 NetApp Backup and Recovery 的備份目標。 | Azure NetApp Files | 不 
+
+
+| Cloud Volumes ONTAP | 是的 
+
+
+| 本地ONTAP集群 | 探索和管理所需。您可以在沒有 Console 代理程式的情況下使用直接探索，但需要代理程式才能使用管理功能。 
+
+
+.3+| *Data Services*（受限模式支援的資料服務比標準模式少）  a| 
+備份與還原
+
+* 在政府區域和商業區域，以受限模式支援。在主權區域，以受限模式不支援。
+* 在受限模式下，NetApp Backup and Recovery 僅支援 ONTAP 磁碟區資料的備份和還原。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP資料支援的備份目標列表"^]
+
+| 在政府區域和商業區域（受限模式）中受支援。在主權區域（受限模式）中不受支援。在受限模式下，NetApp Backup and Recovery 僅支援 ONTAP 磁碟區資料的備份和還原。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP資料支援的備份目標列表"^] 
+
+
+ a| 
+NetApp Data Classification
+
+* 在政府區域內受限制模式支持。不支援商業區域或具有限制模式的主權區域。
+
+| 是的 
+
+
+ a| 
+NetApp Replication
+
+* 在政府區域內受限制模式支持。不支援商業區域或具有限制模式的主權區域。
+
+| 是的*（如果是從 ONTAP 內部部署複製到 ONTAP 內部部署，則不需要） 
+
+
+| *NetApp 支援合約功能* | 無 | 不適用 
+
+
+.12+| *管理功能* | 審計 | 不 
+
+
+| 自動化中心 | 不 
+
+
+| 聯邦 | 不 
+
+
+| 身分和存取管理 | 不 
+
+
+ a| 
+Licenses and subscriptions 管理
+
+請注意以下事項：
+
+* 市場訂閱（按小時和按年合約）
++
+** 對於Cloud Volumes ONTAP，僅支援基於容量的許可。
+** 在 Azure 中，不支援與政府區域簽訂年度合約。
+
+
+* BYOL
++
+對於Cloud Volumes ONTAP，BYOL 支援基於容量的授權和基於節點的授權。
+
+
+| 不 
+
+
+| 管理雲端提供者憑證 | 不 
+
+
+| 多因素驗證 （本機使用者） | 不 
+
+
+| 通知 | 不 
+
+
+| NSS 帳戶 | 不 
+
+
+| 組織合作夥伴關係 | 不 
+
+
+| 唯讀模式 | 不 
+
+
+| 通知 | 不 
+|===

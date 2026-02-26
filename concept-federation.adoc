@@ -16,6 +16,9 @@ summary: 身份聯合支援透過NetApp Console進行單一登錄，以便使用
 [role="lead"]
 單一登入（聯合）允許使用者使用其公司憑證登入NetApp Console，從而簡化了登入流程並增強了安全性。您可以使用身分識別提供者 (IdP) 或NetApp支援網站啟用單一登入 (SSO)。
 
+
+NOTE: 當 NetApp Console 處於私人模式時，無法使用聯邦功能。link:concept-modes.html["深入瞭解 NetApp Console 模式"^]。
+
 .所需角色
 組織管理員、聯盟管理員、聯盟檢視器。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
 

@@ -1,8 +1,0 @@
----
-permalink: task-log-in-private-mode.html 
-redirect: console-setup-admin/task-logging-in.html 
----
-= 
-:allow-uri-read: 
-
-

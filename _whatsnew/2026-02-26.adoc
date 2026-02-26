@@ -1,0 +1,35 @@
+= 私有模式發布（4.4.0）
+:allow-uri-read: 
+
+
+
+
+=== 私有模式發布（4.4.0）
+
+新的私人模式版本現已可從 https://mysupport.netapp.com/site/downloads["NetApp支援站點"^]
+
+
+
+==== BlueXP 私有模式現在稱為 NetApp Console 私有模式
+
+NetApp Console 4.4.0 是 NetApp Console 在私有模式下的第一個版本。
+
+NetApp Console建立在增強和重組的BlueXP基礎之上，可在企業級內部和雲端環境中集中管理NetApp儲存和NetApp Data Services，提供即時洞察、更快的工作流程以及高度安全且合規的簡化管理。
+
+在 https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2025-10-06.html["NetApp Console 頁面新增功能"^]中深入瞭解新的 NetApp Console。
+
+4.4.0 版本包含以下 NetApp Console 元件和服務的更新。
+
+[cols="3*"]
+|===
+| 組件或服務 | 此版本中包含的版本 | 自上次私人模式發布以來的變化 
+
+
+| 控制台代理 | 4.4.0 | 前往 https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2026-02-09.html["NetApp Console 頁面新增功能"^]並參考版本 4.4.0 中包含的變更。 
+
+
+| 備份和復原 | 5.0.2（2026 年 2 月 9 日） | 前往  https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["NetApp Backup and Recovery 頁面的最新消息"^]。 
+
+
+| 分類 | 1.5.1 （2026 年 2 月 9 日） | 前往  https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["NetApp Classification 頁面新增功能"^]。 
+|===

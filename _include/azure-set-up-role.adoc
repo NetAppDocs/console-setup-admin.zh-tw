@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-. 複製link:reference-permissions-azure.html["連接器的自訂角色權限"]並將它們保存在 JSON 檔案中。
+. 複製link:reference-permissions-azure.html["控制台代理程式的自訂角色權限"]並將它們保存在 JSON 檔案中。
 . 透過將 Azure 訂閱 ID 新增至可分配範圍來修改 JSON 檔案。
 +
 您應該為想要與NetApp Console一起使用的每個 Azure 訂閱新增 ID。

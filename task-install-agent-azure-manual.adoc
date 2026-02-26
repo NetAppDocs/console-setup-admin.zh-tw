@@ -408,7 +408,7 @@ link:reference-networking-saas-console.html["為NetApp控制台準備網絡"] �
 
 
  a| 
-\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
  a| 
 在NetApp Console中提供功能和服務。
 
@@ -481,7 +481,7 @@ link:reference-networking-saas-console.html["為NetApp控制台準備網絡"] �
 +
 https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Microsoft Azure 文件：使用 Azure 入口網站為 VM 上的 Azure 資源配置託管標識"^]
 
-. 複製link:reference-permissions-azure.html["連接器的自訂角色權限"]並將它們保存在 JSON 檔案中。
+. 複製link:reference-permissions-azure.html["控制台代理程式的自訂角色權限"]並將它們保存在 JSON 檔案中。
 . 透過將 Azure 訂閱 ID 新增至可分配範圍來修改 JSON 檔案。
 +
 您應該為想要與NetApp Console一起使用的每個 Azure 訂閱新增 ID。
@@ -715,6 +715,13 @@ unset https_proxy
 +
 選擇下載代理安裝程式檔案或檔案的 URL。
 
+
+
++
+
+NOTE: 下載適用於網路或雲端的「線上」代理安裝程式。NetApp Console 代理還有一個單獨的「離線」安裝程式，但僅支援私有模式部署。
+
++
 ** NetApp支援網站（如果您還沒有存取控制台的權限，則需要此網站） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp支援站點"^] ，
 
 

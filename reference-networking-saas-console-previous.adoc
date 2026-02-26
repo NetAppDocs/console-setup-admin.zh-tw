@@ -59,15 +59,15 @@ NetApp建議更新防火牆規則以使用修訂後的端點列表，該列表�
 * \ https://cloudmanager.cloud.netapp.com
 * \ https://netapp-cloud-account.auth0.com
 * \ https://netapp-cloud-account.us.auth0.com
-* \ https://console.bluexp.netapp.com
-* \https://*.console.bluexp.netapp.com
+* \ https://console.netapp.com
+* \https://*.console.netapp.com
 
  a| 
 * \ https://api.bluexp.netapp.com
 * \ https://netapp-cloud-account.auth0.com
 * \ https://netapp-cloud-account.us.auth0.com
 * \ https://console.netapp.com
-* \ https://components.console.bluexp.netapp.com
+* \https://components.console.netapp.com
 * \ https://cdn.auth0.com
 
  a| 

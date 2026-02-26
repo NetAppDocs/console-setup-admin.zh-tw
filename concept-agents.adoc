@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-agents.html 
-keywords: 'concept, connectors, learn about connectors, what are connectors, what is a connector, what"s a connector, days, 14 days, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
+keywords: 'concept, connectors, learn about connectors, what are connectors, what is a connector, what"s a connector, days, 14 days, when is an agent required, agent supported locations, restricted mode, private mode, dark site, permissions, multiple agents, disaster recovery, agents, multiple agents, what is a Console agent' 
 summary: 您可以使用控制台代理將NetApp Console連接到您的基礎架構，並安全地協調跨 AWS、Azure、Google Cloud 或本地環境的儲存解決方案，以及使用資料保護服務。 
 ---
 = 了解NetApp Console代理
@@ -21,10 +21,9 @@ summary: 您可以使用控制台代理將NetApp Console連接到您的基礎架
 * 透過NetApp Console協調儲存管理任務，例如設定Cloud Volumes ONTAP、設定儲存磁碟區、使用資料分類等等。
 * 使用雲端提供者的 IAM 角色進行身份驗證，以實現訂閱計費整合。
 * 使用進階資料服務（NetApp Backup and Recovery、 NetApp Disaster Recovery、 NetApp Ransomware Resilience和NetApp Cloud Tiering）
-* 以受限模式使用控制台。
 
 
-如果您不需要進階編排或資料保護，則可以集中管理本機ONTAP叢集和雲端原生儲存服務，而無需部署代理程式。此外，也提供監控和資料傳輸工具。
+如果您不需要進階編排或資料保護服務，則無需部署代理程式即可集中管理內部部署 ONTAP 叢集和雲端原生儲存服務。某些監控和資料行動工具也無需代理程式即可使用。
 
 下表顯示了您可以使用和不使用控制台代理時可以使用的功能和服務。
 
@@ -106,7 +105,7 @@ summary: 您可以使用控制台代理將NetApp Console連接到您的基礎架
 
 
 
-3+| *可用的儲存管理服務*： 
+3+| *儲存管理與健康服務*： 
 
 
 | 警報  a| 
@@ -189,7 +188,7 @@ summary: 您可以使用控制台代理將NetApp Console連接到您的基礎架
 
 
 
-| 資料分類  a| 
+| NetApp Data Classification  a| 
 是的
  a| 
 不
@@ -265,14 +264,6 @@ summary: 您可以使用控制台代理將NetApp Console連接到您的基礎架
 == 與雲端提供者的溝通
 
 該代理程式使用 TLS 1.3 與 AWS、Azure 和 Google Cloud 進行所有通訊。
-
-
-
-== 限制模式
-
-若要在受限模式下使用控制台，請安裝控制台代理程式並存取在控制台代理程式上本機執行的控制台介面。
-
-link:concept-modes.html["了解NetApp Console部署模式"] 。
 
 
 

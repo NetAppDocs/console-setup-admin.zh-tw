@@ -156,7 +156,7 @@ image:screenshot_accounts_switch_aws.png["螢幕截圖顯示在「詳細資料�
 
 === 設定 IAM 角色
 
-設定一個 IAM 角色，使NetApp Console軟體即服務 (SaaS) 層能夠承擔該角色。
+設定 IAM 角色，使 NetApp Console 軟體即服務（SaaS）應用程式能夠承擔該角色。
 
 .步驟
 . 前往目標帳戶中的 IAM 控制台。

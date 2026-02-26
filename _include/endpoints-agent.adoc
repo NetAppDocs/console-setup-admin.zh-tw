@@ -51,7 +51,7 @@
 
 | \ https://mysupport.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息。| \ https://signin.b2c.netapp.com | 更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp Console。| \ https://support.netapp.com | 取得許可資訊並向NetApp支援發送AutoSupport訊息以及接收Cloud Volumes ONTAP的軟體更新。
 
-https://cdn.auth0.com \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \ https://components.console.bluexp.netapp.com \
+| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com | 在 NetApp Console 中提供功能和服務。
 
 [cols="2*"]
 |===
@@ -154,15 +154,15 @@ a| 如果控制台代理位於商業區域或主權區域，您可以在兩組�
 * \ https://cloudmanager.cloud.netapp.com
 * \ https://netapp-cloud-account.auth0.com
 * \ https://netapp-cloud-account.us.auth0.com
-* \ https://console.bluexp.netapp.com
-* \https://*.console.bluexp.netapp.com
+* \ https://console.netapp.com
+* \https://*.console.netapp.com
 
  a| 
 * \ https://api.bluexp.netapp.com
 * \ https://netapp-cloud-account.auth0.com
 * \ https://netapp-cloud-account.us.auth0.com
 * \ https://console.netapp.com
-* \ https://components.console.bluexp.netapp.com
+* \https://components.console.netapp.com
 * \ https://cdn.auth0.com
 
  a| 
