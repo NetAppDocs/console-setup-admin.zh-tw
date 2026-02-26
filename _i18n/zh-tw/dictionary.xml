@@ -2613,8 +2613,6 @@
   <block id="9964d0b6e519677dfa6bcd4597b081a2" category="list-text"><block ref="9964d0b6e519677dfa6bcd4597b081a2" category="inline-link-rx"></block></block>
   <block id="2971acb1ab572cfb61b7c86d49e2b300" category="inline-link">Cloud Volumes ONTAP文檔</block>
   <block id="8c1b893f08cfaa147e0cf92bf09039b9" category="list-text"><block ref="8c1b893f08cfaa147e0cf92bf09039b9" category="inline-link-rx"></block></block>
-  <block id="32bf39c0f4f8e0ff3b8343a1c55eccc0" category="inline-link">數位錢包文檔</block>
-  <block id="07cad670347ede0ff6ee0e3fb79a5e7b" category="list-text"><block ref="07cad670347ede0ff6ee0e3fb79a5e7b" category="inline-link-rx"></block></block>
   <block id="3014dc2d87cf02248e7abe6b8ac89106" category="inline-link">本地ONTAP集群文檔</block>
   <block id="e05b0721a950cb94ec4d815fb2fcb330" category="list-text"><block ref="e05b0721a950cb94ec4d815fb2fcb330" category="inline-link-rx"></block></block>
   <block id="7596270426e8c5f92be308ff330e0e64" category="inline-link">複製文檔</block>
@@ -5365,8 +5363,6 @@
   <block id="33fb61c4c752d541a30c9ba8194091da" category="section-title">2025年11月26日</block>
   <block id="90e7692e452d555a08bc34e6a38ecd0c" category="section-title">2023年2月6日</block>
   <block id="47d455f427b4674cc00157a8a2934409" category="paragraph">此策略新增了以下權限：</block>
-  <block id="e97ae785ddbd746339946844f92175e6" category="inline-link">分類文檔</block>
-  <block id="6847efe16c9bfc0feacaef65fc05b7b9" category="list-text"><block ref="6847efe16c9bfc0feacaef65fc05b7b9" category="inline-link-rx"></block></block>
   <block id="16d62d361fbd1153b9fe75b035aa7c51" category="paragraph">您可以使用下列方法更新控制台代理現有的透明代理伺服器：<block ref="091092579ca8cede1b760e7c5a90a003" prefix=" " category="inline-code"></block>透過使用命令來移除透明代理伺服器<block ref="ef5ebb9e0c08ee0463e7503ff1111f4c" prefix=" " category="inline-code"></block>命令。更多信息，請查閱相關文件。<block ref="1b2f5cd7e64b458e431e40fa20571324" category="inline-link-macro-rx"></block> 。</block>
   <block id="e403ae80ee5407293bf60157033759c8" category="list-text">請輸入資料夾或項目詳細資料：</block>
   <block id="70fdeef63f056c10a8cdcc5f3fbc8eb3" category="inline-xref">了解如何移除資源</block>
@@ -5594,7 +5590,6 @@
   <block id="eedfa09a5feb67c791cc20a479679c67" category="paragraph">NetApp Console符合 SOC 2 II 型標準。</block>
   <block id="051ae024df3188ffe4e3ac43a493c874" category="inline-link-macro">了解更多關於NetApp SOC 2合規性的資訊。</block>
   <block id="a7cbfcc3f40f9b759d21b6e0bfb565ec" category="cell">允許使用者不受限制地存取已指派的項目和資料夾。可以將成員新增到他們管理的資料夾或專案中，以及執行任何任務並在他們被指派的資料夾或專案內的資源上使用任何資料服務或應用程式。資料夾或專案管理員無法建立控制台代理。</block>
-  <block id="143bd02c953bba9b731282024d3a9f3d" category="cell">允許使用者查看NetApp Data Classification掃描結果。具有此角色的使用者可以查看合規性資訊並產生他們有權存取的資源的報告。這些使用者無法啟用或停用磁碟區、儲存桶或資料庫模式的掃描。分類功能沒有管理員角色。</block>
   <block id="1282f90034162aa1eb616797e0379691" category="paragraph">您需要為控制台代理提供適當的權限，以便它可以在您的雲端環境中執行操作。使用此頁面上的鏈接，您可以根據目標快速存取所需的權限。</block>
   <block id="0429753823dd56c6321879ac91c61377" category="cell">從控制台部署控制台代理程式 若要在 AWS 中部署控制台代理，使用者需要特定的權限。</block>
   <block id="6a576eacbcc0768a7faf1facae7a80dd" category="cell">用於部署資料代理程式的 AWS 使用者帳戶必須具有所需的權限。</block>
@@ -5951,4 +5946,9 @@
   <block id="1bad3fa525f7b2c60b554cc8a36a911c" category="list-text">cloudformation：ListStacks</block>
   <block id="a09b37992441a5c2061c0ef135b80024" category="section-title">2026 年 2 月 24 日</block>
   <block id="51b31e1901c03d4b274f371dd730c779" category="paragraph">資料分類現在需要以下權限：</block>
+  <block id="9ba1f0e426e643179b44f5146f795c55" category="cell">允許使用者查看 NetApp Data Classification 掃描結果。擁有此角色的使用者可以查看合規性資訊，並為其有權存取的資源產生報告。這些使用者無法啟用或停用磁碟區、儲存桶或資料庫架構的掃描。Data Classification 沒有管理員角色。</block>
+  <block id="9320804217d782369dccfe3cfe90fd29" category="inline-link">Data Classification 文檔</block>
+  <block id="81584a5aa440695d6dd39594311c7b2d" category="list-text"><block ref="81584a5aa440695d6dd39594311c7b2d" category="inline-link-rx"></block></block>
+  <block id="c19e034a7ae60fb90287c5050a076d5a" category="inline-link">授權與訂閱文檔</block>
+  <block id="3dc73d95873fb59ed12df54318d70e6a" category="list-text"><block ref="3dc73d95873fb59ed12df54318d70e6a" category="inline-link-rx"></block></block>
 </blocks>
