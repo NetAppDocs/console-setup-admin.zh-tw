@@ -5769,7 +5769,6 @@
   <block id="9b4bffa460105781f82b1d463bde8200" category="cell">4.4.0</block>
   <block id="a0f66fdbde042599d314470228f3ca6d" category="inline-link">NetApp Console 頁面新增功能</block>
   <block id="d9546787b8341bfee8dbbe4f87c60436" category="cell">前往<block ref="9edfdcbb835e82f6dae46ac911dcb157" category="inline-link-rx"></block>並參考版本 4.4.0 中包含的變更。</block>
-  <block id="380c830a3c13f16e4d36530d1de2be47" category="cell">5.0.2（2026 年 2 月 9 日）</block>
   <block id="582b607a608891f3c15d7fc69b83ace3" category="inline-link">NetApp Backup and Recovery 頁面的最新消息</block>
   <block id="b14e5d1e5d257d38ef28ffaa5bff5da4" category="cell">前往 <block ref="a02d6bb1505d3b564f4ec7078c34d1ba" category="inline-link-rx"></block>。</block>
   <block id="0ab04d2bfcc6d88bde2adee5587eeb44" category="cell">1.5.1 （2026 年 2 月 9 日）</block>
@@ -6128,4 +6127,5 @@
   <block id="fc2bd25c4501ebc9670b599a0996c243" category="sidebar">受限模式入門工作流程</block>
   <block id="d9f6b701b4e6e8fa39df2310070b5bad" category="sidebar">開始使用 NetApp Console（私人模式）</block>
   <block id="cc1e97b9fe18a374eacd6937d0fd1f20" category="sidebar">私有模式入門工作流程</block>
+  <block id="68874f436c529f1931417d4bdfb1c183" category="cell">5.0.3（2026 年 3 月 2 日）</block>
 </blocks>
