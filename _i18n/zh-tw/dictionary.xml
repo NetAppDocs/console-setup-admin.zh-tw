@@ -4392,7 +4392,6 @@
   <block id="23fc9bc00056f19d24e4c3ab8b5ca0c6" category="paragraph">查看控制台代理版本以確認升級或與您的NetApp代表共用。</block>
   <block id="b9b50a4a67814c748f85c0dd361e7931" category="list-text">選擇*管理&gt;支援&gt;代理*。</block>
   <block id="b8833ad6a19536ecd8aef7620db4ddce" category="paragraph">控制台在頁面頂部顯示版本。</block>
-  <block id="fb2564b7b05cf68b7b51fea5098120fd" category="section-title">驗證網路存取</block>
   <block id="021662795bfc95f525aded11ea0f47b7" category="inline-link-macro">了解有關所需網路存取點的更多資訊。</block>
   <block id="532483dbc5894a7da7a4dd2c7f9b4e0e" category="paragraph">確保控制台代理程式具有所需的網路存取權限。<block ref="787bde807a1a57661aeb1e9aa8557b03" category="inline-link-macro-rx"></block></block>
   <block id="3b2256fce45383ccea4ebfc8f456dcf9" category="section-title">控制台代理安裝問題</block>
@@ -5053,7 +5052,6 @@
   <block id="11d2b70f92f5671a073ee7f95edbc568" category="paragraph">這<block ref="2df2419e3b3e4992394516227a5f4a71" prefix=" " category="inline-code"></block>此命令可讓您驗證控制台代理的配置。</block>
   <block id="3225a10b07f1580f10dee4abc3779e6c" category="section-title">參數</block>
   <block id="bb9f0d8e73ffa6630952dc1ecc6cd9de" category="paragraph"><block ref="6a11199e55b0cb53d751c5170e5f74f9" prefix="" category="inline-code"></block> - *必需的* -</block>
-  <block id="69dfddf838a2ddd2939ee5adc69cb83c" category="paragraph">選擇一項或多項服務進行驗證。有效的服務名稱包括：<block ref="8b55a44b49368262df89fd0e17b1a181" prefix="*" category="inline-code"></block>驗證與所需控制台端點的網路連線。</block>
   <block id="1fde504b28ae1c1b6dbb99c104b00a85" category="paragraph"><block ref="693f786102104e01b7396235926fc506" prefix="" category="inline-code"></block>--*必填*-- 選擇要執行的一種或多種驗證類型。有效的驗證類型包括：*<block ref="25835188a2355e9530d3a10fcbe4c65b" prefix=" " category="inline-code"></block>驗證與所需控制台端點的網路連線。</block>
   <block id="b3c3244f084b65704359870cc6488d93" category="paragraph"><block ref="f2d537814e28e44e0e35d5b4ce13cadb" prefix="" category="inline-code"></block> - *選修的* -</block>
   <block id="d076e244720434cf026cb278c7f19d8e" category="paragraph">指定用於驗證的代理伺服器 URL。如果您的代理程式配置為使用代理伺服器，則此項目為必填項。</block>
@@ -5231,7 +5229,6 @@
   <block id="5d3a908b240fe98ac0740455635b4cc0" category="list-text">如果仍有問題，請聯絡客服。</block>
   <block id="13ab9425db1c4ad9c7ca529999f6de24" category="list-text">確認代理程式擁有所需端點的出站存取權。<block ref="c7fe41b97889c23a57defbbf2129845e" category="inline-link-macro-rx"></block></block>
   <block id="61af83c0a45998dc351428765c46fa2e" category="section-title">對控制台代理運行配置檢查</block>
-  <block id="764bd6d2ae27e2401a34b6a482fc62d3" category="paragraph">從控制台或代理程式維護控制台對控制台代理程式執行設定檢查，以確保它們已連線。</block>
   <block id="cb4e992a592d7b26e6c218cdde9ee1b5" category="inline-link-macro">了解更多關於使用 config-checker validate 命令的資訊。</block>
   <block id="adbf5b321ab6472093079a96d92216c2" category="paragraph">您也可以使用代理維護控制台執行設定檢查。<block ref="714b5c6de8ffee7e082263b89290e9dc" category="inline-link-macro-rx"></block></block>
   <block id="2c8b526b02d94d86279aebb87311c90d" category="admonition">您只能驗證狀態為「已連線」的代理程式。</block>
@@ -6128,4 +6125,16 @@
   <block id="d9f6b701b4e6e8fa39df2310070b5bad" category="sidebar">開始使用 NetApp Console（私人模式）</block>
   <block id="cc1e97b9fe18a374eacd6937d0fd1f20" category="sidebar">私有模式入門工作流程</block>
   <block id="68874f436c529f1931417d4bdfb1c183" category="cell">5.0.3（2026 年 3 月 2 日）</block>
+  <block id="dd340069cb16665edf781618805f1165" category="doc">Console 代理 4.5.0</block>
+  <block id="de3b44fa9f294325dd837b3f15773cd6" category="paragraph">4.5.0 版本同時支援標準模式和受限模式。</block>
+  <block id="8d40f2642d0505b33483f580f9515a11" category="paragraph">此版本的 Console 代理程式包含安全性改進和錯誤修正，以及以下新功能。</block>
+  <block id="b8ea9a14287592fd39444f5f11f22b28" category="paragraph-title">支援對所需連接埠進行組態檢查</block>
+  <block id="e6aa0876ac72372fe4102974fad02f9e" category="inline-link-macro">了解更多關於在 Console 代理上執行組態檢查的資訊。</block>
+  <block id="8fab8f63a86cd4593eb84501e6b42574" category="paragraph">您可以使用設定檢查來驗證 Console 代理程式所需的連接埠是否已開啟。您可以從 Console 或 Agent 維護控制台執行設定檢查。<block ref="b6bcdf4dfaf7604bd81efc4009e39859" category="inline-link-macro-rx"></block></block>
+  <block id="2de08c251ba5c647be79f6b565692ba4" category="section-title">主控台管理</block>
+  <block id="2bdd9842a1d8845c8d1b9f13695c4ac5" category="inline-link-macro">深入瞭解如何為合作夥伴使用者指派 Keystone 角色。</block>
+  <block id="f932e5731af0b28e3d04131c77f23704" category="paragraph">您可以將 Keystone 角色指派給合作夥伴使用者，以允許這些使用者管理合作夥伴組織中的 Keystone 資源。<block ref="37c7e4a6dbebd9961095310c537fa832" category="inline-link-macro-rx"></block></block>
+  <block id="89c004a6a6a30c4e3297ce59ad9244fe" category="paragraph">選擇一個或多個服務進行驗證。有效的服務名稱包括：<block ref="8b55a44b49368262df89fd0e17b1a181" prefix="*" category="inline-code"></block> 此服務會驗證與所需 Console 端點的網路連接，以及 Console 代理程式所需的連接埠是否已開啟。</block>
+  <block id="81e25f5172548cbe6ade4ab58b86b791" category="section-title">驗證 Console 代理程式的網路和連接埠存取權限</block>
+  <block id="79809c4a6f04cdeb09f4ec1df49c2f33" category="paragraph">從 Console 或 Agent 維護控制台對 Console Agent 執行設定檢查，以確保它們可以存取所需的端點並且所需的連接埠已開啟。</block>
 </blocks>

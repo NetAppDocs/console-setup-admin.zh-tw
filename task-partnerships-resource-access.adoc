@@ -43,6 +43,8 @@ summary: 您可以透過為合作夥伴使用者指派組織內資料夾和專�
 * link:reference-iam-disaster-rec-roles.html["災難復原檢視器"]
 * link:reference-iam-storage-roles.html["營運支援分析師"]
 * link:reference-iam-predefined-roles.html["分類檢視器"]
+* link:reference-iam-keystone-roles.html["Keystone管理員"]
+* link:reference-iam-keystone-roles.html["Keystone檢視器"]
 
 
 link:reference-iam-predefined-roles.html["了解有關預定義角色的更多信息"]

@@ -39,7 +39,7 @@ summary: 您可以使用控制台代理維護控制台來設定控制台代理�
 `--services <comma-separated list of services to validate>` - *必需的* -
 
 [role="quick-margin-para"]
-選擇一項或多項服務進行驗證。有效的服務名稱包括：*`PLATFORM`驗證與所需控制台端點的網路連線。
+選擇一個或多個服務進行驗證。有效的服務名稱包括：*`PLATFORM` 此服務會驗證與所需 Console 端點的網路連接，以及 Console 代理程式所需的連接埠是否已開啟。
 
 `--validationTypes <comma-separated list validation types to run>`--*必填*-- 選擇要執行的一種或多種驗證類型。有效的驗證類型包括：* `NETWORK`驗證與所需控制台端點的網路連線。
 

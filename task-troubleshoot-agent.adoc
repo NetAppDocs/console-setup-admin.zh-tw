@@ -122,7 +122,7 @@ podman ps -a
 
 
 
-== 驗證網路存取
+== 驗證 Console 代理程式的網路和連接埠存取權限
 
 確保控制台代理程式具有所需的網路存取權限。link:reference-networking-saas-console.html["了解有關所需網路存取點的更多資訊。"]
 
@@ -130,7 +130,7 @@ podman ps -a
 
 === 對控制台代理運行配置檢查
 
-從控制台或代理程式維護控制台對控制台代理程式執行設定檢查，以確保它們已連線。
+從 Console 或 Agent 維護控制台對 Console Agent 執行設定檢查，以確保它們可以存取所需的端點並且所需的連接埠已開啟。
 
 您也可以使用代理維護控制台執行設定檢查。link:reference-agent-maint-console-config-checker.html["了解更多關於使用 config-checker validate 命令的資訊。"]
 
