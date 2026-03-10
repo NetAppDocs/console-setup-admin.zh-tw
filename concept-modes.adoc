@@ -347,7 +347,7 @@ Licenses and subscriptions 管理
 | 組織合作夥伴關係 | 不 
 
 
-| 唯讀模式 | 不 
+| 唯讀模式 | 是的 
 
 
 | 通知 | 不 
@@ -579,7 +579,7 @@ NOTE: 標準模式（NetApp Console SaaS 應用程式）支援所有功能。
 | 產品領域 | NetApp 服務或功能 | 限制模式 | 私人模式 
 
 
-.10+| *儲存系統管理* 此表顯示您可以透過 NetApp Console 管理的儲存系統。它不列出 NetApp Backup and Recovery 的備份目標。 | 警報 | 不 | 不 
+.12+| *儲存系統管理* 此表顯示您可以透過 NetApp Console 管理的儲存系統。它不列出 NetApp Backup and Recovery 的備份目標。 | 警報 | 不 | 不 
 
 
 | 適用於ONTAP 的Amazon FSx | 不 | 不 
@@ -609,74 +609,74 @@ NOTE: 標準模式（NetApp Console SaaS 應用程式）支援所有功能。
 | E系列 | 不 | 不 
 
 
-| StorageGRID | 不 | 不 | 工作負載工廠 
+| StorageGRID | 不 | 不 
 
 
-| 不 | 不 .8+| *數據服務* | 備份與還原 
+| 工作負載工廠 | 不 | 不 
 
 
-| 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP磁碟區資料支援的備份目標列表"^] | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["查看ONTAP磁碟區資料支援的備份目標列表"^] | NetApp 分類 
+.8+| *數據服務* | 備份與還原 | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP磁碟區資料支援的備份目標列表"^] | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["查看ONTAP磁碟區資料支援的備份目標列表"^] 
 
 
-| 是的 | 是的 | 複製和同步 
+| NetApp 分類 | 是的 | 是的 
 
 
-| 不 | 不 | NetApp Disaster Recovery 
+| 複製和同步 | 不 | 不 
 
 
-| 不 | 不 | NetApp 勒索軟體防護 
+| NetApp Disaster Recovery | 不 | 不 
 
 
-| 不 | 不 | NetApp Replication 
+| NetApp 勒索軟體防護 | 不 | 不 
 
 
-| 是的 | 是的 | NetApp Cloud Tiering 
+| NetApp Replication | 是的 | 是的 
 
 
-| 不 | 不 | NetApp Volume Caching 
+| NetApp Cloud Tiering | 不 | 不 
 
 
-| 不 | 不 .4+| *NetApp 支援合約功能* | 數位顧問 
+| NetApp Volume Caching | 不 | 不 
 
 
-| 不 | 不 | 生命週期規劃 
+.4+| *NetApp 支援合約功能* | 數位顧問 | 不 | 不 
 
 
-| 不 | 不 | 軟體更新 
+| 生命週期規劃 | 不 | 不 
 
 
-| 不 | 不 | 永續性 
+| 軟體更新 | 不 | 不 
 
 
-| 不 | 不 .9+| *管理功能* | 儲存和資料服務的儀表板指標 
+| 永續性 | 不 | 不 
 
 
-| 不 | 不 | 身分和存取管理 
+.9+| *管理功能* | 儲存和資料服務的儀表板指標 | 不 | 不 
 
 
-| 是的 | 是的 | 管理雲端提供者憑證 
+| 身分和存取管理 | 是的 | 是的 
 
 
-| 是的 | 是的 | 聯邦 
+| 管理雲端提供者憑證 | 是的 | 是的 
 
 
-| 是的 | 不 | Licenses and subscriptions 
+| 聯邦 | 是的 | 不 
 
 
-| 是的 | 是的 | 多因素身份驗證 
+| Licenses and subscriptions | 是的 | 是的 
 
 
-| 是的 | 不 | NSS 帳戶 
+| 多因素身份驗證 | 是的 | 不 
 
 
-| 是的 | 不 | 組織合作夥伴關係 
+| NSS 帳戶 | 是的 | 不 
 
 
-| 是的 | 不 | 唯讀模式 
+| 組織合作夥伴關係 | 是的 | 不 
 
 
-| 不 | 不 | 通知 | 是的 
+| 唯讀模式 | 是的 | 不 
 
 
-| 不 | 審計 | 是的 | 是的 
+| 通知 | 是的 | 不 | 審計 
 |===
