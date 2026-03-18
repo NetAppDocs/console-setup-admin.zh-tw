@@ -135,11 +135,13 @@ link:reference-iam-predefined-roles.html["了解訪問角色"] 。
 
 您可以將身分提供者 (IdP) 中的聯合群組新增至您的組織，並為其指派一個或多個角色。聯合群組的成員將繼承您在控制台中指派給該群組的角色。
 
+
+IMPORTANT: 當您在 Console 新增聯合群組並為其指派角色時，只有在您的 IdP 中屬於該群組成員且已註冊 NetApp Console 並在 Console 中被明確指派角色的使用者才能存取資源。NetApp 建議為這些使用者指派最低存取權限角色，例如 Organization viewer。
+
 在為聯合組分配角色之前，請確保以下事項：
 
 * 在身分識別提供者 (IdP) 和控制台之間建立聯盟。 link:concept-federation.html["了解如何建立聯邦。"]
 * 該群組必須已存在於您的身分提供者 (IdP) 中，並且已被指派對控制台的應用程式存取權。
-* 屬於該群組的使用者必須已經註冊了NetApp Console，並且已明確指派了控制台中的角色。NetApp建議指派最低存取權限角色，例如組織檢視者。
 
 
 .步驟

@@ -55,13 +55,14 @@ NOTE: 如果您之前使用NetApp Cloud Central（控制台的外部應用程式
 NetApp支援以下聯合協定和身分提供者：
 
 .協定
-* 安全性斷言標記語言 (SAML) 身分提供者
-* Active Directory 聯合驗證服務 (AD FS)
+* link:task-federation-adfs.html["Active Directory 聯合驗證服務 (AD FS)"]
+* link:task-federation-entra-id.html["微軟Entra ID"]
+* link:link:task-federation-saml.html["安全性斷言標記語言 (SAML) 身分提供者"]
 
 
 .身分提供者
-* 微軟Entra ID
-* Ping聯邦
+* link:task-federation-entra-id.html["微軟Entra ID"]
+* link:task-federation-ping.html["Ping聯邦"]
 
 
 
@@ -91,11 +92,3 @@ NetApp僅支援服務供應商發起的（SP發起的） SSO。您需要先配�
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["三"]在控制台中啟用您的連接
 [role="quick-margin-para"]
 啟用連線後，使用者可以使用其公司憑證登入控制台。
-
-查看對應協議或 IdP 的主題以開始：
-
-* link:task-federation-adfs.html["與 AD FS 設定聯合連接"]
-* link:task-federation-entra-id.html["與 Microsoft Entra ID 建立聯合連接"]
-* link:task-federation-ping.html["使用 PingFederate 設定聯合連接"]
-* link:task-federation-saml.html["與 SAML 身分提供者建立聯合連接"]
-

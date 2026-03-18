@@ -1231,15 +1231,6 @@
   <block id="995b0a469f6f6243977462e753ae05da" category="paragraph">在啟用聯合連線之前對其進行測試。使用控制台中聯合頁面上的測試選項來驗證您的測試使用者是否可以成功進行身份驗證。如果測試成功，則可以啟用連線。</block>
   <block id="6350c75317bf3a6a382ca51f7f21d612" category="paragraph-title"><block ref="3fb1f11a25837416d87a2007da1d76e6" category="inline-image-macro-rx" type="image"></block>在控制台中啟用您的連接</block>
   <block id="de1943b4a42a516fe3f0157be7b5952f" category="paragraph">啟用連線後，使用者可以使用其公司憑證登入控制台。</block>
-  <block id="7a15d5af6f3fb4b588190669535d4bbe" category="paragraph">查看對應協議或 IdP 的主題以開始：</block>
-  <block id="b5fa3a7b59c0dbf56027e973a978221b" category="inline-link-macro">與 AD FS 設定聯合連接</block>
-  <block id="e655d90f8f735e0e83a1465e53299a3c" category="list-text"><block ref="e655d90f8f735e0e83a1465e53299a3c" category="inline-link-macro-rx"></block></block>
-  <block id="010b9e75f2be10992c686afea2384784" category="inline-link-macro">與 Microsoft Entra ID 建立聯合連接</block>
-  <block id="c26b4a46fbd641691ec1909da444386d" category="list-text"><block ref="c26b4a46fbd641691ec1909da444386d" category="inline-link-macro-rx"></block></block>
-  <block id="d167ee77ecb410e3563f53c002b2587e" category="inline-link-macro">使用 PingFederate 設定聯合連接</block>
-  <block id="b76c6c3c96f9fd2d4a4d8f47ff90bcb3" category="list-text"><block ref="b76c6c3c96f9fd2d4a4d8f47ff90bcb3" category="inline-link-macro-rx"></block></block>
-  <block id="3f2aa4bd073d2458603c46bc293f8ade" category="inline-link-macro">與 SAML 身分提供者建立聯合連接</block>
-  <block id="00aef0f14c29d451cdbf8446ce6b0b8e" category="list-text"><block ref="00aef0f14c29d451cdbf8446ce6b0b8e" category="inline-link-macro-rx"></block></block>
   <block id="728d17e7146dcd6218a24c46a1de8943" category="doc">了解NetApp Console身分和存取管理</block>
   <block id="e5c1519cd8d7472771e0a519c54ccae1" category="paragraph">_組織_是控制台 IAM 系統的頂層，通常代表您的公司。您的組織由資料夾、專案、成員、角色和資源組成。代理與組織內的特定項目相關聯。</block>
   <block id="6c8d76b40d187de98318661a9cab7239" category="paragraph">_組織管理員_可以將資源與資料夾關聯，以便_資料夾或專案管理員_可以將其連結到資料夾中的相應項目。</block>
@@ -5491,7 +5482,6 @@
   <block id="3cbafb79babb187563c0124e2520510c" category="section-title">了解如何在NetApp Console中授予存取權限</block>
   <block id="6006dace312ced6616f59ef5355ec45d" category="paragraph">NetApp Console使用基於角色的存取控制 (RBAC) 來管理權限。可以單獨為使用者指派角色，也可以透過聯合群組為使用者指派角色。每個角色都定義了對特定資源允許的操作。</block>
   <block id="34b1f94b77b5bf3b37ba851f10060189" category="paragraph">請注意以下關於在NetApp Console中授予存取權限的事項：</block>
-  <block id="68486ab3d656a167edf458a9cdc1ec37" category="list-text">所有使用者必須先註冊NetApp Console，然後才能取得資源存取權限。</block>
   <block id="2bd8e344bd7b38add589340263927733" category="list-text">即使使用者是已指派角色的聯合群組的成員，也必須在控制台中明確地為每個使用者指派角色，然後他們才能存取資源。</block>
   <block id="b499ec6fa9977b0ca77f6656a13829bb" category="list-text">您可以直接從控制台新增服務帳戶並為其指派角色。</block>
   <block id="9522a4fe29d3a6f0c0622f4995ff5efb" category="paragraph">NetApp Console支援三種類型的成員：使用者帳戶、服務帳戶和聯合群組。</block>
@@ -5677,7 +5667,6 @@
   <block id="74339c243d7e2c57c81d3b6eeb492598" category="paragraph">在為聯合組分配角色之前，請確保以下事項：</block>
   <block id="99673e10ad28f12bcaf375fb16592097" category="list-text">在身分識別提供者 (IdP) 和控制台之間建立聯盟。 <block ref="562353f9c9a6ec120d22140ce361907b" category="inline-link-macro-rx"></block></block>
   <block id="2e2db2e64333e9c722068fbbc6cceb8e" category="list-text">該群組必須已存在於您的身分提供者 (IdP) 中，並且已被指派對控制台的應用程式存取權。</block>
-  <block id="06d5b18e5be0feb68eea2f9f0a2102d0" category="list-text">屬於該群組的使用者必須已經註冊了NetApp Console，並且已明確指派了控制台中的角色。NetApp建議指派最低存取權限角色，例如組織檢視者。</block>
   <block id="881a7400da554e794b5b8e9d39c7db4a" category="section-title">工作負載端點</block>
   <block id="7226c299553546c713e6b5ab556098c8" category="paragraph">控制台代理程式必須能夠存取以下NetApp工作負載端點。</block>
   <block id="0eda8bbe61d2248f5418aba76b8dc5b1" category="paragraph">https://api.workloads.netapp.com</block>
@@ -6137,4 +6126,9 @@
   <block id="89c004a6a6a30c4e3297ce59ad9244fe" category="paragraph">選擇一個或多個服務進行驗證。有效的服務名稱包括：<block ref="8b55a44b49368262df89fd0e17b1a181" prefix="*" category="inline-code"></block> 此服務會驗證與所需 Console 端點的網路連接，以及 Console 代理程式所需的連接埠是否已開啟。</block>
   <block id="81e25f5172548cbe6ade4ab58b86b791" category="section-title">驗證 Console 代理程式的網路和連接埠存取權限</block>
   <block id="79809c4a6f04cdeb09f4ec1df49c2f33" category="paragraph">從 Console 或 Agent 維護控制台對 Console Agent 執行設定檢查，以確保它們可以存取所需的端點並且所需的連接埠已開啟。</block>
+  <block id="01440d4fde4475cae0005dbb66b8f907" category="list-text"><block ref="01440d4fde4475cae0005dbb66b8f907" category="inline-link-macro-rx"></block></block>
+  <block id="83c2b9a6cf87b54eb30380def11da84d" category="list-text"><block ref="83c2b9a6cf87b54eb30380def11da84d" category="inline-link-macro-rx"></block></block>
+  <block id="b4a377b58913080baf7f33d3fbf72f1a" category="list-text"><block ref="b4a377b58913080baf7f33d3fbf72f1a" category="inline-link-macro-rx"></block></block>
+  <block id="1bbaa3de74e15060c4e8eab23f5e562e" category="list-text"><block ref="1bbaa3de74e15060c4e8eab23f5e562e" category="inline-link-macro-rx"></block></block>
+  <block id="fa05cdec48b95e7a466d56fb898a127b" category="admonition">當您在 Console 新增聯合群組並為其指派角色時，只有在您的 IdP 中屬於該群組成員且已註冊 NetApp Console 並在 Console 中被明確指派角色的使用者才能存取資源。NetApp 建議為這些使用者指派最低存取權限角色，例如 Organization viewer。</block>
 </blocks>
