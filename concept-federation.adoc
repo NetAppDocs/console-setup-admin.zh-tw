@@ -56,7 +56,6 @@ NetApp支援以下聯合協定和身分提供者：
 
 .協定
 * link:task-federation-adfs.html["Active Directory 聯合驗證服務 (AD FS)"]
-* link:task-federation-entra-id.html["微軟Entra ID"]
 * link:link:task-federation-saml.html["安全性斷言標記語言 (SAML) 身分提供者"]
 
 
