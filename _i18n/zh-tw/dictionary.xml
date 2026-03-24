@@ -6132,4 +6132,5 @@
   <block id="1bbaa3de74e15060c4e8eab23f5e562e" category="list-text"><block ref="1bbaa3de74e15060c4e8eab23f5e562e" category="inline-link-macro-rx"></block></block>
   <block id="fa05cdec48b95e7a466d56fb898a127b" category="admonition">當您在 Console 新增聯合群組並為其指派角色時，只有在您的 IdP 中屬於該群組成員且已註冊 NetApp Console 並在 Console 中被明確指派角色的使用者才能存取資源。NetApp 建議為這些使用者指派最低存取權限角色，例如 Organization viewer。</block>
   <block id="e40a26e15c2c65355aa43c03560cc632" category="list-text">所有使用者都必須先註冊 NetApp Console，才能獲得資源存取權限，即使他們屬於聯合群組。</block>
+  <block id="34df2c4da19b4e31f0349125e9cabfc7" category="section-title">2026 年 3 月 10 日</block>
 </blocks>
