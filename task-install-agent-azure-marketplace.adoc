@@ -16,6 +16,11 @@ summary: 若要從 Azure 市集建立控制台代理，您需要設定網路、�
 [role="lead"]
 您可以直接從 Azure 市場在 Azure 中建立控制台代理程式。若要從 Azure 市集建立控制台代理，您需要設定網路、準備 Azure 權限、檢視執行個體要求，然後建立控制台代理程式。
 
+在 Azure 中部署代理程式會在您選擇的 VNet 中啟動執行 Linux 和 Console 代理程式軟體的 VM。
+
+
+NOTE: 在與 Cloud Volumes ONTAP 系統相同的 Azure 區域中部署 Console 代理程式，或在 https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure 區域對"^]中部署。這樣可以確保 Cloud Volumes ONTAP 與其相關儲存帳戶之間使用 Azure Private Link 連線。
+
 .開始之前
 * 你應該有一個link:concept-agents.html["了解控制台代理"]。
 * 審查link:reference-limitations.html["控制台代理限制"]。

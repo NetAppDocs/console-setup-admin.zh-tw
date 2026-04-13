@@ -4,7 +4,7 @@ permalink: reference-permissions-gcp.html
 keywords: permissions, gcp, gcp permissions, bluexp, console agent 
 summary: 控制台代理程式需要權限才能在您的雲端提供者中執行操作。這些權限包含在NetApp提供的策略中。您應該了解代理程式使用這些權限做什麼。 
 ---
-= 控制台代理的 Google Cloud 權限
+= Google Cloud 對 NetApp Console 代理程式的權限
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -183,6 +183,7 @@ includedPermissions:
 - compute.disks.get
 - compute.disks.list
 - compute.disks.setLabels
+- compute.disks.update
 - compute.disks.use
 - compute.firewalls.create
 - compute.firewalls.delete
@@ -364,7 +365,7 @@ includedPermissions:
 | config.revisions.get | 不 | 是的 | 不 
 
 
-| 計算磁碟創建 .7+| 為Cloud Volumes ONTAP建立和管理磁碟。 | 是的 | 是的 | 不 
+| 計算磁碟創建 .8+| 在 Cloud Volumes ONTAP 系統上建立和管理磁碟。 | 是的 | 是的 | 不 
 
 
 | compute.disk.createSnapshot | 不 | 是的 | 不 
@@ -380,6 +381,9 @@ includedPermissions:
 
 
 | 計算磁碟設定標籤 | 是的 | 是的 | 不 
+
+
+| 運算.磁碟.更新 | 不 | 是的 | 不 
 
 
 | 計算磁碟使用 | 不 | 是的 | 不 
@@ -800,6 +804,12 @@ includedPermissions:
 == 更改日誌
 
 新增和移除的權限如下所示。
+
+
+
+=== 2026 年 4 月 13 日
+
+新增了 `compute.disks.update`權限、可更新 Cloud Volumes ONTAP 系統中 Hyperdisk Balanced Aggregate 或磁碟的 IOPS 和處理量參數。
 
 
 

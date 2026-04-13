@@ -4,7 +4,7 @@ permalink: reference-permissions-azure.html
 keywords: permissions, azure, azure permissions, bluexp 
 summary: 當NetApp Console在 Azure 中啟動控制台代理程式時，它會將自訂角色附加到 VM，該 VM 為代理程式提供管理該 Azure 訂閱中的資源和流程的權限。代理程式使用權限對多個 Azure 服務進行 API 呼叫。 
 ---
-= 控制台代理程式的 Azure 權限
+= 用於 NetApp Console 代理程式的 Azure 權限
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

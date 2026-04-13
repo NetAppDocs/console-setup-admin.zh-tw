@@ -4,7 +4,7 @@ permalink: reference-networking-saas-console.html
 keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
 summary: NetApp Console、 NetApp Console代理和NetApp資料服務需要出站網路存取以及聯繫必要端點的能力。 
 ---
-= 準備NetApp Console的網路訪問
+= NetApp Console 的網路存取
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

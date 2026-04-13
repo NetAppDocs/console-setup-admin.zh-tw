@@ -4,7 +4,7 @@ permalink: reference-whats-next.html
 keywords: standard mode, what you can do 
 summary: 現在您已登入並以標準模式設定NetApp Console，使用者可以建立和發現儲存系統並使用NetApp資料服務。 
 ---
-= 接下來可以做什麼（標準模式）
+= 標準模式下 NetApp Console 的後續步驟
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

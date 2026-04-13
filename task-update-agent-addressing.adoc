@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: task-update-agent-addressing.html 
+keywords: agent ip address, agent uri, change ip address, edit uri, agent network, agent addressing 
+summary: 當網路組態變更時、您可能需要在雲端供應商中更新代理程式的 IP 位址、並在 NetApp Console 中更新其註冊的 URI。 
+---
+= 更新代理程式定址和 URI
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+當網路組態變更時、您可能需要在雲端供應商中更新代理程式的 IP 位址、並在 NetApp Console 中更新其註冊的 URI。
+
+
+
+== 更改代理的 IP 位址
+
+如果需要，您可以變更雲端提供者指派的代理執行個體的內部和公用 IP 位址。
+
+.步驟
+. 依照雲端提供者的說明變更代理執行個體的本機 IP 位址或公用 IP 位址（或兩者）。
+. 重新啟動代理實例以向控制台註冊新的公用 IP 位址。
+. 如果您變更了私有 IP 位址，請更新Cloud Volumes ONTAP設定檔的備份位置，以便將備份傳送至代理程式上的新私人 IP 位址。
++
+更新每個Cloud Volumes ONTAP系統的備份位置。
+
++
+.. 從Cloud Volumes ONTAP CLI，將權限等級設定為進階：
+
+
+
+
+[listing]
+----
+set -privilege advanced
+----
+. 執行以下命令以顯示目前備份目標：
+
+
+[listing]
+----
+system configuration backup settings show
+----
+. 執行以下命令來更新備份目標的 IP 位址：
+
+
+[listing]
+----
+system configuration backup settings modify -destination <target-location>
+----
+
+
+== 編輯代理的 URI
+
+如果您的網路需求發生變化，請更新 Console 代理程式的 URI。這可以確保您的儲存基礎架構得到不間斷、安全且合規的管理。
+
+.步驟
+. 選擇“*管理 > 代理*”。
+. 在*概覽*頁面上，選擇控制台代理程式的操作選單，然後選擇*編輯代理*。
++
+控制台代理程式必須處於活動狀態才能對其進行編輯。
+
+. 展開*代理 URI* 欄以查看代理 URI。
+. 新增和刪除 URI，然後選擇*應用*。
+

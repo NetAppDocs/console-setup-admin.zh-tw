@@ -4,7 +4,7 @@ permalink: reference-agent-maint-console-proxy.html
 keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
 summary: 您可以使用控制台代理維護控制台來設定控制台代理以使用透明代理伺服器。 
 ---
-= 透明代理命令
+= 用於 NetApp Console 中 Console agent 的透明代理指令
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

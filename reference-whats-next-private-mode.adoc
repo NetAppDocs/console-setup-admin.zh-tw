@@ -4,7 +4,7 @@ permalink: reference-whats-next-private-mode.html
 keywords: private mode, supported features for private mode 
 summary: 在你以私有模式啟動並運行 NetApp Console 之後，你可以開始使用支援私有模式的服務。 
 ---
-= 接下來您可以做什麼（私密模式）
+= NetApp Console 私密模式的後續步驟
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

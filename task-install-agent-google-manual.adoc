@@ -4,7 +4,7 @@ permalink: task-install-agent-google-manual.html
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, manual install, create connector, gcp installation, gcp connector 
 summary: 要在您自己的 Linux 主機上手動安裝控制台代理，您需要查看主機要求、設定網路、準備 Google Cloud 權限、啟用 Google Cloud API、安裝控制台，然後提供您準備好的權限。 
 ---
-= 在 Google Cloud 中手動安裝控制台代理
+= 在 Google Cloud 中手動部署 Console 代理程式
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,12 @@ summary: 要在您自己的 Linux 主機上手動安裝控制台代理，您需�
 
 
 [role="lead"]
-要在您自己的 Linux 主機上手動安裝控制台代理，您需要查看主機要求、設定網路、準備 Google Cloud 權限、啟用 Google Cloud API、安裝控制台，然後提供您準備好的權限。
+若要在您自己的 Linux 主機上手動部署 Console 代理程式，您需要檢閱主機需求、設定網路、準備 Google Cloud 權限、啟用 Google Cloud API、安裝 Console，然後提供您準備好的權限。
+
+在 Google Cloud 中部署代理程式會在您選擇的 VPC 中啟動一個執行 Linux 和 NetApp Console 代理軟體的 VM 執行個體。
 
 .開始之前
-* 你應該有一個link:concept-agents.html["了解控制台代理"]。
+* link:concept-agents.html["了解控制台代理"]。
 * 你應該回顧一下link:reference-limitations.html["控制台代理限制"]。
 
 

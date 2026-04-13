@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-install-agent-on-prem.html 
-keywords: install connector, on prem connector installation, on prem connector, install connector on prem, manual install 
-summary: 在本地安裝控制台代理，然後登入並設定它以與您的控制台組織協同工作。 
+keywords: deploy agent, on prem agent deployment, on prem agent, deploy connector on prem, manual deployment 
+summary: 在內部部署 Console 代理程式，然後登入並進行設定，使其與您的 Console 組織協同工作。 
 ---
-= 在本機手動安裝控制台代理
+= 手動在內部部署 Console 代理程式
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,10 @@ summary: 在本地安裝控制台代理，然後登入並設定它以與您的�
 
 
 [role="lead"]
-在本地安裝控制台代理，然後登入並設定它以與您的控制台組織協同工作。
+在內部部署 Console 代理程式，然後登入並進行設定，使其與您的 Console 組織協同工作。
 
 
-NOTE: 如果您是 VMWare 用戶，您可以使用 OVA 在您的 VCenter 中安裝控制台代理程式。link:task-install-agent-on-prem-ova.html["了解有關在 VCenter 中安裝代理程式的更多資訊。"]
+NOTE: 如果您是 VMware 使用者，您可以使用 OVA 在 vCenter 中部署 Console 代理程式。link:task-install-agent-on-prem-ova.html["深入瞭解如何在 vCenter 中部署代理程式。"]
 
 在安裝之前，您需要確保您的主機（VM 或 Linux 主機）符合要求，並確保控制台代理可以存取網際網路以及目標網路。如果您打算使用NetApp資料服務或Cloud Volumes ONTAP），則需要在雲端提供者中建立憑證以新增至控制台，以便控制台代理可以代表您在雲端執行操作。
 

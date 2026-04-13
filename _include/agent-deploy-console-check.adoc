@@ -10,7 +10,9 @@
 +
 []
 ====
-如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端點"]用於代理升級，驗證失敗並出現錯誤。為了避免這種情況，請取消選取核取方塊以跳過驗證檢查。
+** 如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端點"]用於代理升級，驗證失敗並出現錯誤。為了避免這種情況，請取消選取核取方塊以跳過驗證檢查。
+** 在安裝期間、NetApp 會檢查代理主機至少有 80% 的可用磁碟空間總計、其中包括 48 GB 在 `/opt`和 32 GB 在 `/var`（總計 80 GB）。安裝後、需要至少 20% 的磁碟總計保持可用、其中包括 12 GB 在 `/opt`和 8 GB 在 `/var`（總計 20 GB）。
+
 
 ====
 

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-upgrade-agent.html 
-keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade 
-summary: 當 Console 代理程式具備出站連線能力時，它會自動升級。如果您的 Console 代理程式不具備出站連線能力，您可以手動升級它（例如使用私有模式）。 
+keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade, vcenter upgrade, OVA upgrade, ISO upgrade, vsphere upgrade 
+summary: 當 Console 代理程式具備出站連線能力時，它會自動升級。如果您的 Console 代理程式不具備出站連線能力，您可以手動升級。如果您的代理程式部署在 vCenter 中，您可以使用 ISO 進行升級。 
 ---
-= 管理控制台代理升級
+= 升級控制台代理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 當 Console 代理程式具備出站連線能力時，它會自動升�
 
 
 [role="lead"]
-當 Console 代理程式具備出站連線能力時，它會自動升級。如果您的 Console 代理程式不具備出站連線能力，您可以手動升級它（例如使用私有模式）。
+當 Console 代理程式具備出站連線能力時，它會自動升級。如果您的 Console 代理程式不具備出站連線能力，您可以手動升級。如果您的代理程式是在 vCenter 使用 OVA 部署的，您可以透過將 ISO 掛載到 VM 來將其升級到新版本。
 
 
 
@@ -44,4 +44,47 @@ sudo /path/NetApp-Console-Agent-Offline-<version>
 其中 <version> 是您下載的代理程式的版本。
 
 . 升級完成後，您可以前往*管理>支援>代理*來驗證代理程式的版本。
+
+
+
+
+== 使用 ISO 升級 vCenter 部署的 Console 代理程式
+
+如果您的 Console 代理程式是使用 OVA 在 vCenter 中部署的，您可以透過將 ISO 掛載到 VM 並從 VM 維護主控台執行升級來將其升級到新版本。
+
+開始之前，請先為 VM 建立快照，以防需要復原。
+
+.步驟
+. 從  https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp支援站點"^] 下載 Console 代理程式 ISO。
+. 將 ISO 上傳至可從 vCenter 存取的資料存放區。
+. 在 vSphere 用戶端中、登入 vCenter 並選擇託管 Console 代理程式的 VM 執行個體。
+. 將 ISO 掛載到 VM：
++
+.. 在 VM 上按一下滑鼠右鍵，然後選取 *Edit Settings* 。
+.. 選擇 CD/DVD 光碟機，然後選擇 *Datastore ISO File*。
+.. 瀏覽並選擇 Console 代理程式 ISO。
+.. 請確保已啟用 *Connect*。
+.. 選取 *OK* 。
+
+
+. 選取 VM 後，選取 *Launch Web Console* 。
+. 使用使用者名稱 `maint`和部署 OVA 時指定的維護密碼登入維護主控台。
+. 輸入  `1` 以開啟 *System Configuration* 選單。
+. 輸入 `3`以選擇 *Upgrade* 並按照螢幕提示操作。
++
+升級過程中，系統會安裝更新後的作業系統、Docker 執行時間和 Console 代理服務。如果核心已更新，虛擬機器將自動重新啟動。
+
+. 升級完成後、請確認 Console 代理程式是否正常運作：
++
+.. 在 vSphere 用戶端中、確認 VM 已開啟電源且可存取 Web 主控台。
+.. 在 NetApp Console 中，前往 *管理 ＞ 支援 ＞ 代理程式*，並確認代理程式版本已顯示為新版本。
+
+
+. 從虛擬機器卸載 ISO：
++
+.. 在 vSphere 客戶端中、以滑鼠右鍵按一下 VM 並選取 *Edit Settings* 。
+.. 選擇 CD/DVD 光碟機並選擇 *Client Device* 或中斷資料存放區 ISO 的連線。
+.. 選取 *OK* 。
+
+
 

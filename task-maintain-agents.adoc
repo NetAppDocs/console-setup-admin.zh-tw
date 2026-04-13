@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-maintain-agents.html 
-keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, agent ip address, agent uri, connector, connector health 
+keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health 
 summary: 維護代理主機上的作業系統是您的責任。例如，您應該按照公司的作業系統分發標準程序，對控制台代理主機上的作業系統套用安全性更新。 
 ---
-= 維護控制台代理虛擬機器和作業系統
+= 維護手動安裝的 Console 代理程式的 VM
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,31 @@ summary: 維護代理主機上的作業系統是您的責任。例如，您應�
 
 
 [role="lead"]
-維護控制台代理主機上的作業系統是您（客戶）的責任。例如，您（客戶）應依照貴公司的作業系統分發標準程序對代理主機上的作業系統套用安全性更新。
+手動安裝 Console 代理程式時，維護代理主機上的作業系統是您（客戶）的責任。例如，您（客戶）應依照公司標準的作業系統分發流程，為代理主機上的作業系統套用安全性更新。
 
 
 
-== 作業系統補丁和代理
+== 將作業系統更新套用至代理程式主機
 
 無需停止代理主機服務即可套用作業系統安全性修補程式。
 
+為了保持與支援組態的相容性、您應該防止 Docker 或 Podman 在例行作業系統修補期間升級。您可以在更新期間暫時排除 Docker 或 Podman 、或永久設定套件管理程式以跳過 Docker 或 Podman 更新、來執行此作業。
+
+以下範例顯示如何在不同的 Linux 發行版中排除 Docker 或 Podman 更新。請查閱您的 Linux 發行版文件，以取得有關如何排除軟體套件更新的最新說明。
+
+.Podman 範例
+[source, bash]
+----
+sudo yum update --exclude=podman
+sudo yum upgrade
+----
+.Docker 範例
+[source, bash]
+----
+sudo apt-mark hold docker-ce docker-ce-cli containerd.io
+sudo apt update
+sudo apt upgrade
+----
 
 
 == VM 或實例類型
@@ -47,7 +64,7 @@ link:reference-agent-default-config.html["了解代理的預設配置"] 。
 
 NOTE: 如果您對修改代理 VM 有任何疑問，請聯絡NetApp支援。
 
-link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#notification-center["了解更多。"^]
+link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#notification-center["了解更多。"^]
 
 [cols="47,47"]
 |===
@@ -94,57 +111,4 @@ Google雲:: 在 Google Cloud 中建立代理程式時，您無法指定身份驗
 https://cloud.google.com/compute/docs/instances/connecting-to-instance["Google Cloud Docs：連接 Linux 虛擬機"^]
 
 --
-
-
-
-
-== 更改代理的 IP 位址
-
-如果需要，您可以變更雲端提供者指派的代理執行個體的內部和公用 IP 位址。
-
-.步驟
-. 依照雲端提供者的說明變更代理執行個體的本機 IP 位址或公用 IP 位址（或兩者）。
-. 重新啟動代理實例以向控制台註冊新的公用 IP 位址。
-. 如果您變更了私有 IP 位址，請更新Cloud Volumes ONTAP設定檔的備份位置，以便將備份傳送至代理程式上的新私人 IP 位址。
-+
-更新每個Cloud Volumes ONTAP系統的備份位置。
-
-+
-.. 從Cloud Volumes ONTAP CLI，將權限等級設定為進階：
-
-
-
-
-[listing]
-----
-set -privilege advanced
-----
-. 執行以下命令以顯示目前備份目標：
-
-
-[listing]
-----
-system configuration backup settings show
-----
-. 執行以下命令來更新備份目標的 IP 位址：
-
-
-[listing]
-----
-system configuration backup settings modify -destination <target-location>
-----
-
-
-== 編輯代理的 URI
-
-您可以新增和刪除代理程式的統一資源標識符 (URI)。
-
-.步驟
-. 選擇“*管理 > 代理*”。
-. 在*概覽*頁面上，選擇控制台代理程式的操作選單，然後選擇*編輯代理*。
-+
-控制台代理程式必須處於活動狀態才能對其進行編輯。
-
-. 展開*代理 URI* 欄以查看代理 URI。
-. 新增和刪除 URI，然後選擇*應用*。
 

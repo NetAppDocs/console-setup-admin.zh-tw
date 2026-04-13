@@ -21,6 +21,8 @@ summary: 您只能使用已驗證的網域進行聯合。如果您想與不同�
 
 驗證您的網域名稱涉及向您的網域的 DNS 設定新增 TXT 記錄。此記錄用於證明您擁有該網域並允許NetApp Console信任該網域進行聯合。您可能需要與您的 IT 或網路管理員協調來完成此步驟。
 
+例如，如果使用 Microsoft Entra ID，您可以按照 Microsoft 文件link:https://learn.microsoft.com/en-us/entra/fundamentals/add-custom-domain["使用 Microsoft Entra ID 新增網域"]中的步驟進行操作。
+
 .步驟
 . 選擇*管理>身分和存取*。
 . 選擇“*Federation*”以查看“*Federations*”頁面。

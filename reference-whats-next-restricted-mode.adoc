@@ -4,7 +4,7 @@ permalink: reference-whats-next-restricted-mode.html
 keywords: restricted mode, what you can do 
 summary: 在限制模式下啟動並執行NetApp Console後，您可以開始使用限制模式支援的服務。 
 ---
-= 接下來可以做什麼（受限模式）
+= NetApp Console 受限模式的後續步驟
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

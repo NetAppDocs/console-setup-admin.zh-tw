@@ -4,7 +4,7 @@ permalink: reference-iam-analyst-roles.html
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
 summary: 您可以將營運支援分析師角色指派給用戶，以便他們能夠存取警報和監控功能。具有此角色的使用者還可以開啟支援案例。 
 ---
-= NetApp Console的營運支援分析師存取角色
+= 在 NetApp Console 中的營運支援分析師存取角色
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

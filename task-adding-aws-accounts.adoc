@@ -250,7 +250,7 @@ image:screenshot-settings-icon-organization.png["顯示控制台右上角的「�
 
 
 .開始之前
-您需要先建立控制台代理，然後才能設定訂閱。link:concept-agents.html#agent-installation["了解如何建立控制台代理"] 。
+您必須先建立 NetApp Console 代理程式才能設定訂閱。link:concept-agent-install-options.html["了解如何建立控制台代理"]。
 
 .步驟
 . 選擇“*管理 > 憑證*”。

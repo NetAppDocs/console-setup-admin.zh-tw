@@ -30,7 +30,7 @@ sidebar:
         url: "/concept-modes.html"
       - title: NetApp支援帳戶
         url: "/task-adding-nss-accounts.html"
-      - title: 了解 Console 代理
+      - title: 了解控制台代理
         url: "/concept-agents.html"
       - title: 身分和存取管理
         url: "/concept-identity-and-access-management.html"
@@ -70,7 +70,7 @@ sidebar:
     entries:
     - title: 登入NetApp Console
       url: "/task-logging-in.html"
-    - title: 使用多個控制台代理
+    - title: 查看與不同 Console 代理程式相關聯的系統
       url: "/task-manage-multiple-agents.html"
     - title: 查看NetApp Console主頁上的指標
       url: "/task-dashboard.html"
@@ -90,48 +90,56 @@ sidebar:
         url: "/concept-agents.html"
       - title: 部署控制台代理
         entries:
+        - title: 選擇 Console 代理程式部署方法
+          url: "/concept-agent-install-options.html"
         - title: AWS
           entries:
-          - title: 控制台代理安裝選項
-            url: "/concept-install-options-aws.html"
-          - title: 從NetApp Console建立控制台代理
+          - title: AWS 的 Console 代理程式安裝選項
+            url: "/concept-install-aws.html"
+          - title: 透過NetApp Console在 AWS 中建立控制台代理
             url: "/task-install-agent-aws-console.html"
-          - title: 從 AWS Marketplace 建立控制台代理
+          - title: 從 AWS Marketplace 在 AWS 中建立 Console 代理程式
             url: "/task-install-agent-aws-marketplace.html"
-          - title: 手動安裝控制台代理
+          - title: 在 AWS 中手動安裝 Console 代理程式
             url: "/task-install-agent-aws-manual.html"
         - title: Azure
           entries:
-          - title: 控制台代理安裝選項
-            url: "/concept-install-options-azure.html"
-          - title: 從NetApp Console建立控制台代理
+          - title: Azure 的 Console 代理程式安裝選項
+            url: "/concept-install-azure.html"
+          - title: 從NetApp Console在 Azure 中建立控制台代理
             url: "/task-install-agent-azure-console.html"
-          - title: 從 Azure 市集建立控制台代理
+          - title: 從 Azure 市場在 Azure 中建立 Console 代理程式
             url: "/task-install-agent-azure-marketplace.html"
-          - title: 手動安裝控制台代理
+          - title: 在 Azure 中手動安裝 Console 代理程式
             url: "/task-install-agent-azure-manual.html"
         - title: Google雲
           entries:
-          - title: 控制台代理安裝選項
-            url: "/concept-install-options-google.html"
-          - title: 從NetApp Console建立控制台代理
+          - title: Google Cloud 的 Console 代理程式安裝選項
+            url: "/concept-install-google.html"
+          - title: 透過NetApp Console在 Google Cloud 中建立控制台代理
             url: "/task-install-agent-google-console-gcloud.html"
-          - title: 從 Google Cloud 建立控制台代理
+          - title: 從 Google Cloud 建立 Google Cloud 的 Console 代理程式
             url: "/task-install-agent-google-gcloud.html"
-          - title: 手動安裝控制台代理
+          - title: 在 Google Cloud 手動安裝 Console 代理程式
             url: "/task-install-agent-google-manual.html"
         - title: 在本地安裝代理
           entries:
-          - title: 手動在本機安裝代理
+          - title: 在本機手動安裝控制台代理
             url: "/task-install-agent-on-prem.html"
-          - title: 在 VCenter 中安裝本機代理
+          - title: 在 vCenter 中本機安裝 Console 代理程式
             url: "/task-install-agent-on-prem-ova.html"
           - title: 本機控制台代理的連接埠
             url: "/reference-ports-on-prem.html"
       - title: 維護控制台代理
         entries:
-        - title: 維護 VCenter 安裝的代理
-          url: "/task-agent-vm-config.html"
+        - title: 維護手動安裝的 Console 代理程式
+          entries:
+          - title: 維護 VCenter 安裝的代理
+            url: "/task-agent-vm-config.html"
+          - title: 維護手動安裝的代理程式
+            url: "/task-maintain-agents.html"
+        - title: 更新代理程式定址和 URI
+          url: "/task-update-agent-addressing.html"
         - title: 安裝 CA 簽章憑證以存取 Web 控制台
           url: "/task-installing-https-cert.html"
         - title: 配置控制台代理以使用代理伺服器
@@ -168,6 +176,8 @@ sidebar:
         url: "/concept-identity-and-access-management.html"
       - title: 開始使用身分和存取權限
         url: "/task-iam-get-started.html"
+      - title: 關於身分識別與存取管理的常見問題
+        url: "/faq-iam-netapp-console.html"
       - title: 設定您的控制台組織
         entries:
         - title: 建立資料夾和項目

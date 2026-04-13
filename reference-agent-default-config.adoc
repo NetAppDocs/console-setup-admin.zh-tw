@@ -4,7 +4,7 @@ permalink: reference-agent-default-config.html
 keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
 summary: 了解 AWS、Azure 和 Google Cloud 上標準部署（可存取網際網路）的控制台代理預設配置，以及本機環境受限部署（無法存取網際網路）的控制台代理程式預設配置。 
 ---
-= 控制台代理的預設配置
+= NetApp Console 中的 Console agent 預設組態
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -97,10 +97,10 @@ summary: 了解 AWS、Azure 和 Google Cloud 上標準部署（可存取網際�
 
 === 控制台代理服務
 
-* 控制台代理服務名為 occm。
-* occm 服務依賴 MySQL 服務。
+* Console 代理服務名為 `occm`。
+* 該  `occm` 服務依賴 MySQL 服務。
 +
-如果 MySQL 服務關閉，那麼 occm 服務也會關閉。
+如果 MySQL 服務當機，那麼  `occm` 服務也會當機。
 
 
 

@@ -4,7 +4,7 @@ permalink: reference-networking-saas-console-previous.html
 keywords: networking, urls, endpoints, web browser, console, network, set up networking, netapp console 
 summary: 您需要確保控制台和您安裝的任何代理程式都具有正確的網路存取權限才能正常運作。 
 ---
-= 3.9.55 及以下版本需要網路訪問
+= NetApp Console 3.9.55 及更早版本的網路存取
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

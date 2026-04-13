@@ -122,17 +122,17 @@ podman ps -a
 
 
 
-== 驗證 Console 代理程式的網路和連接埠存取權限
+== 驗證 Console 代理程式是否符合要求
 
-確保控制台代理程式具有所需的網路存取權限。link:reference-networking-saas-console.html["了解有關所需網路存取點的更多資訊。"]
+Console 代理程式需要存取特定的網路端點、需要開啟多個連接埠，且必須符合硬體需求。您可以從 Console 或使用代理程式維護主控台來驗證 Console 代理程式是否符合這些需求。
 
+link:reference-networking-saas-console.html["了解有關所需網路存取點的更多資訊。"] 連結：
 
+在安裝期間、NetApp 會檢查代理主機至少有 80% 的可用磁碟空間總計、其中包括 48 GB 在 `/opt`和 32 GB 在 `/var`（總計 80 GB）。安裝後、需要至少 20% 的磁碟總計保持可用、其中包括 12 GB 在 `/opt`和 8 GB 在 `/var`（總計 20 GB）。
 
-=== 對控制台代理運行配置檢查
+link:reference-networking-saas-console.html["了解有關所需網路存取點的更多資訊。"] 連結：
 
-從 Console 或 Agent 維護控制台對 Console Agent 執行設定檢查，以確保它們可以存取所需的端點並且所需的連接埠已開啟。
-
-您也可以使用代理維護控制台執行設定檢查。link:reference-agent-maint-console-config-checker.html["了解更多關於使用 config-checker validate 命令的資訊。"]
+您也可以使用代理程式維護主控台執行驗證檢查。link:reference-agent-maint-console-config-checker.html["了解更多關於使用 config-checker validate 命令的資訊。"]
 
 
 NOTE: 您只能驗證狀態為「已連線」的代理程式。

@@ -559,9 +559,10 @@ API 端點:: 向 Console 代理虛擬機器發出 API 呼叫。
 
 私有模式可透過從 NetApp 支援網站下載「離線」安裝程式來使用。
 
-+ link:task-quick-start-private-mode.html["了解如何開始使用私有模式"].
+link:task-quick-start-private-mode.html["了解如何開始使用私有模式"]。
 
-+ 注意：如果您想在 https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^]或 https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^]中使用 NetApp Console，則應按照單獨的說明在這些環境中開始使用。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html["了解如何在 AWS Secret Cloud 或 Top Secret Cloud 中開始使用 Cloud Volumes ONTAP"^]
+
+NOTE: 如果您想在 https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^]或 https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^]中使用 NetApp Console，則應遵循個別說明以在這些環境中開始使用。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html["了解如何在 AWS Secret Cloud 或 Top Secret Cloud 中開始使用 Cloud Volumes ONTAP"^]
 
 
 

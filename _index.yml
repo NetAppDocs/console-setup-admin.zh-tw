@@ -37,8 +37,8 @@ indexpage:
       url: task-iam-manage-members-permissions.html
   - title: 部署控制台代理
     links:
-    - title: 了解控制台代理
-      url: concept-agents.html
+    - title: 選擇 Console 代理程式部署方法
+      url: "/concept-agent-install-options.html"
     - title: 在本地部署代理
       url: "/task-install-agent-on-prem.html"
     - title: 在 AWS 中部署代理
@@ -48,7 +48,7 @@ indexpage:
     - title: 在 Google Cloud 中部署代理
       url: "/task-install-agent-google-console-gcloud.html"
     - title: 維護控制台代理
-      url: task-maintain-agents.html
+      url: "/task-maintain-agents.html"
   - title: 安全與合規
     links:
     - title: 與您的身分提供者聯合

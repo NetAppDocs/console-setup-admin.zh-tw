@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases, console' 
-summary: 了解NetApp Console管理功能的新增功能：IAM、控制台代理、雲端提供者憑證等。 
+summary: 瞭解 NetApp Console 管理的新功能。 
 ---
 = 什麼是新的
 :hardbreaks:
@@ -18,6 +18,24 @@ summary: 了解NetApp Console管理功能的新增功能：IAM、控制台代理
 
 
 
+== 2026 年 4 月 13 日
+
+
+
+=== Console 代理 4.6.0
+
+4.6.0 版本同時支援標準模式和受限模式。
+
+此版本的 Console 代理程式包含安全性改進和錯誤修正，以及以下新功能。
+
+.支援所需磁碟空間的組態檢查
+您可以透過組態檢查來驗證 Console 代理程式所需的磁碟空間是否可用。您可以從 Console 或 Agent 維護主控台執行組態檢查。link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["深入瞭解如何在 Console 代理程式上執行組態檢查"^]
+
+.使用 ISO 升級 vCenter 部署的 Console 代理程式
+如果您在 vCenter 中使用 OVA 部署了 Console 代理程式，現在可以透過將 ISO 掛載到 VM 並從 VM 維護主控台執行升級來將其升級到新版本。link:https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-agent.html["了解如何升級 vCenter 部署的 Console 代理程式"^]
+
+
+
 == 2026 年 3 月 10 日
 
 
@@ -29,13 +47,13 @@ summary: 了解NetApp Console管理功能的新增功能：IAM、控制台代理
 此版本的 Console 代理程式包含安全性改進和錯誤修正，以及以下新功能。
 
 .支援對所需連接埠進行組態檢查
-您可以使用設定檢查來驗證 Console 代理程式所需的連接埠是否已開啟。您可以從 Console 或 Agent 維護控制台執行設定檢查。link:https://docs.netapp.com/console-setup-admin/task-troubleshoot-agent.html["了解更多關於在 Console 代理上執行組態檢查的資訊。"]
+您可以使用設定檢查來驗證 Console 代理程式所需的連接埠是否已開啟。您可以從 Console 或 Agent 維護控制台執行設定檢查。link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["了解更多關於在 Console 代理上執行組態檢查的資訊。"]
 
 
 
 === 主控台管理
 
-您可以將 Keystone 角色指派給合作夥伴使用者，以允許這些使用者管理合作夥伴組織中的 Keystone 資源。link:https://docs.netapp.com/console-setup-admin/console-administration/task-partnerships-assign-users.html["深入瞭解如何為合作夥伴使用者指派 Keystone 角色。"]
+您可以將 Keystone 角色指派給合作夥伴使用者，以允許這些使用者管理合作夥伴組織中的 Keystone 資源。link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html["深入瞭解如何為合作夥伴使用者指派 Keystone 角色。"]
 
 
 

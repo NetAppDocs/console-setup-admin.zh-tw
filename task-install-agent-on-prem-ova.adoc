@@ -4,7 +4,7 @@ permalink: task-install-agent-on-prem-ova.html
 keywords: install agent, on prem agent installation, on prem connector, vmware, OVA, manual install 
 summary: 如果您是 VMWare 用戶，您可以使用 OVA 在您的 VCenter 中安裝控制台代理程式。可透過NetApp Console取得 OVA 下載或 URL。 
 ---
-= 使用 VCenter 在本機安裝控制台代理
+= 使用 vCenter 在本機部署 Console 代理程式
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,10 @@ summary: 如果您是 VMWare 用戶，您可以使用 OVA 在您的 VCenter 中�
 
 
 [role="lead"]
-如果您是 VMWare 用戶，您可以使用 OVA 在您的 VCenter 中安裝控制台代理程式。可透過NetApp Console取得 OVA 下載或 URL。
+如果您是 VMware 用戶，可以使用 OVA 檔案在 vCenter 中部署 Console 代理程式。OVA 下載連結或 URL 可透過 NetApp Console 取得。
 
 
-NOTE: 當您使用 VCenter 工具安裝控制台代理程式時，您可以使用 VM Web 控制台執行維護任務。link:task-agent-vm-config.html["了解有關代理的 VM 控制台的更多資訊。"]
+NOTE: 當您使用 VCenter 工具部署 Console 代理程式時，可以使用 VM Web 主控台執行維護工作。link:task-agent-vm-config.html["了解有關代理的 VM 控制台的更多資訊。"]
 
 
 
@@ -450,7 +450,7 @@ image:screenshot_azure_client_secret.gif["Azure 入口網站的螢幕截圖，�
 
 == 在 VCenter 環境中安裝控制台代理
 
-NetApp支援在您的 VCenter 環境中安裝控制台代理程式。 OVA 檔案包含一個預先設定的 VM 映像，您可以在 VMware 環境中部署該映像。可直接從NetApp Console下載檔案或部署 URL。它包括控制台代理軟體和自簽名證書。
+NetApp 支援在 VCenter 環境中安裝 Console 代理程式。OVA 檔案包含一個預先設定的 VM 映像，您可以將其部署到 VMware 環境中。您可以直接從 NetApp Console 下載檔案或透過 URL 進行部署。該檔案包含 Console 代理程式軟體和自簽名憑證。
 
 
 
@@ -466,12 +466,12 @@ NetApp支援在您的 VCenter 環境中安裝控制台代理程式。 OVA 檔案
 
 
 
-=== 在您的 VCenter 中部署代理
+=== 在 VCenter 環境中部署代理程式
 
 登入您的 VCenter 環境以部署代理程式。
 
 .步驟
-. 如果您的環境需要，請將自簽名憑證上傳到您的受信任憑證。安裝後，您可以替換此證書。link:task-installing-https-cert.html["了解如何替換自簽名憑證。"]
+. 如果您的環境需要，請將自簽名憑證上傳到受信任憑證清單中。安裝完成後，您需要替換此憑證。
 . 從內容庫或本機系統部署 OVA。
 +
 |===

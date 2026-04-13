@@ -4,7 +4,7 @@ permalink: task-install-agent-azure-console.html
 keywords: install connector, azure connector installation, azure connector, install connector in azure, bluexp, create connector 
 summary: 若要從NetApp Console在 Azure 中建立控制台代理，您需要設定網路、準備 Azure 權限，然後建立控制台代理程式。 
 ---
-= 從NetApp Console在 Azure 中建立控制台代理
+= 從 NetApp Console 在 Azure 部署 Console agent
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,12 @@ summary: 若要從NetApp Console在 Azure 中建立控制台代理，您需要�
 
 
 [role="lead"]
-若要從NetApp Console在 Azure 中建立控制台代理，您需要設定網路、準備 Azure 權限，然後建立控制台代理程式。
+若要從 NetApp Console 在 Azure 中部署 Console 代理程式，您需要設定網路、準備 Azure 權限，然後部署 Console 代理程式。
+
+在 Azure 中部署代理程式會在您選擇的 VNet 中啟動執行 Linux 和 Console 代理程式軟體的 VM。
+
+
+NOTE: 在與 Cloud Volumes ONTAP 系統相同的 Azure 區域中部署 Console 代理程式，或在 https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure 區域對"^]中部署。這樣可以確保 Cloud Volumes ONTAP 與其相關儲存帳戶之間使用 Azure Private Link 連線。
 
 .開始之前
 * 你應該有一個link:concept-agents.html["了解控制台代理"]。
@@ -501,7 +506,9 @@ link:reference-ports-azure.html["查看 Azure 的安全性群組規則"] 。
 +
 []
 ====
-如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端點"]用於代理升級，驗證失敗並出現錯誤。為了避免這種情況，請取消選取核取方塊以跳過驗證檢查。
+** 如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端點"]用於代理升級，驗證失敗並出現錯誤。為了避免這種情況，請取消選取核取方塊以跳過驗證檢查。
+** 在安裝期間、NetApp 會檢查代理主機至少有 80% 的可用磁碟空間總計、其中包括 48 GB 在 `/opt`和 32 GB 在 `/var`（總計 80 GB）。安裝後、需要至少 20% 的磁碟總計保持可用、其中包括 12 GB 在 `/opt`和 8 GB 在 `/var`（總計 20 GB）。
+
 
 ====
 . 選擇“*新增*”。

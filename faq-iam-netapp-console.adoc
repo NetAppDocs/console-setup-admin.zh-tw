@@ -1,0 +1,105 @@
+---
+sidebar: sidebar 
+permalink: faq-iam-netapp-console.html 
+keywords: faq, frequently asked questions, frequently asked questions about netapp console iam, identity and access management, role-based access control, rbac, iam, roles, permissions, organization, folders, projects, members, agents, service accounts, federated groups 
+summary: 關於 NetApp Console 中的身分和存取管理以及基於角色的存取控制的常見問題。 
+---
+= NetApp Console 身分與存取管理常見問題
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+本常見問題涵蓋了 NetApp Console 中關於身分和存取管理（IAM）的常見問題。它重點介紹基於角色的存取控制概念、層級結構行為以及成員管理，這些內容在規劃和實施組織存取時非常有用。
+
+
+
+== 入門
+
+.在建立新的 NetApp Console 組織後，設定 IAM 的第一步是什麼？
+註冊後，Console 會建立一個包含一名 Organization admin 和一個預設專案的組織。接下來，建議的設定步驟如下：
+
+. 編輯預設專案或建立其他專案和資料夾，以符合您的業務層級結構。
+. 將成員新增至您的組織。
+. 新增或探索資源。
+. 視需要將資源與其他專案建立關聯。
+
+
+
+
+== 資源階層：組織、資料夾和專案
+
+.NetApp Console IAM 中的資料夾和專案有什麼不同？
+資料夾用於對相關專案進行分組，以建立組織結構和角色分配。專案包含資源，成員可以透過專案存取這些資源。資源不能直接關聯到資料夾，必須關聯到專案。在資料夾層級指派角色，即可使該成員繼承對所有子專案和資料夾的存取權限。
+
+.我的組織中的所有成員都可以看到資料夾嗎？
+否。資料夾僅對擁有 IAM 權限的成員可見：組織管理員、資料夾或專案管理員，或超級管理員。一般成員直接存取專案，看不到資料夾。
+
+.我可以將資源直接與資料夾建立關聯嗎？
+不。資源必須與專案關聯，而不是資料夾。但是，組織管理員可以將資源與資料夾關聯，以便資料夾或專案管理員隨後可以將資源連結到該資料夾內的相應專案。
+
+.在我的組織階層中，資料夾和專案可以巢狀到多深？
+您可以在組織的資源結構中建立最多七層的資料夾和專案。
+
+.在 NetApp Console 中，哪些類型的資源可以與專案關聯？
+可與專案建立關聯的資源包括：
+
+* 儲存系統
+* Keystone訂閱
+* 部分備份與還原工作負載
+* 控制台代理
+
+
+
+
+== 角色和權限
+
+.組織管理員與資料夾或專案管理員有什麼不同？
+組織管理員擁有對整個組織內所有專案和資料夾的無限制存取權限，並且是唯一可以建立 Console 代理的角色。資料夾或專案管理員只能管理分配給他們的特定資料夾和專案，不能建立 Console 代理。
+
+.誰可以在 NetApp Console 中建立 Console agent？
+只有具有組織管理員角色的使用者才能建立 NetApp Console 代理。資料夾或專案管理員無法建立 NetApp Console 代理。
+
+.如果使用者只需要監控儲存健全狀況和管理支援案例，我應該分配給他什麼角色？
+指派 *Operation support analyst* 角色，該角色可存取警示和監控工具，並能夠輸入和管理支援案例。
+
+.如果成員的存取權限是從資料夾繼承的，我能否在專案層級變更該成員的角色？
+不可以。如果成員權限是從較高層級繼承而來，則無法在較低層級變更該成員的存取權限。若要修改存取權限，您必須在最初指派該權限的較高層級（資料夾或組織）變更成員的權限。
+
+
+
+== 管理成員和存取
+
+.在您可以將使用者新增至您的 NetApp Console 組織之前，必須先完成哪些步驟？
+在您將使用者新增至您的組織、資料夾或專案之前，該使用者必須已經註冊 NetApp Console。此要求同樣適用於屬於聯邦群組的使用者。
+
+.當我將使用者群組新增至 Console 時，聯合使用者是否會自動獲得資源存取權？
+不。即使聯合群組被指派了角色，個別使用者也必須滿足兩個條件才能存取資源：
+
+. 使用者必須已經註冊 NetApp Console。
+. 必須在 Console 中明確為使用者指派角色。
+
+
+NetApp 建議為這些使用者指派最低存取角色，例如 Organization viewer。
+
+
+
+== 控制台代理
+
+.Console 代理建立後會發生什麼？它能否在其他專案中使用？
+Console 代理程式最初與其建立的專案關聯。建立後，管理員可以從「代理程式」頁面將代理程式新增到其他專案或將其關聯到某個資料夾。
+
+
+
+== 相關資訊
+
+* link:concept-identity-and-access-management.html["了解NetApp Console身分和存取管理"]
+* link:reference-iam-predefined-roles.html["了解NetApp Console存取角色"]
+* link:task-iam-get-started.html["開始在NetApp Console中使用身分和存取權限"]
+* link:task-iam-manage-folders-projects.html["將資料夾和專案新增至NetApp Console組織"]
+* link:task-iam-manage-members-permissions.html["將使用者新增至NetApp Console組織"]
+

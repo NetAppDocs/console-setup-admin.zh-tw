@@ -11,10 +11,10 @@
 此版本的 Console 代理程式包含安全性改進和錯誤修正，以及以下新功能。
 
 .支援對所需連接埠進行組態檢查
-您可以使用設定檢查來驗證 Console 代理程式所需的連接埠是否已開啟。您可以從 Console 或 Agent 維護控制台執行設定檢查。link:https://docs.netapp.com/console-setup-admin/task-troubleshoot-agent.html["了解更多關於在 Console 代理上執行組態檢查的資訊。"]
+您可以使用設定檢查來驗證 Console 代理程式所需的連接埠是否已開啟。您可以從 Console 或 Agent 維護控制台執行設定檢查。link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["了解更多關於在 Console 代理上執行組態檢查的資訊。"]
 
 
 
 === 主控台管理
 
-您可以將 Keystone 角色指派給合作夥伴使用者，以允許這些使用者管理合作夥伴組織中的 Keystone 資源。link:https://docs.netapp.com/console-setup-admin/console-administration/task-partnerships-assign-users.html["深入瞭解如何為合作夥伴使用者指派 Keystone 角色。"]
+您可以將 Keystone 角色指派給合作夥伴使用者，以允許這些使用者管理合作夥伴組織中的 Keystone 資源。link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html["深入瞭解如何為合作夥伴使用者指派 Keystone 角色。"]
