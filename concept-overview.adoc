@@ -144,7 +144,22 @@ NetApp Replication:: 在儲存系統之間複製資料以支援備份和災難�
 追蹤所有系統中的合約狀態，以改善成本管理、法規遵循和採購決策。
 
 自動化中心:: 使用腳本解決方案自動設定和連接 NetApp 產品和服務，以實現更流暢、更一致的操作。
-NetApp Cloud Tiering:: 將您的內部部署 ONTAP 儲存設備擴充至雲端，以實現成本最佳化和資料生命週期管理。
+NetApp Cloud Tiering::
+
+
+[NOTE]
+====
+NetApp Cloud Tiering 自 2026 年 4 月 26 日起不再提供購買或授權續約。
+
+現有客戶可以繼續使用 NetApp Cloud Tiering 並獲得支援,直到其訂閱或授權合約到期。訂閱到期後,客戶將無法再存取 NetApp Cloud Tiering 功能或獲得支援。
+
+NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉換為 ONTAP FabricPool 授權，以提供 ONTAP 中的資料分層功能。如需更多有關如何使用 FabricPool 在 ONTAP 中設定資料分層的資訊，請參閱 link:https://docs.netapp.com/us-en/ontap/fabricpool/install-license-aws-azure-ibm-task.html["在 ONTAP 叢集上安裝 FabricPool 授權"]。
+
+* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-Notice2.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_9L2PauNXYE0fOs0RIz8KK2q5Jb6sg8Yv-97NNJ53ceAab9UAqpKOrAvByxsOWqhIQHNCHgFfM0q3TI["NetApp Cloud Tiering 停止供應通知"]
+* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-FAQ-v3.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_rplJe_ZtlY4PQAQRQlewsDa0W4JR55muT0KCThR46zI7-uOhIYfVsxODDKFrnYYvy5uZzvhEKHOwBI["NetApp Cloud Tiering 停止供應常見問題集"]
+
+
+====
 NetApp Data Classification:: 讓您的應用程式資料和雲端環境做好隱私準備，以符合資料隱私法規。訂閱即可免費使用。
 NetApp Volume Caching:: 建立可寫入快取磁碟區，以加快資料存取速度或將流量從存取頻繁的磁碟區中卸載，從而提高效能和成本效益。
 NetApp工作負載:: 使用 Amazon FSx for NetApp ONTAP 設計、設定及操作關鍵工作負載，以優化特定應用程式的效能和成本。

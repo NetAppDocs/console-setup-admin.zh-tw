@@ -19,7 +19,7 @@ summary: 您可以直接從 NetApp Console 在 AWS 部署 Console 代理程式�
 在 AWS 中部署代理程式會在您選擇的 VPC 中啟動一個執行 Linux 和 Console 代理軟體的 EC2 執行個體。
 
 .開始之前
-* link:concept-agents.html["了解控制台代理"]。
+* link:concept-agent-install-options.html#agent-console-deploy["瞭解何時從 NetApp Console 部署"]。
 * 你應該回顧一下link:reference-limitations.html["控制台代理限制"]。
 
 

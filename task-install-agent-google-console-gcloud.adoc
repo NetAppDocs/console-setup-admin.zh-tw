@@ -19,7 +19,7 @@ summary: 若要從NetApp Consoel 或使用 Google Cloud 在 Google Cloud 中建�
 在 Google Cloud 中部署代理程式會在您選擇的 VPC 中啟動一個執行 Linux 和 NetApp Console 代理軟體的 VM 執行個體。
 
 .開始之前
-* 你應該有一個link:concept-agents.html["了解控制台代理"]。
+* link:concept-agent-install-options.html#agent-console-deploy["瞭解何時從 NetApp Console 部署"]。
 * 你應該回顧一下link:reference-limitations.html["控制台代理限制"]。
 
 
