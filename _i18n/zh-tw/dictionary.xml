@@ -4039,7 +4039,6 @@
   <block id="2f494f83707a07f0e9291c07ca188635" category="list-text">準備網路以供使用者存取NetApp Console</block>
   <block id="95eb2566e767fc3a5aef275a7e7a5ed1" category="list-text">在受限模式下，使用者從控制台代理 VM 存取控制台。控制台代理聯繫幾個端點來完成資料管理任務。當從控制台完成特定操作時，將從使用者的電腦聯繫這些端點。</block>
   <block id="6d15ec998ca5b36e1198120e9926fcce" category="inline-link-macro">了解有關 4.0.0 之前版本所需的網路存取的更多資訊。</block>
-  <block id="619032e5c3c27ba05162bacd35032461" category="admonition">4.0.0 版本之前的控制台代理需要額外的端點。如果您升級到 4.0.0 或更高版本，則可以從允許清單中刪除舊端點。<block ref="09d4bc1b829716c1eb9fd392e0198549" category="inline-link-macro-rx"></block></block>
   <block id="7748cd70a494ff5fd7b8c1e42d92a2e6" category="cell">\ https://cdn.auth0.com \ https://services.cloud.netapp.com</block>
   <block id="9ed5fb21e9c2b709cc0bad180f57762d" category="cell">您的 Web 瀏覽器透過NetApp Console連線到這些端點以進行集中使用者驗證。</block>
   <block id="fa5cc2cb386581601ffd1b12fb1e1e4f" category="list-text">用於日常運營的出站互聯網訪問</block>
@@ -6227,4 +6226,16 @@
   <block id="1a8d41e65cef4d345c50298a70f79734" category="inline-link-macro">發行說明</block>
   <block id="ce51f82ecbd933f0a6bf385915be19b8" category="list-text">選擇支援隱私模式的版本。查看<block ref="2c36977bb4765b4c1724e0f48d254dff" category="inline-link-macro-rx"></block>以了解最新支援的版本。</block>
   <block id="bd7c58df65cf13e6d395217af09edfdb" category="list-text">下載適用於沒有網際網路存取的網路的離線安裝程式。</block>
+  <block id="c8b1b9c2d71ef002d1c50060b2cb083e" category="paragraph">a| https://occmclientinfragov.azurecr.us.io https://bluexpinfraprod.azurecr.io a| 取得 Console 代理升級的映像。</block>
+  <block id="819febf39e28af038c733bae7ff4f55c" category="paragraph">\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io</block>
+  <block id="44915bc5ffc6c8bb2ea6583e61a74d64" category="cell">如果 Console 代理程式位於 AWS Government 區域：\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io</block>
+  <block id="7d128c30060391a6ee4534fc0d154143" category="cell">當 Console 代理程式安裝在 AWS Government 區域中時，取得用於 Console 代理程式升級的映像。</block>
+  <block id="1ed1ae4edf03cb57c3163af9c463b4fe" category="cell">如果 Console 代理程式位於 Azure Government 區域：\https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us</block>
+  <block id="0b38caea2fd4b746ced14d695c333449" category="cell">在 Azure Government 區域中安裝 Console 代理程式時，取得用於 Console 代理程式升級的映像。</block>
+  <block id="60437b7f6fe69c94ccfdf5bf6379a7e3" category="paragraph">如果 Console 代理位於商業區域或主權區域，您可以從兩組端點中進行選擇：</block>
+  <block id="31a8003e522e87e4d487da308c8a6607" category="cell">當 Console agent 安裝在商業區域或主權區域時，取得 Console agent 升級所需的映像檔。[cols=3*,options="header,autowidth"]</block>
+  <block id="4d7feb9606c47cedd755f6afd698f4a3" category="paragraph">|*適用於 3.9.55 及以下版本的端點* | *適用於 4.0.0 及以上版本的端點* | *用途*</block>
+  <block id="68fd8193be29a61e220fc4162cc03154" category="paragraph">a| * \https://support.netapp.com * \https://mysupport.netapp.com a| * \https://mysupport.netapp.com * \https://signin.b2c.netapp.com * \https://support.netapp.com a| 用於授權和聯絡 NetApp 支援。a| * \https://*.api.bluexp.netapp.com * \https://api.bluexp.netapp.com * \https://*.cloudmanager.cloud.netapp.com * \https://cloudmanager.cloud.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://*.console.netapp.com a| * \https://api.bluexp.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://components.console.netapp.com * \https://cdn.auth0.com a| 用於日常作業。a| * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io a| * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io | 用於取得 Console 代理程式升級的映像。</block>
+  <block id="a913a5833b76298a0bccb4d15b796571" category="paragraph">當 Console 代理程式安裝在商業區域或主權區域時，取得用於 Console 代理程式升級的映像。</block>
+  <block id="6fddb2ca8b2393be844b4c4153d1f6f7" category="admonition">4.0.0 版本之前的 Console 代理程式支援不同的端點。如果您已升級至 4.0.0 或更高版本，則可以從允許清單中移除舊的端點。<block ref="09d4bc1b829716c1eb9fd392e0198549" category="inline-link-macro-rx"></block></block>
 </blocks>
