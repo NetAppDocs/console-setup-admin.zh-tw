@@ -32,7 +32,9 @@ summary: 在私有模式下部署 NetApp Console，以便在沒有任何出站�
 .步驟
 . 從 NetApp Console 下載 Console 代理軟體 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp支援站點"^]
 +
-請務必下載離線安裝程式，以便在沒有網際網路存取的私人網路中使用。
+** 選擇支援隱私模式的版本。查看link:whats-new.html["發行說明"]以了解最新支援的版本。
+** 下載適用於沒有網際網路存取的網路的離線安裝程式。
+
 
 . 將安裝程式複製到 Linux 主機。
 . 分配運行腳本的權限。

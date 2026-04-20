@@ -5810,7 +5810,6 @@
   <block id="c73db6dd4dc3a461773070693cc406c6" category="paragraph">若要在<block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block>或<block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block>中使用 NetApp Console ，則應按照單獨的說明在這些環境中開始使用。<block ref="7305ccb1d247c4e62b18170abee468ff" category="inline-link-rx"></block></block>
   <block id="1c88387d9be2a13f9b45fd276e63cf80" category="list-text">安裝 Console 代理程式需要 root 權限。</block>
   <block id="afbfe533a489b7d4102d31feb17a881a" category="list-text">從 NetApp Console 下載 Console 代理軟體<block ref="99637e01fa8caa34a544049093cac68c" category="inline-link-rx"></block></block>
-  <block id="a6c2003199e95310a83aa40a67058bd8" category="paragraph">請務必下載離線安裝程式，以便在沒有網際網路存取的私人網路中使用。</block>
   <block id="70c6033ed76dffb5d74ff7bb0402f4fa" category="paragraph">Console 代理程式已安裝。現在您可以設定 NetApp Console 了。</block>
   <block id="4d50d200e5ecb85ea8908049caf1caab" category="paragraph">當您第一次存取 NetApp Console 時，系統會提示您設定 NetApp Console。</block>
   <block id="d50d972bc008375c76a9eba41b5ce3e3" category="list-text">開啟網頁瀏覽器，輸入安裝了 Console 代理程式的 Linux 主機的 IP 位址。</block>
@@ -6225,4 +6224,7 @@
   <block id="fdac344e6e2a4fe5d79f5e4669b070fe" category="list-text"><block ref="0c9621013a18e4c625fdd25673bfa917" category="inline-link-macro-rx"></block>。</block>
   <block id="8f5eebf6075fe260d8a4c0281dc3bfe2" category="paragraph">選用：從雲端供應商的市場訂閱 NetApp Intelligent Services，以按小時費率（PAYGO）或透過年度合約支付資料服務費用。NetApp Intelligent Services 包括 NetApp Backup and Recovery、Cloud Volumes ONTAP、NetApp Ransomware Resilience 和 NetApp Disaster Recovery。NetApp Data Classification 包含在您的訂閱中，無需額外付費。</block>
   <block id="6c842907a578805c3a54843de813b384" category="paragraph">透過您的雲端供應商註冊 NetApp Intelligent Services，以按小時（PAYGO）或按年計費。訂閱包括 NetApp Backup and Recovery、Cloud Volumes ONTAP、NetApp Ransomware Resilience、NetApp Disaster Recovery 和 NetApp Data Classification。</block>
+  <block id="1a8d41e65cef4d345c50298a70f79734" category="inline-link-macro">發行說明</block>
+  <block id="ce51f82ecbd933f0a6bf385915be19b8" category="list-text">選擇支援隱私模式的版本。查看<block ref="2c36977bb4765b4c1724e0f48d254dff" category="inline-link-macro-rx"></block>以了解最新支援的版本。</block>
+  <block id="bd7c58df65cf13e6d395217af09edfdb" category="list-text">下載適用於沒有網際網路存取的網路的離線安裝程式。</block>
 </blocks>
