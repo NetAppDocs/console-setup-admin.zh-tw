@@ -167,7 +167,7 @@ Console 代理程式對 NetApp Console 至關重要。代理程式必須保持�
 | Digital Advisor（Active IQ）  a| 
 是的
  a| 
-不
+是的
 
 
 

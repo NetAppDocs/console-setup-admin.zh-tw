@@ -23,8 +23,6 @@ NetApp 將這些使用案例稱為_部署模式_。每種模式都提供不同�
 私有模式 （安裝在您的內部部署或雲端）:: 私有模式適用於對安全性需求極高的組織，例如 AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6 或實體隔離環境中的組織。它不會連接到 NetApp Console SaaS 應用程式或 NetApp 基於雲端的 API，從而賦予您完全的控制權並阻止外部通訊。支援的資料服務包括 NetApp Backup and Recovery、NetApp Data Classification、NetApp Replication 和 Cloud Volumes ONTAP。所有儲存和身份驗證均保留在本機，確保資料在您的環境中。國防承包商、具有嚴格資料駐留規則的金融機構以及擁有機密系統的政府機構均可使用此模式。
 
 
-當安裝在您的內部環境時，僅支援 ONTAP 儲存系統。
-
 
 NOTE: NetApp Console 在受限模式和私有模式下限制資料流，但您必須確保您的環境符合您的規定。
 
