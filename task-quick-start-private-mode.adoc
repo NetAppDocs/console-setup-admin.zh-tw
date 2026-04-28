@@ -99,7 +99,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage
 | 不 
 
 
-| 身分和存取管理 | 不 
+| 身分和存取管理 | 是的 
 
 
 | 管理雲端提供者憑證 | 不 
@@ -165,7 +165,7 @@ Licenses and subscriptions 管理
 | 不 
 
 
-| 身分和存取管理 | 不 
+| 身分和存取管理 | 是的 
 
 
 | 管理雲端提供者憑證 | 不 

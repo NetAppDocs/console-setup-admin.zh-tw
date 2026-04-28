@@ -21,7 +21,7 @@ summary: 註冊NetApp Console後，您可以從基於 Web 的控制台登錄，�
 .步驟
 . 導覽至 NetApp Console URL。URL 取決於貴組織使用的 Console 模式：
 +
-** **標準模式*：開啟網頁瀏覽器並前往 https://console.netapp.com["NetApp Console"]
+** *標準模式*：開啟網頁瀏覽器並前往 https://console.netapp.com["NetApp Console"]
 ** **受限模式或私有模式**：開啟網頁瀏覽器，造訪 Console 代理安裝所在的 IP 位址。
 
 

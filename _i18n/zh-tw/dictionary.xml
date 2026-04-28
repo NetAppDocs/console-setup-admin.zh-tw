@@ -5617,7 +5617,6 @@
   <block id="9b623b58bde4f03efa6364d08c8279df" category="list-text">受限模式適用於需要更高安全性和有限連接的組織，例如政府機構和受監管企業。您需要將 NetApp Console 安裝在您自己的公有雲（政府、主權或商業區域）中，並且它對 NetApp Console API 端點（託管在 SaaS 應用程式中）的出站連接受到限制。受限模式提供對關鍵資料服務的訪問，包括 Cloud Volumes ONTAP、Azure NetApp Files、NetApp Backup and Recovery（在政府和商業區域）以及資料分類，同時還提供自動軟體升級和身分認同聯合功能。</block>
   <block id="58c169b907a09c154e92b586b03720ce" category="list-text">私有模式 （安裝在您的內部部署或雲端）</block>
   <block id="e728600836da4c211714325b06aff5ce" category="list-text">私有模式適用於對安全性需求極高的組織，例如 AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6 或實體隔離環境中的組織。它不會連接到 NetApp Console SaaS 應用程式或 NetApp 基於雲端的 API，從而賦予您完全的控制權並阻止外部通訊。支援的資料服務包括 NetApp Backup and Recovery、NetApp Data Classification、NetApp Replication 和 Cloud Volumes ONTAP。所有儲存和身份驗證均保留在本機，確保資料在您的環境中。國防承包商、具有嚴格資料駐留規則的金融機構以及擁有機密系統的政府機構均可使用此模式。</block>
-  <block id="9c1f6580e4f786a77412f0477deeb241" category="paragraph">當安裝在您的內部環境時，僅支援 ONTAP 儲存系統。</block>
   <block id="8f674ddec71fa3256a062bcac7a92856" category="admonition">NetApp Console 在受限模式和私有模式下限制資料流，但您必須確保您的環境符合您的規定。</block>
   <block id="98dfed72c4da8ca5a25bdfa5d04c5824" category="paragraph">下表比較這些模式。</block>
   <block id="ba5f081414532f0d5aaec9831e4784be" category="cell">需要連接到 NetApp Console SaaS 應用程式嗎？</block>
@@ -5831,7 +5830,6 @@
   <block id="f75f04b8a387edfb2df7d3cd5fa974a8" category="inline-link-macro">請聯絡您的組織管理員</block>
   <block id="fdc0e0fca606cf54a0a897572707c368" category="paragraph">註冊後，您的 Console 組織管理員必須先將您的使用者帳戶新增至組織，您才能存取任何資源。如果您登入後看不到任何資源，請聯絡您的組織管理員。<block ref="11d2ec2c56c0640477c61afee5dc1252" category="inline-link-macro-rx"></block>.</block>
   <block id="750d8533e3422880e0f3745b61ace637" category="list-text">導覽至 NetApp Console URL。URL 取決於貴組織使用的 Console 模式：</block>
-  <block id="0ce20a4f9a2eaba138af185f99d4f8db" category="list-text">**標準模式*：開啟網頁瀏覽器並前往<block ref="d99e1eaf406503cf18504dce764c5135" category="inline-link-rx"></block></block>
   <block id="dd8c68c1c1e70bd88296cfa55bc07484" category="list-text">**受限模式或私有模式**：開啟網頁瀏覽器，造訪 Console 代理安裝所在的 IP 位址。</block>
   <block id="ab4fc3f68e8f23b6d532eb446e1e0a46" category="list-text">根據與您登入相關的驗證方法，系統會提示您輸入憑證。</block>
   <block id="3bcc313e589d80f58afe7da826230bf9" category="list-text">如果您的管理員已為您的組織設定身分聯合，則為聯合連線</block>
@@ -6238,4 +6236,5 @@
   <block id="68fd8193be29a61e220fc4162cc03154" category="paragraph">a| * \https://support.netapp.com * \https://mysupport.netapp.com a| * \https://mysupport.netapp.com * \https://signin.b2c.netapp.com * \https://support.netapp.com a| 用於授權和聯絡 NetApp 支援。a| * \https://*.api.bluexp.netapp.com * \https://api.bluexp.netapp.com * \https://*.cloudmanager.cloud.netapp.com * \https://cloudmanager.cloud.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://*.console.netapp.com a| * \https://api.bluexp.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://components.console.netapp.com * \https://cdn.auth0.com a| 用於日常作業。a| * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io a| * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io | 用於取得 Console 代理程式升級的映像。</block>
   <block id="a913a5833b76298a0bccb4d15b796571" category="paragraph">當 Console 代理程式安裝在商業區域或主權區域時，取得用於 Console 代理程式升級的映像。</block>
   <block id="6fddb2ca8b2393be844b4c4153d1f6f7" category="admonition">4.0.0 版本之前的 Console 代理程式支援不同的端點。如果您已升級至 4.0.0 或更高版本，則可以從允許清單中移除舊的端點。<block ref="09d4bc1b829716c1eb9fd392e0198549" category="inline-link-macro-rx"></block></block>
+  <block id="225a60e47c64c2fc93ba428341d684ac" category="list-text">*標準模式*：開啟網頁瀏覽器並前往<block ref="d99e1eaf406503cf18504dce764c5135" category="inline-link-rx"></block></block>
 </blocks>
