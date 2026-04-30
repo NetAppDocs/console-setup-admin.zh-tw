@@ -1,0 +1,34 @@
+= 
+:allow-uri-read: 
+
+
+[role="tabbed-block"]
+====
+.所需的最低端點數量
+--
+所有 Console 代理部署都需要這些端點。管理 AWS 或 Azure 中的 NetApp 資源也需要其他端點。
+
+[cols="2a,1a"]
+|===
+| 端點 | 目的 未解析的指令 <stdin> - include::endpoints-agent.adoc[tag=nss-endpoints] 未解析的指令 <stdin> - include::endpoints-agent.adoc[tag=saas-endpoints] 未解析的指令 <stdin> - include::endpoints-agent.adoc[tag=upgrade-endpoints] 
+|===
+--
+.AWS 資源的其他端點
+--
+當 Console 代理程式安裝在內部部署時，它需要透過網路存取下列額外的 AWS 端點來管理部署在 AWS 中的 NetApp 系統（例如 Cloud Volumes ONTAP）。
+
+[cols="2a,1a"]
+|===
+| 端點 | 目的未解析的指令位於 <stdin> - include::endpoints-agent.adoc[tag=aws-endpoints] 
+|===
+--
+.Azure 資源的其他端點
+--
+當 Console 代理程式安裝在內部部署環境時，它需要透過網路存取以下額外的 Azure 端點，以管理部署在 Azure 中的 NetApp 系統（例如 Cloud Volumes ONTAP）。
+
+[cols="2a,1a"]
+|===
+| 端點 | 目的 <stdin> 中未解決的指令 - include::endpoints-agent.adoc[tag=azure-public-endpoints] <stdin> 中未解決的指令 - include::endpoints-agent.adoc[tag=azure-china-endpoints] 
+|===
+--
+====

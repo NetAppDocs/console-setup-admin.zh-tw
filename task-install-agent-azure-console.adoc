@@ -76,7 +76,7 @@ VNet 與子網路:: 建立控制台代理程式時，您需要指定它所在的
  a| 
 \ https://mysupport.netapp.com
  a| 
-取得許可資訊並向NetApp支援發送AutoSupport訊息。
+取得授權資訊並將 AutoSupport 訊息傳送至 NetApp 支援部門。
 
 
 
@@ -90,7 +90,7 @@ VNet 與子網路:: 建立控制台代理程式時，您需要指定它所在的
  a| 
 \ https://support.netapp.com
  a| 
-取得許可資訊並向NetApp支援發送AutoSupport訊息以及接收Cloud Volumes ONTAP的軟體更新。
+以取得授權資訊並將 AutoSupport 訊息傳送至 NetApp 支援，以及接收 Cloud Volumes ONTAP 的軟體更新。
 
 
 
@@ -113,65 +113,10 @@ VNet 與子網路:: 建立控制台代理程式時，您需要指定它所在的
 * 當您更新到防火牆中的目前端點時，您現有的代理程式將繼續運作。
 
 
-
-
- a| 
-\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io
- a| 
-取得控制台代理升級的影像。
-
-* 當您部署新代理程式時，驗證檢查會測試與目前端點的連線。如果你使用link:reference-networking-saas-console-previous.html["先前的端點"]，驗證檢查失敗。為了避免此失敗，請跳過驗證檢查。
-+
-儘管先前的端點仍然受支持，但NetApp建議盡快將防火牆規則更新至目前端點。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新終端節點列表"] 。
-
-* 當您更新到防火牆中的目前端點時，您現有的代理程式將繼續運作。
-
-
-^1^ NetApp建議在防火牆中允許選項 1 端點，因為它們更安全，而不允許選項 2 端點。請注意有關這些端點的以下事項：
-
-+ * 從控制台代理 3.9.47 版本開始，系統支援選項 1 中列出的端點。控制台代理的先前版本不支援向後相容。 * 控制台代理程式首先聯絡選項 2 中的端點。如果這些端點不可訪問，它會自動聯繫選項 1 中的端點。 * 如果您將控制台代理程式與NetApp Backup and Recovery或 Ransomware Resilience 一起使用，則系統不支援選項 1 端點。允許選項 2 端點並不允許選項 1。
-
-
-
- a| 
-如果 Console 代理程式位於 AWS Government 區域：\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
- a| 
-當 Console 代理程式安裝在 AWS Government 區域中時，取得用於 Console 代理程式升級的映像。
-
-
-
- a| 
-如果 Console 代理程式位於 Azure Government 區域：\https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us
- a| 
-在 Azure Government 區域中安裝 Console 代理程式時，取得用於 Console 代理程式升級的映像。
-
-
-
- a| 
-如果 Console 代理位於商業區域或主權區域，您可以從兩組端點中進行選擇：
-
-* 選項 1（推薦）^1^
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
-
-* 選項 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-當 Console 代理程式安裝在商業區域或主權區域時，取得用於 Console 代理程式升級的映像。
-
 |===
 --
 
 
-|*適用於 3.9.55 及以下版本的端點* | *適用於 4.0.0 及以上版本的端點* | *用途*
-
-a| * \https://support.netapp.com * \https://mysupport.netapp.com a| * \https://mysupport.netapp.com * \https://signin.b2c.netapp.com * \https://support.netapp.com a| 用於授權和聯絡 NetApp 支援。a| * \https://*.api.bluexp.netapp.com * \https://api.bluexp.netapp.com * \https://*.cloudmanager.cloud.netapp.com * \https://cloudmanager.cloud.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://*.console.netapp.com a| * \https://api.bluexp.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://components.console.netapp.com * \https://cdn.auth0.com a| 用於日常作業。a| * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io a| * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io | 用於取得 Console 代理程式升級的映像。
-
-|===
-|===
 從NetApp控制台聯繫的端點:: 當您使用基於 Web 的 NetApp Console SaaS 應用程式時，它會連接多個端點以完成資料管理任務。這包括用於從 Console 部署 Console 代理的端點。
 +
 --
