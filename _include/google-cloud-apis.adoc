@@ -9,6 +9,6 @@
 * 雲端資源管理器 API
 * 計算引擎 API
 * 身分識別和存取管理 (IAM) API
-* Cloud Key Management Service (KMS) API（僅當您打算使用 NetApp Backup and Recovery 搭配客戶管理的加密金鑰（CMEK）時才需要）
+* 雲端金鑰管理服務（KMS）API（僅當您打算使用 NetApp Backup and Recovery 搭配客戶管理的加密金鑰（CMEK）時才需要）
 * Cloud Quotas API（使用 Infrastructure Manager 部署 Cloud Volumes ONTAP 時需要）
 

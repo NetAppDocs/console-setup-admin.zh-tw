@@ -54,7 +54,7 @@ link:concept-modes.html["了解私有模式的運作方式"]。
 
 ** `/var`：必須有 40 GiB 可用空間
 +
-控制台代理需要此空間 `/var`因為 Podman 或 Docker 的設計初衷就是在這個目錄下建立容器。具體來說，他們將在以下位置建立容器： `/var/lib/containers/storage`目錄和 `/var/lib/docker`用於 Docker。外部安裝或符號連結不適用於此空間。
+Console 代理程式需要這部分空間 `/var`，因為 Podman 或 Docker 的設計初衷就是在此目錄下建立容器。具體來說，它們會在 `/var/lib/containers/storage`目錄中建立容器，以及 `/var/lib/docker`用於 Docker。外部掛載或符號連結無法用於此空間。
 
 
 
@@ -127,7 +127,7 @@ Google Cloud 虛擬機器實例上的控制台代理程式支援下列作業系�
 /var 中的磁碟空間:: 必須有 20 GiB 可用空間
 +
 --
-控制台代理需要此空間 `/var`因為 Docker 或 Podman 的設計目的是在此目錄中建立容器。具體來說，他們將在 `/var/lib/containers/storage`目錄。外部安裝或符號連結不適用於此空間。
+Console 代理程式需要這部分空間 `/var`，因為 Docker 或 Podman 的設計初衷就是在此目錄下建立容器。具體來說，它們會在該 `/var/lib/containers/storage`目錄中建立容器。外部掛載或符號連結無法用於此空間。
 
 --
 
@@ -159,7 +159,7 @@ Google Cloud 虛擬機器實例上的控制台代理程式支援下列作業系�
 
 * 啟用並啟動 podman.socket 服務
 * 安裝python3
-* 安裝 podman-compose 套件版本 1.0.6
+* 安裝 podman-compose 套件（因 Red Hat 版本而異）
 * 將 podman-compose 加入到 PATH 環境變量
 * 如果使用 Red Hat Enterprise Linux，請驗證您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI
 
@@ -421,7 +421,7 @@ HTTP (80) 和 HTTPS (443) 提供對 NetApp Console 的存取。如果需要連�
 --
 
 
-啟用 NTP:: 如果您打算使用NetApp Data Classification來掃描公司資料來源，則應在控制台代理程式和NetApp Data Classification系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
+啟用 NTP:: 如果您打算使用 NetApp Data Classification 掃描企業資料來源，則應在 Console 代理程式和 NetApp Data Classification 系統上啟用網路時間協定（NTP）服務，以便系統之間的時間同步 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["深入瞭解 NetApp Data Classification"^]。
 
 
 
@@ -668,7 +668,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Azure 入口網站的螢幕截
 . 在*Microsoft Entra ID*服務中，選擇*App Registrations*並選擇應用程式。
 . 複製*應用程式（客戶端）ID*和*目錄（租用戶）ID*。
 +
-image:screenshot_azure_app_ids.gif["螢幕截圖顯示了 Microsoft Entra IDy 中應用程式的應用程式（客戶端）ID 和目錄（租用戶）ID。"]
+image:screenshot_azure_app_ids.gif["螢幕截圖顯示 Microsoft Entra ID 中應用程式的應用程式（client）ID 和目錄（tenant）ID。"]
 
 +
 將 Azure 帳戶新增至控制台時，您需要提供應用程式（用戶端）ID 和應用程式的目錄（租用戶）ID。控制台使用 ID 以程式設計方式登入。
@@ -720,7 +720,7 @@ https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-
 .. 從 IAM 和管理服務中，選擇 *服務帳戶 > 建立服務帳戶*。
 .. 輸入服務帳戶詳細資料並選擇*建立並繼續*。
 .. 選擇您剛剛建立的角色。
-.. 完成剩餘步驟以建立角色。
+.. 完成剩餘步驟以建立服務帳戶。
 +
 https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud 文件：建立服務帳號"^]
 
@@ -746,7 +746,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 ** 雲端資源管理器 API
 ** 計算引擎 API
 ** 身分識別和存取管理 (IAM) API
-** Cloud Key Management Service (KMS) API（僅當您打算使用 NetApp Backup and Recovery 搭配客戶管理的加密金鑰（CMEK）時才需要）
+** 雲端金鑰管理服務（KMS）API（僅當您打算使用 NetApp Backup and Recovery 搭配客戶管理的加密金鑰（CMEK）時才需要）
 ** Cloud Quotas API（使用 Infrastructure Manager 部署 Cloud Volumes ONTAP 時需要）
 
 

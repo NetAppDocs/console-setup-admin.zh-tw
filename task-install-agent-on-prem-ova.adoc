@@ -56,9 +56,9 @@ NOTE: 在 vCenter 環境中安裝代理，而不是直接在 ESXi 主機上安�
 使用基於 Web 的NetApp Console時從電腦聯繫的端點::
 +
 --
-從 Web 瀏覽器存取控制台的電腦必須能夠聯絡多個端點。您需要使用控制台來設定控制台代理並進行控制台的日常使用。
+透過網頁瀏覽器存取 NetApp Console 的電腦必須能夠連接多個端點。
 
-link:reference-networking-saas-console.html["為NetApp控制台準備網絡"] 。
+link:reference-networking-saas-console.html["為 NetApp Console 準備網路設定"]。
 
 --
 
@@ -196,7 +196,7 @@ Amazon FSx for NetApp ONTAP：
 --
 
 
-連接埠:: 除非您啟動它或將其用作代理將AutoSupport訊息從Cloud Volumes ONTAP發送到NetApp支持，否則控制台代理不會有傳入流量。
+連接埠:: 除非您發起請求或將其用作代理以將 AutoSupport 訊息從 Cloud Volumes ONTAP 傳送到 NetApp 支援部門，否則 Console 代理不會接收任何傳入流量。
 +
 --
 * HTTP（80）和 HTTPS（443）提供對本機 UI 的訪問，您會在極少數情況下使用它們。
@@ -210,7 +210,7 @@ Amazon FSx for NetApp ONTAP：
 --
 
 
-啟用 NTP:: 如果您打算使用NetApp Data Classification來掃描公司資料來源，則應在控制台代理程式和NetApp Data Classification系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
+啟用 NTP:: 如果您打算使用 NetApp Data Classification 掃描企業資料來源，則應在 Console 代理程式和 NetApp Data Classification 系統上啟用網路時間協定（NTP）服務，以便系統之間的時間同步 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["深入瞭解 NetApp Data Classification"^]。
 
 
 
@@ -384,7 +384,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Azure 入口網站的螢幕截
 . 在*Microsoft Entra ID*服務中，選擇*App Registrations*並選擇應用程式。
 . 複製*應用程式（客戶端）ID*和*目錄（租用戶）ID*。
 +
-image:screenshot_azure_app_ids.gif["螢幕截圖顯示了 Microsoft Entra IDy 中應用程式的應用程式（客戶端）ID 和目錄（租用戶）ID。"]
+image:screenshot_azure_app_ids.gif["螢幕截圖顯示 Microsoft Entra ID 中應用程式的應用程式（client）ID 和目錄（tenant）ID。"]
 
 +
 將 Azure 帳戶新增至控制台時，您需要提供應用程式（用戶端）ID 和應用程式的目錄（租用戶）ID。控制台使用 ID 以程式設計方式登入。
@@ -492,7 +492,7 @@ NOTE: 如果部署失敗，您可以從代理主機存取驗證報告和日誌�
 
 == 使用NetApp Console註冊控制台代理
 
-登入控制台並將控制台代理與您的組織關聯。登入方式取決於您使用控制台的模式。如果您在標準模式下使用控制台，則可以透過 SaaS 網站登入。如果您在受限或私人模式下使用控制台，則可以從控制台代理主機本機登入。
+登入 Console 並將 Console 代理程式與您的組織建立關聯。登入方式取決於您使用 Console 的模式。如果您以標準模式使用 Console，則透過 SaaS 網站登入。如果您以受限模式或私有模式使用 Console，則從 Console 代理程式主機本機登入。
 
 .步驟
 . 開啟 Web 瀏覽器並輸入控制台代理主機 URL：
@@ -531,7 +531,7 @@ NOTE: 如果部署失敗，您可以從代理主機存取驗證報告和日誌�
 . 選擇*組織憑證*。
 . 選擇“*新增憑證*”並按照精靈中的步驟操作。
 +
-.. *憑證位置*：選擇*Amazon Web Services > 代理程式。
+.. *憑證位置*：選擇*Amazon Web Services > 代理*。
 .. *定義憑證*：輸入 AWS 存取金鑰和金鑰。
 .. *市場訂閱*：透過立即訂閱或選擇現有訂閱將市場訂閱與這些憑證關聯。
 .. *審核*：確認有關新憑證的詳細資訊並選擇*新增*。
@@ -545,7 +545,7 @@ NOTE: 如果部署失敗，您可以從代理主機存取驗證報告和日誌�
 .Azure
 --
 .開始之前
-如果您剛剛建立了這些 Azure 憑證，它們可能需要幾分鐘才能使用。等待幾分鐘，然後再新增控制台代理的憑證。
+如果您剛剛建立了這些 Azure 認證資料，可能需要幾分鐘才能使用。請稍候幾分鐘，再將認證資料新增至 Console 代理程式。
 
 .步驟
 . 選擇“*管理 > 憑證*”。

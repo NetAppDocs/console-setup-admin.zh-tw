@@ -120,7 +120,7 @@ VNet 與子網路:: 建立控制台代理程式時，您需要指定它所在的
 從NetApp控制台聯繫的端點:: 當您使用基於 Web 的 NetApp Console SaaS 應用程式時，它會連接多個端點以完成資料管理任務。這包括用於從 Console 部署 Console 代理的端點。
 +
 --
-link:reference-networking-saas-console.html["查看從NetApp控制台聯繫的端點列表"] 。
+link:reference-networking-saas-console.html["從 NetApp Console 檢視已聯絡的端點清單"]。
 
 --
 
@@ -136,7 +136,7 @@ link:reference-networking-saas-console.html["查看從NetApp控制台聯繫的�
 --
 
 
-連接埠:: 除非您啟動它或將其用作代理將AutoSupport訊息從Cloud Volumes ONTAP發送到NetApp支持，否則控制台代理不會有傳入流量。
+連接埠:: 除非您發起請求或將其用作代理以將 AutoSupport 訊息從 Cloud Volumes ONTAP 傳送到 NetApp 支援部門，否則 Console 代理不會接收任何傳入流量。
 +
 --
 * HTTP（80）和 HTTPS（443）提供對本機 UI 的訪問，您會在極少數情況下使用它們。
@@ -150,7 +150,7 @@ link:reference-networking-saas-console.html["查看從NetApp控制台聯繫的�
 --
 
 
-啟用 NTP:: 如果您打算使用NetApp Data Classification來掃描公司資料來源，則應在控制台代理程式和NetApp Data Classification系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
+啟用 NTP:: 如果您打算使用 NetApp Data Classification 掃描企業資料來源，則應在 Console 代理程式和 NetApp Data Classification 系統上啟用網路時間協定（NTP）服務，以便系統之間的時間同步 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["深入瞭解 NetApp Data Classification"^]。
 +
 --
 您需要在建立控制台代理程式後實現此網路要求。
@@ -396,7 +396,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Azure 入口網站的螢幕截
 . 在*Microsoft Entra ID*服務中，選擇*App Registrations*並選擇應用程式。
 . 複製*應用程式（客戶端）ID*和*目錄（租用戶）ID*。
 +
-image:screenshot_azure_app_ids.gif["螢幕截圖顯示了 Microsoft Entra IDy 中應用程式的應用程式（客戶端）ID 和目錄（租用戶）ID。"]
+image:screenshot_azure_app_ids.gif["螢幕截圖顯示 Microsoft Entra ID 中應用程式的應用程式（client）ID 和目錄（tenant）ID。"]
 
 +
 將 Azure 帳戶新增至控制台時，您需要提供應用程式（用戶端）ID 和應用程式的目錄（租用戶）ID。控制台使用 ID 以程式設計方式登入。
@@ -498,15 +498,15 @@ link:reference-ports-azure.html["查看 Azure 的安全性群組規則"] 。
 
 
 
-. 檢查您的選擇以驗證您的設定是否正確。
+. 檢閱您的選擇，以確認您的設定是否正確。
 +
-.. 預設情況下，*驗證代理程式設定*複選框處於選取狀態，以便控制台在您部署時驗證網路連線要求。如果控制台無法部署代理，它會提供一份報告來幫助您排除故障。如果部署成功，則不會提供報告。
+.. 預設情況下會選取 *Validate agent configuration* 核取方塊，以便 NetApp Console 在部署時驗證網路連線需求。如果 NetApp Console 無法部署代理程式，它會提供報告以協助您進行疑難排解。如果部署成功，則不會提供報告。
 
 
 +
-[]
+[NOTE]
 ====
-** 如果您仍在使用link:reference-networking-saas-console-previous.html["先前的端點"]用於代理升級，驗證失敗並出現錯誤。為了避免這種情況，請取消選取核取方塊以跳過驗證檢查。
+** 如果您仍在使用用於代理升級的link:reference-networking-saas-console-previous.html["先前的端點"]，驗證將失敗並顯示錯誤。為避免這種情況，請清除核取方塊以跳過驗證檢查。
 ** 在安裝期間、NetApp 會檢查代理主機至少有 80% 的可用磁碟空間總計、其中包括 48 GB 在 `/opt`和 32 GB 在 `/var`（總計 80 GB）。安裝後、需要至少 20% 的磁碟總計保持可用、其中包括 12 GB 在 `/opt`和 8 GB 在 `/var`（總計 20 GB）。
 
 

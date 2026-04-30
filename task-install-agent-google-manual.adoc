@@ -45,7 +45,7 @@ NOTE: 控制台代理保留 19000 到 19200 的 UID 和 GID 範圍。這個範�
 
 ** `/var`：必須有 40 GiB 可用空間
 +
-控制台代理需要此空間 `/var`因為 Podman 或 Docker 的設計初衷就是在這個目錄下建立容器。具體來說，他們將在以下位置建立容器： `/var/lib/containers/storage`目錄和 `/var/lib/docker`用於 Docker。外部安裝或符號連結不適用於此空間。
+Console 代理程式需要這部分空間 `/var`，因為 Podman 或 Docker 的設計初衷就是在此目錄下建立容器。具體來說，它們會在 `/var/lib/containers/storage`目錄中建立容器，以及 `/var/lib/docker`用於 Docker。外部掛載或符號連結無法用於此空間。
 
 
 
@@ -137,7 +137,7 @@ Ubuntu
  a| 
 3.9.45 或更高版本， NetApp Console處於標準模式或受限模式
  a| 
-Docker Engine 23.06 至 28.0.0。
+Docker Engine 23.0.6 至 28.0.0。
  a| 
 不支援
 
@@ -187,7 +187,7 @@ Google Cloud 虛擬機器實例上的控制台代理程式支援下列作業系�
 
 * 啟用並啟動 podman.socket 服務
 * 安裝python3
-* 安裝 podman-compose 套件版本 1.0.6
+* 安裝 podman-compose 套件（因 Red Hat 版本而異）
 * 將 podman-compose 加入到 PATH 環境變量
 * 如果使用 Red Hat Enterprise Linux，請驗證您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI
 
@@ -362,9 +362,9 @@ sudo systemctl enable docker && sudo systemctl start docker
 使用基於 Web 的NetApp Console時從電腦聯繫的端點::
 +
 --
-從 Web 瀏覽器存取控制台的電腦必須能夠聯絡多個端點。您需要使用控制台來設定控制台代理並進行控制台的日常使用。
+透過網頁瀏覽器存取 NetApp Console 的電腦必須能夠連接多個端點。
 
-link:reference-networking-saas-console.html["為NetApp控制台準備網絡"] 。
+link:reference-networking-saas-console.html["為 NetApp Console 準備網路設定"]。
 
 --
 
@@ -441,7 +441,7 @@ link:reference-networking-saas-console.html["為NetApp控制台準備網絡"] �
 --
 
 
-連接埠:: 除非您啟動它或將其用作代理將AutoSupport訊息從Cloud Volumes ONTAP發送到NetApp支持，否則控制台代理不會有傳入流量。
+連接埠:: 除非您發起請求或將其用作代理以將 AutoSupport 訊息從 Cloud Volumes ONTAP 傳送到 NetApp 支援部門，否則 Console 代理不會接收任何傳入流量。
 +
 --
 * HTTP（80）和 HTTPS（443）提供對本機 UI 的訪問，您會在極少數情況下使用它們。
@@ -455,7 +455,7 @@ link:reference-networking-saas-console.html["為NetApp控制台準備網絡"] �
 --
 
 
-啟用 NTP:: 如果您打算使用NetApp Data Classification來掃描公司資料來源，則應在控制台代理程式和NetApp Data Classification系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
+啟用 NTP:: 如果您打算使用 NetApp Data Classification 掃描企業資料來源，則應在 Console 代理程式和 NetApp Data Classification 系統上啟用網路時間協定（NTP）服務，以便系統之間的時間同步 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["深入瞭解 NetApp Data Classification"^]。
 
 
 
@@ -477,8 +477,10 @@ link:reference-networking-saas-console.html["為NetApp控制台準備網絡"] �
 以下範例在專案層級建立一個名為「agent」的角色：
 
 +
-`gcloud iam roles create connector --project=myproject --file=agent.yaml`
-
+[source, shell]
+----
+gcloud iam roles create agent --project=myproject --file=agent.yaml
+----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud 文件：建立和管理自訂角色"^]
 
@@ -489,13 +491,13 @@ https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-
 .. 從 IAM 和管理服務中，選擇 *服務帳戶 > 建立服務帳戶*。
 .. 輸入服務帳戶詳細資料並選擇*建立並繼續*。
 .. 選擇您剛剛建立的角色。
-.. 完成剩餘步驟以建立角色。
+.. 完成剩餘步驟以建立服務帳戶。
 +
 https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud 文件：建立服務帳號"^]
 
 
 
-. 如果您打算在與控制台代理程式所在專案不同的專案中部署Cloud Volumes ONTAP系統，則需要為控制台代理程式的服務帳戶提供這些項目的存取權限。
+. 如果您打算在 Console 代理程式所在的專案以外的其他專案中部署 Cloud Volumes ONTAP 系統、則需要為 Console 代理程式的服務帳戶提供這些專案的存取權限。
 +
 例如，假設控制台代理程式位於專案 1 中，而您想要在專案 2 中建立Cloud Volumes ONTAP系統。您需要授予項目 2 中的服務帳戶存取權限。
 
@@ -561,9 +563,9 @@ link:reference-permissions-gcp.html["代理服務帳號策略"]
 |===
 筆記：
 
-. 如果您沒有將防火牆規則傳遞給部署並選擇讓控制台為您建立規則，則僅主機專案才需要 deploymentmanager.editor。如果未指定規則， NetApp Console將在主機專案中建立包含 VPC0 防火牆規則的部署。
-. 只有當您未將防火牆規則傳遞給部署並選擇讓控制台為您建立它們時，才需要firewall.create 和firewall.delete。這些權限位於控制台帳戶 .yaml 檔案中。如果您使用共用 VPC 部署 HA 對，這些權限將用於為 VPC1、2 和 3 建立防火牆規則。對於所有其他部署，這些權限也將用於為 VPC0 建立規則。
-. 對於 Cloud Tiering，分層服務帳戶必須在服務帳戶上具有 serviceAccount.user 角色，而不僅僅是在專案層級。目前，如果您在專案層級指派 serviceAccount.user，則使用 getIAMPolicy 查詢服務帳號時不會顯示權限。
+. `deploymentmanager.editor` 僅在主機專案需要時才需要。如果您未將防火牆規則傳遞給部署，而是選擇讓 Console 為您建立規則。NetApp Console 會在主機專案中建立包含 VPC0 防火牆規則的部署（如果未指定任何規則）。
+. `firewall.create` 和  `firewall.delete` 只有當您不將防火牆規則傳遞給部署，而是選擇讓 Console 為您建立時，才需要這些權限。這些權限位於 Console 帳戶的 .yaml 檔案中。如果您使用共用 VPC 部署 HA 配對，則這些權限將用於為 VPC1、2 和 3 建立防火牆規則。對於所有其他部署，這些權限也將用於為 VPC0 建立規則。
+. 對於 Cloud Tiering ，分層服務帳戶必須在服務帳戶上擁有 `serviceAccount.user`角色，而不僅僅是在專案層級。如果您在專案層級指派 `serviceAccount.user`，則使用 `getIAMPolicy`查詢服務帳戶時不會顯示權限。
 
 
 ====
@@ -583,7 +585,7 @@ link:reference-permissions-gcp.html["代理服務帳號策略"]
 ** 雲端資源管理器 API
 ** 計算引擎 API
 ** 身分識別和存取管理 (IAM) API
-** Cloud Key Management Service (KMS) API（僅當您打算使用 NetApp Backup and Recovery 搭配客戶管理的加密金鑰（CMEK）時才需要）
+** 雲端金鑰管理服務（KMS）API（僅當您打算使用 NetApp Backup and Recovery 搭配客戶管理的加密金鑰（CMEK）時才需要）
 ** Cloud Quotas API（使用 Infrastructure Manager 部署 Cloud Volumes ONTAP 時需要）
 
 
@@ -605,7 +607,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud �
 * 安裝控制台代理程式的 root 權限。
 * 如果控制台代理需要代理才能存取互聯網，則提供有關代理伺服器的詳細資訊。
 +
-您可以選擇在安裝後設定代理伺服器，但這樣做需要重新啟動控制台代理。
+安裝後您可以選擇設定 Proxy 伺服器，但這樣做需要重新啟動 Console 代理程式。
 
 * 如果代理伺服器使用 HTTPS 或代理是攔截代理，則需要 CA 簽署的憑證。
 
@@ -629,9 +631,9 @@ unset https_proxy
 
 . 下載控制台代理軟體，然後將其複製到 Linux 主機。您可以從NetApp Console或NetApp支援網站下載。
 +
-** NetApp Console：前往*代理程式 > 管理 > 部署代理程式 > 本機部署 > 手動安裝*。
+** NetApp Console：前往 *Agents ＞ Management ＞ Deploy agent ＞ On-prem ＞ Manual install*。
 +
-選擇下載代理安裝程式檔案或檔案的 URL。
+選擇下載代理程式安裝程式檔案或複製檔案的 URL。
 
 
 
@@ -640,7 +642,7 @@ unset https_proxy
 NOTE: 下載適用於網路或雲端的「線上」代理安裝程式。NetApp Console 代理還有一個單獨的「離線」安裝程式，但僅支援私有模式部署。
 
 +
-** NetApp支援網站（如果您還沒有存取控制台的權限，則需要此網站） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp支援站點"^] ，
+** NetApp 支援網站（如果您還沒有存取 Console 的權限，則需要此網站） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp支援站點"^]。
 
 
 . 分配運行腳本的權限。
@@ -665,17 +667,17 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 
 
 
-NOTE: 如果要設定透明代理，可以在安裝完成後進行設定。 link:reference-agent-maint-console-proxy.html["了解代理維護控制台"]
+NOTE: 如果您想要設定透明代理伺服器，可以在安裝代理程式後進行。link:reference-agent-maint-console-proxy.html["了解代理維護控制台"]。
 
 +
 
-以下是使用 CA 簽章憑證設定明確代理伺服器的範例：
+以下是使用 CA 簽署憑證設定明確 Proxy 伺服器的範例：
 
 +
 
 [source, cli]
 ----
-./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
 `--proxy` 設定 Console 代理程式以使用下列格式之一的 HTTP 或 HTTPS 代理伺服器：

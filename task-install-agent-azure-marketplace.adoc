@@ -128,7 +128,7 @@ VNet 與子網路:: 建立控制台代理程式時，您需要指定它所在的
 --
 
 
-連接埠:: 除非您啟動它或將其用作代理將AutoSupport訊息從Cloud Volumes ONTAP發送到NetApp支持，否則控制台代理不會有傳入流量。
+連接埠:: 除非您發起請求或將其用作代理以將 AutoSupport 訊息從 Cloud Volumes ONTAP 傳送到 NetApp 支援部門，否則 Console 代理不會接收任何傳入流量。
 +
 --
 * HTTP（80）和 HTTPS（443）提供對本機 UI 的訪問，您會在極少數情況下使用它們。
@@ -142,7 +142,7 @@ VNet 與子網路:: 建立控制台代理程式時，您需要指定它所在的
 --
 
 
-啟用 NTP:: 如果您打算使用NetApp Data Classification來掃描公司資料來源，則應在控制台代理程式和NetApp Data Classification系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
+啟用 NTP:: 如果您打算使用 NetApp Data Classification 掃描企業資料來源，則應在 Console 代理程式和 NetApp Data Classification 系統上啟用網路時間協定（NTP）服務，以便系統之間的時間同步 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["深入瞭解 NetApp Data Classification"^]。
 +
 --
 建立控制台代理程式後實現網路要求。
@@ -348,7 +348,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Azure 入口網站的螢幕截
 . 在*Microsoft Entra ID*服務中，選擇*App Registrations*並選擇應用程式。
 . 複製*應用程式（客戶端）ID*和*目錄（租用戶）ID*。
 +
-image:screenshot_azure_app_ids.gif["螢幕截圖顯示了 Microsoft Entra IDy 中應用程式的應用程式（客戶端）ID 和目錄（租用戶）ID。"]
+image:screenshot_azure_app_ids.gif["螢幕截圖顯示 Microsoft Entra ID 中應用程式的應用程式（client）ID 和目錄（tenant）ID。"]
 
 +
 將 Azure 帳戶新增至控制台時，您需要提供應用程式（用戶端）ID 和應用程式的目錄（租用戶）ID。控制台使用 ID 以程式設計方式登入。

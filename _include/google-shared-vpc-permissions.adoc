@@ -44,9 +44,9 @@ link:reference-permissions-gcp.html["代理服務帳號策略"]
 |===
 筆記：
 
-. 如果您沒有將防火牆規則傳遞給部署並選擇讓控制台為您建立規則，則僅主機專案才需要 deploymentmanager.editor。如果未指定規則， NetApp Console將在主機專案中建立包含 VPC0 防火牆規則的部署。
-. 只有當您未將防火牆規則傳遞給部署並選擇讓控制台為您建立它們時，才需要firewall.create 和firewall.delete。這些權限位於控制台帳戶 .yaml 檔案中。如果您使用共用 VPC 部署 HA 對，這些權限將用於為 VPC1、2 和 3 建立防火牆規則。對於所有其他部署，這些權限也將用於為 VPC0 建立規則。
-. 對於 Cloud Tiering，分層服務帳戶必須在服務帳戶上具有 serviceAccount.user 角色，而不僅僅是在專案層級。目前，如果您在專案層級指派 serviceAccount.user，則使用 getIAMPolicy 查詢服務帳號時不會顯示權限。
+. `deploymentmanager.editor` 僅在主機專案需要時才需要。如果您未將防火牆規則傳遞給部署，而是選擇讓 Console 為您建立規則。NetApp Console 會在主機專案中建立包含 VPC0 防火牆規則的部署（如果未指定任何規則）。
+. `firewall.create` 和  `firewall.delete` 只有當您不將防火牆規則傳遞給部署，而是選擇讓 Console 為您建立時，才需要這些權限。這些權限位於 Console 帳戶的 .yaml 檔案中。如果您使用共用 VPC 部署 HA 配對，則這些權限將用於為 VPC1、2 和 3 建立防火牆規則。對於所有其他部署，這些權限也將用於為 VPC0 建立規則。
+. 對於 Cloud Tiering ，分層服務帳戶必須在服務帳戶上擁有 `serviceAccount.user`角色，而不僅僅是在專案層級。如果您在專案層級指派 `serviceAccount.user`，則使用 `getIAMPolicy`查詢服務帳戶時不會顯示權限。
 
 
 ====

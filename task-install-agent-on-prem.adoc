@@ -49,7 +49,7 @@ NOTE: 控制台代理保留 19000 到 19200 的 UID 和 GID 範圍。這個範�
 
 ** `/var`：必須有 40 GiB 可用空間
 +
-控制台代理需要此空間 `/var`因為 Podman 或 Docker 的設計初衷就是在這個目錄下建立容器。具體來說，他們將在以下位置建立容器： `/var/lib/containers/storage`目錄和 `/var/lib/docker`用於 Docker。外部安裝或符號連結不適用於此空間。
+Console 代理程式需要這部分空間 `/var`，因為 Podman 或 Docker 的設計初衷就是在此目錄下建立容器。具體來說，它們會在 `/var/lib/containers/storage`目錄中建立容器，以及 `/var/lib/docker`用於 Docker。外部掛載或符號連結無法用於此空間。
 
 
 
@@ -135,7 +135,7 @@ Ubuntu
  a| 
 3.9.45 或更高版本， NetApp Console處於標準模式或受限模式
  a| 
-Docker Engine 23.06 至 28.0.0。
+Docker Engine 23.0.6 至 28.0.0。
  a| 
 不支援
 
@@ -167,9 +167,9 @@ Docker Engine 23.0.6 至 28.0.0。
 使用基於 Web 的NetApp Console時從電腦聯繫的端點::
 +
 --
-從 Web 瀏覽器存取控制台的電腦必須能夠聯絡多個端點。您需要使用控制台來設定控制台代理並進行控制台的日常使用。
+透過網頁瀏覽器存取 NetApp Console 的電腦必須能夠連接多個端點。
 
-link:reference-networking-saas-console.html["為NetApp控制台準備網絡"] 。
+link:reference-networking-saas-console.html["為 NetApp Console 準備網路設定"]。
 
 --
 
@@ -307,7 +307,7 @@ Amazon FSx for NetApp ONTAP：
 --
 
 
-連接埠:: 除非您啟動它或將其用作代理將AutoSupport訊息從Cloud Volumes ONTAP發送到NetApp支持，否則控制台代理不會有傳入流量。
+連接埠:: 除非您發起請求或將其用作代理以將 AutoSupport 訊息從 Cloud Volumes ONTAP 傳送到 NetApp 支援部門，否則 Console 代理不會接收任何傳入流量。
 +
 --
 * HTTP（80）和 HTTPS（443）提供對本機 UI 的訪問，您會在極少數情況下使用它們。
@@ -321,7 +321,7 @@ Amazon FSx for NetApp ONTAP：
 --
 
 
-啟用 NTP:: 如果您打算使用NetApp Data Classification來掃描公司資料來源，則應在控制台代理程式和NetApp Data Classification系統上啟用網路時間協定 (NTP) 服務，以便系統之間的時間同步。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["了解有關NetApp資料分類的更多信息"^]
+啟用 NTP:: 如果您打算使用 NetApp Data Classification 掃描企業資料來源，則應在 Console 代理程式和 NetApp Data Classification 系統上啟用網路時間協定（NTP）服務，以便系統之間的時間同步 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["深入瞭解 NetApp Data Classification"^]。
 
 
 
@@ -495,7 +495,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Azure 入口網站的螢幕截
 . 在*Microsoft Entra ID*服務中，選擇*App Registrations*並選擇應用程式。
 . 複製*應用程式（客戶端）ID*和*目錄（租用戶）ID*。
 +
-image:screenshot_azure_app_ids.gif["螢幕截圖顯示了 Microsoft Entra IDy 中應用程式的應用程式（客戶端）ID 和目錄（租用戶）ID。"]
+image:screenshot_azure_app_ids.gif["螢幕截圖顯示 Microsoft Entra ID 中應用程式的應用程式（client）ID 和目錄（tenant）ID。"]
 
 +
 將 Azure 帳戶新增至控制台時，您需要提供應用程式（用戶端）ID 和應用程式的目錄（租用戶）ID。控制台使用 ID 以程式設計方式登入。
@@ -547,7 +547,7 @@ image:screenshot_azure_client_secret.gif["Azure 入口網站的螢幕截圖，�
 
 * 啟用並啟動 podman.socket 服務
 * 安裝python3
-* 安裝 podman-compose 套件版本 1.0.6
+* 安裝 podman-compose 套件（因 Red Hat 版本而異）
 * 將 podman-compose 加入到 PATH 環境變量
 * 如果使用 Red Hat Enterprise Linux，請驗證您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI
 
@@ -719,7 +719,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 * 安裝控制台代理程式的 root 權限。
 * 如果控制台代理需要代理才能存取互聯網，則提供有關代理伺服器的詳細資訊。
 +
-您可以選擇在安裝後設定代理伺服器，但這樣做需要重新啟動控制台代理。
+安裝後您可以選擇設定 Proxy 伺服器，但這樣做需要重新啟動 Console 代理程式。
 
 * 如果代理伺服器使用 HTTPS 或代理是攔截代理，則需要 CA 簽署的憑證。
 
@@ -743,9 +743,9 @@ unset https_proxy
 
 . 下載控制台代理軟體，然後將其複製到 Linux 主機。您可以從NetApp Console或NetApp支援網站下載。
 +
-** NetApp Console：前往*代理程式 > 管理 > 部署代理程式 > 本機部署 > 手動安裝*。
+** NetApp Console：前往 *Agents ＞ Management ＞ Deploy agent ＞ On-prem ＞ Manual install*。
 +
-選擇下載代理安裝程式檔案或檔案的 URL。
+選擇下載代理程式安裝程式檔案或複製檔案的 URL。
 
 
 
@@ -754,7 +754,7 @@ unset https_proxy
 NOTE: 下載適用於網路或雲端的「線上」代理安裝程式。NetApp Console 代理還有一個單獨的「離線」安裝程式，但僅支援私有模式部署。
 
 +
-** NetApp支援網站（如果您還沒有存取控制台的權限，則需要此網站） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp支援站點"^] ，
+** NetApp 支援網站（如果您還沒有存取 Console 的權限，則需要此網站） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp支援站點"^]。
 
 
 . 分配運行腳本的權限。
@@ -779,17 +779,17 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 
 
 
-NOTE: 如果要設定透明代理，可以在安裝完成後進行設定。 link:reference-agent-maint-console-proxy.html["了解代理維護控制台"]
+NOTE: 如果您想要設定透明代理伺服器，可以在安裝代理程式後進行。link:reference-agent-maint-console-proxy.html["了解代理維護控制台"]。
 
 +
 
-以下是使用 CA 簽章憑證設定明確代理伺服器的範例：
+以下是使用 CA 簽署憑證設定明確 Proxy 伺服器的範例：
 
 +
 
 [source, cli]
 ----
-./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
 `--proxy` 設定 Console 代理程式以使用下列格式之一的 HTTP 或 HTTPS 代理伺服器：
@@ -877,7 +877,7 @@ dns_bind_port = 54
 . 選擇*組織憑證*。
 . 選擇“*新增憑證*”並按照精靈中的步驟操作。
 +
-.. *憑證位置*：選擇*Amazon Web Services > 代理程式。
+.. *憑證位置*：選擇*Amazon Web Services > 代理*。
 .. *定義憑證*：輸入 AWS 存取金鑰和金鑰。
 .. *市場訂閱*：透過立即訂閱或選擇現有訂閱將市場訂閱與這些憑證關聯。
 .. *審核*：確認有關新憑證的詳細資訊並選擇*新增*。

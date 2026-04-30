@@ -3,7 +3,7 @@
 
 
 .步驟
-. 前往 https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace 上的NetApp Console代理程式列表"^]
+. 前往  https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace 上的NetApp Console代理程式列表"^]。
 . 在市場頁面上，選擇*繼續訂閱*。
 . 若要訂閱軟體，請選擇*接受條款*。
 +

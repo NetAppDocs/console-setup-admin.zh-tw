@@ -44,7 +44,7 @@ NetApp Data Classification可透過您的訂閱啟用，但使用分類是免費
 +
 image:screenshot_aws_configure_subscription.png["一組現有憑證的操作選單的螢幕截圖。"]
 
-. 若要將憑證與現有訂閱關聯，請從下拉清單中選擇訂閱並選擇*配置*。
+. 若要將認證與現有訂閱建立關聯、請從下拉式清單中選取訂閱、然後選取 * 設定 * 。
 . 若要將憑證與新訂閱關聯，請選擇「新增訂閱」>「繼續」*，然後依照 AWS Marketplace 中的步驟：
 +
 .. 選擇“查看購買選項”。
@@ -80,7 +80,7 @@ image:screenshot_aws_configure_subscription.png["一組現有憑證的操作選�
 +
 您必須選擇與控制台代理程式關聯的憑證。您無法將市場訂閱與與NetApp Console關聯的憑證關聯。
 
-. 若要將憑證與現有訂閱關聯，請從下拉清單中選擇訂閱並選擇*配置*。
+. 若要將認證與現有訂閱建立關聯、請從下拉式清單中選取訂閱、然後選取 * 設定 * 。
 . 若要將憑證與新訂閱關聯，請選擇「新增訂閱」>「繼續」*，然後按照 Azure 市場中的步驟操作：
 +
 .. 如果出現提示，請登入您的 Azure 帳戶。
@@ -128,7 +128,7 @@ image:screenshot_gcp_associate.gif["為 Google Cloud 憑證所選的 Google Clou
 NOTE: 在完成以下步驟之前，請確保您在 Google Cloud 帳戶中同時擁有 Billing Admin 權限以及NetApp Console登入權限。
 
 +
-.. 在您被重定向到 https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud Marketplace 上的NetApp Intelligent Services頁面"^]，確保在頂部導航選單中選擇了正確的項目。
+.. 重新導向至 https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud Marketplace 上的NetApp Intelligent Services頁面"^]後,請確保在頂端導覽功能表中選取正確的專案。
 +
 image:screenshot_gcp_cvo_marketplace.png["Google Cloud 中Cloud Volumes ONTAP市場頁面的螢幕截圖。"]
 
@@ -148,7 +148,7 @@ image:screenshot_gcp_marketplace_register.png["註冊彈出視窗的螢幕截圖
 .. 完成「*訂閱分配*」頁面上的步驟：
 +
 
-NOTE: 如果您組織中的某人已經從您的結算帳戶訂閱了市場，那麼您將被重新導向到 https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["NetApp Console中的Cloud Volumes ONTAP頁面"^]反而。如果這是意外情況，請聯絡您的NetApp銷售團隊。  Google 為每個 Google 結算帳戶僅啟用一項訂閱。
+NOTE: 如果您的組織中已有成員透過您的結算帳戶訂閱了 marketplace ，您將被重新導向到 https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["NetApp Console中的Cloud Volumes ONTAP頁面"^]。如果您對此感到意外，請聯絡您的 NetApp 銷售團隊。Google 每個結算帳戶僅允許一個訂閱。
 
 +
 *** 選擇您想要與此訂閱關聯的控制台組織。

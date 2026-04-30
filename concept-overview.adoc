@@ -153,10 +153,10 @@ NetApp Cloud Tiering 自 2026 年 4 月 26 日起不再提供購買或授權續�
 
 現有客戶可以繼續使用 NetApp Cloud Tiering 並獲得支援,直到其訂閱或授權合約到期。訂閱到期後,客戶將無法再存取 NetApp Cloud Tiering 功能或獲得支援。
 
-NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉換為 ONTAP FabricPool 授權，以提供 ONTAP 中的資料分層功能。如需更多有關如何使用 FabricPool 在 ONTAP 中設定資料分層的資訊，請參閱 link:https://docs.netapp.com/us-en/ontap/fabricpool/install-license-aws-azure-ibm-task.html["在 ONTAP 叢集上安裝 FabricPool 授權"]。
+NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉換為 ONTAP FabricPool 授權，後者提供 ONTAP 中的資料分層功能。有關如何使用 FabricPool 在 ONTAP 中設定資料分層的更多資訊，請參閱link:https://docs.netapp.com/us-en/ontap/fabricpool/install-license-aws-azure-ibm-task.html["在 ONTAP 叢集上安裝 FabricPool 授權"^]。
 
-* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-Notice2.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_9L2PauNXYE0fOs0RIz8KK2q5Jb6sg8Yv-97NNJ53ceAab9UAqpKOrAvByxsOWqhIQHNCHgFfM0q3TI["NetApp Cloud Tiering 停止供應通知"]
-* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-FAQ-v3.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_rplJe_ZtlY4PQAQRQlewsDa0W4JR55muT0KCThR46zI7-uOhIYfVsxODDKFrnYYvy5uZzvhEKHOwBI["NetApp Cloud Tiering 停止供應常見問題集"]
+* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-Notice2.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_9L2PauNXYE0fOs0RIz8KK2q5Jb6sg8Yv-97NNJ53ceAab9UAqpKOrAvByxsOWqhIQHNCHgFfM0q3TI["NetApp Cloud Tiering 停止供應通知"^]
+* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-FAQ-v3.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_rplJe_ZtlY4PQAQRQlewsDa0W4JR55muT0KCThR46zI7-uOhIYfVsxODDKFrnYYvy5uZzvhEKHOwBI["NetApp Cloud Tiering 停止供應常見問題集"^]
 
 
 ====
