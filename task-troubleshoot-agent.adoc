@@ -97,7 +97,7 @@ Docker （適用於 Ubuntu 和 vCenter 部署）::
 docker ps -a
 ----
 --
-Podman（用於 RedHat Enterprise Linux 部署）::
+Podman（適用於 Red Hat Enterprise Linux 部署）::
 +
 --
 [source, cli]
@@ -126,11 +126,14 @@ podman ps -a
 
 Console 代理程式需要存取特定的網路端點、需要開啟多個連接埠，且必須符合硬體需求。您可以從 Console 或使用代理程式維護主控台來驗證 Console 代理程式是否符合這些需求。
 
-link:reference-networking-saas-console.html["了解有關所需網路存取點的更多資訊。"]
+link:reference-networking-saas-console.html["了解有關所需網路存取點的更多資訊。"] link:task-install-agent-on-prem.html#os-req-agent["深入瞭解主機需求。"]
 
 在安裝期間、NetApp 會檢查代理主機至少有 80% 的可用磁碟空間總計、其中包括 48 GB 在 `/opt`和 32 GB 在 `/var`（總計 80 GB）。安裝後、需要至少 20% 的磁碟總計保持可用、其中包括 12 GB 在 `/opt`和 8 GB 在 `/var`（總計 20 GB）。
 
 您也可以使用代理程式維護主控台執行驗證檢查。link:reference-agent-maint-console-config-checker.html["了解更多關於使用 config-checker validate 命令的資訊。"]
+
+
+IMPORTANT: 對於政府雲端客戶（受限模式），NetApp Console 不會驗證受限模式升級端點。您必須手動確認防火牆規則允許存取此端點。link:task-prepare-restricted-mode.html["深入瞭解受限模式所需的網路存取點。"]
 
 
 NOTE: 您只能驗證狀態為「已連線」的代理程式。

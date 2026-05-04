@@ -95,47 +95,14 @@ NetApp建議在防火牆中允許選項 1 端點，因為它們更安全，並�
 |===
 a| \ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io a| 取得控制台代理升級的圖像。
 
-* 當您部署新代理程式時，驗證檢查會測試與目前端點的連線。如果你使用link:reference-networking-saas-console-previous.html["先前的端點"]，驗證檢查失敗。為了避免此失敗，請跳過驗證檢查。
-+
-儘管先前的端點仍然受支持，但NetApp建議盡快將防火牆規則更新至目前端點。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新終端節點列表"] 。
-
 * 當您更新到防火牆中的目前端點時，您現有的代理程式將繼續運作。
 
 
 a| https://occmclientinfragov.azurecr.us https://bluexpinfraprod.azurecr.io a| 取得 Console 代理程式升級的映像。
 
-* 當您部署新代理程式時，驗證檢查會測試與目前端點的連線。如果你使用link:reference-networking-saas-console-previous.html["先前的端點"]，驗證檢查失敗。為了避免此失敗，請跳過驗證檢查。
-+
-儘管先前的端點仍然受支持，但NetApp建議盡快將防火牆規則更新至目前端點。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新終端節點列表"] 。
-
-* 當您更新到防火牆中的目前端點時，您現有的代理程式將繼續運作。
-
-
 ^1^ NetApp建議在防火牆中允許選項 1 端點，因為它們更安全，而不允許選項 2 端點。請注意有關這些端點的以下事項：
 
 + * 從 Console 代理程式 3.9.47 版本開始，系統支援選項 1 中列出的端點。Console 代理程式的早期版本不支援向後相容。* Console 代理程式首先聯絡選項 2 中的端點。如果這些端點無法存取，則會自動聯絡選項 1 中的端點。* 如果您將 Console 代理程式與 NetApp Backup and Recovery 或 Ransomware Resilience 一起使用，則系統不支援選項 1 端點。允許選項 2 端點，並禁止選項 1。
-
-| 如果控制台代理位於 AWS 政府區域：\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
-
-| 當控制台代理安裝在 AWS 政府區域時取得控制台代理升級的映像。
-
-| 如果控制台代理位於 Azure 政府區域：\https://*.blob.core.windows.net \ https://occmclientinfragov.azurecr.us
-
-| 當控制台代理程式安裝在 Azure 政府區域時取得控制台代理程式升級的映像。
-
-a| 如果控制台代理位於商業區域或主權區域，您可以在兩組端點之間進行選擇：
-
-* 選項 1（推薦）^1^
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
-
-* 選項 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
-
-
-
-| 當控制台代理安裝在商業區域或主權區域時，取得控制台代理程式升級的影像。
 
 [cols="3*"]
 |===
@@ -186,6 +153,7 @@ a| 如果控制台代理位於商業區域或主權區域，您可以在兩組�
  a| 
 * \ https://bluexpinfraprod.eastus2.data.azurecr.io
 * \ https://bluexpinfraprod.azurecr.io
+* https://occmclientinfragov.azurecr.us.io（如果處於受限模式環境中）
 
 | 取得控制台代理升級的影像。 
 |===

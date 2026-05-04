@@ -491,16 +491,9 @@ Azure 環境
 
 
  a| 
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+\https://occmclientinfragov.azurecr.us \https://bluexpinfraprod.azurecr.io
  a| 
 取得控制台代理升級的影像。
-
-* 當您部署新代理程式時，驗證檢查會測試與目前端點的連線。如果你使用link:reference-networking-saas-console-previous.html["先前的端點"]，驗證檢查失敗。為了避免此失敗，請跳過驗證檢查。
-+
-儘管先前的端點仍然受支持，但NetApp建議盡快將防火牆規則更新至目前端點。link:reference-networking-saas-console-previous.html#update-endpoint-list["了解如何更新終端節點列表"] 。
-
-* 當您更新到防火牆中的目前端點時，您現有的代理程式將繼續運作。
-
 
 |===
 --

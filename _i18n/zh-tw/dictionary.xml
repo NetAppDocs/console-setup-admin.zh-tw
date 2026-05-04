@@ -165,19 +165,11 @@
   <block id="641d1f191c2b819061a8e9b6046fdbeb" category="paragraph">| 管理 Google Cloud 中的資源。</block>
   <block id="4600c0d23dfe95b8db6f735a4b192742" category="paragraph">a| \ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io a| 取得控制台代理升級的圖像。</block>
   <block id="4691a33bfa50c006ca907ff0f1c2ff22" category="inline-link-macro">了解如何更新終端節點列表</block>
-  <block id="6e9c9d81baee7aa9e962024fc724b7ca" category="paragraph">儘管先前的端點仍然受支持，但NetApp建議盡快將防火牆規則更新至目前端點。<block ref="b264fb455cda46e4971383987c8dce4c" category="inline-link-macro-rx"></block> 。</block>
   <block id="b44e4956810f4ddc108ea4c7e1339c8b" category="list-text">當您更新到防火牆中的目前端點時，您現有的代理程式將繼續運作。</block>
   <block id="27ef411618dcaaeae6016b6063099cd3" category="paragraph">^1^ NetApp建議在防火牆中允許選項 1 端點，因為它們更安全，而不允許選項 2 端點。請注意有關這些端點的以下事項：</block>
-  <block id="9d8771d45517bfb98492c1863dcd84e6" category="paragraph">| 如果控制台代理位於 AWS 政府區域：\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io</block>
-  <block id="d69547f8da7a3fc1f1750b21a40b4d81" category="paragraph">| 當控制台代理安裝在 AWS 政府區域時取得控制台代理升級的映像。</block>
-  <block id="e1e00fbff5d8f3eda49d54653859b8dc" category="paragraph">| 如果控制台代理位於 Azure 政府區域：\https://*.blob.core.windows.net \ https://occmclientinfragov.azurecr.us</block>
-  <block id="95c562cec08a4fe5f10bc4bf63bcd8b1" category="paragraph">| 當控制台代理程式安裝在 Azure 政府區域時取得控制台代理程式升級的映像。</block>
-  <block id="a69993e3de4e29e60253494f1d804482" category="paragraph">a| 如果控制台代理位於商業區域或主權區域，您可以在兩組端點之間進行選擇：</block>
-  <block id="5f6428bd6c6248b828101aca600e81cd" category="list-text">選項 1（推薦）^1^</block>
   <block id="7d9fb0da2a7d9c9f4e35c19e20d063fa" category="paragraph">\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io</block>
   <block id="e24963e40778134b357f4a5eac58e1f5" category="list-text">選項 2</block>
   <block id="136fa3635085015cd64da15749cb05d3" category="paragraph">\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io</block>
-  <block id="6e4b673e0b468e69f5eee0cd8a1bc7be" category="paragraph">| 當控制台代理安裝在商業區域或主權區域時，取得控制台代理程式升級的影像。</block>
   <block id="e30145628db8e56b12ce8e660f2e5fda" category="inline-link-macro">此處列出</block>
   <block id="cf6ace098b5e91cbdb744b6c08dce9e8" category="inline-link-macro">了解如何更新您的網絡</block>
   <block id="5ba4013e86db68ef909f6a62fad996ec" category="list-text">如果您更新防火牆中的端點，您現有的代理程式將繼續運作。</block>
@@ -4073,7 +4065,6 @@
   <block id="0960e06fac3e48e6403802fb4aa8fbde" category="paragraph">有關訪問控制台代理診斷的詳細信息，請參閱以下主題：</block>
   <block id="a25b82d4083e9054d77530a1b1771861" category="inline-link-macro">檢查控制台代理程式狀態（適用於 Linux 主機部署）</block>
   <block id="fb418088b41b8e87851b52debc27d47c" category="list-text"><block ref="fb418088b41b8e87851b52debc27d47c" category="inline-link-macro-rx"></block></block>
-  <block id="0b73ccbc949b18b9ec9f895e07294e36" category="list-text">Podman（用於 RedHat Enterprise Linux 部署）</block>
   <block id="7456d0b67dfbe48185fc6410c811e1dc" category="section-title">查看控制台代理版本</block>
   <block id="23fc9bc00056f19d24e4c3ab8b5ca0c6" category="paragraph">查看控制台代理版本以確認升級或與您的NetApp代表共用。</block>
   <block id="b9b50a4a67814c748f85c0dd361e7931" category="list-text">選擇*管理&gt;支援&gt;代理*。</block>
@@ -4340,7 +4331,6 @@
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識和支持</block>
   <block id="253b718b7b0bb8f190e2ebe1c721295e" category="paragraph">勒索軟體復原角色為使用者提供對NetApp Ransomware Resilience的存取權限。勒索軟體復原能力支援以下角色：</block>
   <block id="16a7e3e925ade6eef4533f96172d423f" category="sidebar">勒索軟體抵禦能力角色</block>
-  <block id="4ed68ecf8e006d0fab7f06897731cf53" category="list-text">當您部署新代理程式時，驗證檢查會測試與目前端點的連線。如果你使用<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block>，驗證檢查失敗。為了避免此失敗，請跳過驗證檢查。</block>
   <block id="a8b7063e167b83f7676ad4659510d5ea" category="sidebar">備份和還原角色</block>
   <block id="ffce0d237e59f85993727b9607fade6c" category="sidebar">災難復原角色</block>
   <block id="ea765af20d763fe16d94ba9ef03fd31b" category="paragraph"><block ref="ea765af20d763fe16d94ba9ef03fd31b" category="inline-image-macro-rx" type="image"></block></block>
@@ -6192,11 +6182,17 @@
   <block id="fffc3b17829167ae6b45a4b144c7bad7" category="list-text"><block ref="fffc3b17829167ae6b45a4b144c7bad7" category="inline-link-macro-rx"></block></block>
   <block id="3081a7b6bb95ec0d5cf84dc2ea835174" category="list-text">Docker （適用於 Ubuntu 和 vCenter 部署）</block>
   <block id="0128c0d35d7f984db85c5d65138fb691" category="section-title">驗證 Console 代理程式是否符合要求</block>
-  <block id="787bde807a1a57661aeb1e9aa8557b03" category="paragraph"><block ref="787bde807a1a57661aeb1e9aa8557b03" category="inline-link-macro-rx"></block></block>
   <block id="c45122f09d565aa9c39277ed8a04fe96" category="paragraph">如果您仍無法解決 Console 代理程式的問題，建議您聯絡 NetApp 支援部門。NetApp 支援部門可能會要求您提供 Console 代理程式 ID，或要求您將 Console 代理程式記錄傳送給他們（如果他們尚未收到）。</block>
   <block id="550db41d5673daf8fdbc4334a1fbff87" category="paragraph">如果您遇到問題，NetApp 可能會要求您將 AutoSupport 訊息傳送至 NetApp 支援部門以進行疑難排解。</block>
   <block id="97c06a2bee370a00309be22a5d370be9" category="summary">解除安裝 Console 代理程式以疑難排解問題、或從主機永久移除代理程式。您需要使用的步驟取決於您使用的部署模式。從環境中移除 Console 代理程式後、您可以從 Console 中將其移除。</block>
   <block id="42e88fe3980dba2a9d6c7e65cc1f3a04" category="list-text">在 *Overview* 頁面上，選擇已中斷連線的代理程式的操作選單，然後選擇 *Remove agent* 。</block>
   <block id="6b0481da6e57f7d61d264eda118c6c5b" category="paragraph">如果您的網路需求發生變化，請更新 Console 代理程式的 URI。這可以確保對儲存基礎架構進行不間斷、安全且合規的管理。</block>
   <block id="55a14e6b296f723d13dead096a169722" category="paragraph">升級過程中需要重新啟動 Console 代理程式，因此 NetApp Console 在升級期間將無法使用。</block>
+  <block id="530df3726781395191a4e890157aa779" category="list-text">https://occmclientinfragov.azurecr.us.io（如果處於受限模式環境中）</block>
+  <block id="a3bf5c90fa71fd1dac8e77c19a0cae5c" category="inline-link-macro">深入瞭解主機需求。</block>
+  <block id="ed637bdd25ff9b3d6cdb12d0b3117fd4" category="paragraph"><block ref="787bde807a1a57661aeb1e9aa8557b03" category="inline-link-macro-rx"></block> <block ref="2cf3600481d00e694d39bf1acae4604c" category="inline-link-macro-rx"></block></block>
+  <block id="51bc5a08850d61e055a088db3581d040" category="paragraph">\https://occmclientinfragov.azurecr.us \https://bluexpinfraprod.azurecr.io</block>
+  <block id="db454f9269515bb4dec7a10f7a86bc01" category="list-text">Podman（適用於 Red Hat Enterprise Linux 部署）</block>
+  <block id="d92105d2e9772b92b6c636fbe0cfdf2c" category="inline-link-macro">深入瞭解受限模式所需的網路存取點。</block>
+  <block id="befec105cd1e8a7f9d2e63f216085cb8" category="admonition">對於政府雲端客戶（受限模式），NetApp Console 不會驗證受限模式升級端點。您必須手動確認防火牆規則允許存取此端點。<block ref="df5e5876be260d9f3642c620299197c9" category="inline-link-macro-rx"></block></block>
 </blocks>

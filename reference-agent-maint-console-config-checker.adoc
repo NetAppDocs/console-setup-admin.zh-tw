@@ -32,6 +32,8 @@ summary: 您可以使用控制台代理維護控制台來驗證控制台代理�
 
 這 `config-checker validate`此命令可讓您驗證控制台代理的配置。
 
+link:reference-networking-saas-console.html["了解有關所需網路存取點的更多資訊。"] link:task-install-agent-on-prem.html#os-req-agent["深入瞭解主機需求。"]
+
 
 
 === 參數
