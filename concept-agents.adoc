@@ -305,7 +305,7 @@ link:concept-modes.html["了解NetApp Console部署模式"] 了解何時需要�
 
 您的 Console 部署模式、儲存環境和資料主權需求決定了代理程式的部署位置。為了實現組織隔離或滿足業務需求，可以在不同環境中部署多個代理程式。
 
-您可以直接從 NetApp Console、雲端市集，或是在 VCenter 或您本地端手動部署代理程式。link:concept-agent-install-options.html["比較部署方法，為您的環境選擇合適的方法"]。
+您可以直接從 Console、雲端市場部署代理程式，也可以在 vCenter 或內部部署環境中手動部署。link:concept-agent-install-options.html["比較部署方法，為您的環境選擇合適的方法"]。
 
 
 
@@ -313,7 +313,7 @@ link:concept-modes.html["了解NetApp Console部署模式"] 了解何時需要�
 
 在雲端或內部部署代理程式，以橋接與雲端託管 Console SaaS 應用程式的連線。代理程式可啟用進階功能，同時 Console UI 仍可從任何位置存取。
 
-使用 SaaS 應用程式（標準模式）時，您可以直接從 Console 安裝代理程式。您可以將其安裝在 AWS、Azure 或 Google Cloud 上，也可以手動安裝在內部部署環境中您自己的 Linux 主機或 VCenter 環境中。
+使用 SaaS 應用程式（標準模式）時，您可以直接從 Console 安裝代理程式。您可以將其安裝在 AWS、Azure 或 Google Cloud 上，也可以手動安裝在內部部署環境中您自己的 Linux 主機或 vCenter 環境中。
 
 
 

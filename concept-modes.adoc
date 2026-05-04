@@ -140,13 +140,13 @@ NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉�
 | NetApp 分類 | 是的 
 
 
-| NetApp複製與同步 | 是的 
+| NetApp Copy and Sync | 是的 
 
 
 | NetApp Disaster Recovery | 是的 
 
 
-| NetApp 勒索軟體防護 | 是的 
+| NetApp Ransomware Resilience | 是的 
 
 
 | NetApp Replication | 不 
@@ -188,7 +188,7 @@ NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉�
  a| 
 Licenses and subscriptions 管理
 
-* 標準模式支援市場訂閱和 BYOL；但是，支援的授權選項取決於您使用的NetApp資料服務。查看每項服務的文件以了解有關可用許可選項的更多資訊。
+* 標準模式支援 Marketplace 訂閱和自帶授權（BYOL）；但是，支援的授權選項取決於您使用的 NetApp 資料服務。請查閱各項服務的文件，以了解更多可用授權選項的資訊。
 
 | 不 
 
@@ -209,9 +209,6 @@ Licenses and subscriptions 管理
 
 
 | 唯讀模式 | 不 
-
-
-| 通知 | 不 
 |===
 
 
@@ -359,9 +356,6 @@ Licenses and subscriptions 管理
 
 
 | 唯讀模式 | 是的 
-
-
-| 通知 | 不 
 |===
 
 
@@ -615,7 +609,7 @@ NOTE: 標準模式（NetApp Console SaaS 應用程式）支援所有功能。
 | Google 雲端儲存 | 不 | 不 
 
 
-| 內部部署 ONTAP 叢集 | 是的 | 是的 
+| 本地ONTAP集群 | 是的 | 是的 
 
 
 | E系列 | 不 | 不 
@@ -624,7 +618,7 @@ NOTE: 標準模式（NetApp Console SaaS 應用程式）支援所有功能。
 | StorageGRID | 不 | 不 
 
 
-| 工作負載工廠 | 不 | 不 
+| 工作負載 | 不 | 不 
 
 
 .8+| *數據服務* | 備份與還原 | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP磁碟區資料支援的備份目標列表"^] | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["查看ONTAP磁碟區資料支援的備份目標列表"^] 
@@ -633,13 +627,13 @@ NOTE: 標準模式（NetApp Console SaaS 應用程式）支援所有功能。
 | NetApp 分類 | 是的 | 是的 
 
 
-| 複製和同步 | 不 | 不 
+| NetApp Copy and Sync | 不 | 不 
 
 
 | NetApp Disaster Recovery | 不 | 不 
 
 
-| NetApp 勒索軟體防護 | 不 | 不 
+| NetApp Ransomware Resilience | 不 | 不 
 
 
 | NetApp Replication | 是的 | 是的 

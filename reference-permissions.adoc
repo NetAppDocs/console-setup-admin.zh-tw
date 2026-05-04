@@ -160,7 +160,7 @@ link:reference-permissions-azure.html["控制台代理程式的 Azure 權限"]
 |===
 
 
-=== NetApp複製與同步
+=== NetApp Copy and Sync
 
 [cols="20,60,20"]
 |===

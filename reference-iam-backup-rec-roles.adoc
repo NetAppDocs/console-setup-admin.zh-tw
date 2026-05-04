@@ -19,13 +19,13 @@ summary: 您可以為使用者指派以下角色，以便他們存取控制台�
 該服務使用特定於NetApp Backup and Recovery 的以下角色。
 
 * *備份和還原超級管理員*：在NetApp Backup and Recovery中執行任何操作。
-* *備份和還原備份管理員*：在NetApp Backup and Recovery中執行備份到本機快照、複製到二級儲存以及備份到物件儲存作業。
-* *備份和還原復原管理員*：使用NetApp Backup and Recovery復原工作負載。
-* *備份和還原克隆管理*：使用NetApp Backup and Recovery應用程式和資料。
+* *Backup and Recovery 備份管理員*：在 NetApp Backup and Recovery 中執行備份至本機快照、複寫至次要儲存設備、以及備份至物件儲存設備的動作。
+* *Backup and Recovery 還原管理員*：使用 NetApp Backup and Recovery 還原工作負載。
+* *Backup and Recovery 複製管理員*：使用 NetApp Backup and Recovery 複製應用程式和資料。
 * *備份和還原檢視器*：查看NetApp Backup and Recovery中的信息，但不執行任何操作。
 
 
-有關所有NetApp Console訪問角色的詳細信息，請參閱 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["控制台設定和管理文檔"^]。
+如需瞭解所有 NetApp Console 存取角色的詳細資訊，請參閱 link:reference-iam-predefined-roles.html["存取角色"]。
 
 
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-enable-read-only-mode.html 
 keywords: sign up, signing up, sign in, signing in, login with netapp, log in with netapp, create account, account, log in with nss, nss, nss login 
-summary: 要開始使用控制台，第一步是使用您的NetApp支援網站憑證註冊或登錄，或建立NetApp Console登入帳戶。如果您是公司第一個註冊的用戶，您將在控制台中以組織管理員的身份建立一個新組織。如果貴公司已有組織機構，您可以註冊或登入進行存取。 
+summary: 為安全起見，您可以為NetApp Console組織啟用唯讀模式。在唯讀模式下，使用者可以查看資源和設置，但不能進行任何更改。 
 ---
 = 為NetApp Console組織啟用唯讀模式
 :hardbreaks:
@@ -40,70 +40,3 @@ NOTE: 當 NetApp Console 處於私人模式時，唯讀模式無法使用。link
 image:screenshot-read-only-slider.png["螢幕截圖顯示唯讀模式開關處於開啟狀態。"]
 
 
-
-
-
-== 以初始組織管理員身分註冊NetApp Console
-
-如果貴公司還沒有NetApp Console組織，請註冊建立一個。第一個使用者是管理員，負責管理帳號和權限。您可以稍後更新角色並新增管理員。
-
-.步驟
-. 開啟 Web 瀏覽器並前往 https://console.netapp.com["NetApp Console"^]
-. 如果您擁有NetApp支援網站帳戶，請直接在「登入」頁面上輸入與您的帳戶關聯的電子郵件地址。
-+
-控制台會在您首次登入時使用您的NetApp支援網站憑證進行註冊。
-
-. 如果您想透過建立控制台登入來註冊，請選擇*註冊*。
-+
-.. 在*註冊*頁面上，輸入所需資訊並選擇*下一步*。
-+
-
-NOTE: 註冊表格中只允許使用英文字元。
-
-.. 檢查您的收件箱，尋找來自NetApp的電子郵件，其中包含驗證您的電子郵件地址的說明。
-+
-請驗證您的電子郵件地址以完成註冊。
-
-
-
-. 登入後，請閱讀並接受最終用戶許可協議。
-. 在「歡迎」頁面上，建立一個組織。
-. 選擇*讓我們開始吧*。
-
-
-+ 作為首次擔任管理員的用戶，請依照引導流程新增儲存空間、建立控制台代理程式等。 link:task-console-assistant.html["了解如何使用控制台助手。"]
-
-.下一步
-作為管理員，在完成控制台助手中包含的步驟後，您應該規劃身分和存取策略，將使用者新增至您的組織，並指派角色。 link:task-iam-get-started.html["了解NetApp Console的身份和存取管理"]
-
-
-
-== 如果組織已存在，請註冊或登入NetApp Console。
-
-如果貴公司已有NetApp Console組織，請註冊或登入以存取它。您的註冊或登入方式取決於您的公司是否使用身分聯合或擁有NetApp支援網站憑證。如果還沒有，請建立NetApp Console登入帳號。
-
-.步驟
-. 開啟 Web 瀏覽器並前往 https://console.netapp.com["NetApp Console"^]
-. 如果您擁有NetApp支援網站帳戶，或您的公司已設定單一登入 (SSO)，請在「登入」頁面上輸入您關聯的電子郵件地址或 SSO 憑證。依照提示完成登入。
-+
-在這兩種情況下，您都會在初始登入時註冊控制台。
-
-. 如果您想透過建立控制台登入來註冊，請選擇*註冊*。
-+
-.. 在*註冊*頁面上，輸入所需資訊並選擇*下一步*。
-+
-
-NOTE: 註冊表格中只允許使用英文字元。
-
-.. 檢查您的收件箱，尋找來自NetApp的電子郵件，其中包含驗證您的電子郵件地址的說明。
-+
-請驗證您的電子郵件地址以完成註冊。
-
-
-
-. 登入後，請閱讀並接受最終用戶許可協議。
-. 如果系統提示您建立組織，請關閉對話方塊並告知控制台管理員，以便他們可以將您新增至控制台組織並授予您存取權限。 link:task-user-settings.html#contact-admin["了解如何聯絡組織管理員。"]
-
-
-.下一步
-取得組織存取權限後，即可開始管理儲存空間並使用指派給您的資料服務。

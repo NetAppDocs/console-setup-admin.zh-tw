@@ -33,7 +33,7 @@ summary: 如果您的公司政策要求您使用代理伺服器進行所有與�
 
 
 
-IMPORTANT: 一旦配置了代理，您就無法變更代理類型。如果需要變更代理類型，請刪除控制台代理並新增具有新代理類型的新代理程式。
+IMPORTANT: 設定 Proxy 後，您無法變更 Proxy 類型。如果您需要變更 Proxy 類型，則必須移除 Console 代理程式並新增具有新 Proxy 類型的新代理程式。
 
 
 
@@ -115,7 +115,7 @@ IMPORTANT: 一旦配置了代理，您就無法變更代理類型。如果需要
 您可以使用下列方法更新控制台代理現有的透明代理伺服器： `proxy update`透過使用命令來移除透明代理伺服器 `proxy remove`命令。更多信息，請查閱相關文件。link:reference-agent-maint-console-proxy.html["代理維護控制台"] 。
 
 
-IMPORTANT: 一旦配置了代理，您就無法變更代理類型。如果需要變更代理類型，請刪除控制台代理並新增具有新代理類型的新代理程式。
+IMPORTANT: 設定 Proxy 後，您無法變更 Proxy 類型。如果您需要變更 Proxy 類型，則必須移除 Console 代理程式並新增具有新 Proxy 類型的新代理程式。
 
 
 
@@ -127,7 +127,7 @@ IMPORTANT: 一旦配置了代理，您就無法變更代理類型。如果需要
 
 == 啟用直接 API 流量
 
-如果您已將控制台代理程式配置為使用代理伺服器，則可以在控制台代理上啟用直接 API 流量，以便直接向雲端提供者服務發送 API 呼叫，而無需透過代理程式。在 AWS、Azure 或 Google Cloud 中執行的代理程式支援此選項。
+如果您已將 Console 代理程式設定為使用 Proxy 伺服器，則可以在 Console 代理程式上啟用直接 API 流量，以便將 API 呼叫直接傳送至雲端供應商服務，而無需透過 Proxy。在 AWS、Azure 或 Google Cloud 中執行的代理程式均支援此選項。
 
 如果您停用帶有Cloud Volumes ONTAP 的Azure Private Links 並使用服務端點，請啟用直接 API 流量。否則，流量將無法正確路由。
 

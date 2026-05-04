@@ -16,13 +16,13 @@ summary: 勒索軟體復原力提供不同的使用者角色來管理對設定�
 [role="lead"]
 勒索軟體復原角色為使用者提供對NetApp Ransomware Resilience的存取權限。勒索軟體復原能力支援以下角色：
 
-**基線角色**
+*基準角色*
 
 * 勒索軟體復原管理員 - 配置勒索軟體復原設定；調查並回應加密警報
 * 勒索軟體復原力檢視器 - 查看加密事件、報告和發現設置
 
 
-**使用者行為活動角色**link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["可疑用戶活動偵測"^]警報提供對檔案活動事件等資料的可見性；這些警報包括檔案名稱和使用者執行的檔案操作（例如讀取、寫入、刪除、重新命名）。為了限制這些資料的可見性，只有具有這些角色的使用者才能管理或查看這些警報。
+*使用者行為活動角色* link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["可疑用戶活動偵測"^] 警示可提供檔案活動事件等資料的可見性；這些警示包括檔案名稱和使用者執行的檔案動作（例如讀取、寫入、刪除、重新命名）。為了限制此資料的可見性，只有具有這些角色的使用者才能管理或檢視這些警示。
 
 * 勒索軟體恢復用戶行為管理員 - 啟動可疑用戶活動檢測，調查並響應可疑用戶活動警報
 * 勒索軟體恢復用戶行為檢視器 - 查看可疑用戶活動警報
@@ -309,7 +309,7 @@ NOTE: 使用者行為角色不是獨立角色；它們旨在添加到勒索軟�
 
 若要配置可疑使用者行為設定並回應警報，使用者必須具有勒索軟體復原使用者行為管理員角色。要僅查看可疑用戶行為警報，用戶應具有勒索軟體恢復用戶行為查看者角色。
 
-應將使用者行為角色授予具有現有勒索軟體復原管理員或檢視者權限且需要存取link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["可疑用戶活動設定和警報"^]。例如，具有勒索軟體復原管理員角色的使用者應該獲得勒索軟體復原使用者行為管理員角色來配置使用者活動代理並封鎖或解除封鎖使用者。不應將勒索軟體復原使用者行為管理員角色授予勒索軟體復原檢視者。
+使用者行為角色應授予已擁有 Ransomware Resilience 管理員或檢視者權限且需要存取link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["可疑用戶活動設定和警報"^]的使用者。例如，擁有 Ransomware Resilience 管理員角色的使用者應被授予 Ransomware Resilience 使用者行為管理員角色，以便設定使用者活動代理程式並封鎖或解除封鎖使用者。Ransomware Resilience 檢視者不應被授予 Ransomware Resilience 使用者行為管理員角色。
 
 
 NOTE: 若要啟動可疑使用者活動偵測，您必須具有控制台組織管理員角色。

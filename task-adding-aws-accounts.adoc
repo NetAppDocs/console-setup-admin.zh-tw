@@ -14,7 +14,7 @@ summary: 新增和管理 AWS 憑證，以便NetApp Console具有在您的 AWS �
 
 
 [role="lead"]
-新增和管理 AWS 憑證，以便您從NetApp Console部署和管理 AWS 帳戶中的雲端資源。如果您管理多個 AWS Marketplace 訂閱，則可以從「憑證」頁面將每個訂閱指派給不同的 AWS 憑證。
+新增和管理 AWS 憑證，以便您可以從 NetApp Console 部署和管理 AWS 帳戶中的雲端資源。如果您管理多個 AWS Marketplace 訂閱，則可以在「憑證」頁面中將每個訂閱指派給不同的 AWS 憑證。
 
 
 
@@ -99,7 +99,7 @@ NOTE: 如果您從控制台部署了控制台代理，它會自動為您部署�
 
 ==== 透過提供 AWS 金鑰授予權限
 
-如果您想要為 IAM 使用者提供具有 AWS 金鑰的控制台，則需要向該使用者授予所需的權限。控制台 IAM 政策定義了控制台允許使用的 AWS 操作和資源。
+如果您想為 NetApp Console 提供 IAM 使用者的 AWS 金鑰，則需要授予該使用者所需的權限。NetApp Console IAM 原則定義了 NetApp Console 可以使用的 AWS 操作和資源。
 
 如果本機安裝了控制台代理，則必須使用此驗證方法。您不能使用 IAM 角色。
 
@@ -189,7 +189,7 @@ image:screenshot_accounts_switch_aws.png["螢幕截圖顯示在「詳細資料�
 }
 ----
 +
-參考link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html["AWS 身分和存取管理 (IAM) 文檔"^]有關 IAM 中跨帳戶資源存取的詳細資訊。
+如需 IAM 中跨帳戶資源存取的詳細資訊，請參閱 link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html["AWS Identity and Access Management (IAM) 說明文件"^]。
 
 ** 建立一個包含建立控制台代理程式所需權限的策略。
 +
@@ -212,7 +212,7 @@ IAM 角色現在具有所需的權限。<<add-the-credentials,現在您可以將
 為 IAM 角色提供所需的權限後，將角色 ARN 新增至控制台。
 
 .開始之前
-如果您剛剛建立了 IAM 角色，則可能需要幾分鐘才能使用它們。等待幾分鐘，然後將憑證新增至控制台。
+如果您剛剛建立了 IAM 角色，可能需要幾分鐘才能生效。請稍等片刻，然後再將憑證新增至 NetApp Console。
 
 .步驟
 . 選擇“*管理 > 憑證*”。
@@ -232,7 +232,7 @@ image:screenshot-settings-icon-organization.png["顯示控制台右上角的「�
 
 == 在Amazon FSx for ONTAP控制台新增憑證
 
-有關詳細信息，請參閱 https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Amazon FSx for ONTAP 的控制台文檔"^]
+如需詳細資訊，請參閱 https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Amazon FSx for ONTAP 的 Console 說明文件"^]
 
 
 
@@ -292,7 +292,7 @@ image:screenshot_aws_configure_subscription.png["一組現有憑證的操作選�
 
 == 將現有訂閱與您的組織關聯
 
-當您從 AWS Marketplace 訂閱時，流程的最後一步是將訂閱與您的組織關聯。如果您沒有完成此步驟，那麼您就無法在您的組織中使用該訂閱。
+從 AWS Marketplace 訂閱時，最後一步是將訂閱與您的組織建立關聯。如果您未完成此步驟，則無法將該訂閱與您的組織一起使用。
 
 * link:concept-modes.html["了解控制台部署模式"]
 * link:concept-identity-and-access-management.html["了解控制台身分和存取管理"]

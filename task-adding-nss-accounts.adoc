@@ -51,7 +51,7 @@ summary: 將NetApp支援網站帳號與您的NetApp Console組織關聯，以啟
 NOTE: NetApp使用 Microsoft Entra ID 作為特定於支援和授權的身份驗證服務的身份提供者。
 
 .步驟
-. 在*管理 > 支援*中。
+. 選取 *Administration > Support* 。
 . 選擇*NSS 管理*。
 . 選擇*新增 NSS 帳戶*。
 . 選擇“*繼續*”以重定向到 Microsoft 登入頁面。
@@ -65,7 +65,7 @@ NOTE: NetApp使用 Microsoft Entra ID 作為特定於支援和授權的身份驗
 +
 ** 如果您需要刷新登入憑證令牌，還有一個*更新憑證*選項image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["三個水平點的圖標"]菜單。
 +
-使用此選項會提示您再次登入。請注意，這些帳戶的令牌將在 90 天後過期。我們將發布通知來提醒您此事。
+使用此選項將提示您重新登入。請注意，這些帳戶的權杖將在 90 天後過期。屆時您將收到通知提醒。
 
 
 
@@ -95,7 +95,7 @@ NOTE: NetApp使用 Microsoft Entra ID 作為特定於支援和授權的身份驗
 此外，如果您想變更與您的組織關聯的 NSS 帳戶，您可以更新與您的組織關聯的 NSS 憑證。例如，如果與您的 NSS 帳戶關聯的人員已離開您的公司。
 
 .步驟
-. 在*管理 > 支援*中。
+. 選取 *Administration > Support* 。
 . 選擇*NSS 管理*。
 . 對於要更新的 NSS 帳戶，選擇image:icon-action.png["三個並排的點組成的圖標"]然後選擇*更新憑證*。
 . 當出現提示時，選擇「*繼續*」以重新導向至 Microsoft 登入頁面。
@@ -114,7 +114,7 @@ NetApp使用 Microsoft Entra ID 作為與支援和授權相關的身份驗證服
 您必須先將帳戶與控制台關聯。
 
 .步驟
-. 在*管理 > 支援*中。
+. 選取 *Administration > Support* 。
 . 選擇*NSS 管理*。
 . 完成以下步驟來變更 NSS 帳戶：
 +
@@ -139,7 +139,7 @@ image:screenshot-nss-change-account.png["此螢幕截圖顯示了與NetApp支援
 TIP: 當您前往 NSS 管理頁面時，控制台會為表中的每個帳戶產生一個令牌。此令牌包含有關關聯電子郵件地址的資訊。當您離開頁面時，令牌將被刪除。資訊永遠不會被緩存，這有助於保護您的隱私。
 
 .步驟
-. 在*管理 > 支援*中。
+. 選取 *Administration > Support* 。
 . 選擇*NSS 管理*。
 . 對於要更新的 NSS 帳戶，選擇image:icon-action.png["三個並排的點組成的圖標"]然後選擇*顯示電子郵件地址*。您可以使用複製按鈕複製電子郵件地址。
 
@@ -153,7 +153,7 @@ TIP: 當您前往 NSS 管理頁面時，控制台會為表中的每個帳戶產�
 您無法刪除目前與Cloud Volumes ONTAP系統關聯的帳戶。你首先需要<<attach-system-nss-account,將這些系統附加到不同的 NSS 帳戶>>。
 
 .步驟
-. 在*管理 > 支援*中。
+. 選取 *Administration > Support* 。
 . 選擇*NSS 管理*。
 . 對於要刪除的 NSS 帳戶，選擇image:icon-action.png["三個並排的點組成的圖標"]然後選擇*刪除*。
 . 選擇*刪除*進行確認。

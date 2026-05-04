@@ -14,10 +14,10 @@ summary: 新增聯合連線後，您可以在NetApp Console中進行管理。您
 
 
 [role="lead"]
-您可以在NetApp Console中管理您的聯合。您可以停用它，更新過期的憑證，以及在不再需要它時停用它。
+您可以在 NetApp Console 中管理您的聯盟。您可以停用它、更新過期的認證，或在不再需要時將其刪除。
 
 .必備角色
-需要聯盟管理員角色來創建和管理聯盟。聯盟檢視者可以查看聯盟頁面。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
+建立和管理聯盟需要 Federation 管理員角色。Federation 檢視者可以檢視 Federation 頁面。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
 
 您也可以為現有聯盟新增額外的已驗證網域，從而允許您為聯盟連線使用多個網域。
 
@@ -82,7 +82,7 @@ IMPORTANT: 在更新 IdP 之前，請先更新控制台以避免登入問題。�
 .步驟
 . 選擇*管理>身分和存取*。
 . 選擇“*Federation*”選項卡。
-. 選擇操作選單image:button_3_vert_dots.png["帶有三個垂直點的圖標"]旁邊的您想要新增已驗證網域的聯盟，然後選擇*測試連線*。
+. 選擇要測試的聯盟旁邊的動作功能表 image:button_3_vert_dots.png["帶有三個垂直點的圖標"]，然後選擇 *測試連線* 。
 . 選擇*測試*。系統提示您使用公司憑證登入。如果連線成功，您將被重新導向到NetApp Console。如果連線失敗，您會看到錯誤訊息，表示聯合存在問題。
 . 選擇“*完成*”返回“*聯合*”選項卡。
 
@@ -98,7 +98,7 @@ IMPORTANT: 在更新 IdP 之前，請先更新控制台以避免登入問題。�
 .步驟
 . 選擇*管理>身分和存取*。
 . 選擇“*Federation*”選項卡。
-. 選擇操作選單image:button_3_vert_dots.png["帶有三個垂直點的圖標"]在您要新增已驗證網域的聯盟旁邊，然後選擇*停用*。
+. 選擇要停用的聯盟旁邊的動作功能表 image:button_3_vert_dots.png["帶有三個垂直點的圖標"]，然後選擇 *停用* 。
 
 
 
@@ -113,7 +113,7 @@ IMPORTANT: 在更新 IdP 之前，請先更新控制台以避免登入問題。�
 IMPORTANT: 您必須先停用聯合，然後才能刪除它。一旦刪除聯盟，就無法恢復刪除。
 
 .步驟
-. 選擇“管理”>“身份和存取”。
+. 選擇*管理>身分和存取*。
 . 選擇“*Federations*”以查看“*Federations*”頁面。
-. 選擇操作選單image:button_3_vert_dots.png["帶有三個垂直點的圖標"]在您要新增已驗證網域的聯盟旁邊，然後選擇*刪除*。
+. 選擇要刪除的聯盟旁邊的動作功能表 image:button_3_vert_dots.png["帶有三個垂直點的圖標"]，然後選擇 *Delete* 。
 

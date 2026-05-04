@@ -17,14 +17,14 @@ summary: '與您的 PingFederate IdP 提供者聯合，為NetApp Console啟用�
 與您的 PingFederate IdP 提供者聯合，為NetApp Console啟用單一登入 (SSO)。這允許用戶使用他們的公司憑證登入。
 
 .必備角色
-需要聯盟管理員角色來創建和管理聯盟。聯盟檢視者可以查看聯盟頁面。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
+建立和管理聯盟需要 Federation 管理員角色。Federation 檢視者可以檢視 Federation 頁面。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
 
 
 NOTE: 您可以與您的企業 IdP 或NetApp支援網站聯合。  NetApp建議選擇其中一個，但不要同時選擇兩者。
 
 NetApp僅支援服務供應商發起的（SP發起的） SSO。您需要先配置身分提供者以信任NetApp作為服務提供者。然後，您可以在控制台中建立使用身分提供者配置的連線。
 
-您可以使用 PingFederate 設定聯合連接，以啟用控制台的單一登入 (SSO)。這個過程涉及配置您的 PingFederate 伺服器以信任控制台作為服務提供者，然後在控制台中建立連線。
+您可以設定與 PingFederate 的聯合連線，以便為 Console 啟用單一登入（SSO）。此程序包括將您的 PingFederate 伺服器設定為信任 Console 作為服務供應商，然後在 Console 中建立連線。
 
 .開始之前
 * 需要具有管理權限的 IdP 帳號。與您的 IdP 管理員協調以完成這些步驟。
@@ -51,7 +51,7 @@ NetApp僅支援服務供應商發起的（SP發起的） SSO。您需要先配�
 +
 *** 對於 *回覆 URL* 或 *斷言消費者服務 (ACS) URL*，使用 `https://netapp-cloud-account.auth0.com/login/callback`
 *** 對於*登出 URL*，使用 `https://netapp-cloud-account.auth0.com/logout`
-*** 對於*受眾/實體 ID*，使用 `urn:auth0:netapp-cloud-account:<fed-domain-name-saml>`其中 <fed-domain-name-pingfederate> 是聯合的網域名稱。例如，如果您的網域是 `example.com`，受眾/實體 ID 將是 `urn:auth0:netappcloud-account:fed-example-com-pingfederate`。
+*** 對於 *Audience/Entity ID*，請使用 `urn:auth0:netapp-cloud-account:<fed-domain-name-pingfederate>`，其中<fed-domain-name-pingfederate>是聯盟的網域名稱。例如，如果您的網域是 `example.com`，則 Audience/Entity ID 將是 `urn:auth0:netapp-cloud-account:fed-example-com-pingfederate`。
 
 
 .. 複製 PingFederate 伺服器 URL。在控制台中建立連線時，您將需要此 URL。
@@ -59,7 +59,7 @@ NetApp僅支援服務供應商發起的（SP發起的） SSO。您需要先配�
 
 
 . 返回控制台，然後選擇「下一步」來建立連線。
-. 使用 PingFederate 建立連接
+. 建立與 PingFederate 的連線。
 +
 .. 輸入您在上一個步驟中複製的 PingFederate 伺服器 URL。
 .. 上傳 X.509 簽署憑證。證書必須採用 PEM、CER 或 CRT 格式。

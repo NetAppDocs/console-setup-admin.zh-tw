@@ -18,18 +18,18 @@ summary: '要開始使用NetApp Console(SaaS)，請先準備控制台的網絡�
 
 您可以存取由NetApp提供的基於 Web 的控制台，該控制台是軟體即服務 (SaaS) 產品。您可以使用控制台管理混合雲儲存環境並使用NetApp資料服務。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] link:reference-networking-saas-console.html["準備使用NetApp控制台的網絡"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] link:reference-networking-saas-console.html["為使用 NetApp Console 準備網路連接"]
 [role="quick-margin-para"]
-確保存取NetApp控制台的電腦能夠透過網路存取所需的端點。
+請確保存取 NetApp Console 的電腦具有到所需端點的網路存取權限。
 
-link:reference-networking-saas-console.html["了解如何為NetApp控制台配置網路。"]
+link:reference-networking-saas-console.html["了解如何為 NetApp Console 準備網路。"]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] link:task-sign-up-saas.html["註冊並建立組織"]
 [role="quick-margin-para"]
-前往 https://console.netapp.com["NetApp控制台"^] 並註冊。如果系統提示您建立組織，而您認為您的公司已經存在組織，請關閉對話方塊並告知您的組織管理員。如果貴公司目前沒有組織管理員，您可以認領此角色。 link:task-user-settings.html#contact-admin["了解如何聯絡組織管理員。"^]
+前往  https://console.netapp.com["NetApp Console"^] 並註冊。如果系統提示您建立組織，而您認為貴公司已存在組織，請關閉對話方塊並告知您的組織管理員。如果貴公司目前沒有組織管理員，您可以申請擔任此角色。link:task-user-settings.html#contact-admin["了解如何聯絡組織管理員。"^]
 
 [role="quick-margin-para"]
-此時，您已登錄，可以使用NetApp助理開始設定控制台。首先，請將您的NetApp支援帳號與控制台代理程式關聯，以啟用全部功能。
+此時，您已登入並可使用 NetApp 助理開始設定 Console。首先，請關聯您的 NetApp 支援網站帳戶與 Console 代理程式，以啟用完整功能。
 
 如果您選擇不使用NetApp助理或安裝控制台代理，您可以開始管理儲存體並使用Digital Advisor、 Amazon FSx for ONTAP、 Azure NetApp Files等服務。link:concept-agents.html["了解沒有控制台代理您可以做什麼"]。
 

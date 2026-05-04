@@ -20,7 +20,7 @@ summary: 當 Console 代理程式具備出站連線能力時，它會自動升�
 
 == 升級控制台代理
 
-控制台代理程式需要在升級過程中重新啟動，因此NetApp Console在升級期間將無法使用。
+升級過程中需要重新啟動 Console 代理程式，因此 NetApp Console 在升級期間將無法使用。
 
 .步驟
 . 從下載控制台代理軟體 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp支援站點"^]。

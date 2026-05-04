@@ -265,7 +265,7 @@ image:screenshot_azure_client_secret.gif["Azure 入口網站的螢幕截圖，�
 
 
 .結果
-您的服務主體現已設置，您應該已經複製了應用程式（客戶端）ID、目錄（租用戶）ID 和用戶端機密的值。新增 Azure 帳戶時，您需要在控制台中輸入此資訊。
+您的服務主體現已設定完畢，您應該已經複製了應用程式（客戶端）ID、目錄（租用戶）ID 和用戶端機密的值。新增 Azure 帳戶時，您需要在控制台中輸入此資訊。
 
 
 
@@ -297,7 +297,7 @@ image:screenshot_azure_client_secret.gif["Azure 入口網站的螢幕截圖，�
 
 
 .結果
-您可以從「詳細資料和憑證」頁面切換到另一組憑證 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["將系統新增至控制台時"^]
+您可以從「詳細資料和認證」頁面切換到不同的認證集 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["將系統新增至控制台時"^]。
 
 image:screenshot_accounts_switch_azure.gif["螢幕截圖顯示在「詳細資料和憑證」頁面中選擇「編輯憑證」後在憑證之間進行選擇。"]
 

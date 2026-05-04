@@ -456,7 +456,7 @@ NOTE: 控制台操作員是策略中提供的預設名稱。如果您為角色�
 --
 .Azure 服務主體
 --
-向NetApp Console提供您先前設定的 Azure 服務主體的憑證。
+請為 NetApp Console 提供您先前設定的 Azure 服務主體認證。
 
 .步驟
 . 選擇“*管理 > 憑證*”。
@@ -477,7 +477,7 @@ NOTE: 控制台操作員是策略中提供的預設名稱。如果您為角色�
 
 
 .結果
-NetApp Console現在具有代表您在 Azure 中執行操作所需的權限。
+NetApp Console 現在已擁有在 Azure 代表您執行操作所需的權限。
 
 --
 .Google Cloud 服務帳號

@@ -154,7 +154,7 @@ image:screenshot_notification_filters.png["螢幕截圖顯示了通知中心中�
 您必須具有組織管理員角色才能自訂通知設定。
 
 .步驟
-. 選擇*管理>通知設定*。
+. 選擇 *Administration > Notifications settings* 。
 . 選擇*組織使用者*或*其他收件者*。
 +
 *其他收件者*頁面可讓您設定控制台以通知控制台組織的成員。

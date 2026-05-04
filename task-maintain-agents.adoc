@@ -62,7 +62,7 @@ link:reference-agent-default-config.html["了解代理的預設配置"] 。
 例如，當代理資源（CPU、RAM 或磁碟空間）連續 30 分鐘超過其總容量的 90% 時，控制台會通知您。之後，如果資源使用率低於該閾值，則通知中心將顯示通知已解決（綠色）。
 
 
-NOTE: 如果您對修改代理 VM 有任何疑問，請聯絡NetApp支援。
+NOTE: 如果您對修改代理虛擬機器有任何疑問，請聯絡 NetApp 技術支援。
 
 link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#notification-center["了解更多。"^]
 

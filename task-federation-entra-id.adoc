@@ -17,14 +17,14 @@ summary: '與您的 Microsoft Entra ID IdP 提供者聯合，為NetApp Console�
 與您的 Microsoft Entra ID IdP 提供者聯合，為NetApp Console啟用單一登入 (SSO)。這允許用戶使用他們的公司憑證登入。
 
 .必備角色
-需要聯盟管理員角色來創建和管理聯盟。聯盟檢視者可以查看聯盟頁面。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
+建立和管理聯盟需要 Federation 管理員角色。Federation 檢視者可以檢視 Federation 頁面。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
 
 
 NOTE: 您可以與您的企業 IdP 或NetApp支援網站聯合。  NetApp建議選擇其中一個，但不要同時選擇兩者。
 
 NetApp僅支援服務供應商發起的（SP發起的） SSO。您需要先配置身分提供者以信任NetApp作為服務提供者。然後，您可以在控制台中建立使用身分提供者配置的連線。
 
-您可以與 Microsoft Entra ID 建立聯合連接，以啟用控制台的單一登入 (SSO)。這個過程涉及配置您的 Microsoft Entra ID 以信任控制台作為服務提供者，然後在控制台中建立連線。
+您可以設定與 Microsoft Entra ID 的聯合連接，從而為 NetApp Console 啟用單一登入 (SSO)。此過程包括將您的 Microsoft Entra ID 設定為信任 NetApp Console 作為服務提供者，然後在 NetApp Console 中建立連線。
 
 .開始之前
 * 需要具有管理權限的 IdP 帳號。與您的 IdP 管理員協調以完成這些步驟。
@@ -64,7 +64,7 @@ NetApp僅支援服務供應商發起的（SP發起的） SSO。您需要先配�
 +
 .. 註冊 Microsoft Entra ID 應用程式以信任控制台時，請使用下列值：
 +
-*** 對於 *重定向 URL* ，使用 `https://services.cloud.netapp.com`
+*** 對於 *Redirect URL*，請使用 `https://services.cloud.netapp.com`
 *** 對於 *回覆 URL*，使用 `https://netapp-cloud-account.auth0.com/login/callback`
 
 
@@ -77,9 +77,9 @@ NetApp僅支援服務供應商發起的（SP發起的） SSO。您需要先配�
 [discrete]
 ====== 建立連接
 
-. 使用 Microsoft Entra ID 建立連接
+. 建立與 Microsoft Entra ID 的連線。
 +
-.. 輸入您在上一個步驟中建立的客戶端 ID 和客戶端金鑰。
+.. 輸入您在上一個步驟中建立的用戶端 ID 和用戶端密碼。
 .. 輸入 Microsoft Entra ID 網域。
 
 

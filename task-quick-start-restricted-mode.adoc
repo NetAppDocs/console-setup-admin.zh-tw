@@ -34,7 +34,7 @@ summary: 透過準備環境和部署控制台代理，開始以受限模式使�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] link:task-subscribe-restricted-mode.html["訂閱NetApp Intelligent Services（可選）"]
 [role="quick-margin-para"]
-選用：從雲端供應商的市場訂閱 NetApp Intelligent Services，以按小時費率（PAYGO）或透過年度合約支付資料服務費用。NetApp Intelligent Services 包括 NetApp Backup and Recovery、Cloud Volumes ONTAP、NetApp Ransomware Resilience 和 NetApp Disaster Recovery。NetApp Data Classification 包含在您的訂閱中，無需額外付費。
+選用：從雲端供應商的市場訂閱 NetApp Intelligent Services，以每小時費率（PAYGO）或透過年度合約支付資料服務費用。NetApp Intelligent Services 包括 NetApp Backup and Recovery、Cloud Volumes ONTAP、NetApp Ransomware Resilience 和 NetApp Disaster Recovery。NetApp Data Classification 包含在您的訂閱中，無需額外付費。
 
 [NOTE]
 ====
@@ -97,7 +97,7 @@ NetApp Replication
 | *NetApp 支援合約功能* | 無 | 不適用 
 
 
-.12+| *管理功能* | 審計 | 不 
+.11+| *管理功能* | 審計 | 不 
 
 
 | 自動化中心 | 不 
@@ -144,7 +144,4 @@ Licenses and subscriptions 管理
 
 
 | 唯讀模式 | 不 
-
-
-| 通知 | 不 
 |===

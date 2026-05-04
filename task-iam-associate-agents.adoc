@@ -19,7 +19,7 @@ summary: 如果您組織的成員需要在另一個專案中使用控制台代�
 超級管理員和組織管理員可以建立代理，並將任何代理與任何專案或資料夾關聯起來。資料夾或專案管理員只能將現有代理與他們擁有權限的資料夾和項目關聯起來。link:reference-iam-predefined-roles.html["詳細了解資料夾或專案管理員可以完成的操作"]。
 
 
-NOTE: 具有 Org admin 角色的使用者可以將資源新增至資料夾，以將資源與專案關聯的任務委派給該資料夾的 Folder 或 project admin。link:task-iam-manage-folders-projects.html#associate-resource-folder["了解如何將資源與資料夾關聯"]。
+NOTE: 具有 Org admin 角色的使用者可以將資源新增至資料夾，將資源與專案關聯的任務委派給該資料夾的 Folder 或 project admin。link:task-iam-manage-folders-projects.html#associate-resource-folder["了解如何將資源與資料夾關聯"]。
 
 .步驟
 . 選擇*管理>身分和存取*>*代理*。

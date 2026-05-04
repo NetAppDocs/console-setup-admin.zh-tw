@@ -27,7 +27,7 @@ NetApp Console中的身分和存取管理 (IAM) 提供了預先定義的角色�
 | 平台角色 | 職責 
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles["組織管理員"] | 允許使用者不受限制地存取組織內的所有項目和資料夾，為任何項目或資料夾添加成員，以及執行任何任務和使用任何沒有明確關聯角色的資料服務。具有此角色的使用者可以透過建立資料夾和專案、分配角色、新增使用者以及管理系統（如果他們擁有適當的憑證）來管理您的組織。這是唯一可以建立控制台代理的存取角色。 
+| link:reference-iam-platform-roles.html#organization-admin-roles["組織管理員"] | 允許使用者無限制地存取組織內的所有專案和資料夾。可以為任何專案或資料夾新增成員，執行任何任務，並使用任何未明確關聯角色的資料服務。擁有此角色的使用者可以透過建立資料夾和專案、分配角色、新增使用者以及管理系統（如果他們擁有相應的憑證）來管理您的組織。這是唯一可以建立 NetApp Console 代理的存取角色。 
 
 
 | link:reference-iam-platform-roles.html#organization-admin-roles["資料夾或專案管理員"] | 允許使用者不受限制地存取已指派的項目和資料夾。可以將成員新增到他們管理的資料夾或專案中，以及執行任何任務並在他們被指派的資料夾或專案內的資源上使用任何資料服務或應用程式。資料夾或專案管理員無法建立控制台代理。 
@@ -48,7 +48,7 @@ NetApp Console中的身分和存取管理 (IAM) 提供了預先定義的角色�
 | link:reference-iam-platform-roles.html#super-admin-roles["超管理員"] | 為使用者提供管理員角色的子集。此角色專為可能不需要在多個使用者之間分配控制台職責的小型組織而設計。 
 
 
-| link:reference-iam-platform-roles.html#super-admin-roles["超觀眾"] | 為使用者提供子集查看者角色。此角色專為可能不需要在多個使用者之間分配控制台職責的小型組織而設計。 
+| link:reference-iam-platform-roles.html#super-admin-roles["超觀眾"] | 提供使用者一部分檢視者角色。此角色專為規模較小的組織所設計，這些組織可能不需要將 NetApp Console 職責分配給多個使用者。 
 |===
 
 
@@ -104,10 +104,10 @@ NetApp Console中的身分和存取管理 (IAM) 提供了預先定義的角色�
 | link:reference-iam-backup-rec-roles.html["備份和復原管理員"] | 執行本機快照備份、複製到二級儲存以及備份到物件儲存。 
 
 
-| link:reference-iam-backup-rec-roles.html["備份和還原復原管理員"] | 恢復備份和復原中的工作負載。 
+| link:reference-iam-backup-rec-roles.html["備份和還原復原管理員"] | 在 Backup and Recovery 中還原工作負載。 
 
 
-| link:reference-iam-backup-rec-roles.html["備份和還原克隆管理員"] | 在備份和復原中克隆應用程式和資料。 
+| link:reference-iam-backup-rec-roles.html["備份和還原克隆管理員"] | 在 Backup and Recovery 中複製應用程式和資料。 
 
 
 | link:reference-iam-backup-rec-roles.html["備份和還原檢視器"] | 查看備份和復原資訊。 

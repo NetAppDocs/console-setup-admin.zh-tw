@@ -28,7 +28,7 @@ summary: 從您的雲端供應商市場訂閱NetApp Intelligent Services，以�
 NetApp Data Classification可透過您的訂閱啟用，但使用分類是免費的。
 
 .開始之前
-您必須已經部署控制台代理程式才能訂閱資料服務。您需要將市場訂閱與連接到控制台代理的雲端憑證關聯起來。
+您必須已部署 Console 代理程式才能訂閱資料服務。您需要將市場訂閱與連接到 Console 代理程式的雲端認證建立關聯。
 
 [role="tabbed-block"]
 ====

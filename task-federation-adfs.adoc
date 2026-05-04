@@ -17,14 +17,14 @@ summary: '與您的 Active Directory 聯合驗證服務 (AD FS) 聯合，為NetA
 將您的 Active Directory 聯合驗證服務 (AD FS) 與NetApp Console聯合起來，以便為NetApp Console啟用單一登入 (SSO)。這允許用戶使用他們的公司憑證登入控制台。
 
 .必備角色
-需要聯盟管理員角色來創建和管理聯盟。聯盟檢視者可以查看聯盟頁面。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
+建立和管理聯盟需要 Federation 管理員角色。Federation 檢視者可以檢視 Federation 頁面。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
 
 
 NOTE: 您可以與您的企業 IdP 或NetApp支援網站聯合。  NetApp建議選擇其中一個，但不要同時選擇兩者。
 
 NetApp僅支援服務供應商發起的（SP發起的） SSO。首先，配置身分提供者以信任NetApp Console作為服務提供者。然後，使用您的身分提供者的配置在控制台中建立連線。
 
-您可以與 AD FS 伺服器建立聯合，以啟用NetApp Console的單一登入 (SSO)。這個過程涉及配置您的 AD FS 以信任控制台作為服務提供者，然後在NetApp Console中建立連線。
+您可以與您的 AD FS 伺服器設定聯盟，以啟用 NetApp Console 的單一登入（SSO）。此流程包括將您的 AD FS 設定為信任 Console 作為服務提供者，然後在 NetApp Console 中建立連線。
 
 .開始之前
 * 需要具有管理權限的 IdP 帳號。與您的 IdP 管理員協調以完成這些步驟。
@@ -47,7 +47,7 @@ NetApp僅支援服務供應商發起的（SP發起的） SSO。首先，配置�
 . 選擇“下一步”。
 . 在您的 AD FS 伺服器中建立依賴方信任。您可以使用 PowerShell 或在 AD FS 伺服器上手動設定它。有關如何建立信賴方信任的詳細信息，請參閱 AD FS 文件。
 +
-.. 使用以下腳本透過 PowerShell 建立信任：
+.. 使用 PowerShell 執行以下腳本以建立信任關係：
 +
 [source, powershell]
 ----
@@ -56,8 +56,8 @@ AddRelyingParty "urn:auth0:netapp-cloud-account" "https://netapp-cloud-account.a
 ----
 .. 或者，您可以在 AD FS 管理控制台中手動建立信任。建立信任時使用以下NetApp Console值：
 +
-*** 建立依賴信任識別碼時，使用 **YOUR_TENANT** 值： `netapp-cloud-account`
-*** 當您選擇 *啟用對 WS-Federation 的支援* 時，請使用 **YOUR_AUTH0_DOMAIN** 值： `netapp-cloud-account.auth0.com`
+*** 建立 Relying Trust Identifier 時、請使用 *YOUR_TENANT* 值： `netapp-cloud-account`
+*** 選擇 *Enable support for the WS-Federation* 時，請使用 *YOUR_AUTH0_DOMAIN* 值： `netapp-cloud-account.auth0.com`
 
 
 .. 建立信任後，從 AD FS 伺服器複製元資料 URL 或下載聯合元資料檔。您需要此 URL 或檔案來完成控制台中的連線。

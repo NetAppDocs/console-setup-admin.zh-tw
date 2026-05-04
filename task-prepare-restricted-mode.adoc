@@ -625,7 +625,7 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 --
 建立具有所需權限的 Azure 自訂角色。您將把此角色指派給控制台代理 VM。
 
-請注意，您可以使用 Azure 入口網站、Azure PowerShell、Azure CLI 或 REST API 建立 Azure 自訂角色。以下步驟展示如何使用 Azure CLI 建立角色。如果您希望使用其他方法，請參閱 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文件"^]
+請注意，您可以使用 Azure 入口網站、Azure PowerShell、Azure CLI 或 REST API 建立 Azure 自訂角色。以下步驟示範如何使用 Azure CLI 建立角色。如果您希望使用其他方法，請參閱 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文件"^]。
 
 .步驟
 . 如果您打算在自己的主機上手動安裝軟體，請在 VM 上啟用系統指派的託管標識，以便您可以透過自訂角色提供所需的 Azure 權限。

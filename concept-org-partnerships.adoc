@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-org-partnerships.html 
-keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
+keywords: organization partnerships, partner access, Partnership admin role, Partnership viewer role, organization ID, managed service provider, MSP collaboration, reseller access, cross-organization management, delegated administration 
 summary: 透過在NetApp Console中建立組織之間的合作夥伴關係，組織合作夥伴可以跨組織邊界安全地管理NetApp資源，從而簡化協作並增強安全性。 
 ---
 = NetApp Console 中的組織合作夥伴關係

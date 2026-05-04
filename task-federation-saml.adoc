@@ -14,10 +14,10 @@ summary: '與您的 SAML 2.0 IdP 提供者聯合，為NetApp Console啟用單一
 
 
 [role="lead"]
-與您的 SAML 2.0 IdP 提供者聯合，為 NEtApp 控制台啟用單一登入 (SSO)。這允許用戶使用他們的公司憑證登入。
+與您的 SAML 2.0 IdP 提供者聯合，為NetApp Console啟用單一登入 (SSO)。這允許用戶使用他們的公司憑證登入。
 
 .所需角色
-需要聯盟管理員角色來創建和管理聯盟。聯盟檢視者可以查看聯盟頁面。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
+建立和管理聯盟需要 Federation 管理員角色。Federation 檢視者可以檢視 Federation 頁面。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
 
 
 NOTE: 您可以與您的企業 IdP 或NetApp支援網站聯合。你不能與兩者結盟。

@@ -78,16 +78,16 @@ NetApp僅支援服務供應商發起的（SP發起的） SSO。您需要先配�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"]配置您的 IdP 以信任NetApp作為服務提供者
 [role="quick-margin-para"]
-透過建立新應用程式並提供 ACS URL、實體 ID 或其他憑證資訊等詳細信息，將您的身分提供者配置為信任NetApp 。服務提供者資訊因身分提供者而異，因此請參閱特定身分提供者的文件以了解詳細資訊。您需要與您的 IdP 管理員合作來完成此步驟。
+設定您的身分識別提供者以信任 NetApp，方法是建立新的應用程式並提供 ACS URL、實體 ID 或其他認證資訊等詳細資料。服務供應商資訊會因身分識別提供者而異，因此請參閱特定身分識別提供者的文件以取得詳細資料。您需要與 IdP 管理員合作才能完成此步驟。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]在控制台中建立聯合連接
 [role="quick-margin-para"]
 提供來自身分提供者的 SAML 元資料 URL 或檔案以建立連線。此資訊用於建立控制台和您的身分提供者之間的信任關係。您提供的資訊取決於您使用的 IdP。例如，如果您使用 Microsoft Entra ID，則需要提供用戶端 ID、金鑰和網域。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["三"]在控制台中測試您的聯盟
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"] 在 NetApp Console 中測試您的聯盟
 [role="quick-margin-para"]
 在啟用聯合連線之前對其進行測試。使用控制台中聯合頁面上的測試選項來驗證您的測試使用者是否可以成功進行身份驗證。如果測試成功，則可以啟用連線。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["三"]在控制台中啟用您的連接
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] 在 Console 中啟用您的連線
 [role="quick-margin-para"]
 啟用連線後，使用者可以使用其公司憑證登入控制台。

@@ -408,7 +408,7 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 * 證書
 * HTTPS 憑證
 +
-在私有模式下，NetApp Console 只會向您的雲端供應商發送出站流量，以便建立 Cloud Volumes ONTAP 系統。
+在私有模式下、NetApp Console 只會向雲端供應商發送出站流量、以建立 Cloud Volumes ONTAP 系統。
 
 
 
@@ -428,7 +428,7 @@ HTTP (80) 和 HTTPS (443) 提供對 NetApp Console 的存取。如果需要連�
 
 == 步驟 6：準備雲端權限
 
-如果 Console 代理程式安裝在雲端，且您打算建立 Cloud Volumes ONTAP 系統，NetApp Console 需要雲端提供者的權限。您需要在雲端提供者設定權限，然後在安裝 Console 代理程式後將這些權限與該代理程式實例關聯起來。
+如果 Console 代理程式安裝在雲端，且您打算建立 Cloud Volumes ONTAP 系統，NetApp Console 需要雲端提供者的權限。您需要在雲端提供者設定權限，然後在安裝 Console 代理程式後將這些權限與該代理程式執行個體關聯起來。
 
 若要檢視所需步驟，請選取您要用於雲端供應商的驗證選項。
 
@@ -497,7 +497,7 @@ HTTP (80) 和 HTTPS (443) 提供對 NetApp Console 的存取。如果需要連�
 --
 建立具有所需權限的 Azure 自訂角色。將此角色指派給 Console 代理虛擬機器。
 
-請注意，您可以使用 Azure 入口網站、Azure PowerShell、Azure CLI 或 REST API 建立 Azure 自訂角色。以下步驟展示如何使用 Azure CLI 建立角色。如果您希望使用其他方法，請參閱 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文件"^]
+請注意，您可以使用 Azure 入口網站、Azure PowerShell、Azure CLI 或 REST API 建立 Azure 自訂角色。以下步驟示範如何使用 Azure CLI 建立角色。如果您希望使用其他方法，請參閱 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文件"^]。
 
 .步驟
 . 在計劃安裝 Console 代理的虛擬機器上啟用系統指派的託管標識，以便可以透過自訂角色提供所需的 Azure 權限。
@@ -688,7 +688,7 @@ image:screenshot_azure_client_secret.gif["Azure 入口網站的螢幕截圖，�
 
 
 .結果
-您的服務主體現在已設定完成，您應該已經複製了應用程式（client）ID、目錄（tenant）ID，以及 client secret 的值。在您新增 Azure 憑證時，請在 NetApp Console 輸入這些資訊。
+您的服務主體現在已設定完成，您應該已經複製了應用程式（用戶端）ID、目錄（租戶）ID，以及用戶端密鑰的值。在您新增 Azure 認證時，請將這些資訊輸入至 NetApp Console。
 
 --
 .Google Cloud 服務帳號

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-partnerships-resource-access.html 
-keywords: role-based access, partnership access, partner resources, resource access, grant acces, provide partner access, partnership organization 
+keywords: role-based access, partnership access, partner resources, resource access, grant access, provide partner access, partnership organization 
 summary: 您可以透過為合作夥伴使用者指派組織內資料夾和專案的特定角色來授予他們存取權限。 
 ---
 = 為合作夥伴用戶提供資源訪問
@@ -27,7 +27,7 @@ summary: 您可以透過為合作夥伴使用者指派組織內資料夾和專�
 
 您可以按照管理自己的角色的方式來管理合作夥伴組織成員的角色。然而，並非所有角色都適合合作夥伴使用者。特別是，您不能授予合作夥伴使用者允許軟體更新的角色。更新ONTAP軟體通常需要直接網路存取。
 
-您可以為合作夥伴使用者指派以下角色：
+您可以將以下角色指派給合作夥伴使用者：
 
 * link:reference-iam-platform-roles.html#organization-admin-roles["組織管理員"]
 * link:reference-iam-platform-roles.html#organization-admin-roles["資料夾或專案管理員"]
@@ -61,7 +61,7 @@ link:reference-iam-predefined-roles.html["了解有關預定義角色的更多�
 . 選擇*管理>身分和存取*。
 . 選擇*合作關係*。
 . 選擇*合作夥伴關係已啟動*選項卡。
-. 選擇操作選單image:icon-action.png["帶有三個垂直點的圖標"]在您想要查看的已建立的合作關係旁邊，選擇「查看詳細資訊」。
+. 選擇要查看的已建立合作關係旁的操作選單 image:icon-action.png["帶有三個垂直點的圖標"]，然後選擇 *View details*。
 +
 *成員*清單顯示合作夥伴組織已新增至合作夥伴關係的成員。
 
@@ -90,7 +90,7 @@ link:reference-iam-predefined-roles.html["了解有關預定義角色的更多�
 . 選擇*管理>身分和存取*。
 . 選擇*合作關係*。
 . 選擇*合作夥伴關係已啟動*選項卡。
-. 選擇操作選單image:icon-action.png["帶有三個垂直點的圖標"]在您想要查看的已建立的合作關係旁邊，選擇「查看詳細資訊」。
+. 選擇要查看的已建立合作關係旁的操作選單 image:icon-action.png["帶有三個垂直點的圖標"]，然後選擇 *View details*。
 +
 *成員*清單顯示合作夥伴組織已新增至合作夥伴關係的成員。
 

@@ -57,7 +57,7 @@ system configuration backup settings modify -destination <target-location>
 
 == 編輯代理的 URI
 
-如果您的網路需求發生變化，請更新 Console 代理程式的 URI。這可以確保您的儲存基礎架構得到不間斷、安全且合規的管理。
+如果您的網路需求發生變化，請更新 Console 代理程式的 URI。這可以確保對儲存基礎架構進行不間斷、安全且合規的管理。
 
 .步驟
 . 選擇“*管理 > 代理*”。

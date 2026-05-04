@@ -25,7 +25,7 @@ summary: 了解NetApp Console如何使用 Google Cloud 憑證代表您執行操�
 直接從控制台部署控制台代理程式之前，必須具備兩組權限：
 
 . 您需要使用具有從控制台啟動控制台代理權限的 Google 帳戶部署控制台代理程式。
-. 部署控制台代理程式時，系統會提示您選擇 https://cloud.google.com/iam/docs/service-accounts["服務帳戶"^]對於代理控制台從服務帳戶取得權限來建立和管理Cloud Volumes ONTAP系統、使用NetApp備份和還原管理備份等等。透過將自訂角色附加到服務帳戶來提供權限。
+. 部署 Console 代理程式時，系統會提示您為代理程式選擇一個 https://cloud.google.com/iam/docs/service-accounts["服務帳戶"^]。Console 會從服務帳戶取得權限，以建立和管理 Cloud Volumes ONTAP 系統、使用 NetApp Backup and Recovery 管理備份等等。權限是透過將自訂角色附加到服務帳戶來提供。
 
 
 下圖描述了上面第 1 項和第 2 項中所述的權限要求：

@@ -48,7 +48,7 @@ summary: 要解決控制台代理程式的問題，您可以與NetApp支援人�
 嘗試存取代理程式的 IP 位址時會出現此訊息。如果代理沒有正確的網路存取權限或不穩定，則代理程式可能無法初始化。
  a| 
 * 連接到控制台代理。
-* 驗證 Service Manager 服務
+* 驗證服務管理員服務是否處於活動狀態。
 * 驗證代理是否具有所需的網路存取權限。link:reference-networking-saas-console.html["了解有關所需網路存取端點的更多資訊。"]
 
 
@@ -57,7 +57,7 @@ summary: 要解決控制台代理程式的問題，您可以與NetApp支援人�
  a| 
 無法載入代理設定
  a| 
-當您嘗試造訪代理設定頁面時，控制台會顯示此訊息。
+當您嘗試存取 Agent 設定頁面時、NetApp Console 會顯示此訊息。
  a| 
 * 檢查 OCCM 容器是否正在運作並正常運作。
 * 如果問題仍然存在，請聯絡支援人員。
@@ -78,18 +78,18 @@ summary: 要解決控制台代理程式的問題，您可以與NetApp支援人�
 
 == 檢查控制台代理狀態
 
-使用以下命令之一來驗證您的控制台代理。所有服務的狀態都應為「正在運作」。如果不是這種情況，請聯絡NetApp支援。
+使用下列其中一個命令來驗證您的 Console 代理程式。所有服務的狀態都應為 _Running_ 。如果不是這種情況，請聯絡 NetApp 支援人員。
 
 [NOTE]
 ====
 有關訪問控制台代理診斷的詳細信息，請參閱以下主題：
 
 * link:task-maintain-agents.html#connect-linux-host["檢查控制台代理程式狀態（適用於 Linux 主機部署）"]
-* link:task-agent-vm-config.html#connect-vcenter-host["檢查控制台代理程式狀態（針對 VCenter 部署）"]
+* link:task-agent-vm-config.html#connect-vcenter-host["檢查 Console 代理程式狀態（針對 vCenter 部署）"]
 
 
 ====
-Docker（用於 Ubuntu 和 VCenter 部署）::
+Docker （適用於 Ubuntu 和 vCenter 部署）::
 +
 --
 [source, cli]
@@ -126,11 +126,9 @@ podman ps -a
 
 Console 代理程式需要存取特定的網路端點、需要開啟多個連接埠，且必須符合硬體需求。您可以從 Console 或使用代理程式維護主控台來驗證 Console 代理程式是否符合這些需求。
 
-link:reference-networking-saas-console.html["了解有關所需網路存取點的更多資訊。"] 連結：
+link:reference-networking-saas-console.html["了解有關所需網路存取點的更多資訊。"]
 
 在安裝期間、NetApp 會檢查代理主機至少有 80% 的可用磁碟空間總計、其中包括 48 GB 在 `/opt`和 32 GB 在 `/var`（總計 80 GB）。安裝後、需要至少 20% 的磁碟總計保持可用、其中包括 12 GB 在 `/opt`和 8 GB 在 `/var`（總計 20 GB）。
-
-link:reference-networking-saas-console.html["了解有關所需網路存取點的更多資訊。"] 連結：
 
 您也可以使用代理程式維護主控台執行驗證檢查。link:reference-agent-maint-console-config-checker.html["了解更多關於使用 config-checker validate 命令的資訊。"]
 
@@ -210,7 +208,7 @@ systemctl restart netapp-service-manager.service
 
 == 與NetApp支援部門合作
 
-如果您無法解決控制台代理的問題，您可能需要聯絡NetApp支援。  NetApp支援人員可能會要求您提供控制台代理 ID，或者如果他們還沒有控制台代理程式日誌，則要求您將控制台代理程式日誌傳送給他們。
+如果您仍無法解決 Console 代理程式的問題，建議您聯絡 NetApp 支援部門。NetApp 支援部門可能會要求您提供 Console 代理程式 ID，或要求您將 Console 代理程式記錄傳送給他們（如果他們尚未收到）。
 
 
 
@@ -236,7 +234,7 @@ image:screenshot-system-id.png["顯示支援儀表板中出現的系統 ID 的�
 
 === 下載或發送AutoSupport訊息
 
-如果您遇到問題， NetApp可能會要求您向NetApp支援發送AutoSupport訊息以進行故障排除。
+如果您遇到問題，NetApp 可能會要求您將 AutoSupport 訊息傳送至 NetApp 支援部門以進行疑難排解。
 
 
 NOTE: 由於負載平衡， NetApp Console最多需要五個小時才能發送AutoSupport訊息。對於緊急通信，請下載文件並手動發送。
@@ -260,7 +258,7 @@ NOTE: 由於負載平衡， NetApp Console最多需要五個小時才能發送Au
 .步
 . 向 /occm/config 提交 PUT 請求，並將以下 JSON 作為正文：
 +
-[source]
+[source, json]
 ----
 {
   "maxDownloadSessions": 32

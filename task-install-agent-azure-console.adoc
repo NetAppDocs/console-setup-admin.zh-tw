@@ -168,7 +168,7 @@ link:reference-networking-saas-console.html["從 NetApp Console 檢視已聯絡�
 
 控制台在 Azure 中部署控制台代理虛擬機，啟用 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["系統分配的託管標識"^]，建立所需的角色，並將其指派給虛擬機器。link:reference-permissions-azure.html["查看控制台如何使用權限"] 。
 
-請注意，您可以使用 Azure 入口網站、Azure PowerShell、Azure CLI 或 REST API 建立 Azure 自訂角色。以下步驟展示如何使用 Azure CLI 建立角色。如果您希望使用其他方法，請參閱 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文件"^]
+請注意，您可以使用 Azure 入口網站、Azure PowerShell、Azure CLI 或 REST API 建立 Azure 自訂角色。以下步驟示範如何使用 Azure CLI 建立角色。如果您希望使用其他方法，請參閱 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure 文件"^]。
 
 .步驟
 . 複製 Azure 中新自訂角色所需的權限並將其保存在 JSON 檔案中。
@@ -455,9 +455,9 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=L
 
 .步驟
 . 選擇“*管理 > 代理*”。
-. 在“概述”頁面上，選擇“部署代理”>“Azure”
+. 在 *Overview* 頁面上，選擇 *Deploy agent > Azure*。
 . 在*審核*頁面上，審核部署代理程式的要求。這些要求也在本頁上方詳細說明。
-. 在「虛擬機器驗證」頁面上，選擇與您設定 Azure 權限的方式相符的驗證選項：
+. 在 *Virtual Machine Authentication* 頁面上，選擇與您設定 Azure 權限的方式相符的驗證選項：
 +
 ** 選擇*登入*登入您的 Microsoft 帳戶，該帳戶應具有所需的權限。
 +
@@ -481,22 +481,19 @@ TIP: 如果您已經登入 Azure 帳戶，則控制台會自動使用該帳戶�
 
 . 在「虛擬機器驗證」頁面上，選擇 Azure 訂閱、位置、新資源群組或現有資源群組，然後為您正在建立的控制台代理虛擬機器選擇驗證方法。
 +
-虛擬機器的身份驗證方法可以是密碼或 SSH 公鑰。
++ 虛擬機器的驗證方法可以是密碼或 SSH 公開金鑰。
 
 +
-https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["了解如何連接到 Azure 中的 Linux VM"^]
++ https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["了解如何連接到 Azure 中的 Linux VM"^]
 
-. 在「詳細資料」頁面上，輸入代理的名稱，指定標籤，並選擇是否希望控制台建立具有所需權限的新角色，或是否要選擇您設定的現有角色link:reference-permissions-azure.html["所需的權限"]。
+. 在「詳細資料」頁面上，輸入代理程式的名稱、指定標籤，並選擇是否要讓 Console 建立具有所需權限的新角色，或是要選取您使用 link:reference-permissions-azure.html["所需的權限"] 設定的現有角色。
 +
 請注意，您可以選擇與此角色關聯的 Azure 訂閱。您選擇的每個訂閱都會為控制台代理提供管理該訂閱中的資源的權限（例如， Cloud Volumes ONTAP）。
 
 . 在「*網路*」頁面上，選擇 VNet 和子網，是否啟用公用 IP 位址，並可選擇指定代理設定。
-+
-** 在「安全群組」頁面上，選擇是否建立新的安全性群組或是否選擇允許所需入站和出站規則的現有安全性群組。
+. 在「安全群組」頁面上，選擇是否建立新的安全性群組或是否選擇允許所需入站和出站規則的現有安全性群組。
 +
 link:reference-ports-azure.html["查看 Azure 的安全性群組規則"] 。
-
-
 
 . 檢閱您的選擇，以確認您的設定是否正確。
 +

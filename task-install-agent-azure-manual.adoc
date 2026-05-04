@@ -22,7 +22,7 @@ summary: 要在您自己的 Linux 主機上手動安裝控制台代理，您需�
 NOTE: 在與 Cloud Volumes ONTAP 系統相同的 Azure 區域中部署 Console 代理程式，或在 https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure 區域對"^]中部署。這樣可以確保 Cloud Volumes ONTAP 與其相關儲存帳戶之間使用 Azure Private Link 連線。
 
 .開始之前
-* link:concept-agent-install-options.html#agent-cloud-manual-deploy["了解何時需要在 Azure 中手動部署"]。
+* link:concept-agent-install-options.html#agent-cloud-manual-deploy["了解何時在 Azure 中手動部署"]。
 * 你應該回顧一下link:reference-limitations.html["控制台代理限制"]。
 
 
@@ -670,7 +670,7 @@ image:screenshot_azure_client_secret.gif["Azure 入口網站的螢幕截圖，�
 
 
 .結果
-您的服務主體現已設置，您應該已經複製了應用程式（客戶端）ID、目錄（租用戶）ID 和用戶端機密的值。新增 Azure 帳戶時，您需要在控制台中輸入此資訊。
+您的服務主體現已設定完畢，您應該已經複製了應用程式（客戶端）ID、目錄（租用戶）ID 和用戶端機密的值。新增 Azure 帳戶時，您需要在控制台中輸入此資訊。
 
 --
 ====

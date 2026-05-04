@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-federation-verify-domain.html 
 keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
-summary: 您只能使用已驗證的網域進行聯合。如果您想與不同於您的電子郵件網域的網域聯合，您必須先驗證您擁有該網域。您只能使用已驗證的網域進行聯合。 
+summary: 如果您想與與您的電子郵件網域不同的網域進行聯盟，則必須先驗證您擁有該網域。您只能使用已驗證的網域進行聯盟。 
 ---
 = 驗證聯合連線的電子郵件網域
 :hardbreaks:
@@ -14,14 +14,14 @@ summary: 您只能使用已驗證的網域進行聯合。如果您想與不同�
 
 
 [role="lead"]
-如果您想要與不同於您的電子郵件網域的網域聯合，您必須先驗證您擁有該網域。您只能使用已驗證的網域進行聯合。
+如果您想與與您的電子郵件網域不同的網域進行聯盟，則必須先驗證您擁有該網域。您只能使用已驗證的網域進行聯盟。
 
 .必備角色
-需要聯盟管理員角色來創建和管理聯盟。聯盟檢視者可以查看聯盟頁面。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
+建立和管理聯盟需要 Federation 管理員角色。Federation 檢視者可以檢視 Federation 頁面。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
 
 驗證您的網域名稱涉及向您的網域的 DNS 設定新增 TXT 記錄。此記錄用於證明您擁有該網域並允許NetApp Console信任該網域進行聯合。您可能需要與您的 IT 或網路管理員協調來完成此步驟。
 
-例如，如果使用 Microsoft Entra ID，您可以按照 Microsoft 文件link:https://learn.microsoft.com/en-us/entra/fundamentals/add-custom-domain["使用 Microsoft Entra ID 新增網域"]中的步驟進行操作。
+例如，如果使用 Microsoft Entra ID，您可以遵循 Microsoft 文件 https://learn.microsoft.com/en-us/entra/fundamentals/add-custom-domain["使用 Microsoft Entra ID 新增網域"^]中的步驟。
 
 .步驟
 . 選擇*管理>身分和存取*。
