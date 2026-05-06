@@ -102,7 +102,7 @@ VNet 與子網路:: 建立控制台代理程式時，您需要指定它所在的
 
 
  a| 
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us （受限模式部署需要）
  a| 
 取得控制台代理升級的影像。
 

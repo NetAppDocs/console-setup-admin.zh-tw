@@ -114,7 +114,7 @@ NOTE: 您無法使用安裝在本機的 Console 代理程式來管理 Google Clo
 
 
  a| 
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us （受限模式部署需要）
  a| 
 取得控制台代理升級的影像。
 

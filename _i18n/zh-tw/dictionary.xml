@@ -163,9 +163,7 @@
   <block id="2b7f6d951b3a705af72cb63a7d0788dd" category="paragraph">| \ https://management.chinacloudapi.cn \ https://login.chinacloudapi.cn \ https://blob.core.chinacloudapi.cn \ https://core.chinacloudapi.cn</block>
   <block id="6fc418bd4d8d26d716d678ffb2c516e9" category="paragraph">| 管理 Azure 中國區域的資源。</block>
   <block id="641d1f191c2b819061a8e9b6046fdbeb" category="paragraph">| 管理 Google Cloud 中的資源。</block>
-  <block id="4600c0d23dfe95b8db6f735a4b192742" category="paragraph">a| \ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io a| 取得控制台代理升級的圖像。</block>
   <block id="4691a33bfa50c006ca907ff0f1c2ff22" category="inline-link-macro">了解如何更新終端節點列表</block>
-  <block id="b44e4956810f4ddc108ea4c7e1339c8b" category="list-text">當您更新到防火牆中的目前端點時，您現有的代理程式將繼續運作。</block>
   <block id="27ef411618dcaaeae6016b6063099cd3" category="paragraph">^1^ NetApp建議在防火牆中允許選項 1 端點，因為它們更安全，而不允許選項 2 端點。請注意有關這些端點的以下事項：</block>
   <block id="7d9fb0da2a7d9c9f4e35c19e20d063fa" category="paragraph">\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io</block>
   <block id="e24963e40778134b357f4a5eac58e1f5" category="list-text">選項 2</block>
@@ -180,29 +178,18 @@
   <block id="261addf78c7b2c961032b3dd08ba0b1f" category="cell">目的</block>
   <block id="d03b3625d28d43168905850da108e917" category="cell">\ https://mysupport.netapp.com</block>
   <block id="9cc9c0e125bb6d31323499f95f0c430e" category="cell">\ https://signin.b2c.netapp.com</block>
-  <block id="9989a1605407297325e31ec5b9d20c1b" category="cell">（此端點是https://mysupport.netapp.com的 CNAME URL）</block>
   <block id="648b7f3d6699305c92d33129e6ea00fe" category="cell">\ https://cloudmanager.cloud.netapp.com/tenancy</block>
   <block id="aeed9abd051a5ff37a94ee8ea302bdd8" category="cell">\ https://stream.cloudmanager.cloud.netapp.com</block>
   <block id="49fa0b884bb05dfb3678aff69fc2a90f" category="cell">\ https://production-artifacts.cloudmanager.cloud.netapp.com</block>
-  <block id="947479331852b9cc69da9bbd894654d1" category="list-text">選項 1（建議）：</block>
   <block id="534d469c55031860cef85b868a9332d8" category="list-text">\ https://bluexpinfraprod.eastus2.data.azurecr.io</block>
   <block id="a86a33f4f6d9c203eb747987b6d104ca" category="list-text">\ https://bluexpinfraprod.azurecr.io</block>
-  <block id="eb499f7aadd76ba50d5925ea6552dcff" category="list-text">選項 2：</block>
   <block id="f55e31da35f47937201bdbf54e964315" category="list-text">\https://*.blob.core.windows.net</block>
   <block id="9dcb0a1d3281e001a6085626a264be49" category="list-text">\ https://cloudmanagerinfraprod.azurecr.io</block>
-  <block id="f229192e27e1c177beb735ee19edb0e5" category="paragraph">為了獲取映像，安裝程式需要存取這兩組端點中的一組。 ^1^ 建議使用選項 1 中列出的端點，因為它們更安全。我們建議您設定防火牆以允許選項 1 中所列的端點，同時禁止選項 2 中所列的端點。請注意有關這些端點的以下事項：</block>
-  <block id="4049213cb8cd68d3d11532c6f66c0ae4" category="list-text">控制台代理程式首先聯絡選項 2 中所列的端點。如果這些端點不可訪問，控制台代理程式會自動聯繫選項 1 中列出的端點。</block>
-  <block id="cf192a52b6f25a28eb967a03444e7da2" category="list-text">如果您將控制台代理程式與NetApp Backup and Recovery或NetApp Ransomware Resilience一起使用，則不支援選項 1 中的端點。在這種情況下，您可以禁止選項 1 中列出的端點，同時允許選項 2 中列出的端點。</block>
   <block id="3af42b7f858ea75013b8facec6ca0048" category="list-text">當您在自己的 Linux 主機上手動安裝控制台代理程式時，控制台代理程式的安裝程式在安裝過程中需要存取多個 URL。</block>
   <block id="9f116bfe192eb1d0b2c905df5d192487" category="cell">此端點是 \ https://mysupport.netapp.com的 CNAME URL</block>
   <block id="b2a31fe7605db4877c0f7d8023478b76" category="cell">*AWS 政府區域* 如果您在 AWS 政府區域安裝控制台代理，則安裝程式也需要存取下列端點：</block>
   <block id="130e683d238653858967a73af6293939" category="cell">*Azure 政府區域* 如果在 Azure 政府區域中安裝控制台代理，則安裝程式也需要存取以下端點：</block>
   <block id="1f29f58c7cdabd46095c6ad242933991" category="paragraph">\ https://occmclientinfragov.azurecr.us</block>
-  <block id="5ba19e583c755396882d30a7b2586fd7" category="cell">*商業或主權區域* 如果您在商業區域或主權區域安裝控制台代理，則可以在兩組端點之間進行選擇：</block>
-  <block id="12e72c401fe49717131f2676bb6a8099" category="paragraph">**選項 1（建議）：** * \ https://bluexpinfraprod.eastus2.data.azurecr.io * \ https://bluexpinfraprod.azurecr.io</block>
-  <block id="b31abacefc029dd7ae51036ddd3ad27a" category="paragraph">**選項 2：** * \https://*.blob.core.windows.net * \ https://cloudmanagerinfraprod.azurecr.io</block>
-  <block id="f079ba6f508e4d8fffaecae1a59c5bf3" category="paragraph">建議使用選項 1 中列出的端點，因為它們更安全。我們建議您設定防火牆以允許選項 1 中所列的端點，同時禁止選項 2 中所列的端點。請注意有關這些端點的以下事項：</block>
-  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
   <block id="35bd57a4dcfbd7a695f9beb7d01913c6" category="paragraph">主機可能會在安裝期間嘗試更新作業系統包。主機可以聯絡不同的鏡像網站來取得這些作業系統包。</block>
   <block id="4d3e424d70b837e22ea9a110aa0a155d" category="list-text">選擇*管理&gt;身分和存取*。</block>
   <block id="398721ebe5d01d65e8258e9cb90c48d2" category="list-text">選擇“*Federation*”以查看“*Federations*”頁面。</block>
@@ -3108,7 +3095,6 @@
   <block id="4edfdeb74f014e9408efa692c71a9d2e" category="admonition">必須為使用者指派至少一個角色。您無法刪除使用者的所有角色。如果您需要刪除所有角色，則必須從組織中刪除該使用者。</block>
   <block id="2be01e6baa22b9b0a4f0a2c054fe7289" category="summary">如果需要，您可以變更NetApp Console組織的名稱。</block>
   <block id="1920da3586c2e2872f88b02997c971c3" category="doc">組織和專案 ID</block>
-  <block id="d1f35fea71ad4d3c53dfce45e3c8b312" category="paragraph">您的NetApp Console組織有一個名稱和一個 ID。您可以為您的組織選擇一個名稱以幫助識別它。您可能還需要檢索某些整合的組織 ID。</block>
   <block id="902a8ce7390bb726da2910b3ec25aae6" category="section-title">重新命名您的組織</block>
   <block id="8bf336ab115156eac88db2970ab0e70d" category="list-text">從「組織」頁面，導覽至表格的第一行，選擇<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>然後選擇*編輯組織*。</block>
   <block id="b9669849e9961b7f3f4dc1a2f6787c34" category="list-text">輸入新的組織名稱並選擇*套用*。</block>
@@ -4850,7 +4836,6 @@
   <block id="5d3a908b240fe98ac0740455635b4cc0" category="list-text">如果仍有問題，請聯絡客服。</block>
   <block id="13ab9425db1c4ad9c7ca529999f6de24" category="list-text">確認代理程式擁有所需端點的出站存取權。<block ref="c7fe41b97889c23a57defbbf2129845e" category="inline-link-macro-rx"></block></block>
   <block id="cb4e992a592d7b26e6c218cdde9ee1b5" category="inline-link-macro">了解更多關於使用 config-checker validate 命令的資訊。</block>
-  <block id="2c8b526b02d94d86279aebb87311c90d" category="admonition">您只能驗證狀態為「已連線」的代理程式。</block>
   <block id="2256ce9e5331fffeb7ded438ec67c9bf" category="list-title">控制台操作步驟</block>
   <block id="80ed8e269497520c11a5f07aaac10ca9" category="list-text">選擇要檢查的控制台代理程式的操作選單，然後選擇「驗證」。</block>
   <block id="5dfebfd3b68f37eb76c1cbde60947384" category="inline-image-macro">螢幕截圖顯示了代理「操作」選單中的「驗證」選項。</block>
@@ -5213,12 +5198,6 @@
   <block id="3cb937c3382e580784aa7486c365ec19" category="paragraph"><block ref="3cb937c3382e580784aa7486c365ec19" category="inline-link-macro-rx"></block></block>
   <block id="1b074cef0a39f307bf3f23d76207e4f6" category="sidebar">預設代理程式配置</block>
   <block id="cf6adff661a596f01b211beffb99d879" category="paragraph">如果您的網路需要代理才能存取互聯網，則需要新增代理資訊。您可以在安裝過程中明確新增代理程式。<block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix=" " category="inline-code"></block>和<block ref="a2bb8d2428da5c2a723c47bd3b78308d" prefix=" " category="inline-code"></block>參數是可選的，系統不會提示您新增。如果您有明確的代理伺服器，則需要以所示方式輸入參數。</block>
-  <block id="55ccbb5c67dea0ea25dc1703475c6f80" category="paragraph">+<block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix=" " category="inline-code"></block> 設定 Console 代理程式以使用下列格式之一的 HTTP 或 HTTPS 代理伺服器：</block>
-  <block id="f1c3efde333f7f855c03b55ae236bf19" category="paragraph">+ * \http://address:port * \http://user-name:password@address:port * \http://domain-name%92user-name:password@address:port * \https://address:port * \https://user-name:password@address:port * \https://domain-name%92user-name:password@address:port</block>
-  <block id="b968056bd5b82381c88e0c9d86ac33b7" category="paragraph">+ 請注意以下事項：</block>
-  <block id="40555c907279e68c131ed885fbd297f2" category="paragraph">+ ** 使用者可以是本機使用者或網域使用者。** 對於網域使用者，您必須使用如上所示的 \ ASCII 碼。** Console 代理程式不支援包含 @ 字元的使用者名稱或密碼。** 如果密碼包含以下任何特殊字元，您必須在其前面加上反斜線以進行轉義：&amp; 或 !</block>
-  <block id="2c21faf59a15a9c898da7576148c66a6" category="paragraph">+ 例如：</block>
-  <block id="3f8f6b484a02379b30f40e52234f6023" category="paragraph">+ \http://bxpproxyuser:netapp1\!@address:3128</block>
   <block id="b7dbcbc4cff4a1c8e5622a89842cfa05" category="section-title">僅 Cloud Volumes ONTAP 支援 SSL 解密</block>
   <block id="8b497b868891e9ffde67fbc8a398c594" category="paragraph">僅支援與 Cloud Volumes ONTAP 關聯的代理使用透明代理伺服器。如果代理也與其他 NetApp 資料服務一起使用，則無法為其使用透明代理。如果您將 NetApp 資料服務與 Cloud Volumes ONTAP 搭配使用，請為 Cloud Volumes ONTAP 建立專用代理，以便使用透明代理伺服器。</block>
   <block id="362cb79b6626c8ace583ce4914bc2e72" category="list-text">Cloud Quotas API（使用 Infrastructure Manager 部署 Cloud Volumes ONTAP 時需要）</block>
@@ -5898,7 +5877,6 @@
   <block id="5ad41271522acbc853e7c4a84763f339" category="paragraph">| https://mysupport.netapp.com | 取得授權資訊並將 AutoSupport 訊息傳送至 NetApp 支援。| https://signin.b2c.netapp.com | 更新 NetApp 支援網站（NSS）認證或將新的 NSS 認證新增至 NetApp Console。| https://support.netapp.com | 取得授權資訊並將 AutoSupport 訊息傳送至 NetApp 支援，同時接收 Cloud Volumes ONTAP 的軟體更新。</block>
   <block id="7aed309254b98f77dbd3d77a03d50dfd" category="list-text">選項 1 端點在 3.9.47 及更高版本中受到支援。3.9.47 之前的版本不支援向後相容性。</block>
   <block id="0077f7d38869cf9790e55cbfea881bf4" category="list-text">Console 代理程式首先聯絡選項 2 中的端點。如果這些端點無法存取，則會自動聯絡選項 1 中的端點。</block>
-  <block id="fe419db71f7d4484d61cbf89fbff3ac3" category="paragraph">a| https://occmclientinfragov.azurecr.us https://bluexpinfraprod.azurecr.io a| 取得 Console 代理程式升級的映像。</block>
   <block id="d29ad0dfb0326845a0e0541c9a73346f" category="paragraph">+ * 從 Console 代理程式 3.9.47 版本開始，系統支援選項 1 中列出的端點。Console 代理程式的早期版本不支援向後相容。* Console 代理程式首先聯絡選項 2 中的端點。如果這些端點無法存取，則會自動聯絡選項 1 中的端點。* 如果您將 Console 代理程式與 NetApp Backup and Recovery 或 Ransomware Resilience 一起使用，則系統不支援選項 1 端點。允許選項 2 端點，並禁止選項 1。</block>
   <block id="7c196962ef71a676aa44930111ed62ec" category="paragraph">使用 NetApp Console 的身分識別與存取管理（IAM）功能，根據您的業務結構（按地點、部門或專案）組織 NetApp 資源並控制存取。</block>
   <block id="236a948a43c96e218fc04221bf59fe7c" category="admonition">您必須擁有 _Super admin_ 、 _Organization admin_ 或 _Folder or project admin_ 角色，才能在 NetApp Console 中管理 IAM 。</block>
@@ -5980,7 +5958,6 @@
   <block id="3f58924667abe02b47c4307cb9e4e753" category="paragraph">透過網頁瀏覽器存取 NetApp Console 的電腦必須能夠連接多個端點。</block>
   <block id="b26bd0592d66bf1b967e5025cc7e96c3" category="inline-link-macro">為 NetApp Console 準備網路設定</block>
   <block id="9ce61524b745e886629d67ddbb08ee3e" category="paragraph"><block ref="2dfc71fdb1a842a2b8ee7de31773f262" category="inline-link-macro-rx"></block>。</block>
-  <block id="e300d744e1b89447a4e57c3fbb6b3fa0" category="list-text">從 Console 代理程式的 3.9.47 版本開始，支援選項 1 中列出的端點。與 Console 代理程式的早期版本不相容。</block>
   <block id="59fa89c2d49dac7f3b6283af4e1b1dc3" category="paragraph">建議使用選項 1 中列出的端點，因為它們更安全。我們建議您設定防火牆，允許選項 1 中所列的端點，同時禁止選項 2 中所列的端點。請注意以下關於這些端點的事項：** 選項 1 中列出的端點從 Console 代理的 3.9.47 版本開始受支援。與 Console 代理的先前版本不相容。** Console 代理程式會先聯絡選項 2 中所列的端點。如果這些端點無法存取，Console 代理程式會自動聯絡選項 1 中列出的端點。** 如果您將 Console 代理程式與 NetApp Backup and Recovery 或 NetApp Ransomware Resilience 一起使用，則不支援選項 1 中的端點。在這種情況下，您可以禁止選項 1 中列出的端點，同時允許選項 2 中列出的端點。</block>
   <block id="895fdfe24bf789e2a45f045a3443011e" category="list-text">識別您要用於聯合的網域。您可以使用您的電子郵件網域或您擁有的其他網域。如果您想使用電子郵件網域以外的網域，則必須先在 NetApp Console 中驗證該網域。如需相關指示，請參閱 <block ref="a68d68e2e08ca1853c0f2263bccee217" category="inline-link-macro-rx"></block>。</block>
   <block id="45b2b872ee5cb2fa766d4ab5c4451342" category="paragraph">選擇 7 天或 30 天。系統會透過電子郵件向具有以下角色的任何使用者發送到期通知，並在 NetApp Console 中顯示這些通知：超級管理員、組織管理員、聯盟管理員和聯盟檢視者。</block>
@@ -5991,10 +5968,7 @@
   <block id="9a5f3d4381ce332c8b92e567534cdb88" category="list-text"><block ref="127cc614fbbd5bfdd0ad1b9430ba08a2" prefix="" category="inline-code"></block> 和 <block ref="0a1e90fbac878c626fcbb9b711662537" prefix=" " category="inline-code"></block> 只有當您不將防火牆規則傳遞給部署，而是選擇讓 Console 為您建立時，才需要這些權限。這些權限位於 Console 帳戶的 .yaml 檔案中。如果您使用共用 VPC 部署 HA 配對，則這些權限將用於為 VPC1、2 和 3 建立防火牆規則。對於所有其他部署，這些權限也將用於為 VPC0 建立規則。</block>
   <block id="5586272ca2c6ac3a947d6cccf01cb688" category="list-text">對於 Cloud Tiering ，分層服務帳戶必須在服務帳戶上擁有<block ref="661d15e88341890f914791eec787fafe" prefix=" " category="inline-code"></block>角色，而不僅僅是在專案層級。如果您在專案層級指派<block ref="661d15e88341890f914791eec787fafe" prefix=" " category="inline-code"></block>，則使用<block ref="b217a89ca684f0fb2ae2f7f82fe418d7" prefix=" " category="inline-code"></block>查詢服務帳戶時不會顯示權限。</block>
   <block id="f174003cd34dc666bc8120b29dba1f69" category="paragraph">安裝後您可以選擇設定 Proxy 伺服器，但這樣做需要重新啟動 Console 代理程式。</block>
-  <block id="885de3bc2ca310ecf49094adf9282e3e" category="list-text">NetApp Console：前往 *Agents ＞ Management ＞ Deploy agent ＞ On-prem ＞ Manual install*。</block>
-  <block id="5f2d178dade1e587f0c5b302a46d5d72" category="paragraph">選擇下載代理程式安裝程式檔案或複製檔案的 URL。</block>
   <block id="5c19c0b3e9745eb746921a1fc863ab91" category="list-text">NetApp 支援網站（如果您還沒有存取 Console 的權限，則需要此網站）<block ref="384f9db5f56c00fd1d970f44502ee5ff" category="inline-link-rx"></block>。</block>
-  <block id="b637fd6d14e4a1c48316685c43af8a64" category="admonition">如果您想要設定透明代理伺服器，可以在安裝代理程式後進行。<block ref="42ec89ae005e4bc718304f7a7f9af7dd" category="inline-link-macro-rx"></block>。</block>
   <block id="0a9b0507398801ef01d10f518148ac6e" category="paragraph">以下是使用 CA 簽署憑證設定明確 Proxy 伺服器的範例：</block>
   <block id="9afc01c988c194f02dd8ec3c4164bd92" category="list-text">當您使用基於 Web 的 NetApp Console SaaS 應用程式時，它會連接多個端點以完成資料管理任務。這包括用於從 Console 部署 Console 代理的端點。</block>
   <block id="ffc31afe0a5232a754bf2085a6d1bf12" category="inline-link-macro">從 NetApp Console 檢視已聯絡的端點清單</block>
@@ -6191,8 +6165,65 @@
   <block id="530df3726781395191a4e890157aa779" category="list-text">https://occmclientinfragov.azurecr.us.io（如果處於受限模式環境中）</block>
   <block id="a3bf5c90fa71fd1dac8e77c19a0cae5c" category="inline-link-macro">深入瞭解主機需求。</block>
   <block id="ed637bdd25ff9b3d6cdb12d0b3117fd4" category="paragraph"><block ref="787bde807a1a57661aeb1e9aa8557b03" category="inline-link-macro-rx"></block> <block ref="2cf3600481d00e694d39bf1acae4604c" category="inline-link-macro-rx"></block></block>
-  <block id="51bc5a08850d61e055a088db3581d040" category="paragraph">\https://occmclientinfragov.azurecr.us \https://bluexpinfraprod.azurecr.io</block>
   <block id="db454f9269515bb4dec7a10f7a86bc01" category="list-text">Podman（適用於 Red Hat Enterprise Linux 部署）</block>
   <block id="d92105d2e9772b92b6c636fbe0cfdf2c" category="inline-link-macro">深入瞭解受限模式所需的網路存取點。</block>
   <block id="befec105cd1e8a7f9d2e63f216085cb8" category="admonition">對於政府雲端客戶（受限模式），NetApp Console 不會驗證受限模式升級端點。您必須手動確認防火牆規則允許存取此端點。<block ref="df5e5876be260d9f3642c620299197c9" category="inline-link-macro-rx"></block></block>
+  <block id="99ca42bfc6bfad2df77c5ab4bf57cb70" category="paragraph">a| https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us（受限模式部署所需）a| 取得 Console 代理程式升級的映像。</block>
+  <block id="f16ca1b460c0ee9da8dd26e4cae6606e" category="paragraph">a| \https://occmclientinfragov.azurecr.us a| 取得 Console 代理程式升級的映像。</block>
+  <block id="870fc4eea7b10cb55e0e6bea798136a1" category="cell">有關授權和聯絡 NetApp 支援的資訊。（此端點是 https://mysupport.netapp.com 的 CNAME URL）</block>
+  <block id="a2673a90bf397cfa57dd425d35f5c038" category="cell">*商業區域或主權區域* 如果您在商業區域或主權區域中安裝 Console 代理程式，則安裝程式需要存取以下端點：</block>
+  <block id="38925d58699eec7d5d74bfebcba5d84f" category="list-text">NetApp Console：前往 *Agents ＞ Management ＞ Deploy agent ＞ On-prem ＞ Manual install*。</block>
+  <block id="06f42bb69fed27c52f7bae78f3878026" category="paragraph">選擇下載 agent 安裝程式檔案或檔案的 URL。</block>
+  <block id="60e7ba99c48e4a33bc9667d29215abf4" category="list-text"><block ref="cc1982049b8c474853940566dc79ded1" category="inline-link-rx"></block>（如果您還沒有存取 NetApp Console 的權限，則需要此步驟）。</block>
+  <block id="ba56355010a4d2b7a9f84d9cd9154231" category="admonition">如果您想要設定透明代理伺服器，可以在安裝完成後進行。<block ref="42ec89ae005e4bc718304f7a7f9af7dd" category="inline-link-macro-rx"></block>。</block>
+  <block id="0e4e2076c75603c2622d2ec78b60debe" category="paragraph"><block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix="" category="inline-code"></block> 設定 Console 代理程式以使用下列格式之一的 HTTP 或 HTTPS Proxy 伺服器：</block>
+  <block id="63e61b342d17ed1b9128b82afdcaa55e" category="list-text">Console 代理程式不支援包含 @ 字元的使用者名稱或密碼。</block>
+  <block id="c67fc0b337f1a4a940497d14b954a64b" category="inline-link-macro">瞭解在 NetApp Console 中經過驗證的組織</block>
+  <block id="418740347c100d5f65ec6fdae40039ab" category="paragraph">您也可以驗證您的組織，將其與您的 NetApp 商務帳戶身分連結，以便在 NetApp 系統中實現一致的治理。<block ref="92388bda5755f2ce99ab8ec4678c3808" category="inline-link-macro-rx"></block>.</block>
+  <block id="a0868ee8ba25b4a31561be0443ebf933" category="summary">已驗證的組織會將您的 NetApp Console 組織連結至您的 NetApp 商業帳戶，以確保身分識別與治理在各系統間保持一致。</block>
+  <block id="48cf25e26ffebb2bb495d369d230e558" category="paragraph">經過驗證的組織會將您在 NetApp Console 中的組織與您的 NetApp 業務帳戶身分（例如 CMAT ID）關聯起來。這有助於 Console 在各個 NetApp 系統中應用一致的組織身分和治理模型。</block>
+  <block id="30a203cb96c50fefbc17611dc5c228ac" category="section-title">為何要驗證您的組織</block>
+  <block id="5895e55252be33d4a8c0a3f2fed70ae9" category="paragraph">驗證您的組織身份可以幫助您：</block>
+  <block id="619827fbf7b134d07776d964ca418ef2" category="list-text">將您的 Console 組織與您的 NetApp 業務帳戶身分保持一致。</block>
+  <block id="ea4a402c177478c80f1fd6987232b900" category="list-text">提高管理、報告和支援工作流程的一致性。</block>
+  <block id="bbe78e0920e9bb47f8f85fdccf397e62" category="list-text">減少團隊跨多個 NetApp 服務工作時的歧義。</block>
+  <block id="f1883c3d9fd07e5c6274f9c0f795b6c5" category="list-text">支援依賴可信任組織身分的治理控制。</block>
+  <block id="62a9515152e6d7ec6e3c394287acb594" category="section-title">驗證後會有哪些變化</block>
+  <block id="7c11a53e44d8f76aeb151f87a95cd80b" category="paragraph">您的組織通過驗證後：</block>
+  <block id="cb56792a5e15f62a1f62723585cad786" category="list-text">該組織與 NetApp 企業帳戶身分相關聯。</block>
+  <block id="cab3888d6123cd3a318da7afcbce12bd" category="list-text">NetApp Console 可以將該組織身分視為業務級對應的權威身分。</block>
+  <block id="bdde811059b4457d759f661bfe34084d" category="list-text">如果某些組織設定檔變更由來源系統管理，則在 Console 中可能會受到限制。</block>
+  <block id="192e00466c0b488c77c731b828ab5e1e" category="section-title">在您驗證之前</block>
+  <block id="31862d7570d9062614fe4d5b544b3059" category="paragraph">在驗證您的組織之前，請確認以下事項：</block>
+  <block id="4eee70687da5ea2684317c0660041669" category="list-text">您擁有貴組織所需的管理角色。</block>
+  <block id="4a1b2fdd5fd46224c3cab8b448abdaf7" category="list-text">您已具備驗證所需的組織詳細資訊。</block>
+  <block id="073b3141ff007e2e7c9e7770dbb5c013" category="list-text">您已與您的 NetApp 客戶團隊協調，確認是否需要驗證業務帳戶對應關係。</block>
+  <block id="ff79cbea9f2efa42d53fff27506cf26d" category="inline-link-macro">驗證您的組織</block>
+  <block id="cd61b05fa0ea90bca24f6c4068c70af2" category="list-text"><block ref="cd61b05fa0ea90bca24f6c4068c70af2" category="inline-link-macro-rx"></block></block>
+  <block id="a813b69ac531b0701ca879b788271f1d" category="list-text"><block ref="a813b69ac531b0701ca879b788271f1d" category="inline-link-macro-rx"></block></block>
+  <block id="0ad3148d437ad1c27c46470f823dd1b5" category="paragraph">https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us （受限模式部署需要）</block>
+  <block id="10c97f048a09dcded54f8b476a81ea96" category="inline-link-macro">了解如何驗證您的組織</block>
+  <block id="f56da6e3ae650bf113d86ed1707a0cd5" category="paragraph">此網域驗證工作流程與組織驗證不同。<block ref="72ae1679f86197db823e7993d8e7864f" category="inline-link-macro-rx"></block>。</block>
+  <block id="35ea601a80ea7b092eea5094e5acf0bf" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 驗證您的組織（選用）</block>
+  <block id="1c5b44eb32f9d12f80011dc0daf0c723" category="paragraph">如果您的團隊使用組織驗證，請將您的 NetApp Console 組織與您的 NetApp 企業帳戶身分關聯。</block>
+  <block id="f628652f1454cbcdff49a07bde8f26d6" category="paragraph"><block ref="72ae1679f86197db823e7993d8e7864f" category="inline-link-macro-rx"></block>。</block>
+  <block id="92388bda5755f2ce99ab8ec4678c3808" category="list-text"><block ref="92388bda5755f2ce99ab8ec4678c3808" category="inline-link-macro-rx"></block></block>
+  <block id="3d48cd486159d7ff770d2ac9604cb64a" category="paragraph">您的 NetApp Console 組織擁有名稱和 ID。您可以為組織選擇一個名稱以便於識別。您可能還需要知道組織 ID 以便進行 API 呼叫。</block>
+  <block id="155e00b589db80072de70532ce7a50ce" category="doc">驗證您的 NetApp Console 組織</block>
+  <block id="70f8e756c039de370c35c76171faf5fa" category="paragraph">如果您使用 Digital Advisor，並且您的公司擁有多個 NetApp 企業帳戶，則需要驗證您的 Console 組織。Digital Advisor 可能會顯示多個與您的 Console 組織無關的 NetApp 帳戶。為確保您僅看到與您的 Console 組織關聯的資源，您可以驗證要與您的 Console 組織關聯的企業 ID。</block>
+  <block id="7934ae571b929618df901b492ff84198" category="inline-link-macro">了解如何關聯您的 NSS 帳戶</block>
+  <block id="c86741a1bc67570a8cd0cbb1e0a4b533" category="paragraph">您必須擁有組織管理員角色才能驗證您的組織，並且您的使用者還必須與 NetApp 支援網站（NSS）帳戶關聯。<block ref="6d5ad2096c24e0befb1e89a3a2137e15" category="inline-link-macro-rx"></block>。</block>
+  <block id="8035b26370273d0ee0090f65ae1d3a71" category="admonition">如果貴公司只有一個企業帳戶，並且您的使用者與 NetApp 支援網站帳戶關聯，則您的組織將自動獲得驗證。</block>
+  <block id="7a1bd24cabea42f3fe04b753aec5d8ba" category="list-text">如果您的使用者有權存取多個組織，請從 Organization 下拉式功能表中選擇要驗證的組織。</block>
+  <block id="01b73db22fadaa534984d5a80ed20a2e" category="list-text">在 *Administration &gt; Identity and access* 中。</block>
+  <block id="10296e23827c1a60c2f8d75482c4a075" category="summary">驗證您的組織，將您的 NetApp Console 組織與您的 NetApp 企業帳戶身分關聯起來。</block>
+  <block id="80333c8b0e0d35357d14ab44c8c5f4f9" category="doc">在 NetApp Console 驗證您的組織</block>
+  <block id="43c3b1d18eaf47add23da2905752381b" category="paragraph">驗證您的組織會將您的 Console 組織與您的 NetApp 企業帳戶身分關聯起來。這樣，您就可以使用 Digital Advisor 和 AIQ 建議等功能。</block>
+  <block id="0a2f38a239e81a08f5b837f81513a9bc" category="paragraph">組織管理員或超級管理員。<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
+  <block id="45c6d1bd46ddc19876bfc91687471ea2" category="paragraph">如果貴公司在 NetApp 擁有多個企業帳戶，則必須驗證貴公司並將其與正確的企業帳戶建立關聯。如果貴公司只有一個 NetApp 企業帳戶，則貴公司將自動驗證並與該企業帳戶建立關聯。</block>
+  <block id="c6a431b7786ec48067cfa83374b99c0a" category="paragraph">當您的 Console 組織與您的企業帳戶關聯後，Digital Advisor 只會顯示與該帳戶關聯的資源。如果您有多個企業帳戶，則需要選擇一個與您的 Console 組織關聯。如果您需要變更關聯關係，可以再次驗證您的組織並選擇其他企業帳戶。</block>
+  <block id="8d6d948cdc13e069b613284450d2961f" category="list-text">在 *Organization* 頁面上，選擇頁面標題旁的 *Verify*。</block>
+  <block id="36cb56591d62e53ed37d02c1e0cf2a57" category="inline-image-macro">組織頁面的螢幕擷取畫面，顯示頁面標題旁的「驗證」按鈕。</block>
+  <block id="0bddf0553f7265d90da078ccd7865d6a" category="paragraph"><block ref="0bddf0553f7265d90da078ccd7865d6a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="812c2b994db82152161eb7a216b75550" category="list-text">從 *Associate business account* 對話方塊中，選擇要與您的組織建立關聯的企業帳戶。</block>
 </blocks>

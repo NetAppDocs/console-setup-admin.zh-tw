@@ -102,7 +102,7 @@ Amazon FSx for NetApp ONTAP：
 
 
  a| 
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us （受限模式部署需要）
  a| 
 取得控制台代理升級的影像。
 

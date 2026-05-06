@@ -93,12 +93,9 @@ NetApp建議在防火牆中允許選項 1 端點，因為它們更安全，並�
 
 
 |===
-a| \ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io a| 取得控制台代理升級的圖像。
+a| https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us（受限模式部署所需）a| 取得 Console 代理程式升級的映像。
 
-* 當您更新到防火牆中的目前端點時，您現有的代理程式將繼續運作。
-
-
-a| https://occmclientinfragov.azurecr.us https://bluexpinfraprod.azurecr.io a| 取得 Console 代理程式升級的映像。
+a| \https://occmclientinfragov.azurecr.us a| 取得 Console 代理程式升級的映像。
 
 ^1^ NetApp建議在防火牆中允許選項 1 端點，因為它們更安全，而不允許選項 2 端點。請注意有關這些端點的以下事項：
 

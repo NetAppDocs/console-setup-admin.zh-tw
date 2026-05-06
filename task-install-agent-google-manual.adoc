@@ -407,7 +407,7 @@ link:reference-networking-saas-console.html["為 NetApp Console 準備網路設�
 
 
  a| 
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us （受限模式部署需要）
  a| 
 取得控制台代理升級的影像。
 
@@ -618,15 +618,13 @@ unset https_proxy
 +
 ** NetApp Console：前往 *Agents ＞ Management ＞ Deploy agent ＞ On-prem ＞ Manual install*。
 +
-選擇下載代理程式安裝程式檔案或複製檔案的 URL。
+選擇下載 agent 安裝程式檔案或檔案的 URL。
 
-
-
+** https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp支援站點"^]（如果您還沒有存取 NetApp Console 的權限，則需要此步驟）。
 +
 
 NOTE: 下載適用於網路或雲端的「線上」代理安裝程式。NetApp Console 代理還有一個單獨的「離線」安裝程式，但僅支援私有模式部署。
 
-+
 ** NetApp 支援網站（如果您還沒有存取 Console 的權限，則需要此網站） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp支援站點"^]。
 
 
@@ -649,33 +647,46 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 +
 如果您的網路需要代理才能存取互聯網，則需要新增代理資訊。您可以在安裝過程中明確新增代理程式。 `--proxy`和 `--cacert`參數是可選的，系統不會提示您新增。如果您有明確的代理伺服器，則需要以所示方式輸入參數。
 
-
-
-
-NOTE: 如果您想要設定透明代理伺服器，可以在安裝代理程式後進行。link:reference-agent-maint-console-proxy.html["了解代理維護控制台"]。
-
 +
 
+NOTE: 如果您想要設定透明代理伺服器，可以在安裝完成後進行。link:reference-agent-maint-console-proxy.html["了解代理維護控制台"]。
+
++
 以下是使用 CA 簽署憑證設定明確 Proxy 伺服器的範例：
 
 +
-
 [source, cli]
 ----
 ./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
-`--proxy` 設定 Console 代理程式以使用下列格式之一的 HTTP 或 HTTPS 代理伺服器：
+`--proxy` 設定 Console 代理程式以使用下列格式之一的 HTTP 或 HTTPS Proxy 伺服器：
 
-+ * \http://address:port * \http://user-name:password@address:port * \http://domain-name%92user-name:password@address:port * \https://address:port * \https://user-name:password@address:port * \https://domain-name%92user-name:password@address:port
++
+** \http://位址:埠
+** \http://用戶名:密碼@地址:端口
+** \http://網域%92用戶名:密碼@位址:端口
+** \https://位址:埠
+** \https://使用者名稱:密碼@位址:端口
+** \https://網域%92用戶名:密碼@地址:端口
++
+請注意以下事項：
 
-+ 請注意以下事項：
++
+*** 使用者可以是本機使用者或網域使用者。
+*** 對於網域用戶，您必須使用 \ 的 ASCII 代碼，如上所示。
+*** Console 代理程式不支援包含 @ 字元的使用者名稱或密碼。
+*** 如果密碼包含以下任何特殊字符，則必須在該特殊字符前面加上反斜杠來轉義該特殊字符：& 或 !
++
+例如：
 
-+ ** 使用者可以是本機使用者或網域使用者。** 對於網域使用者，您必須使用如上所示的 \ ASCII 碼。** Console 代理程式不支援包含 @ 字元的使用者名稱或密碼。** 如果密碼包含以下任何特殊字元，您必須在其前面加上反斜線以進行轉義：& 或 !
++
+\http://bxpproxyuser:netapp1\!@網址:3128
 
-+ 例如：
 
-+ \http://bxpproxyuser:netapp1\!@address:3128
+
+
 
 . 如果您使用 Podman，則需要調整 aardvark-dns 連接埠。
 +
@@ -706,8 +717,7 @@ dns_bind_port = 54
 +
 安裝結束時，如果您指定了代理伺服器，控制台代理服務 (occm) 將重新啟動兩次。
 
-
-
++
 
 NOTE: 如果安裝失敗，您可以查看安裝報告和日誌來協助您解決問題。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解決安裝問題。"]
 

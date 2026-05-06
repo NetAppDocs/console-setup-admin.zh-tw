@@ -16,6 +16,8 @@ summary: 如果您想與與您的電子郵件網域不同的網域進行聯盟�
 [role="lead"]
 如果您想與與您的電子郵件網域不同的網域進行聯盟，則必須先驗證您擁有該網域。您只能使用已驗證的網域進行聯盟。
 
+此網域驗證工作流程與組織驗證不同。link:task-verify-organization.html["了解如何驗證您的組織"]。
+
 .必備角色
 建立和管理聯盟需要 Federation 管理員角色。Federation 檢視者可以檢視 Federation 頁面。link:reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
 
