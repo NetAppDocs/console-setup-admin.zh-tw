@@ -1,0 +1,20 @@
+= Console 代理 4.7.0
+:allow-uri-read: 
+
+
+
+
+=== Console 代理 4.7.0
+
+4.7.0 版本同時支援標準模式和受限模式。
+
+此版本的 Console 代理程式包含安全性改善和錯誤修正。
+
+
+
+=== NetApp Console管理
+
+本版本包含以下新功能。
+
+.驗證您的 Console 組織
+預設情況下，Digital Advisor 會顯示與貴公司關聯的所有 NetApp 帳戶，而不僅僅是您的 Console 組織。若要將 Digital Advisor 中顯示的內容限制為特定帳戶，請驗證您要與 Console 組織搭配使用的企業帳戶。link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-organization-verify.html["了解如何驗證您的 Console 組織"^]

@@ -15,6 +15,6 @@
 
 
 
-=== 主控台管理
+=== NetApp Console管理
 
 您可以將 Keystone 角色指派給合作夥伴使用者，以允許這些使用者管理合作夥伴組織中的 Keystone 資源。link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html["深入瞭解如何為合作夥伴使用者指派 Keystone 角色。"]
