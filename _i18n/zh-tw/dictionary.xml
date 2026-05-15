@@ -5244,7 +5244,6 @@
   <block id="1bad3fa525f7b2c60b554cc8a36a911c" category="list-text">cloudformation：ListStacks</block>
   <block id="a09b37992441a5c2061c0ef135b80024" category="section-title">2026 年 2 月 24 日</block>
   <block id="51b31e1901c03d4b274f371dd730c779" category="paragraph">資料分類現在需要以下權限：</block>
-  <block id="9ba1f0e426e643179b44f5146f795c55" category="cell">允許使用者查看 NetApp Data Classification 掃描結果。擁有此角色的使用者可以查看合規性資訊，並為其有權存取的資源產生報告。這些使用者無法啟用或停用磁碟區、儲存桶或資料庫架構的掃描。Data Classification 沒有管理員角色。</block>
   <block id="9320804217d782369dccfe3cfe90fd29" category="inline-link">Data Classification 文檔</block>
   <block id="81584a5aa440695d6dd39594311c7b2d" category="list-text"><block ref="81584a5aa440695d6dd39594311c7b2d" category="inline-link-rx"></block></block>
   <block id="c19e034a7ae60fb90287c5050a076d5a" category="inline-link">授權與訂閱文檔</block>
@@ -6237,4 +6236,21 @@
   <block id="4b07d8c632f7928fdf0e60a617989db7" category="admonition">如果貴公司只有一個企業帳戶，則頁面標題旁邊的標籤將顯示 *Verified*，無需採取任何操作。</block>
   <block id="3d07160a1a5d13a62207154073e62d4b" category="list-text">在 *Associate business account* 對話方塊中，從下拉式功能表中選擇要與 Console 組織關聯的業務帳戶。然後選擇 *Associate*。</block>
   <block id="9b70df306d1f1719fd9d70e02911394c" category="section-title">2026 年 5 月 11 日</block>
+  <block id="de30fd3780cc78f3815357af7be9582f" category="summary">NetApp Data Classification 支援兩種角色來管理對資產的讀取與寫入存取。</block>
+  <block id="cfc16ea75f5fe37fc225466703a3e96a" category="doc">NetApp Data Classification 角色於 NetApp Console 中</block>
+  <block id="c7142c29e40d2d08c7f6837910052a0d" category="paragraph">NetApp Data Classification 支援身分與存取管理角色，讓你能夠靈活地為使用者指派符合其在組織內需完成任務的特定角色。你如何指派角色，取決於你自己的業務與儲存管理實務。</block>
+  <block id="cf045f1c49e0697a2bf307b157804096" category="paragraph">Data Classification 支援兩種角色：</block>
+  <block id="cdbb30b6fb90f85be1fbc19b17c2c986" category="list-text">合規管理員</block>
+  <block id="5308b341304a681aa5133cab92637fa3" category="paragraph">Compliance admin 角色僅在組織層級運作，以管理 NetApp Data Classification 資源的存取。如果使用者的職責低於 Organization admin，則必須擁有 Compliance admin 角色才能安裝 NetApp Data Classification。</block>
+  <block id="649d32860b6e76fc8dac7eb5040880b7" category="admonition">合規管理員角色並非獨立角色。擁有合規管理員角色的使用者也必須至少關聯一個<block ref="336c7f0741b180c58df89adadda6c36f" category="inline-link-macro-rx"></block>。</block>
+  <block id="afb0c02ddaf124b42741f1794d2a3702" category="admonition">Compliance admin 已在 1.54 版新增至 Data Classification。如果您在此版本之前部署了 Data Classification，且平台角色的存取權限低於 organization admin，則 Compliance admin 角色會自動與使用者帳戶建立關聯。</block>
+  <block id="f0f2ac698359c5e4834475e633063b01" category="paragraph">Classification viewer 專為需要存取 Data Classification 掃描結果但無需存取組態資源的使用者而設計。具有 Classification viewer 角色的使用者可以檢視對應和完整掃描的結果，以評估儲存空間節省或潛在資料風險的領域。具有 Classification viewer 角色的使用者還可以為其有存取權限的資源產生報告。這些使用者無法啟用或停用磁碟區、儲存區或資料庫架構的掃描。</block>
+  <block id="ab066b3292d8ab61ef3b5c77169cdd19" category="section-title">更多資訊</block>
+  <block id="4964a8f5f86e15358c2fc765883fe9b2" category="inline-link-macro">瞭解 NetApp Data Classification</block>
+  <block id="5ced687e00d6efd9bda8689abae14e58" category="list-text"><block ref="5ced687e00d6efd9bda8689abae14e58" category="inline-link-macro-rx"></block></block>
+  <block id="ae8e202976179a823c177023962ba12a" category="cell"><block ref="ae8e202976179a823c177023962ba12a" category="inline-link-macro-rx"></block></block>
+  <block id="c1e616bcb4ff762399549fa457f2d29b" category="cell">安裝 Data Classification 以及在 Data Classification 中關聯組織層級權限時需要此項目。</block>
+  <block id="47a46671c1a0773fed715c3799195b7f" category="cell"><block ref="47a46671c1a0773fed715c3799195b7f" category="inline-link-macro-rx"></block></block>
+  <block id="d1bd98b9d900098c018b826ca4e6bd65" category="cell">允許使用者查看 NetApp Data Classification 掃描結果。擁有此角色的使用者可以查看合規性資訊，並為其有權存取的資源產生報告。這些使用者無法啟用或停用磁碟區、儲存桶或資料庫架構的掃描。</block>
+  <block id="eeeb9dcaeb66c431b51b12eff19105f3" category="sidebar">Data Classification 角色</block>
 </blocks>
