@@ -6253,4 +6253,28 @@
   <block id="47a46671c1a0773fed715c3799195b7f" category="cell"><block ref="47a46671c1a0773fed715c3799195b7f" category="inline-link-macro-rx"></block></block>
   <block id="d1bd98b9d900098c018b826ca4e6bd65" category="cell">允許使用者查看 NetApp Data Classification 掃描結果。擁有此角色的使用者可以查看合規性資訊，並為其有權存取的資源產生報告。這些使用者無法啟用或停用磁碟區、儲存桶或資料庫架構的掃描。</block>
   <block id="eeeb9dcaeb66c431b51b12eff19105f3" category="sidebar">Data Classification 角色</block>
+  <block id="f879dc19b8d807f7185039a4bd14f8f8" category="summary">NetApp Licenses and Subscriptions 角色可讓您在 NetApp Console 中為使用者指派不同角色，以完成授權和訂閱管理所需的任務。</block>
+  <block id="6f147a6113c5afec8776bf72f44f87d5" category="doc">NetApp Console 中的 Licenses and subscriptions 角色</block>
+  <block id="ff1db9e75876be2d3aaab122be090ea4" category="paragraph">要在 NetApp Console 中管理 Licenses and subscriptions，您需要確保使用者擁有相應的權限。管理 Licenses and subscriptions 對於確保 Console 中服務的有效部署和持續運行至關重要。角色分配方式取決於您自身的業務和儲存管理實務。</block>
+  <block id="3b37c1658b5af641f6a05ada8e711b24" category="paragraph">Licenses and subscriptions 使用以下角色：</block>
+  <block id="507639535cfc8508439d23d79ba2b4d5" category="list-text">*Licenses and subscriptions 管理員*</block>
+  <block id="c45df285724d258f1e5be5ff8a478048" category="list-text">*Licenses and subscriptions 檢視器*</block>
+  <block id="fa97f6975c9b94a252d204cd22159ff4" category="cell">功能</block>
+  <block id="c44642b44432b95f9253e89b55cdd371" category="cell">Licenses and subscriptions 管理員</block>
+  <block id="c8e9b924f96bef3c1ce67370532c0941" category="cell">Licenses and subscriptions 檢視器</block>
+  <block id="0f0521da3e5701d62f9417290c18309c" category="cell">新增授權</block>
+  <block id="d1b129b9a9190d146e9c687685a71713" category="cell">檢視授權</block>
+  <block id="9d69123ae5af2e1c32ff6aff3711501e" category="cell">更新授權</block>
+  <block id="805135ea5cb283de965386ffb11ed9e7" category="cell">新增訂閱</block>
+  <block id="c086a82af582fedd5c4618670616ea09" category="cell">修改訂閱</block>
+  <block id="e1e396fcbcea3e57f0efa53c64e39e2e" category="cell">檢視訂閱</block>
+  <block id="9ffbfdd088029bc08ac68a7e8204d3d0" category="cell">移除訂閱</block>
+  <block id="f06ea6495b1fd2d6a469a12a5dc9f68b" category="cell">刪除 License</block>
+  <block id="cdc482262618604a335f0c4343ec2ea8" category="inline-link-macro">授權與訂閱管理員</block>
+  <block id="0d89f22c7458cba55f94b24b9c15e6d0" category="cell"><block ref="0d89f22c7458cba55f94b24b9c15e6d0" category="inline-link-macro-rx"></block></block>
+  <block id="a40769dfb91b2027074e15e64eff6c7c" category="cell">擁有 License and subscription 管理員角色的使用者可以建立、更新和刪除 NetApp Console 和附屬資料服務的直接 Licenses 和 Marketplace Subscriptions。</block>
+  <block id="bbbb1967c36266ce01e7c3f89d283ee5" category="inline-link-macro">授權與訂閱檢視器</block>
+  <block id="72917a7c676383ff6b788b1412017021" category="cell"><block ref="72917a7c676383ff6b788b1412017021" category="inline-link-macro-rx"></block></block>
+  <block id="e2b838aa3390b536f83cc6ce3e1a2748" category="cell">擁有 License and subscription viewer 角色的使用者可以查看 NetApp Console 和相關資料服務的 direct licenses 和 marketplace subscriptions。</block>
+  <block id="5ec2925c394689c97be1228f67a49b85" category="sidebar">Licenses and subscriptions 角色</block>
 </blocks>

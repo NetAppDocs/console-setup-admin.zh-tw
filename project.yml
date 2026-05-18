@@ -204,6 +204,8 @@ sidebar:
           entries:
           - title: Google Cloud NetApp Volumes角色
             url: "/reference-iam-gcnv-roles.html"
+          - title: Licenses and subscriptions 角色
+            url: "/reference-iam-licenses-subscriptions.html"
           - title: Keystone角色
             url: "/reference-iam-keystone-roles.html"
           - title: 營運支援分析師
