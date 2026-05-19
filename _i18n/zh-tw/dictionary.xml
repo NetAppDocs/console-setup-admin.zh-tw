@@ -1539,7 +1539,6 @@
   <block id="1aff819a8dc16b341c309ebd6cc37f98" category="list-text">Google Cloud NetApp Volumes檢視器</block>
   <block id="1b8af7dd682b66a57a953c80c4b1a22c" category="summary">NetApp Console身分和存取管理包括可指派給組織成員的預先定義角色。</block>
   <block id="5ed613d5969e54b01e0691f040afb027" category="doc">了解NetApp Console存取角色</block>
-  <block id="1fd5cc749e7150dcdba3870e8dddd968" category="paragraph">NetApp Console中的身分和存取管理 (IAM) 提供了預先定義的角色，您可以將這些角色指派給組織中不同資源層級的成員。在指派這些角色之前，您應該了解每個角色包含的權限。角色分為以下類別：平台、應用程式和資料服務。</block>
   <block id="cb9e27422b343274f9974efbc9c3dbc1" category="section-title">平台角色</block>
   <block id="17dd3fc9247e5f8def4f8dd38ae667ff" category="paragraph">平台角色授予NetApp Console管理權限，包括角色指派和使用者管理。控制台具有多種平台角色。</block>
   <block id="3aba2887bff41f744b43940b1b82080a" category="cell">平台角色</block>
@@ -1569,8 +1568,6 @@
   <block id="5cc5248d8f5f2a5831a23c2c1c7ba338" category="cell">ONTAP調解器設定角色</block>
   <block id="b3aa67ea8b077eb2b67ff9a0651b5426" category="inline-link-macro">ONTAP雲端調解器</block>
   <block id="04799ba9193d1752205122631a125181" category="cell">具有ONTAP調解器設定角色的服務帳戶可以建立服務請求。服務帳戶中需要此角色來配置<block ref="a95914b5fa4d5193b1ebdf5a17356faa" category="inline-link-macro-rx"></block>。</block>
-  <block id="0321c70517c9c78cf799c7075b2ab9de" category="inline-link-macro">營運支援分析師</block>
-  <block id="406a1f2f1940a9f2563b8c2e2ba639da" category="cell"><block ref="406a1f2f1940a9f2563b8c2e2ba639da" category="inline-link-macro-rx"></block></block>
   <block id="f6b9aba95e329090662ec51c688d6d77" category="cell">提供對警報和監控工具的存取以及輸入和管理支援案例的能力。</block>
   <block id="1a137246f35bc1bb21510edbe9caad21" category="cell"><block ref="1a137246f35bc1bb21510edbe9caad21" category="inline-link-macro-rx"></block></block>
   <block id="00887a306e7c01c69b56fa9f82030618" category="cell">管理儲存健康和治理功能，發現儲存資源，以及修改和刪除現有系統。</block>
@@ -5350,13 +5347,11 @@
   <block id="af6715a71d6494b4d95a731d8f2326c0" category="list-text">NetApp 每月自動升級代理軟體。</block>
   <block id="4d5d1212bd0be52b0f06612ab0868e2b" category="list-text">您可以透過公共網際網路存取 Console SaaS 應用程式的使用者介面。</block>
   <block id="5981099db8f6a5f0ede8f01d1c46b020" category="list-text">NetApp Console 提供透過 auth0 或 NetApp Support Site（NSS）登入進行驗證。可使用身分識別聯盟。</block>
-  <block id="f7edecd71600ffc14fed18b4fac58cb4" category="paragraph">+ <block ref="d7d87d0a148c81603b40370c84cf5979" category="inline-link-macro-rx"></block>.</block>
   <block id="18ce407df84b9b3b6a37f37949068013" category="section-title">NetApp Console 受限模式（安裝在您自己的公有雲中）</block>
   <block id="1bab4d9f19f78d9293b2c57776f8b486" category="paragraph">您在雲端（政府、主權或商業區域）安裝 Console 代理程式，它與 NetApp Console API 端點（託管在 SaaS 應用程式中）的出站連線受到限制。</block>
   <block id="8aba565c1287faf0e1ca4932525d434a" category="paragraph">使用者存取 Console 代理程式提供的本機 UI，而非 SaaS 應用程式。</block>
   <block id="6db08dac0b67e028e51d8ac5e5a62432" category="paragraph">根據您計劃使用的資料服務和功能、Console 組織管理員會建立額外的 Console 代理程式來管理混合雲環境中的資料。</block>
   <block id="074dab9c82d3474cf642c9f99e7d5a26" category="inline-xref">深入瞭解與 NetApp Console API 的出站連線</block>
-  <block id="014c03d6e48ef20c47b3fd17154a6d54" category="paragraph"><block ref="a77e3fdf9a749a1e7ea79c8e4fb20767" category="inline-xref-macro-rx"></block>。</block>
   <block id="56899b78a8e10c53c1560d7de57c34e8" category="inline-image-macro">概念圖顯示了公共互聯網（SaaS 應用程式和 auth0 身份驗證可用）、雲端中的虛擬網路（代理正在運行並提供對基於 Web 的主控台的存取，並管理 Cloud Volumes ONTAP 和本地資料中心中的 AFF 叢集）。</block>
   <block id="785d30430f94fe799a20dd723658310c" category="paragraph"><block ref="785d30430f94fe799a20dd723658310c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d2a6f3b571c873d3d99d18749793c049" category="section-title">受限模式下 NetApp Console 支援的功能與服務</block>
@@ -6277,4 +6272,42 @@
   <block id="72917a7c676383ff6b788b1412017021" category="cell"><block ref="72917a7c676383ff6b788b1412017021" category="inline-link-macro-rx"></block></block>
   <block id="e2b838aa3390b536f83cc6ce3e1a2748" category="cell">擁有 License and subscription viewer 角色的使用者可以查看 NetApp Console 和相關資料服務的 direct licenses 和 marketplace subscriptions。</block>
   <block id="5ec2925c394689c97be1228f67a49b85" category="sidebar">Licenses and subscriptions 角色</block>
+  <block id="52599219f6b08bb2ce3fc85743943c5e" category="paragraph"><block ref="d7d87d0a148c81603b40370c84cf5979" category="inline-link-macro-rx"></block>。</block>
+  <block id="2550db9aaa48d21b3c6e2051eb610223" category="paragraph"><block ref="7c12d9abb1f60d196a4cd5e699bed565" category="inline-link-macro-rx"></block>。</block>
+  <block id="ef4c9807306cc53f9292ed7a239eeaa7" category="paragraph">在 NetApp Console 中的身份與存取管理（IAM）提供預先定義的角色，您可以將這些角色指派給組織中不同資源階層的成員。在指派這些角色之前，您應該了解每個角色所包含的權限。角色分為以下幾類：平台、應用程式和資料服務。這些表格同時包含每個角色的 API 名稱，方便使用 API 管理角色指派的客戶參考。</block>
+  <block id="81be82a027b82e849a37f5d6236fd170" category="paragraph">*API 名稱是 API 中使用的角色識別碼。請完全按照所示內容複製該值（包括大小寫和底線）。</block>
+  <block id="17f15167b5660a249617ea94aa6d9d22" category="cell">API 名稱*</block>
+  <block id="bf0d50e0ceb480c4356aa15afd8f46f2" category="cell">ORGANIZATION_ADMIN</block>
+  <block id="c57c74449515f098b0771d80be257585" category="cell">FOLDER_OR_PROJECT_ADMIN</block>
+  <block id="fd810da79c458f535206eb152d85f49a" category="cell">FEDERATION_ADMIN</block>
+  <block id="18f551f3ef804a123c4afd52f4b81cf2" category="cell">聯邦檢視器</block>
+  <block id="1009830b82a14f129f4e4fe247bfd3a9" category="cell">PARTNERSHIP_ADMIN</block>
+  <block id="41178155e278fcb0872000619462de8c" category="cell">合作夥伴檢視器</block>
+  <block id="fb10f0238035c2b31076223dc45beea0" category="cell">SUPER_ADMIN</block>
+  <block id="6fab4e3d2b56faa8eb39ac7b6a1197c8" category="cell">SUPER_VIEWER</block>
+  <block id="7f46ae3923acb3e1c9a053c547677f98" category="cell">GCNV_ADMIN</block>
+  <block id="18bd19ad68d219d2a11aa468a1cc89fa" category="cell">GCNV_VIEWER</block>
+  <block id="70e312b7130aab755fc1b7285f3ce9a0" category="cell">KEYSTONE_ADMIN</block>
+  <block id="f566c3f80b38166af64295a26184a32f" category="cell">KEYSTONE_VIEWER</block>
+  <block id="6f80e1ba07524b620f9ac3ab70a9f846" category="cell">ONTAP_MEDIATOR_SETUP</block>
+  <block id="f4090d772571520ccc8fd7caa2042019" category="cell"><block ref="f4090d772571520ccc8fd7caa2042019" category="inline-link-macro-rx"></block></block>
+  <block id="3b846a37d0c85419e50ecd7c10c0ddba" category="cell">營運支援分析師</block>
+  <block id="a06d75f2be53002fd7ecebe794bad111" category="cell">STORAGE_ADMIN</block>
+  <block id="fe37126842449c75ba0d4df263b08491" category="cell">儲存檢視器</block>
+  <block id="407be222835100079630428a5af78b74" category="cell">系統健康狀態專家</block>
+  <block id="629e62d45e24564a18d793b49363d3a9" category="cell">備份超級管理員</block>
+  <block id="5d54ab26b22a109b2881e9549f4378ef" category="cell">BACKUP_ADMIN</block>
+  <block id="034df2d2ba1de0d80e8c260c4530197f" category="cell">還原管理員</block>
+  <block id="b68963c2b53fa2c7991241f6f3e240e4" category="cell">CLONE_ADMIN</block>
+  <block id="da2d82be703db381b6dcd6391c0cc02b" category="cell">備份檢視器</block>
+  <block id="ac686ff21b4074cf049db71604cb97af" category="cell">災難復原管理員</block>
+  <block id="c76b372cec1939f6fb6d752bed882919" category="cell">災難復原容錯移轉管理員</block>
+  <block id="f1a38d3c8e34eeaf097c7789d2d074a9" category="cell">災難復原應用程式管理員</block>
+  <block id="dd1ad3d92ec6d3df74d3fceee4ebb1bd" category="cell">災難復原檢視器</block>
+  <block id="d3a63d7bea99ba9fb20d05753b51a65d" category="cell">分類檢視器</block>
+  <block id="ebeadd2261cd842bc1fd55bdb9d73b1f" category="cell">勒索軟體防護管理</block>
+  <block id="5712b685a85dbcca1d3a2c5b2e15bc46" category="cell">勒索軟體保護檢視器</block>
+  <block id="3726f34b9bf1c6c6d98054942b244313" category="cell">勒索軟體復原能力_使用者行為_管理員</block>
+  <block id="91a470b0f7bf1c1702a23ad6d9d4159d" category="cell">勒索軟體復原能力使用者行為檢視器</block>
+  <block id="a67d722a1a98561bf88726ffcf6ecda7" category="cell">SNAPCENTER_ADMIN</block>
 </blocks>
