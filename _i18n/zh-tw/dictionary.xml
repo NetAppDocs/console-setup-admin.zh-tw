@@ -3733,7 +3733,6 @@
   <block id="9677e2cfcf9bc5456798a21522590a93" category="paragraph">若要關閉單一通知，請將遊標停留在通知上並選擇*關閉*。</block>
   <block id="def7f3eac7eed1dada5cdcd2951ede36" category="section-title">設定電子郵件通知設定</block>
   <block id="a6ca8d5aaf648abdbc2d400cc1275aed" category="paragraph">您可以透過電子郵件傳送特定類型的通知，這樣即使您未登入也可以獲知重要的系統活動。電子郵件可以發送給您組織或帳戶中的任何用戶，或任何其他需要了解某些類型的系統活動的收件者。</block>
-  <block id="1989e58795a64829ac69121bb1b0c591" category="list-text">控制台發送代理、許可證和訂閱、 NetApp Copy and Sync以及NetApp Backup and Recovery的電子郵件通知。</block>
   <block id="73e3e67a2ad49cc81c8aa84272ebe07c" category="list-text">當控制台代理安裝在沒有網路存取的網站時，不支援發送電子郵件通知。</block>
   <block id="e879b7fea6cc39a26268d3c9029be021" category="paragraph">您在通知中心設定的篩選器不會決定您透過電子郵件收到的通知類型。預設情況下，任何組織管理員都會收到所有「關鍵」和「建議」通知的電子郵件。這些通知涵蓋所有服務 - 您無法選擇僅接收某些服務的通知，例如代理或NetApp Backup and Recovery。</block>
   <block id="7fcffcce675dad706dbf53d68f1f86f2" category="paragraph">所有其他使用者和收件者都配置為不接收任何通知電子郵件 - 因此您需要為任何其他使用者設定通知設定。</block>
@@ -6310,4 +6309,5 @@
   <block id="3726f34b9bf1c6c6d98054942b244313" category="cell">勒索軟體復原能力_使用者行為_管理員</block>
   <block id="91a470b0f7bf1c1702a23ad6d9d4159d" category="cell">勒索軟體復原能力使用者行為檢視器</block>
   <block id="a67d722a1a98561bf88726ffcf6ecda7" category="cell">SNAPCENTER_ADMIN</block>
+  <block id="6b0a56bcf40e8d005fd8e9e5b2559479" category="list-text">主控台會針對代理程式、授權和訂閱、NetApp Copy and Sync、NetApp Backup and Recovery 以及 NetApp Ransomware Resilience 發送電子郵件通知。</block>
 </blocks>

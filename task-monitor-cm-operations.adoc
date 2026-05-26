@@ -142,7 +142,7 @@ image:screenshot_notification_filters.png["螢幕截圖顯示了通知中心中�
 
 [NOTE]
 ====
-* 控制台發送代理、許可證和訂閱、 NetApp Copy and Sync以及NetApp Backup and Recovery的電子郵件通知。
+* 主控台會針對代理程式、授權和訂閱、NetApp Copy and Sync、NetApp Backup and Recovery 以及 NetApp Ransomware Resilience 發送電子郵件通知。
 * 當控制台代理安裝在沒有網路存取的網站時，不支援發送電子郵件通知。
 
 
