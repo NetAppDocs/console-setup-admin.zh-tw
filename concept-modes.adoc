@@ -125,16 +125,19 @@ NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉�
 | Google 雲端儲存 | 是的 
 
 
+| Keystone 訂閱存取 | 是的 
+
+
 | 本地ONTAP集群 | 探索和管理所需。您可以在沒有 Console 代理程式的情況下使用直接探索，但需要代理程式才能使用管理功能。 
 
 
 | StorageGRID | 是的 
 
 
-| 工作負載 | 不 
+| 工作負載 | 不 .8+| *數據服務* 
 
 
-.8+| *數據服務* | NetApp Backup and Recovery | 是的 
+| NetApp Backup and Recovery | 是的 
 
 
 | NetApp 分類 | 是的 
@@ -155,10 +158,10 @@ NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉�
 | NetApp Cloud Tiering | 是的 
 
 
-| NetApp Volume Caching | 是的 
+| NetApp Volume Caching | 是的 .5+| *NetApp 支援合約功能* 
 
 
-.5+| *NetApp 支援合約功能* | 數位顧問 | 是的 
+| 數位顧問 | 是的 
 
 
 | 經濟效益 | 是的 
@@ -170,10 +173,10 @@ NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉�
 | 軟體更新 | 不 
 
 
-| 永續性 | 是的 
+| 永續性 | 是的 .12+| *管理功能* 
 
 
-.12+| *管理功能* | 審計 | 不 
+| 審計 | 不 
 
 
 | 自動化中心 | 不 

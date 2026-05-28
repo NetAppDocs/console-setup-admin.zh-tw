@@ -6020,10 +6020,6 @@
   <block id="04dfc56baea30e6c894320e91c84aa02" category="summary">NetApp Console 身分與存取管理提供管理員角色，您可以將這些角色指派給需要存取 Google Cloud NetApp Volumes 的組織成員。</block>
   <block id="c629aa034e9fdba04e68dcb224bc9576" category="paragraph">Google Cloud NetApp Volumes 使用以下角色：</block>
   <block id="cff9a72837846d57cb2d651523721cc6" category="cell">從 NetApp Console 建立、修改或刪除系統（新增或探索系統）</block>
-  <block id="62d9c2659cf0ad00c633675f8170cede" category="cell">允許使用者無限制地存取組織內的所有專案和資料夾。可以為任何專案或資料夾新增成員，執行任何任務，並使用任何未明確關聯角色的資料服務。擁有此角色的使用者可以透過建立資料夾和專案、分配角色、新增使用者以及管理系統（如果他們擁有相應的憑證）來管理您的組織。這是唯一可以建立 NetApp Console 代理的存取角色。</block>
-  <block id="11242816a2212aaec156e393f611d6a4" category="cell">提供使用者一部分檢視者角色。此角色專為規模較小的組織所設計，這些組織可能不需要將 NetApp Console 職責分配給多個使用者。</block>
-  <block id="b73b9bb1076e1557f19d367a133b14f9" category="cell">在 Backup and Recovery 中還原工作負載。</block>
-  <block id="9bc794a51a7dec822701191ea93b64bd" category="cell">在 Backup and Recovery 中複製應用程式和資料。</block>
   <block id="84deda971835a8442abb48d0c88d2e97" category="paragraph">*基準角色*</block>
   <block id="7e47bfd1d8d1b989cf845ab6724b608b" category="paragraph">*使用者行為活動角色* <block ref="885ef4a0557ed3cd017b2efccb0c3de5" category="inline-link-macro-rx"></block> 警示可提供檔案活動事件等資料的可見性；這些警示包括檔案名稱和使用者執行的檔案動作（例如讀取、寫入、刪除、重新命名）。為了限制此資料的可見性，只有具有這些角色的使用者才能管理或檢視這些警示。</block>
   <block id="6f5db1c938d25fcc5e43ec9d050769ac" category="paragraph">使用者行為角色應授予已擁有 Ransomware Resilience 管理員或檢視者權限且需要存取<block ref="dabde4cfb2462919536551734d022527" category="inline-link-macro-rx"></block>的使用者。例如，擁有 Ransomware Resilience 管理員角色的使用者應被授予 Ransomware Resilience 使用者行為管理員角色，以便設定使用者活動代理程式並封鎖或解除封鎖使用者。Ransomware Resilience 檢視者不應被授予 Ransomware Resilience 使用者行為管理員角色。</block>
@@ -6170,51 +6166,13 @@
   <block id="ba56355010a4d2b7a9f84d9cd9154231" category="admonition">如果您想要設定透明代理伺服器，可以在安裝完成後進行。<block ref="42ec89ae005e4bc718304f7a7f9af7dd" category="inline-link-macro-rx"></block>。</block>
   <block id="0e4e2076c75603c2622d2ec78b60debe" category="paragraph"><block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix="" category="inline-code"></block> 設定 Console 代理程式以使用下列格式之一的 HTTP 或 HTTPS Proxy 伺服器：</block>
   <block id="63e61b342d17ed1b9128b82afdcaa55e" category="list-text">Console 代理程式不支援包含 @ 字元的使用者名稱或密碼。</block>
-  <block id="c67fc0b337f1a4a940497d14b954a64b" category="inline-link-macro">瞭解在 NetApp Console 中經過驗證的組織</block>
-  <block id="418740347c100d5f65ec6fdae40039ab" category="paragraph">您也可以驗證您的組織，將其與您的 NetApp 商務帳戶身分連結，以便在 NetApp 系統中實現一致的治理。<block ref="92388bda5755f2ce99ab8ec4678c3808" category="inline-link-macro-rx"></block>.</block>
-  <block id="a0868ee8ba25b4a31561be0443ebf933" category="summary">已驗證的組織會將您的 NetApp Console 組織連結至您的 NetApp 商業帳戶，以確保身分識別與治理在各系統間保持一致。</block>
-  <block id="48cf25e26ffebb2bb495d369d230e558" category="paragraph">經過驗證的組織會將您在 NetApp Console 中的組織與您的 NetApp 業務帳戶身分（例如 CMAT ID）關聯起來。這有助於 Console 在各個 NetApp 系統中應用一致的組織身分和治理模型。</block>
-  <block id="30a203cb96c50fefbc17611dc5c228ac" category="section-title">為何要驗證您的組織</block>
-  <block id="5895e55252be33d4a8c0a3f2fed70ae9" category="paragraph">驗證您的組織身份可以幫助您：</block>
-  <block id="619827fbf7b134d07776d964ca418ef2" category="list-text">將您的 Console 組織與您的 NetApp 業務帳戶身分保持一致。</block>
-  <block id="ea4a402c177478c80f1fd6987232b900" category="list-text">提高管理、報告和支援工作流程的一致性。</block>
-  <block id="bbe78e0920e9bb47f8f85fdccf397e62" category="list-text">減少團隊跨多個 NetApp 服務工作時的歧義。</block>
-  <block id="f1883c3d9fd07e5c6274f9c0f795b6c5" category="list-text">支援依賴可信任組織身分的治理控制。</block>
-  <block id="62a9515152e6d7ec6e3c394287acb594" category="section-title">驗證後會有哪些變化</block>
-  <block id="7c11a53e44d8f76aeb151f87a95cd80b" category="paragraph">您的組織通過驗證後：</block>
-  <block id="cb56792a5e15f62a1f62723585cad786" category="list-text">該組織與 NetApp 企業帳戶身分相關聯。</block>
-  <block id="cab3888d6123cd3a318da7afcbce12bd" category="list-text">NetApp Console 可以將該組織身分視為業務級對應的權威身分。</block>
-  <block id="bdde811059b4457d759f661bfe34084d" category="list-text">如果某些組織設定檔變更由來源系統管理，則在 Console 中可能會受到限制。</block>
-  <block id="192e00466c0b488c77c731b828ab5e1e" category="section-title">在您驗證之前</block>
-  <block id="31862d7570d9062614fe4d5b544b3059" category="paragraph">在驗證您的組織之前，請確認以下事項：</block>
-  <block id="4eee70687da5ea2684317c0660041669" category="list-text">您擁有貴組織所需的管理角色。</block>
-  <block id="4a1b2fdd5fd46224c3cab8b448abdaf7" category="list-text">您已具備驗證所需的組織詳細資訊。</block>
-  <block id="073b3141ff007e2e7c9e7770dbb5c013" category="list-text">您已與您的 NetApp 客戶團隊協調，確認是否需要驗證業務帳戶對應關係。</block>
   <block id="ff79cbea9f2efa42d53fff27506cf26d" category="inline-link-macro">驗證您的組織</block>
-  <block id="cd61b05fa0ea90bca24f6c4068c70af2" category="list-text"><block ref="cd61b05fa0ea90bca24f6c4068c70af2" category="inline-link-macro-rx"></block></block>
-  <block id="a813b69ac531b0701ca879b788271f1d" category="list-text"><block ref="a813b69ac531b0701ca879b788271f1d" category="inline-link-macro-rx"></block></block>
   <block id="0ad3148d437ad1c27c46470f823dd1b5" category="paragraph">https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us （受限模式部署需要）</block>
-  <block id="10c97f048a09dcded54f8b476a81ea96" category="inline-link-macro">了解如何驗證您的組織</block>
-  <block id="f56da6e3ae650bf113d86ed1707a0cd5" category="paragraph">此網域驗證工作流程與組織驗證不同。<block ref="72ae1679f86197db823e7993d8e7864f" category="inline-link-macro-rx"></block>。</block>
-  <block id="35ea601a80ea7b092eea5094e5acf0bf" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 驗證您的組織（選用）</block>
-  <block id="1c5b44eb32f9d12f80011dc0daf0c723" category="paragraph">如果您的團隊使用組織驗證，請將您的 NetApp Console 組織與您的 NetApp 企業帳戶身分關聯。</block>
-  <block id="f628652f1454cbcdff49a07bde8f26d6" category="paragraph"><block ref="72ae1679f86197db823e7993d8e7864f" category="inline-link-macro-rx"></block>。</block>
-  <block id="92388bda5755f2ce99ab8ec4678c3808" category="list-text"><block ref="92388bda5755f2ce99ab8ec4678c3808" category="inline-link-macro-rx"></block></block>
   <block id="3d48cd486159d7ff770d2ac9604cb64a" category="paragraph">您的 NetApp Console 組織擁有名稱和 ID。您可以為組織選擇一個名稱以便於識別。您可能還需要知道組織 ID 以便進行 API 呼叫。</block>
   <block id="155e00b589db80072de70532ce7a50ce" category="doc">驗證您的 NetApp Console 組織</block>
   <block id="7934ae571b929618df901b492ff84198" category="inline-link-macro">了解如何關聯您的 NSS 帳戶</block>
   <block id="7a1bd24cabea42f3fe04b753aec5d8ba" category="list-text">如果您的使用者有權存取多個組織，請從 Organization 下拉式功能表中選擇要驗證的組織。</block>
   <block id="01b73db22fadaa534984d5a80ed20a2e" category="list-text">在 *Administration &gt; Identity and access* 中。</block>
-  <block id="10296e23827c1a60c2f8d75482c4a075" category="summary">驗證您的組織，將您的 NetApp Console 組織與您的 NetApp 企業帳戶身分關聯起來。</block>
-  <block id="80333c8b0e0d35357d14ab44c8c5f4f9" category="doc">在 NetApp Console 驗證您的組織</block>
-  <block id="43c3b1d18eaf47add23da2905752381b" category="paragraph">驗證您的組織會將您的 Console 組織與您的 NetApp 企業帳戶身分關聯起來。這樣，您就可以使用 Digital Advisor 和 AIQ 建議等功能。</block>
-  <block id="0a2f38a239e81a08f5b837f81513a9bc" category="paragraph">組織管理員或超級管理員。<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
-  <block id="45c6d1bd46ddc19876bfc91687471ea2" category="paragraph">如果貴公司在 NetApp 擁有多個企業帳戶，則必須驗證貴公司並將其與正確的企業帳戶建立關聯。如果貴公司只有一個 NetApp 企業帳戶，則貴公司將自動驗證並與該企業帳戶建立關聯。</block>
-  <block id="c6a431b7786ec48067cfa83374b99c0a" category="paragraph">當您的 Console 組織與您的企業帳戶關聯後，Digital Advisor 只會顯示與該帳戶關聯的資源。如果您有多個企業帳戶，則需要選擇一個與您的 Console 組織關聯。如果您需要變更關聯關係，可以再次驗證您的組織並選擇其他企業帳戶。</block>
-  <block id="8d6d948cdc13e069b613284450d2961f" category="list-text">在 *Organization* 頁面上，選擇頁面標題旁的 *Verify*。</block>
-  <block id="36cb56591d62e53ed37d02c1e0cf2a57" category="inline-image-macro">組織頁面的螢幕擷取畫面，顯示頁面標題旁的「驗證」按鈕。</block>
-  <block id="0bddf0553f7265d90da078ccd7865d6a" category="paragraph"><block ref="0bddf0553f7265d90da078ccd7865d6a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="812c2b994db82152161eb7a216b75550" category="list-text">從 *Associate business account* 對話方塊中，選擇要與您的組織建立關聯的企業帳戶。</block>
   <block id="e337542e72a609caf56b5e5fdf59c9ff" category="doc">Console 代理 4.7.0</block>
   <block id="99c4637fed7022fa029be07f2fddc9af" category="paragraph">4.7.0 版本同時支援標準模式和受限模式。</block>
   <block id="c36716f3e716cc1af0c491f3d55d650b" category="paragraph">本版本包含以下新功能。</block>
@@ -6242,10 +6200,6 @@
   <block id="ab066b3292d8ab61ef3b5c77169cdd19" category="section-title">更多資訊</block>
   <block id="4964a8f5f86e15358c2fc765883fe9b2" category="inline-link-macro">瞭解 NetApp Data Classification</block>
   <block id="5ced687e00d6efd9bda8689abae14e58" category="list-text"><block ref="5ced687e00d6efd9bda8689abae14e58" category="inline-link-macro-rx"></block></block>
-  <block id="ae8e202976179a823c177023962ba12a" category="cell"><block ref="ae8e202976179a823c177023962ba12a" category="inline-link-macro-rx"></block></block>
-  <block id="c1e616bcb4ff762399549fa457f2d29b" category="cell">安裝 Data Classification 以及在 Data Classification 中關聯組織層級權限時需要此項目。</block>
-  <block id="47a46671c1a0773fed715c3799195b7f" category="cell"><block ref="47a46671c1a0773fed715c3799195b7f" category="inline-link-macro-rx"></block></block>
-  <block id="d1bd98b9d900098c018b826ca4e6bd65" category="cell">允許使用者查看 NetApp Data Classification 掃描結果。擁有此角色的使用者可以查看合規性資訊，並為其有權存取的資源產生報告。這些使用者無法啟用或停用磁碟區、儲存桶或資料庫架構的掃描。</block>
   <block id="eeeb9dcaeb66c431b51b12eff19105f3" category="sidebar">Data Classification 角色</block>
   <block id="f879dc19b8d807f7185039a4bd14f8f8" category="summary">NetApp Licenses and Subscriptions 角色可讓您在 NetApp Console 中為使用者指派不同角色，以完成授權和訂閱管理所需的任務。</block>
   <block id="6f147a6113c5afec8776bf72f44f87d5" category="doc">NetApp Console 中的 Licenses and subscriptions 角色</block>
@@ -6264,17 +6218,10 @@
   <block id="e1e396fcbcea3e57f0efa53c64e39e2e" category="cell">檢視訂閱</block>
   <block id="9ffbfdd088029bc08ac68a7e8204d3d0" category="cell">移除訂閱</block>
   <block id="f06ea6495b1fd2d6a469a12a5dc9f68b" category="cell">刪除 License</block>
-  <block id="cdc482262618604a335f0c4343ec2ea8" category="inline-link-macro">授權與訂閱管理員</block>
-  <block id="0d89f22c7458cba55f94b24b9c15e6d0" category="cell"><block ref="0d89f22c7458cba55f94b24b9c15e6d0" category="inline-link-macro-rx"></block></block>
-  <block id="a40769dfb91b2027074e15e64eff6c7c" category="cell">擁有 License and subscription 管理員角色的使用者可以建立、更新和刪除 NetApp Console 和附屬資料服務的直接 Licenses 和 Marketplace Subscriptions。</block>
-  <block id="bbbb1967c36266ce01e7c3f89d283ee5" category="inline-link-macro">授權與訂閱檢視器</block>
-  <block id="72917a7c676383ff6b788b1412017021" category="cell"><block ref="72917a7c676383ff6b788b1412017021" category="inline-link-macro-rx"></block></block>
-  <block id="e2b838aa3390b536f83cc6ce3e1a2748" category="cell">擁有 License and subscription viewer 角色的使用者可以查看 NetApp Console 和相關資料服務的 direct licenses 和 marketplace subscriptions。</block>
   <block id="5ec2925c394689c97be1228f67a49b85" category="sidebar">Licenses and subscriptions 角色</block>
   <block id="52599219f6b08bb2ce3fc85743943c5e" category="paragraph"><block ref="d7d87d0a148c81603b40370c84cf5979" category="inline-link-macro-rx"></block>。</block>
   <block id="2550db9aaa48d21b3c6e2051eb610223" category="paragraph"><block ref="7c12d9abb1f60d196a4cd5e699bed565" category="inline-link-macro-rx"></block>。</block>
   <block id="ef4c9807306cc53f9292ed7a239eeaa7" category="paragraph">在 NetApp Console 中的身份與存取管理（IAM）提供預先定義的角色，您可以將這些角色指派給組織中不同資源階層的成員。在指派這些角色之前，您應該了解每個角色所包含的權限。角色分為以下幾類：平台、應用程式和資料服務。這些表格同時包含每個角色的 API 名稱，方便使用 API 管理角色指派的客戶參考。</block>
-  <block id="81be82a027b82e849a37f5d6236fd170" category="paragraph">*API 名稱是 API 中使用的角色識別碼。請完全按照所示內容複製該值（包括大小寫和底線）。</block>
   <block id="17f15167b5660a249617ea94aa6d9d22" category="cell">API 名稱*</block>
   <block id="bf0d50e0ceb480c4356aa15afd8f46f2" category="cell">ORGANIZATION_ADMIN</block>
   <block id="c57c74449515f098b0771d80be257585" category="cell">FOLDER_OR_PROJECT_ADMIN</block>
@@ -6289,7 +6236,6 @@
   <block id="70e312b7130aab755fc1b7285f3ce9a0" category="cell">KEYSTONE_ADMIN</block>
   <block id="f566c3f80b38166af64295a26184a32f" category="cell">KEYSTONE_VIEWER</block>
   <block id="6f80e1ba07524b620f9ac3ab70a9f846" category="cell">ONTAP_MEDIATOR_SETUP</block>
-  <block id="f4090d772571520ccc8fd7caa2042019" category="cell"><block ref="f4090d772571520ccc8fd7caa2042019" category="inline-link-macro-rx"></block></block>
   <block id="3b846a37d0c85419e50ecd7c10c0ddba" category="cell">營運支援分析師</block>
   <block id="a06d75f2be53002fd7ecebe794bad111" category="cell">STORAGE_ADMIN</block>
   <block id="fe37126842449c75ba0d4df263b08491" category="cell">儲存檢視器</block>
@@ -6310,4 +6256,21 @@
   <block id="91a470b0f7bf1c1702a23ad6d9d4159d" category="cell">勒索軟體復原能力使用者行為檢視器</block>
   <block id="a67d722a1a98561bf88726ffcf6ecda7" category="cell">SNAPCENTER_ADMIN</block>
   <block id="6b0a56bcf40e8d005fd8e9e5b2559479" category="list-text">主控台會針對代理程式、授權和訂閱、NetApp Copy and Sync、NetApp Backup and Recovery 以及 NetApp Ransomware Resilience 發送電子郵件通知。</block>
+  <block id="9ac912c60697a1237d12bdfad1ed975f" category="cell">Keystone 訂閱存取</block>
+  <block id="6d2986515ca8666b77fb12051944388d" category="cell">API 名稱* *API 名稱是 API 中使用的角色識別碼。請完全按照所示內容複製值（包括大小寫和底線）。</block>
+  <block id="bfb78ce9833860669efdf093e894f0d5" category="cell">模式可用性</block>
+  <block id="73e5d1355567cd0f538ddabf3cf26be3" category="cell">標準、受限、私有</block>
+  <block id="f2ad52479c9d7a5dc51ed3f3ab03e45a" category="cell">此角色允許使用者不受限制地存取組織內的所有專案和資料夾，向任何專案或資料夾添加成員，以及執行任何任務並使用任何未明確關聯角色的資料服務。擁有此角色的使用者可以透過建立資料夾和專案、分配角色、新增使用者以及管理系統（如果他們擁有相應的憑證）來管理您的組織。這是唯一可以建立 Console 代理的存取角色。</block>
+  <block id="331dfa1e0a93d1ecb14265311c06848f" category="cell">標準版、受限版</block>
+  <block id="0c59885a322273fa1fb3ebe78010c852" category="cell">為使用者提供部分檢視器角色。此角色專為規模較小的組織設計，這些組織可能不需要將 Console 職責分配給多個使用者。</block>
+  <block id="370187cecb3fe8ea0ece4a9d95fb222e" category="cell">賦予使用者對組織層級資訊和資源的唯讀可見度，這些資訊和資源屬於指定的階層層級範圍。</block>
+  <block id="eb6d8ae6f20283755b339c0dc273988b" category="cell">標準</block>
+  <block id="0321c70517c9c78cf799c7075b2ab9de" category="inline-link-macro">營運支援分析師</block>
+  <block id="406a1f2f1940a9f2563b8c2e2ba639da" category="cell"><block ref="406a1f2f1940a9f2563b8c2e2ba639da" category="inline-link-macro-rx"></block></block>
+  <block id="55a6c46602496366e85545482ddb9ca2" category="cell">在備份與還原中還原工作負載。</block>
+  <block id="65af4793a6fa01700ec78442d5b2626f" category="cell">在 Backup and Recovery 中複製應用程式和資料。</block>
+  <block id="9ba1f0e426e643179b44f5146f795c55" category="cell">允許使用者查看 NetApp Data Classification 掃描結果。擁有此角色的使用者可以查看合規性資訊，並為其有權存取的資源產生報告。這些使用者無法啟用或停用磁碟區、儲存區或資料庫架構的掃描。Data Classification 沒有管理員角色。</block>
+  <block id="19ba82eae8f218642333800aab8dc1c9" category="cell">標準、私有</block>
+  <block id="31c8c9293a24d211fe8df6780c3b5864" category="list-text">在為使用者或服務帳戶指派角色時、您可以從支援的角色中進行選擇。</block>
+  <block id="b4c25e4423bb6dcb1445deb7b10e93fb" category="paragraph">僅支援的角色會顯示在下拉清單中。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
 </blocks>
