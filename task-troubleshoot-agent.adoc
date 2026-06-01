@@ -170,9 +170,12 @@ image:screenshot-agent-validate.png["螢幕截圖顯示了代理「操作」選�
 
 === 停用手動安裝的設定檢查
 
+
+
+=== 停用手動安裝的設定檢查
+
 有時您可能需要停用在安裝期間驗證出站連線的設定檢查。例如，在政府雲端環境中手動安裝代理程式時，需要停用設定檢查，否則安裝將失敗。
 
-.步驟
 您可以透過在 _com/opt/application/netapp/service-manager-2/config.json_ 檔案中設定 _skipConfigCheck_ 標誌來停用設定檢查。預設情況下，此標誌設定為 false，且設定檢查會驗證代理程式的出站存取。將此標誌設為 true 以停用檢查。在完成此步驟之前，請先熟悉 JSON 語法。
 
 若要重新啟用設定檢查，請使用下列步驟並將_skipConfigCheck_標誌設為false。
@@ -181,8 +184,7 @@ image:screenshot-agent-validate.png["螢幕截圖顯示了代理「操作」選�
 . 以 root 身分或使用 sudo 權限存取控制台代理主機。
 . 建立 _/opt/application/netapp/service-manager-2/config.json_ 檔案的備份副本，以確保您可以還原變更。
 . 透過執行以下命令停止服務管理員 2 服務：
-
-
++
 [source, cli]
 ----
 systemctl stop netapp-service-manager.service
