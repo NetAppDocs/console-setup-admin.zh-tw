@@ -18,6 +18,31 @@ summary: 瞭解 NetApp Console 管理的新功能。
 
 
 
+== 2026 年 6 月 15 日
+
+
+
+=== 私有模式發布（4.7.0）
+
+新的私人模式版本現已可從 https://mysupport.netapp.com/site/downloads["NetApp支援站點"^]
+
+4.7.0 版本包含以下 NetApp Console 元件和服務的更新。
+
+[cols="3*"]
+|===
+| 組件或服務 | 此版本中包含的版本 | 自上次私人模式發布以來的變化 
+
+
+| 控制台代理 | 4.7.0 | 前往 https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2026-05-11.html["NetApp Console 頁面新增功能"^]並參考版本 4.7.0 中包含的變更。 
+
+
+| NetApp Backup and Recovery | 5.4.0（2026年6月8日） | 前往  https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["NetApp Backup and Recovery 頁面的最新消息"^]。 
+
+
+| NetApp Data Classification | 1.54.0（2026年5月11日） | 前往  https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["NetApp Classification 頁面新增功能"^]。 
+|===
+
+
 == 2026 年 5 月 11 日
 
 
@@ -106,10 +131,10 @@ NetApp Console建立在增強和重組的BlueXP基礎之上，可在企業級內
 | 控制台代理 | 4.4.0 | 前往 https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2026-02-09.html["NetApp Console 頁面新增功能"^]並參考版本 4.4.0 中包含的變更。 
 
 
-| 備份和復原 | 5.0.3（2026 年 3 月 2 日） | 前往  https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["NetApp Backup and Recovery 頁面的最新消息"^]。 
+| NetApp Backup and Recovery | 5.0.3（2026 年 3 月 2 日） | 前往  https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["NetApp Backup and Recovery 頁面的最新消息"^]。 
 
 
-| 分類 | 1.5.1 （2026 年 2 月 9 日） | 前往  https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["NetApp Classification 頁面新增功能"^]。 
+| NetApp Data Classification | 1.5.1 （2026 年 2 月 9 日） | 前往  https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["NetApp Classification 頁面新增功能"^]。 
 |===
 
 
@@ -1333,7 +1358,7 @@ https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/using_s
 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html#step-1-review-host-requirements["了解有關 Docker Engine 要求的更多信息"] 。
 
 .更新了本機 UI 存取的 SSL 憑證
-當您在受限模式或私有模式下使用BlueXP時，可以從部署在雲端區域或本地端的連接器虛擬機器存取使用者介面。預設情況下， BlueXP使用自簽名 SSL 憑證為在連接器上執行的基於 Web 的控制台提供安全的 HTTPS 存取。
+在受限模式或私有模式下使用 BlueXP 時，使用者介面可透過部署在雲端區域或內部部署的 Connector 虛擬機器存取。預設情況下，BlueXP 使用自我簽署的 SSL 憑證，透過本機網頁瀏覽器提供安全的 HTTPS 存取。
 
 在此版本中，我們對新的和現有的連接器的 SSL 憑證進行了更改：
 
@@ -1373,7 +1398,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 
 === 更新了 AWS 和 Azure 權限
 
-我們更新了連接器的 AWS 和 Azure 原則，以刪除不再需要的權限。這些權限與BlueXP邊緣快取以及 Kubernetes 叢集的發現和管理有關，自 2024 年 8 月起不再支援。
+我們更新了 Connector 的 AWS 和 Azure 原則，移除了不再需要的權限。這些權限與 BlueXP 邊緣快取以及在 Azure 和 AWS 中探索和管理 Kubernetes 叢集有關。
 
 * https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html#change-log["了解 AWS 策略中的變化"] 。
 * https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html#change-log["了解 Azure 策略中的變更"] 。
@@ -1397,7 +1422,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 "Microsoft.Compute/virtualMachineScaleSets/read",
 "Microsoft.Compute/virtualMachineScaleSets/delete"
 ----
-Cloud Volumes ONTAP支援虛擬機器規模集需要這些權限。如果您有現有的連接器並且想要使用此新功能，則需要將這些權限新增至與您的 Azure 憑證關聯的自訂角色。
+這些權限是 Cloud Volumes ONTAP 支援虛擬機器規模集所必需的。如果您已有連接器並希望使用此新功能，則需要將這些權限新增至與 Azure 憑證關聯的自訂原則。
 
 * https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes["了解Cloud Volumes ONTAP 9.15.1 版本"^]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["查看連接器的 Azure 權限"] 。
@@ -1569,7 +1594,7 @@ BlueXP Connector 的此版本包含一些小的安全性改進和錯誤修復。
 
 https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/rhel-7-end-of-maintenance["Red Hat：關於 Red Hat Enterprise Linux 7 維護終止你需要知道的事"^]
 
-如果您現有的代理程式在 RHEL 7 或 CentOS 7 上執行， NetApp不支援將作業系統升級或轉換為 RHEL 8 或 9。您需要在受支援的作業系統上建立一個新的代理程式。
+如果您現有的代理程式執行在 RHEL 7 或 CentOS 7 上，NetApp 則不支援將作業系統升級或轉換為 RHEL 8 或 9。您需要在受支援的作業系統上建立一個新的代理程式。請依照以下簡要步驟進行切換：
 
 . 設定 RHEL 8 或 9 主機。
 . 安裝 Podman。
@@ -1635,41 +1660,4 @@ https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/rhel-7-e
 * https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["了解BlueXP backup and recovery的新功能"^]
 * https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["了解BlueXP classification的新功能"^]
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["了解BlueXP中Cloud Volumes ONTAP管理的新功能"^]
-
-
-
-
-== 2024年5月17日
-
-
-
-=== 連接器 3.9.40
-
-BlueXP Connector 的此版本包括對其他作業系統的支援、小的安全性改進和錯誤修復。
-
-目前，3.9.40 版本適用於標準模式和限制模式。
-
-.支援 RHEL 8 和 9
-在標準模式或限制模式下使用BlueXP時，執行下列版本的 Red Hat Enterprise Linux 且安裝了_new_ Connector 的主機現在支援此連接器：
-
-* 8.6 至 8.9
-* 9.1 至 9.3
-
-
-Podman 是這些作業系統所必需的容器編排工具。
-
-您應該了解 Podman 的要求、已知的限制、作業系統支援的摘要、如果您有 RHEL 7 主機該怎麼做、如何開始等等。
-
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html["了解連接器對 RHEL 8 和 9 的支持"] 。
-
-.終止對 RHEL 7 和 CentOS 7 的支持
-2024 年 6 月 30 日，RHEL 7 將達到維護終止（EOM），而 CentOS 7 將達到生命週期終止（EOL）。NetApp將繼續支援這些 Linux 發行版上的 Connector，直到 2024 年 6 月 30 日。
-
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html["了解如果現有的 Connector 在 RHEL 7 或 CentOS 7 上運行，該怎麼辦"] 。
-
-.AWS 權限更新
-在 3.9.38 版本中，我們更新了 AWS 的連接器策略以包含「ec2:DescribeAvailabilityZones」權限。現在需要此權限來支援具有Cloud Volumes ONTAP 的AWS 本地區域。
-
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html["查看連接器的 AWS 權限"] 。
-* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["了解有關 AWS 本地區域支援的更多信息"^]
 

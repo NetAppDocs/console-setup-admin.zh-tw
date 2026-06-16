@@ -1,0 +1,25 @@
+= 私有模式發布（4.7.0）
+:allow-uri-read: 
+
+
+
+
+=== 私有模式發布（4.7.0）
+
+新的私人模式版本現已可從 https://mysupport.netapp.com/site/downloads["NetApp支援站點"^]
+
+4.7.0 版本包含以下 NetApp Console 元件和服務的更新。
+
+[cols="3*"]
+|===
+| 組件或服務 | 此版本中包含的版本 | 自上次私人模式發布以來的變化 
+
+
+| 控制台代理 | 4.7.0 | 前往 https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2026-05-11.html["NetApp Console 頁面新增功能"^]並參考版本 4.7.0 中包含的變更。 
+
+
+| NetApp Backup and Recovery | 5.4.0（2026年6月8日） | 前往  https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["NetApp Backup and Recovery 頁面的最新消息"^]。 
+
+
+| NetApp Data Classification | 1.54.0（2026年5月11日） | 前往  https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["NetApp Classification 頁面新增功能"^]。 
+|===

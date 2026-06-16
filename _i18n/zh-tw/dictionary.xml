@@ -406,8 +406,6 @@
   <block id="0930e6e62078c5446e99045f0a678607" category="paragraph">Docker Engine 23.0.6 至 28.0.0。</block>
   <block id="8f06b143b878ae3919ba41cd38ea7380" category="list-text">在私人模式下使用控制台時，下列作業系統支援控制台代理程式。安裝代理之前需要一個容器編排工具。</block>
   <block id="1a3d8802d280d4ec910f54042cd62998" category="cell">SELinux</block>
-  <block id="730752c250979031a3c93723f75e0b07" category="paragraph">3.9.42 或更高版本，控制台處於私人模式</block>
-  <block id="607262a04e5c4340fc8d641e874a5695" category="paragraph">3.9.29 或更高版本</block>
   <block id="a3336db0e9f7b6341a12794c144076b6" category="paragraph">Docker Engine 23.0.6 至 26.0.0</block>
   <block id="5556c95763913c6cfa8f61d9cab4f4f2" category="paragraph">26.0.0 支援 _new_ agent 3.9.44 或更高版本的安裝</block>
   <block id="afaf0577b469adb0296b4fcfa6f2af91" category="list-text">這些作業系統的英文版本支援控制台代理。</block>
@@ -1325,7 +1323,6 @@
   <block id="c3a964b5dfacd9501abc103bfcc4c98f" category="paragraph">2024 年 6 月 30 日，RHEL 7 達到維護終止 (EOM)，而 CentOS 7 達到生命週期終止 (EOL)。  NetApp將於 2024 年 6 月 30 日停止對這些 Linux 發行版上的代理商的支援。</block>
   <block id="7eba69a7025f97bec42a74bd138b395e" category="inline-link">Red Hat：關於 Red Hat Enterprise Linux 7 維護終止你需要知道的事</block>
   <block id="ebc4aba90c33f7558582b9bbf738fdd9" category="paragraph"><block ref="ebc4aba90c33f7558582b9bbf738fdd9" category="inline-link-rx"></block></block>
-  <block id="f9c4366c4eb9ae998e18094001111005" category="paragraph">如果您現有的代理程式在 RHEL 7 或 CentOS 7 上執行， NetApp不支援將作業系統升級或轉換為 RHEL 8 或 9。您需要在受支援的作業系統上建立一個新的代理程式。</block>
   <block id="0f50cd1079cb24de2b4571c09546a2e1" category="list-text">設定 RHEL 8 或 9 主機。</block>
   <block id="8c9215e1b963f63a463d468347c9cc12" category="list-text">安裝一個_新_代理。</block>
   <block id="b8bb8aa40b62692dd726a6effbbb7c2a" category="list-text">配置代理以發現先前代理所管理的系統。</block>
@@ -4160,7 +4157,6 @@
   <block id="c64c773fbe16e4df6ae417c106a467ef" category="inline-link">了解有關 Docker Engine 要求的更多信息</block>
   <block id="395f31b2f1bc9cb3993acbb14cf4fb1f" category="paragraph"><block ref="724b4d6e1bb3e6bea768572a2ce7c10e" category="inline-link-rx"></block> 。</block>
   <block id="15ba9bb026c53a148756b12826c46f8b" category="paragraph-title">更新了本機 UI 存取的 SSL 憑證</block>
-  <block id="b96edd49155123375756b26e44b38121" category="paragraph">當您在受限模式或私有模式下使用BlueXP時，可以從部署在雲端區域或本地端的連接器虛擬機器存取使用者介面。預設情況下， BlueXP使用自簽名 SSL 憑證為在連接器上執行的基於 Web 的控制台提供安全的 HTTPS 存取。</block>
   <block id="2737440e84d6c8a13a097fa583a6e67a" category="paragraph">在此版本中，我們對新的和現有的連接器的 SSL 憑證進行了更改：</block>
   <block id="6cb49682fd1f125736d18f28cbce1f23" category="list-text">憑證的通用名稱現在與短主機名稱匹配</block>
   <block id="982638142d38ac9441736ff5402f4e2a" category="list-text">憑證主體備用名稱是主機的完全限定網域名稱 (FQDN)</block>
@@ -4175,7 +4171,6 @@
   <block id="d0f584a070c78efb8fff64b377dbf729" category="paragraph">更新後支援的 Podman 版本清單包括 Red Hat Enterprise Linux 主機的 4.6.1 和 4.9.4。</block>
   <block id="fef89f8fc6e9d583565954d5abe02ec4" category="paragraph">從 Connector 3.9.40 版本開始，RHEL 主機需要 Podman。</block>
   <block id="842ce6e5c3bdb8cf81ffbd4f90a57649" category="section-title">更新了 AWS 和 Azure 權限</block>
-  <block id="c1f46e9419a384f29f23682739cc8d58" category="paragraph">我們更新了連接器的 AWS 和 Azure 原則，以刪除不再需要的權限。這些權限與BlueXP邊緣快取以及 Kubernetes 叢集的發現和管理有關，自 2024 年 8 月起不再支援。</block>
   <block id="d201eff65f4516de2c618efea5a7edde" category="inline-link">了解 AWS 策略中的變化</block>
   <block id="b0c050c316c776928b8b8bc0c327449e" category="list-text"><block ref="aff0e765a5d2f4e281feabd61d1dd500" category="inline-link-rx"></block> 。</block>
   <block id="2f036a4385aa02ab7c67e7932bd4036f" category="inline-link">了解 Azure 策略中的變更</block>
@@ -4183,7 +4178,6 @@
   <block id="335b63351c39337de35ede84c3852d4d" category="section-title">連接器 3.9.43 補丁</block>
   <block id="262115d0d4a65fe9bcd074ab5666018a" category="paragraph">我們更新了連接器以支援Cloud Volumes ONTAP 9.15.1 版本。</block>
   <block id="ede74fed38968a6f0c0dcebc3102b859" category="paragraph">對此版本的支援包括對 Azure 連接器原則的更新。該策略現在包括以下權限：</block>
-  <block id="c78a856f5972910d86f9b588fe9783e6" category="paragraph">Cloud Volumes ONTAP支援虛擬機器規模集需要這些權限。如果您有現有的連接器並且想要使用此新功能，則需要將這些權限新增至與您的 Azure 憑證關聯的自訂角色。</block>
   <block id="1b41af4e937fd3b48c53451988ba06b5" category="inline-link">了解Cloud Volumes ONTAP 9.15.1 版本</block>
   <block id="dcc26903c10160517882b9dad3e9f26f" category="list-text"><block ref="dcc26903c10160517882b9dad3e9f26f" category="inline-link-rx"></block></block>
   <block id="21952e368aec0a06297b408b56d39588" category="inline-link">查看連接器的 Azure 權限</block>
@@ -4246,20 +4240,6 @@
   <block id="4f56b8c7a0f62edc59659cfaecc68958" category="paragraph">請注意，此私有模式版本不包括對 Red Hat Enterprise Linux 8 和 9 的連接器的支援。</block>
   <block id="f691a3ef752f6e51a74183a6b7b1c432" category="cell">3.9.40</block>
   <block id="188fd7f75e50a8a882a75c15dcb630a1" category="cell">2024年5月17日</block>
-  <block id="81f58b484d838909a5fedb3486f3a8e2" category="section-title">連接器 3.9.40</block>
-  <block id="32d1e3d3ebe78d37dbdfcf9933b0cf90" category="paragraph">BlueXP Connector 的此版本包括對其他作業系統的支援、小的安全性改進和錯誤修復。</block>
-  <block id="94f95548313e6f5528b5011a7d10e19f" category="paragraph">目前，3.9.40 版本適用於標準模式和限制模式。</block>
-  <block id="3eb0b1a8f5c259c6baffd4acbc27dc9b" category="paragraph">在標準模式或限制模式下使用BlueXP時，執行下列版本的 Red Hat Enterprise Linux 且安裝了_new_ Connector 的主機現在支援此連接器：</block>
-  <block id="f335f00e1188cffe57c3d9416ce23c84" category="list-text">8.6 至 8.9</block>
-  <block id="16051bd228f38a4877773f8f795d59a9" category="paragraph">2024 年 6 月 30 日，RHEL 7 將達到維護終止（EOM），而 CentOS 7 將達到生命週期終止（EOL）。NetApp將繼續支援這些 Linux 發行版上的 Connector，直到 2024 年 6 月 30 日。</block>
-  <block id="cc33fea72b72b4631424774600dd1785" category="inline-link">了解如果現有的 Connector 在 RHEL 7 或 CentOS 7 上運行，該怎麼辦</block>
-  <block id="ab95c14710d4a4d5d91375c4a1b3315b" category="paragraph"><block ref="079fd36262e0750841aa2ea8902cdc7a" category="inline-link-rx"></block> 。</block>
-  <block id="4cc078461f1763cdb13efec9da8a6a3f" category="paragraph-title">AWS 權限更新</block>
-  <block id="2f4b86d46e79a7a3f22d1c784c12799e" category="paragraph">在 3.9.38 版本中，我們更新了 AWS 的連接器策略以包含「ec2:DescribeAvailabilityZones」權限。現在需要此權限來支援具有Cloud Volumes ONTAP 的AWS 本地區域。</block>
-  <block id="7595af352964f2b06057ab6310fdff44" category="inline-link">查看連接器的 AWS 權限</block>
-  <block id="bad85d32b5f3e46e956809c13b502817" category="list-text"><block ref="7e42187d6259f740c2e1915df5429efc" category="inline-link-rx"></block> 。</block>
-  <block id="364a4ff52cd92f16374019cdedf6b91c" category="inline-link">了解有關 AWS 本地區域支援的更多信息</block>
-  <block id="d3cdb39411bce89027162422ffb460a4" category="list-text"><block ref="d3cdb39411bce89027162422ffb460a4" category="inline-link-rx"></block></block>
   <block id="5483a2359dc6447c026002b1f7426d4e" category="sidebar">開始使用NetApp Console ，以便您可以開始在本地和雲端環境中建置、保護和管理資料。設定完成後，您可以使用身分和存取管理 (IAM) 控制對資源的存取、管理控制台代理、雲端提供者帳戶等。</block>
   <block id="55744ccea4ab827ad5f363c0ec39e8bf" category="sidebar">NetApp Console設定與管理文檔</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">開始</block>
@@ -6273,4 +6253,17 @@
   <block id="19ba82eae8f218642333800aab8dc1c9" category="cell">標準、私有</block>
   <block id="31c8c9293a24d211fe8df6780c3b5864" category="list-text">在為使用者或服務帳戶指派角色時、您可以從支援的角色中進行選擇。</block>
   <block id="b4c25e4423bb6dcb1445deb7b10e93fb" category="paragraph">僅支援的角色會顯示在下拉清單中。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
+  <block id="7ea105aee574037d5e6af21567c8c3dc" category="paragraph">4.0.0 或更高版本，且控制台處於私有模式</block>
+  <block id="5d818424eacea237d3f2053aafd60fbe" category="paragraph">4.0.0 或更新版本</block>
+  <block id="b39dc14a008a29a5ead42173a9e0c598" category="doc">私有模式發布（4.7.0）</block>
+  <block id="2c0d034db2b48e2c24de792e5f537a36" category="paragraph">4.7.0 版本包含以下 NetApp Console 元件和服務的更新。</block>
+  <block id="d794a9cd24f47c508609ee13d758511f" category="cell">4.7.0</block>
+  <block id="59daf18c0a626a4e9dde08f3ce934dba" category="cell">前往<block ref="96a354291689d74da1dc3c76f5332e6f" category="inline-link-rx"></block>並參考版本 4.7.0 中包含的變更。</block>
+  <block id="225461e659003503fb35b495b5008e09" category="cell">5.4.0（2026年6月8日）</block>
+  <block id="dec411cd5f201e22bcbd7d9f4569efcc" category="cell">1.54.0（2026年5月11日）</block>
+  <block id="15957f5a10d7c37b0a0a1daa1c46013a" category="section-title">2026 年 6 月 15 日</block>
+  <block id="8d2fe627427775fd995055c612f4724b" category="paragraph">在受限模式或私有模式下使用 BlueXP 時，使用者介面可透過部署在雲端區域或內部部署的 Connector 虛擬機器存取。預設情況下，BlueXP 使用自我簽署的 SSL 憑證，透過本機網頁瀏覽器提供安全的 HTTPS 存取。</block>
+  <block id="81ba052a80f6ca03940e96b958459737" category="paragraph">我們更新了 Connector 的 AWS 和 Azure 原則，移除了不再需要的權限。這些權限與 BlueXP 邊緣快取以及在 Azure 和 AWS 中探索和管理 Kubernetes 叢集有關。</block>
+  <block id="8b8a789c0e7d6b190da84177b5130948" category="paragraph">這些權限是 Cloud Volumes ONTAP 支援虛擬機器規模集所必需的。如果您已有連接器並希望使用此新功能，則需要將這些權限新增至與 Azure 憑證關聯的自訂原則。</block>
+  <block id="e68cc6c646a8fcaf6b506961e2280d76" category="paragraph">如果您現有的代理程式執行在 RHEL 7 或 CentOS 7 上，NetApp 則不支援將作業系統升級或轉換為 RHEL 8 或 9。您需要在受支援的作業系統上建立一個新的代理程式。請依照以下簡要步驟進行切換：</block>
 </blocks>
