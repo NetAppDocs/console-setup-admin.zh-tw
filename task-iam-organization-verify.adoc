@@ -20,7 +20,7 @@ summary: 預設情況下，Digital Advisor 會顯示與貴公司關聯的所有 
 
 == 開始之前
 
-您必須擁有組織管理員角色才能驗證您的組織。您的使用者也必須關聯一個 NetApp 支援網站 (NSS) 帳戶。link:task-adding-nss-accounts["了解如何關聯您的 NSS 帳戶"]。
+您必須擁有組織管理員角色才能驗證您的組織。您的使用者也必須關聯一個 NetApp 支援網站 (NSS) 帳戶。link:task-adding-nss-accounts.html["了解如何關聯您的 NSS 帳戶"]。
 
 
 NOTE: 如果貴公司只有一個企業帳戶，並且您的使用者與 NetApp 支援網站帳戶關聯，則控制台會自動驗證您的組織。
