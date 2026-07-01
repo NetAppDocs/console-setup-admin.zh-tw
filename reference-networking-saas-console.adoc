@@ -100,4 +100,11 @@ https://api.workloads.netapp.com
  a| 
 基於 Web 的控制台透過與 Workload Factory API 互動來管理和操作基於ONTAP 的FSx 工作負載。
 
+
+
+ a| 
+\https://ws.workloads.bluexp.netapp.com
+ a| 
+由 Workload Factory 後端用於輪詢 Console 代理程式以取得 ONTAP 操作。
+
 |===
