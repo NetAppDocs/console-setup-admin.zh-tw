@@ -6269,4 +6269,8 @@
   <block id="783781dfce7d40d62cedb10d8445eca9" category="paragraph">您必須擁有組織管理員角色才能驗證您的組織。您的使用者也必須關聯一個 NetApp 支援網站 (NSS) 帳戶。<block ref="e27e8a258f84be720108170f748a0bb6" category="inline-link-macro-rx"></block>。</block>
   <block id="9f45fe3cd2af64a1afc3f4b7f81bdae6" category="paragraph">\https://ws.workloads.bluexp.netapp.com</block>
   <block id="5590527a85098bd1da6679e4d795adb2" category="paragraph">由 Workload Factory 後端用於輪詢 Console 代理程式以取得 ONTAP 操作。</block>
+  <block id="cc77cf98baa64437ba1852257c81c7a1" category="doc">Console 代理 4.8.0</block>
+  <block id="c352b7fbc4bc73fdf6c2e56c32996413" category="paragraph">4.8.0 版本同時支援標準模式和受限模式。</block>
+  <block id="179021adb01b0c7bf08f12ed1f7e4cea" category="paragraph">本次版本更新包含了安全性改善和漏洞修復。</block>
+  <block id="36864a323861d58f15ec5fb9c0a62095" category="section-title">2026 年 6 月 8 日</block>
 </blocks>
