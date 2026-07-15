@@ -216,6 +216,8 @@ sidebar:
           entries:
           - title: 備份和還原角色
             url: "/reference-iam-backup-rec-roles.html"
+          - title: Cloud Volumes ONTAP 角色
+            url: "/reference-iam-cvo-roles.html"
           - title: Data Classification 角色
             url: "/reference-iam-data-classification.html"
           - title: 災難復原角色

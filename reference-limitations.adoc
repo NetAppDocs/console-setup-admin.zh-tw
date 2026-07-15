@@ -20,10 +20,12 @@ summary: 已知限制標識了該產品的此版本不支援或無法與其正�
 
 
 
+[[console-agent-limitations]]
 == 控制台代理限制
 
 
 
+[[possible-conflict-with-ip-addresses-in-the-172-range]]
 === 可能與 172 範圍內的 IP 位址衝突
 
 NetApp Console部署了一個具有兩個介面的代理，這兩個介面的 IP 位址分別在 172.17.0.0/16 和 172.18.0.0/16 範圍內。
@@ -34,6 +36,7 @@ NetApp Console部署了一個具有兩個介面的代理，這兩個介面的 IP
 
 
 
+[[ssl-decryption-supported-only-for-cloud-volumes-ontap]]
 === 僅 Cloud Volumes ONTAP 支援 SSL 解密
 
 僅支援與 Cloud Volumes ONTAP 關聯的代理使用透明代理伺服器。如果代理也與其他 NetApp 資料服務一起使用，則無法為其使用透明代理。如果您將 NetApp 資料服務與 Cloud Volumes ONTAP 搭配使用，請為 Cloud Volumes ONTAP 建立專用代理，以便使用透明代理伺服器。
@@ -42,6 +45,7 @@ NetApp Console部署了一個具有兩個介面的代理，這兩個介面的 IP
 
 
 
+[[blank-page-when-loading-the-local-ui]]
 === 載入本機 UI 時出現空白頁
 
 如果您載入在代理程式上執行的基於 Web 的控制台，介面有時可能無法顯示，而只會顯示空白頁。
@@ -50,12 +54,14 @@ NetApp Console部署了一個具有兩個介面的代理，這兩個介面的 IP
 
 
 
+[[shared-linux-hosts-are-not-supported]]
 === 不支援共享 Linux 主機
 
 與其他應用程式共用的虛擬機器不支援該代理程式。  VM 必須專用於代理軟體。
 
 
 
+[[third-party-agents-and-extensions]]
 === 第三方代理和擴充程序
 
 代理虛擬機器不支援第三方代理或虛擬機器擴充。

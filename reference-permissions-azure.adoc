@@ -176,12 +176,14 @@ summary: 當NetApp Console在 Azure 中啟動控制台代理程式時，它會�
 ----
 
 
+[[how-azure-permissions-are-used]]
 == 如何使用 Azure 權限
 
 以下部分介紹如何對每個NetApp儲存系統和資料服務使用權限。如果您的公司政策規定僅在需要時提供權限，則此資訊會很有幫助。
 
 
 
+[[azure-netapp-files]]
 === Azure NetApp Files
 
 當您使用NetApp Data Classification掃描Azure NetApp Files資料時，代理程式會發出以下 API 請求：
@@ -195,6 +197,7 @@ summary: 當NetApp Console在 Azure 中啟動控制台代理程式時，它會�
 
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 以下各節描述了NetApp Backup and Recovery如何使用權限。
@@ -299,6 +302,7 @@ summary: 當NetApp Console在 Azure 中啟動控制台代理程式時，它會�
 
 
 
+[[netapp-data-classification]]
 === NetApp Data Classification
 
 當您使用資料分類時，代理程式會發出以下 API 請求。
@@ -444,6 +448,7 @@ summary: 當NetApp Console在 Azure 中啟動控制台代理程式時，它會�
 |===
 
 
+[[cloud-volumes-ontap]]
 === Cloud Volumes ONTAP
 
 該代理程式發出以下 API 請求以在 Azure 中部署和管理Cloud Volumes ONTAP 。
@@ -766,6 +771,7 @@ summary: 當NetApp Console在 Azure 中啟動控制台代理程式時，它會�
 |===
 
 
+[[tiering]]
 === 分層
 
 當您設定NetApp Cloud Tiering時，代理會發出以下 API 請求。
@@ -798,12 +804,14 @@ NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉�
 ====
 
 
+[[change-log]]
 == 更改日誌
 
 當新增和刪除權限時，我們會在下面的部分中註明。
 
 
 
+[[11-november-2025]]
 === 2025年11月11日
 
 新增了一個自訂 JSON 策略，該策略體現了盡可能少的權限和盡可能小的範圍。
@@ -845,6 +853,7 @@ NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉�
 
 
 
+[[9-september-2024]]
 === 2024年9月9日
 
 由於控制台不再支援發現和管理 Kubernetes 集群，因此從 JSON 策略中刪除了以下權限：
@@ -855,6 +864,7 @@ NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉�
 
 
 
+[[22-august-2024]]
 === 2024年8月22日
 
 以下權限已新增至 JSON 策略中，因為它們是Cloud Volumes ONTAP支援虛擬機器規模集所必需的：
@@ -866,6 +876,7 @@ NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉�
 
 
 
+[[5-december-2023]]
 === 2023年12月5日
 
 將磁碟區資料備份到 Azure Blob 儲存體時， NetApp Backup and Recovery不再需要以下權限：
@@ -881,6 +892,7 @@ NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉�
 
 
 
+[[12-may-2023]]
 === 2023年5月12日
 
 以下權限已新增至 JSON 策略，因為它們是Cloud Volumes ONTAP管理所必需的：
@@ -897,6 +909,7 @@ NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉�
 
 
 
+[[23-march-2023]]
 === 2023年3月23日
 
 資料分類不再需要「Microsoft.Storage/storageAccounts/delete」權限。
@@ -905,6 +918,7 @@ Cloud Volumes ONTAP仍需要此權限。
 
 
 
+[[5-january-2023]]
 === 2023年1月5日
 
 以下權限已新增至 JSON 策略：

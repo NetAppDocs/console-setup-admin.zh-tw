@@ -20,6 +20,7 @@ summary: 要解決控制台代理程式的問題，您可以與NetApp支援人�
 
 
 
+[[common-error-messages-and-resolutions]]
 == 常見錯誤訊息和解決方法
 
 此表列出了常見的錯誤訊息以及解決方法：
@@ -76,6 +77,8 @@ summary: 要解決控制台代理程式的問題，您可以與NetApp支援人�
 |===
 
 
+[[check-the-console-agent-status]]
+[[check-agent-status]]
 == 檢查控制台代理狀態
 
 使用下列其中一個命令來驗證您的 Console 代理程式。所有服務的狀態都應為 _Running_ 。如果不是這種情況，請聯絡 NetApp 支援人員。
@@ -109,6 +112,7 @@ podman ps -a
 
 
 
+[[view-the-console-agent-version]]
 == 查看控制台代理版本
 
 查看控制台代理版本以確認升級或與您的NetApp代表共用。
@@ -122,6 +126,7 @@ podman ps -a
 
 
 
+[[validate-that-the-console-agent-meets-requirements]]
 == 驗證 Console 代理程式是否符合要求
 
 Console 代理程式需要存取特定的網路端點、需要開啟多個連接埠，且必須符合硬體需求。您可以從 Console 或使用代理程式維護主控台來驗證 Console 代理程式是否符合這些需求。
@@ -146,6 +151,8 @@ image:screenshot-agent-validate.png["螢幕截圖顯示了代理「操作」選�
 
 
 
+[[console-agent-installation-issues]]
+[[troubleshoot-installation]]
 == 控制台代理安裝問題
 
 如果安裝失敗，請查看報告和日誌以解決問題。
@@ -168,10 +175,13 @@ image:screenshot-agent-validate.png["螢幕截圖顯示了代理「操作」選�
 ====
 
 
+[[disable-configuration-checks-for-manual-installations]]
+[[disable-config-check]]
 === 停用手動安裝的設定檢查
 
 
 
+[[disable-configuration-checks-for-manual-installations]]
 === 停用手動安裝的設定檢查
 
 有時您可能需要停用在安裝期間驗證出站連線的設定檢查。例如，在政府雲端環境中手動安裝代理程式時，需要停用設定檢查，否則安裝將失敗。
@@ -206,12 +216,14 @@ systemctl restart netapp-service-manager.service
 
 
 
+[[work-with-netapp-support]]
 == 與NetApp支援部門合作
 
 如果您仍無法解決 Console 代理程式的問題，建議您聯絡 NetApp 支援部門。NetApp 支援部門可能會要求您提供 Console 代理程式 ID，或要求您將 Console 代理程式記錄傳送給他們（如果他們尚未收到）。
 
 
 
+[[find-the-console-agent-id]]
 === 尋找控制台代理 ID
 
 為了幫助您入門，您可能需要控制台代理的系統 ID。此 ID 通常用於許可和故障排除目的。
@@ -232,6 +244,7 @@ image:screenshot-system-id.png["顯示支援儀表板中出現的系統 ID 的�
 
 
 
+[[download-or-send-an-autosupport-message]]
 === 下載或發送AutoSupport訊息
 
 如果您遇到問題，NetApp 可能會要求您將 AutoSupport 訊息傳送至 NetApp 支援部門以進行疑難排解。
@@ -251,6 +264,7 @@ NOTE: 由於負載平衡， NetApp Console最多需要五個小時才能發送Au
 
 
 
+[[fix-download-failures-when-using-a-google-cloud-nat-gateway]]
 == 修復使用 Google Cloud NAT 閘道時下載失敗的問題
 
 控制台代理程式會自動下載Cloud Volumes ONTAP 的軟體更新。如果您的設定使用 Google Cloud NAT 網關，可能會導致下載失敗。您可以透過限制軟體映像劃分的部分數來解決此問題。此步驟必須使用 API 完成。
@@ -276,6 +290,7 @@ https://docs.netapp.com/us-en/console-automation/cm/api_ref_resources.html#occmc
 
 
 
+[[get-help-from-the-netapp-knowledge-base]]
 == 從NetApp知識庫取得協助
 
 https://kb.netapp.com/Special:Search?path=Cloud%2FBlueXP&query=connector&type=wiki["查看NetApp支援團隊所建立的故障排除訊息"] 。

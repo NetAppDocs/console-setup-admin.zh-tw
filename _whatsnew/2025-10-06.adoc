@@ -4,12 +4,14 @@
 
 
 
+[[bluexp-is-now-netapp-console]]
 == BlueXP現在是NetApp Console
 
 NetApp Console建立在增強和重組的BlueXP基礎之上，可在企業級內部和雲端環境中集中管理NetApp儲存和NetApp Data Services，提供即時洞察、更快的工作流程以及高度安全且合規的簡化管理。
 
 
 
+[[navigation-menus-and-pages]]
 === 導航選單和頁面
 
 NetApp將大多數選單選項移至左側導覽窗格，並重新組織選單以便在NetApp Console中更輕鬆地導覽。
@@ -58,6 +60,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-governa
 
 
 
+[[more-intuitive-naming-of-elements-data-services-and-features]]
 === 元素、資料服務和功能的命名更直觀
 
 NetApp重命名了幾個元素、資料服務和功能以明確其用途。主要變化包括：
@@ -112,6 +115,7 @@ Licenses and subscriptions
 |===
 
 
+[[console-agents]]
 === 控制台代理
 
 從*管理>代理*選單存取和管理您的控制台代理。  NetApp已變更了為「*系統*」頁面（以前稱為「Canvas」）選擇控制台代理的方式。  NetApp已將連接器選單名稱替換為圖標image:icon-agent.png["代理圖示"]，允許您選擇要查看系統的控制台代理。
@@ -122,6 +126,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-agent-i
 
 
 
+[[console-agent-4-0-0]]
 == 控制台代理 4.0.0
 
 此版本的控制台代理包括安全性改進、錯誤修復和以下新功能。
@@ -130,6 +135,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-agent-i
 
 
 
+[[consolidation-and-reduction-of-required-network-endpoints]]
 === 整合並減少所需的網路端點
 
 NetApp減少了控制台和控制台代理程式所需的網路端點，增強了安全性並簡化了部署。重要的是，4.0.0 版本之前的所有部署都將繼續全面支援。雖然先前的端點仍然可供現有代理程式使用，但NetApp強烈建議在確認代理程式升級成功後將防火牆規則更新到目前端點。
@@ -140,6 +146,7 @@ NetApp減少了控制台和控制台代理程式所需的網路端點，增強�
 
 
 
+[[support-for-vcenter-deployment-of-console-agents]]
 === 支援 VCenter 部署控制台代理
 
 您可以使用 OVA 檔案在 VMware 環境中部署控制台代理程式。 OVA 檔案包含一個預先配置的 VM 映像，其中包含控制台代理軟體和用於連接到NetApp Console的設定。可直接從NetApp Console下載檔案或部署 URL。link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem-ova.html["了解如何在 VMware 環境中部署控制台代理程式。"]
@@ -148,66 +155,77 @@ VMware 的控制台代理程式 OVA 提供了預先配置的 VM 映像以便快�
 
 
 
+[[validation-reports-for-failed-agent-deployments]]
 === 失敗代理部署的驗證報告
 
 當您從NetApp Console部署控制台代理程式時，您現在可以選擇驗證代理程式配置。如果控制台無法部署代理，它會提供可下載的報告來幫助您排除故障。
 
 
 
+[[improved-troubleshooting-for-console-agents]]
 === 改進了控制台代理的故障排除
 
 控制台代理程式已改進錯誤訊息，可協助您更了解問題。link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["了解如何排除控制台代理故障。"]
 
 
 
+[[netapp-console]]
 == NetApp Console
 
 NetApp Console管理包含以下新功能：
 
 
 
+[[home-page-dashboard]]
 === 首頁儀表板
 
 NetApp控制台的主頁儀表板提供儲存基礎架構的即時可見性，包括健康狀況、容量、許可證狀態和資料服務等指標。link:https://docs.netapp.com/us-en/console-setup-admin/task-dashboard.html["了解有關主頁的更多資訊。"]
 
 
 
+[[netapp-assistant]]
 === NetApp助手
 
 具有組織管理員角色的新使用者可以使用NetApp助理配置控制台，包括新增代理、連結NetApp支援帳戶以及新增儲存系統。link:https://docs.netapp.com/us-en/console-setup-admin/task-console-assistant.html["了解NetApp助手。"]
 
 
 
+[[service-account-authentication]]
 === 服務帳戶身份驗證
 
 NetApp Console支援使用系統產生的用戶端 ID 和金鑰或客戶管理的 JWT 進行服務帳戶身份驗證，從而允許組織選擇最適合其安全要求和整合工作流程的方法。私鑰 JWT 用戶端身份驗證使用非對稱加密，比傳統的客戶端 ID 和秘密方法提供更強的安全性。私鑰 JWT 用戶端身份驗證使用非對稱加密，在客戶環境中保證私鑰的安全，降低憑證被盜風險，並提高自動化堆疊和客戶端應用程式的安全性。link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#service-account["了解如何新增服務帳戶。"]
 
 
 
+[[session-timeouts]]
 === 會話逾時
 
 系統會在 24 小時後或使用者關閉網頁瀏覽器時登出使用者。
 
 
 
+[[support-for-partnerships-between-organizations]]
 === 支持組織之間的夥伴關係
 
 您可以在NetApp Console中建立合作夥伴關係，讓合作夥伴跨組織邊界安全地管理NetApp資源，讓協作更輕鬆、更安全。link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html["學習如何管理合作關係"] 。
 
 
 
+[[super-admin-and-super-viewer-roles]]
 === 超級管理員和超級查看者角色
 
 新增了*超級管理員*和*超級查看者*角色。  *超級管理員*授予對控制台功能、儲存和資料服務的完全管理存取權。 *超級檢視器*為審計員和利害關係人提供唯讀可見性。這些角色對於高級成員較少、訪問權限較廣的小型團隊很有用。為了提高安全性和可審計性，鼓勵組織謹慎使用*超級管理員*存取權限，並盡可能分配細粒度的角色。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
 
 
 
+[[additional-role-for-ransomware-resilience]]
 === 勒索軟體抵禦能力的額外作用
 
 新增了*勒索軟體彈性使用者行為管理員*角色和*勒索軟體彈性使用者行為檢視器*角色。這些角色分別允許使用者配置和查看使用者行為和分析資料。link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解有關訪問角色的更多資訊。"]
 
 
 
+[[removed-support-chat]]
 === 刪除了支援聊天
 
 NetApp已從NetApp Console中刪除了支援聊天功能。使用「管理」>「支援」頁面來建立和管理支援案例。

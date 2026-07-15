@@ -18,6 +18,7 @@ Console 代理程式是一個輕量級軟體元件，您可以將其安裝在網
 
 
 
+[[what-a-console-agent-does]]
 == Console 代理程式的作用
 
 Console 代理程式可彌補儲存系統與 NetApp Console 之間的連線差距。它可安全地將您的基礎架構連線至 NetApp API 和 Console、讓您能夠：
@@ -30,6 +31,7 @@ Console 代理程式可彌補儲存系統與 NetApp Console 之間的連線差�
 
 
 
+[[console-agent-architecture]]
 === Console 代理程式架構
 
 代理程式使用輕量級程序運行，這些程序：
@@ -42,6 +44,8 @@ Console 代理程式可彌補儲存系統與 NetApp Console 之間的連線差�
 
 
 
+[[console-agent-availability-and-operational-requirements]]
+[[agents-must-be-operational-at-all-times]]
 === Console 代理程式可用性與作業需求
 
 Console 代理程式對 NetApp Console 至關重要。代理程式必須保持運作和可存取狀態，以確保管理和資料服務不中斷。您有責任確保：
@@ -54,6 +58,7 @@ Console 代理程式對 NetApp Console 至關重要。代理程式必須保持�
 
 
 
+[[when-you-need-a-console-agent]]
 == 當您需要 Console 代理時
 
 當您需要執行以下操作時，至少需要部署一個 Console 代理程式：
@@ -290,6 +295,7 @@ link:concept-modes.html["了解NetApp Console部署模式"] 了解何時需要�
 
 
 
+[[deployment-options-for-console-agents]]
 == Console 代理程式的部署選項
 
 您可以將 Console 代理部署在：
@@ -309,6 +315,7 @@ link:concept-modes.html["了解NetApp Console部署模式"] 了解何時需要�
 
 
 
+[[agents-for-the-netapp-console-saas-application-standard-mode]]
 === NetApp Console SaaS 應用程式（標準模式）的代理程式
 
 在雲端或內部部署代理程式，以橋接與雲端託管 Console SaaS 應用程式的連線。代理程式可啟用進階功能，同時 Console UI 仍可從任何位置存取。
@@ -317,6 +324,7 @@ link:concept-modes.html["了解NetApp Console部署模式"] 了解何時需要�
 
 
 
+[[agents-for-netapp-console-in-restricted-mode]]
 === 受限模式下 NetApp Console 的代理程式
 
 在受限模式下，使用者直接透過已安裝的代理程式存取 NetApp Console，而不是透過雲端託管的 SaaS 應用程式存取。您必須至少安裝一個代理程式作為 Console 存取點。啟用資料服務和管理儲存系統還需要其他代理程式。
@@ -325,6 +333,7 @@ link:concept-modes.html["了解NetApp Console部署模式"] 了解何時需要�
 
 
 
+[[agents-for-netapp-console-in-private-mode-on-premises-or-in-the-cloud-with-no-outbound-connectivity]]
 === 用於私有模式（內部部署或在雲端且無對外連線）的 NetApp Console 代理程式
 
 在私有模式下，使用者可以透過已安裝的代理直接存取 NetApp Console。您必須至少安裝一個代理程式作為 Console 存取點。啟用資料服務和管理儲存系統還需要其他代理程式。
@@ -333,6 +342,7 @@ link:concept-modes.html["了解NetApp Console部署模式"] 了解何時需要�
 
 
 
+[[use-multiple-agents-when-needed]]
 === 必要時使用多個代理程式
 
 每個代理程式獨立運作，可以管理多個儲存系統和資料服務。在需要時部署多個代理程式：
@@ -349,6 +359,7 @@ link:concept-modes.html["了解NetApp Console部署模式"] 了解何時需要�
 
 
 
+[[console-agent-upgrades]]
 == 控制台代理升級
 
 雲端代理程式在具備出站網際網路存取時會自動升級。對於無法存取網際網路的代理程式（私有模式），請參閱 link:task-upgrade-agent.html["管理控制台代理升級"] 以取得手動升級說明。

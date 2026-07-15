@@ -18,6 +18,7 @@ summary: 關於 NetApp Console 中的身分和存取管理以及基於角色的�
 
 
 
+[[getting-started]]
 == 入門
 
 .在建立新的 NetApp Console 組織後，設定 IAM 的第一步是什麼？
@@ -31,6 +32,7 @@ summary: 關於 NetApp Console 中的身分和存取管理以及基於角色的�
 
 
 
+[[resource-hierarchy-organizations-folders-and-projects]]
 == 資源階層：組織、資料夾和專案
 
 .NetApp Console IAM 中的資料夾和專案有什麼不同？
@@ -56,6 +58,7 @@ summary: 關於 NetApp Console 中的身分和存取管理以及基於角色的�
 
 
 
+[[roles-and-permissions]]
 == 角色和權限
 
 .組織管理員與資料夾或專案管理員有什麼不同？
@@ -72,6 +75,7 @@ summary: 關於 NetApp Console 中的身分和存取管理以及基於角色的�
 
 
 
+[[managing-members-and-access]]
 == 管理成員和存取
 
 .在您可以將使用者新增至您的 NetApp Console 組織之前，必須先完成哪些步驟？
@@ -88,6 +92,7 @@ NetApp 建議為這些使用者指派最低存取角色，例如 Organization vi
 
 
 
+[[console-agents]]
 == 控制台代理
 
 .Console 代理建立後會發生什麼？它能否在其他專案中使用？
@@ -95,6 +100,7 @@ Console 代理程式最初與其建立的專案關聯。建立後，管理員可
 
 
 
+[[related-information]]
 == 相關資訊
 
 * link:concept-identity-and-access-management.html["了解NetApp Console身分和存取管理"]

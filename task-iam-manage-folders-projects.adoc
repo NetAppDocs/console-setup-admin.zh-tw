@@ -20,12 +20,14 @@ summary: 新增資料夾和項目，以符合您的業務結構。建立資料�
 
 
 
+[[using-folders-and-projects-to-organize-resources]]
 == 使用資料夾和項目來組織資源
 
 在NetApp Console中，組織包含資料夾和項目，可協助您組織資源。資料夾可以幫助您將相關項目分組，專案可以幫助您管理資源和成員存取權限。
 
 
 
+[[folders]]
 === 資料夾
 
 資料夾可以幫助您整理相關項目。您可以建立嵌套資料夾來表示組織結構的不同層級。例如，您可以為每個業務部門建立一個頂級資料夾，然後在該業務部門內為不同的團隊建立子資料夾。然後，您可以在資料夾內建立項目。
@@ -64,6 +66,7 @@ image:diagram-iam-resource-association-folder-3.png["一張圖表，顯示一個
 ====
 
 
+[[projects]]
 === 專案
 
 將資源與專案關聯起來，以便成員進行管理。資源必須與專案關聯才能進行管理和使用者存取。
@@ -74,6 +77,7 @@ image:diagram-iam-resource-association-folder-3.png["一張圖表，顯示一個
 
 
 
+[[add-a-folder-or-project]]
 == 新增資料夾或項目
 
 新增專案以管理資源，新增資料夾以對相關項目進行分組。建立新組織時，控制台會包含一個項目。
@@ -107,6 +111,7 @@ link:reference-iam-predefined-roles.html["了解訪問角色"] 。
 
 
 
+[[rename-a-folder-or-project]]
 == 重新命名資料夾或項目
 
 根據需要重新命名資料夾或項目。重新命名不會影響相關資源或成員存取權限。
@@ -118,6 +123,7 @@ link:reference-iam-predefined-roles.html["了解訪問角色"] 。
 
 
 
+[[delete-a-folder-or-project]]
 == 刪除資料夾或項目
 
 刪除不再需要的資料夾和項目，例如團隊重組或專案完成後。
@@ -131,6 +137,8 @@ link:reference-iam-predefined-roles.html["了解訪問角色"] 。
 
 
 
+[[view-the-resources-associated-with-a-folder-or-project]]
+[[view-associated-resources-members]]
 == 查看與資料夾或項目關聯的資源
 
 查看哪些資源和成員與資料夾或項目相關聯。
@@ -152,6 +160,8 @@ image:screenshot-iam-allocated-resources.png["編輯項目頁面的螢幕截圖�
 
 
 
+[[change-the-resources-associated-with-a-folder-or-project]]
+[[modify-resources]]
 == 更改與資料夾或項目關聯的資源
 
 您可以根據組織的需求變更與資料夾或項目相關的資源變更。
@@ -172,6 +182,7 @@ image:screenshot-iam-associate-resources.png["編輯項目頁面的螢幕截圖�
 
 
 
+[[view-members-associated-with-a-folder-or-project]]
 == 查看與資料夾或項目關聯的成員
 
 您可以從「組織」頁面查看與資料夾或項目關聯的成員。
@@ -190,6 +201,8 @@ image:screenshot-iam-member-access.png["編輯項目頁面的螢幕截圖，顯�
 
 
 
+[[modify-member-access-to-a-folder-or-project]]
+[[modify-members]]
 == 修改成員對資料夾或項目的存取權限
 
 修改成員存取權限以控制資源存取。請記住，在資料夾層級分配的角色將被所有子項目和資料夾繼承。
@@ -211,6 +224,7 @@ image:screenshot-iam-member-access.png["編輯項目頁面的螢幕截圖，顯�
 
 
 
+[[related-information]]
 == 相關資訊
 
 * link:concept-identity-and-access-management.html["了解NetApp Console中的身分和存取權限"]

@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-49]]
 === 連接器 3.9.49
 
 BlueXP Connector 的此版本包含一些小的安全性改進和錯誤修復。
@@ -12,6 +13,7 @@ BlueXP Connector 的此版本包含一些小的安全性改進和錯誤修復。
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXP身分和存取管理 (IAM)
 
 * 支援為BlueXP使用者指派多個角色。
@@ -76,6 +78,7 @@ BlueXP IAM 提供更精細的資源和權限管理：
 
 
 
+[[private-mode-release-3-9-48]]
 === 私人模式發布（3.9.48）
 
 新的私人模式版本現已可從 https://mysupport.netapp.com/site/downloads["NetApp支援站點"^]

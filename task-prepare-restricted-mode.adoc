@@ -18,6 +18,7 @@ summary: 在受限模式下部署NetApp Console之前，請準備好您的環境
 
 
 
+[[step-1-understand-how-restricted-mode-works]]
 == 步驟 1：了解限制模式的工作原理
 
 在開始之前了解NetApp Console在受限模式下的工作方式。
@@ -30,6 +31,7 @@ link:concept-modes.html["了解限制模式的工作原理"] 。
 
 
 
+[[step-2-review-installation-options]]
 == 第 2 步：查看安裝選項
 
 在受限模式下，您只能在雲端安裝控制台代理程式。有以下安裝選項可用：
@@ -41,6 +43,7 @@ link:concept-modes.html["了解限制模式的工作原理"] 。
 
 
 
+[[step-3-review-host-requirements]]
 == 第 3 步：查看主機需求
 
 主機必須滿足特定的作業系統、RAM 和連接埠要求才能執行控制台代理。
@@ -173,6 +176,8 @@ Docker Engine 23.0.6 至 28.0.0。
 |===
 
 
+[[step-4-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == 步驟 4：安裝 Podman 或 Docker Engine
 
 若要手動安裝控制台代理，請透過安裝 Podman 或 Docker Engine 來準備主機。
@@ -360,6 +365,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-5-prepare-network-access]]
 == 步驟 5：準備網路訪問
 
 設定網路訪問，以便控制台代理可以管理公有雲中的資源。除了為控制台代理提供虛擬網路和子網路之外，您還需要確保滿足以下要求。
@@ -546,6 +552,7 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 
 
 
+[[step-6-prepare-cloud-permissions]]
 == 步驟 6：準備雲端權限
 
 控制台代理程式需要雲端提供者的權限才能在虛擬網路中部署Cloud Volumes ONTAP並使用NetApp資料服務。您需要在雲端提供者中設定權限，然後將這些權限與控制台代理程式關聯。
@@ -853,6 +860,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 ====
 
 
+[[step-7-enable-google-cloud-apis]]
 == 步驟 7：啟用 Google Cloud API
 
 在 Google Cloud 中部署Cloud Volumes ONTAP需要多個 API。

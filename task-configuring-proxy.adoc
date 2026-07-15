@@ -24,6 +24,7 @@ summary: 如果您的公司政策要求您使用代理伺服器進行所有與�
 
 
 
+[[supported-configurations]]
 == 支援的配置
 
 * 為Cloud Volumes ONTAP系統提供服務的代理支援透明代理伺服器。如果您將NetApp資料服務與Cloud Volumes ONTAP一起使用，請為Cloud Volumes ONTAP建立專用代理，您可以在其中使用透明代理伺服器。
@@ -37,6 +38,7 @@ IMPORTANT: 設定 Proxy 後，您無法變更 Proxy 類型。如果您需要變�
 
 
 
+[[enable-an-explicit-proxy-on-a-console-agent]]
 == 在控制台代理上啟用明確代理
 
 當您將控制台代理程式設定為使用代理伺服器時，該代理程式及其管理的Cloud Volumes ONTAP系統（包括任何 HA 中介）都會使用代理伺服器。
@@ -71,6 +73,8 @@ IMPORTANT: 設定 Proxy 後，您無法變更 Proxy 類型。如果您需要變�
 
 
 
+[[enable-a-transparent-proxy-for-a-console-agent]]
+[[transparent-proxy]]
 == 為控制台代理啟用透明代理
 
 僅Cloud Volumes ONTAP支援在控制台代理上使用透明代理。如果您除了Cloud Volumes ONTAP之外還使用NetApp資料服務，則應建立一個單獨的代理來用於資料服務或用於Cloud Volumes ONTAP。
@@ -110,6 +114,7 @@ IMPORTANT: 設定 Proxy 後，您無法變更 Proxy 類型。如果您需要變�
 
 
 
+[[modify-the-transparent-proxy-for-the-console-agent]]
 === 修改控制台代理的透明代理
 
 您可以使用下列方法更新控制台代理現有的透明代理伺服器： `proxy update`透過使用命令來移除透明代理伺服器 `proxy remove`命令。更多信息，請查閱相關文件。link:reference-agent-maint-console-proxy.html["代理維護控制台"] 。
@@ -119,12 +124,14 @@ IMPORTANT: 設定 Proxy 後，您無法變更 Proxy 類型。如果您需要變�
 
 
 
+[[update-the-console-agent-proxy-if-it-loses-access-to-the-internet]]
 == 如果控制台代理無法存取互聯網，請更新它
 
 如果您的網路代理程式配置發生變化，您的代理程式可能會失去對網際網路的存取權限。例如，如果有人更改了代理伺服器的密碼或更新了憑證。在這種情況下，您需要直接從控制台代理主機存取 UI 並更新設定。確保您可以透過網路存取控制台代理主機，並且可以登入控制台。
 
 
 
+[[enable-direct-api-traffic]]
 == 啟用直接 API 流量
 
 如果您已將 Console 代理程式設定為使用 Proxy 伺服器，則可以在 Console 代理程式上啟用直接 API 流量，以便將 API 呼叫直接傳送至雲端供應商服務，而無需透過 Proxy。在 AWS、Azure 或 Google Cloud 中執行的代理程式均支援此選項。

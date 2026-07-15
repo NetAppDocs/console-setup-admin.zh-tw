@@ -24,6 +24,7 @@ NOTE: 當 NetApp Console 處於私人模式時，無法使用聯邦功能。link
 
 
 
+[[single-sign-on-with-netapp-support-site]]
 == 透過 NetApp Support Site 進行單一登入
 
 與NetApp支援網站聯合允許使用者使用相同的憑證登入控制台、 Active IQ Digital Advisor和其他相關應用程式。
@@ -41,6 +42,7 @@ NetApp支援團隊將審核並處理您的請求。
 
 
 
+[[single-sign-on-with-your-identity-provider]]
 == 使用身分提供者進行單一登入
 
 您可以與身分識別提供者建立聯合連接，以便為控制台啟用單一登入 (SSO)。這個過程涉及配置您的身分提供者以信任NetApp作為服務提供者，然後在控制台中建立連線。
@@ -50,6 +52,7 @@ NOTE: 如果您之前使用NetApp Cloud Central（控制台的外部應用程式
 
 
 
+[[supported-identity-providers]]
 === 支援的身份提供者
 
 NetApp支援以下聯合協定和身分提供者：
@@ -66,6 +69,7 @@ NetApp支援以下聯合協定和身分提供者：
 
 
 
+[[federation-with-netapp-console-workflow]]
 === 與NetApp Console聯合工作流程
 
 NetApp僅支援服務供應商發起的（SP發起的） SSO。您需要先配置身分提供者以信任NetApp作為服務提供者。然後，您可以在控制台中建立使用身分提供者配置的連線。

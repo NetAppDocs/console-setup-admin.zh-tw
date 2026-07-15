@@ -18,6 +18,7 @@ summary: NetApp Console身分和存取管理包括可指派給組織成員的預
 
 
 
+[[platform-roles]]
 == 平台角色
 
 平台角色授予NetApp Console管理權限，包括角色指派和使用者管理。控制台具有多種平台角色。
@@ -55,6 +56,7 @@ summary: NetApp Console身分和存取管理包括可指派給組織成員的預
 |===
 
 
+[[application-roles]]
 == 應用程式角色
 
 以下是應用程式類別中的角色清單。每個角色在其指定範圍內授予特定的權限。沒有所需應用程式或平台角色的使用者無法存取相應的應用程式。
@@ -92,6 +94,7 @@ summary: NetApp Console身分和存取管理包括可指派給組織成員的預
 |===
 
 
+[[data-service-roles]]
 == 數據服務角色
 
 以下是資料服務類別中的角色清單。每個角色在其指定範圍內授予特定的權限。沒有所需資料服務角色或平台角色的使用者將無法存取資料服務。
@@ -114,6 +117,15 @@ summary: NetApp Console身分和存取管理包括可指派給組織成員的預
 
 
 | link:reference-iam-backup-rec-roles.html["備份和還原檢視器"] | 備份檢視器 | 標準、受限、私有 | 查看備份和復原資訊。 
+
+
+| link:reference-iam-cvo-roles.html["Cloud Volumes ONTAP 管理員"] | CVO_ADMIN | 標準、受限、私有 | 提供對所有 Cloud Volumes ONTAP 操作的完全存取。 
+
+
+| link:reference-iam-cvo-roles.html["Cloud Volumes ONTAP 運算子"] | CVO_OPERATOR | 標準、受限、私有 | 支援日常管理任務，包括新增磁碟區、配置複製和管理儲存。 
+
+
+| link:reference-iam-cvo-roles.html["Cloud Volumes ONTAP 檢視器"] | CVO_VIEWER | 標準、受限、私有 | 提供對 Cloud Volumes ONTAP 資訊的唯讀存取。此角色無法執行任何主動操作。 
 
 
 | link:reference-iam-disaster-rec-roles.html["災難復原管理員"] | 災難復原管理員 | 標準 | 在NetApp Disaster Recovery服務​​中執行任何操作。 
@@ -147,6 +159,7 @@ summary: NetApp Console身分和存取管理包括可指派給組織成員的預
 |===
 
 
+[[related-links]]
 == 相關連結
 
 * link:concept-identity-and-access-management.html["了解NetApp Console身分和存取管理"]

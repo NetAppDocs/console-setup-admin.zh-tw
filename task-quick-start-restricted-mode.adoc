@@ -51,6 +51,7 @@ NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉�
 ====
 
 
+[[supported-features-and-services-for-netapp-console-in-restricted-mode]]
 == 受限模式下 NetApp Console 支援的功能與服務
 
 下表列出了在受限模式下安裝 NetApp Console 時可用的儲存管理功能、資料服務和管理功能。

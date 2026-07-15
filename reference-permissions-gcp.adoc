@@ -18,6 +18,7 @@ summary: 控制台代理程式需要權限才能在您的雲端提供者中執�
 
 
 
+[[google-cloud-user-account-permissions]]
 == Google Cloud 使用者帳戶權限
 
 以下自訂角色賦予 Google Cloud 使用者部署代理程式所需的權限。將此自訂角色指派給將要部署代理程式的使用者。
@@ -115,6 +116,7 @@ includedPermissions:
 ====
 
 
+[[service-account-permissions]]
 == 服務帳戶權限
 
 以下自訂角色可賦予附加至控制台代理程式的 Google Cloud 服務帳號管理 Google Cloud 網路中的資源和流程所需的權限。
@@ -302,12 +304,14 @@ includedPermissions:
 ====
 
 
+[[how-google-cloud-permissions-are-used]]
 == Google Cloud 權限的使用方式
 
 控制台代理程式使用自訂角色中的權限來管理 Google Cloud 網路中的Cloud Volumes ONTAP資源和NetApp資料服務流程。以下各節描述了代理如何使用這些權限。
 
 
 
+[[permissions-used-for-cloud-volumes-ontap]]
 === Cloud Volumes ONTAP所使用的權限
 
 控制台代理程式使用自訂角色中的權限來管理 Google Cloud 網路中的Cloud Volumes ONTAP資源和進程。以下各節描述了代理如何使用這些權限。
@@ -748,6 +752,7 @@ includedPermissions:
 ====
 
 
+[[permissions-used-for-netapp-backup-and-recovery]]
 === NetApp Backup and Recovery所使用的權限
 
 控制台代理程式使用自訂角色中的權限來管理 Google Cloud 網路中的NetApp Backup and Recovery資源和進程。以下各節描述了代理如何使用這些權限。
@@ -777,6 +782,7 @@ includedPermissions:
 ====
 
 
+[[permissions-used-for-netapp-data-classification]]
 === NetApp Data Classification所使用的權限
 
 控制台代理程式使用自訂角色中的權限來管理 Google Cloud 網路中的NetApp Data Classification資源和進程。以下各節描述了代理如何使用這些權限。
@@ -801,30 +807,36 @@ includedPermissions:
 ====
 
 
+[[change-log]]
+[[gcp-permissions-change-log]]
 == 更改日誌
 
 新增和移除的權限如下所示。
 
 
 
+[[13-april-2026]]
 === 2026 年 4 月 13 日
 
 新增了 `compute.disks.update`權限、可更新 Cloud Volumes ONTAP 系統中 Hyperdisk Balanced Aggregate 或磁碟的 IOPS 和處理量參數。
 
 
 
+[[26-february-2026]]
 === 2026 年 2 月 26 日
 
 新增  `cloudbuild.workerpools.get` 和  `cloudbuild.workerpools.list` 權限是為了支援 Google Cloud 中 Cloud Volumes ONTAP 私有模式部署的 Infrastructure Manager。
 
 
 
+[[09-february-2026]]
 === 2026 年 2 月 09 日
 
 新增 `compute.forwardingRules.update`權限是為了支援 Google Cloud 中 Cloud Volumes ONTAP 部署的 Infrastructure Manager。
 
 
 
+[[08-december-2025]]
 === 2025年12月8日
 
 NetApp正在從 Google Cloud Deployment Manager 遷移到 Google Cloud Infrastructure Manager (IM)，以便在 Google Cloud 中部署和執行控制台代理程式。為支援此更改，新增了以下權限。
@@ -916,12 +928,14 @@ NetApp正在從 Google Cloud Deployment Manager 遷移到 Google Cloud Infrastru
 
 
 
+[[26-november-2025]]
 === 2025年11月26日
 
 權限已更新，以使其用途更加清晰，但未添加或刪除任何權限。新增三列，分別指示每個權限是用於部署、日常操作或刪除。除此之外，還有一些權限根據其在NetApp Data Classification和NetApp Backup and Recovery的用途進行了劃分。
 
 
 
+[[06-february-2023]]
 === 2023年2月6日
 
 此策略中新增了以下權限：
@@ -933,6 +947,7 @@ Cloud Volumes ONTAP需要此權限。
 
 
 
+[[27-january-2023]]
 === 2023年1月27日
 
 此策略新增了以下權限：

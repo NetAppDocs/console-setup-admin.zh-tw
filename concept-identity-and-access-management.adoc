@@ -29,12 +29,14 @@ image:diagram-iam-resource-hierarchy.png["資源管理組成部分的概念圖"]
 
 
 
+[[identity-and-access-management-components]]
 == 身分和存取管理元件
 
 NetApp Console IAM 由三種類型的元件構成：定義層次結構的組織元件、在該層次結構中指派的資源，以及控制誰可以存取什麼的成員和角色。
 
 
 
+[[netapp-console-organizational-components]]
 === NetApp Console 組織元件
 
 組織元件（組織、資料夾和專案）構成了一個階層，決定了資源的分組方式以及存取權的委派方式。
@@ -56,6 +58,7 @@ NOTE: 具有 Org admin 角色的使用者可以將資源新增至資料夾，將
 
 
 
+[[resources]]
 === 資源
 
 _資源_ 是指 NetApp Console 可識別並可指派給專案的實體。_資源_ 包括儲存系統、Keystone 訂閱、部分 NetApp Backup and Recovery 工作負載以及 NetApp Console 代理。
@@ -87,6 +90,7 @@ link:task-iam-associate-agents.html["了解如何將代理商與項目關聯起�
 
 
 
+[[members-and-roles]]
 === 成員及角色
 
 成員是指您組織中的使用者和服務帳戶。角色定義了他們可以執行哪些操作以及可以在哪個層級（組織、資料夾或專案）執行這些操作。
@@ -115,12 +119,14 @@ link:reference-iam-predefined-roles.html["了解訪問角色"] 。
 
 
 
+[[iam-strategy-examples]]
 == IAM 策略範例
 
 合適的 IAM 架構取決於組織的規模和團隊的組織方式。以下範例展示了不同組織如何利用 IAM 層級結構有效地管理存取。
 
 
 
+[[small-organization-strategy]]
 === 小型組織策略
 
 對於使用者少於 50 人且採用集中式儲存管理的組織，可以考慮使用超級管理員和超級查看者角色的簡化方法。
@@ -140,6 +146,7 @@ link:reference-iam-predefined-roles.html["了解訪問角色"] 。
 
 
 
+[[multi-regional-enterprise-strategy]]
 === 多區域企業策略
 
 對於擁有區域營運和專業團隊的大型組織，應採用層級式方法，並以資料夾表示地理或業務單元邊界。
@@ -173,6 +180,7 @@ link:reference-iam-predefined-roles.html["了解訪問角色"] 。
 
 
 
+[[departmental-specialization-strategy]]
 === 部門專業化策略
 
 對於擁有需要特定資料服務存取權限的專業團隊的組織，應根據職能職責進行有針對性的角色分配。
@@ -194,6 +202,7 @@ link:reference-iam-predefined-roles.html["了解訪問角色"] 。
 
 
 
+[[next-steps-with-iam-in-netapp-console]]
 == NetApp Console中 IAM 的後續步驟
 
 * link:task-iam-get-started.html["開始使用NetApp Console中的 IAM"]

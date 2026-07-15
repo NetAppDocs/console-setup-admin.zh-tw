@@ -25,6 +25,8 @@ summary: 您可以直接從 NetApp Console 在 AWS 部署 Console 代理程式�
 
 
 
+[[step-1-set-up-networking-for-deploying-a-console-agent-in-aws]]
+[[networking-aws-agent]]
 == 步驟 1：設定網路以在 AWS 中部署控制台代理
 
 確保您打算安裝控制台代理的網路位置支援以下要求。這些要求使控制台代理程式能夠管理混合雲中的資源和流程。
@@ -153,6 +155,8 @@ link:reference-networking-saas-console.html["從 NetApp Console 檢視已聯絡�
 
 
 
+[[step-2-set-up-aws-permissions-for-the-console-agent]]
+[[aws-permissions-agent]]
 == 步驟 2：為控制台代理程式設定 AWS 權限
 
 控制台需要透過 AWS 進行身份驗證，然後才能在您的 VPC 中部署控制台代理程式。您可以選擇以下身份驗證方法之一：
@@ -282,6 +286,7 @@ link:reference-networking-saas-console.html["從 NetApp Console 檢視已聯絡�
 
 
 
+[[step-3-create-the-console-agent]]
 == 步驟 3：建立控制台代理
 
 直接從 NetApp Console 網路型主控台建立 Console 代理程式。

@@ -21,6 +21,7 @@ summary: 管理組織的成員以提供組織資源層級結構不同層級的�
 
 
 
+[[reset-user-passwords-local-users-only]]
 == 重設使用者密碼（僅限本地用戶）
 
 組織管理員無法重設本機使用者的使用者密碼。但是，他們可以指導用戶重置自己的密碼。
@@ -32,6 +33,8 @@ NOTE: 此選項不適用於聯合組織中的使用者。
 
 
 
+[[manage-a-users-multi-factor-authentication-mfa]]
+[[manage-mfa]]
 == 管理用戶的多重身份驗證 (MFA)
 
 如果使用者失去對其 MFA 設備的存取權限，您可以刪除或停用其 MFA 配置。
@@ -58,6 +61,7 @@ NOTE: 若要管理使用者的多重身分驗證，您必須擁有與受影響�
 
 
 
+[[recreate-the-credentials-for-a-service-account]]
 == 重新建立服務帳戶的憑證
 
 如果您遺失服務帳戶的憑證或需要更新憑證，可以建立新的憑證。

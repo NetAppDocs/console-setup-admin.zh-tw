@@ -25,6 +25,7 @@ NOTE: 主頁上的準確指標需要適當大小和配置的控制台代理。
 
 
 
+[[required-netapp-console-roles]]
 == 所需的NetApp Console角色
 
 主頁中的每個窗格都需要不同的使用者角色：
@@ -59,6 +60,7 @@ image:screenshot-home-metrics.png["NetApp Console主頁顯示指標"]
 
 
 
+[[enable-metrics-to-appear-on-the-home-page]]
 == 啟用指標以顯示在主頁上
 
 當滿足以下條件時，您可以在主頁上看到指標：
@@ -77,6 +79,7 @@ image:screenshot-home-metrics.png["NetApp Console主頁顯示指標"]
 
 
 
+[[view-the-overall-storage-capacity]]
 == 查看整體儲存容量
 
 儲存容量窗格提供跨ONTAP叢集和Cloud Volumes ONTAP系統的下列資訊：
@@ -102,6 +105,7 @@ TIP: 如果您有多個項目，您可能會在「儲存容量」窗格中看到
 
 
 
+[[view-ontap-alerts]]
 == 查看ONTAP警報
 
 查看NetApp本機ONTAP環境中的問題或潛在風險。您可以看到一些非 EMS 警報和一些 EMS 警報。
@@ -149,6 +153,7 @@ TIP: 快取可最佳化效能，但可能會導致此窗格上的資料與實際
 
 
 
+[[view-storage-performance-capacity]]
 == 查看儲存效能容量
 
 檢查每個叢集或Cloud Volumes ONTAP系統所使用的儲存效能容量，以確定效能容量、延遲和 IOPS 如何影響您的工作負載。例如，您可能會發現需要轉移工作負載以最大限度地減少延遲並最大限度地提高關鍵工作負載的 IOPS 和吞吐量。
@@ -166,6 +171,7 @@ TIP: 快取可最佳化效能，但可能會導致此窗格上的資料與實際
 
 
 
+[[view-the-licenses-and-subscriptions-that-you-have]]
 == 查看您擁有的授權和訂閱
 
 查看Licenses and subscriptions窗格中的以下資訊：
@@ -188,6 +194,7 @@ TIP: 快取可最佳化效能，但可能會導致此窗格上的資料與實際
 
 
 
+[[view-ransomware-resilience-status]]
 == 查看勒索軟體抵禦能力狀態
 
 了解工作負載是否面臨勒索軟體攻擊的風險或是否受到NetApp Ransomware Resilience資料服務的保護。您可以查看受保護的資料總量、查看建議的操作數量以及查看與勒索軟體防護相關的警報數量。
@@ -209,6 +216,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransom
 
 
 
+[[view-backup-and-recovery-status]]
 == 查看備份和復原狀態
 
 查看NetApp Backup and Recovery的整體狀態。您可以看到受保護和不受保護的資源的數量。您也可以查看備份和復原作業的百分比，以保護您的工作負載。百分比越高，表示資料保護越好。

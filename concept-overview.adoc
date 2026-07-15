@@ -22,6 +22,7 @@ NetApp Console 可與您部署在環境中的 Console 代理程式搭配使用�
 
 
 
+[[choose-how-to-access-netapp-console]]
 == 選擇如何存取 NetApp Console
 
 要開始使用 NetApp Console，您可以註冊 SaaS 應用程式（標準模式）、將其安裝在雲端（受限模式）或本機（私有模式）。部分功能在受限模式或私有模式下不可用。
@@ -30,6 +31,7 @@ link:concept-modes.html["了解有關部署模式的更多信息"] 。
 
 
 
+[[extend-console-capabilities-with-console-agents]]
 == 使用 Console 代理擴充 Console 功能
 
 Console 代理程式是輕量級軟體元件，可提供與 NetApp Console SaaS 應用程式和基於雲端的 API 的連接，從而實現進階功能和資料服務。
@@ -40,6 +42,7 @@ link:concept-agents.html["了解有關控制台代理的更多信息"] 。
 
 
 
+[[manage-user-access-and-permissions-in-netapp-console]]
 == 在 NetApp Console 中管理使用者存取權限與許可
 
 NetApp Console 提供身分和存取管理（IAM）功能，以增強資料基礎架構的安全性和控制力。圍繞組織角色和職責組織儲存和資料服務，以降低未經授權存取的風險，同時保持營運效率：
@@ -54,6 +57,7 @@ link:concept-identity-and-access-management.html["了解有關NetApp Console中�
 
 
 
+[[security-and-compliance-in-netapp-console]]
 == NetApp Console 的安全性和合規性
 
 啟用單一登入（SSO）等安全性和合規性功能，以控制對儲存和資料服務的存取。擁有組織管理員角色的使用者預設可以設定唯讀模式，使用者必須申請提升的權限才能變更儲存系統和使用資料服務。您也可以使用 NetApp Console 監控儲存管理和使用者活動。NetApp Console 已通過 SOC 2 Type 2 認證，並可 NetApp 向客戶提供 SOC 2 報告。
@@ -62,12 +66,14 @@ https://www.netapp.com/company/trust-center/compliance/soc-2/["查看 NetApp 的
 
 
 
+[[netapp-console-capabilities-and-supported-storage]]
 == NetApp Console 功能和支援的儲存
 
 NetApp Console 支援本機和雲端環境中的各種儲存類型、功能和資料服務。使用 Console 管理您的儲存系統，監控其運作狀況和效能，並啟用資料服務來保護和最佳化您的資料。
 
 
 
+[[supported-cloud-and-on-premises-storage-in-netapp-console]]
 === 在 NetApp Console 中支援的雲端與內部部署儲存
 
 從 Console 管理這些儲存類型：
@@ -104,6 +110,7 @@ NetApp Console 支援本機和雲端環境中的各種儲存類型、功能和�
 
 
 
+[[storage-management-and-health-services-in-netapp-console]]
 === NetApp Console 中的儲存管理和健全狀況服務
 
 NetApp Console 透過單一介面提供 NetApp 儲存基礎架構的統一管理。
@@ -126,6 +133,7 @@ NetApp數位顧問 (Active IQ):: 使用預測分析和主動支援來優化您�
 
 
 
+[[data-security-and-protection-services-in-netapp-console]]
 === NetApp Console 中的資料安全和保護服務
 
 利用內建資料服務保護關鍵資料並最佳化儲存效率。
@@ -139,6 +147,7 @@ NetApp Replication:: 在儲存系統之間複製資料以支援備份和災難�
 
 
 
+[[cost-and-compliance-management-services-in-netapp-console]]
 === NetApp Console 中的成本和合規性管理服務
 
 追蹤所有系統中的合約狀態，以改善成本管理、法規遵循和採購決策。
@@ -167,6 +176,7 @@ NetApp工作負載:: 使用 Amazon FSx for NetApp ONTAP 設計、設定及操作
 
 
 
+[[netapp-console-cost]]
 === NetApp Console 成本
 
 NetApp 不會對 Console 收費。當您部署 Console 代理程式或在雲端使用受限模式時，會產生費用。某些 NetApp 資料服務也會產生相關費用。https://bluexp.netapp.com/pricing["了解NetApp數據服務定價"^]

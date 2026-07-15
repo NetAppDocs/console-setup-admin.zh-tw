@@ -32,12 +32,14 @@ summary: 私有模式通常用於沒有網際網路連線的內部部署環境�
 
 
 
+[[supported-features-and-services-for-netapp-console-in-private-mode]]
 == NetApp Console 私有模式支援的功能與服務
 
 下表列出了在私有模式下安裝 NetApp Console 時可用的儲存管理功能、資料服務和管理功能。在雲端安裝 NetApp Console 與在本地安裝時，功能有所不同。
 
 
 
+[[private-mode-installed-in-the-cloud]]
 === 雲端已安裝私有模式
 
 [cols="3*"]
@@ -112,6 +114,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage
 |===
 
 
+[[private-mode-installed-on-premises]]
 === 私有模式已安裝在內部部署環境
 
 [cols="3*"]

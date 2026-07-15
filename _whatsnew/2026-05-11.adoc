@@ -4,6 +4,7 @@
 
 
 
+[[console-agent-4-7-0]]
 === Console 代理 4.7.0
 
 4.7.0 版本同時支援標準模式和受限模式。
@@ -12,6 +13,7 @@
 
 
 
+[[netapp-console-administration]]
 === NetApp Console管理
 
 本版本包含以下新功能。

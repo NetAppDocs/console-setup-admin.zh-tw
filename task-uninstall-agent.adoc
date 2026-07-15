@@ -18,6 +18,7 @@ summary: 解除安裝 Console 代理程式以疑難排解問題、或從主機�
 
 
 
+[[uninstall-the-agent-when-it-has-outbound-connectivity]]
 == 當代理程式具有出站連線能力時，請將其解除安裝
 
 如果您使用的是標準模式或受限模式（換句話說，代理主機具有出站連線），那麼您應該按照下列步驟卸載代理程式。
@@ -35,6 +36,7 @@ _silent_ 運行腳本而不提示您確認。
 
 
 
+[[uninstall-the-agent-when-it-has-no-outbound-connectivity]]
 == 當代理程式沒有出站連線時、請卸載該代理程式
 
 如果您的代理程式沒有出站連線（例如，在私有模式下），則必須手動從主機中移除代理軟體。
@@ -71,6 +73,7 @@ docker system prune -a
 
 
 
+[[remove-console-agents-from-the-console]]
 == 從控制台中刪除控制台代理
 
 如果您刪除了代理虛擬機器或卸載了代理，則應將其從控制台的代理清單中刪除。刪除代理虛擬機器或卸載代理軟體後，代理程式在控制台中顯示狀態為「已中斷連線」。

@@ -28,6 +28,8 @@ NOTE: 在與 Cloud Volumes ONTAP 系統相同的 Azure 區域中部署 Console �
 
 
 
+[[step-1-set-up-networking]]
+[[networking-azure-agent]]
 == 步驟 1：設定網絡
 
 確保您打算安裝控制台代理的網路位置支援以下要求。這些要求允許控制台代理管理混合雲資源。
@@ -153,6 +155,8 @@ link:reference-networking-saas-console.html["從 NetApp Console 檢視已聯絡�
 
 
 
+[[step-2-create-a-console-agent-deployment-policy-custom-role]]
+[[agent-custom-role]]
 == 步驟 2：建立控制台代理部署策略（自訂角色）
 
 您需要建立一個具有在 Azure 中部署控制台代理程式的權限的自訂角色。
@@ -275,6 +279,7 @@ az role definition create --role-definition Policy_for_Setup_As_Service_Azure.js
 
 
 
+[[step-3-set-up-authentication]]
 == 步驟 3：設定身份驗證
 
 從控制台建立控制台代理程式時，您需要提供登入名，以使控制台能夠透過 Azure 進行驗證並部署 VM。您有兩個選擇：
@@ -415,6 +420,7 @@ image:screenshot_azure_client_secret.gif["Azure 入口網站的螢幕截圖，�
 ====
 
 
+[[step-4-create-the-console-agent]]
 == 步驟 4：建立控制台代理
 
 直接從NetApp Console建立控制台代理程式。

@@ -6273,4 +6273,88 @@
   <block id="c352b7fbc4bc73fdf6c2e56c32996413" category="paragraph">4.8.0 版本同時支援標準模式和受限模式。</block>
   <block id="179021adb01b0c7bf08f12ed1f7e4cea" category="paragraph">本次版本更新包含了安全性改善和漏洞修復。</block>
   <block id="36864a323861d58f15ec5fb9c0a62095" category="section-title">2026 年 6 月 8 日</block>
+  <block id="b52a1b50313551938bf7b6520c957f67" category="doc">Console 代理 4.9.0</block>
+  <block id="8643cb7b1a266632b3ce870a592c9aed" category="paragraph">4.9.0 版本同時支援標準模式和受限模式。</block>
+  <block id="148954cf851ed4aa263eb6cd90ea3000" category="paragraph-title">支援 Cloud Volumes ONTAP 的角色型存取控制</block>
+  <block id="bfc35791f70b3b115636ea79999bc1e3" category="paragraph">Console 支援 Cloud Volumes ONTAP 的角色型存取控制。</block>
+  <block id="a849f909985995e89c42154f270a1245" category="inline-link-macro">深入瞭解 Cloud Volumes ONTAP 的角色型存取</block>
+  <block id="ea256e0ef091d570fc3443bfdb29b124" category="paragraph"><block ref="8c5db5921f383526df21d84d3b1bfd83" category="inline-link-macro-rx"></block>。</block>
+  <block id="e0bcb2ebdbad366327cfe5a2bb3842af" category="summary">您可以為使用者指派下列角色，以便他們在控制台中存取 Cloud Volumes ONTAP。Cloud Volumes ONTAP 角色可讓您靈活地為使用者指派特定角色，以滿足他們在組織內需要完成的任務。</block>
+  <block id="38231d7ab948e14954505c434dbc3406" category="doc">NetApp Console 中的 Cloud Volumes ONTAP 存取角色</block>
+  <block id="cf1bb4e2b95630bcd705b5ed0583a3f6" category="paragraph">您可以為使用者指派下列角色，以便他們在控制台中存取 Cloud Volumes ONTAP。Cloud Volumes ONTAP 角色可讓您靈活地為使用者指派特定角色，以滿足他們在組織內需要完成的任務。角色分配方式取決於您自身的業務和儲存管理實務。</block>
+  <block id="0ef7f8c52a11ca17c940eb122edda23d" category="paragraph">Cloud Volumes ONTAP 使用下列角色：</block>
+  <block id="ccb8cf6de876397f5af5fd2969199a4c" category="list-text">*Cloud Volumes ONTAP admin*：提供對所有 Cloud Volumes ONTAP 操作的完全存取。</block>
+  <block id="f89da74408fedae3ccfafd61cfb7bbd0" category="list-text">*Cloud Volumes ONTAP operator*：執行重要的儲存作業，例如探索和管理 Cloud Volumes ONTAP 系統，包括新增磁碟區、集合體、快照和複寫，修改部分組態，以及升級 Cloud Volumes ONTAP 版本。</block>
+  <block id="0d01873a225e72f3074f310aae6b4cd1" category="list-text">*Cloud Volumes ONTAP 檢視器*：提供對 Cloud Volumes ONTAP 資訊的唯讀存取。此角色無法執行任何主動操作。某些包含組態資訊的索引標籤和畫面可能對檢視器不可用。</block>
+  <block id="e612ed3cf7a0977aec6f993000cc46f1" category="section-title">角色變更如何生效</block>
+  <block id="283d45b1cce5ad68028d1e4ccf0bbb68" category="paragraph">Cloud Volumes ONTAP 透過使用每個角色指派的本機快取來強制執行角色型存取控制 (RBAC)。快取每小時自動重新整理一次。如果角色為新指派或已變更，變更最多可能需要一小時才能生效。重新整理完成後，主控台將啟用該角色所允許的工作流程。</block>
+  <block id="99f9bec3d41eefb18e9b6540df4c9630" category="admonition">首次部署 Console 代理程式或將現有 Console 代理程式升級至 Console 4.9.0 或更高版本時，Console 會執行一次性初始化過程，將 Cloud Volumes ONTAP 角色指派給組織中的現有使用者。此過程可能需要長達 30 分鐘才能完成。</block>
+  <block id="fee3007030dccd80255a7211926472b7" category="section-title">Cloud Volumes ONTAP 角色權限</block>
+  <block id="04133a29798abb95ff37ba8c50cf2155" category="cell">Cloud Volumes ONTAP 檢視器</block>
+  <block id="eddfc9398b9966908680fb984db5a4af" category="cell">Cloud Volumes ONTAP 運算子</block>
+  <block id="f8ce0c164ea8a4e0ddd34253df0f4d02" category="cell">Cloud Volumes ONTAP 管理員</block>
+  <block id="70c96718d28204569b4d506719f1b08c" category="paragraph">*Systems page*：</block>
+  <block id="68508a9dfe7d188ddfacdf20bf897e7f" category="paragraph">輸入系統</block>
+  <block id="6b3c1595afc04f7a21a3249b677c0c9b" category="paragraph">檢視磁碟區</block>
+  <block id="bf4d918de9d256d487afb992811ca965" category="paragraph">探索系統</block>
+  <block id="3cbb7699679cf8ac6bb42f2d93fd4d72" category="paragraph">新增磁碟區</block>
+  <block id="ef86e727369acd14c1154ae70c7818c2" category="paragraph">使用*複製*（不適用於 FSx for ONTAP 或本機系統）</block>
+  <block id="ebfc655a9ee5a72608591f3c5fc9a2c5" category="paragraph">使用拖放功能進行*複製*（以 Cloud Volumes ONTAP 作為來源或目標）</block>
+  <block id="770e6e1d37ec8e564116ac215a622e66" category="paragraph">新增系統</block>
+  <block id="34d606f181de5f7ebc55948eff861656" category="paragraph">存取*最佳化成本與效能*</block>
+  <block id="a319340d2793ad3feb216caae04b1972" category="paragraph">開啟 System Manager</block>
+  <block id="78428d7e57376db0e62744220d91520f" category="paragraph">啟用 Cloud Volumes ONTAP</block>
+  <block id="ae52ff2fa45ec695a0eb4dddc56142e2" category="paragraph">移除系統</block>
+  <block id="77c36d637ce6be24a47b2084784aaa2c" category="paragraph">*Agents page*：</block>
+  <block id="c15cd722e8101855682f654bf1796e4f" category="paragraph">檢視 Cloud Volumes ONTAP 設定</block>
+  <block id="afe14dca9719a7fe52b49677da4d8814" category="paragraph">編輯 Cloud Volumes ONTAP 設定</block>
+  <block id="dc586dfa749e8f2723104b54cbd24e88" category="paragraph">*概覽標籤頁*：</block>
+  <block id="5288a56300efd1e1c3e2751aa731a390" category="paragraph">新增 Aggregate</block>
+  <block id="39ca4d74366a4f92b22ffc56ae7560da" category="paragraph">使用 *立即升級*</block>
+  <block id="905cb7c01c2c938fc7dfb74be192c7fe" category="paragraph">更新 ONTAP 版本</block>
+  <block id="6e30995a6a4455f38520c4967a6891dc" category="paragraph">從鉛筆選單中編輯 *CIFS 設定*</block>
+  <block id="50384ef287bf4f3284ec6c4fdcbb197d" category="paragraph">使用開 / 關按鈕</block>
+  <block id="cc940bf2667209e4d71ddc12d8f2e5ed" category="paragraph">設定密碼</block>
+  <block id="89d30dd0d2abc48eac8a8820c224f0cb" category="paragraph">從工作區移除系統</block>
+  <block id="611740b36c016d17e48d1933b790fbcd" category="paragraph">刪除系統</block>
+  <block id="dd1f6e9949dfffc643a8da7aace730ca" category="paragraph">請使用右側窗格中的鉛筆圖示編輯以下內容：</block>
+  <block id="e9b2a4ceea8a7547d6acff51725a45d5" category="list-text">*系統標籤*</block>
+  <block id="7b59bf185ead08ea8d76e9e065d0c541" category="list-text">*排程停機時間*</block>
+  <block id="57a30152ed2185b0f66d4deefe98895f" category="list-text">*儲存類別*</block>
+  <block id="49d174862d061ffc45b535cfe19aa675" category="list-text">*執行個體類型*</block>
+  <block id="351998bce1715b24f1ec7084565d4a3e" category="list-text">*計費方式*</block>
+  <block id="84d510d425e276dc06d673c0b4026179" category="list-text">*寫入速度*</block>
+  <block id="47cf4ae2e1f94cc06b1198ad70feadf4" category="list-text">*勒索軟體防護*</block>
+  <block id="8c93fb65447e8e41a5b80cede16835fb" category="list-text">*支援註冊*</block>
+  <block id="78000761f276b3432ac1a0954ead15d0" category="list-text">*WORM*</block>
+  <block id="57361aebcdd7b8f5bd95eef8f458ca7d" category="paragraph">*Volumes 索引標籤*：</block>
+  <block id="d50044469c0bf9ab38eff9cf7243fb25" category="paragraph">複製磁碟區</block>
+  <block id="5b5eeee4d1e6b7007829d66c8b144064" category="paragraph">建立 Snapshot 複本</block>
+  <block id="9e32a435d22aa5cbc195e861b5fe629f" category="paragraph">編輯磁碟區設定</block>
+  <block id="8e9a64bda9d21f945b6489df2e7946e1" category="paragraph">刪除磁碟區</block>
+  <block id="ff1652826450f50c76cdfdda64d94e2f" category="paragraph">從 Snapshot 複本還原</block>
+  <block id="98ac35c4695c65fda5915fe55d337301" category="paragraph">更改磁碟類型</block>
+  <block id="9f4aa892debf403a854859b0ca9c9ff6" category="paragraph">更改分層原則</block>
+  <block id="fdb328de5591e0e1226752360851ec3c" category="paragraph">*Aggregates tab*：</block>
+  <block id="261c95ed5d454ef55df25657c605d472" category="paragraph">增加容量</block>
+  <block id="8ce62ed0fdfe7abb736c3597956922c2" category="paragraph">刪除 Aggregate</block>
+  <block id="08cce486a8251110d0aa4356efa31acd" category="paragraph">*複製頁面*（以 Cloud Volumes ONTAP 作為來源或目標）：</block>
+  <block id="444c64ac4c351f349e58d8d514287ab4" category="paragraph">中斷複寫</block>
+  <block id="892027dedcdbb237fc210b3a00cf2ae5" category="paragraph">重新同步複寫</block>
+  <block id="78c8c117652a47404403fff983b2f82f" category="paragraph">反向重新同步複寫</block>
+  <block id="51f4afdf17b1f2127b36e48896363c41" category="paragraph">編輯排程</block>
+  <block id="487bfcf1a1cc5511a69fc77de0b7b697" category="paragraph">編輯最大傳輸速率</block>
+  <block id="d93259d25822e675cbf5c2324eca93de" category="paragraph">更新複寫</block>
+  <block id="62ef027c0c691039af4f8f02b7fbb023" category="paragraph">刪除複寫</block>
+  <block id="b56d101e2f90a7d1325719cb29a94d92" category="cell"><block ref="b56d101e2f90a7d1325719cb29a94d92" category="inline-link-macro-rx"></block></block>
+  <block id="2c4d9923a9d5b3c3a767052959fd8136" category="cell">CVO_ADMIN</block>
+  <block id="88158c4b6ccecd89ab78e336e14d21e2" category="cell">提供對所有 Cloud Volumes ONTAP 操作的完全存取。</block>
+  <block id="e3a725b478c365e353fb71da352b5528" category="cell"><block ref="e3a725b478c365e353fb71da352b5528" category="inline-link-macro-rx"></block></block>
+  <block id="c56cd6f914d687294a94bb04b6ac445f" category="cell">CVO_OPERATOR</block>
+  <block id="354977cef76cb978943529851a22368a" category="cell">支援日常管理任務，包括新增磁碟區、配置複製和管理儲存。</block>
+  <block id="78672301082003054933c3ae90d2a937" category="cell"><block ref="78672301082003054933c3ae90d2a937" category="inline-link-macro-rx"></block></block>
+  <block id="a705354c1854b9d3509c237079d3020f" category="cell">CVO_VIEWER</block>
+  <block id="6f9b7785bb9c36940a328cc9b5ee0194" category="cell">提供對 Cloud Volumes ONTAP 資訊的唯讀存取。此角色無法執行任何主動操作。</block>
+  <block id="593b7503b2bb0ab3939f80c599e28d01" category="section-title">2026年7月15日</block>
+  <block id="82ee751249da8a12693a499bea6987f2" category="sidebar">Cloud Volumes ONTAP 角色</block>
 </blocks>

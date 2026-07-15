@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-50]]
 === 連接器 3.9.50
 
 BlueXP Connector 的此版本包含一些小的安全性改進和錯誤修復。
@@ -18,6 +19,7 @@ https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/using_s
 
 
 
+[[netapp-keystone-beta-available-in-bluexp]]
 === NetApp Keystone測試版現已在BlueXP中推出
 
 NetApp Keystone即將由BlueXP推出，目前處於測試階段。您可以從BlueXP左側導覽列存取NetApp Keystone測試版的註冊頁面。

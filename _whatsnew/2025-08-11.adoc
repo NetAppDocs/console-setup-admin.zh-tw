@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-55]]
 === 連接器 3.9.55
 
 BlueXP Connector 的此版本包括安全性改進和錯誤修復。
@@ -12,24 +13,28 @@ BlueXP Connector 的此版本包括安全性改進和錯誤修復。
 
 
 
+[[japanese-language-support]]
 === 日語支持
 
 BlueXP UI 現已提供日文版本。如果您的瀏覽器語言是日語， BlueXP會以日文顯示。若要存取日語文檔，請使用文檔網站上的語言選單。
 
 
 
+[[operational-resiliency-feature]]
 === 營運彈性功能
 
 操作彈性功能已從BlueXP中刪除。如果遇到問題，請聯絡NetApp支援。
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXP身分和存取管理 (IAM)
 
 BlueXP中的身分和存取管理現在提供以下功能。
 
 
 
+[[new-access-role-for-operational-support]]
 === 營運支援的新訪問角色
 
 BlueXP現在支援營運支援分析師角色。此角色授予使用者監控儲存警報、查看BlueXP稽核時間軸以及輸入和追蹤NetApp支援案例的權限。

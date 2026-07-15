@@ -26,6 +26,7 @@ NetApp 設計 Console 角色時採用最小權限原則，因此每個角色僅�
 
 
 
+[[types-of-console-organization-members]]
 == 控制台組織成員的類型
 
 NetApp Console 組織中有三種類型的成員：
@@ -39,6 +40,7 @@ link:task-iam-manage-members-permissions.html#add-members["了解如何為您的
 
 
 
+[[predefined-roles-in-netapp-console]]
 == NetApp Console中的預先定義角色
 
 NetApp Console包含預先定義角色，您可以將其指派給組織成員。每個角色都包含權限，用於指定成員在其指派的範圍（組織、資料夾或專案）內可以執行哪些操作。

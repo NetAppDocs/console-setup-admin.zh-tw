@@ -18,6 +18,7 @@ summary: 您可以將營運支援分析師角色指派給用戶，以便他們�
 
 
 
+[[operational-support-analyst]]
 == 營運支援分析師
 
 [cols="1,2"]

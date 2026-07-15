@@ -25,6 +25,7 @@ summary: 若要從 AWS Marketplace 建立控制台代理，您需要設定網路
 
 
 
+[[step-1-set-up-networking]]
 == 步驟 1：設定網絡
 
 確保控制台代理程式的網路位置符合以下要求以管理混合雲資源。
@@ -145,6 +146,7 @@ https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.
 
 
 
+[[step-2-set-up-aws-permissions]]
 == 步驟 2：設定 AWS 權限
 
 為了準備市場部署，請在 AWS 中建立 IAM 策略並將其附加到 IAM 角色。當您從 AWS Marketplace 建立控制台代理程式時，系統會提示您選擇該 IAM 角色。
@@ -176,6 +178,7 @@ https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.
 
 
 
+[[step-3-review-instance-requirements]]
 == 步驟 3：檢視實例要求
 
 建立控制台代理程式時，您需要選擇符合下列要求的 EC2 執行個體類型。
@@ -187,6 +190,7 @@ AWS EC2 執行個體類型:: 滿足 CPU 和 RAM 要求的實例類型。  NetApp
 
 
 
+[[step-4-create-the-console-agent]]
 == 步驟 4：建立控制台代理
 
 直接從 AWS Marketplace 建立控制台代理。

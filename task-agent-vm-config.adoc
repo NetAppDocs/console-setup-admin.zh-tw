@@ -29,6 +29,7 @@ summary: 在部署 Console 代理程式後，您可以對現有的 vCenter 或 E
 
 
 
+[[access-the-vm-maintenance-console]]
 == 存取虛擬機器維護控制台
 
 您可以從 vSphere 客戶端存取維護主控台。
@@ -42,6 +43,7 @@ summary: 在部署 Console 代理程式後，您可以對現有的 vCenter 或 E
 
 
 
+[[change-the-maint-user-password]]
 === 修改主用戶密碼
 
 您可以更改 `maint`用戶。
@@ -57,6 +59,7 @@ summary: 在部署 Console 代理程式後，您可以對現有的 vCenter 或 E
 
 
 
+[[increase-the-cpu-or-ram-of-the-vm-instance]]
 === 增加虛擬機器執行個體的 CPU 或 RAM
 
 您可以增加託管控制台代理程式的 VM 執行個體的 CPU 或 RAM。
@@ -87,6 +90,7 @@ summary: 在部署 Console 代理程式後，您可以對現有的 vCenter 或 E
 
 
 
+[[view-network-settings-for-the-agent-vm]]
 === 查看代理虛擬機器的網路設置
 
 在 vSphere 客戶端中檢視代理程式 VM 的網路設定，以確認或疑難排解網路問題。您只能檢視（無法更新）下列網路設定：IP 位址和 DNS 詳細資料。
@@ -102,6 +106,7 @@ summary: 在部署 Console 代理程式後，您可以對現有的 vCenter 或 E
 
 
 
+[[update-the-static-routes-for-the-agent-vm]]
 === 更新代理虛擬機器的靜態路由
 
 根據需要新增、更新或刪除代理虛擬機器的靜態路由。
@@ -120,6 +125,7 @@ summary: 在部署 Console 代理程式後，您可以對現有的 vCenter 或 E
 
 
 
+[[update-domain-search-settings-for-the-agent-vm]]
 === 更新代理虛擬機器的網域搜尋設置
 
 您可以更新代理虛擬機器的搜尋域設定。
@@ -138,6 +144,8 @@ summary: 在部署 Console 代理程式後，您可以對現有的 vCenter 或 E
 
 
 
+[[access-the-agent-diagnostic-tools]]
+[[connect-vcenter-host]]
 === 存取代理診斷工具
 
 存取診斷工具來解決控制台代理的問題。  NetApp支援可能會在解決問題時要求您執行此操作。
@@ -153,6 +161,7 @@ summary: 在部署 Console 代理程式後，您可以對現有的 vCenter 或 E
 
 
 
+[[access-the-agent-diagnostic-tools-remotely]]
 === 遠端存取代理診斷工具
 
 您可以使用 Putty 等工具遠端存取診斷工具。透過指派一次性密碼啟用對代理 VM 的 SSH 存取。

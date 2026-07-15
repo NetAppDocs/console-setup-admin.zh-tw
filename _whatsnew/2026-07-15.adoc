@@ -1,0 +1,22 @@
+= Console 代理 4.9.0
+:allow-uri-read: 
+
+
+
+
+[[console-agent-4-9-0]]
+=== Console 代理 4.9.0
+
+4.9.0 版本同時支援標準模式和受限模式。
+
+此版本的 Console 代理程式包含安全性改善和錯誤修正。
+
+
+
+[[netapp-console-administration]]
+=== NetApp Console管理
+
+.支援 Cloud Volumes ONTAP 的角色型存取控制
+Console 支援 Cloud Volumes ONTAP 的角色型存取控制。
+
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-cvo-roles.html["深入瞭解 Cloud Volumes ONTAP 的角色型存取"^]。

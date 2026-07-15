@@ -27,6 +27,7 @@ NOTE: 在 4.0.0 中， NetApp減少了控制台和控制台代理程式所需的
 
 
 
+[[endpoints-contacted-by-netapp-console-and-console-agents]]
 == NetApp Console和控制台代理程式聯繫的端點
 
 您部署的每個代理程式和存取NetApp Console的每台電腦都必須連接到下面列出的端點。
@@ -58,6 +59,7 @@ https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.
 |===
 
 
+[[cloud-provider-endpoints-contacted-the-console-agent]]
 == 雲端提供者端點聯繫了控制台代理
 
 如果控制台代理程式部署在您的雲端提供者中，則它們必須能夠存取其他端點。
@@ -71,12 +73,14 @@ https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.
 
 
 
+[[data-services-endpoints-contacted-by-the-console-agent]]
 == 控制台代理聯繫的資料服務端點
 
 一些NetApp資料服務以及Cloud Volumes ONTAP要求代理程式具有額外的出站網路存取權限。
 
 
 
+[[endpoints-for-cloud-volumes-ontap]]
 === Cloud Volumes ONTAP的端點
 
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["AWS 中的Cloud Volumes ONTAP端點"]
@@ -86,6 +90,7 @@ https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.
 
 
 
+[[endpoints-for-workloads]]
 === 工作負載端點
 
 控制台代理程式必須能夠存取以下NetApp工作負載端點。

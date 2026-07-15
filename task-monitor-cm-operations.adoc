@@ -42,6 +42,7 @@ summary: 您可以監視控制台正在執行的操作的狀態，以查看是�
 |===
 
 
+[[audit-user-activity-from-the-audit-page]]
 == 從審核頁面審核用戶活動
 
 使用審計頁面來識別誰執行了操作或其狀態。
@@ -60,6 +61,7 @@ summary: 您可以監視控制台正在執行的操作的狀態，以查看是�
 
 
 
+[[download-audit-logs-from-the-audit-page]]
 === 從審計頁面下載審計日誌
 
 您可以將稽核日誌從稽核頁面下載到 CSV 檔案。這使您能夠記錄使用者在您的組織中執行的操作。  CSV 檔案包含下載的 CSV 檔案中的所有列，無論審計頁面上的篩選器或顯示的列為何。
@@ -70,6 +72,8 @@ summary: 您可以監視控制台正在執行的操作的狀態，以查看是�
 
 
 
+[[monitor-activities-using-the-notification-center]]
+[[notification-center]]
 == 使用通知中心監控活動
 
 通知追蹤控制台操作以確認成功。它們使您能夠查看在目前登入工作階段期間啟動的許多控制台操作的狀態。並非所有控制台服務都會將資訊報告到通知中心。
@@ -80,6 +84,7 @@ summary: 您可以監視控制台正在執行的操作的狀態，以查看是�
 
 
 
+[[comparing-the-notification-center-with-alerts]]
 === 比較通知中心和警報
 
 通知中心使您能夠查看已啟動的操作的狀態並為某些類型的系統活動設定警報通知。同時，警報可讓您查看ONTAP儲存環境中與容量、可用性、效能、保護和安全性相關的問題或潛在風險。
@@ -88,6 +93,7 @@ https://docs.netapp.com/us-en/console-alerts/index.html["了解有關NetApp Cons
 
 
 
+[[notification-types]]
 === 通知類型
 
 控制台將通知分為以下類別：
@@ -116,6 +122,7 @@ https://docs.netapp.com/us-en/console-alerts/index.html["了解有關NetApp Cons
 |===
 
 
+[[filter-notifications]]
 === 過濾通知
 
 預設情況下，您會在通知中心看到所有活動通知。您可以過濾看到的通知，以僅顯示對您重要的通知。您可以按「服務」和通知「類型」進行篩選。
@@ -126,6 +133,7 @@ image:screenshot_notification_filters.png["螢幕截圖顯示了通知中心中�
 
 
 
+[[dismiss-notifications]]
 === 關閉通知
 
 如果您不再需要查看通知，可以從頁面中刪除它們。您可以單獨或一次關閉所有通知。
@@ -136,6 +144,7 @@ image:screenshot_notification_filters.png["螢幕截圖顯示了通知中心中�
 
 
 
+[[set-email-notification-settings]]
 === 設定電子郵件通知設定
 
 您可以透過電子郵件傳送特定類型的通知，這樣即使您未登入也可以獲知重要的系統活動。電子郵件可以發送給您組織或帳戶中的任何用戶，或任何其他需要了解某些類型的系統活動的收件者。
@@ -169,6 +178,7 @@ image:screenshot_notification_filters.png["螢幕截圖顯示了通知中心中�
 
 
 
+[[add-additional-email-recipients]]
 === 新增其他電子郵件收件人
 
 _組織使用者_頁面中顯示的使用者是從您的組織或帳戶中的使用者自動填入的。您可以在「其他收件者」頁面中為其他無權存取控制台但需要收到某些類型的警報和通知的個人或團體新增電子郵件地址。

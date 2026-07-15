@@ -18,6 +18,7 @@ summary: 當網路組態變更時、您可能需要在雲端供應商中更新�
 
 
 
+[[change-the-ip-address-for-an-agent]]
 == 更改代理的 IP 位址
 
 如果需要，您可以變更雲端提供者指派的代理執行個體的內部和公用 IP 位址。
@@ -55,6 +56,7 @@ system configuration backup settings modify -destination <target-location>
 ----
 
 
+[[edit-an-agents-uris]]
 == 編輯代理的 URI
 
 如果您的網路需求發生變化，請更新 Console 代理程式的 URI。這可以確保對儲存基礎架構進行不間斷、安全且合規的管理。

@@ -18,6 +18,7 @@ summary: 在私有模式下部署 NetApp Console，以便在沒有任何出站�
 
 
 
+[[step-1-install-the-console-agent]]
 == 步驟 1：安裝控制台代理
 
 從 NetApp Support Site 下載產品安裝程式，然後手動將 Console 安裝到您自己的 Linux 主機上。
@@ -62,6 +63,7 @@ Console 代理程式已安裝。現在您可以設定 NetApp Console 了。
 
 
 
+[[step-2-set-up-netapp-console]]
 == 第 2 步：設定NetApp Console
 
 當您第一次存取 NetApp Console 時，系統會提示您設定 NetApp Console。
@@ -88,6 +90,7 @@ Console 代理程式現已安裝。在網頁瀏覽器中存取其 IP 位址，�
 
 
 
+[[step-3-provide-permissions-to-console-agent]]
 == 步驟 3：向 Console 代理程式授予權限
 
 如果要建立 Cloud Volumes ONTAP 工作環境，則需要向 Console 代理提供您先前設定的雲端供應商權限。

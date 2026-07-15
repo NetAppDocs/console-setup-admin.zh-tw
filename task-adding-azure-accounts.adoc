@@ -18,6 +18,7 @@ summary: 新增和管理 Azure 憑證，以便NetApp Console具有在 Azure 訂�
 
 
 
+[[overview]]
 == 概況
 
 有兩種方法可以在控制台中新增額外的 Azure 訂閱和憑證。
@@ -28,6 +29,7 @@ summary: 新增和管理 Azure 憑證，以便NetApp Console具有在 Azure 訂�
 
 
 
+[[associate-additional-azure-subscriptions-with-a-managed-identity]]
 == 將其他 Azure 訂閱與託管識別關聯Associate additional Azure subscriptions with a managed identity
 
 控制台可讓您選擇要部署Cloud Volumes ONTAP 的Azure 憑證和 Azure 訂閱。除非關聯 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["託管識別"^]透過這些訂閱。
@@ -65,6 +67,8 @@ image:screenshot_accounts_switch_azure_subscription.gif["螢幕截圖顯示了�
 
 
 
+[[add-additional-azure-credentials-to-netapp-console]]
+[[add-credentials-azure]]
 == 為NetApp Console新增其他 Azure 憑證
 
 從控制台部署控制台代理程式時，控制台會在具有所需權限的虛擬機器上啟用系統指派的託管識別碼。當您為Cloud Volumes ONTAP建立新系統時，控制台會預設選擇這些 Azure 憑證。
@@ -76,6 +80,7 @@ TIP: 如果您在現有系統上手動安裝了控制台代理軟體，則不會
 
 
 
+[[grant-azure-permissions-using-a-service-principal]]
 === 使用服務主體授予 Azure 權限
 
 控制台需要權限才能在 Azure 中執行操作。您可以透過在 Microsoft Entra ID 中建立和設定服務主體並取得控制台所需的 Azure 憑證來授予 Azure 帳戶所需的權限。
@@ -231,6 +236,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Azure 入口網站的螢幕截
 
 
 
+[[ids]]
 ==== 取得應用程式ID和目錄ID
 
 將 Azure 帳戶新增至控制台時，您需要提供應用程式（用戶端）ID 和應用程式的目錄（租用戶）ID。控制台使用 ID 以程式設計方式登入。
@@ -269,6 +275,7 @@ image:screenshot_azure_client_secret.gif["Azure 入口網站的螢幕截圖，�
 
 
 
+[[add-the-credentials-to-the-console]]
 === 將憑證新增至控制台
 
 為 Azure 帳戶提供所需權限後，您可以將該帳戶的憑證新增至控制台。完成此步驟後，您可以使用不同的 Azure 憑證啟動Cloud Volumes ONTAP 。
@@ -303,12 +310,15 @@ image:screenshot_accounts_switch_azure.gif["螢幕截圖顯示在「詳細資料
 
 
 
+[[manage-existing-credentials]]
 == 管理現有憑證
 
 透過關聯 Marketplace 訂閱、編輯憑證和刪除憑證來管理已新增至控制台的 Azure 憑證。
 
 
 
+[[associate-an-azure-marketplace-subscription-to-credentials]]
+[[subscribe]]
 === 將 Azure 市場訂閱關聯到憑證
 
 將 Azure 憑證新增至控制台後，您可以將 Azure 市集訂閱與這些憑證關聯。您可以使用訂閱來建立按使用量付費的Cloud Volumes ONTAP系統並存取NetApp資料服務。
@@ -358,6 +368,7 @@ image:screenshot_accounts_switch_azure.gif["螢幕截圖顯示在「詳細資料
 
 
 
+[[edit-credentials]]
 === 編輯憑證
 
 在控制台中編輯您的 Azure 憑證。例如，如果為服務主體應用程式建立了新的金鑰，您可以更新客戶端金鑰。
@@ -371,6 +382,7 @@ image:screenshot_accounts_switch_azure.gif["螢幕截圖顯示在「詳細資料
 
 
 
+[[delete-credentials]]
 === 刪除憑證
 
 如果您不再需要一組憑證，您可以刪除它們。您只能刪除與系統無關的憑證。

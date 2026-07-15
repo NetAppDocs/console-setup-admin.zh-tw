@@ -18,12 +18,14 @@ summary: 了解 AWS、Azure 和 Google Cloud 上標準部署（可存取網際�
 
 
 
+[[default-configuration-with-internet-access]]
 == 可存取互聯網的預設配置
 
 如果您從NetApp Console、雲端提供者的市場部署了控制台代理，或在具有 Internet 存取權限的本機 Linux 主機上手動安裝了控制台代理，則下列設定詳細資訊適用。
 
 
 
+[[console-agent-vm-details-for-aws]]
 === AWS 控制台代理 VM 詳細信息
 
 如果您從控制台或雲端提供者的市場部署了控制台代理，請注意以下事項：
@@ -40,6 +42,7 @@ summary: 了解 AWS、Azure 和 Google Cloud 上標準部署（可存取網際�
 
 
 
+[[console-agent-vm-details-for-azure]]
 === Azure 控制台代理 VM 詳細信息
 
 如果您從控制台或雲端提供者的市場部署了控制台代理，請注意以下事項：
@@ -55,6 +58,7 @@ summary: 了解 AWS、Azure 和 Google Cloud 上標準部署（可存取網際�
 
 
 
+[[console-agent-vm-details-for-google-cloud]]
 === Google Cloud 控制台代理 VM 詳細信息
 
 如果您從控制台部署了控制台代理，請注意以下事項：
@@ -70,6 +74,7 @@ summary: 了解 AWS、Azure 和 Google Cloud 上標準部署（可存取網際�
 
 
 
+[[installation-folder]]
 === 安裝資料夾
 
 代理程式安裝資料夾位於下列位置：
@@ -78,6 +83,7 @@ summary: 了解 AWS、Azure 和 Google Cloud 上標準部署（可存取網際�
 
 
 
+[[log-files]]
 === 紀錄檔案
 
 日誌檔案包含在以下資料夾中：
@@ -95,6 +101,7 @@ summary: 了解 AWS、Azure 和 Google Cloud 上標準部署（可存取網際�
 
 
 
+[[console-agent-service]]
 === 控制台代理服務
 
 * Console 代理服務名為 `occm`。
@@ -106,6 +113,7 @@ summary: 了解 AWS、Azure 和 Google Cloud 上標準部署（可存取網際�
 
 
 
+[[ports]]
 === 連接埠
 
 代理在 Linux 主機上使用下列連接埠：
@@ -116,6 +124,7 @@ summary: 了解 AWS、Azure 和 Google Cloud 上標準部署（可存取網際�
 
 
 
+[[default-configuration-without-internet-access]]
 == 無需互聯網訪問的預設配置
 
 如果您在沒有網際網路存取權限的本機 Linux 主機上手動安裝了控制台代理，則適用下列設定。link:task-quick-start-private-mode.html["了解有關此安裝選項的更多信息"] 。

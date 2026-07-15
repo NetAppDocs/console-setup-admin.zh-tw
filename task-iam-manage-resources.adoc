@@ -22,6 +22,7 @@ summary: 透過將使用者新增至NetApp Console組織中的專案和資料夾
 
 
 
+[[console-resource-types]]
 == 控制台資源類型
 
 您可以將多種類型的資源關聯到NetApp Console組織中的專案：
@@ -40,6 +41,7 @@ Keystone訂閱:: 如果您的組織擁有 Keystone 訂閱、您可以在 *Resour
 
 
 
+[[view-the-resources-in-your-organization]]
 == 查看組織中的資源
 
 您可以查看與您的組織相關的已發現和未發現的資源。系統會尋找儲存資源，並將其標記為未發現，直到您將其新增至控制台為止。
@@ -64,6 +66,8 @@ NOTE: 控制台會將Amazon FSx for NetApp ONTAP資源從「資源」頁面中�
 
 
 
+[[associate-a-resource-with-folders-and-projects]]
+[[associate-resource]]
 == 將資源與資料夾和項目關聯
 
 將資源關聯到資料夾或項目，使其可供具有該資料夾或項目權限的成員使用。
@@ -90,6 +94,8 @@ link:task-iam-associate-agents.html["了解如何將控制台代理與資料夾�
 
 
 
+[[view-the-folders-and-projects-associated-with-a-resource]]
+[[view-folders-and-projects]]
 == 查看與資源關聯的資料夾和項目
 
 您可以查看與特定資源關聯的資料夾和項目。
@@ -110,6 +116,8 @@ NOTE: 要查看哪些組織成員有權存取該資源，link:task-iam-manage-fo
 
 
 
+[[remove-a-resource-from-a-folder-or-project]]
+[[remove-resource]]
 == 從資料夾或項目中刪除資源
 
 若要從資料夾或項目中刪除資源，請刪除其關聯。這樣可以防止成員管理該資料夾或專案中的資源。
@@ -125,6 +133,7 @@ NOTE: 若要從整個組織中刪除已發現的資源，請前往「系統」�
 
 
 
+[[related-information]]
 == 相關資訊
 
 * link:concept-identity-and-access-management.html["了解NetApp Console中的身分和存取權限"]

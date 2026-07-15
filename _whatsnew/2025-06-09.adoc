@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-53]]
 === 連接器 3.9.53
 
 BlueXP Connector 的此版本包括安全性改進和錯誤修復。
@@ -12,18 +13,21 @@ BlueXP Connector 的此版本包括安全性改進和錯誤修復。
 
 
 
+[[disk-space-usage-alerts]]
 === 磁碟空間使用情況警報
 
 通知中心現在包含連接器上磁碟空間使用情況的警報。link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-maintain-connectors.html#monitor-disk-space["了解更多。"^]
 
 
 
+[[audit-improvements]]
 === 審計改進
 
 時間軸現在包括用戶的登入和登出事件。您可以看到登入活動的時間，這有助於稽核和安全監控。具有組織管理員角色的 API 使用者可以透過新增以下資訊來查看登入使用者的電子郵件地址 `includeUserData=true``參數如下： `/audit/<account_id>?includeUserData=true` 。
 
 
 
+[[keystone-subscription-management-available-in-bluexp]]
 === BlueXP中提供Keystone訂閱管理
 
 您可以從BlueXP管理您的NetApp Keystone訂閱。
@@ -32,6 +36,7 @@ link:https://docs.netapp.com/us-en/keystone-staas/index.html["了解BlueXP中的
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXP身分和存取管理 (IAM)
 
 
@@ -44,6 +49,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-user-settings.html#ta
 
 
 
+[[workloads]]
 === 工作負載
 
 現在您可以從BlueXP中的憑證頁面查看和刪除Amazon FSx for NetApp ONTAP憑證。

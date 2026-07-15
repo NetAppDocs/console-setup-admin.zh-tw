@@ -22,6 +22,7 @@ Data Classification 支援兩種角色：
 
 
 
+[[compliance-admin]]
 == 合規管理員
 
 Compliance admin 角色僅在組織層級運作，以管理 NetApp Data Classification 資源的存取。如果使用者的職責低於 Organization admin，則必須擁有 Compliance admin 角色才能安裝 NetApp Data Classification。
@@ -34,12 +35,14 @@ NOTE: Compliance admin 已在 1.54 版新增至 Data Classification。如果您�
 
 
 
+[[classification-viewer]]
 == 分類檢視器
 
 Classification viewer 專為需要存取 Data Classification 掃描結果但無需存取組態資源的使用者而設計。具有 Classification viewer 角色的使用者可以檢視對應和完整掃描的結果，以評估儲存空間節省或潛在資料風險的領域。具有 Classification viewer 角色的使用者還可以為其有存取權限的資源產生報告。這些使用者無法啟用或停用磁碟區、儲存區或資料庫架構的掃描。
 
 
 
+[[more-information]]
 == 更多資訊
 
 * link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["瞭解 NetApp Data Classification"^]

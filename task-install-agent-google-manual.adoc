@@ -25,6 +25,7 @@ summary: 要在您自己的 Linux 主機上手動安裝控制台代理，您需�
 
 
 
+[[step-1-review-host-requirements]]
 == 步驟 1：查看主機需求
 
 控制台代理軟體必須在滿足特定作業系統要求、RAM 要求、連接埠要求等的主機上執行。
@@ -156,6 +157,8 @@ Docker Engine 23.0.6 至 28.0.0。
 |===
 
 
+[[step-2-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == 步驟 2：安裝 Podman 或 Docker Engine
 
 根據您的作業系統，安裝代理程式之前需要 Podman 或 Docker Engine。
@@ -341,6 +344,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-3-set-up-networking]]
 == 步驟 3：設定網絡
 
 設定您的網絡，以便控制台代理可以管理混合雲環境中的資源和流程。例如，您需要確保可以連接到目標網路並且可以進行外部網路存取。
@@ -445,6 +449,8 @@ https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.
 
 
 
+[[step-4-set-up-permissions-for-the-console-agent]]
+[[agent-permissions-google]]
 == 步驟 4：設定控制台代理的權限
 
 需要一個 Google Cloud 服務帳號來向控制台代理提供控制台管理 Google Cloud 中的資源所需的權限。建立控制台代理程式時，您需要將此服務帳戶與控制台代理 VM 關聯。
@@ -504,6 +510,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 
 
 
+[[step-5-set-up-shared-vpc-permissions]]
 == 步驟 5：設定共享 VPC 權限
 
 如果您使用共用 VPC 將資源部署到服務項目中，則需要準備好您的權限。
@@ -556,6 +563,7 @@ link:reference-permissions-gcp.html["代理服務帳號策略"]
 ====
 
 
+[[step-6-enable-google-cloud-apis]]
 == 第 6 步：啟用 Google Cloud API
 
 在 Google Cloud 中部署控制台代理程式之前，必須啟用多個 Google Cloud API。
@@ -580,6 +588,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud �
 
 
 
+[[step-7-install-the-console-agent]]
 == 步驟 7：安裝控制台代理
 
 完成先決條件後，您可以在自己的 Linux 主機上手動安裝軟體。
@@ -746,6 +755,7 @@ NOTE: 如果安裝失敗，您可以查看日誌和報告來幫助您排除故�
 
 
 
+[[step-8-provide-permissions-to-console-agent]]
 == 步驟 8：向控制台代理提供權限
 
 您需要向控制台代理提供您先前設定的 Google Cloud 權限。提供權限可使控制台代理程式管理 Google Cloud 中的資料和儲存基礎架構。

@@ -23,12 +23,15 @@ NOTE: 如果您是 VMware 使用者，您可以使用 OVA 在您的 vCenter 中�
 
 
 
+[[prepare-to-install-the-console-agent]]
 == 準備安裝控制台代理
 
 在安裝控制台代理之前，您應該確保您擁有一台符合安裝要求的主機。您還需要與網路管理員合作，以確保控制台代理程式具有所需端點的出站存取權限以及與目標網路的連線。
 
 
 
+[[review-console-agent-host-requirements]]
+[[os-req-agent]]
 === 查看控制台代理主機需求
 
 請在符合作業系統、RAM 和連接埠要求的 x86 主機上執行 Console 代理程式。安裝 Console 代理程式之前，請確保您的主機符合這些要求。
@@ -154,6 +157,8 @@ Docker Engine 23.0.6 至 28.0.0。
 |===
 
 
+[[set-up-network-access-for-the-console-agent]]
+[[network-access-agent]]
 === 為控制台代理設定網路訪問
 
 設定網路存取以確保控制台代理可以管理資源。它需要連接到目標網路並存取特定端點的出站互聯網。
@@ -319,6 +324,8 @@ Amazon FSx for NetApp ONTAP：
 
 
 
+[[create-console-agent-cloud-permissions-for-aws-or-azure]]
+[[agent-permission-aws-azure]]
 === 為 AWS 或 Azure 建立控制台代理雲端權限
 
 如果您想在 AWS 或 Azure 中使用 NetApp 資料服務與內部部署 Console 代理程式，則需要在雲端供應商中設定權限，然後在安裝 Console 代理程式後將認證新增至 Console 代理程式。
@@ -511,12 +518,15 @@ image:screenshot_azure_client_secret.gif["Azure 入口網站的螢幕截圖，�
 ====
 
 
+[[manually-install-a-console-agent]]
 == 手動安裝控制台代理
 
 手動安裝 Console 代理程式時，需要準備滿足要求的機器環境。您需要一台 Linux 機器，並根據您的 Linux 作業系統安裝 Podman 或 Docker。
 
 
 
+[[install-podman-or-docker-engine]]
+[[podman-configuration]]
 === 安裝 Podman 或 Docker Engine
 
 根據您的作業系統，安裝代理程式之前需要 Podman 或 Docker Engine。
@@ -702,6 +712,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[install-the-console-agent-manually]]
 === 手動安裝控制台代理
 
 在本機現有 Linux 主機上下載並安裝控制台代理軟體。
@@ -840,6 +851,8 @@ dns_bind_port = 54
 
 
 
+[[register-the-console-agent-with-netapp-console]]
+[[register-agent]]
 == 使用NetApp Console註冊控制台代理
 
 登入 Console 並將 Console 代理程式與您的組織建立關聯。登入方式取決於您使用 Console 的模式。如果您以標準模式使用 Console，則透過 SaaS 網站登入。如果您以受限模式或私有模式使用 Console，則從 Console 代理程式主機本機登入。
@@ -865,6 +878,7 @@ dns_bind_port = 54
 
 
 
+[[provide-cloud-provider-credentials-to-netapp-console]]
 == 向NetApp Console提供雲端提供者憑證
 
 安裝並設定控制台代理程式後，新增您的雲端憑證，以便控制台代理程式具有在 AWS 或 Azure 中執行操作所需的權限。

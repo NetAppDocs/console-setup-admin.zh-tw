@@ -25,6 +25,7 @@ summary: 您可以在 AWS 中執行的 Linux 主機上手動安裝控制台代�
 
 
 
+[[step-1-review-host-requirements]]
 == 步驟 1：查看主機需求
 
 確保運行控制台代理軟體的主機符合作業系統、記憶體和連接埠要求。
@@ -162,6 +163,8 @@ Docker Engine 23.0.6 至 28.0.0。
 
 
 
+[[step-2-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == 步驟 2：安裝 Podman 或 Docker Engine
 
 根據您的作業系統，安裝代理程式之前需要 Podman 或 Docker Engine。
@@ -347,6 +350,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-3-set-up-networking]]
 == 步驟 3：設定網絡
 
 請確保網路位置符合以下要求，以便控制台代理程式能夠管理混合雲中的資源。
@@ -469,6 +473,8 @@ https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.
 
 
 
+[[step-4-set-up-aws-permissions-for-the-console]]
+[[console-permissions-aws]]
 == 步驟 4：設定控制台的 AWS 權限
 
 請使用下列選項之一為NetApp Console提供 AWS 權限：
@@ -542,6 +548,7 @@ https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.
 ====
 
 
+[[step-5-install-the-console-agent]]
 == 步驟 5：安裝控制台代理
 
 完成所有先決條件後，請在您的 Linux 主機上手動安裝軟體。
@@ -702,6 +709,7 @@ https://_ipaddress_[]
 
 
 
+[[step-6-provide-permissions-to-netapp-console]]
 == 步驟 6：提供對NetApp Console的權限
 
 安裝控制台代理程式後，提供您設定的 AWS 權限，以便控制台代理程式可以管理您在 AWS 中的資料和儲存基礎架構。

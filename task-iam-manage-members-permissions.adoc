@@ -21,6 +21,7 @@ summary: 管理組織的成員以提供組織資源層級結構不同層級的�
 
 
 
+[[understand-how-access-is-granted-in-netapp-console]]
 == 了解如何在NetApp Console中授予存取權限
 
 NetApp Console 使用角色型存取控制 (RBAC) 來管理權限。您可以單獨或透過聯合群組為使用者指派角色。每個角色都定義了對特定資源的允許操作。
@@ -35,6 +36,8 @@ NetApp Console 使用角色型存取控制 (RBAC) 來管理權限。您可以單
 
 
 
+[[add-members-to-your-organization]]
+[[add-members]]
 == 在您的組織中加入成員
 
 NetApp Console支援三種類型的成員：使用者帳戶、服務帳戶和聯合群組。
@@ -47,6 +50,7 @@ NetApp Console支援三種類型的成員：使用者帳戶、服務帳戶和聯
 
 
 
+[[add-a-user]]
 === 新增用戶
 
 使用者註冊NetApp Console，但組織管理員、資料夾管理員或專案管理員必須將他們新增至組織、資料夾或專案中，以便他們能夠存取資源。
@@ -86,6 +90,8 @@ NOTE: 如果您要新增屬於聯邦群組的使用者，請確保該使用者�
 
 
 
+[[add-a-service-account]]
+[[service-account]]
 === 新增服務帳戶
 
 服務帳戶可讓您自動執行任務並安全地連接到控制台 API。對於簡單的設置，可以選擇客戶端 ID 和金鑰；對於自動化或雲端原生環境，可以選擇 JWT（JSON Web Token）以獲得更強的安全性。選擇符合您安全要求的方法。
@@ -132,6 +138,7 @@ link:reference-iam-predefined-roles.html["了解訪問角色"] 。
 
 
 
+[[add-a-federated-group-to-your-organization]]
 == 在您的組織中新增聯合組
 
 您可以將身分提供者 (IdP) 中的聯合群組新增至您的組織，並為其指派一個或多個角色。聯合群組的成員將繼承您在控制台中指派給該群組的角色。
@@ -171,6 +178,7 @@ IMPORTANT: 當您在 Console 新增聯合群組並為其指派角色時，只有
 
 
 
+[[related-information]]
 == 相關資訊
 
 * link:concept-identity-and-access-management.html["了解NetApp Console中的身分和存取管理"]

@@ -23,6 +23,7 @@ summary: 您可以透過為合作夥伴使用者指派組織內資料夾和專�
 
 
 
+[[understand-roles-for-partnership-users]]
 == 了解合作夥伴使用者的角色
 
 您可以按照管理自己的角色的方式來管理合作夥伴組織成員的角色。然而，並非所有角色都適合合作夥伴使用者。特別是，您不能授予合作夥伴使用者允許軟體更新的角色。更新ONTAP軟體通常需要直接網路存取。
@@ -51,6 +52,7 @@ link:reference-iam-predefined-roles.html["了解有關預定義角色的更多�
 
 
 
+[[add-a-role-to-a-partner-user]]
 == 為合作夥伴使用者新增角色
 
 您可以透過向成員新增角色來提供對組織資源的存取權。指派角色時，您指定一個資源和一個角色。您可以為一個使用者指派多個角色。
@@ -82,6 +84,7 @@ link:reference-iam-predefined-roles.html["了解有關預定義角色的更多�
 
 
 
+[[change-or-remove-a-role-from-a-partner-user]]
 == 更改或刪除合作夥伴使用者的角色
 
 您可以變更或刪除指派給合作夥伴組織成員的角色。

@@ -18,6 +18,7 @@ summary: 了解NetApp Console如何使用 Azure 憑證代表您執行操作以�
 
 
 
+[[initial-azure-credentials]]
 == 初始 Azure 憑證
 
 從控制台部署控制台代理程式時，您需要使用具有部署控制台代理虛擬機器權限的 Azure 帳戶或服務主體。所需權限列於link:task-install-agent-azure-console.html#agent-custom-role["Azure 的代理程式部署策略"]。
@@ -34,12 +35,14 @@ image:screenshot_accounts_select_azure.gif["顯示「詳細資料和憑證」頁
 
 
 
+[[additional-azure-subscriptions-for-a-managed-identity]]
 == 託管識別碼的其他 Azure 訂閱
 
 指派給控制台代理程式 VM 的系統指派託管識別碼與您啟動控制台代理程式的訂閱相關聯。如果您想要選擇不同的 Azure 訂閱，則需要link:task-adding-azure-accounts.html#associate-additional-azure-subscriptions-with-a-managed-identity["將託管識別碼與這些訂閱關聯"]。
 
 
 
+[[additional-azure-credentials]]
 == 其他 Azure 憑證
 
 如果要在控制台中使用不同的 Azure 憑證，則必須透過以下方式授予所需的權限link:task-adding-azure-accounts.html["在 Microsoft Entra ID 中建立和設定服務主體"]對於每個 Azure 帳戶。下圖顯示了另外兩個帳戶，每個帳戶都設定了服務主體和提供權限的自訂角色：
@@ -54,6 +57,7 @@ image:screenshot_accounts_switch_azure.gif["螢幕截圖顯示在「詳細資料
 
 
 
+[[credentials-and-marketplace-subscriptions]]
 == 憑證和市場訂閱
 
 您新增至控制台代理程式的憑證必須與 Azure Marketplace 訂閱相關聯，以便您可以按小時費率（PAYGO）或NetApp資料服務或透過年度合約支付Cloud Volumes ONTAP費用。
@@ -68,12 +72,14 @@ link:task-adding-azure-accounts.html#subscribe["了解如何關聯 Azure 訂閱"
 
 
 
+[[faq]]
 == 常問問題
 
 以下問題與憑證和訂閱有關。
 
 
 
+[[can-i-change-the-azure-marketplace-subscription-for-cloud-volumes-ontap-systems]]
 === 我可以更改Cloud Volumes ONTAP系統的 Azure Marketplace 訂閱嗎？
 
 是的，你可以。當您變更與一組 Azure 憑證關聯的 Azure 市場訂閱時，所有現有和新的Cloud Volumes ONTAP系統都會根據新訂閱收費。
@@ -82,6 +88,7 @@ link:task-adding-azure-accounts.html#subscribe["了解如何關聯 Azure 訂閱"
 
 
 
+[[can-i-add-multiple-azure-credentials-each-with-different-marketplace-subscriptions]]
 === 我可以新增多個 Azure 憑證，每個憑證都有不同的市場訂閱嗎？
 
 屬於相同 Azure 訂閱的所有 Azure 憑證都將與相同 Azure 市場訂閱相關聯。
@@ -90,12 +97,14 @@ link:task-adding-azure-accounts.html#subscribe["了解如何關聯 Azure 訂閱"
 
 
 
+[[can-i-move-existing-cloud-volumes-ontap-systems-to-a-different-azure-subscription]]
 === 我可以將現有的Cloud Volumes ONTAP系統移至不同的 Azure 訂閱嗎？
 
 不可以，無法將與您的Cloud Volumes ONTAP系統關聯的 Azure 資源移至其他 Azure 訂閱。
 
 
 
+[[how-do-credentials-work-for-marketplace-deployments-and-on-premises-deployments]]
 === 憑證如何用於市場部署和本地部署？
 
 以上部分描述了控制台代理的建議部署方法，即從控制台部署。您也可以從 Azure 市場在 Azure 中部署控制台代理，並且可以在自己的 Linux 主機上安裝控制台代理軟體。

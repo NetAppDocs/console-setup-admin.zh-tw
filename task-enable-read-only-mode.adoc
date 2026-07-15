@@ -26,6 +26,7 @@ NOTE: 當 NetApp Console 處於私人模式時，唯讀模式無法使用。link
 
 
 
+[[enable-read-only-mode-for-your-console-organization]]
 == 為您的控制台組織啟用唯讀模式
 
 啟用唯讀模式以限制控制台組織的變更。所有用戶仍然可以查看資源。擁有管理員角色的用戶，如果不手動提升權限，則無法在控制台中執行任何操作。

@@ -18,6 +18,7 @@ summary: 當 Console 代理程式具備出站連線能力時，它會自動升�
 
 
 
+[[upgrade-the-console-agent]]
 == 升級控制台代理
 
 升級過程中需要重新啟動 Console 代理程式，因此 NetApp Console 在升級期間將無法使用。
@@ -48,6 +49,7 @@ sudo /path/NetApp-Console-Agent-Offline-<version>
 
 
 
+[[upgrade-a-vcenter-deployed-console-agent-using-an-iso]]
 == 使用 ISO 升級 vCenter 部署的 Console 代理程式
 
 如果您的 Console 代理程式是使用 OVA 在 vCenter 中部署的，您可以透過將 ISO 掛載到 VM 並從 VM 維護主控台執行升級來將其升級到新版本。

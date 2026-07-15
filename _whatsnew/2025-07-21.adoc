@@ -4,12 +4,14 @@
 
 
 
+[[support-for-google-cloud-netapp-volumes]]
 === 支援Google Cloud NetApp Volumes
 
 現在您可以在BlueXP中查看Google Cloud NetApp Volumes 。link:https://docs.netapp.com/us-en//bluexp-google-cloud-netapp-volumes/index.html["了解有關Google Cloud NetApp Volumes 的更多資訊。"]
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXP身分和存取管理 (IAM)
 
 

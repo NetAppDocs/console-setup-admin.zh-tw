@@ -18,6 +18,7 @@ summary: 您可以使用控制台代理維護控制台來驗證控制台代理�
 
 
 
+[[access-the-agent-maintenance-console]]
 == 存取代理維護控制台
 
 您可以從 Console 代理主機存取維護主控台。瀏覽至下列目錄：
@@ -28,6 +29,7 @@ summary: 您可以使用控制台代理維護控制台來驗證控制台代理�
 ----
 
 
+[[config-checker-validate]]
 == 配置檢查器驗證
 
 這 `config-checker validate`此命令可讓您驗證控制台代理的配置。
@@ -36,6 +38,7 @@ link:reference-networking-saas-console.html["了解有關所需網路存取點�
 
 
 
+[[parameters]]
 === 參數
 
 `--services <comma-separated list of services to validate>` - *必需的* -
@@ -68,6 +71,7 @@ NOTE: 在安裝期間、NetApp 會檢查代理主機至少有 80% 的可用磁�
 
 
 
+[[config-checker-validate-examples]]
 === 配置檢查器驗證範例
 
 以下範例包括驗證網路連線、所需連接埠和硬體需求，以及使用 Proxy 伺服器和自訂憑證的不同組合。
@@ -89,6 +93,7 @@ NOTE: 在安裝期間、NetApp 會檢查代理主機至少有 80% 的可用磁�
 ----
 
 
+[[view-help-for-any-command]]
 === 查看任何命令的幫助
 
 若要查看任何命令的協助，請附加 `--help`到命令。例如，要查看 `proxy add`命令，使用以下命令：

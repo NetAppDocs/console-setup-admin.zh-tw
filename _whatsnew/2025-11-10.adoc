@@ -4,6 +4,7 @@
 
 
 
+[[console-agent-4-1-0]]
 === 控制台代理 4.1.0
 
 此版本的控制台代理程式包含安全性改進、錯誤修復以及以下功能：
@@ -18,6 +19,7 @@
 
 
 
+[[netapp-console-administration]]
 === NetApp Console管理
 
 本次發布包含以下內容：

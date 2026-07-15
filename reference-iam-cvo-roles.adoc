@@ -1,0 +1,562 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-cvo-roles.html 
+keywords: cloud volumes ontap, role-based access control, rbac, viewer, operator, admin, access control, permissions, volumes, aggregates, replication, snapshots, ontap upgrade, IAM roles 
+summary: 您可以為使用者指派下列角色，以便他們在控制台中存取 Cloud Volumes ONTAP。Cloud Volumes ONTAP 角色可讓您靈活地為使用者指派特定角色，以滿足他們在組織內需要完成的任務。 
+---
+= NetApp Console 中的 Cloud Volumes ONTAP 存取角色
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以為使用者指派下列角色，以便他們在控制台中存取 Cloud Volumes ONTAP。Cloud Volumes ONTAP 角色可讓您靈活地為使用者指派特定角色，以滿足他們在組織內需要完成的任務。角色分配方式取決於您自身的業務和儲存管理實務。
+
+Cloud Volumes ONTAP 使用下列角色：
+
+* *Cloud Volumes ONTAP admin*：提供對所有 Cloud Volumes ONTAP 操作的完全存取。
+* *Cloud Volumes ONTAP operator*：執行重要的儲存作業，例如探索和管理 Cloud Volumes ONTAP 系統，包括新增磁碟區、集合體、快照和複寫，修改部分組態，以及升級 Cloud Volumes ONTAP 版本。
+* *Cloud Volumes ONTAP 檢視器*：提供對 Cloud Volumes ONTAP 資訊的唯讀存取。此角色無法執行任何主動操作。某些包含組態資訊的索引標籤和畫面可能對檢視器不可用。
+
+
+如需瞭解所有 NetApp Console 存取角色的詳細資訊，請參閱 link:reference-iam-predefined-roles.html["存取角色"]。
+
+
+
+[[how-role-changes-take-effect]]
+== 角色變更如何生效
+
+Cloud Volumes ONTAP 透過使用每個角色指派的本機快取來強制執行角色型存取控制 (RBAC)。快取每小時自動重新整理一次。如果角色為新指派或已變更，變更最多可能需要一小時才能生效。重新整理完成後，主控台將啟用該角色所允許的工作流程。
+
+
+NOTE: 首次部署 Console 代理程式或將現有 Console 代理程式升級至 Console 4.9.0 或更高版本時，Console 會執行一次性初始化過程，將 Cloud Volumes ONTAP 角色指派給組織中的現有使用者。此過程可能需要長達 30 分鐘才能完成。
+
+
+
+[[cloud-volumes-ontap-role-permissions]]
+== Cloud Volumes ONTAP 角色權限
+
+下表列出了每個角色可以執行的操作。
+
+[cols="40a,20a,20a,20a"]
+|===
+| 特徵和動作 | Cloud Volumes ONTAP 檢視器 | Cloud Volumes ONTAP 運算子 | Cloud Volumes ONTAP 管理員 
+
+
+ a| 
+*Systems page*：
+
+
+
+ a| 
+輸入系統
+ a| 
+是的
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+檢視磁碟區
+ a| 
+是的
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+探索系統
+ a| 
+不
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+新增磁碟區
+ a| 
+不
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+使用*複製*（不適用於 FSx for ONTAP 或本機系統）
+ a| 
+不
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+使用拖放功能進行*複製*（以 Cloud Volumes ONTAP 作為來源或目標）
+ a| 
+不
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+新增系統
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+存取*最佳化成本與效能*
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+開啟 System Manager
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+啟用 Cloud Volumes ONTAP
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+移除系統
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+*Agents page*：
+
+
+
+ a| 
+檢視 Cloud Volumes ONTAP 設定
+ a| 
+是的
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+編輯 Cloud Volumes ONTAP 設定
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+*概覽標籤頁*：
+
+
+
+ a| 
+新增磁碟區
+ a| 
+不
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+新增 Aggregate
+ a| 
+不
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+使用 *立即升級*
+ a| 
+不
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+更新 ONTAP 版本
+ a| 
+不
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+從鉛筆選單中編輯 *CIFS 設定*
+ a| 
+不
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+開啟 System Manager
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+使用開 / 關按鈕
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+設定密碼
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+從工作區移除系統
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+刪除系統
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+請使用右側窗格中的鉛筆圖示編輯以下內容：
+
+* *系統標籤*
+* *排程停機時間*
+* *儲存類別*
+* *執行個體類型*
+* *計費方式*
+* *寫入速度*
+* *勒索軟體防護*
+* *支援註冊*
+* *WORM*
+
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+*Volumes 索引標籤*：
+
+
+
+ a| 
+新增磁碟區
+ a| 
+不
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+複製磁碟區
+ a| 
+不
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+建立 Snapshot 複本
+ a| 
+不
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+編輯磁碟區設定
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+刪除磁碟區
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+從 Snapshot 複本還原
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+更改磁碟類型
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+更改分層原則
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+*Aggregates tab*：
+
+
+
+ a| 
+新增 Aggregate
+ a| 
+不
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+新增磁碟區
+ a| 
+不
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+增加容量
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+刪除 Aggregate
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+*複製頁面*（以 Cloud Volumes ONTAP 作為來源或目標）：
+
+
+
+ a| 
+中斷複寫
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+重新同步複寫
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+反向重新同步複寫
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+編輯排程
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+編輯最大傳輸速率
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+更新複寫
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+
+
+ a| 
+刪除複寫
+ a| 
+不
+ a| 
+不
+ a| 
+是的
+
+|===

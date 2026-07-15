@@ -21,6 +21,7 @@ NOTE: 若要在 NetApp Console 中於 https://aws.amazon.com/federal/secret-clou
 
 
 
+[[step-1-understand-how-private-mode-works]]
 == 步驟 1：了解私有模式的運作方式
 
 在私有模式下，您可以在本機或雲端安裝 Console 代理程式，然後使用 NetApp Console 管理您的儲存系統（ONTAP 本機部署和 Cloud Volumes ONTAP）。由於無法連接到 NetApp Console API 端點或 NetApp Console SaaS 應用程式，因此您只能透過 Console 代理程式提供的本機 UI 存取 Console。
@@ -29,6 +30,7 @@ link:concept-modes.html["了解私有模式的運作方式"]。
 
 
 
+[[step-2-review-installation-options]]
 == 第 2 步：查看安裝選項
 
 在私有模式下，您可以透過在自己的 Linux 主機上手動安裝代理程式，將 Console 代理程式安裝在內部部署或雲端。
@@ -37,6 +39,7 @@ link:concept-modes.html["了解私有模式的運作方式"]。
 
 
 
+[[step-3-review-host-requirements]]
 == 第 3 步：查看主機需求
 
 主機必須滿足特定的作業系統需求、RAM 需求、連接埠需求等，才能執行 Console 代理程式。
@@ -134,6 +137,8 @@ Console 代理程式需要這部分空間 `/var`，因為 Docker 或 Podman 的�
 
 
 
+[[step-4-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == 步驟 4：安裝 Podman 或 Docker Engine
 
 您需要透過安裝 Podman 或 Docker Engine 來為 Console 代理程式準備主機。
@@ -321,6 +326,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-5-prepare-networking]]
 == 步驟 5：準備網路
 
 為 Console 代理程式配置網路，使其能夠管理公有雲中的資源。除了為 Console 代理程式配置虛擬網路和子網路之外，還要確保滿足以下要求。
@@ -426,6 +432,7 @@ HTTP (80) 和 HTTPS (443) 提供對 NetApp Console 的存取。如果需要連�
 
 
 
+[[step-6-prepare-cloud-permissions]]
 == 步驟 6：準備雲端權限
 
 如果 Console 代理程式安裝在雲端，且您打算建立 Cloud Volumes ONTAP 系統，NetApp Console 需要雲端提供者的權限。您需要在雲端提供者設定權限，然後在安裝 Console 代理程式後將這些權限與該代理程式執行個體關聯起來。
@@ -732,6 +739,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 ====
 
 
+[[step-7-enable-google-cloud-apis]]
 == 步驟 7：啟用 Google Cloud API
 
 若要在 Google Cloud 中部署 Cloud Volumes ONTAP，您需要啟用多個 API。
