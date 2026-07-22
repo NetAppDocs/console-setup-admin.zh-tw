@@ -382,7 +382,7 @@ NOTE: 4.0.0 版本之前的 Console 代理程式支援不同的端點。如果�
 | 端點 | 目的 
 
 
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com | 在NetApp Console中提供功能和服務。 
+| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | 在NetApp Console中提供功能和服務。 
 
 
 | \ https://cdn.auth0.com \ https://services.cloud.netapp.com | 您的 Web 瀏覽器透過NetApp Console連線到這些端點以進行集中使用者驗證。 
@@ -490,7 +490,7 @@ Azure 環境
 
 
  a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
 在NetApp Console中提供功能和服務。
 

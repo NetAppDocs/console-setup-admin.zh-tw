@@ -111,7 +111,7 @@ NOTE: 您無法使用安裝在本機的 Console 代理程式來管理 Google Clo
 
 
  a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
 在NetApp Console中提供功能和服務。
 

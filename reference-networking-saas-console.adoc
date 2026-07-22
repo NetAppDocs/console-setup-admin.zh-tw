@@ -48,7 +48,7 @@ NOTE: 在 4.0.0 中， NetApp減少了控制台和控制台代理程式所需的
 | \ https://support.netapp.com | 以取得授權資訊並將 AutoSupport 訊息傳送至 NetApp 支援，以及接收 Cloud Volumes ONTAP 的軟體更新。 
 
 
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com | 在NetApp Console中提供功能和服務。 
+| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | 在NetApp Console中提供功能和服務。 
 
 
  a| 

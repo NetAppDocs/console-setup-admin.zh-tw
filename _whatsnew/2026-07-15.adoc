@@ -16,6 +16,8 @@
 [[netapp-console-administration]]
 === NetApp Console管理
 
+NetApp Console 4.9.0 管理包含下列新功能。
+
 .支援 Cloud Volumes ONTAP 的角色型存取控制
 Console 支援 Cloud Volumes ONTAP 的角色型存取控制。
 

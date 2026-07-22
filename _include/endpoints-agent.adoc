@@ -51,7 +51,7 @@
 
 | https://mysupport.netapp.com | 取得授權資訊並將 AutoSupport 訊息傳送至 NetApp 支援。| https://signin.b2c.netapp.com | 更新 NetApp 支援網站（NSS）認證或將新的 NSS 認證新增至 NetApp Console。| https://support.netapp.com | 取得授權資訊並將 AutoSupport 訊息傳送至 NetApp 支援，同時接收 Cloud Volumes ONTAP 的軟體更新。
 
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com | 在 NetApp Console 中提供功能和服務。
+| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | 在 NetApp Console 中提供功能和服務。
 
 [cols="2*"]
 |===
@@ -135,7 +135,7 @@ a| \https://occmclientinfragov.azurecr.us a| 取得 Console 代理程式升級�
 * \ https://netapp-cloud-account.auth0.com
 * \ https://netapp-cloud-account.us.auth0.com
 * \ https://console.netapp.com
-* \https://components.console.netapp.com
+* \https://components.console.bluexp.netapp.com
 * \ https://cdn.auth0.com
 
  a| 
