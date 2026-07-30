@@ -29,9 +29,6 @@ NOTE: 當 NetApp Console 處於私人模式時，無法使用聯邦功能。link
 
 與NetApp支援網站聯合允許使用者使用相同的憑證登入控制台、 Active IQ Digital Advisor和其他相關應用程式。
 
-
-NOTE: 如果您與NetApp支援網站聯合，則您不能與您的企業身分管理提供者聯合。選擇最適合您組織的一種。
-
 .步驟
 . 下載並完成 https://kb.netapp.com/@api/deki/files/98382/NetApp-B2C-Federation-Request-Form-April-2022.docx?revision=1["NetApp聯合申請表"^]。
 . 將表格提交至表格中指定的電子郵件地址。
