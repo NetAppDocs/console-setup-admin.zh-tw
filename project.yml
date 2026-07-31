@@ -44,6 +44,8 @@ sidebar:
         url: "/task-sign-up-saas.html"
       - title: 使用NetApp Console助手
         url: "/task-console-assistant.html"
+      - title: 訂閱NetApp Intelligent Services
+        url: "/task-subscribe-standard-mode.html"
     - title: NetApp Console入門（受限模式）
       entries:
       - title: 受限模式入門工作流程
