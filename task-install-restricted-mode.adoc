@@ -4,7 +4,7 @@ permalink: task-install-restricted-mode.html
 keywords: government region, gov, govcloud, connector, sovereign cloud 
 summary: 以受限模式部署控制台代理，以便您可以在有限的出站連線下使用NetApp Console。首先，安裝控制台代理，透過存取控制台代理上執行的使用者介面來設定控制台，然後提供您先前設定的雲端權限。 
 ---
-= 在限制模式下部署控制台代理
+= 以受限模式部署 NetApp Console 代理程式
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-install-agent-aws-marketplace.html
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, aws marketplace, manual install, create connector 
 summary: 若要從 AWS Marketplace 建立控制台代理，您需要設定網路、準備 AWS 權限、檢視執行個體要求，然後建立控制台代理。 
 ---
-= 從 AWS Marketplace 部署 Console 代理程式
+= 從 AWS Marketplace 部署 NetApp Console 代理程式
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

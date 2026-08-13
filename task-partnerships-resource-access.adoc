@@ -4,7 +4,7 @@ permalink: task-partnerships-resource-access.html
 keywords: role-based access, partnership access, partner resources, resource access, grant access, provide partner access, partnership organization 
 summary: 您可以透過為合作夥伴使用者指派組織內資料夾和專案的特定角色來授予他們存取權限。 
 ---
-= 為合作夥伴用戶提供資源訪問
+= 在 NetApp Console 中為合作夥伴使用者提供資源存取
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

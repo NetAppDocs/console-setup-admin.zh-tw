@@ -4,7 +4,7 @@ permalink: reference-ports-gcp.html
 keywords: ports, firewall rules, http, https, inbound, outbound, connector, agent 
 summary: 代理程式的 Google Cloud 防火牆規則需要同時設定傳入和傳出規則。NetApp Console 在您從 Console 建立 Console 代理程式時，會自動建立此安全性群組。對於其他安裝選項，您需要手動設定此安全性群組。 
 ---
-= Google Cloud 中的控制台代理防火牆規則
+= NetApp Console 代理程式在 Google Cloud 中的防火牆規則
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

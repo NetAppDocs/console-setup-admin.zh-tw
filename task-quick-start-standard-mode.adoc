@@ -4,7 +4,7 @@ permalink: task-quick-start-standard-mode.html
 keywords: quick start, standard mode quick start 
 summary: '要開始使用NetApp Console(SaaS)，請先準備控制台的網絡，註冊並建立帳戶，然後使用NetApp助理設定初始功能。' 
 ---
-= NetApp Console（SaaS 應用程式）入門工作流程
+= 標準模式下 NetApp Console 快速入門
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

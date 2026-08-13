@@ -4,7 +4,7 @@ permalink: task-iam-manage-members-permissions.html
 keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management, federated groups, SSO, access roles, add members, grant permissions 
 summary: 管理組織的成員以提供組織資源層級結構不同層級的權限。 
 ---
-= 將使用者新增至NetApp Console組織
+= 將成員新增至 NetApp Console 組織
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

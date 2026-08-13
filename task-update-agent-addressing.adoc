@@ -4,7 +4,7 @@ permalink: task-update-agent-addressing.html
 keywords: agent ip address, agent uri, change ip address, edit uri, agent network, agent addressing 
 summary: 當網路組態變更時、您可能需要在雲端供應商中更新代理程式的 IP 位址、並在 NetApp Console 中更新其註冊的 URI。 
 ---
-= 更新代理程式定址和 URI
+= 更新 NetApp Console 代理程式位址和 URI
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

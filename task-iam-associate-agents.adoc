@@ -4,7 +4,7 @@ permalink: task-iam-associate-agents.html
 keywords: agent, associate agent, folder, project, associate folder with connector, associate project with connector, associate connector with project, associate connector with resource, connector, associate connector, 
 summary: 如果您組織的成員需要在另一個專案中使用控制台代理，則需要將該控制台代理與對應的專案關聯。 
 ---
-= 將控制台代理程式與其他資料夾和項目關聯
+= 將 NetApp Console 代理程式與其他資料夾和專案建立關聯
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

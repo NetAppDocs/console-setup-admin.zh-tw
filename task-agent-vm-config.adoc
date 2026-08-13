@@ -4,7 +4,7 @@ permalink: task-agent-vm-config.html
 keywords: agent VM, vcenter, esxi, increase cpu, increase ram, vm maintenance, agent maintenance, agent operating system, agent host 
 summary: 在部署 Console 代理程式後，您可以對現有的 vCenter 或 ESXi 主機進行變更。例如，您可以增加託管 Console 代理程式的 VM 執行個體的 CPU 或 RAM。 
 ---
-= 為 Console 代理程式維護 vCenter 或 ESXi 主機
+= 維護 vCenter 或 ESXi 主機以供 NetApp Console 代理程式使用
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

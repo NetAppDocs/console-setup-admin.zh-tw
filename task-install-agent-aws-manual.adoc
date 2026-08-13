@@ -4,7 +4,7 @@ permalink: task-install-agent-aws-manual.html
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, aws marketplace, manual install, create connector 
 summary: 您可以在 AWS 中執行的 Linux 主機上手動安裝控制台代理程式。要在您自己的 Linux 主機上手動安裝控制台代理，您需要查看主機要求、設定網路、準備 AWS 權限、安裝控制台代理，然後提供您準備好的權限。 
 ---
-= 在 AWS 中手動部署 Console 代理程式
+= 在 AWS 中為 NetApp Console 手動部署 Console 代理程式
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

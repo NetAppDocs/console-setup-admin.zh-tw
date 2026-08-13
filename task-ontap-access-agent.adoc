@@ -4,7 +4,7 @@ permalink: task-ontap-access-agent.html
 keywords: administer, credentials, ONTAP, connector, Cloud Volumes ONTAP, on-premises, roles, permissions, console agent, agent 
 summary: 管理員可以設定NetApp Console以提示使用者輸入其ONTAP憑證。 
 ---
-= 強制實施ONTAP Advanced View（ONTAP系統管理員）的ONTAP權限
+= 在 NetApp Console 中強制執行 ONTAP System Manager 的 ONTAP 權限
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

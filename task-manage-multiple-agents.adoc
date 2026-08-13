@@ -4,7 +4,7 @@ permalink: task-manage-multiple-agents.html
 keywords: switch connectors, multiple connectors, disaster recovery, dr, two connectors 
 summary: 如果您的組織使用多個 Console 代理程式，您可以直接從「系統」頁面切換這些 Console 代理程式以查看相關的系統。 
 ---
-= 查看與不同 Console 代理程式相關聯的系統
+= 查看與不同 NetApp Console 代理程式關聯的系統
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-install-agent-azure-manual.html
 keywords: install connector, azure connector installation, azure connector, install connector in azure, manual install 
 summary: 要在您自己的 Linux 主機上手動安裝控制台代理，您需要查看主機要求、設定網路、準備 Azure 權限、安裝控制台代理，然後提供您準備好的權限。 
 ---
-= 在 Azure 中手動安裝控制台代理
+= 在 Azure 中手動安裝 NetApp Console 代理程式
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

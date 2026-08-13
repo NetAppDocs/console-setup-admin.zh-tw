@@ -4,7 +4,7 @@ permalink: task-iam-rename-organization.html
 keywords: rename organization, change organization name, name change, rename, change name, iam, ID, integration, project, organization, API, identity and access management 
 summary: 如果需要，您可以變更NetApp Console組織的名稱。 
 ---
-= 組織和專案 ID
+= 重新命名您的 NetApp Console 組織並取得 ID
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

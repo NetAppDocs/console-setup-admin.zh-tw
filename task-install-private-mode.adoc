@@ -4,7 +4,7 @@ permalink: task-install-private-mode.html
 keywords: install dark site, deploy dark site, install private mode, deploy private mode, install agent dark site, agent dark site, dark site, private mode, no internet 
 summary: 在私有模式下部署 NetApp Console，以便在沒有任何出站連線的情況下使用。首先，安裝 Console 代理程式，透過存取在 Console 代理程式上執行的使用者介面來設定 NetApp Console，然後提供您先前設定的雲端權限。 
 ---
-= 以私有模式部署 Console 代理
+= 以私有模式部署 NetApp Console 代理程式
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -1044,7 +1044,6 @@
   <block id="f4426e4062930abb33465fb5b79b35dc" category="inline-link-macro">設定 Azure 市場部署的權限</block>
   <block id="98faa0bd253708350eda28057b888356" category="list-text"><block ref="98faa0bd253708350eda28057b888356" category="inline-link-macro-rx"></block></block>
   <block id="480c97395bf73b1326ca0221bb84f0ab" category="summary">了解NetApp Console如何使用 Google Cloud 憑證代表您執行操作以及這些憑證如何與市場訂閱相關聯。了解這些詳細資訊有助於您管理一個或多個 Google Cloud 專案的憑證。例如，您可能想要了解與控制台代理 VM 關聯的服務帳戶。</block>
-  <block id="1fd4a2295cad602ba9d73683db88e799" category="doc">了解 Google Cloud 專案和權限</block>
   <block id="7c592b218a390e7d1c8bdbae8fbc794a" category="section-title">NetApp Console的專案和權限</block>
   <block id="077f81b3516261855bf075d3615cf476" category="paragraph">您必須先部署控制台代理，然後才能使用控制台管理 Google Cloud 專案中的資源。代理程式不能在您的場所或不同的雲端提供者中運作。</block>
   <block id="376a095d3a95abfb749fc8cc50f95d32" category="paragraph">直接從控制台部署控制台代理程式之前，必須具備兩組權限：</block>
@@ -1084,7 +1083,6 @@
   <block id="1668ca1bd914c1d847f23b491319ac91" category="list-text">微軟 Azure</block>
   <block id="09e422c729719f602773531e14c7fdcb" category="inline-link-macro">了解NetApp Console部署模式</block>
   <block id="84d8c031ecac07457c33d38260f22d91" category="summary">身份聯合支援透過NetApp Console進行單一登錄，以便使用者可以使用來自您公司身分的憑證登入。首先，查看設定過程。</block>
-  <block id="85e8937e28c11ae3f77c65c98e77836f" category="doc">使用NetApp Console的身份聯合實作單一登入</block>
   <block id="3799cba2b024e60d963d2e86eaf51655" category="paragraph">單一登入（聯合）允許使用者使用其公司憑證登入NetApp Console，從而簡化了登入流程並增強了安全性。您可以使用身分識別提供者 (IdP) 或NetApp支援網站啟用單一登入 (SSO)。</block>
   <block id="c4173993f088503294e79bbbe0bb63d6" category="paragraph-title">所需角色</block>
   <block id="4610064cac3ad84114cc400649031071" category="paragraph">組織管理員、聯盟管理員、聯盟檢視器。<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
@@ -1133,7 +1131,6 @@
   <block id="a97fa38afe9727184ada1ed0c4bf8cbf" category="list-text"><block ref="a97fa38afe9727184ada1ed0c4bf8cbf" category="inline-link-macro-rx"></block></block>
   <block id="d0be151a63fab72d6333774c4ad643bb" category="inline-link">了解NetApp Console IAM 的 API</block>
   <block id="d7726716920c51dac9e8d3b944fb1d9c" category="list-text"><block ref="d7726716920c51dac9e8d3b944fb1d9c" category="inline-link-rx"></block></block>
-  <block id="2dd5916ed68f963e9c5529d69a4de5fa" category="inline-link-macro">從 Azure 市集建立控制台代理</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="section-title">概況</block>
   <block id="579f2ccfa8f6ecb1be46c191e6f51980" category="paragraph">每種部署模式在出站連線、位置、安裝、驗證、資料服務和收費方法方面有所不同。</block>
   <block id="93cba07454f06a4a960172bbd6e2a435" category="cell">是的</block>
@@ -1324,8 +1321,6 @@
   <block id="0f50cd1079cb24de2b4571c09546a2e1" category="list-text">設定 RHEL 8 或 9 主機。</block>
   <block id="8c9215e1b963f63a463d468347c9cc12" category="list-text">安裝一個_新_代理。</block>
   <block id="b8bb8aa40b62692dd726a6effbbb7c2a" category="list-text">配置代理以發現先前代理所管理的系統。</block>
-  <block id="49b6ed50435718c0a1e9c1c394702ab8" category="inline-link">在 Azure 中手動安裝控制台代理</block>
-  <block id="6df5369b59a40f64ce1869a0d4d405ea" category="inline-link">準備在受限模式下部署</block>
   <block id="cdb83aacf48e960662fcf2d6745e5b60" category="paragraph">部署新的控制台代理程式後，請參閱以下頁面以重新發現您的系統。</block>
   <block id="6c0fb6078ec778ca2319e375a19e994b" category="inline-link">新增現有的Cloud Volumes ONTAP系統</block>
   <block id="2015c83409a6e7dfc23533375c5ae10e" category="list-text"><block ref="2015c83409a6e7dfc23533375c5ae10e" category="inline-link-rx"></block></block>
@@ -2750,7 +2745,6 @@
   <block id="bef219d35a4468480b0ce759221cdceb" category="inline-link">NetApp Backup and Recovery文檔</block>
   <block id="bfb708a7900e1a2a8e29ed4f45dba55a" category="list-text">選擇“*檢視*”前往NetApp Backup and Recovery儀表板。有關詳細信息，請參閱<block ref="301caaf79db1fedee96dc10f2b708970" category="inline-link-rx"></block>。</block>
   <block id="ef115e8ed0d2118ec4e8fc147ad0a789" category="summary">與您的 Active Directory 聯合驗證服務 (AD FS) 聯合，為NetApp Console啟用單一登入 (SSO)。這允許用戶使用他們的公司憑證登入。</block>
-  <block id="03ce0a75253f028c7b59d2e045c61730" category="doc">將NetApp Console與 Active Directory 聯合服務 (AD FS) 聯合起來</block>
   <block id="df279c297fab55d5f1c2bb16edd8b9c8" category="paragraph">將您的 Active Directory 聯合驗證服務 (AD FS) 與NetApp Console聯合起來，以便為NetApp Console啟用單一登入 (SSO)。這允許用戶使用他們的公司憑證登入控制台。</block>
   <block id="7697b2ab15ca139caf17dcfd778734aa" category="admonition">您可以與您的企業 IdP 或NetApp支援網站聯合。  NetApp建議選擇其中一個，但不要同時選擇兩者。</block>
   <block id="0ceb64d3b73da84590b905906ce76e4b" category="paragraph">NetApp僅支援服務供應商發起的（SP發起的） SSO。首先，配置身分提供者以信任NetApp Console作為服務提供者。然後，使用您的身分提供者的配置在控制台中建立連線。</block>
@@ -2845,7 +2839,6 @@
   <block id="000363e005ffe3ed85bd5a9afcd86fe5" category="list-text">輸入您的 SAML 伺服器的 *登入 URL*。</block>
   <block id="0b1478ffaa7b17ef2974ea6fa7e943fc" category="list-text">上傳從 SAML 提供者伺服器下載的 X.509 憑證。</block>
   <block id="4c45e77f7b0ce71e19ecb19d6d1452ef" category="list-text">或者，輸入您的 SAML 伺服器的 *退出 URL*。</block>
-  <block id="33c125c7f86d4e57eda2158c5fc47107" category="doc">驗證聯合連線的電子郵件網域</block>
   <block id="601af67b0c46251e3baef68bebb8dac6" category="paragraph">驗證您的網域名稱涉及向您的網域的 DNS 設定新增 TXT 記錄。此記錄用於證明您擁有該網域並允許NetApp Console信任該網域進行聯合。您可能需要與您的 IT 或網路管理員協調來完成此步驟。</block>
   <block id="8765b22079c54d8e9c1fc15493061acf" category="list-text">選擇*驗證網域所有權*。</block>
   <block id="c25e56883d4bdfca8faf4c90b860e03c" category="list-text">輸入您要驗證的網域並選擇*繼續*。</block>
@@ -3105,7 +3098,6 @@
   <block id="c306ee8c9a73ec380cad93ec32b64af3" category="inline-link-macro">了解身分和存取管理</block>
   <block id="374de56592e527dd57d0a643704cfd56" category="list-text"><block ref="374de56592e527dd57d0a643704cfd56" category="inline-link-macro-rx"></block></block>
   <block id="f5c5f2c4e09a3be34c769b9a476a5774" category="summary">您可能屬於多個控制台組織，或有權存取組織內的多個專案或代理程式。需要時，您可以輕鬆地在組織、專案和控制台代理之間切換，以存取與該組織、專案或代理相關的資源。</block>
-  <block id="563e9d605dde4e125a815a2688ed1349" category="doc">在控制台組織、專案和代理之間切換</block>
   <block id="99b40e7c0a7b505819ce6f7bdb86dc3a" category="inline-link">了解如何建立新組織</block>
   <block id="4e24f9490df0b4af6b4e7bceaa6097a1" category="admonition">如果其他組織邀請您加入或您自己創建一個組織，那麼您可能屬於多個組織。您可以使用 API 建立其他組織。<block ref="54dc9fecd403ebe4164f0404ec85af49" category="inline-link-rx"></block></block>
   <block id="f2fd478a05acdd29af1bbc7530937c70" category="section-title">在組織之間切換</block>
@@ -3494,7 +3486,6 @@
   <block id="945a1013347d84bac0a2f13069240dcf" category="section-title">向NetApp Console提供雲端提供者憑證</block>
   <block id="6f7b4a56a4b8f79564d165736a5096b0" category="paragraph">控制台代理現在具有代表您在 Azure 中執行操作所需的權限。您現在可以前往<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block>開始使用控制台代理。</block>
   <block id="c04c3f6d982e47513e123d1910d6ae44" category="summary">以受限模式部署控制台代理，以便您可以在有限的出站連線下使用NetApp Console。首先，安裝控制台代理，透過存取控制台代理上執行的使用者介面來設定控制台，然後提供您先前設定的雲端權限。</block>
-  <block id="303476906522e5d486b216ab83eaeedd" category="doc">在限制模式下部署控制台代理</block>
   <block id="de90cba5dde27120301771defb68e4cf" category="section-title">步驟 1：安裝控制台代理</block>
   <block id="b0c7ebf873e1c5dbc2ac5f8581849a8f" category="paragraph">從雲端提供者的市場安裝控制台代理程式或在 Linux 主機上手動安裝。</block>
   <block id="5cadd29a69b0be5bc8b482cfc2e89adb" category="open-title">AWS 商業市場</block>
@@ -3559,7 +3550,6 @@
   <block id="201a0e8a9a7e1b007b99b4e4c24c017d" category="open-title">Azure 服務主體</block>
   <block id="3612e0e7a44ec38da1e226c618526f91" category="open-title">Google Cloud 服務帳號</block>
   <block id="a87080733aad453c529e801cc597efff" category="summary">在受限模式下使用NetApp Console時，安裝 CA 簽署的憑證以便使用者存取基於 Web 的控制台。</block>
-  <block id="76b215b1722d5e63e6379d518b352edf" category="doc">安裝 CA 簽署的憑證以進行基於 Web 的控制台訪問</block>
   <block id="556126dcddabe484c3c96e299b816797" category="paragraph">如果您的業務需要，您可以安裝由憑證授權單位 (CA) 簽署的證書，它比自簽名憑證提供更好的安全保護。安裝憑證後，當使用者存取基於 Web 的控制台時，控制台將使用 CA 簽署的憑證。</block>
   <block id="c49ff7d7009f9d4727b2b25afa496418" category="section-title">安裝 HTTPS 憑證</block>
   <block id="9bcd9cfa6027fc6f3b81733b086a6895" category="paragraph">安裝由 CA 簽署的證書，以便安全地存取在控制台代理上執行的基於 Web 的控制台。</block>
@@ -3744,7 +3734,6 @@
   <block id="5e56842d0cfbf695522e945a01570eba" category="paragraph"><block ref="5e56842d0cfbf695522e945a01570eba" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b927ec68e94ddd9ff004ca54d69e94fa" category="list-text">輸入姓名、電子郵件地址，選擇收件者將收到的通知類型，然後選擇*新增收件者*。</block>
   <block id="b9344ef100a1e97ec28eecfcb56cd218" category="summary">管理員可以設定NetApp Console以提示使用者輸入其ONTAP憑證。</block>
-  <block id="29f68982771966bddc72b7dbd3b2f3d3" category="doc">強制實施ONTAP Advanced View（ONTAP系統管理員）的ONTAP權限</block>
   <block id="e307b6972a9cf99c3bba532457962378" category="paragraph">預設情況下，控制台代理程式憑證允許使用者存取進階視圖（ONTAP系統管理員）。您可以提示使用者輸入他們的ONTAP憑證。這可確保使用者在Cloud Volumes ONTAP和ONTAP本地叢集中使用ONTAP叢集時套用其ONTAP權限。</block>
   <block id="b54cdbc045124058723635c19f005757" category="admonition">您必須具有組織管理員角色才能編輯控制台代理設定。</block>
   <block id="79200641e6b3df738c3bda6a52fd51c1" category="list-text">展開*強制憑證*選項。</block>
@@ -3790,7 +3779,6 @@
   <block id="99c3e344f722dbf678cb3601f36deb14" category="paragraph">合夥管理人。<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
   <block id="c4949ad54642393ff8344ba3f6da6464" category="list-text">導航至您想要停用的已啟動合作關係並選擇<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>然後選擇*停用*。</block>
   <block id="3348041ee2a90208493612a853334377" category="summary">您可以透過為合作夥伴使用者指派組織內資料夾和專案的特定角色來授予他們存取權限。</block>
-  <block id="68c15daf4d80dc90b1515f522d8636c3" category="doc">為合作夥伴用戶提供資源訪問</block>
   <block id="2cd5a9993ca615ce23cf513d45b15404" category="inline-link-macro">了解如何在合作關係中加入成員。</block>
   <block id="4e6fd6febc63e73f33b1e12bb15eab7a" category="paragraph">合作夥伴組織必須先將成員加入合作關係中，然後您才能為他們指派組織中資源的角色。<block ref="af42bf104f841b0c4c7b71f12b6693d9" category="inline-link-macro-rx"></block></block>
   <block id="575c38cd2c5990295bb75895f260de3b" category="section-title">了解合作夥伴使用者的角色</block>
@@ -3812,7 +3800,6 @@
   <block id="cc6d53ade5033c714686efe2af67ddb4" category="section-title">更改或刪除合作夥伴使用者的角色</block>
   <block id="ccfd182116bd6f5ace157605044761a6" category="paragraph">您可以變更或刪除指派給合作夥伴組織成員的角色。</block>
   <block id="2f8da3599342d03781c72c8335767fac" category="summary">一旦您在合作夥伴組織中被賦予角色，您就可以切換到該組織並執行您有權執行的操作。</block>
-  <block id="9ea5245dac08790e720ee1ae8af1a1d0" category="doc">在合作組織工作</block>
   <block id="edb0cfdfffd82f86f6584b60a8fd064b" category="inline-link-macro">了解有關切換組織和專案的更多資訊。</block>
   <block id="675b0f70d6df5486c85561212eda9044" category="paragraph">使用組織選單在您的組織和您有權存取的任何合作夥伴組織之間切換。<block ref="21d2fc8d574c57ca1518f48a1f4e15fc" category="inline-link-macro-rx"></block></block>
   <block id="05b4cd19be99dcfde493798bb42dc7a5" category="paragraph">您將能夠看到合作夥伴組織中與您共享的資源，並根據分配給您的角色執行操作。與您的合作夥伴管理員合作，確保您擁有需要存取的資源的適當角色。</block>
@@ -3942,7 +3929,6 @@
   <block id="422588021a93cfdaa26ce8d7d46dfeda" category="list-text">檢查您的收件箱，尋找來自NetApp的電子郵件，其中包含驗證您的電子郵件地址的說明。</block>
   <block id="16a6acfaa9478d613f4568fcc7f798b9" category="list-text">選擇*讓我們開始吧*。</block>
   <block id="003a29a0c94cdfca33812dab6ad6ae71" category="summary">從您的雲端供應商市場訂閱NetApp Intelligent Services，以按小時費率或透過年度合約支付NetApp資料服務費用。如果您從NetApp購買了許可證，您還需要訂閱市場產品。您的許可證始終會先被收費，但如果您超出許可容量或許可證期限到期，則會按小時費率向您收費。</block>
-  <block id="9c127a433a6192892f397a5a7e6dcb5a" category="doc">訂閱NetApp Intelligent Services（受限模式）</block>
   <block id="01d7bfce3883bfe219db559f4111d0eb" category="paragraph">市場訂閱支援以受限模式對以下數據服務收費：</block>
   <block id="53408e4899de894c1e6bc5c8f7add2d4" category="paragraph">NetApp Data Classification可透過您的訂閱啟用，但使用分類是免費的。</block>
   <block id="53043f0a6d597ccfe179296cc8ded9c0" category="inline-link">管理Cloud Volumes ONTAP 的BYOL 基於容量的許可證</block>
@@ -3956,7 +3942,6 @@
   <block id="27194bd802f46de78e530dc59824e89c" category="inline-link">管理 Google Cloud 憑證和訂閱</block>
   <block id="75972953c10b83c7556004bbdcab6786" category="list-text"><block ref="75972953c10b83c7556004bbdcab6786" category="inline-link-rx"></block></block>
   <block id="b037533a0c1bd52a8d9de28034d4b20d" category="summary">從您的雲端供應商市場訂閱NetApp資料服務，按小時費率或透過年度合約支付資料服務費用。如果您從NetApp購買了許可證，您還需要訂閱市場產品。您的許可證始終會先被收費，但如果您超出許可容量或許可證期限到期，則會按小時費率向您收費。</block>
-  <block id="8e43404d530acd19487776c0f28649ea" category="doc">訂閱NetApp Intelligent Services（標準模式）</block>
   <block id="42dacd60cd3485508aefb9e0fa6699f9" category="paragraph">透過市場訂閱可以對以下NetApp數據服務收費：</block>
   <block id="6269943bbab503c57445a47b04897eaa" category="summary">在向NetApp技術支援部門提交支援案例之前，您需要將NetApp支援網站帳戶新增至NetApp Console，然後註冊以取得支援。</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">註冊以獲得支持</block>
@@ -4079,7 +4064,6 @@
   <block id="784d74ec26e151955a4c9657042f8469" category="section-title">從NetApp知識庫取得協助</block>
   <block id="d22ff119563c0ee5fe8dab4228074cee" category="inline-link">查看NetApp支援團隊所建立的故障排除訊息</block>
   <block id="50442864bbf7126b7b62b75cde676ded" category="paragraph"><block ref="bb2a765d0923866ecd647a5c8b0cc5e9" category="inline-link-rx"></block> 。</block>
-  <block id="afb829361695f0d21025a9396659859f" category="doc">解除安裝並刪除控制台代理</block>
   <block id="bfc66ba3b81dc2d9cc21215e84660492" category="paragraph">如果您使用的是標準模式或受限模式（換句話說，代理主機具有出站連線），那麼您應該按照下列步驟卸載代理程式。</block>
   <block id="0f698c82e2e9c5cd1c4ae5eca5c6d189" category="list-text">連接到代理程式的 Linux VM。</block>
   <block id="6a5be3e06b444aea04beccda3bc9e1d6" category="list-text">從 Linux 主機執行卸載腳本：</block>
@@ -4130,7 +4114,6 @@
   <block id="16068479a2701e2f4cc03e6c5d4a2304" category="section-title">配置暗黑模式（暗黑主題）</block>
   <block id="028c8274cfa01e62e5591b427f85e126" category="paragraph">您可以將控制台設定為以暗模式顯示。</block>
   <block id="a99608db4d85374403174f1119cac088" category="list-text">移動*黑暗主題*滑桿以啟用它。</block>
-  <block id="490414e0366b091220802d406e52c076" category="doc">什麼是新的</block>
   <block id="3243765239f2c6f00af00297914a69d4" category="paragraph">了解NetApp Console管理功能的新增功能：身分識別和存取管理 (IAM)、控制台代理程式、雲端提供者憑證等。</block>
   <block id="b9d888f58b09c4007db0247286e392b5" category="section-title">2025年8月11日</block>
   <block id="328e39c031d3f6a77403904d6dda2377" category="section-title">2025年7月31日</block>
@@ -4858,7 +4841,6 @@
   <block id="c3705e839d1a8df80ae158824bd08448" category="cell">首頁儀錶板指標</block>
   <block id="3863a60fc30916ec3597541037025585" category="cell">*可用資料服務*：</block>
   <block id="9ea7157b38fa199a8532fa65cd92d096" category="summary">使用基於角色的存取控制 (RBAC) 管理使用者對NetApp Console的訪問，在組織、資料夾或專案層級指派預先定義角色。每個角色都授予特定的權限，定義使用者在其指派的權限範圍內可以執行哪些操作。</block>
-  <block id="6369e7866450cfbd1595f3b5f17a45ce" category="doc">了解NetApp Console基於角色的存取控制 (RBAC)</block>
   <block id="17b936d2e4829a5cf778b2c29100bb7a" category="paragraph">例如，您可以為特定專案層級的成員指派勒索軟體復原管理員角色，允許他們對該專案內的資源執行勒索軟體復原操作，而無需授予他們對整個組織的更廣泛存取權限。同一使用者可以被授予組織內多個專案的角色。</block>
   <block id="9b372111c3284b1c413c38133ce241b7" category="paragraph">您可以根據使用者的職責，為相同範圍或不同範圍的使用者指派多個角色。例如，規模較小的組織可能會讓同一用戶在組織層級管理勒索軟體復原和備份與復原任務，而規模較大的組織可能會在專案層級為每個角色分配不同的使用者。</block>
   <block id="0455998a9b4d48dfc90712f125c02594" category="section-title">控制台組織成員的類型</block>
@@ -5057,7 +5039,6 @@
   <block id="46bc8a32811e038789b16b3be4c304b0" category="list-text">當聯合使用者從您的身分提供者 (IdP) 中移除時，他們將自動失去對NetApp Console的存取權限。但您仍然應該將它們從您的控制台組織中刪除，以保持您的成員清單是最新的。</block>
   <block id="2a331f65a945f71cf576d7408c911549" category="list-text">如果您從身分提供者 (IdP) 中的聯合群組中移除用戶，他們將失去與該群組關聯的控制台存取權限。但是，他們仍然保留在控制台中分配給他們的明確角色所關聯的任何存取權限。</block>
   <block id="741fa1d97e274d87522c5274731ddbd6" category="paragraph">如果您沒有任何合作夥伴組織，則不會顯示「合作夥伴」標籤。</block>
-  <block id="a6e7e6949d9cfe21acbeb52c1329d758" category="doc">使用者安全</block>
   <block id="1ec1065d3e78d7c206f0ecaef991aaf0" category="paragraph">透過管理成員安全設置，確保使用者對NetApp Console組織的存取權限。您可以重設使用者密碼、管理多因素身份驗證 (MFA) 以及重新建立服務帳戶憑證。</block>
   <block id="fea697c6ae1d0da74f0ba44be3fc0d3f" category="section-title">重設使用者密碼（僅限本地用戶）</block>
   <block id="3330914a79300c6835bbe3bc86cf9c45" category="paragraph">組織管理員無法重設本機使用者的使用者密碼。但是，他們可以指導用戶重置自己的密碼。</block>
@@ -5400,7 +5381,6 @@
   <block id="b04b058acf83e4616c9312ab2b951050" category="paragraph">請注意，部分服務可能有功能限制。有關這些服務在受限模式和私有模式下的支援詳情，請參閱以上章節。</block>
   <block id="68a27766c88e7a46b8cf75f317897c53" category="cell">儲存和資料服務的儀表板指標</block>
   <block id="caa439279d19ace285e22f87f479e876" category="summary">NetApp Console 可協助您管理和保護所有雲端和本機系統中的資料。它包含各種工具，可確保您的資料安全可靠地運作。</block>
-  <block id="166d58641d71e8f7701618924f6e0230" category="doc">NetApp Console 統一儲存管理</block>
   <block id="aa14ca2be3c293532f200bf7d16ab2fa" category="paragraph">您可以將 Console 當作軟體即服務 (SaaS) 應用程式使用，也可以將其安裝在雲端或本機環境中（受限模式或私有模式）。每種模式支援不同的功能集和安全要求。</block>
   <block id="45449898e6eb917b44e1e32f0b89ba76" category="paragraph">NetApp Console 可與您部署在環境中的 Console 代理程式搭配使用，以管理資源並協調本地和雲端環境中的流程。</block>
   <block id="272b65faa175970c4d03415b57d4f80f" category="section-title">選擇如何存取 NetApp Console</block>
@@ -5460,7 +5440,6 @@
   <block id="2b4ee5a3ed1d0d51275a5e7bbd3c9ecf" category="paragraph">設定 IAM 角色，使 NetApp Console 軟體即服務（SaaS）應用程式能夠承擔該角色。</block>
   <block id="3a18e641c4904b34adaf167885cce158" category="admonition">當 NetApp Console 處於私人模式時，唯讀模式無法使用。<block ref="dfc550bfde7e455e24c09c75b6f9a3cd" category="inline-link-macro-rx"></block>。</block>
   <block id="e6de9ba283a3b88438bc9364ca14a865" category="summary">在私有模式下部署 NetApp Console，以便在沒有任何出站連線的情況下使用。首先，安裝 Console 代理程式，透過存取在 Console 代理程式上執行的使用者介面來設定 NetApp Console，然後提供您先前設定的雲端權限。</block>
-  <block id="ed49d41012410c35755a665e704c51a3" category="doc">以私有模式部署 Console 代理</block>
   <block id="b3d73a3e909120ba0dfb51cbe2327967" category="paragraph">從 NetApp Support Site 下載產品安裝程式，然後手動將 Console 安裝到您自己的 Linux 主機上。</block>
   <block id="c73db6dd4dc3a461773070693cc406c6" category="paragraph">若要在<block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block>或<block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block>中使用 NetApp Console ，則應按照單獨的說明在這些環境中開始使用。<block ref="7305ccb1d247c4e62b18170abee468ff" category="inline-link-rx"></block></block>
   <block id="1c88387d9be2a13f9b45fd276e63cf80" category="list-text">安裝 Console 代理程式需要 root 權限。</block>
@@ -5490,7 +5469,6 @@
   <block id="ab4fc3f68e8f23b6d532eb446e1e0a46" category="list-text">根據與您登入相關的驗證方法，系統會提示您輸入憑證。</block>
   <block id="3bcc313e589d80f58afe7da826230bf9" category="list-text">如果您的管理員已為您的組織設定身分聯合，則為聯合連線</block>
   <block id="b4256d874b9eb9321ae2b4a02d8b30c0" category="summary">在部署 NetApp Console 為私有模式之前，請先準備您的環境。您需要檢查主機需求、準備網路、設定權限等。</block>
-  <block id="5f1067df496bfafd5eb793369b955e41" category="doc">準備以私有模式部署</block>
   <block id="984490bee63453d441c7b37cdc6c3db7" category="admonition">若要在 NetApp Console 中於<block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block> 或<block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block> 使用，請依照這些環境的特定指示操作。<block ref="4d25824b3e9e7473eac5e4c3e5c39cc3" category="inline-link-rx"></block></block>
   <block id="7670b3e7fd0d9b5404a8ab86daf87444" category="section-title">步驟 1：了解私有模式的運作方式</block>
   <block id="0c154543ae4407489c65103d2af0bf29" category="paragraph">在私有模式下，您可以在本機或雲端安裝 Console 代理程式，然後使用 NetApp Console 管理您的儲存系統（ONTAP 本機部署和 Cloud Volumes ONTAP）。由於無法連接到 NetApp Console API 端點或 NetApp Console SaaS 應用程式，因此您只能透過 Console 代理程式提供的本機 UI 存取 Console。</block>
@@ -5520,7 +5498,6 @@
   <block id="fb743a256e003636e11c6a09e6f9f45c" category="paragraph">若要在 Google Cloud 中部署 Cloud Volumes ONTAP，您需要啟用多個 API。</block>
   <block id="c5b5e04334ad1c3a88fc36eb4c450924" category="paragraph">請使用已安裝的 NetApp Console 代理程式在本機提供的基於瀏覽器的介面。您無法透過 SaaS 應用程式提供的基於 Web 的主控台存取 NetApp Console。</block>
   <block id="482b4f20ae8169fa9067887ee7c6f373" category="summary">私有模式通常用於沒有網際網路連線的內部部署環境以及安全的雲端區域，包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。</block>
-  <block id="97159ba233bb02feaff6b3c2be05c879" category="doc">在私有模式下使用 NetApp Console 的入門工作流程</block>
   <block id="86324dc19986cf024d27996fe0699e06" category="list-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="0be36da6d7a1ea4d94468b72475c7e35" category="inline-link-macro-rx"></block></block>
   <block id="8cb1247d6f1cd796c983b5b1cfbbd285" category="list-text">設定可存取目標網路的網路。</block>
   <block id="8b08d043834b2ce6cdd1276030f09b82" category="list-text">對於雲端部署，請在雲端供應商中設定權限，以便在安裝軟體後將這些權限與 Console 代理程式建立關聯。</block>
@@ -5528,8 +5505,6 @@
   <block id="43290dee15998094cd0591ca540849fc" category="list-text">在您自己的 Linux 主機上安裝 Console 代理程式。</block>
   <block id="a5d18b4d32134c035ee19835845fb372" category="list-text">開啟網頁瀏覽器並輸入 Linux 主機的 IP 位址，即可設定 NetApp Console。</block>
   <block id="f5320dd227fd2915c76475559e91c231" category="list-text">對於雲端部署，請向 NetApp Console 提供您先前設定的權限。</block>
-  <block id="48c1fdc6148c4c5d5073b6e7a5d44800" category="doc">在受限模式下開始使用 NetApp Console 的工作流程</block>
-  <block id="91edb8869565e8b84d0bb89e65038d3a" category="doc">NetApp Console（SaaS 應用程式）入門工作流程</block>
   <block id="f98e75fe997bc0f9c22b78c53cbde10d" category="section-title">當代理程式具有出站連線能力時，請將其解除安裝</block>
   <block id="8df5c96bcf4a5bf3cdde9f1422196766" category="section-title">當代理程式沒有出站連線時、請卸載該代理程式</block>
   <block id="37ad32ae84be5d4772583f6e7502b281" category="paragraph">如果您的代理程式沒有出站連線（例如，在私有模式下），則必須手動從主機中移除代理軟體。</block>
@@ -5716,7 +5691,6 @@
   <block id="80f48611c1bef55d72d46a64fc380278" category="listing-title">網路連線能力和硬體需求的驗證：</block>
   <block id="de69e8633d4ddcf1beb6e9af84080384" category="doc">用於 NetApp Console 中 Console agent 的透明代理指令</block>
   <block id="39442b581cc52635af9cf2e5d2fe3673" category="doc">在 NetApp Console 中的營運支援分析師存取角色</block>
-  <block id="dce3cf2abadb3552176d2f6b8851afa8" category="doc">NetApp Console 3.9.55 及更早版本的網路存取</block>
   <block id="242449bfa8c5aeec893a23b37cc87d38" category="doc">NetApp Console 的網路存取</block>
   <block id="4d819fcab6255dc911eb706563c786c6" category="doc">用於 NetApp Console agent 的 AWS 權限</block>
   <block id="191d01a2e791f9226fdfc683126f30ab" category="doc">用於 NetApp Console 代理程式的 Azure 權限</block>
@@ -5739,9 +5713,7 @@
   <block id="5ac9b947c65653cf6d02fe3c59e7fa2f" category="summary">您可以直接從 NetApp Console 在 AWS 部署 Console 代理程式。在從 Console 於 AWS 部署 Console 代理程式之前，您需要設定網路並準備 AWS 權限。</block>
   <block id="dc06977a17baa1d2ac30423086ded05e" category="doc">從 NetApp Console 在 AWS 部署 Console agent</block>
   <block id="21bc24ad9112fe84642a352511c8c896" category="paragraph">在 AWS 中部署代理程式會在您選擇的 VPC 中啟動一個執行 Linux 和 Console 代理軟體的 EC2 執行個體。</block>
-  <block id="13cc9918631bd12add35c3badfe98a74" category="doc">在 AWS 中手動部署 Console 代理程式</block>
   <block id="3f0527499a34df287448340f6ef53274" category="paragraph">您可以在 AWS 中執行的 Linux 主機上手動部署 Console 代理程式。若要在您自己的 Linux 主機上手動部署 Console 代理程式，您需要檢閱主機需求、設定網路、準備 AWS 權限、部署 Console 代理程式，然後提供您準備好的權限。</block>
-  <block id="ae156547be858d5da6a6ad874dab7c9e" category="doc">從 AWS Marketplace 部署 Console 代理程式</block>
   <block id="1117dd42210c4bae3fbd14a0d5fbfb90" category="paragraph">您可以直接從 AWS Marketplace 在 AWS 中部署 Console 代理程式。若要從 AWS Marketplace 部署 Console 代理程式，您需要設定網路、準備 AWS 權限、檢視執行個體要求，然後部署 Console 代理程式。</block>
   <block id="8803623e8c34d1e3b06ab16ac0799483" category="doc">從 NetApp Console 在 Azure 部署 Console agent</block>
   <block id="34032c9a096e8efc23a3a259c8c09ac9" category="paragraph">若要從 NetApp Console 在 Azure 中部署 Console 代理程式，您需要設定網路、準備 Azure 權限，然後部署 Console 代理程式。</block>
@@ -5750,13 +5722,10 @@
   <block id="e9e3d2e696d0041aedbee33492e5bb65" category="doc">從 NetApp Console 在 Google Cloud 部署 Console agent</block>
   <block id="76755ec08e48ddd18aa09eb792dccf25" category="paragraph">您可以從 Console 在 Google Cloud 中部署 Console 代理程式。您需要設定網路、準備 Google Cloud 權限、啟用 Google Cloud API，然後部署 Console 代理程式。</block>
   <block id="921f27265f15374a9fe7782b3f1e4497" category="paragraph">在 Google Cloud 中部署代理程式會在您選擇的 VPC 中啟動一個執行 Linux 和 NetApp Console 代理軟體的 VM 執行個體。</block>
-  <block id="1956f48ec510aa9e9aaa1693a61d862a" category="doc">從 Google Cloud 部署 Console 代理程式</block>
   <block id="269f4bb9794c23a34082aab4e7846b08" category="paragraph">若要使用 Google Cloud 在 Google Cloud 中部署 Console 代理程式，您需要設定網路、準備 Google Cloud 權限、啟用 Google Cloud API，然後部署 Console 代理程式。</block>
-  <block id="f03765e7c67cd3e0afdcbb02e2df97ae" category="doc">在 Google Cloud 中手動部署 Console 代理程式</block>
   <block id="4cf3aefb03cce74960230022eaa4e100" category="paragraph">若要在您自己的 Linux 主機上手動部署 Console 代理程式，您需要檢閱主機需求、設定網路、準備 Google Cloud 權限、啟用 Google Cloud API、安裝 Console，然後提供您準備好的權限。</block>
   <block id="c55edff269043bf525a954a4154ec0a3" category="list-text">如果您的環境需要，請將自簽名憑證上傳到受信任憑證清單中。安裝完成後，您需要替換此憑證。</block>
   <block id="e8e9fe3b3946d0efef2689d6b175ac89" category="summary">在內部部署 Console 代理程式，然後登入並進行設定，使其與您的 Console 組織協同工作。</block>
-  <block id="6bdefeb27ef2009862c6af73ba4aa4f9" category="doc">維護手動安裝的 Console 代理程式的 VM</block>
   <block id="9845a65d039380c03d0798dc8b86888f" category="paragraph">手動安裝 Console 代理程式時，維護代理主機上的作業系統是您（客戶）的責任。例如，您（客戶）應依照公司標準的作業系統分發流程，為代理主機上的作業系統套用安全性更新。</block>
   <block id="55775d5f288008be574f12b89a4bfa2f" category="section-title">將作業系統更新套用至代理程式主機</block>
   <block id="3ce4474c24a93038aca82b41eaebbafa" category="paragraph">為了保持與支援組態的相容性、您應該防止 Docker 或 Podman 在例行作業系統修補期間升級。您可以在更新期間暫時排除 Docker 或 Podman 、或永久設定套件管理程式以跳過 Docker 或 Podman 更新、來執行此作業。</block>
@@ -5889,7 +5858,6 @@
   <block id="fb1591c260dca92b4b768bb1b983b2f0" category="list-text">*防火牆原則*：選擇是要建立新的防火牆原則，還是選擇允許所需傳入和傳出規則的現有防火牆原則。</block>
   <block id="e4c07f2bba651b4e0cbb7e5ba8fefde5" category="paragraph">如果您在建立 Console 代理程式的同一個 Google Cloud 帳戶中擁有 Google Cloud Storage 儲存桶，則 Google Cloud Storage 系統會自動顯示在 *Systems* 頁面上<block ref="aefa7bc54c105a94a586917b309a8039" category="inline-link-rx"></block>。</block>
   <block id="c6757fa1172212bd89b40c339b1bf042" category="summary">如果您是 VMware 用戶，可以使用 OVA 檔案在您的 vCenter 中安裝 Console 代理程式。OVA 下載連結或 URL 可透過 NetApp Console 取得。</block>
-  <block id="ad8b6fe2e7c4886f2851470625537eee" category="doc">使用 vCenter 在內部部署安裝 Console 代理程式</block>
   <block id="6b3d86b99e2472a8ac2d2fee0825f8f7" category="paragraph">如果您是 VMware 用戶，可以使用 OVA 檔案在您的 vCenter 中部署 Console 代理程式。OVA 下載連結或 URL 可透過 NetApp Console 取得。</block>
   <block id="dd610cd3b2866d7fae9848317b06c03a" category="admonition">當您使用 vCenter 工具部署 Console 代理程式時，可以使用 VM Web 主控台執行維護工作。<block ref="21e15fc43bbac3ef120d8f996828c28e" category="inline-link-macro-rx"></block></block>
   <block id="c12234e7a9633d15fc94f2e9e5a62020" category="admonition">您無法使用安裝在本機的 Console 代理程式來管理 Google Cloud 中的資源。若要管理 Google Cloud 資源，請在 Google Cloud 中安裝代理程式。</block>
@@ -6017,7 +5985,6 @@
   <block id="fffef7d3f6ea2dc8c70c1977d7df72cf" category="list-text">選取 *Administration &gt; Support* 。</block>
   <block id="bdbe420ae669ff58f6ddfc76e934fcce" category="paragraph">使用此選項將提示您重新登入。請注意，這些帳戶的權杖將在 90 天後過期。屆時您將收到通知提醒。</block>
   <block id="1a653af9db5aa75c21774ad3e0c682b2" category="summary">在部署 Console 代理程式後，您可以對現有的 vCenter 或 ESXi 主機進行變更。例如，您可以增加託管 Console 代理程式的 VM 執行個體的 CPU 或 RAM。</block>
-  <block id="0f90bce2ae7648cda1c8f5dc64f9eb4b" category="doc">為 Console 代理程式維護 vCenter 或 ESXi 主機</block>
   <block id="5701e28a09f3583ad12c519e7828b4a9" category="paragraph">您可以從 vSphere 客戶端存取維護主控台。</block>
   <block id="a2cfceffec1eb22eea65cb9fce81f24f" category="list-text">開啟 vSphere 用戶端並登入您的 vCenter。</block>
   <block id="a81bffe28407c93287bf3f9f760bbd9f" category="paragraph">在您的 vCenter 或 ESXi 主機中編輯 VM 執行個體設定，然後使用維護主控台套用變更。</block>
@@ -6360,4 +6327,118 @@
   <block id="7f862a4b8fc22b0af5dda5c9ababa346" category="cell">iam：TagRole</block>
   <block id="ac63bb5663971c98e9ad66f59e257a30" category="summary">NetApp Console 是一款 SaaS 應用程式，使用 Console 代理來管理雲端和內部部署儲存設備系統。NetApp Console 本地部署是一種自我託管的無代理虛擬機器，用於企業級 ONTAP 機組管理，具備原則執行、漂移修復和完整資料主權等功能。</block>
   <block id="e9136b652dc2f76f18a9d738127bb6a3" category="doc">比較 NetApp Console 和 NetApp Console 本機部署</block>
+  <block id="b56346a21533cb3c02f75ab5cc7c59a8" category="doc">Console 代理 4.10.0</block>
+  <block id="e25811fd33a54b98aaedd7e6a9ea664b" category="paragraph">4.10.0 版本同時支援標準模式和受限模式。</block>
+  <block id="657b18a162285732ef5f46d679b05663" category="section-title">提升雲端中介器的回應能力與可靠性</block>
+  <block id="d04e4287a3b42a9890f48390e8193dc1" category="paragraph">此服務現在可以更有效率地處理叢集狀態更新，減少間歇性逾時和停機，並加強 SMaS 關係的自動計劃外容錯移轉調解。</block>
+  <block id="8e185da70c606c7dcf3a854773e5a5fd" category="paragraph">NetApp Console 4.10.0 管理包括安全性修復和問題修復。</block>
+  <block id="8007d72f5958d5f16c1840c38742f735" category="doc">在 NetApp Console 中了解 Google Cloud 專案和權限</block>
+  <block id="16c66023c031db06fc97aed45a9cef44" category="doc">了解 NetApp Console 代理程式部署方法</block>
+  <block id="0e28c7401e87a8a34b310094e185c429" category="doc">了解 NetApp Console 中的身分識別聯盟</block>
+  <block id="5d0a67c3c2ae237a4d67f9b0402e9f6e" category="doc">了解 NetApp Console 角色型存取控制</block>
+  <block id="2afbfda002e90132791f5167feed883f" category="doc">NetApp Console 與 NetApp Console 本地部署有何不同</block>
+  <block id="8e3ec462216d5097444b77ca00f80473" category="admonition">如果您管理雲端和本機環境，並且希望 NetApp 管理平台基礎架構，請選擇 NetApp Console。如果您管理大型本機 ONTAP 環境，並且需要完整的資料主權和原則驅動型儲存管理，請選擇 NetApp Console 本機部署。</block>
+  <block id="d7500dc8af696cd476663bebb9d0fcb4" category="paragraph">NetApp 以 SaaS 應用程式的形式託管和維護 NetApp Console。您註冊後即可立即開始管理儲存設備。若要管理儲存設備系統，您需要在雲端或本機環境中部署輕量級的 Console 代理程式。代理程式會傳出連線至 NetApp Console 平台，NetApp 則會自動處理平台驗證、升級和可用度。</block>
+  <block id="773ad4889739d9b22df6b5f152501006" category="paragraph">NetApp Console 還支援受限模式（安裝在您自己的公有雲中，傳出連線受限）和私有模式（安裝在內部部署或您的雲端中，與 NetApp Console 平台沒有連線，包括實體隔離環境）。</block>
+  <block id="5ceffe99385ecce35b5a538a16ca57cb" category="paragraph"><block ref="dc7c11e9da585b9fa1e35ca44da95ccc" category="inline-link-rx"></block>。</block>
+  <block id="6bc8e262d6c87c1cc67ba2e2ef69c080" category="paragraph">NetApp Console 支援最廣泛的儲存設備系統，包括雲端儲存（例如 Amazon FSx for ONTAP、Cloud Volumes ONTAP、Amazon S3、Google Cloud Storage、E 系列、StorageGRID）以及內部部署 ONTAP 叢集。它提供對完整 NetApp 資料服務套件的存取，包括 NetApp Backup and Recovery、NetApp Disaster Recovery、NetApp Ransomware Resilience、NetApp Copy and Sync 以及 NetApp Data Classification。NetApp Console 也提供支援合約功能，例如 Digital Advisor、生命週期規劃及永續性儀表板。</block>
+  <block id="abd3ebf1d0176fca066a577a665824f3" category="paragraph">NetApp Console 最適合管理混合雲環境的組織，這些組織希望獲得最多的功能、更少的維護工作量以及靈活的授權。</block>
+  <block id="78c9351d6bfa969cec1e259c5314fb98" category="inline-link">了解 NetApp Console^。</block>
+  <block id="a005dfa7e9da2ab070c9b2a2cc506605" category="paragraph"><block ref="a005dfa7e9da2ab070c9b2a2cc506605" category="inline-link-rx"></block></block>
+  <block id="fae210aa9f9d8906ee39264d97001f11" category="section-title">NetApp Console 本地部署</block>
+  <block id="fcc4637d90c046c4a4ef32a9afdaa6fc" category="paragraph">NetApp Console 本機部署可讓您在本機基礎架構中完全執行 NetApp Console 控制平面，無需任何管理流量離開您的環境。您可以使用虛擬應用裝置映像將 Console 部署為虛擬機器，並像管理 vCenter 環境中的任何其他虛擬機器一樣管理它。無需 Console 代理程式。虛擬機器直接與您的 ONTAP 叢集通訊。</block>
+  <block id="5fb781e175de9970e2718bb94cc3d721" category="paragraph">雖然 NetApp Console 私有模式也支援實體隔離和本地部署，但 Console 本地部署專為企業級 ONTAP 機組管理而設計。它新增了任何 NetApp Console 部署模式都不具備的功能：</block>
+  <block id="0d7759ae1f20023b009816231b4ec556" category="list-text">儲存類別原則</block>
+  <block id="704be31d8e2a42e0c7ff6b6f16b73c3e" category="list-text">只需定義一次儲存設備標準，即可將其作為可重複使用的模板，這些模板套裝組合了效能、容量和分層要求。所有資源配置均使用已核准的類別，Console 本地部署會持續監控工作負載的法規遵循情況並識別偏差。</block>
+  <block id="6d84cd31d161fe86d10b8600c9e49fd4" category="list-text">機組管理</block>
+  <block id="7385a9be1dc0677e5961772473ab82cd" category="list-text">將叢集整理成反映您業務結構的資料夾和機組，然後在組織、資料夾或機組範圍內委派管理。</block>
+  <block id="26f4e34d0f8df693380313a828150255" category="list-text">工作負載分析器</block>
+  <block id="48fa264a7a3c3c0d64a82ae09d190200" category="list-text">隨著時間推移，將延遲、處理量、每秒輸入 / 輸出作業次數和組態變更相互關聯，以便在效能問題影響工作負載之前加以發現。</block>
+  <block id="f54523e7e9970026552c0beada420de7" category="list-text">大型語言模型整合</block>
+  <block id="dbebae0d47896a2bb083de1589f27131" category="list-text">連接到您自己的大型語言模型，以使用自然語言進行儲存設備資源配置、調查警報，並取得有關儲存環境的情境式答案。</block>
+  <block id="8375d985c183af61065e987103e69be9" category="list-text">引導式和自動化修復</block>
+  <block id="2d9389b28f495b8afdcdf8f214f11df3" category="list-text">當工作負載偏離其儲存設備類別或觸發警報時，Console 本機部署會提供修復建議。使用引導步驟或一鍵式自動修復功能，無需手動操作即可還原法規遵循。</block>
+  <block id="73c797fde7608d30c65279e6ca248835" category="list-text">透過電子郵件和 Webhook 發送警報</block>
+  <block id="69c0257b1ba8a3ba7687d4f7a9883d7f" category="list-text">設定電子郵件和 Webhook 通知管道，以便在儲存設備條件變更時，警報能夠及時送達相關團隊。Webhook 可與您現有的監控和事件管理工具整合。</block>
+  <block id="00c24ecc0e9a6f1c6a5202f40e8c96c1" category="paragraph">Console 本機部署支援內部部署 ONTAP 叢集及 NetApp Backup and Recovery。它與 Active Directory 整合以實現聯合驗證，並支援本機使用者的多因素驗證。</block>
+  <block id="be6ca74d1ea996c7c4fe59d3f22d39a4" category="paragraph">Console 本地部署最適合擁有大型本地 ONTAP 環境且需要原則驅動型資源配置、自動法規遵循檢查和完整資料主權的組織。</block>
+  <block id="70b86d6aa7fb00fd1d760b33b8607159" category="inline-link-macro">了解 NetApp Console 本機部署^。</block>
+  <block id="f64bf1d04df251b82d06554b478f9ae4" category="paragraph"><block ref="f64bf1d04df251b82d06554b478f9ae4" category="inline-link-macro-rx"></block></block>
+  <block id="0161e3d40bdbea6ca6998c8c60165b33" category="section-title">功能比較</block>
+  <block id="bfd15aa26ba0ced782240c4a8b7e517e" category="section-title">儲存管理</block>
+  <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">功能</block>
+  <block id="23dad8eedc041cc12dbd56726f7f5a94" category="cell">是（需要 Console 代理程式）</block>
+  <block id="f92b8f818d9b311ddfe493bf8fd9d4d1" category="cell">是（透過 Console 虛擬機器直接通訊）</block>
+  <block id="5a33f8c167d1b84a718d0a9ab656e684" category="cell">雲端儲存設備系統（Amazon FSx for ONTAP、Cloud Volumes ONTAP、Amazon S3 等）</block>
+  <block id="5caa8b77e08ebd3908f7b342222cc4f7" category="cell">E 系列和 StorageGRID</block>
+  <block id="b003a63279cc18b6fb1177d6fe5ae8b8" category="cell">Digital Advisor、生命週期規劃、永續性</block>
+  <block id="f2f74222833c136454ac1c309093ce22" category="cell">儲存類別原則與法規遵循監控</block>
+  <block id="99a7a1aa741fd89b57934cd02731f4af" category="cell">機組管理（資料夾和機組）</block>
+  <block id="d7ae72f8784c3d332b0fa036311ef934" category="cell">用於 AI 輔助作業的大型語言模型整合</block>
+  <block id="c72a03504491ce72b87c21f210031a3e" category="section-title">Console 設定和安全性</block>
+  <block id="a0e3089d312c100208595d685b4104d2" category="cell">部署模型</block>
+  <block id="9e2f8f0cf1d9ef87b70b0927b7aa6315" category="cell">軟體以服務形式，由 NetApp 託管（提供不同的部署模式）</block>
+  <block id="e94cfdb1bcf6790d1866d9d05ab27a2c" category="cell">在您自己的基礎架構中自架虛擬機器</block>
+  <block id="85ed230bbcc941c129c9222b688edfe4" category="cell">軟體升級</block>
+  <block id="18989411927d889b19d609bcc0020172" category="cell">自動，由 NetApp 代管</block>
+  <block id="e1ba155a9f2e8c3be94020eef32a0301" category="cell">手動</block>
+  <block id="860d51de2751d60b75aa2bf4908d091f" category="cell">NetApp Console 應用程式（透過網際網路或虛擬機器存取）</block>
+  <block id="04628071892bff31fcda3d0180ce0e14" category="cell">主控台虛擬機器（本機，無需網際網路）</block>
+  <block id="a492925ae64557e89b32f29da418b5eb" category="cell">資料主權</block>
+  <block id="8128bb2b2b16d567cc51992879a88b83" category="cell">管理流量流向 NetApp Console 平台</block>
+  <block id="9a85d1c8f123f061c5e7f2ebb079e094" category="cell">沒有任何資料或管理流量離開您的環境</block>
+  <block id="9c5d46a76492e92eb9d02ae973277f0b" category="cell">Active Directory 整合</block>
+  <block id="f45362733fe1dd1af3c58ae64471d466" category="cell">稽核日誌</block>
+  <block id="0b9c6eef4e3d3a222eb04e910d252339" category="cell">授權</block>
+  <block id="5d888c34f4251b9bdd3ba8412b69ff87" category="cell">Marketplace 訂閱及自帶授權</block>
+  <block id="c7eca4d9dd171fc4b4a21c3425a47aa6" category="cell">自帶授權</block>
+  <block id="699a6eee179cea80f5013d1166d0f30a" category="doc">舊版 NetApp Console 的網路存取</block>
+  <block id="ae48d1523d35962052b85097b64ff409" category="doc">NetApp Console 代理程式在 AWS 中的安全性群組規則</block>
+  <block id="6f395c5b2de11fd2469a348184719409" category="doc">NetApp Console 代理程式在 Azure 中的安全性群組規則</block>
+  <block id="c534d05a2204d355dd98c75ca4fa0ef0" category="doc">NetApp Console 代理程式在 Google Cloud 中的防火牆規則</block>
+  <block id="ef7c9287a88e41770bcf8e2f71bf4a62" category="doc">NetApp Console 中本機 Console 代理程式的連接埠</block>
+  <block id="b8a84f07d25586ae344b5d2fea360ceb" category="doc">維護 vCenter 或 ESXi 主機以供 NetApp Console 代理程式使用</block>
+  <block id="342c0cadebe48cf993f95cc497f1ee67" category="doc">設定 NetApp Console 代理程式以使用 Proxy 伺服器</block>
+  <block id="538f73bc4b16880a92f834fffd5eee47" category="doc">將 NetApp Console 與 Active Directory Federation Services 建立聯盟</block>
+  <block id="0e9b2bbb493d88a60e9b5623cd2d24b4" category="doc">將 NetApp Console 與 SAML 身分供應商建立聯盟</block>
+  <block id="7c7e37a60fdebfbcd688955b45cc315e" category="doc">在 NetApp Console 中驗證您的電子郵件網域以進行聯盟</block>
+  <block id="a7929bdeb057d0040937eace4fc80b03" category="doc">取得 NetApp Console 協助</block>
+  <block id="eb6f589cc532511de3d491784eac9074" category="doc">將 NetApp Console 代理程式與其他資料夾和專案建立關聯</block>
+  <block id="ce28311053eab652f7cba323b87be0a8" category="doc">在 NetApp Console 中監控或稽核 IAM 活動</block>
+  <block id="ed0b449f46c28022aa1e596cb60930ae" category="doc">將成員新增至 NetApp Console 組織</block>
+  <block id="84f6282c0313bada67ece6dc68d0f5fd" category="doc">重新命名您的 NetApp Console 組織並取得 ID</block>
+  <block id="2627c336d69cf7d192f27dbf9318645f" category="doc">在 NetApp Console 組織、專案和代理程式之間切換</block>
+  <block id="5309258d747a9845e04a5a666f7e0bb8" category="doc">在 NetApp Console 中管理使用者安全性</block>
+  <block id="fbec7d32f2a1eaf9c2331cfbeb40b4f8" category="doc">在 AWS 中為 NetApp Console 手動部署 Console 代理程式</block>
+  <block id="09f8a40b3c8ade5b73c631a145579e8d" category="doc">從 AWS Marketplace 部署 NetApp Console 代理程式</block>
+  <block id="af8de380cb8547e69aa14de996858185" category="doc">在 Azure 中手動安裝 NetApp Console 代理程式</block>
+  <block id="d0ebd468c3f09a8b92c11ff75d7ad157" category="doc">從 Azure Marketplace 建立 NetApp Console 代理程式</block>
+  <block id="db0d4894b0f672f5846a0dd831c3acef" category="doc">從 Google Cloud 部署 NetApp Console 代理程式</block>
+  <block id="d8c7869374338e02642160e98a2d8417" category="doc">在 Google Cloud 中手動部署 NetApp Console 代理程式</block>
+  <block id="5382ae577d3f63349dafa3576dfdb3ac" category="doc">使用 vCenter 在內部部署安裝 NetApp Console 代理程式</block>
+  <block id="abca119af0a13b3133fa5afd29df6537" category="doc">手動在本機安裝 NetApp Console 代理程式</block>
+  <block id="fb0147398e4c8a5b077a1394aed4389e" category="doc">以私有模式部署 NetApp Console 代理程式</block>
+  <block id="24aa86604f7c13368f329291e2176320" category="doc">以受限模式部署 NetApp Console 代理程式</block>
+  <block id="9f055563896ad1d86b1aff07fa15e9db" category="doc">安裝 CA 簽署的憑證以存取 NetApp Console</block>
+  <block id="732e996d6e02c3ebc791dbde9abe1e56" category="doc">維護手動安裝的 NetApp Console 代理程式的虛擬機器</block>
+  <block id="9e85e0ca90299f57faff64486b07b169" category="doc">查看與不同 NetApp Console 代理程式關聯的系統</block>
+  <block id="df3c94950882fe8269c8bd3124102787" category="doc">在 NetApp Console 中強制執行 ONTAP System Manager 的 ONTAP 權限</block>
+  <block id="8fbfb7191006f1ff54bec4699202f25d" category="doc">在 NetApp Console 中管理合作夥伴成員</block>
+  <block id="2419efcdd1cfbd36c947ead316bdb610" category="doc">在 NetApp Console 中為合作夥伴使用者提供資源存取</block>
+  <block id="88e7470f978d59065e8250e526936a9d" category="doc">在 NetApp Console 的合作夥伴組織中工作</block>
+  <block id="47334a862ae2aa74700504caf1fe7ec6" category="doc">準備在 NetApp Console 私有模式下部署</block>
+  <block id="d8e9a7ffa6642a6f5e41c6f41381033a" category="doc">準備在 NetApp Console 受限模式下部署</block>
+  <block id="7382bba8f6132f40ca2d21fbbe55deed" category="doc">私有模式下 NetApp Console 快速入門</block>
+  <block id="4fd3dab039a9a697aa45cdf9e4151fa8" category="doc">受限模式下 NetApp Console 快速入門</block>
+  <block id="d71f3be9ecdf6109c0abd62c58d4602a" category="doc">標準模式下 NetApp Console 快速入門</block>
+  <block id="b34b04cba573bd7f4b8706b27ab86ed4" category="doc">在 NetApp Console 中要求在 Amazon EC2 執行個體上使用 IMDSv2</block>
+  <block id="be55b27ac8e6a53f4b7611cb418cfbfe" category="doc">在 NetApp Console 受限模式下訂閱 NetApp Intelligent Services</block>
+  <block id="5826831579ea4f43a0cb70045cf5f97b" category="doc">以標準模式訂閱 NetApp Console 資料服務</block>
+  <block id="75aeae08e5ba1582cd3ad59827edc6ca" category="doc">註冊 NetApp Console 支援</block>
+  <block id="2639be1d095a58dd96a72a823ff1b61b" category="doc">排查 NetApp Console 代理程式故障</block>
+  <block id="b5587e31ef788714566665f7aabf20e7" category="doc">解除安裝並移除 NetApp Console 代理程式</block>
+  <block id="6813bdd4cf22657750bba36b7a1c84f8" category="doc">更新 NetApp Console 代理程式位址和 URI</block>
+  <block id="1ffdd70508b45fa8740a4e5db3fed667" category="doc">升級 NetApp Console 代理程式</block>
+  <block id="88119fcc4c91e2769610d7732f2d8876" category="doc">NetApp Console 有哪些新功能</block>
+  <block id="01b8b50c6af6a26d04385207f4b3c02e" category="section-title">2026年8月13日</block>
 </blocks>

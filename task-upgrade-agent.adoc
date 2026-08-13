@@ -4,7 +4,7 @@ permalink: task-upgrade-agent.html
 keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade, vcenter upgrade, OVA upgrade, ISO upgrade, vsphere upgrade 
 summary: 當 Console 代理程式具備出站連線能力時，它會自動升級。如果您的 Console 代理程式不具備出站連線能力，您可以手動升級。如果您的代理程式部署在 vCenter 中，您可以使用 ISO 進行升級。 
 ---
-= 升級控制台代理
+= 升級 NetApp Console 代理程式
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

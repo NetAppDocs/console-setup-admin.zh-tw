@@ -4,7 +4,7 @@ permalink: task-quick-start-private-mode.html
 keywords: private mode quick start, quick start, aws top secret cloud, aws secret cloud, secret cloud, top secret cloud, bluexp legacy, bluexp, netapp console private mode 
 summary: 私有模式通常用於沒有網際網路連線的內部部署環境以及安全的雲端區域，包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。 
 ---
-= 在私有模式下使用 NetApp Console 的入門工作流程
+= 私有模式下 NetApp Console 快速入門
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

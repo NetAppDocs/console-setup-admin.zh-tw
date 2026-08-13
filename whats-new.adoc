@@ -4,7 +4,7 @@ permalink: whats-new.html
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases, console' 
 summary: 瞭解 NetApp Console 管理的新功能。 
 ---
-= 什麼是新的
+= NetApp Console 有哪些新功能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -15,6 +15,33 @@ summary: 瞭解 NetApp Console 管理的新功能。
 
 [role="lead"]
 了解NetApp Console管理功能的新增功能：身分識別和存取管理 (IAM)、控制台代理程式、雲端提供者憑證等。
+
+
+
+[[13-august-2026]]
+== 2026年8月13日
+
+
+
+[[console-agent-4-10-0]]
+=== Console 代理 4.10.0
+
+4.10.0 版本同時支援標準模式和受限模式。
+
+此版本的 Console 代理程式包含安全性改善和錯誤修正。
+
+
+
+==== 提升雲端中介器的回應能力與可靠性
+
+此服務現在可以更有效率地處理叢集狀態更新，減少間歇性逾時和停機，並加強 SMaS 關係的自動計劃外容錯移轉調解。
+
+
+
+[[netapp-console-administration]]
+=== NetApp Console管理
+
+NetApp Console 4.10.0 管理包括安全性修復和問題修復。
 
 
 

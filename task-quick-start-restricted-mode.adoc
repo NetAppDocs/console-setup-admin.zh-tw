@@ -4,7 +4,7 @@ permalink: task-quick-start-restricted-mode.html
 keywords: quick start, restricted mode quick start, govcloud, government, aws gov, azure gov 
 summary: 透過準備環境和部署控制台代理，開始以受限模式使用NetApp Console。 
 ---
-= 在受限模式下開始使用 NetApp Console 的工作流程
+= 受限模式下 NetApp Console 快速入門
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

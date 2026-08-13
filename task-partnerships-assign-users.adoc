@@ -4,7 +4,7 @@ permalink: task-partnerships-assign-users.html
 keywords: switch organizations, switch projects, projects, organizations, change, switch, change organizations, change projects, iam, identity and access management, switch connectors 
 summary: 您可以透過將使用者新增至合作夥伴組織來將使用者新增至合作夥伴關係。新增使用者後，合作夥伴組織負責為他們分配組織中特定資源的角色。 
 ---
-= 管理合作組織的成員
+= 在 NetApp Console 中管理合作夥伴成員
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

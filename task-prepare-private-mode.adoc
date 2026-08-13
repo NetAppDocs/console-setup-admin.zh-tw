@@ -4,7 +4,7 @@ permalink: task-prepare-private-mode.html
 keywords: private mode requirements, requirements, install options, private mode networking, dark site, private mode permissions, permissions for private mode, networking for private mode 
 summary: 在部署 NetApp Console 為私有模式之前，請先準備您的環境。您需要檢查主機需求、準備網路、設定權限等。 
 ---
-= 準備以私有模式部署
+= 準備在 NetApp Console 私有模式下部署
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: concept-agent-install-options.html
 keywords: install agent, deployment method, console install, marketplace install, manual install, ova install, vcenter install, installation options, 
 summary: 使用 NetApp Console、雲端供應商的市場或在 Linux 主機上手動安裝軟體來部署 Console 代理程式。您的部署方法決定了您如何維護代理程式主機，並且會因您使用的 NetApp Console 部署模式而有所不同。 
 ---
-= 選擇 Console 代理程式部署方法
+= 了解 NetApp Console 代理程式部署方法
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

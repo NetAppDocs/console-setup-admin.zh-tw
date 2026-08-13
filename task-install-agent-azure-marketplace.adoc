@@ -4,7 +4,7 @@ permalink: task-install-agent-azure-marketplace.html
 keywords: install connector, azure connector installation, azure connector, install connector in azure, bluexp, create connector, marketplace, azure marketplace 
 summary: 若要從 Azure 市集建立控制台代理，您需要設定網路、準備 Azure 權限、檢視執行個體要求，然後建立控制台代理程式。 
 ---
-= 從 Azure 市集建立控制台代理
+= 從 Azure Marketplace 建立 NetApp Console 代理程式
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
