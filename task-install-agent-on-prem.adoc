@@ -70,10 +70,6 @@ Console 代理程式需要這部分空間 `/var`，因為 Podman 或 Docker 的�
 
  a| 
 紅帽企業 Linux
-
-
-
- a| 
  a| 
 9.6
 
@@ -92,7 +88,6 @@ Podman 版本 5.4.0，podman-compose 版本 1.5.0。
 
 
  a| 
- a| 
 9.1 至 9.4
 
 * 僅限英文版本。
@@ -109,7 +104,6 @@ Podman 版本 4.9.4，podman-compose 版本 1.5.0。
 
 
 
- a| 
  a| 
 8.6 至 8.10
 
@@ -129,10 +123,6 @@ Podman 版本 4.6.1 或 4.9.4，搭配 podman-compose 1.0.6。
 
  a| 
 Ubuntu
-
-
-
- a| 
  a| 
 24.04 LTS
  a| 
@@ -144,7 +134,6 @@ Docker Engine 23.0.6 至 28.0.0。
 
 
 
- a| 
  a| 
 22.04 LTS
  a| 
