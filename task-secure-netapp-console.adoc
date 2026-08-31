@@ -1,0 +1,106 @@
+---
+sidebar: sidebar 
+permalink: task-secure-netapp-console.html 
+keywords: security, hardening, netapp console, console agent, identity and access management, iam, rbac, federation, mfa, read-only mode, ontap system manager 
+summary: 依照建議步驟保護 NetApp Console、IAM、身分聯盟、唯讀模式、服務帳戶、Console 代理程式和 ONTAP System Manager 存取。 
+---
+= 安全的 NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+透過限制 NetApp Console 存取、保護 Console 代理程式以及監控活動以發現未經授權或意外的變更來保護儲存設備操作。
+
+請依照以下步驟為您的組織建立安全性基線。在套用下列安全性控制措施之前，請先依照您的部署模式的設定工作流程進行操作。link:concept-modes.html["了解NetApp Console部署模式"].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] 選擇 NetApp Console 部署模式並完成初始設定
+[role="quick-margin-para"]
+建立組織並設定第一個組織管理員。完成與您的部署相符的設定工作流程。
+
+[role="quick-margin-list"]
+* link:task-quick-start-standard-mode.html["以標準模式開始使用 NetApp Console"]
+* link:task-quick-start-restricted-mode.html["開始在受限模式下使用 NetApp Console"]
+* link:task-quick-start-private-mode.html["開始在私密模式下使用 NetApp Console"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] Secure Console 代理程式權限、網路存取和主機
+[role="quick-margin-para"]
+將每個 Console 代理程式的雲端權限和網路存取限制在最低要求。保護 Web Console 流量，並維護 Console 代理程式軟體。
+
+[role="quick-margin-list"]
+* link:reference-permissions.html["審查雲端供應商的權限和網路要求"]
+* link:reference-networking-saas-console.html["審查網路存取要求"]
+* link:task-installing-https-cert.html["安裝由 CA 簽署的憑證"]
+* link:task-configuring-proxy.html["設定 Proxy 伺服器"]
+* link:task-upgrade-agent.html["升級控制台代理"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 組織 NetApp Console IAM 層級
+[role="quick-margin-para"]
+根據團隊的工作方式設定組織層級結構。將儲存設備系統、資料服務和 Console 代理程式指派給管理它們的專案。
+
+[role="quick-margin-list"]
+* link:task-iam-manage-folders-projects.html["建立資料夾和專案。"]
+* link:task-iam-manage-resources.html["將資源與專案建立關聯。"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"] 設定 NetApp Console 身分聯盟和聯盟群組
+[role="quick-margin-para"]
+將 NetApp Console 連接到您的企業身分供應商 （IdP），以便使用者使用企業憑證登入，且您的 IdP 可強制執行其驗證原則。NetApp Console 支援 AD FS、Microsoft Entra ID、PingFederate 和通用 SAML 身分供應商。
+
+[role="quick-margin-para"]
+將聯盟使用者和群組新增至 Console 組織，並為其指派 Console 角色。聯盟不會取代 Console 成員資格或角色指派。link:task-iam-manage-members-permissions.html#add-members["了解如何新增聯盟群組"]。
+
+[role="quick-margin-list"]
+* link:task-federation-verify-domain.html["驗證您的域名"]
+* link:task-federation-adfs.html["與 AD FS 聯盟"]
+* link:task-federation-entra-id.html["與 Microsoft Entra ID 聯盟"]
+* link:task-federation-ping.html["與 PingFederate 聯合"]
+* link:task-federation-saml.html["與 SAML 身分提供者聯合"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] 新增 NetApp Console 成員並指派最小權限角色
+[role="quick-margin-para"]
+僅授予每個使用者、服務帳戶和聯盟群組履行其職責所需的存取權限。在支援工作的最小組織、資料夾或專案範圍內指派角色。為本機使用者啟用多因素驗證。
+
+[role="quick-margin-list"]
+* link:task-iam-manage-members-permissions.html["將成員新增至您的 Console 組織"]
+* link:concept-iam-rbac.html["了解角色型存取控制"]
+* link:reference-iam-predefined-roles.html["審查預先定義的角色"]
+* link:task-iam-user-security.html["管理成員安全"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六"] 使用服務帳戶保護 NetApp Console 的自動化
+[role="quick-margin-para"]
+將自動化與人工帳戶分隔。為每個服務帳戶指派其所需的最低角色和範圍。安全地儲存憑證，並在憑證遺失或輪換時重新建立。
+
+link:task-iam-manage-members-permissions.html#service-account["了解如何新增服務帳戶"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["七"] 為 NetApp Console 組織啟用唯讀模式
+[role="quick-margin-para"]
+要求管理員在進行變更前提升其角色。此控制可減少對儲存設備系統和資料服務的意外變更。
+
+link:task-enable-read-only-mode.html["了解如何啟用唯讀模式"]
+
+
+NOTE: 當 NetApp Console 處於私人模式時，唯讀模式無法使用。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-8.png["八"] 強制執行 ONTAP System Manager 的 ONTAP 權限
+[role="quick-margin-para"]
+對管理生產 ONTAP 系統的作用中 Console 代理程式啟用 *Force Credentials* 功能。使用者在開啟 ONTAP System Manager 時需要提供其 ONTAP 叢集憑證，ONTAP 將套用這些權限。
+
+link:task-ontap-access-agent.html["了解如何為 ONTAP System Manager 強制執行 ONTAP 權限"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-9.png["九"] 審查 NetApp Console 稽核活動和安全性控制
+[role="quick-margin-para"]
+建立定期審查流程，審查對象包括成員、群組映射、角色、憑證、代理程式和近期操作。移除不再需要的存取，並調查異常活動。
+
+[role="quick-margin-list"]
+* link:task-iam-audit-actions-timeline.html["了解如何稽核 Console 操作"]
+* link:task-monitor-cm-operations.html["了解如何監控 Console 作業"]
+

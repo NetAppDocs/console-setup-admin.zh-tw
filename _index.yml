@@ -53,14 +53,14 @@ indexpage:
       url: "/task-maintain-agents.html"
   - title: 安全與合規
     links:
+    - title: 安全的 NetApp Console
+      url: task-secure-netapp-console.html
     - title: 與您的身分提供者聯合
       url: "/concept-federation.html"
     - title: 啟用唯讀模式
       url: task-enable-read-only-mode.html
     - title: 監控控制台活動
       url: "/task-monitor-cm-operations.html"
-    - title: 以受限模式部署NetApp Console（主權雲端部署）
-      url: "/task-quick-start-restricted-mode.html"
     - title: SOC-2 合規性
       url: https://www.netapp.com/company/trust-center/compliance/soc-2/
   - title: 主機平台合作夥伴關係

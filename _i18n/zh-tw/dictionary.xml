@@ -5104,7 +5104,6 @@
   <block id="f19aee9e6e2e5954d2de8e30cbe4751d" category="sidebar">與您的身分提供者聯合</block>
   <block id="444cf9807eaf5ac0945edfce9108c729" category="sidebar">啟用唯讀模式</block>
   <block id="320b734c12631424ce316d6953d1dedc" category="sidebar">監控控制台活動</block>
-  <block id="650a6b9660e523c1a925feddd83c0c4d" category="sidebar">以受限模式部署NetApp Console（主權雲端部署）</block>
   <block id="d71a2025aa5d19fc2c3bab8a7d5d1bc1" category="sidebar">SOC-2 合規性</block>
   <block id="aa201c2db7dd29fb5926c96c4006fa2d" category="sidebar">主機平台合作夥伴關係</block>
   <block id="c595922d1b033b7101399b8ddff46d28" category="sidebar">NetApp支援帳戶</block>
@@ -6441,4 +6440,118 @@
   <block id="1ffdd70508b45fa8740a4e5db3fed667" category="doc">升級 NetApp Console 代理程式</block>
   <block id="88119fcc4c91e2769610d7732f2d8876" category="doc">NetApp Console 有哪些新功能</block>
   <block id="01b8b50c6af6a26d04385207f4b3c02e" category="section-title">2026年8月13日</block>
+  <block id="1058dc5369c0908359aaf95158dd0d0f" category="summary">了解如何保護 NetApp Console 部署、使用者存取、Console 代理程式和儲存管理操作的安全性。</block>
+  <block id="5d7fcd9743b1dc5a7dfb8167192a0a56" category="doc">保護 NetApp Console</block>
+  <block id="bdd077838c93e11800ec4f06eb3a835b" category="paragraph">透過限制 NetApp Console 存取、保護 Console 代理程式以及監控活動以發現未經授權或意外的變更來保護儲存設備操作。</block>
+  <block id="f89e189eab4b0a84dde6088f4027e6e1" category="paragraph">安全性是共享的責任。NetApp 負責保護 Console 服務，而您負責選擇合適的部署模式、控制使用者和服務帳戶存取、保護部署 Console 代理程式的環境，以及監控組織中的活動。</block>
+  <block id="3173168275b216d053bdec7a280ec461" category="section-title">選擇合適的部署模式</block>
+  <block id="0e73d1e9e7747b1b1b4b3b143c68f576" category="paragraph">根據您的連線能力、隔離及操作需求選擇部署模式：</block>
+  <block id="26c0fd0d76bb5a678c4cca1b2ab14d60" category="list-text">標準模式使用雲端託管的 SaaS 應用程式。</block>
+  <block id="7dd7f9cd8bdd5ebb53ba16dcb7ec7947" category="list-text">受限模式將 Console 安裝在公有雲環境中，與 NetApp API 的傳出連線受到限制。</block>
+  <block id="94671ddee001ed58f550c5dec055e5ae" category="list-text">私有模式將 Console 安裝在本地或與外界完全隔離的環境中，且不具備連至 NetApp 的傳出連線。</block>
+  <block id="9c1615767d701966b45379b7c58e3d62" category="paragraph">每種模式的功能可用度和安全性要求都不同。<block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block>。</block>
+  <block id="466fe6a37480f459dfb29f33029949a8" category="section-title">控制身分和存取</block>
+  <block id="ec8357a35950f72e7cf816a40f21b7be" category="paragraph">使用身分和存取管理 (IAM) 僅向使用者和服務帳戶授予執行其任務所需的存取：</block>
+  <block id="8356ca0d1248293dffe430b44a9dc8aa" category="list-text">依專案整理資源，並在適當情況下，按資料夾整理資源，以反映您的業務或營運範圍。</block>
+  <block id="dabb178434082180a8558f051e774a03" category="list-text">在組織層級結構的最低層級指派預先定義的角色，以提供所需的存取。</block>
+  <block id="54ff18ce569c4f91f21af8d6abcef91b" category="list-text">定期審查組織成員、服務帳號及其角色。移除不再需要的存取。</block>
+  <block id="81dc9345250f1f6289b7a8cc34fef322" category="list-text">當身分聯盟符合貴組織的要求時，請使用身分聯盟實作單一登入。身分聯盟在私有模式下無法使用。</block>
+  <block id="1ddb29d678b51b4e086a8e3bba08b740" category="list-text">要求本機使用者使用多因素驗證 （MFA），並將服務帳戶憑證作為機密資訊保護。當服務帳戶憑證遺失或需要輪替時，請重新建立這些憑證。</block>
+  <block id="8abf9a466e4c9494ea94af378cf41efe" category="inline-link-macro">在 NetApp Console 中了解 IAM</block>
+  <block id="0ff7aecca234ce48c5524a55697a2ab4" category="paragraph"><block ref="8f4dacc1355f6b0f32454c70c7a5554f" category="inline-link-macro-rx"></block>。</block>
+  <block id="20d82496be37603c3aa358f272b228b8" category="section-title">安全 Console 代理程式</block>
+  <block id="93f61e19d062d5546ce06f1a3d7b08e0" category="paragraph">Console 代理程式在 Console 與儲存設備系統以及雲端或內部部署環境之間架起橋梁。代理程式會發起與 Console 的通訊；Console 不會發起與代理程式的連線。</block>
+  <block id="2dbde24776bdf42975eef846402c2bbc" category="paragraph">對每個代理程式套用下列控制項：</block>
+  <block id="5442403e707d9578ed32c3be54184634" category="list-text">將代理程式部署在滿足貴組織主機、網路和存取控制要求的環境中。</block>
+  <block id="8cfb226c3d3449da4e7e84f027c3ab24" category="list-text">僅允許必要的傳出網路連線和所需的雲端權限。部署前請審查特定供應商的權限和連接埠要求。</block>
+  <block id="34a1e4720a42b92622003bfb676aabe2" category="list-text">當傳出流量必須通過 Proxy 伺服器時，請使用受支援的 Proxy 組態。</block>
+  <block id="85214b639a9dc16f16c9fff3b343aad4" category="list-text">當使用者透過 HTTPS 存取代理程式 Web 控制台時，請安裝 CA 簽署的憑證。</block>
+  <block id="5d079d8b3bdd2a21cd919b281144297c" category="list-text">請確保代理程式軟體保持最新狀態。私有模式代理程式必須手動升級。</block>
+  <block id="1284c01df79967e9a9cb0fa34a8fc1d0" category="list-text">在 AWS 上，請考慮要求主機 Console 代理程式的 EC2 執行個體使用 IMDSv2。</block>
+  <block id="510c458f335c9e63f10ead0565bc2160" category="section-title">減少意外變更</block>
+  <block id="9cdb404f81065f4fe2888a384f99999e" category="paragraph">組織管理員可以為組織啟用唯讀模式。唯讀模式有助於防止使用者在請求提升權限之前變更儲存設備系統或使用資料服務。</block>
+  <block id="5a883dfb4caaaf143ab7d8771e1a98f4" category="inline-link-macro">了解如何啟用唯讀模式</block>
+  <block id="734b33d0a32bbd9e142a6daf22f123b0" category="paragraph"><block ref="de3e3793ad80a364bdc4648dc1cedccd" category="inline-link-macro-rx"></block>。</block>
+  <block id="802ad0d8de017224a428aaf6dc70e614" category="section-title">監控及審查活動</block>
+  <block id="46aaf6874279db1f02b13d9345965a72" category="paragraph">使用操作時間軸在 Console 中審查儲存管理和使用者活動。作為組織安全性流程的一部分，定期審查成員存取、角色分配、服務帳戶憑證、代理程式狀態和近期操作。</block>
+  <block id="acf4d569e85ba4f07dee65d868e312db" category="inline-link-macro">了解如何監控 Console 作業</block>
+  <block id="8c87e344e1cb6ec1fa88a41d9b58b050" category="paragraph"><block ref="19f12f26a8f3bcda1c7b8ec8dd09d6b1" category="inline-link-macro-rx"></block>。</block>
+  <block id="dde081281e2bc1099c59a3a9abd2ab3b" category="section-title">相關安全性主題</block>
+  <block id="0d16e0fa8385f4ecca48c87b54700eff" category="inline-link-macro">管理使用者安全性</block>
+  <block id="c0dc5bcd7d24bdf49727fa822a80ff00" category="list-text"><block ref="3b3467491ef8ae505b09e60553381f2c" category="inline-link-macro-rx"></block>，包括 MFA 和服務帳戶憑證。</block>
+  <block id="3ea31604ad2a4d3b7cfe571d0fc5b898" category="list-text"><block ref="484813cc457e81afea222e9c4c55417e" category="inline-link-macro-rx"></block>。</block>
+  <block id="bace6dfef8b8b6bdc38f380797a8ac13" category="list-text"><block ref="c231010d3250b37fefa79e49c7fac573" category="inline-link-macro-rx"></block>。</block>
+  <block id="114871ac953b22269534be5463d5bed4" category="inline-link-macro">審查 SaaS 應用程式的網路存取要求</block>
+  <block id="e48c9dcd823413ddca6e3e2dceabdf12" category="list-text"><block ref="acba60e5cc3ccbd1da8e2e4daa0251aa" category="inline-link-macro-rx"></block>。</block>
+  <block id="66ea689c24dc9ab9ecf7b3dcbdf2d2bb" category="inline-link-macro">審查雲端供應商的權限和網路要求</block>
+  <block id="1772f0b91f03cc431bd437e649681bdc" category="list-text"><block ref="ac7ed8f265c73428987eae567f5a25a0" category="inline-link-macro-rx"></block>。</block>
+  <block id="f8866b2b7454ef2769d5caa0375ad400" category="inline-link-macro">了解 NetApp Console 的安全性法規遵循</block>
+  <block id="838ed343eb419ca177b29290cfa5cea7" category="list-text"><block ref="7de827dce0dc8582e4b10f433db46dd9" category="inline-link-macro-rx"></block>。</block>
+  <block id="50e8f64941e4c6ae32b514644df19767" category="summary">依照建議步驟保護 NetApp Console、IAM、身分聯盟、唯讀模式、服務帳戶、Console 代理程式和 ONTAP System Manager 存取。</block>
+  <block id="fa6cced3b6fa7ad524a13722716b4e25" category="doc">安全的 NetApp Console</block>
+  <block id="91d6f99841f27c7d4ae8a576545136e3" category="paragraph">請依照以下步驟為您的組織建立安全性基線。在套用下列安全性控制措施之前，請先依照您的部署模式的設定工作流程進行操作。<block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block>.</block>
+  <block id="ca77259f0411c49133e28233f7e0a594" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> 選擇 NetApp Console 部署模式並完成初始設定</block>
+  <block id="6643f0fc063b73ae7cb00644017cef4a" category="paragraph">建立組織並設定第一個組織管理員。完成與您的部署相符的設定工作流程。</block>
+  <block id="22f7b8c9e3cec45bb0909cca22e4e862" category="inline-link-macro">以標準模式開始使用 NetApp Console</block>
+  <block id="1b04b04eae157b7a2e94f5fe3a41ed68" category="list-text"><block ref="1b04b04eae157b7a2e94f5fe3a41ed68" category="inline-link-macro-rx"></block></block>
+  <block id="bb052ff727ad3405f9e377f005178fd8" category="inline-link-macro">開始在受限模式下使用 NetApp Console</block>
+  <block id="07a84f2a895ff5384ba250bbd0694216" category="list-text"><block ref="07a84f2a895ff5384ba250bbd0694216" category="inline-link-macro-rx"></block></block>
+  <block id="43a0f032817197132c98b19efcb2283f" category="inline-link-macro">開始在私密模式下使用 NetApp Console</block>
+  <block id="894324cb3dad3c4c463e07e85ea7dc44" category="list-text"><block ref="894324cb3dad3c4c463e07e85ea7dc44" category="inline-link-macro-rx"></block></block>
+  <block id="4ca59768f21f1460981bd735f1baac9d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Secure Console 代理程式權限、網路存取和主機</block>
+  <block id="35da275a1ecec991e7323642d414234d" category="paragraph">將每個 Console 代理程式的雲端權限和網路存取限制在最低要求。保護 Web Console 流量，並維護 Console 代理程式軟體。</block>
+  <block id="ac7ed8f265c73428987eae567f5a25a0" category="list-text"><block ref="ac7ed8f265c73428987eae567f5a25a0" category="inline-link-macro-rx"></block></block>
+  <block id="487d3f01749236f4a1c63ceebd697397" category="inline-link-macro">審查網路存取要求</block>
+  <block id="1c05e14c7de8a7f8cd966ad66b4b3e01" category="list-text"><block ref="1c05e14c7de8a7f8cd966ad66b4b3e01" category="inline-link-macro-rx"></block></block>
+  <block id="b56591a52f1058d1f87b24f5b185e077" category="inline-link-macro">安裝由 CA 簽署的憑證</block>
+  <block id="739a0d5d95bf9c38769b463ca19accaa" category="list-text"><block ref="739a0d5d95bf9c38769b463ca19accaa" category="inline-link-macro-rx"></block></block>
+  <block id="72e9c60a82606c5e5b157cc82e336351" category="inline-link-macro">設定 Proxy 伺服器</block>
+  <block id="8d296f5cd8486485175e81f9eb156ece" category="list-text"><block ref="8d296f5cd8486485175e81f9eb156ece" category="inline-link-macro-rx"></block></block>
+  <block id="dbfecc969c3a84fbdcd91e50bdd86a68" category="list-text"><block ref="dbfecc969c3a84fbdcd91e50bdd86a68" category="inline-link-macro-rx"></block></block>
+  <block id="35bf205af05d718bb2b7b145e4c400fa" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 組織 NetApp Console IAM 層級</block>
+  <block id="902e832c587f1279a5acf65feaf1211e" category="paragraph">根據團隊的工作方式設定組織層級結構。將儲存設備系統、資料服務和 Console 代理程式指派給管理它們的專案。</block>
+  <block id="0e6ece2237e7f9e1f9a0aa6ba9e9b5d9" category="inline-link-macro">建立資料夾和專案。</block>
+  <block id="04c98a584416c40d70b3f74fc101a548" category="list-text"><block ref="04c98a584416c40d70b3f74fc101a548" category="inline-link-macro-rx"></block></block>
+  <block id="5cab9254ce355b5c287938249b28816e" category="inline-link-macro">將資源與專案建立關聯。</block>
+  <block id="df91e596a0ec0af0359838f6f8db8c62" category="list-text"><block ref="df91e596a0ec0af0359838f6f8db8c62" category="inline-link-macro-rx"></block></block>
+  <block id="839425f36147da7d1cc666e9089039b1" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 設定 NetApp Console 身分聯盟和聯盟群組</block>
+  <block id="9a52c08293d409a842184acb141eb8de" category="paragraph">將 NetApp Console 連接到您的企業身分供應商 （IdP），以便使用者使用企業憑證登入，且您的 IdP 可強制執行其驗證原則。NetApp Console 支援 AD FS、Microsoft Entra ID、PingFederate 和通用 SAML 身分供應商。</block>
+  <block id="01ad1d46d1fca1a4c36d506b90b391ec" category="inline-link-macro">了解如何新增聯盟群組</block>
+  <block id="420464487a0edfeb41fd919551a6272d" category="paragraph">將聯盟使用者和群組新增至 Console 組織，並為其指派 Console 角色。聯盟不會取代 Console 成員資格或角色指派。<block ref="c0efbcf589f6ac5b125ed3ce815ba603" category="inline-link-macro-rx"></block>。</block>
+  <block id="2b765ea4ff3da54728d8447c5c6571b8" category="list-text"><block ref="2b765ea4ff3da54728d8447c5c6571b8" category="inline-link-macro-rx"></block></block>
+  <block id="1fa77426337802b6d8934e569c4ca014" category="inline-link-macro">與 AD FS 聯盟</block>
+  <block id="b027d5096fb538387f89c4209d60f160" category="list-text"><block ref="b027d5096fb538387f89c4209d60f160" category="inline-link-macro-rx"></block></block>
+  <block id="390ed3aa4df4a47d3c0287b8903016f5" category="inline-link-macro">與 Microsoft Entra ID 聯盟</block>
+  <block id="73b73bc1a7e29b791c85daa4e26a58bb" category="list-text"><block ref="73b73bc1a7e29b791c85daa4e26a58bb" category="inline-link-macro-rx"></block></block>
+  <block id="5cfe4565ad097684341bd371674bcb66" category="list-text"><block ref="5cfe4565ad097684341bd371674bcb66" category="inline-link-macro-rx"></block></block>
+  <block id="f76ee8d03e827ecd67d8fd3a7f399659" category="list-text"><block ref="f76ee8d03e827ecd67d8fd3a7f399659" category="inline-link-macro-rx"></block></block>
+  <block id="7f267bf56eb86142c609448d2b6fa486" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 新增 NetApp Console 成員並指派最小權限角色</block>
+  <block id="0adafca284bb085118cee75938fe8cf1" category="paragraph">僅授予每個使用者、服務帳戶和聯盟群組履行其職責所需的存取權限。在支援工作的最小組織、資料夾或專案範圍內指派角色。為本機使用者啟用多因素驗證。</block>
+  <block id="73af05182f26c2bb0c80203ab811f740" category="inline-link-macro">將成員新增至您的 Console 組織</block>
+  <block id="d9e6b511fcd1aac84cc476d56001fce8" category="list-text"><block ref="d9e6b511fcd1aac84cc476d56001fce8" category="inline-link-macro-rx"></block></block>
+  <block id="22f29f8030a62c2c0af6b4e6b6f606e4" category="inline-link-macro">了解角色型存取控制</block>
+  <block id="3b2e25af1bea98c2b0ae625453e6f096" category="list-text"><block ref="3b2e25af1bea98c2b0ae625453e6f096" category="inline-link-macro-rx"></block></block>
+  <block id="195648ee3edf3d90376eb60ce8982563" category="inline-link-macro">審查預先定義的角色</block>
+  <block id="b727bb2ef69c2fcbbd990168c72ee6ca" category="list-text"><block ref="b727bb2ef69c2fcbbd990168c72ee6ca" category="inline-link-macro-rx"></block></block>
+  <block id="a1a6242d2d072d6e6fdd57f576b606ed" category="list-text"><block ref="a1a6242d2d072d6e6fdd57f576b606ed" category="inline-link-macro-rx"></block></block>
+  <block id="2d44ec90fe255157950694f5d9085d23" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> 使用服務帳戶保護 NetApp Console 的自動化</block>
+  <block id="79f7a42800700476b37ddd6e61cfe43e" category="paragraph">將自動化與人工帳戶分隔。為每個服務帳戶指派其所需的最低角色和範圍。安全地儲存憑證，並在憑證遺失或輪換時重新建立。</block>
+  <block id="3f507ae6cfa9c8dd23848c7ac6318097" category="inline-link-macro">了解如何新增服務帳戶</block>
+  <block id="f44d55cb0b77f0ef3a3b8c6b63aebf33" category="paragraph"><block ref="f44d55cb0b77f0ef3a3b8c6b63aebf33" category="inline-link-macro-rx"></block></block>
+  <block id="12e67aac3e7f9227cc35f8f047d7dc74" category="inline-image-macro">七</block>
+  <block id="d3d636e2f07c73c47ceb409e33a007f6" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block> 為 NetApp Console 組織啟用唯讀模式</block>
+  <block id="916b3d0ae2a38a356dac81b21f0aadb9" category="paragraph">要求管理員在進行變更前提升其角色。此控制可減少對儲存設備系統和資料服務的意外變更。</block>
+  <block id="de3e3793ad80a364bdc4648dc1cedccd" category="paragraph"><block ref="de3e3793ad80a364bdc4648dc1cedccd" category="inline-link-macro-rx"></block></block>
+  <block id="4a03ba8153e8c5adf50924eb1148e173" category="admonition">當 NetApp Console 處於私人模式時，唯讀模式無法使用。</block>
+  <block id="baca0ca6729684fd54206793ae4b5bd5" category="inline-image-macro">八</block>
+  <block id="b65c76d2d63a4b6eda425db31ce4a506" category="paragraph-title"><block ref="430057c670c01688e904ed2ba129a0b5" category="inline-image-macro-rx" type="image"></block> 強制執行 ONTAP System Manager 的 ONTAP 權限</block>
+  <block id="077e2c69447d026f0fd6df0117d66f5a" category="paragraph">對管理生產 ONTAP 系統的作用中 Console 代理程式啟用 *Force Credentials* 功能。使用者在開啟 ONTAP System Manager 時需要提供其 ONTAP 叢集憑證，ONTAP 將套用這些權限。</block>
+  <block id="7956c3d473c153fa708c836ff115cf1f" category="inline-link-macro">了解如何為 ONTAP System Manager 強制執行 ONTAP 權限</block>
+  <block id="183e4774dd06af5ef46d71d3a6f8b5bf" category="paragraph"><block ref="183e4774dd06af5ef46d71d3a6f8b5bf" category="inline-link-macro-rx"></block></block>
+  <block id="24db11216549ee55172c33cf3def2f3f" category="inline-image-macro">九</block>
+  <block id="d09dec5c2df9a4ff4cb80a7d3198cc65" category="paragraph-title"><block ref="b37b448eff4f65237cf47b29bdd2817c" category="inline-image-macro-rx" type="image"></block> 審查 NetApp Console 稽核活動和安全性控制</block>
+  <block id="d1a2ee8ff075a4679389e2746373a22a" category="paragraph">建立定期審查流程，審查對象包括成員、群組映射、角色、憑證、代理程式和近期操作。移除不再需要的存取，並調查異常活動。</block>
+  <block id="03e21ac1acdd1f03c79cf52cd9cf7e75" category="inline-link-macro">了解如何稽核 Console 操作</block>
+  <block id="e64d42268f0853ee74265280546a395b" category="list-text"><block ref="e64d42268f0853ee74265280546a395b" category="inline-link-macro-rx"></block></block>
+  <block id="19f12f26a8f3bcda1c7b8ec8dd09d6b1" category="list-text"><block ref="19f12f26a8f3bcda1c7b8ec8dd09d6b1" category="inline-link-macro-rx"></block></block>
 </blocks>
