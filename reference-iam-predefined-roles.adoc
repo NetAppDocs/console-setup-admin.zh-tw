@@ -140,7 +140,7 @@ summary: NetApp Console身分和存取管理包括可指派給組織成員的預
 | link:reference-iam-disaster-rec-roles.html["災難復原檢視器"] | 災難復原檢視器 | 標準 | 僅查看資訊。 
 
 
-| 分類檢視器 | 分類檢視器 | 標準、受限、私有 | 允許使用者查看 NetApp Data Classification 掃描結果。擁有此角色的使用者可以查看合規性資訊，並為其有權存取的資源產生報告。這些使用者無法啟用或停用磁碟區、儲存區或資料庫架構的掃描。Data Classification 沒有管理員角色。 
+| link:reference-iam-data-classification.html["分類檢視器"] | 分類檢視器 | 標準、受限、私有 | 允許使用者查看 NetApp Data Classification 掃描結果。擁有此角色的使用者可以查看合規性資訊，並為其有權存取的資源產生報告。這些使用者無法啟用或停用磁碟區、儲存區或資料庫架構的掃描。Data Classification 沒有管理員角色。 
 
 
 | link:reference-iam-ransomware-roles.html["勒索軟體抵禦能力管理員"] | 勒索軟體防護管理 | 標準 | 管理NetApp Ransomware Resilience的「保護」、「警報」、「復原」、「設定」和「報告」標籤上的操作。 
