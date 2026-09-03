@@ -100,7 +100,7 @@ NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉�
 | 產品領域 | NetApp 服務或功能 | 需要 Console 代理 
 
 
-.12+| *儲存系統管理* 此表顯示您可以透過 NetApp Console 管理的儲存系統。它不列出 NetApp Backup and Recovery 的備份目標。 | 警報 | 是的 
+.13+| *儲存系統管理* 此表顯示您可以透過 NetApp Console 管理的儲存系統。它不列出 NetApp Backup and Recovery 的備份目標。 | 警報 | 是的 
 
 
 | 適用於ONTAP 的Amazon FSx | 是的，可以用於探索和管理。您可以在不使用 Console 代理程式的情況下使用直接探索，但需要代理程式才能使用管理功能。 
@@ -136,10 +136,10 @@ NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉�
 | StorageGRID | 是的 
 
 
-| 工作負載 | 不 .8+| *數據服務* 
+| 工作負載 | 不 
 
 
-| NetApp Backup and Recovery | 是的 
+.8+| *數據服務* | NetApp Backup and Recovery | 是的 
 
 
 | NetApp 分類 | 是的 
@@ -160,10 +160,10 @@ NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉�
 | NetApp Cloud Tiering | 是的 
 
 
-| NetApp Volume Caching | 是的 .5+| *NetApp 支援合約功能* 
+| NetApp Volume Caching | 是的 
 
 
-| 數位顧問 | 是的 
+.5+| *NetApp 支援合約功能* | 數位顧問 | 是的 
 
 
 | 經濟效益 | 是的 
@@ -175,10 +175,10 @@ NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉�
 | 軟體更新 | 不 
 
 
-| 永續性 | 是的 .12+| *管理功能* 
+| 永續性 | 是的 
 
 
-| 審計 | 不 
+.11+| *管理功能* | 審計 | 不 
 
 
 | 自動化中心 | 不 
@@ -318,7 +318,7 @@ NetApp Replication
 | *NetApp 支援合約功能* | 無 | 不適用 
 
 
-.12+| *管理功能* | 審計 | 不 
+.11+| *管理功能* | 審計 | 不 
 
 
 | 自動化中心 | 不 
@@ -674,7 +674,7 @@ NOTE: 標準模式（NetApp Console SaaS 應用程式）支援所有功能。
 | 永續性 | 不 | 不 
 
 
-.9+| *管理功能* | 儲存和資料服務的儀表板指標 | 不 | 不 
+.11+| *管理功能* | 儲存和資料服務的儀表板指標 | 不 | 不 
 
 
 | 身分和存取管理 | 是的 | 是的 
@@ -701,5 +701,8 @@ NOTE: 標準模式（NetApp Console SaaS 應用程式）支援所有功能。
 | 唯讀模式 | 是的 | 不 
 
 
-| 通知 | 是的 | 不 | 審計 
+| 通知 | 是的 | 不 
+
+
+| 審計 | 是的 | 是的 
 |===
