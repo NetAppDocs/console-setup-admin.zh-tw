@@ -54,7 +54,7 @@ indexpage:
   - title: 安全與合規
     links:
     - title: 安全的 NetApp Console
-      url: task-secure-netapp-console.html
+      url: "/task-secure-netapp-console.html"
     - title: 與您的身分提供者聯合
       url: "/concept-federation.html"
     - title: 啟用唯讀模式
