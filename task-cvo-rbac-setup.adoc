@@ -1,0 +1,106 @@
+---
+sidebar: sidebar 
+permalink: task-cvo-rbac-setup.html 
+keywords: cloud volumes ontap, role-based access, iam, identity and access management, permissions, roles, users, subscribers 
+summary: 透過組織專案、新增 Console 成員和指派 Cloud Volumes ONTAP 角色，為 Cloud Volumes ONTAP 設定角色型存取。 
+---
+= 在 NetApp Console 中為 Cloud Volumes ONTAP 設定角色型存取
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+設定對 Cloud Volumes ONTAP 的存取，以便現有 Console 使用者保留所需的存取，並且新訂閱者可以新增具有適當權限的使用者。
+
+請使用下列其中一個區段：
+
+* *初次使用 NetApp Console 和 Cloud Volumes ONTAP*：為新使用者和 Cloud Volumes ONTAP 系統設定角色型存取。
+* *升級到支援角色的 Console 代理程式版本*：審查自動指派給現有使用者的角色，並視需要進行調整。
+
+
+
+
+[[set-up-access-for-users-after-initial-configuration-of-cloud-volumes-ontap]]
+== 在 Cloud Volumes ONTAP 完成初始組態後，設定使用者存取
+
+新訂閱者首先建立一個 Console 組織。第一個訂閱者會被賦予組織系統管理員的角色。link:concept-identity-and-access-management.html["了解身分和存取管理"]。
+
+
+
+[[plan-cloud-volumes-ontap-role-assignments]]
+=== 規劃 Cloud Volumes ONTAP 角色分配
+
+在包含系統的組織、資料夾或專案層級指派 Cloud Volumes ONTAP 角色。平台角色可讓使用者管理 NetApp Console 資源，例如組織、資料夾、專案、成員和資源存取。Cloud Volumes ONTAP 角色可讓使用者管理 Cloud Volumes ONTAP 系統。
+
+僅指派每個使用者所需的角色。當使用者管理 Console 資源並管理 Cloud Volumes ONTAP 系統時，請同時指派平台角色和 Cloud Volumes ONTAP 角色。平台角色不能取代 Cloud Volumes ONTAP 角色來執行 Cloud Volumes ONTAP 作業。
+
+* 例如，將 *資料夾或專案管理員* 和 *Cloud Volumes ONTAP 管理員* 角色指派給管理專案存取並管理該專案中 Cloud Volumes ONTAP 系統的使用者。
+* 將 *組織管理員* 和 *Cloud Volumes ONTAP 營運者* 角色指派給管理整個組織中主控台代理程式設定和 Cloud Volumes ONTAP 系統的使用者。
+* 如果使用者不需要管理 Console 資源，請僅指派與其管理 Cloud Volumes ONTAP 系統所需的存取層級相符的 Cloud Volumes ONTAP 角色。
+
+
+
+
+==== 當使用者還需要管理 Console 資源時的建議角色指派
+
+當使用者需要在僅將 NetApp Console 用於 Cloud Volumes ONTAP 的組織中管理 Console 資源和管理 Cloud Volumes ONTAP 系統時，請使用這些角色指派。
+
+[cols="20,30,30,20"]
+|===
+| 範圍 | 平台角色 | Cloud Volumes ONTAP 角色 | 推薦 
+
+
+| 組織 | 組織管理員 | Cloud Volumes ONTAP 運算子 | 當使用者必須管理 Console 資源（包括 Console 代理程式設定）並管理 Cloud Volumes ONTAP 系統時 
+
+
+| 資料夾或專案 | 資料夾或專案管理員 | Cloud Volumes ONTAP 管理員 | 當使用者必須管理特定資料夾或專案中的 Console 資源並管理 Cloud Volumes ONTAP 系統時 
+
+
+| 資料夾或專案 | 資料夾或專案管理員 | Cloud Volumes ONTAP 運算子 | 當使用者必須管理特定資料夾或專案中的 Console 資源並管理 Cloud Volumes ONTAP 系統時 
+
+
+| 資料夾或專案 | 資料夾或專案管理員 | Cloud Volumes ONTAP 檢視器 | 當使用者必須管理特定資料夾或專案中的 Console 資源，並且只需要對 Cloud Volumes ONTAP 系統擁有唯讀存取時 
+|===
+
+NOTE: 目前已知問題導致 *組織檢視者* 和 *Cloud Volumes ONTAP 檢視者* 角色組合無法在組織範圍內正常運作。請使用 *組織管理員* 或 *資料夾或專案管理員* 角色作為臨時解決方案。
+
+.步驟
+. 註冊 NetApp Console 並建立您的組織。
+. 使用預設專案，或建立資料夾和專案，以符合您組織 Cloud Volumes ONTAP 系統的方式。
+. 設定或關聯 Cloud Volumes ONTAP 訂閱。
+. 為組織新增使用者、服務帳戶或聯合群組。link:task-iam-manage-members-permissions.html["了解如何將成員新增至 NetApp Console 組織"]。
+. 在將代管系統的組織、資料夾或專案層級，為使用者指派 Cloud Volumes ONTAP 角色。如果成員還需要管理 Console 資源並為其他人指派存取，請指派適當的平台角色。
+. 在要代管的專案中新增或探索 Cloud Volumes ONTAP 系統。深入瞭解 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/index.html["Cloud Volumes ONTAP"^]。
+. 如果系統或其 Console 代理程式必須在其他專案中可用，請將資源與這些專案建立關聯。link:task-iam-manage-resources.html["了解如何將資源關聯到資料夾和專案"]。
+
+
+
+
+[[review-roles-after-upgrading-the-console-agent]]
+== 升級 Console 代理程式後審查角色
+
+將 Console 代理程式升級至 4.9.0 或更新版本後，Console 會根據現有使用者的平台角色自動為其指派 Cloud Volumes ONTAP 角色。這種一次性指派（稱為 seeding）有助於使用者保留適當的 Cloud Volumes ONTAP 存取，而無需系統管理員手動指派每個角色。Seeding 會根據使用者現有的平台角色指派 Cloud Volumes ONTAP 管理員或檢視者角色。此對應僅在移轉期間有效；對於新的指派，平台角色不會取代明確的 Cloud Volumes ONTAP 角色。請審查 seeded 角色，以確認使用者僅保留其所需的存取。
+
+.步驟
+. 識別包含每個 Cloud Volumes ONTAP 系統的組織、資料夾或專案。
+. 審查指派給每個使用者的 Cloud Volumes ONTAP 角色，並確認其已指派至包含該系統的組織、資料夾或專案層級。如需預期的初始角色，請參閱 link:reference-iam-cvo-roles.html#seeding-mappings-for-existing-users["為現有使用者初始化對應"]。
+. 當初始角色與使用者職責不符時，需要指派或變更 Cloud Volumes ONTAP 角色。初始角色指派程序會根據使用者現有的平台角色指派 Cloud Volumes ONTAP 管理員或檢視者角色。如果使用者需要營運者層級的權限，則需要在初始角色指派後明確指派 Cloud Volumes ONTAP 營運者角色。
+. 最多等待一小時，讓新的或更新的角色指派生效。Cloud Volumes ONTAP 每小時會重新整理角色指派。
+. 請使用者存取 Cloud Volumes ONTAP 系統，並確認可用操作與指派的角色相符。
+
+
+如果使用者無法存取系統，請驗證該使用者是否在組織、資料夾或專案層級擁有 Cloud Volumes ONTAP 角色。
+
+
+
+[[related-information]]
+== 相關資訊
+
+* link:reference-iam-cvo-roles.html["Cloud Volumes ONTAP 存取角色"]
+* link:concept-iam-rbac.html["了解 NetApp Console 角色型存取控制"]
+* link:task-iam-manage-roles.html["在NetApp Console中管理成員存取權限"]
+
