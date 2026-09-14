@@ -161,6 +161,7 @@ podman info | grep networkBackend
 
 
 
+. 如果將此代理程式與 Cloud Volumes ONTAP 系統關聯，請考慮增加與該代理程式關聯的執行緒數量以提高效能。link:https://kb.netapp.com/Cloud/ncds/nds/cvods/cvods_kbs/CVO_going_to_failed_state_frequently_in_NetApp_Console["了解如何增加代理程式的 Container 執行緒限制"^]。
 
 
 --

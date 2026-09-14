@@ -83,11 +83,11 @@ NOTE: 目前已知問題導致 *組織檢視者* 和 *Cloud Volumes ONTAP 檢視
 [[review-roles-after-upgrading-the-console-agent]]
 == 升級 Console 代理程式後審查角色
 
-將 Console 代理程式升級至 4.9.0 或更新版本後，Console 會根據現有使用者的平台角色自動為其指派 Cloud Volumes ONTAP 角色。這種一次性指派（稱為 seeding）有助於使用者保留適當的 Cloud Volumes ONTAP 存取，而無需系統管理員手動指派每個角色。Seeding 會根據使用者現有的平台角色指派 Cloud Volumes ONTAP 管理員或檢視者角色。此對應僅在移轉期間有效；對於新的指派，平台角色不會取代明確的 Cloud Volumes ONTAP 角色。請審查 seeded 角色，以確認使用者僅保留其所需的存取。
+將控制台代理程式升級至 4.9.0 或更高版本後，控制台會根據現有使用者的平台角色自動為其指派 Cloud Volumes ONTAP 角色。這種一次性分配方式有助於使用者保留對應的 Cloud Volumes ONTAP 存取，而無需系統管理員手動指派每個角色。系統會根據使用者現有的平台角色自動為其指派 Cloud Volumes ONTAP 角色。此對應僅在移轉期間有效；平台角色不會取代新指派的 Cloud Volumes ONTAP 角色。請審查新角色，以確認使用者僅保留其所需的存取。
 
 .步驟
 . 識別包含每個 Cloud Volumes ONTAP 系統的組織、資料夾或專案。
-. 審查指派給每個使用者的 Cloud Volumes ONTAP 角色，並確認其已指派至包含該系統的組織、資料夾或專案層級。如需預期的初始角色，請參閱 link:reference-iam-cvo-roles.html#seeding-mappings-for-existing-users["為現有使用者初始化對應"]。
+. 審查指派給每個使用者的 Cloud Volumes ONTAP 角色，並確認其已指派至包含該系統的組織、資料夾或專案層級。link:reference-iam-cvo-roles.html#seeding-mappings-for-existing-users["了解升級後自動指派的 Cloud Volumes ONTAP 角色"]。
 . 當初始角色與使用者職責不符時，需要指派或變更 Cloud Volumes ONTAP 角色。初始角色指派程序會根據使用者現有的平台角色指派 Cloud Volumes ONTAP 管理員或檢視者角色。如果使用者需要營運者層級的權限，則需要在初始角色指派後明確指派 Cloud Volumes ONTAP 營運者角色。
 . 最多等待一小時，讓新的或更新的角色指派生效。Cloud Volumes ONTAP 每小時會重新整理角色指派。
 . 請使用者存取 Cloud Volumes ONTAP 系統，並確認可用操作與指派的角色相符。

@@ -28,18 +28,19 @@ link:reference-iam-predefined-roles.html["了解訪問角色"] 。
 
 
 [[role-migrations-for-existing-users]]
+[[seeding-mappings-for-existing-users]]
 == 現有使用者的角色移轉
 
 當您將主控台代理程式升級至 4.9.0 或更新版本時，主控台會根據現有使用者的平台角色，為其指派額外的 Cloud Volumes ONTAP 角色。
 
 
-NOTE: 當現有的 Console 代理程式升級至 Console 4.9.0 或更新版本時，Console 會執行一次性的初始化程序，將 Cloud Volumes ONTAP 角色指派給組織中的現有使用者。此程序最多可能需要 30 分鐘才能完成。若要審查及調整已初始化的角色，請參閱 link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["升級 Console 代理程式後審查角色"]。
+NOTE: 當現有的 Console 代理程式升級至 Console 4.9.0 或更新版本時，Console 會執行一次性的移轉程序，將 Cloud Volumes ONTAP 角色指派給組織中的現有使用者。此程序可能需要長達 30 分鐘才能完成。若要審查和調整移轉期間指派的角色，請參閱 link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["升級 Console 代理程式後審查角色"]。
 
 下列對應僅適用於此一次性移轉程序。
 
 [cols="50,50"]
 |===
-| 現有平台角色 | 在種子產生期間指派 Cloud Volumes ONTAP 角色 
+| 現有平台角色 | 升級期間指派的 Cloud Volumes ONTAP 角色 
 
 
 | 超管理員 | Cloud Volumes ONTAP 管理員 

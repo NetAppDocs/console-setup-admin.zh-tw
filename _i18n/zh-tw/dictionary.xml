@@ -6556,10 +6556,8 @@
   <block id="477c09cb5610382ea6fb7978147584f0" category="section-title">現有使用者的角色移轉</block>
   <block id="2144a74d9bd9b04e77b26ea6f662072b" category="paragraph">當您將主控台代理程式升級至 4.9.0 或更新版本時，主控台會根據現有使用者的平台角色，為其指派額外的 Cloud Volumes ONTAP 角色。</block>
   <block id="8f07835784615aa819dfff43f4ab0f2e" category="inline-link-macro">升級 Console 代理程式後審查角色</block>
-  <block id="4935d39c33b785da4c7add3d08807c1b" category="admonition">當現有的 Console 代理程式升級至 Console 4.9.0 或更新版本時，Console 會執行一次性的初始化程序，將 Cloud Volumes ONTAP 角色指派給組織中的現有使用者。此程序最多可能需要 30 分鐘才能完成。若要審查及調整已初始化的角色，請參閱 <block ref="9c6eb0f6ef6d33dd56540127f1739544" category="inline-link-macro-rx"></block>。</block>
   <block id="cc4d5362d4db1743065e85867391e3f7" category="paragraph">下列對應僅適用於此一次性移轉程序。</block>
   <block id="9426ecd2d551af7bd95369b07facce3c" category="cell">現有平台角色</block>
-  <block id="996d0510bc51c1b8c7ecf1631282579f" category="cell">在種子產生期間指派 Cloud Volumes ONTAP 角色</block>
   <block id="b04e504847ef6b67f0727b490728c90b" category="cell">資料夾或專案檢視器</block>
   <block id="a5177570255a467a81cc5b270323bf23" category="cell">任何其他平台角色</block>
   <block id="bdb1e832e4cad8743cbdc77c5df5a31f" category="paragraph">控制台會將 Cloud Volumes ONTAP 角色指派到與現有平台角色相同的層級。這些對應不適用於新的角色指派。若要審查和調整已初始化的角色，請參閱 <block ref="9c6eb0f6ef6d33dd56540127f1739544" category="inline-link-macro-rx"></block>。</block>
@@ -6597,10 +6595,7 @@
   <block id="2386e129e4fecc93195657ea4dc87101" category="list-text">在要代管的專案中新增或探索 Cloud Volumes ONTAP 系統。深入瞭解<block ref="b68463f6d3bf4cfc966dc5504bb09dac" category="inline-link-rx"></block>。</block>
   <block id="1b6d320c6cc19b18ed20adf7b7cc1588" category="inline-link-macro">了解如何將資源關聯到資料夾和專案</block>
   <block id="28ced76b7b3a01b510c263591f1042c0" category="list-text">如果系統或其 Console 代理程式必須在其他專案中可用，請將資源與這些專案建立關聯。<block ref="3a0f5c999f52d199bd3e8bda7f8df4b1" category="inline-link-macro-rx"></block>。</block>
-  <block id="1ae34a1a97c96fb501df108f0ccaaa50" category="paragraph">將 Console 代理程式升級至 4.9.0 或更新版本後，Console 會根據現有使用者的平台角色自動為其指派 Cloud Volumes ONTAP 角色。這種一次性指派（稱為 seeding）有助於使用者保留適當的 Cloud Volumes ONTAP 存取，而無需系統管理員手動指派每個角色。Seeding 會根據使用者現有的平台角色指派 Cloud Volumes ONTAP 管理員或檢視者角色。此對應僅在移轉期間有效；對於新的指派，平台角色不會取代明確的 Cloud Volumes ONTAP 角色。請審查 seeded 角色，以確認使用者僅保留其所需的存取。</block>
   <block id="87a572687e882fc98097f9c9f4575d8d" category="list-text">識別包含每個 Cloud Volumes ONTAP 系統的組織、資料夾或專案。</block>
-  <block id="9e3d1d8d81f1830befbef42ebbb854bf" category="inline-link-macro">為現有使用者初始化對應</block>
-  <block id="124f3b8b4925d1f284c981a3d0766bbc" category="list-text">審查指派給每個使用者的 Cloud Volumes ONTAP 角色，並確認其已指派至包含該系統的組織、資料夾或專案層級。如需預期的初始角色，請參閱 <block ref="45c304ee1ade93cf85129ebc868db872" category="inline-link-macro-rx"></block>。</block>
   <block id="7bd571056c71556ed1cf73ce3020ca53" category="list-text">當初始角色與使用者職責不符時，需要指派或變更 Cloud Volumes ONTAP 角色。初始角色指派程序會根據使用者現有的平台角色指派 Cloud Volumes ONTAP 管理員或檢視者角色。如果使用者需要營運者層級的權限，則需要在初始角色指派後明確指派 Cloud Volumes ONTAP 營運者角色。</block>
   <block id="5774c29530ef3d00986577fe09901f16" category="list-text">請使用者存取 Cloud Volumes ONTAP 系統，並確認可用操作與指派的角色相符。</block>
   <block id="a065f8eda24e666f32ca8b894d69f8fd" category="paragraph">如果使用者無法存取系統，請驗證該使用者是否在組織、資料夾或專案層級擁有 Cloud Volumes ONTAP 角色。</block>
@@ -6609,4 +6604,11 @@
   <block id="7f9913169b42b8f5d52af4ca9c8717f1" category="list-text"><block ref="7f9913169b42b8f5d52af4ca9c8717f1" category="inline-link-macro-rx"></block></block>
   <block id="0482ab4442a9ba22f7c194297a8cb1f2" category="list-text"><block ref="0482ab4442a9ba22f7c194297a8cb1f2" category="inline-link-macro-rx"></block></block>
   <block id="0b4dbf2063bf2cee842f6213a668ca13" category="sidebar">開始使用 NetApp Console （標準模式）</block>
+  <block id="54383aac445d39de2e8c245040d07b5f" category="inline-link-macro">了解如何增加代理程式的 Container 執行緒限制</block>
+  <block id="d2c88e74d3861db30d07ea7d5b32f8b4" category="list-text">如果將此代理程式與 Cloud Volumes ONTAP 系統關聯，請考慮增加與該代理程式關聯的執行緒數量以提高效能。<block ref="19d35f1710aa989f7c51ec017381d272" category="inline-link-macro-rx"></block>。</block>
+  <block id="3f5270815134250876b4de79ab285ee2" category="admonition">當現有的 Console 代理程式升級至 Console 4.9.0 或更新版本時，Console 會執行一次性的移轉程序，將 Cloud Volumes ONTAP 角色指派給組織中的現有使用者。此程序可能需要長達 30 分鐘才能完成。若要審查和調整移轉期間指派的角色，請參閱 <block ref="9c6eb0f6ef6d33dd56540127f1739544" category="inline-link-macro-rx"></block>。</block>
+  <block id="43caa104b2be33274574693f687b3b8a" category="cell">升級期間指派的 Cloud Volumes ONTAP 角色</block>
+  <block id="867f6306ad030ade00b2b5d1be06a297" category="paragraph">將控制台代理程式升級至 4.9.0 或更高版本後，控制台會根據現有使用者的平台角色自動為其指派 Cloud Volumes ONTAP 角色。這種一次性分配方式有助於使用者保留對應的 Cloud Volumes ONTAP 存取，而無需系統管理員手動指派每個角色。系統會根據使用者現有的平台角色自動為其指派 Cloud Volumes ONTAP 角色。此對應僅在移轉期間有效；平台角色不會取代新指派的 Cloud Volumes ONTAP 角色。請審查新角色，以確認使用者僅保留其所需的存取。</block>
+  <block id="acbaf21f08d26739d3a0e3645fd4f7c1" category="inline-link-macro">了解升級後自動指派的 Cloud Volumes ONTAP 角色</block>
+  <block id="a7f237db4808db8f7d7e3569c4c90eba" category="list-text">審查指派給每個使用者的 Cloud Volumes ONTAP 角色，並確認其已指派至包含該系統的組織、資料夾或專案層級。<block ref="943ee494db9e9617f80c85c45c5ec678" category="inline-link-macro-rx"></block>。</block>
 </blocks>
