@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: 'what"s new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases, console' 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes, agent, Console agent, NetApp Console, iam, notice, releases, console' 
 summary: 瞭解 NetApp Console 管理的新功能。 
 ---
 = NetApp Console 有哪些新功能
@@ -15,6 +15,58 @@ summary: 瞭解 NetApp Console 管理的新功能。
 
 [role="lead"]
 了解NetApp Console管理功能的新增功能：身分識別和存取管理 (IAM)、控制台代理程式、雲端提供者憑證等。
+
+
+
+[[17-september-2026]]
+== 2026 年 9 月 17 日
+
+
+
+[[private-mode-release-4-10-0]]
+=== 私有模式發布（4.10.0）
+
+新的私人模式版本現已可從 https://mysupport.netapp.com/site/downloads["NetApp支援站點"^]
+
+4.10.0 版本包含以下 NetApp Console 元件和服務的更新。
+
+[cols="3*"]
+|===
+| 組件或服務 | 此版本中包含的版本 | 自上次私人模式發布以來的變化 
+
+
+| 控制台代理 | 4.10.0 | 前往 https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2026-08-13.html["NetApp Console 頁面新增功能"^]並參考版本 4.10.0 中包含的變更。 
+
+
+| NetApp Backup and Recovery | 5.6.2（2026年8月17日） | 前往  https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["NetApp Backup and Recovery 頁面的最新消息"^]。 
+
+
+| NetApp Data Classification | 1.546.0（2026年8月10日） | 前往  https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["NetApp Classification 頁面新增功能"^]。 
+|===
+
+
+[[16-september-2026]]
+== 2026 年 9 月 16 日
+
+
+
+[[console-agent-4-11-0]]
+=== Console 代理 4.11.0
+
+4.11.0 版本同時支援標準模式和受限模式。
+
+此版本的 Console 代理程式包含安全性改善和錯誤修正。
+
+
+
+[[netapp-console-administration]]
+=== NetApp Console管理
+
+
+
+==== 簡化 AWS Marketplace 中 Cloud Volumes ONTAP 訂閱者的代理程式部署流程
+
+如果您是 link:https://us-east-1.console.aws.amazon.com/marketplace/search/listing/prodview-yi43o6oz7bf32?sr=0-2&ref_=ucaf&applicationId=AWS-Marketplace-Console["AWS Marketplace 中的獨立式 Cloud Volumes ONTAP 訂閱"] 的新訂閱者，NetApp Console 現在簡化了代理程式部署。您只需更少的步驟即可設定 AWS 角色、政策和憑證，在單一頁面上自動使用預設值，並更快完成設定。
 
 
 

@@ -155,7 +155,16 @@ summary: NetApp Console身分和存取管理包括可指派給組織成員的預
 | link:reference-iam-ransomware-roles.html["勒索軟體恢復用戶行為檢視器"] | 勒索軟體復原能力使用者行為檢視器 | 標準 | 查看勒索軟體復原中的可疑使用者行為警報和見解。 
 
 
-| SnapCenter管理員 | SNAPCENTER_ADMIN | 標準、私有 | 提供使用NetApp Backup and Recovery從本機ONTAP叢集備份應用程式快照的功能。具有此角色的成員可以完成以下操作：* 從“備份和恢復”>“應用程式”完成任何操作* 管理他們具有權限的項目和資料夾中的所有系統* 使用所有NetApp Console服務SnapCenter沒有查看者角色。 
+| SnapCenter管理員 | SNAPCENTER_ADMIN | 標準、私有  a| 
+提供使用應用程式專用的 NetApp Backup and Recovery 來備份內部部署 ONTAP 叢集快照的功能。擁有此角色的成員可以完成下列行動：
+
+* 完成 Backup and Recovery > Applications 中的任何行動
+* 管理他們擁有權限的專案和資料夾中的所有系統
+* 使用所有 NetApp Console 服務
+
+
+SnapCenter 沒有觀看者角色。
+
 |===
 
 

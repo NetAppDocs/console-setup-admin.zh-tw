@@ -1602,7 +1602,6 @@
   <block id="be3e2e05d81fbbe5328217c66f55042d" category="cell"><block ref="be3e2e05d81fbbe5328217c66f55042d" category="inline-link-macro-rx"></block></block>
   <block id="da19f72933d8074d76c7f923694c67fd" category="cell">查看勒索軟體復原中的可疑使用者行為警報和見解。</block>
   <block id="36910b765d93c29f4611f725c05faabe" category="cell">SnapCenter管理員</block>
-  <block id="49016d07ca0d0bf92d598d1c92a187e1" category="cell">提供使用NetApp Backup and Recovery從本機ONTAP叢集備份應用程式快照的功能。具有此角色的成員可以完成以下操作：* 從“備份和恢復”&gt;“應用程式”完成任何操作* 管理他們具有權限的項目和資料夾中的所有系統* 使用所有NetApp Console服務SnapCenter沒有查看者角色。</block>
   <block id="f6bd0d7447ff66cc6b859603a88fbde9" category="section-title">相關連結</block>
   <block id="05271cfa0bdeea693a59837fb97cbc3b" category="list-text"><block ref="05271cfa0bdeea693a59837fb97cbc3b" category="inline-link-macro-rx"></block></block>
   <block id="d5c64a8daa89e747afab2353c532cfd0" category="inline-link-macro">開始使用NetApp Console IAM</block>
@@ -6611,4 +6610,22 @@
   <block id="867f6306ad030ade00b2b5d1be06a297" category="paragraph">將控制台代理程式升級至 4.9.0 或更高版本後，控制台會根據現有使用者的平台角色自動為其指派 Cloud Volumes ONTAP 角色。這種一次性分配方式有助於使用者保留對應的 Cloud Volumes ONTAP 存取，而無需系統管理員手動指派每個角色。系統會根據使用者現有的平台角色自動為其指派 Cloud Volumes ONTAP 角色。此對應僅在移轉期間有效；平台角色不會取代新指派的 Cloud Volumes ONTAP 角色。請審查新角色，以確認使用者僅保留其所需的存取。</block>
   <block id="acbaf21f08d26739d3a0e3645fd4f7c1" category="inline-link-macro">了解升級後自動指派的 Cloud Volumes ONTAP 角色</block>
   <block id="a7f237db4808db8f7d7e3569c4c90eba" category="list-text">審查指派給每個使用者的 Cloud Volumes ONTAP 角色，並確認其已指派至包含該系統的組織、資料夾或專案層級。<block ref="943ee494db9e9617f80c85c45c5ec678" category="inline-link-macro-rx"></block>。</block>
+  <block id="b6b21e530c678e5cd4c26f8b75ff76e8" category="doc">Console 代理 4.11.0</block>
+  <block id="734697dbdbd312c3dd63c9c68317e6e9" category="paragraph">4.11.0 版本同時支援標準模式和受限模式。</block>
+  <block id="60fd42d7efe4262e8d79051a1c47bc4f" category="section-title">簡化 AWS Marketplace 中 Cloud Volumes ONTAP 訂閱者的代理程式部署流程</block>
+  <block id="8bc5216f012502c8f371bc0ccb7e4b58" category="inline-link-macro">AWS Marketplace 中的獨立式 Cloud Volumes ONTAP 訂閱</block>
+  <block id="7f5d42097032ab5af27aa2c77a23c33b" category="paragraph">如果您是 <block ref="f4efe2873d568d07f96208e96f91d863" category="inline-link-macro-rx"></block> 的新訂閱者，NetApp Console 現在簡化了代理程式部署。您只需更少的步驟即可設定 AWS 角色、政策和憑證，在單一頁面上自動使用預設值，並更快完成設定。</block>
+  <block id="b889961c81eec2cb76cc8efad7794a80" category="doc">私有模式發布（4.10.0）</block>
+  <block id="a22ba5cede201b398675ddfd63c9864d" category="paragraph">4.10.0 版本包含以下 NetApp Console 元件和服務的更新。</block>
+  <block id="c1b9fde9363d4906a9e67eb0862e9fc7" category="cell">4.10.0</block>
+  <block id="5ff195749703fc07b830e8ce460f4513" category="cell">前往<block ref="9d354d50c04a9174ec71f0d3d8410a23" category="inline-link-rx"></block>並參考版本 4.10.0 中包含的變更。</block>
+  <block id="c87dd127a9f46f1b24fd3cf0f74c6588" category="cell">5.6.2（2026年8月17日）</block>
+  <block id="669d8c7c23d7c1df9de525a93369bb8f" category="cell">1.546.0（2026年8月10日）</block>
+  <block id="99eb4ee0a56c7fb9d9fef77053e43af4" category="paragraph">提供使用應用程式專用的 NetApp Backup and Recovery 來備份內部部署 ONTAP 叢集快照的功能。擁有此角色的成員可以完成下列行動：</block>
+  <block id="f44c611b4162cee5fdf2ee447ed48192" category="list-text">完成 Backup and Recovery &gt; Applications 中的任何行動</block>
+  <block id="e88871c7007d89688acdcb7ffa4922fe" category="list-text">管理他們擁有權限的專案和資料夾中的所有系統</block>
+  <block id="50683e47eb84069af1a5abcad6f30c6b" category="list-text">使用所有 NetApp Console 服務</block>
+  <block id="4d2ba7b1416b46d72e4a391ee901ec54" category="paragraph">SnapCenter 沒有觀看者角色。</block>
+  <block id="1e464951e7ffdbf5ba8f20ee5038f44f" category="section-title">2026 年 9 月 17 日</block>
+  <block id="9d26347bf9049c082d482aa87b79d702" category="section-title">2026 年 9 月 16 日</block>
 </blocks>
