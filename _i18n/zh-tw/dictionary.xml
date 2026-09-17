@@ -6619,7 +6619,6 @@
   <block id="a22ba5cede201b398675ddfd63c9864d" category="paragraph">4.10.0 版本包含以下 NetApp Console 元件和服務的更新。</block>
   <block id="c1b9fde9363d4906a9e67eb0862e9fc7" category="cell">4.10.0</block>
   <block id="5ff195749703fc07b830e8ce460f4513" category="cell">前往<block ref="9d354d50c04a9174ec71f0d3d8410a23" category="inline-link-rx"></block>並參考版本 4.10.0 中包含的變更。</block>
-  <block id="c87dd127a9f46f1b24fd3cf0f74c6588" category="cell">5.6.2（2026年8月17日）</block>
   <block id="669d8c7c23d7c1df9de525a93369bb8f" category="cell">1.546.0（2026年8月10日）</block>
   <block id="99eb4ee0a56c7fb9d9fef77053e43af4" category="paragraph">提供使用應用程式專用的 NetApp Backup and Recovery 來備份內部部署 ONTAP 叢集快照的功能。擁有此角色的成員可以完成下列行動：</block>
   <block id="f44c611b4162cee5fdf2ee447ed48192" category="list-text">完成 Backup and Recovery &gt; Applications 中的任何行動</block>
@@ -6628,4 +6627,5 @@
   <block id="4d2ba7b1416b46d72e4a391ee901ec54" category="paragraph">SnapCenter 沒有觀看者角色。</block>
   <block id="1e464951e7ffdbf5ba8f20ee5038f44f" category="section-title">2026 年 9 月 17 日</block>
   <block id="9d26347bf9049c082d482aa87b79d702" category="section-title">2026 年 9 月 16 日</block>
+  <block id="9bb8a5cf038a4165b497e11d9718970b" category="cell">5.6.2（2026年8月31日）</block>
 </blocks>
