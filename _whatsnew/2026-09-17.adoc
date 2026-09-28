@@ -24,3 +24,9 @@
 
 | NetApp Data Classification | 1.546.0（2026年8月10日） | 前往  https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["NetApp Classification 頁面新增功能"^]。 
 |===
+
+
+[[private-mode-4-10-0-supports-red-hat-enterprise-linux-rhel-9-6]]
+=== 私有模式 4.10.0 支援 Red Hat Enterprise Linux (RHEL) 9.6
+
+現在可以在 Red Hat Enterprise Linux（RHEL）9.6 上安裝和執行私有模式，為使用者提供最新的支援作業系統，以增強安全性和效能。link:https://docs.netapp.com/us-en/console-setup-admin/task-prepare-private-mode.html#step-3-review-host-requirements["了解私有模式的主機需求"^]
