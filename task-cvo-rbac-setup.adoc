@@ -16,6 +16,9 @@ summary: 透過組織專案、新增 Console 成員和指派 Cloud Volumes ONTAP
 [role="lead"]
 設定對 Cloud Volumes ONTAP 的存取，以便現有 Console 使用者保留所需的存取，並且新訂閱者可以新增具有適當權限的使用者。
 
+
+NOTE: 當您執行控制台代理程式版本 4.9.0 或更新版本時，即可使用 Cloud Volumes ONTAP 的存取角色。
+
 請使用下列其中一個區段：
 
 * *初次使用 NetApp Console 和 Cloud Volumes ONTAP*：為新使用者和 Cloud Volumes ONTAP 系統設定角色型存取。
