@@ -1276,7 +1276,6 @@
   <block id="2fdb3c88062031f1ec65eef60690cee3" category="paragraph"><block ref="2fdb3c88062031f1ec65eef60690cee3" category="inline-link-macro-rx"></block></block>
   <block id="87047facc49847cec237f6d055d56b31" category="section-title">可存取互聯網的預設配置</block>
   <block id="ee67bef980f9156a14c8bfbb2de4f437" category="paragraph">如果您從NetApp Console、雲端提供者的市場部署了控制台代理，或在具有 Internet 存取權限的本機 Linux 主機上手動安裝了控制台代理，則下列設定詳細資訊適用。</block>
-  <block id="716a3a2cd4a75b8f8b3cee509c10b300" category="paragraph">如果您從控制台或雲端提供者的市場部署了控制台代理，請注意以下事項：</block>
   <block id="33ff271280dc3e0c2c15bf39aeefdeb9" category="list-text">EC2 執行個體類型為 t3.2xlarge。</block>
   <block id="7c42c6e2f8295dada12f50f825327ddf" category="list-text">該映像的作業系統是 Ubuntu 22.04 LTS。</block>
   <block id="953e61420be6157aa122dfd3475d4070" category="paragraph">該作業系統不包含 GUI。您必須使用終端來存取系統。</block>
@@ -1285,7 +1284,6 @@
   <block id="efabd80ebdd217a47d9be936e5f0b8aa" category="list-text">預設系統磁碟是 100 GiB gp2 磁碟。</block>
   <block id="f637fe372218bb6ee39fd481301dc99f" category="list-text">VM 類型為 Standard_D8s_v3。</block>
   <block id="474a089504b47eb34ee00ee62f121108" category="list-text">預設系統碟為100GiB高級SSD碟。</block>
-  <block id="691706b9c4449b81a486ce65a12e3b41" category="paragraph">如果您從控制台部署了控制台代理，請注意以下事項：</block>
   <block id="d8c41b98cc9656d72fb99f79ff2425ba" category="list-text">VM 實例是 n2-standard-8。</block>
   <block id="6cb5fb9b61376b8ee3092321445fdea4" category="list-text">預設系統磁碟是 100 GiB SSD 持久性磁碟。</block>
   <block id="bc4aa6323016172de14a6835883b27c7" category="section-title">安裝資料夾</block>
@@ -3573,11 +3571,8 @@
   <block id="19df8bb4b5a805b23aeac731605bdf21" category="list-text">您現有的NetApp支援網站 (NSS) 憑證</block>
   <block id="912ae110aa8df4a37c4331859a5e502a" category="list-text">使用您的電子郵件地址和密碼的NetApp Console帳戶</block>
   <block id="03eb7e8aedd1ad900f6996ff1a9cf8dd" category="list-text">在*登入*頁面上，輸入與您的登入關聯的電子郵件地址。</block>
-  <block id="b3cb6ababbe01759cd13ec3fb3684c1a" category="summary">維護代理主機上的作業系統是您的責任。例如，您應該按照公司的作業系統分發標準程序，對控制台代理主機上的作業系統套用安全性更新。</block>
   <block id="e841c125c9e210ed4ede7a3ae1c5ada8" category="paragraph">無需停止代理主機服務即可套用作業系統安全性修補程式。</block>
-  <block id="d54ab8a1d5dd0b1066137c76d5021844" category="section-title">VM 或實例類型</block>
   <block id="d69b367407abdea589b8942156f4e07a" category="paragraph">如果您從控制台建立控制台代理，它會使用預設配置在您的雲端提供者中部署 VM 執行個體。建立代理程式後，請勿切換到具有較少 CPU 或 RAM 的較小 VM 執行個體。</block>
-  <block id="d6ca9eb671a9ff98d68b7f7acaf8ec88" category="paragraph">下表列出了 CPU 和 RAM 要求：</block>
   <block id="a97c9ede934c84f0e97d896b05cd1ae0" category="inline-link-macro">了解代理的預設配置</block>
   <block id="4203742da4cdc7c1dd82452f22078923" category="paragraph"><block ref="6644ee05b73ff616838ce63980e80332" category="inline-link-macro-rx"></block> 。</block>
   <block id="3eecd3f04a3aed6d69a686b8c6860e44" category="section-title">監控代理</block>
@@ -4253,7 +4248,6 @@
   <block id="d99778be9371fb280b62abdcd21887c2" category="sidebar">與 PingFederate 聯合</block>
   <block id="d00255b25e6ac270c154c1b88351cb61" category="sidebar">管理聯盟</block>
   <block id="b738cb995b90e7ef0f6b53e82271107a" category="sidebar">匯入現有的聯合連接</block>
-  <block id="c8fa489b70f23c314b0b945db2384452" category="sidebar">維護 VCenter 安裝的代理</block>
   <block id="70328d3965555bdfe7c71386e9e25887" category="sidebar">安裝 CA 簽章憑證以存取 Web 控制台</block>
   <block id="417a7f2f69f19fbcd309a4694944397e" category="sidebar">要求在 EC2 執行個體上使用 IMDSv2</block>
   <block id="e5c32965ed32649bcfd48bc8b138f3d2" category="sidebar">解除安裝並刪除控制台代理</block>
@@ -5716,7 +5710,6 @@
   <block id="c55edff269043bf525a954a4154ec0a3" category="list-text">如果您的環境需要，請將自簽名憑證上傳到受信任憑證清單中。安裝完成後，您需要替換此憑證。</block>
   <block id="e8e9fe3b3946d0efef2689d6b175ac89" category="summary">在內部部署 Console 代理程式，然後登入並進行設定，使其與您的 Console 組織協同工作。</block>
   <block id="9845a65d039380c03d0798dc8b86888f" category="paragraph">手動安裝 Console 代理程式時，維護代理主機上的作業系統是您（客戶）的責任。例如，您（客戶）應依照公司標準的作業系統分發流程，為代理主機上的作業系統套用安全性更新。</block>
-  <block id="55775d5f288008be574f12b89a4bfa2f" category="section-title">將作業系統更新套用至代理程式主機</block>
   <block id="3ce4474c24a93038aca82b41eaebbafa" category="paragraph">為了保持與支援組態的相容性、您應該防止 Docker 或 Podman 在例行作業系統修補期間升級。您可以在更新期間暫時排除 Docker 或 Podman 、或永久設定套件管理程式以跳過 Docker 或 Podman 更新、來執行此作業。</block>
   <block id="1df03cb601702d6a5780de5b5b3fad56" category="paragraph">以下範例顯示如何在不同的 Linux 發行版中排除 Docker 或 Podman 更新。請查閱您的 Linux 發行版文件，以取得有關如何排除軟體套件更新的最新說明。</block>
   <block id="63fc7b8ffa3779963d0e9e15f3827fb1" category="listing-title">Podman 範例</block>
@@ -5763,8 +5756,6 @@
   <block id="7b3521e08bd698da5e7f4e8dd23ffd28" category="sidebar">從 Azure 市場在 Azure 中建立 Console 代理程式</block>
   <block id="9263d00bd3085ab3f7fe9d54b53da0bb" category="sidebar">從 Google Cloud 建立 Google Cloud 的 Console 代理程式</block>
   <block id="ef65981a653f842358b97ed65fdd873e" category="sidebar">在 vCenter 中本機安裝 Console 代理程式</block>
-  <block id="0b1032eeff080ebafeabe1d451b25cbc" category="sidebar">維護手動安裝的 Console 代理程式</block>
-  <block id="fed6fefc4794de432303a8decf8cfed9" category="sidebar">維護手動安裝的代理程式</block>
   <block id="15cae31ad8279b2e766e14f72e9a7766" category="sidebar">關於身分識別與存取管理的常見問題</block>
   <block id="bde6bbfbb596382f506558c6bab1343b" category="paragraph">NetApp Cloud Tiering 自 2026 年 4 月 26 日起不再提供購買或授權續約。</block>
   <block id="bb94a9ffb3205557387f0b00f8e24dca" category="paragraph">現有客戶可以繼續使用 NetApp Cloud Tiering 並獲得支援,直到其訂閱或授權合約到期。訂閱到期後,客戶將無法再存取 NetApp Cloud Tiering 功能或獲得支援。</block>
@@ -6401,7 +6392,6 @@
   <block id="fb0147398e4c8a5b077a1394aed4389e" category="doc">以私有模式部署 NetApp Console 代理程式</block>
   <block id="24aa86604f7c13368f329291e2176320" category="doc">以受限模式部署 NetApp Console 代理程式</block>
   <block id="9f055563896ad1d86b1aff07fa15e9db" category="doc">安裝 CA 簽署的憑證以存取 NetApp Console</block>
-  <block id="732e996d6e02c3ebc791dbde9abe1e56" category="doc">維護手動安裝的 NetApp Console 代理程式的虛擬機器</block>
   <block id="9e85e0ca90299f57faff64486b07b169" category="doc">查看與不同 NetApp Console 代理程式關聯的系統</block>
   <block id="df3c94950882fe8269c8bd3124102787" category="doc">在 NetApp Console 中強制執行 ONTAP System Manager 的 ONTAP 權限</block>
   <block id="8fbfb7191006f1ff54bec4699202f25d" category="doc">在 NetApp Console 中管理合作夥伴成員</block>
@@ -6639,4 +6629,38 @@
   <block id="ffc6d9152a780992794d0684b51c6723" category="section-title">私有模式 4.10.0 支援 Red Hat Enterprise Linux (RHEL) 9.6</block>
   <block id="e8df4a2f18a880c577818fb8618fed77" category="inline-link-macro">了解私有模式的主機需求</block>
   <block id="a40f09cfdf03cc6659d4d7e08024fda0" category="paragraph">現在可以在 Red Hat Enterprise Linux（RHEL）9.6 上安裝和執行私有模式，為使用者提供最新的支援作業系統，以增強安全性和效能。<block ref="0ce7e93392d1f71f6b7bb5b508ff4113" category="inline-link-macro-rx"></block></block>
+  <block id="d936096dffa04e3124e5d4c80196d9de" category="paragraph">如果您從 Console 或 AWS 市場部署 Console 代理程式，請附註以下事項：</block>
+  <block id="0fa3a8f00ba3b038c62aebffe253e28f" category="paragraph">如果您從 Console 或 Azure 市場部署 Console 代理程式，請附註以下事項：</block>
+  <block id="a2323952e590356476553107e2abe98c" category="paragraph">如果您從 Console 或 Google Cloud 市場部署 Console 代理程式，請附註下列事項：</block>
+  <block id="21de1b13e5efe0020aa6cdbb1d2b61d2" category="summary">了解如何維護 NetApp Console 代理程式 VM，包括手動安裝代理程式的作業系統安全性更新、建議的 CPU 和 RAM 規模、資源健全狀況通知，以及 VM 啟動和停止程序。</block>
+  <block id="035e92b8aeea6fa24a0517bf7366d1b5" category="doc">維護 NetApp Console 代理程式 VM</block>
+  <block id="881c784605961fd632d1b333ae2b94d3" category="paragraph">藉由將作業系統安全性更新套用至手動安裝的代理程式、回應 CPU、RAM 和磁碟空間警示，以及在需要時調整大小或停止與啟動虛擬機器，來維護 NetApp Console 代理程式虛擬機器</block>
+  <block id="a5acc2e9f80d7968826410eb8d90176a" category="paragraph">如果代理程式 VM 資源不足或出現效能問題，您應該採取適當措施升級 VM 資源。</block>
+  <block id="a0b87bad7f7c6fb7b05dad4b5379c7f4" category="inline-link-macro">了解如何在 vCenter 中維護代理程式 VM</block>
+  <block id="f4be3684a7c70d65bbde755040eb5341" category="admonition">如果您在 vCenter 中安裝了代理程式，請使用 Console 維護工具來調整 VM 執行個體的大小<block ref="580222f1768f95a45a989516898619e7" category="inline-link-macro-rx"></block>。</block>
+  <block id="faeff01d1eb32a62718670db7485bac5" category="section-title">為手動安裝的代理程式主機套用作業系統更新</block>
+  <block id="914d0fb4e5278e862bac0a1144be9e3a" category="section-title">調整 VM 或執行個體類型的大小</block>
+  <block id="5026ee94a3844739b7b98e26eb0afa69" category="paragraph">如果您收到代理程式虛擬機器資源不足的通知，請考慮升級到具有更多 CPU 或 RAM 的更大虛擬機器執行個體，以確保最佳效能。</block>
+  <block id="680b19ee1d758b71ac801931567484fa" category="inline-link-macro">了解如何在 VCenter 中調整代理程式虛擬機器的大小</block>
+  <block id="82286d11ad0d72c2f4444465cfc607f8" category="admonition">如果您在 VCenter 中安裝了代理程式，請使用 Console 維護工具來調整 VM 執行個體的大小。<block ref="60222936a5c51d9355b2bdeed0ba0625" category="inline-link-macro-rx"></block>。</block>
+  <block id="429d13a19800a749f805f159f0d1f48b" category="paragraph">如果需要增加代理程式虛擬機器的 CPU 或記憶體，請依照雲端供應商或內部部署虛擬化平台提供的說明調整虛擬機器執行個體的大小。NetApp 建議將目前的 CPU 和記憶體分配增加一倍，以確保最佳效能。下表顯示建議的規模分層，每個分層的 CPU 和記憶體都是前一個分層的兩倍。</block>
+  <block id="9483f17a69bd0b52dbc44f9106718634" category="cell">層級</block>
+  <block id="686a4be8c9228f8a3b2888584052a87d" category="cell">CPU（核心或 vCPU）</block>
+  <block id="a1d0ec6d56f8833a078b5a7ac4caf2d4" category="cell">最低限度</block>
+  <block id="c9f0f895fb98ab9159f51fd0297e236d" category="cell">8</block>
+  <block id="87f8a6ab85c9ced3702b4ea641ad4bb5" category="cell">中</block>
+  <block id="c74d97b01eae257e44aa9d5bade97baf" category="cell">16</block>
+  <block id="7fffe4f81cc10365684f8c3ef5dfc752" category="cell">64 GB</block>
+  <block id="3a69b34ce86dacb205936a8094f6c743" category="cell">大型</block>
+  <block id="6364d3f0f495b6ab9dcf8d3b5c6e0b01" category="cell">32</block>
+  <block id="da41e52384d87f5c6c3e5e945da60a14" category="cell">128 GB</block>
+  <block id="63fc38affa0b93880874dfd8be47c884" category="inline-link-macro">了解如何在 AWS 中增加代理程式虛擬機器的大小</block>
+  <block id="4eb4fbc9f4b1f5afafcac6a123b425c7" category="list-text"><block ref="6e063447534647b51c140238c13a2b8f" category="inline-link-macro-rx"></block>。</block>
+  <block id="aa78f3586cd4f7f95f311556e27f7ddf" category="inline-link-macro">了解如何在 Azure 中增加代理程式 VM 的大小</block>
+  <block id="347d20ed7ad2270153e63a9dbfe44620" category="list-text"><block ref="de92966e3a85c9672341001f96935512" category="inline-link-macro-rx"></block>。</block>
+  <block id="adc4a092d7d7c679e76d2c12eaf31f06" category="inline-link-macro">了解如何在 Google Cloud 中增加代理程式虛擬機器的大小</block>
+  <block id="7aa535f489b823f460c3cb01996a277c" category="list-text"><block ref="eaf540623fa9cd9c0c91c8db62cef688" category="inline-link-macro-rx"></block>。</block>
+  <block id="f195c3b76464876e0848dadd15d334f6" category="inline-link-macro">了解如何增加在 VCenter 中執行的內部部署代理程式的大小</block>
+  <block id="4cbf31d3afff31a0915f41b3987e9479" category="list-text"><block ref="706e14d3d1493bd7bc93630a70dd883a" category="inline-link-macro-rx"></block>。</block>
+  <block id="83ea5433d56d3644fb56d0b6b799c35e" category="sidebar">維護 vCenter 安裝的代理程式</block>
 </blocks>

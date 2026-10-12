@@ -179,11 +179,6 @@ image:screenshot-agent-validate.png["螢幕截圖顯示了代理「操作」選�
 [[disable-config-check]]
 === 停用手動安裝的設定檢查
 
-
-
-[[disable-configuration-checks-for-manual-installations]]
-=== 停用手動安裝的設定檢查
-
 有時您可能需要停用在安裝期間驗證出站連線的設定檢查。例如，在政府雲端環境中手動安裝代理程式時，需要停用設定檢查，否則安裝將失敗。
 
 您可以透過在 _com/opt/application/netapp/service-manager-2/config.json_ 檔案中設定 _skipConfigCheck_ 標誌來停用設定檢查。預設情況下，此標誌設定為 false，且設定檢查會驗證代理程式的出站存取。將此標誌設為 true 以停用檢查。在完成此步驟之前，請先熟悉 JSON 語法。
