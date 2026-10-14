@@ -31,7 +31,7 @@ summary: 了解 AWS、Azure 和 Google Cloud 上標準部署（可存取網際�
 如果您從 Console 或 AWS 市場部署 Console 代理程式，請附註以下事項：
 
 * EC2 執行個體類型為 t3.2xlarge。
-* 該映像的作業系統是 Ubuntu 22.04 LTS。
+* 該映像的作業系統為 Ubuntu 24.04 LTS。
 +
 該作業系統不包含 GUI。您必須使用終端來存取系統。
 
@@ -48,7 +48,7 @@ summary: 了解 AWS、Azure 和 Google Cloud 上標準部署（可存取網際�
 如果您從 Console 或 Azure 市場部署 Console 代理程式，請附註以下事項：
 
 * VM 類型為 Standard_D8s_v3。
-* 該映像的作業系統是 Ubuntu 22.04 LTS。
+* 該映像的作業系統為 Ubuntu 24.04 LTS。
 +
 該作業系統不包含 GUI。您必須使用終端來存取系統。
 
@@ -64,7 +64,7 @@ summary: 了解 AWS、Azure 和 Google Cloud 上標準部署（可存取網際�
 如果您從 Console 或 Google Cloud 市場部署 Console 代理程式，請附註下列事項：
 
 * VM 實例是 n2-standard-8。
-* 該映像的作業系統是 Ubuntu 22.04 LTS。
+* 該映像的作業系統為 Ubuntu 24.04 LTS。
 +
 該作業系統不包含 GUI。您必須使用終端來存取系統。
 

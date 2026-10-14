@@ -404,7 +404,6 @@
   <block id="0930e6e62078c5446e99045f0a678607" category="paragraph">Docker Engine 23.0.6 至 28.0.0。</block>
   <block id="8f06b143b878ae3919ba41cd38ea7380" category="list-text">在私人模式下使用控制台時，下列作業系統支援控制台代理程式。安裝代理之前需要一個容器編排工具。</block>
   <block id="1a3d8802d280d4ec910f54042cd62998" category="cell">SELinux</block>
-  <block id="a3336db0e9f7b6341a12794c144076b6" category="paragraph">Docker Engine 23.0.6 至 26.0.0</block>
   <block id="5556c95763913c6cfa8f61d9cab4f4f2" category="paragraph">26.0.0 支援 _new_ agent 3.9.44 或更高版本的安裝</block>
   <block id="afaf0577b469adb0296b4fcfa6f2af91" category="list-text">這些作業系統的英文版本支援控制台代理。</block>
   <block id="31acdb1c0f97e43347645b47a1cb7ad5" category="list-text">對於 RHEL，主機必須在 Red Hat 訂閱管理中註冊。如果未註冊，主機將無法在代理安裝期間存取儲存庫來更新所需的第三方軟體。</block>
@@ -1277,7 +1276,6 @@
   <block id="87047facc49847cec237f6d055d56b31" category="section-title">可存取互聯網的預設配置</block>
   <block id="ee67bef980f9156a14c8bfbb2de4f437" category="paragraph">如果您從NetApp Console、雲端提供者的市場部署了控制台代理，或在具有 Internet 存取權限的本機 Linux 主機上手動安裝了控制台代理，則下列設定詳細資訊適用。</block>
   <block id="33ff271280dc3e0c2c15bf39aeefdeb9" category="list-text">EC2 執行個體類型為 t3.2xlarge。</block>
-  <block id="7c42c6e2f8295dada12f50f825327ddf" category="list-text">該映像的作業系統是 Ubuntu 22.04 LTS。</block>
   <block id="953e61420be6157aa122dfd3475d4070" category="paragraph">該作業系統不包含 GUI。您必須使用終端來存取系統。</block>
   <block id="688aea6136f160e02c8d5bbec6894343" category="list-text">安裝包括 Docker Engine，它是必需的容器編排工具。</block>
   <block id="8061654f55b31a1347dadde5417b3bbe" category="list-text">EC2 Linux 執行個體的使用者名稱是 ubuntu（對於 2023 年 5 月之前建立的代理，使用者名稱是 ec2-user）。</block>
@@ -6192,7 +6190,6 @@
   <block id="31c8c9293a24d211fe8df6780c3b5864" category="list-text">在為使用者或服務帳戶指派角色時、您可以從支援的角色中進行選擇。</block>
   <block id="b4c25e4423bb6dcb1445deb7b10e93fb" category="paragraph">僅支援的角色會顯示在下拉清單中。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
   <block id="7ea105aee574037d5e6af21567c8c3dc" category="paragraph">4.0.0 或更高版本，且控制台處於私有模式</block>
-  <block id="5d818424eacea237d3f2053aafd60fbe" category="paragraph">4.0.0 或更新版本</block>
   <block id="b39dc14a008a29a5ead42173a9e0c598" category="doc">私有模式發布（4.7.0）</block>
   <block id="2c0d034db2b48e2c24de792e5f537a36" category="paragraph">4.7.0 版本包含以下 NetApp Console 元件和服務的更新。</block>
   <block id="d794a9cd24f47c508609ee13d758511f" category="cell">4.7.0</block>
@@ -6664,4 +6661,6 @@
   <block id="83ea5433d56d3644fb56d0b6b799c35e" category="sidebar">維護 vCenter 安裝的代理程式</block>
   <block id="5d9476182acf1146ab60b631fc72ec99" category="admonition">當您執行控制台代理程式版本 4.9.0 或更新版本時，即可使用 Cloud Volumes ONTAP 的存取角色。</block>
   <block id="7be2d306061e806c6a2cf1ac2026ea93" category="section-title">升級至 Console 代理程式版本 4.9.0 或更新版本後，現有使用者的角色移轉</block>
+  <block id="ecfb18572af1acc83bcc04e648fd570d" category="paragraph">4.0.0 或更高版本，且 NetApp Console 處於私有模式</block>
+  <block id="044ded006ef73f38b5aa769474d4c58d" category="list-text">該映像的作業系統為 Ubuntu 24.04 LTS。</block>
 </blocks>
