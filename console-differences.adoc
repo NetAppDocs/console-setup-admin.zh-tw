@@ -54,7 +54,7 @@ Console 本機部署支援內部部署 ONTAP 叢集及 NetApp Backup and Recover
 
 Console 本地部署最適合擁有大型本地 ONTAP 環境且需要原則驅動型資源配置、自動法規遵循檢查和完整資料主權的組織。
 
-link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["了解 NetApp Console 本機部署^。"]
+link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["了解 NetApp Console 本地部署。"^]
 
 
 

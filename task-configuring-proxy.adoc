@@ -54,7 +54,7 @@ IMPORTANT: 設定 Proxy 後，您無法變更 Proxy 類型。如果您需要變�
 . 選擇*HTTP 代理程式配置*。
 . 在配置類型欄位中選擇*明確代理*。
 . 選擇*啟用代理*。
-. 使用語法指定伺服器 http://_address:port_[]或者 https://_address:port_[]
+. 使用語法 \http://<address>:<port> 或 \https://<address>:<port> 指定伺服器
 . 如果伺服器需要基本驗證，請指定使用者名稱和密碼。
 +
 請注意以下事項：

@@ -19,7 +19,7 @@ summary: 您可以透過 SaaS 應用程式使用 NetApp Console，也可以將�
 NetApp 將這些使用案例稱為_部署模式_。每種模式都提供不同的連線能力、功能和服務，以滿足您的業務和安全需求。
 
 標準模式（SaaS）:: NetApp Console SaaS（軟體即服務）應用程式支援存取所有 NetApp 資料服務、自動更新以及靈活的身份驗證選項，例如身分聯合和 NetApp Support Site 登入。此模式支援市場訂閱和 BYOL 授權。對於大多數使用者和組織而言，此模式是理想之選，尤其適合那些希望使用 NetApp Console 提供的所有功能和服務的使用者。
-受限模式（安裝在您自己的公有雲中）:: 受限模式適用於需要更高安全性和有限連接的組織，例如政府機構和受監管企業。您需要將 NetApp Console 安裝在您自己的公有雲（政府、主權或商業區域）中，並且它對 NetApp Console API 端點（託管在 SaaS 應用程式中）的出站連接受到限制。受限模式提供對關鍵資料服務的訪問，包括 Cloud Volumes ONTAP、Azure NetApp Files、NetApp Backup and Recovery（在政府和商業區域）以及資料分類，同時還提供自動軟體升級和身分認同聯合功能。
+受限模式（安裝在您自己的公有雲中）:: 受限模式適用於需要增強安全性與有限連線的組織，例如政府與受監管的公司。您將 NetApp Console 安裝在您自己的公有雲（位於政府、主權或商業區域）中，且其對 NetApp Console API 端點（託管於 SaaS 應用程式中）的傳出連線受到限制。受限模式提供對關鍵資料服務的存取，包括 AI Data Engine、Cloud Volumes ONTAP、Azure NetApp Files、NetApp Backup and Recovery（位於政府與商業區域）以及資料分類，並提供自動化軟體升級與身分聯盟。
 私有模式 （安裝在您的內部部署或雲端）:: 私有模式適用於對安全性需求極高的組織，例如 AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6 或實體隔離環境中的組織。它不會連接到 NetApp Console SaaS 應用程式或 NetApp 基於雲端的 API，從而賦予您完全的控制權並阻止外部通訊。支援的資料服務包括 NetApp Backup and Recovery、NetApp Data Classification、NetApp Replication 和 Cloud Volumes ONTAP。所有儲存和身份驗證均保留在本機，確保資料在您的環境中。國防承包商、具有嚴格資料駐留規則的金融機構以及擁有機密系統的政府機構均可使用此模式。
 
 
@@ -139,7 +139,10 @@ NetApp 建議客戶與其 NetApp 代表合作，將其現有的分層授權轉�
 | 工作負載 | 不 
 
 
-.8+| *數據服務* | NetApp Backup and Recovery | 是的 
+.9+| *數據服務* | NetApp AI Data Engine | 是的 
+
+
+| NetApp Backup and Recovery | 是的 
 
 
 | NetApp 分類 | 是的 
@@ -290,7 +293,10 @@ image:diagram-restricted-mode.png["概念圖顯示了公共互聯網（SaaS 應�
 | 本地ONTAP集群 | 探索和管理所需。您可以在沒有 Console 代理程式的情況下使用直接探索，但需要代理程式才能使用管理功能。 
 
 
-.3+| *Data Services*（受限模式支援的資料服務比標準模式少）  a| 
+.4+| *Data Services*（受限模式支援的資料服務比標準模式少） | AI Data Engine | 是的 
+
+
+ a| 
 備份與還原
 
 * 在政府區域和商業區域，以受限模式支援。在主權區域，以受限模式不支援。
@@ -638,7 +644,10 @@ NOTE: 標準模式（NetApp Console SaaS 應用程式）支援所有功能。
 | 工作負載 | 不 | 不 
 
 
-.8+| *數據服務* | 備份與還原 | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP磁碟區資料支援的備份目標列表"^] | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["查看ONTAP磁碟區資料支援的備份目標列表"^] 
+.9+| *數據服務* | AI Data Engine | 是的 | 不 
+
+
+| 備份與還原 | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["查看ONTAP磁碟區資料支援的備份目標列表"^] | 是的https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["查看ONTAP磁碟區資料支援的備份目標列表"^] 
 
 
 | NetApp 分類 | 是的 | 是的 
