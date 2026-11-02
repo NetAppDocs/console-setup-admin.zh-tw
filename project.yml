@@ -55,7 +55,13 @@ sidebar:
       - title: 準備進行受限的NetApp Console部署
         url: "/task-prepare-restricted-mode.html"
       - title: 以受限模式部署NetApp Console
-        url: "/task-install-restricted-mode.html"
+        entries:
+        - title: 從 AWS 市場部署 NetApp Console 受限模式
+          url: "/task-install-restricted-mode-aws.html"
+        - title: 在 Azure 市場中部署 NetApp Console 受限模式
+          url: "/task-install-restricted-mode-azure.html"
+        - title: 手動安裝 NetApp Console 受限模式（Google Cloud 需要）
+          url: "/task-install-restricted-mode-manual.html"
       - title: 訂閱NetApp Intelligent Services
         url: "/task-subscribe-restricted-mode.html"
       - title: 接下來可以做什麼

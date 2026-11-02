@@ -1,0 +1,358 @@
+---
+sidebar: sidebar 
+permalink: task-install-restricted-mode-aws.html 
+keywords: restricted mode, AWS, AWS GovCloud, AWS Marketplace, Console agent, Cloud Volumes ONTAP 
+summary: 從商業或政府市場以受限模式在 AWS 中部署 Console 代理程式，或在 Linux 主機上手動安裝。 
+---
+= 在 AWS 中以受限模式部署 NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+以受限模式部署控制台代理，以便您可以在有限的出站連線下使用NetApp Console。首先，安裝控制台代理，透過存取控制台代理上執行的使用者介面來設定控制台，然後提供您先前設定的雲端權限。
+
+從 AWS Marketplace（商業雲端或政府雲端）安裝 Console 代理程式，或在 Linux 主機上手動安裝。
+
+
+
+[[step-1-prepare-network-access]]
+== 步驟 1：準備網路存取
+
+允許下列傳出端點，以便 Console 代理程式可以管理 AWS 資源並存取 NetApp Console 服務。
+
+
+
+[[aws-endpoints]]
+=== AWS 端點
+
+允許這些 AWS 服務端點管理 AWS 資源，包括 FSx for ONTAP。
+
+[cols="2a,1a"]
+|===
+| 端點 | 目的 
+
+
+ a| 
+AWS 服務（amazonaws.com）：
+
+* 雲形成
+* 彈性運算雲（EC2）
+* 身分和存取管理 (IAM)
+* 金鑰管理服務（KMS）
+* 安全性令牌服務 (STS)
+* 簡單儲存服務（S3）
+
+ a| 
+管理 AWS 資源。端點取決於您的 AWS 區域。 https://docs.aws.amazon.com/general/latest/gr/rande.html["有關詳細信息，請參閱 AWS 文檔"^]
+
+
+
+ a| 
+Amazon FSx for NetApp ONTAP：
+
+* api.workloads.netapp.com
+
+ a| 
+基於 Web 的控制台透過與 Workload Factory API 互動來管理和操作基於ONTAP 的FSx 工作負載。
+
+|===
+
+
+[[netapp-console-endpoints]]
+=== NetApp Console 端點
+
+允許共享的端點用於 NetApp 支援、Console 功能，以及 Console 代理程式部署與升級。
+
+[cols="2a,1a"]
+|===
+| 端點 | 目的 
+
+
+ a| 
+* \ https://mysupport.netapp.com
+
+ a| 
+取得授權資訊並將 AutoSupport 訊息傳送至 NetApp 支援部門。
+
+
+
+ a| 
+* \ https://signin.b2c.netapp.com
+
+ a| 
+更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp Console。
+
+
+
+ a| 
+* \ https://support.netapp.com
+
+ a| 
+以取得授權資訊並將 AutoSupport 訊息傳送至 NetApp 支援，以及接收 Cloud Volumes ONTAP 的軟體更新。
+
+
+
+ a| 
+* \ https://api.bluexp.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \ https://cdn.auth0.com
+
+ a| 
+在NetApp Console中提供功能和服務。
+
+
+
+ a| 
+對於非政府區域，請使用以下端點：
+
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
+
+對於政府區域，請改用以下端點：
+
+* \ https://occmclientinfragov.azurecr.us
+
+ a| 
+取得用於 Console 代理程式部署和升級的映像。
+
+|===
+如需瀏覽器存取和其他連網要求，請參閱link:task-prepare-restricted-mode.html#step-5-prepare-network-access["準備受限模式下的網路存取"]。
+
+
+
+[[step-2-deploy-the-netapp-console-in-restricted-mode-in-aws]]
+== 步驟 2：在 AWS 中以受限模式部署 NetApp Console
+
+控制台代理程式的部署方式取決於您使用的是 AWS 商業市場、AWS 政府市場，還是在 Linux 主機上手冊安裝。
+
+
+
+[[install-netapp-console-restricted-mode-from-the-aws-commercial-marketplace]]
+=== 從 AWS 商業市場安裝 NetApp Console 受限模式
+
+.開始之前
+需要以下物品：
+
+* 滿足組網需求的VPC及子網路。
++
+link:task-prepare-restricted-mode.html#step-5-prepare-network-access["了解網路要求"]
+
+* 具有附加策略的 IAM 角色，其中包含控制台代理程式所需的權限。
++
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解如何設定 AWS 權限"]
+
+* 您的 IAM 使用者訂閱並取消訂閱 AWS Marketplace 的權限。
+* 了解代理程式的 CPU 和 RAM 要求。
++
+link:task-prepare-restricted-mode.html#step-3-review-host-requirements["審查代理要求"]。
+
+* EC2 執行個體的金鑰對。
+
+
+.步驟
+. 前往  https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace 上的NetApp Console代理程式列表"^]。
+. 在市場頁面上，選擇*繼續訂閱*。
+. 若要訂閱軟體，請選擇*接受條款*。
++
+訂閱過程可能需要幾分鐘。
+
+. 訂閱程序完成後，選擇*繼續配置*。
+. 在*配置此軟體*頁面上，確保您選擇了正確的區域，然後選擇*繼續啟動*。
+. 在*啟動此軟體*頁面的*選擇操作*下，選擇*透過 EC2 啟動*，然後選擇*啟動*。
++
+使用 EC2 控制台啟動執行個體並附加 IAM 角色。使用「從網站啟動」操作無法實現這一點。
+
+. 依照提示配置並部署實例：
++
+** *名稱和標籤*：輸入實例的名稱和標籤。
+** *應用程式和作業系統映像*：跳過此部分。控制台代理程式 AMI 已被選取。
+** *執行個體類型*：根據區域可用性，選擇符合 RAM 和 CPU 要求的執行個體類型（預先選擇並建議 t3.2xlarge）。
+** *金鑰對（登入）*：選擇您想要用來安全地連線到執行個體的金鑰對。
+** *網路設定*：依需求編輯網路設定：
++
+*** 選擇所需的 VPC 和子網路。
+*** 指定執行個體是否應具有公用 IP 位址。
+*** 指定安全性群組設置，為控制台代理實例啟用所需的連線方法：SSH、HTTP 和 HTTPS。
++
+link:reference-ports-aws.html["查看 AWS 的安全群組規則"] 。
+
+
+
+** *配置儲存*：保留根磁碟區的預設大小和磁碟類型。
++
+如果要在根磁碟區上啟用 Amazon EBS 加密，請選擇 *進階*，展開 *磁碟區 1*，選擇 *加密*，然後選擇 KMS 金鑰。
+
+** *進階詳細資料*：在 *IAM 實例設定檔* 下，選擇包含控制台代理程式所需權限的 IAM 角色。
+** *摘要*：查看摘要並選擇*啟動實例*。
+
+
+
+
+.結果
+AWS 使用指定的設定啟動軟體。控制台代理大約需要五分鐘即可部署。
+
+.下一步是什麼？
+設定NetApp Console。
+
+
+
+[[install-netapp-console-restricted-mode-from-the-aws-gov-marketplace]]
+=== 從 AWS Gov 市場安裝 NetApp Console 受限模式
+
+.開始之前
+需要以下物品：
+
+* 滿足組網需求的VPC及子網路。
++
+link:task-prepare-restricted-mode.html#step-5-prepare-network-access["了解網路要求"]
+
+* 具有附加策略的 IAM 角色，其中包含控制台代理程式所需的權限。
++
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解如何設定 AWS 權限"]
+
+* 您的 IAM 使用者訂閱並取消訂閱 AWS Marketplace 的權限。
+* EC2 執行個體的金鑰對。
+
+
+.步驟
+. 前往 AWS Marketplace 中提供的NetApp Console代理程式。
++
+.. 開啟 EC2 服務並選擇 *啟動執行個體*。
+.. 選擇 *AWS Marketplace*。
+.. 搜尋NetApp Console並選擇產品。
++
+image:screenshot-gov-cloud-mktp.png["在 AWS Marketplace 中搜尋NetApp Console後顯示的螢幕截圖"]
+
+.. 選擇*繼續*。
+
+
+. 依照提示設定並啟動實例：
++
+** *選擇實例類型*：根據區域可用性，選擇一種受支援的執行個體類型（建議使用 t3.2xlarge）。
++
+link:task-prepare-restricted-mode.html["查看實例要求"] 。
+
+** *設定實例詳細資料*：選擇 VPC 和子網，選擇您在步驟 1 中建立的 IAM 角色，啟用終止保護（建議），並選擇任何其他符合您要求的設定選項。
+
+
++
+image:screenshot_aws_iam_role.gif["顯示 AWS 中配置實例頁面上的欄位的螢幕截圖。選擇了您應該在步驟 1 中建立的 IAM 角色。"]
+
++
+** *新增儲存*：保留預設儲存選項。
+** *新增標籤*：如果需要，輸入實例的標籤。
+** *設定安全群組*：指定控制台代理實例所需的連線方法：SSH、HTTP 和 HTTPS。
+** *審查*：審查您的選擇並選擇*啟動*。
+
+
+
+
+.結果
+AWS 使用指定的設定啟動軟體。控制台代理大約需要五分鐘即可部署。
+
+.下一步是什麼？
+設定控制台。
+
+
+
+[[manually-install-the-console-agent-in-aws]]
+=== 在 AWS 中手動安裝控制台代理程式
+
+如需在 AWS 主機上進行手冊安裝，請參閱link:task-install-restricted-mode-manual.html["在受限模式下手動安裝 Console 代理程式"]。
+
+
+
+[[step-3-set-up-netapp-console]]
+== 步驟 3：設定 NetApp Console
+
+首次存取控制台時，系統會提示您為控制台代理程式選擇一個組織，並需要啟用受限模式。
+
+.開始之前
+設定控制台代理的人員必須使用尚不屬於控制台組織的登入名稱登入控制台。
+
+如果您的登入資訊與另一個組織關聯，您需要註冊一個新的登入資訊。否則，您將在設定畫面上看不到啟用受限模式的選項。
+
+.步驟
+. 從與控制台代理程式執行個體有連線的主機開啟 Web 瀏覽器，然後輸入您安裝的控制台代理程式的下列 URL。
+. 註冊或登入NetApp Console。
+. 登入後，設定控制台：
++
+.. 輸入控制台代理的名稱。
+.. 輸入新控制台組織的名稱。
+.. 選擇*您是否在安全環境中運作？ *
+.. 選擇*在此帳戶上啟用受限模式*。
++
+請注意，帳戶建立後您無法變更此設定。您以後無法啟用受限模式，也無法停用它。
+
++
+如果您在政府區域部署了控制台代理，則該核取方塊已啟用且無法變更。這是因為限制模式是政府區域唯一支持的模式。
+
+.. 選擇*讓我們開始吧*。
+
+
+
+
+.結果
+控制台代理現在已安裝並設定到您的控制台組織。所有使用者都需要使用控制台代理執行個體的 IP 位址存取控制台。
+
+.下一步是什麼？
+向控制台提供您先前設定的權限。
+
+
+
+[[step-4-provide-permissions-to-the-console-agent]]
+== 步驟 4：提供權限給主控台代理程式
+
+如果您在 AWS 中手動安裝 Console 代理程式，則需要授予您先前設定的權限。
+
+如果您從 AWS Marketplace 部署了控制台代理，則這些步驟不適用，因為您在部署期間選擇了所需的 IAM 角色。
+
+您可以藉由將 IAM 角色附加至 EC2 執行個體，或是提供具備必要權限之 IAM 使用者的 AWS 存取金鑰，來為控制台代理程式提供所需的權限。
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["了解如何準備雲端權限"] 。
+
+[role="tabbed-block"]
+====
+.AWS IAM 角色
+--
+將您先前建立的 IAM 角色附加到安裝了控制台代理程式的 EC2 執行個體。
+
+只有當您在 AWS 中手動安裝了控制台代理程式時，這些步驟才適用。對於 AWS Marketplace 部署，您已將控制台代理執行個體與包含所需權限的 IAM 角色關聯。
+
+.步驟
+. 前往 Amazon EC2 主控台。
+. 選擇*實例*。
+. 選擇控制台代理實例。
+. 選擇*操作>安全性>修改 IAM 角色*。
+. 選擇 IAM 角色並選擇 *更新 IAM 角色*。
+
+
+--
+.AWS 存取金鑰
+--
+向NetApp Console提供具有所需權限的 IAM 使用者的 AWS 存取金鑰。
+
+.步驟
+. 選擇“*管理 > 憑證*”。
+. 選擇*組織憑證*。
+. 選擇“*新增憑證*”並按照精靈中的步驟操作。
++
+.. *憑證位置*：選擇*Amazon Web Services > 代理*。
+.. *定義憑證*：輸入 AWS 存取金鑰和金鑰。
+.. *市場訂閱*：透過立即訂閱或選擇現有訂閱將市場訂閱與這些憑證關聯。
+.. *審核*：確認有關新憑證的詳細資訊並選擇*新增*。
+
+
+
+
+--
+====

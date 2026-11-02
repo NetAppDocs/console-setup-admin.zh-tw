@@ -24,58 +24,7 @@ NOTE: 當您執行控制台代理程式版本 4.9.0 或更新版本時，即可�
 * *Cloud Volumes ONTAP 檢視器*：提供對 Cloud Volumes ONTAP 資訊的唯讀存取。此角色無法執行任何主動操作。某些包含組態資訊的索引標籤和畫面可能對檢視器不可用。
 
 
-link:reference-iam-predefined-roles.html["了解訪問角色"] 。
-
-在包含系統的組織、資料夾或專案層級指派 Cloud Volumes ONTAP 角色。平台角色可讓使用者管理 NetApp Console 資源，而 Cloud Volumes ONTAP 角色可讓使用者管理 Cloud Volumes ONTAP 系統。如需規劃角色指派的指引，請參閱 link:task-cvo-rbac-setup.html#plan-cloud-volumes-ontap-role-assignments["為 Cloud Volumes ONTAP 設定角色型存取"]。
-
-
-
-[[role-migrations-for-existing-users-after-upgrading-to-console-agent-version-4-9-0-or-later]]
-[[seeding-mappings-for-existing-users]]
-== 升級至 Console 代理程式版本 4.9.0 或更新版本後，現有使用者的角色移轉
-
-當您將主控台代理程式升級至 4.9.0 或更新版本時，主控台會根據現有使用者的平台角色，為其指派額外的 Cloud Volumes ONTAP 角色。
-
-
-NOTE: 當現有的 Console 代理程式升級至 Console 4.9.0 或更新版本時，Console 會執行一次性的移轉程序，將 Cloud Volumes ONTAP 角色指派給組織中的現有使用者。此程序可能需要長達 30 分鐘才能完成。若要審查和調整移轉期間指派的角色，請參閱 link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["升級 Console 代理程式後審查角色"]。
-
-下列對應僅適用於此一次性移轉程序。
-
-[cols="50,50"]
-|===
-| 現有平台角色 | 升級期間指派的 Cloud Volumes ONTAP 角色 
-
-
-| 超管理員 | Cloud Volumes ONTAP 管理員 
-
-
-| 組織管理員 | Cloud Volumes ONTAP 管理員 
-
-
-| 聯盟管理員 | Cloud Volumes ONTAP 管理員 
-
-
-| 資料夾或專案管理員 | Cloud Volumes ONTAP 管理員 
-
-
-| 超觀眾 | Cloud Volumes ONTAP 檢視器 
-
-
-| 組織檢視器 | Cloud Volumes ONTAP 檢視器 
-
-
-| 聯邦檢視器 | Cloud Volumes ONTAP 檢視器 
-
-
-| 資料夾或專案檢視器 | Cloud Volumes ONTAP 檢視器 
-
-
-| 任何其他平台角色 | Cloud Volumes ONTAP 檢視器 
-|===
-控制台會將 Cloud Volumes ONTAP 角色指派到與現有平台角色相同的層級。這些對應不適用於新的角色指派。若要審查和調整已初始化的角色，請參閱 link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["升級 Console 代理程式後審查角色"]。
-
-
-NOTE: 目前已知問題導致 *組織檢視者* 和 *Cloud Volumes ONTAP 檢視者* 角色組合無法在組織範圍內正常運作。請使用 *組織管理員* 或 *資料夾或專案管理員* 角色作為臨時解決方案。
+如需瞭解所有 NetApp Console 存取角色的詳細資訊，請參閱 link:reference-iam-predefined-roles.html["存取角色"]。
 
 
 

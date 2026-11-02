@@ -28,10 +28,20 @@ summary: NetApp Console身分和存取管理包括可指派給組織成員的預
 | 平台角色 | API 名稱* *API 名稱是 API 中使用的角色識別碼。請完全按照所示內容複製值（包括大小寫和底線）。 | 模式可用性 | 職責 
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles["組織管理員"] | ORGANIZATION_ADMIN | 標準、受限、私有 | 此角色允許使用者不受限制地存取組織內的所有專案和資料夾，向任何專案或資料夾添加成員，以及執行任何任務並使用任何未明確關聯角色的資料服務。擁有此角色的使用者可以透過建立資料夾和專案、分配角色、新增使用者以及管理系統（如果他們擁有相應的憑證）來管理您的組織。這是唯一可以建立 Console 代理的存取角色。 
+| link:reference-iam-platform-roles.html#organization-admin-roles["組織管理員"] | ORGANIZATION_ADMIN | 標準、受限、私有  a| 
+此角色允許使用者不受限制地存取組織內的所有專案和資料夾，向任何專案或資料夾添加成員，以及執行任何任務並使用任何未明確關聯角色的資料服務。
+
+擁有此角色的使用者可以透過建立資料夾和專案、分配角色、新增使用者以及管理系統（如果他們擁有相應的憑證）來管理您的組織。
+
+這是唯一可以建立 Console 代理的存取角色。
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles["資料夾或專案管理員"] | FOLDER_OR_PROJECT_ADMIN | 標準、受限、私有 | 允許使用者不受限制地存取已指派的項目和資料夾。可以將成員新增到他們管理的資料夾或專案中，以及執行任何任務並在他們被指派的資料夾或專案內的資源上使用任何資料服務或應用程式。資料夾或專案管理員無法建立控制台代理。 
+
+| link:reference-iam-platform-roles.html#organization-admin-roles["資料夾或專案管理員"] | FOLDER_OR_PROJECT_ADMIN | 標準、受限、私有  a| 
+允許使用者無限制地存取已指派的專案和資料夾。使用者可以在其管理的資料夾或專案中新增成員，也可以對其指派的資料夾或專案內的資源執行任何工作並使用任何資料服務或應用程式。
+
+資料夾或專案管理員無法建立 NetApp Console 代理。
+
 
 
 | link:reference-iam-platform-roles.html#federation-roles["聯盟管理員"] | FEDERATION_ADMIN | 標準版、受限版 | 允許使用者使用控制台建立和管理聯合，從而實現單一登入 (SSO)。 

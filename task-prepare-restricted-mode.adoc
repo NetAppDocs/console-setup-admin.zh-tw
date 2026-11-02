@@ -4,7 +4,7 @@ permalink: task-prepare-restricted-mode.html
 keywords: restricted mode requirements, requirements, install options, restricted mode networking, dark site, restricted mode permissions, permissions for restricted mode, networking for restricted mode 
 summary: 在受限模式下部署NetApp Console之前，請準備好您的環境。您需要查看主機需求、準備網路、設定權限等。 
 ---
-= 準備在 NetApp Console 受限模式下部署
+= 準備以受限模式部署 NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -31,24 +31,29 @@ link:concept-modes.html["了解限制模式的工作原理"] 。
 
 
 
-[[step-2-review-installation-options]]
-== 第 2 步：查看安裝選項
+[[step-2-choose-a-restricted-mode-installation-method]]
+== 步驟 2：選擇受限模式安裝方法
 
-在受限模式下，您只能在雲端安裝控制台代理程式。有以下安裝選項可用：
+在受限模式下，您可以將 Console 代理程式安裝在雲端，並透過本機安裝的代理程式存取 NetApp Console。您可以透過雲端市場（僅限 AWS 或 Azure）進行安裝，也可以手動安裝在執行於 AWS、Azure 或 Google Cloud 上的 Linux 主機上。
 
 * 來自 AWS Marketplace
 * 來自 Azure 市場
 * 在 AWS、Azure 或 Google Cloud 中執行的 Linux 主機上手動安裝控制台代理
++
+
+NOTE: 如果要在 Google Cloud 上部署，則必須在專用 Linux 主機上手動安裝 Console 代理程式。
 
 
 
 
+
+[[step-3-review-console-agent-host-requirements]]
 [[step-3-review-host-requirements]]
-== 第 3 步：查看主機需求
-
-主機必須滿足特定的作業系統、RAM 和連接埠要求才能執行控制台代理。
+== 步驟 3：檢閱 Console 代理程式主機需求
 
 當您從 AWS 或 Azure 市場部署控制台代理程式時，映像包含所需的作業系統和軟體元件。您只需選擇符合 CPU 和 RAM 要求的執行個體類型。
+
+如果您要在自己的 Linux 主機上手動安裝，請確保主機符合所需的作業系統、記憶體和連接埠要求。
 
 專用主機:: 控制台代理需要專用主機。只要滿足以下尺寸要求，任何架構都受支援：
 +
@@ -165,203 +170,22 @@ Docker Engine 23.0.6 至 28.0.0。
 |===
 
 
-[[step-4-install-podman-or-docker-engine]]
+[[step-4-prepare-podman-or-docker-engine-for-manual-installation]]
 [[podman-configuration]]
-== 步驟 4：安裝 Podman 或 Docker Engine
+== 步驟 4：準備 Podman 或 Docker Engine 以進行手冊安裝
 
-若要手動安裝控制台代理，請透過安裝 Podman 或 Docker Engine 來準備主機。
-
-根據您的作業系統，安裝代理程式之前需要 Podman 或 Docker Engine。
-
-* Red Hat Enterprise Linux 8 和 9 需要 Podman。
-+
-<<podman-versions,查看支援的 Podman 版本>> 。
-
-* Ubuntu 需要 Docker 引擎。
-+
-<<podman-versions,查看支援的 Docker Engine 版本>> 。
+對於手冊安裝，請遵循 link:task-install-restricted-mode-manual.html#podman-configuration["手冊安裝主題"] 中的說明來安裝和設定 Podman 或 Docker Engine。
 
 
 
-.步驟
-[role="tabbed-block"]
-====
-.Podman
---
-請依照以下步驟安裝和設定 Podman：
-
-* 啟用並啟動 podman.socket 服務
-* 安裝python3
-* 安裝 podman-compose 套件（因 Red Hat 版本而異）
-* 將 podman-compose 加入到 PATH 環境變量
-* 如果使用 Red Hat Enterprise Linux，請驗證您的 Podman 版本使用的是 Netavark Aardvark DNS 而不是 CNI
-
-
-
-NOTE: 安裝代理程式後調整 aardvark-dns 連接埠（預設值：53），以避免 DNS 連接埠衝突。按照說明配置連接埠。
-
-.步驟
-. 如果主機上安裝了 podman-docker 套件，請將其刪除。
-+
-[source, cli]
-----
-dnf remove podman-docker
-rm /var/run/docker.sock
-----
-. 安裝 Podman。
-+
-您可以從官方 Red Hat Enterprise Linux 儲存庫取得 Podman。
-
-+
-.. 對於 Red Hat Enterprise Linux 9.6：
-+
-[source, cli]
-----
-sudo dnf install podman-5:<version>
-----
-+
-其中 <version> 是您正在安裝的 Podman 支援的版本。<<podman-versions,查看支援的 Podman 版本>> 。
-
-.. 適用於 Red Hat Enterprise Linux 9.1 至 9.4：
-+
-[source, cli]
-----
-sudo dnf install podman-4:<version>
-----
-+
-其中 <version> 是您正在安裝的 Podman 支援的版本。<<podman-versions,查看支援的 Podman 版本>> 。
-
-.. 對於 Red Hat Enterprise Linux 8：
-+
-[source, cli]
-----
-sudo dnf install podman-4:<version>
-----
-+
-其中 <version> 是您正在安裝的 Podman 支援的版本。<<podman-versions,查看支援的 Podman 版本>> 。
-
-
-
-. 啟用並啟動 podman.socket 服務。
-+
-[source, cli]
-----
-sudo systemctl enable --now podman.socket
-----
-. 安裝 python3。
-+
-[source, cli]
-----
-sudo dnf install python3
-----
-. 如果您的系統上還沒有 EPEL 儲存庫包，請安裝它。
-+
-此步驟是必要的，因為 podman-compose 可從 Extra Packages for Enterprise Linux (EPEL) 儲存庫中取得。
-
-. 如果使用 Red Hat Enterprise 9：
-+
-.. 安裝EPEL存儲庫軟體包。
-
-
-+
-[source, cli]
-----
-sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
-----
-+
-.. 安裝 podman-compose 套件 1.5.0。
-+
-[source, cli]
-----
-sudo dnf install podman-compose-1.5.0
-----
-
-
-. 如果使用的是 Red Hat Enterprise Linux 8：
-+
-.. 安裝EPEL存儲庫軟體包。
-+
-[source, cli]
-----
-sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-----
-.. 安裝 podman-compose 套件 1.0.6。
-+
-[source, cli]
-----
-sudo dnf install podman-compose-1.0.6
-----
-+
-
-NOTE: 使用 `dnf install`指令滿足將 podman-compose 新增至 PATH 環境變數的要求。安裝指令將 podman-compose 新增至 /usr/bin，它已經包含在 `secure_path`主機上的選項。
-
-.. 如果使用 Red Hat Enterprise Linux 8，請驗證您的 Podman 版本是否使用具有 Aardvark DNS 的 NetAvark 而不是 CNI。
-+
-... 透過執行以下命令檢查您的 networkBackend 是否設定為 CNI：
-+
-[source, cli]
-----
-podman info | grep networkBackend
-----
-... 如果 networkBackend 設定為 `CNI`，你需要將其更改為 `netavark`。
-... 安裝 `netavark`和 `aardvark-dns`使用以下命令：
-+
-[source, cli]
-----
-dnf install aardvark-dns netavark
-----
-... 打開 `/etc/containers/containers.conf`檔案並修改 network_backend 選項以使用“netavark”而不是“cni”。
-+
-如果 `/etc/containers/containers.conf`不存在，請將配置變更為 `/usr/share/containers/containers.conf`。
-
-... 重新啟動 podman。
-+
-[source, cli]
-----
-systemctl restart podman
-----
-... 使用以下命令確認 networkBackend 現在已更改為“netavark”：
-+
-[source, cli]
-----
-podman info | grep networkBackend
-----
-
-
-
-
-. 如果將此代理程式與 Cloud Volumes ONTAP 系統關聯，請考慮增加與該代理程式關聯的執行緒數量以提高效能。link:https://kb.netapp.com/Cloud/ncds/nds/cvods/cvods_kbs/CVO_going_to_failed_state_frequently_in_NetApp_Console["了解如何增加代理程式的 Container 執行緒限制"^]。
-
-
---
-.Docker 引擎
---
-依照 Docker 的文件安裝 Docker Engine。
-
-.步驟
-. https://docs.docker.com/engine/install/["查看 Docker 的安裝說明"^]
-+
-請依照步驟安裝支援的 Docker Engine 版本。請勿安裝最新版本，因為控制台不支援它。
-
-. 驗證 Docker 是否已啟用並正在運行。
-+
-[source, cli]
-----
-sudo systemctl enable docker && sudo systemctl start docker
-----
-
-
---
-====
-
-
+[[step-5-prepare-network-access-for-restricted-mode]]
 [[step-5-prepare-network-access]]
-== 步驟 5：準備網路訪問
+== 步驟 5：準備受限模式的網路存取
 
 設定網路訪問，以便控制台代理可以管理公有雲中的資源。除了為控制台代理提供虛擬網路和子網路之外，您還需要確保滿足以下要求。
 
 連接到目標網絡:: 確保控制台代理程式與儲存位置有網路連線。例如，您計劃部署Cloud Volumes ONTAP 的VPC 或 VNet，或您的本機ONTAP叢集所在的資料中心。
-準備網路以供使用者存取NetApp Console:: 在受限模式下，使用者從控制台代理 VM 存取控制台。控制台代理聯繫幾個端點來完成資料管理任務。當從控制台完成特定操作時，將從使用者的電腦聯繫這些端點。
+準備網路以供使用者存取NetApp Console:: 在受限模式下，使用者透過連接到 Console 代理程式 VM 的瀏覽器存取 Console 的本機介面。當使用者在 Console 中完成某些操作時，其瀏覽器必須能夠存取以下列出的端點。
 
 
 
@@ -372,22 +196,41 @@ NOTE: 4.0.0 版本之前的 Console 代理程式支援不同的端點。如果�
 | 端點 | 目的 
 
 
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | 在NetApp Console中提供功能和服務。 
+ a| 
+* \ https://api.bluexp.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \ https://cdn.auth0.com
+
+ a| 
+在NetApp Console中提供功能和服務。
 
 
-| \ https://cdn.auth0.com \ https://services.cloud.netapp.com | 您的 Web 瀏覽器透過NetApp Console連線到這些端點以進行集中使用者驗證。 
+
+| \https://services.cloud.netapp.com  a| 
+* 您的 Web 瀏覽器透過NetApp Console連線到這些端點以進行集中使用者驗證。
+
+
 |===
-用於日常運營的出站互聯網訪問:: 控制台代理程式的網路位置必須具有出站網際網路存取權限。它需要能夠存取NetApp Console的 SaaS 服務以及各自公有雲環境中的端點。
-+
---
+
+
+[[outbound-internet-access-for-day-to-day-operations]]
+=== 用於日常運營的出站互聯網訪問
+
+Console 代理程式需要傳出網際網路存取，才能管理雲端供應商中的資源，並使用 NetApp Console 服務。請允許下列適用於您環境的端點與共享的 Console 服務。
+
+
+
+[[restricted-mode-aws-endpoints]]
+==== AWS 環境
+
+允許這些 AWS 服務端點管理 AWS 資源，包括 FSx for ONTAP。
+
 [cols="2a,1a"]
 |===
 | 端點 | 目的 
-
-
- a| 
-AWS 環境
-
 
 
  a| 
@@ -413,88 +256,51 @@ Amazon FSx for NetApp ONTAP：
  a| 
 基於 Web 的控制台透過與 Workload Factory API 互動來管理和操作基於ONTAP 的FSx 工作負載。
 
+|===
+
+
+[[restricted-mode-azure-endpoints]]
+==== Azure 環境
+
+允許適用於您 Azure 區域的端點：公有、政府或中國。
+
+[cols="2a,1a"]
+|===
+| 端點 | 目的 
 
 
  a| 
-Azure 環境
+* \https://management.azure.com
+* \https://login.microsoftonline.com
+* \https://blob.core.windows.net
+* \https://core.windows.net
 
-
-
- a| 
-\ https://management.azure.com \ https://login.microsoftonline.com \ https://blob.core.windows.net \ https://core.windows.net
  a| 
 管理 Azure 公用區域中的資源。
 
 
 
  a| 
-\ https://management.usgovcloudapi.net \ https://login.microsoftonline.us \ https://blob.core.usgovcloudapi.net \ https://core.usgovcloudapi.net
+* \https://management.usgovcloudapi.net
+* \https://login.microsoftonline.us
+* \https://*.blob.core.usgovcloudapi.net
+* \https://core.usgovcloudapi.net
+
  a| 
 管理 Azure 政府區域中的資源。
 
 
 
  a| 
-\ https://management.chinacloudapi.cn \ https://login.chinacloudapi.cn \ https://blob.core.chinacloudapi.cn \ https://core.chinacloudapi.cn
+* \https://management.chinacloudapi.cn
+* \https://login.chinacloudapi.cn
+* \https://blob.core.chinacloudapi.cn
+* \https://core.chinacloudapi.cn
+
  a| 
 管理 Azure 中國區域的資源。
 
-
-
- a| 
-*Google Cloud 環境*
-
-
-
- a| 
-\ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta https://www.googleapis.com/storage/v1 https://storage.googleapis.com/storage/v1 https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://config.googleapis.com/v1/projects
- a| 
-管理 Google Cloud 中的資源。
-
-
-
- a| 
-* NetApp Console端點*
-
-
-
- a| 
-\ https://mysupport.netapp.com
- a| 
-取得授權資訊並將 AutoSupport 訊息傳送至 NetApp 支援部門。
-
-
-
- a| 
-\ https://signin.b2c.netapp.com
- a| 
-更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp Console。
-
-
-
- a| 
-\ https://support.netapp.com
- a| 
-以取得授權資訊並將 AutoSupport 訊息傳送至 NetApp 支援，以及接收 Cloud Volumes ONTAP 的軟體更新。
-
-
-
- a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
- a| 
-在NetApp Console中提供功能和服務。
-
-
-
- a| 
-\ https://occmclientinfragov.azurecr.us
- a| 
-取得控制台代理升級的影像。
-
 |===
---
-
-
 Azure 中的公用 IP 位址:: 如果要在 Azure 中將公用 IP 位址與控制台代理程式 VM 一起使用，則該 IP 位址必須使用基本 SKU 以確保控制台使用此公用 IP 位址。
 +
 --
@@ -507,6 +313,97 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 --
 
 
+
+
+[[restricted-mode-google-cloud-endpoints]]
+==== Google Cloud 環境
+
+允許這些 Google Cloud API 端點管理專案中的資源。
+
+[cols="2a,1a"]
+|===
+| 端點 | 目的 
+
+
+ a| 
+* \https://www.googleapis.com/compute/v1/
+* \https://compute.googleapis.com/compute/v1
+* \https://cloudresourcemanager.googleapis.com/v1/projects
+* \https://www.googleapis.com/compute/beta
+* \https://storage.googleapis.com/storage/v1
+* \https://www.googleapis.com/storage/v1
+* \https://iam.googleapis.com/v1
+* \https://cloudkms.googleapis.com/v1
+* \https://config.googleapis.com/v1/projects
+
+ a| 
+管理 Google Cloud 中的資源。
+
+|===
+
+
+[[restricted-mode-console-endpoints]]
+==== NetApp Console 端點
+
+允許共享的端點用於 NetApp 支援、Console 功能，以及 Console 代理程式部署與升級。
+
+[cols="2a,1a"]
+|===
+| 端點 | 目的 
+
+
+ a| 
+* \ https://mysupport.netapp.com
+
+ a| 
+取得授權資訊並將 AutoSupport 訊息傳送至 NetApp 支援部門。
+
+
+
+ a| 
+* \ https://signin.b2c.netapp.com
+
+ a| 
+更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp Console。
+
+
+
+ a| 
+* \ https://support.netapp.com
+
+ a| 
+以取得授權資訊並將 AutoSupport 訊息傳送至 NetApp 支援，以及接收 Cloud Volumes ONTAP 的軟體更新。
+
+
+
+ a| 
+* \ https://api.bluexp.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \ https://cdn.auth0.com
+
+ a| 
+在NetApp Console中提供功能和服務。
+
+
+
+ a| 
+對於非政府區域，請使用以下端點：
+
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
+
+對於政府區域，請改用以下端點：
+
+* \ https://occmclientinfragov.azurecr.us
+
+ a| 
+取得用於 Console 代理程式部署和升級的映像。
+
+|===
 代理伺服器:: NetApp支援顯式和透明代理配置。如果您使用透明代理，則只需要提供代理伺服器的憑證。如果您使用明確代理，您還需要 IP 位址和憑證。
 +
 --
@@ -533,17 +430,13 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 
 
 啟用 NTP:: 如果您打算使用 NetApp Data Classification 掃描企業資料來源，則應在 Console 代理程式和 NetApp Data Classification 系統上啟用網路時間協定（NTP）服務，以便系統之間的時間同步 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["深入瞭解 NetApp Data Classification"^]。
-+
---
-如果您打算從雲端提供者的市場建立控制台代理，請在建立控制台代理後實現此網路需求。
-
---
 
 
 
 
+[[step-6-prepare-cloud-provider-permissions]]
 [[step-6-prepare-cloud-permissions]]
-== 步驟 6：準備雲端權限
+== 步驟 6：準備雲端供應商權限
 
 控制台代理程式需要雲端提供者的權限才能在虛擬網路中部署Cloud Volumes ONTAP並使用NetApp資料服務。您需要在雲端提供者中設定權限，然後將這些權限與控制台代理程式關聯。
 
@@ -848,25 +741,3 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 
 --
 ====
-
-
-[[step-7-enable-google-cloud-apis]]
-== 步驟 7：啟用 Google Cloud API
-
-在 Google Cloud 中部署Cloud Volumes ONTAP需要多個 API。
-
-.步
-. https://cloud.google.com/apis/docs/getting-started#enabling_apis["在您的專案中啟用以下 Google Cloud API"^]
-+
-** Cloud Build API （使用 Infrastructure Manager 進行私有模式 Cloud Volumes ONTAP 部署所需）
-** 雲端部署管理器 V2 API
-** 雲端基礎架構管理器 API
-** 雲端日誌 API
-** 雲端資源管理器 API
-** 計算引擎 API
-** 身分識別和存取管理 (IAM) API
-** 雲端金鑰管理服務（KMS）API（僅當您打算使用 NetApp Backup and Recovery 搭配客戶管理的加密金鑰（CMEK）時才需要）
-** Cloud Quotas API（使用 Infrastructure Manager 部署 Cloud Volumes ONTAP 時需要）
-
-
-

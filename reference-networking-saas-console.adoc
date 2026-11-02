@@ -4,7 +4,7 @@ permalink: reference-networking-saas-console.html
 keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
 summary: NetApp Console、 NetApp Console代理和NetApp資料服務需要出站網路存取以及聯繫必要端點的能力。 
 ---
-= NetApp Console 的網路存取
+= 標準模式下 NetApp Console 的網路存取
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -19,7 +19,7 @@ NetApp Console、 NetApp Console代理和NetApp資料服務需要出站網路存
 您需要為以下操作設定網路存取：
 
 * 以軟體即服務 (SaaS) 形式存取NetApp Console的計算機
-* 您在本機或雲端安裝的控制台代理程式。控制台代理。
+* 您在本機或雲端安裝的控制台代理程式。
 
 
 
@@ -39,22 +39,49 @@ NOTE: 在 4.0.0 中， NetApp減少了控制台和控制台代理程式所需的
 | 端點 | 目的 
 
 
-| \ https://mysupport.netapp.com | 取得授權資訊並將 AutoSupport 訊息傳送至 NetApp 支援部門。 
+ a| 
+* \ https://mysupport.netapp.com
 
+ a| 
+取得授權資訊並將 AutoSupport 訊息傳送至 NetApp 支援部門。
 
-| \ https://signin.b2c.netapp.com | 更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp Console。 
-
-
-| \ https://support.netapp.com | 以取得授權資訊並將 AutoSupport 訊息傳送至 NetApp 支援，以及接收 Cloud Volumes ONTAP 的軟體更新。 
-
-
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | 在NetApp Console中提供功能和服務。 
 
 
  a| 
-https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us （受限模式部署需要）
+* \ https://signin.b2c.netapp.com
+
  a| 
-取得控制台代理升級的影像。
+更新NetApp支援網站 (NSS) 憑證或將新的 NSS 憑證新增至NetApp Console。
+
+
+
+ a| 
+* \ https://support.netapp.com
+
+ a| 
+以取得授權資訊並將 AutoSupport 訊息傳送至 NetApp 支援，以及接收 Cloud Volumes ONTAP 的軟體更新。
+
+
+
+ a| 
+* \ https://api.bluexp.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \ https://cdn.auth0.com
+
+ a| 
+在NetApp Console中提供功能和服務。
+
+
+
+ a| 
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
+ a| 
+取得用於 Console 代理程式部署和升級的映像。
 
 |===
 
