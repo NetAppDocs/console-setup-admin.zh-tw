@@ -1,0 +1,22 @@
+= Console 代理 4.13.0
+:allow-uri-read: 
+
+
+
+
+[[console-agent-4-13-0]]
+=== Console 代理 4.13.0
+
+4.13.0 版本同時支援標準模式和受限模式。
+
+此版本的 Console 代理程式包含安全性改進和錯誤修正，以及以下新功能。
+
+.部署 Console 代理程式時自動建立 AWS 部署角色
+您不再需要在開始之前建立 IAM 角色，以在 AWS 中部署 Console 代理程式。NetApp Console 可以為您建立該角色。link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-aws-console.html["了解如何從主控台在 AWS 中部署主控台代理程式"^]
+
+
+
+[[netapp-console-administration]]
+=== NetApp Console管理
+
+本次版本包含安全性改善和問題修復。

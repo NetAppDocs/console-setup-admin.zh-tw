@@ -203,7 +203,7 @@ image:screenshot_accounts_switch_aws.png["螢幕截圖顯示在「詳細資料�
 ** 建立一個包含建立控制台代理程式所需權限的策略。
 +
 *** https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["查看 FSx for ONTAP所需的權限"^]
-*** link:task-install-agent-aws-console.html#aws-permissions-agent["查看代理部署策略"]
+*** link:task-install-agent-aws-console.html#aws-permissions-assume-role-keys["查看代理部署策略"]
 
 
 

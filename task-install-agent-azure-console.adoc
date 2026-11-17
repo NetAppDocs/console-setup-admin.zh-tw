@@ -535,7 +535,28 @@ link:reference-ports-azure.html["查看 Azure 的安全性群組規則"] 。
 .結果
 過程完成後，即可從控制台使用控制台代理。
 
-
-NOTE: 如果部署失敗，您可以從控制台下載報告和日誌來幫助您解決問題。link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解決安裝問題。"]
-
 如果您在建立控制台代理程式的相同 Azure 帳戶中擁有 Azure Blob 存儲，您將看到 Azure Blob 儲存體會自動出現在 *系統* 頁面上。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["了解如何透過NetApp Console管理 Azure Blob 儲存"^]
+
+
+
+[[troubleshoot-a-failed-console-agent-deployment]]
+[[troubleshoot-agent-deployment]]
+== 疑難排解 Console 代理程式部署失敗的問題
+
+使用部署報告尋找阻止 Console 代理程式部署的原因，然後重試。
+
+只有在選取 *驗證代理程式組態* 核取方塊時，Console 才會提供報告。如果部署成功，則沒有報告。
+
+.步驟
+. 在 *代理程式部署失敗* 對話方塊中，選擇 *下載報告*。
++
+主控台下載包含驗證報告的 PDF 檔案。
+
+. 請審閱報告並解決報告中列出的問題。
+. 在對話方塊中，選擇 *重新開始*，然後再次完成部署。
++
+您必須重新開始整個程序才能再次嘗試。
+
+
+
+link:task-troubleshoot-agent.html#troubleshoot-installation["了解如何解決安裝問題。"]
