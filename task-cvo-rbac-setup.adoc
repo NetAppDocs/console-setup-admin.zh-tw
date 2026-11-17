@@ -57,10 +57,13 @@ NOTE: 當您執行控制台代理程式版本 4.9.0 或更新版本時，即可�
 | 範圍 | 平台角色 | Cloud Volumes ONTAP 角色 | 推薦 
 
 
-| 組織 | 組織管理員 | Cloud Volumes ONTAP 運算子 | 當使用者必須管理 Console 資源（包括 Console 代理程式設定）並管理 Cloud Volumes ONTAP 系統時 
+| 組織 | 組織管理員 | Cloud Volumes ONTAP 管理員 | 當使用者必須管理 Console 資源（包括 Console 代理程式設定）並管理 Cloud Volumes ONTAP 系統時 
 
 
 | 資料夾或專案 | 資料夾或專案管理員 | Cloud Volumes ONTAP 管理員 | 當使用者必須管理特定資料夾或專案中的 Console 資源並管理 Cloud Volumes ONTAP 系統時 
+
+
+| 資料夾或專案 | 資料夾或專案管理員 | Cloud Volumes ONTAP 貢獻者 | 當使用者必須管理特定資料夾或專案中的 Console 資源並管理 Cloud Volumes ONTAP 系統時 
 
 
 | 資料夾或專案 | 資料夾或專案管理員 | Cloud Volumes ONTAP 運算子 | 當使用者必須管理特定資料夾或專案中的 Console 資源並管理 Cloud Volumes ONTAP 系統時 

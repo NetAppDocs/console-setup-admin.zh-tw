@@ -132,6 +132,9 @@ summary: NetApp Console身分和存取管理包括可指派給組織成員的預
 | link:reference-iam-cvo-roles.html["Cloud Volumes ONTAP 管理員"] | CVO_ADMIN | 標準、受限、私有 | 提供對所有 Cloud Volumes ONTAP 操作的完全存取。 
 
 
+| link:reference-iam-cvo-roles.html["Cloud Volumes ONTAP 貢獻者"] | CVO_CONTRIBUTOR | 標準、受限、私有 | 提供與 Cloud Volumes ONTAP 管理員角色類似的存取，但刪除或移除資源，或是開啟或關閉系統的操作除外。 
+
+
 | link:reference-iam-cvo-roles.html["Cloud Volumes ONTAP 運算子"] | CVO_OPERATOR | 標準、受限、私有 | 支援日常管理任務，包括新增磁碟區、配置複製和管理儲存。 
 
 

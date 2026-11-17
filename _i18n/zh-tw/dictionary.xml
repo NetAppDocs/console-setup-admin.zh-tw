@@ -5659,8 +5659,6 @@
   <block id="630125b3287d32dddd226602e8dd6803" category="list-text">使用使用者名稱<block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block>和部署 OVA 時指定的維護密碼登入維護主控台。</block>
   <block id="cd975b382ffd3de432ce2ffb42508a03" category="list-text">輸入 <block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block> 以開啟 *System Configuration* 選單。</block>
   <block id="ed9d848f40aa067619f57a0c3bdd1aa7" category="list-text">輸入<block ref="eccbc87e4b5ce2fe28308fd9f2a7baf3" prefix=" " category="inline-code"></block>以選擇 *Upgrade* 並按照螢幕提示操作。</block>
-  <block id="c017b1c0dccb6954f1ade63dff926a0c" category="paragraph">升級過程中，系統會安裝更新後的作業系統、Docker 執行時間和 Console 代理服務。如果核心已更新，虛擬機器將自動重新啟動。</block>
-  <block id="5acb3aced6d8dac916dec3aade57b7e1" category="list-text">升級完成後、請確認 Console 代理程式是否正常運作：</block>
   <block id="969e7ac6672c561c12855b0df5552218" category="list-text">在 vSphere 用戶端中、確認 VM 已開啟電源且可存取 Web 主控台。</block>
   <block id="f1dea5408c76a6c79fe56adbe57d4bf3" category="list-text">在 NetApp Console 中，前往 *管理 ＞ 支援 ＞ 代理程式*，並確認代理程式版本已顯示為新版本。</block>
   <block id="e169af5277f4f18447755957609654e2" category="list-text">從虛擬機器卸載 ISO：</block>
@@ -6486,7 +6484,6 @@
   <block id="a22ba5cede201b398675ddfd63c9864d" category="paragraph">4.10.0 版本包含以下 NetApp Console 元件和服務的更新。</block>
   <block id="c1b9fde9363d4906a9e67eb0862e9fc7" category="cell">4.10.0</block>
   <block id="5ff195749703fc07b830e8ce460f4513" category="cell">前往<block ref="9d354d50c04a9174ec71f0d3d8410a23" category="inline-link-rx"></block>並參考版本 4.10.0 中包含的變更。</block>
-  <block id="669d8c7c23d7c1df9de525a93369bb8f" category="cell">1.546.0（2026年8月10日）</block>
   <block id="99eb4ee0a56c7fb9d9fef77053e43af4" category="paragraph">提供使用應用程式專用的 NetApp Backup and Recovery 來備份內部部署 ONTAP 叢集快照的功能。擁有此角色的成員可以完成下列行動：</block>
   <block id="f44c611b4162cee5fdf2ee447ed48192" category="list-text">完成 Backup and Recovery &gt; Applications 中的任何行動</block>
   <block id="e88871c7007d89688acdcb7ffa4922fe" category="list-text">管理他們擁有權限的專案和資料夾中的所有系統</block>
@@ -6789,5 +6786,17 @@
   <block id="2cf7a5d26ce7d4d99d4c91d9a7be62a2" category="section-title">停止並啟動代理程式 VM</block>
   <block id="b4c95a42ca3d365982b8e5cd0c5f9a12" category="paragraph">停止和啟動代理程式虛擬機器時，請盡量減少停機，因為管理和資料服務依賴代理程式保持運作。</block>
   <block id="4a818b70467076c03f2c14237204886a" category="paragraph">從其 Linux VM 檢查 Console 代理程式的狀態，以便確認它正在運作。</block>
-  <block id="e370f8f4d5db9e4f93257ac02adddec3" category="section-title">2026年11月9日</block>
+  <block id="daa04540ede89ebe21aa75e4bb91c101" category="cell">1.56.0（2026年8月10日）</block>
+  <block id="d68cd763bb6443bb6e7c8aa2306f8ef4" category="paragraph">此版本的 Console 代理程式包含安全性改進和問題修復，以及以下新功能。當您使用 ISO 將部署於 vCenter 的 Console 代理程式升級至 4.13.0 時，請確保在升級完成後重新啟動虛擬機器。虛擬機器可能會自動重新啟動。</block>
+  <block id="fb37b2b6fa74940a30d42aec5c20c8f5" category="paragraph">此版本包含安全性改進和問題修復，以及以下新功能。</block>
+  <block id="d2033ec1ec99f494b181d63a27d56e2d" category="section-title">指派 Cloud Volumes ONTAP 貢獻者角色</block>
+  <block id="cd27e9569393bf08fe35ccdf2583e61b" category="paragraph">現在您可以指派 Cloud Volumes ONTAP 參與者角色，讓成員能夠廣泛存取以管理 Cloud Volumes ONTAP 系統，但不允許他們刪除系統、Volume、聚合或複寫關係。<block ref="8c5db5921f383526df21d84d3b1bfd83" category="inline-link-macro-rx"></block>。</block>
+  <block id="b83ef7028571cfab72ee7ce1a1a682a0" category="list-text">*Cloud Volumes ONTAP 貢獻者*：提供與 Cloud Volumes ONTAP 管理員角色類似的存取，但不能執行刪除或移除資源、啟用或停用系統等操作。貢獻者可以執行新增系統、管理複寫、編輯 Volume 和系統設定等操作，但不能刪除系統、Volume、Aggregate 或複寫關係。</block>
+  <block id="649973a0776cc2c800262363cd181d7b" category="cell">Cloud Volumes ONTAP 貢獻者</block>
+  <block id="51633f0b535a3fc11bc6c59b67c5d18b" category="cell"><block ref="51633f0b535a3fc11bc6c59b67c5d18b" category="inline-link-macro-rx"></block></block>
+  <block id="065242fa71340bedcbcdf967d279e80b" category="cell">CVO_CONTRIBUTOR</block>
+  <block id="4e0882ff89f5aa014ab9a6d53ca4f3b1" category="cell">提供與 Cloud Volumes ONTAP 管理員角色類似的存取，但刪除或移除資源，或是開啟或關閉系統的操作除外。</block>
+  <block id="5d97bc96e49114d0d3e6c6bac921f939" category="paragraph">升級會就地安裝更新後的作業系統、Docker 執行階段和控制台代理程式服務。升級到控制台代理程式 4.13.0 時，請確保在升級完成後重新啟動虛擬機器。虛擬機器可能會自動重新啟動。重新啟動完成前，將無法使用控制台代理程式。對於其他版本，如果核心已更新，虛擬機器會自動重新啟動。</block>
+  <block id="74aaffed4ac921f25c719cb03ee18ea0" category="list-text">升級完成且任何重新啟動完成後，請驗證主控台代理程式是否正常運作：</block>
+  <block id="3cc38715797be469f39edd81c803bf02" category="section-title">2026年11月17日</block>
 </blocks>
