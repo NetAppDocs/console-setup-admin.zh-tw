@@ -6523,7 +6523,6 @@
   <block id="d2c88e74d3861db30d07ea7d5b32f8b4" category="list-text">如果將此代理程式與 Cloud Volumes ONTAP 系統關聯，請考慮增加與該代理程式關聯的執行緒數量以提高效能。<block ref="19d35f1710aa989f7c51ec017381d272" category="inline-link-macro-rx"></block>。</block>
   <block id="867f6306ad030ade00b2b5d1be06a297" category="paragraph">將控制台代理程式升級至 4.9.0 或更高版本後，控制台會根據現有使用者的平台角色自動為其指派 Cloud Volumes ONTAP 角色。這種一次性分配方式有助於使用者保留對應的 Cloud Volumes ONTAP 存取，而無需系統管理員手動指派每個角色。系統會根據使用者現有的平台角色自動為其指派 Cloud Volumes ONTAP 角色。此對應僅在移轉期間有效；平台角色不會取代新指派的 Cloud Volumes ONTAP 角色。請審查新角色，以確認使用者僅保留其所需的存取。</block>
   <block id="acbaf21f08d26739d3a0e3645fd4f7c1" category="inline-link-macro">了解升級後自動指派的 Cloud Volumes ONTAP 角色</block>
-  <block id="a7f237db4808db8f7d7e3569c4c90eba" category="list-text">審查指派給每個使用者的 Cloud Volumes ONTAP 角色，並確認其已指派至包含該系統的組織、資料夾或專案層級。<block ref="943ee494db9e9617f80c85c45c5ec678" category="inline-link-macro-rx"></block>。</block>
   <block id="b6b21e530c678e5cd4c26f8b75ff76e8" category="doc">Console 代理 4.11.0</block>
   <block id="734697dbdbd312c3dd63c9c68317e6e9" category="paragraph">4.11.0 版本同時支援標準模式和受限模式。</block>
   <block id="60fd42d7efe4262e8d79051a1c47bc4f" category="section-title">簡化 AWS Marketplace 中 Cloud Volumes ONTAP 訂閱者的代理程式部署流程</block>
@@ -6750,4 +6749,5 @@
   <block id="ee2801a04f6a17b81383a7fdefb9c5e6" category="sidebar">從 AWS 市場部署 NetApp Console 受限模式</block>
   <block id="fad937fde933fc3f4eb6f492e83e25f7" category="sidebar">在 Azure 市場中部署 NetApp Console 受限模式</block>
   <block id="ab3aa42abeac29b26d4ae086a0bd858d" category="sidebar">手動安裝 NetApp Console 受限模式（Google Cloud 需要）</block>
+  <block id="0e5ef03889d1ef7ccf4da7c7c07d046d" category="list-text">審查指派給每個使用者的 Cloud Volumes ONTAP 角色，並確認其已指派至包含該系統的組織、資料夾或專案層級。<block ref="bba8a3e7de854a3d39018c92690eeeb3" category="inline-link-macro-rx"></block>。</block>
 </blocks>

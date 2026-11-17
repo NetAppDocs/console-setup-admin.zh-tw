@@ -90,7 +90,7 @@ NOTE: 目前已知問題導致 *組織檢視者* 和 *Cloud Volumes ONTAP 檢視
 
 .步驟
 . 識別包含每個 Cloud Volumes ONTAP 系統的組織、資料夾或專案。
-. 審查指派給每個使用者的 Cloud Volumes ONTAP 角色，並確認其已指派至包含該系統的組織、資料夾或專案層級。link:reference-iam-cvo-roles.html#seeding-mappings-for-existing-users["了解升級後自動指派的 Cloud Volumes ONTAP 角色"]。
+. 審查指派給每個使用者的 Cloud Volumes ONTAP 角色，並確認其已指派至包含該系統的組織、資料夾或專案層級。link:reference-iam-cvo-roles.html["了解升級後自動指派的 Cloud Volumes ONTAP 角色"]。
 . 當初始角色與使用者職責不符時，需要指派或變更 Cloud Volumes ONTAP 角色。初始角色指派程序會根據使用者現有的平台角色指派 Cloud Volumes ONTAP 管理員或檢視者角色。如果使用者需要營運者層級的權限，則需要在初始角色指派後明確指派 Cloud Volumes ONTAP 營運者角色。
 . 最多等待一小時，讓新的或更新的角色指派生效。Cloud Volumes ONTAP 每小時會重新整理角色指派。
 . 請使用者存取 Cloud Volumes ONTAP 系統，並確認可用操作與指派的角色相符。
